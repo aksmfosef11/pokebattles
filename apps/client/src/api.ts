@@ -299,8 +299,10 @@ class LocalApi implements GameApi {
 
 export async function createApi(): Promise<GameApi> {
   try {
+    // The first request through a tunnel to a home server can take a few seconds (new TLS connection, far edge).
+    // A server that is down answers at once (the tunnel's error page), so a long wait only covers slow answers.
     const ctrl = new AbortController();
-    const timer = setTimeout(() => ctrl.abort(), 1500);
+    const timer = setTimeout(() => ctrl.abort(), 8000);
     const res = await fetch(`${API_BASE}/api/health`, { signal: ctrl.signal });
     clearTimeout(timer);
     if (res.ok && (await res.json()).ok) return new RemoteApi();
