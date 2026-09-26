@@ -1,0 +1,46 @@
+{
+  "extractedAt": "2026-09-26T13:34:37.958Z",
+  "sources": {
+    "pokerogue": {
+      "url": "https://github.com/pagefaultgames/pokerogue",
+      "ref": "main",
+      "commit": "e4e9b5383be7c9e171d32a9daaea2658d475c521"
+    },
+    "pokerogueLocales": {
+      "url": "https://github.com/pagefaultgames/pokerogue-locales",
+      "ref": "submodule `locales` of pokerogue@main",
+      "commit": "e46279a0a511e5b6f552dfcab522644822b2908a"
+    },
+    "pokeapi": {
+      "url": "https://github.com/PokeAPI/pokeapi",
+      "ref": "master",
+      "commit": "ca0a21b3587af20b52c8a00d33812c47b75fe341"
+    }
+  },
+  "counts": {
+    "species": 1084,
+    "forms": 609,
+    "moves": 920,
+    "movesUnused": 72,
+    "gmaxMoves": 33,
+    "abilities": 318,
+    "learnsetEntries": 1135,
+    "tmMoves": 319,
+    "tmTiers": 319,
+    "eggMoveSpecies": 571,
+    "evolutions": 544,
+    "formChanges": 495,
+    "i18nLanguages": 28,
+    "itemCatalog": 536
+  },
+  "conventions": {
+    "keys": "Species/moves/abilities/items keyed by PokéRogue enum member names (SpeciesId/MoveId/AbilityId/...).",
+    "enumArgs": "Numeric enum members -> member name; string enums (e.g. SpeciesFormKey) -> their string value. argKinds[i] tells what each arg was (enum:<Name>, number, string, boolean, array, object, const:<NAME>, raw).",
+    "raw": "Anything not statically evaluable (lambdas, new expressions, conditions, i18n calls) is kept as comment-free single-line source text.",
+    "nulls": "power/accuracy/chance -1 in PokéRogue -> null (accuracy null = never misses). abilities.a2 null = PokéRogue reuses a1 for that slot; hidden null = none.",
+    "learnsets": "SPECIES = default form (levelMoves + formLevelMoves[forms[0].formKey]); 'SPECIES:formKey' = full list for that form. Level 0 = EVOLVE_MOVE, -1 = RELEARN_MOVE.",
+    "tms": "Effective TM learners like PokéRogue getTms(): own tms + formTms + prevolution chain. 'SPECIES:formKey' listed only when that non-default form learns it but the default form does not.",
+    "formChanges": "synthesized:true entries are the reverse item changes PokéRogue adds at runtime (initReverseFormChanges).",
+    "unused": "moves/abilities with unused:true sit inside PokéRogue's /* Unused */ blocks (Z-moves, Max moves, ...). gmax-moves.json are commented out entirely in PokéRogue (no MoveId)."
+  }
+}

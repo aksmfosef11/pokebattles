@@ -1,0 +1,29 @@
+{
+  "red": {
+    "source": "images/trainer/red.png|json"
+  },
+  "lance": {
+    "source": "images/trainer/lance.png|json"
+  },
+  "steven": {
+    "source": "images/trainer/steven.png|json"
+  },
+  "cynthia": {
+    "source": "images/trainer/cynthia.png|json"
+  },
+  "alder": {
+    "source": "images/trainer/alder.png|json"
+  },
+  "diantha": {
+    "source": "images/trainer/diantha.png|json"
+  },
+  "kukui": {
+    "source": "images/trainer/kukui.png|json"
+  },
+  "leon": {
+    "source": "images/trainer/leon.png|json"
+  },
+  "geeta": {
+    "source": "images/trainer/geeta.png|json"
+  }
+}

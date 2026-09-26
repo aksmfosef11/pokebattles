@@ -1,0 +1,1030 @@
+{
+  "ABOMASITE": {
+    "atlas": "items",
+    "frame": "abomasite"
+  },
+  "ABSOLITE": {
+    "atlas": "items",
+    "frame": "absolite"
+  },
+  "ABSOLITE_Z": {
+    "atlas": "items",
+    "frame": "absolite_z"
+  },
+  "ABSORB_BULB": {
+    "file": "items-extra/ABSORB_BULB.png"
+  },
+  "ADAMANT_ORB": {
+    "file": "items-extra/ADAMANT_ORB.png"
+  },
+  "ADRENALINE_ORB": {
+    "file": "items-extra/ADRENALINE_ORB.png"
+  },
+  "AERODACTYLITE": {
+    "atlas": "items",
+    "frame": "aerodactylite"
+  },
+  "AGGRONITE": {
+    "atlas": "items",
+    "frame": "aggronite"
+  },
+  "AIR_BALLOON": {
+    "file": "items-extra/AIR_BALLOON.png"
+  },
+  "ALAKAZITE": {
+    "atlas": "items",
+    "frame": "alakazite"
+  },
+  "AMPHAROSITE": {
+    "atlas": "items",
+    "frame": "ampharosite"
+  },
+  "AMULET_COIN": {
+    "atlas": "items",
+    "frame": "amulet_coin"
+  },
+  "APICOT_BERRY": {
+    "atlas": "items",
+    "frame": "apicot_berry"
+  },
+  "ASSAULT_VEST": {
+    "file": "items-extra/ASSAULT_VEST.png"
+  },
+  "BABIRI_BERRY": {
+    "atlas": "items",
+    "frame": "babiri_berry"
+  },
+  "BARBARACITE": {
+    "atlas": "items",
+    "frame": "barbaracite"
+  },
+  "BAXCALIBRITE": {
+    "atlas": "items",
+    "frame": "baxcalibrite"
+  },
+  "BEEDRILLITE": {
+    "atlas": "items",
+    "frame": "beedrillite"
+  },
+  "BERRY_POUCH": {
+    "atlas": "items",
+    "frame": "berry_pouch"
+  },
+  "BIG_NUGGET": {
+    "atlas": "items",
+    "frame": "big_nugget"
+  },
+  "BIG_ROOT": {
+    "atlas": "items",
+    "frame": "big_root"
+  },
+  "BINDING_BAND": {
+    "atlas": "items",
+    "frame": "binding_band"
+  },
+  "BLACK_BELT": {
+    "atlas": "items",
+    "frame": "black_belt"
+  },
+  "BLACK_GLASSES": {
+    "atlas": "items",
+    "frame": "black_glasses"
+  },
+  "BLACK_SLUDGE": {
+    "atlas": "items",
+    "frame": "black_sludge"
+  },
+  "BLANK_PLATE": {
+    "atlas": "items",
+    "frame": "blank_plate"
+  },
+  "BLASTOISINITE": {
+    "atlas": "items",
+    "frame": "blastoisinite"
+  },
+  "BLAZIKENITE": {
+    "atlas": "items",
+    "frame": "blazikenite"
+  },
+  "BLUE_ORB": {
+    "atlas": "items",
+    "frame": "blue_orb"
+  },
+  "BLUNDER_POLICY": {
+    "atlas": "items",
+    "frame": "blunder_policy"
+  },
+  "BOOSTER_ENERGY": {
+    "atlas": "items",
+    "frame": "booster_energy"
+  },
+  "BRIGHT_POWDER": {
+    "file": "items-extra/BRIGHT_POWDER.png"
+  },
+  "BUGINIUM_Z": {
+    "file": "items-extra/BUGINIUM_Z.png"
+  },
+  "CANDY_JAR": {
+    "atlas": "items",
+    "frame": "candy_jar"
+  },
+  "CELL_BATTERY": {
+    "file": "items-extra/CELL_BATTERY.png"
+  },
+  "CHANDELURITE": {
+    "atlas": "items",
+    "frame": "chandelurite"
+  },
+  "CHARCOAL": {
+    "atlas": "items",
+    "frame": "charcoal"
+  },
+  "CHARIZARDITE_X": {
+    "atlas": "items",
+    "frame": "charizardite_x"
+  },
+  "CHARIZARDITE_Y": {
+    "atlas": "items",
+    "frame": "charizardite_y"
+  },
+  "CHARTI_BERRY": {
+    "atlas": "items",
+    "frame": "charti_berry"
+  },
+  "CHESNAUGHTITE": {
+    "atlas": "items",
+    "frame": "chesnaughtite"
+  },
+  "CHILAN_BERRY": {
+    "atlas": "items",
+    "frame": "chilan_berry"
+  },
+  "CHOICE_BAND": {
+    "file": "items-extra/CHOICE_BAND.png"
+  },
+  "CHOICE_SCARF": {
+    "atlas": "items",
+    "frame": "choice_scarf"
+  },
+  "CHOICE_SPECS": {
+    "atlas": "items",
+    "frame": "choice_specs"
+  },
+  "CHOPLE_BERRY": {
+    "atlas": "items",
+    "frame": "chople_berry"
+  },
+  "CLAW_FOSSIL": {
+    "file": "items-extra/CLAW_FOSSIL.png"
+  },
+  "CLEAR_AMULET": {
+    "file": "items-extra/CLEAR_AMULET.png"
+  },
+  "COBA_BERRY": {
+    "atlas": "items",
+    "frame": "coba_berry"
+  },
+  "COIN_CASE": {
+    "atlas": "items",
+    "frame": "coin_case"
+  },
+  "COLBUR_BERRY": {
+    "atlas": "items",
+    "frame": "colbur_berry"
+  },
+  "COVERT_CLOAK": {
+    "file": "items-extra/COVERT_CLOAK.png"
+  },
+  "DAMP_ROCK": {
+    "file": "items-extra/DAMP_ROCK.png"
+  },
+  "DARKINIUM_Z": {
+    "file": "items-extra/DARKINIUM_Z.png"
+  },
+  "DAWN_STONE": {
+    "atlas": "items",
+    "frame": "dawn_stone"
+  },
+  "DELPHOXITE": {
+    "atlas": "items",
+    "frame": "delphoxite"
+  },
+  "DIANCITE": {
+    "atlas": "items",
+    "frame": "diancite"
+  },
+  "DRACO_PLATE": {
+    "atlas": "items",
+    "frame": "draco_plate"
+  },
+  "DRAGALGITE": {
+    "atlas": "items",
+    "frame": "dragalgite"
+  },
+  "DRAGONINITE": {
+    "atlas": "items",
+    "frame": "dragoninite"
+  },
+  "DRAGONIUM_Z": {
+    "file": "items-extra/DRAGONIUM_Z.png"
+  },
+  "DRAGON_FANG": {
+    "atlas": "items",
+    "frame": "dragon_fang"
+  },
+  "DRAGON_SCALE": {
+    "atlas": "items",
+    "frame": "dragon_scale"
+  },
+  "DREAD_PLATE": {
+    "atlas": "items",
+    "frame": "dread_plate"
+  },
+  "DUSK_STONE": {
+    "atlas": "items",
+    "frame": "dusk_stone"
+  },
+  "DYNAMAX_BAND": {
+    "atlas": "items",
+    "frame": "dynamax_band"
+  },
+  "DYNAMAX_CANDY": null,
+  "EARTH_PLATE": {
+    "atlas": "items",
+    "frame": "earth_plate"
+  },
+  "ELECTRIC_SEED": {
+    "file": "items-extra/ELECTRIC_SEED.png"
+  },
+  "ELECTRIUM_Z": {
+    "file": "items-extra/ELECTRIUM_Z.png"
+  },
+  "EMBOARITE": {
+    "atlas": "items",
+    "frame": "emboarite"
+  },
+  "ENIGMA_BERRY": {
+    "atlas": "items",
+    "frame": "enigma_berry"
+  },
+  "EVIOLITE": {
+    "atlas": "items",
+    "frame": "eviolite"
+  },
+  "EXCADRITE": {
+    "atlas": "items",
+    "frame": "excadrite"
+  },
+  "EXPERT_BELT": {
+    "atlas": "items",
+    "frame": "expert_belt"
+  },
+  "EXP_SHARE": {
+    "atlas": "items",
+    "frame": "exp_share"
+  },
+  "FAIRIUM_Z": {
+    "file": "items-extra/FAIRIUM_Z.png"
+  },
+  "FAIRY_FEATHER": {
+    "atlas": "items",
+    "frame": "fairy_feather"
+  },
+  "FERALIGITE": {
+    "atlas": "items",
+    "frame": "feraligite"
+  },
+  "FIGHTINIUM_Z": {
+    "file": "items-extra/FIGHTINIUM_Z.png"
+  },
+  "FIRE_STONE": {
+    "atlas": "items",
+    "frame": "fire_stone"
+  },
+  "FIRIUM_Z": {
+    "file": "items-extra/FIRIUM_Z.png"
+  },
+  "FIST_PLATE": {
+    "atlas": "items",
+    "frame": "fist_plate"
+  },
+  "FLAME_ORB": {
+    "atlas": "items",
+    "frame": "flame_orb"
+  },
+  "FLAME_PLATE": {
+    "atlas": "items",
+    "frame": "flame_plate"
+  },
+  "FLYINIUM_Z": {
+    "file": "items-extra/FLYINIUM_Z.png"
+  },
+  "FOCUS_BAND": {
+    "atlas": "items",
+    "frame": "focus_band"
+  },
+  "FOCUS_SASH": {
+    "atlas": "items",
+    "frame": "focus_sash"
+  },
+  "FROSLASSITE": {
+    "atlas": "items",
+    "frame": "froslassite"
+  },
+  "GALLADITE": {
+    "atlas": "items",
+    "frame": "galladite"
+  },
+  "GANLON_BERRY": {
+    "atlas": "items",
+    "frame": "ganlon_berry"
+  },
+  "GARCHOMPITE": {
+    "atlas": "items",
+    "frame": "garchompite"
+  },
+  "GARCHOMPITE_Z": {
+    "atlas": "items",
+    "frame": "garchompite_z"
+  },
+  "GARDEVOIRITE": {
+    "atlas": "items",
+    "frame": "gardevoirite"
+  },
+  "GENGARITE": {
+    "atlas": "items",
+    "frame": "gengarite"
+  },
+  "GHOSTIUM_Z": {
+    "file": "items-extra/GHOSTIUM_Z.png"
+  },
+  "GLALITITE": {
+    "atlas": "items",
+    "frame": "glalitite"
+  },
+  "GLIMMORANITE": {
+    "atlas": "items",
+    "frame": "glimmoranite"
+  },
+  "GOLDEN_PUNCH": {
+    "atlas": "items",
+    "frame": "golden_punch"
+  },
+  "GRASSIUM_Z": {
+    "file": "items-extra/GRASSIUM_Z.png"
+  },
+  "GRASSY_SEED": {
+    "file": "items-extra/GRASSY_SEED.png"
+  },
+  "GREAT_BALL": {
+    "atlas": "items",
+    "frame": "gb"
+  },
+  "GRENINJITE": {
+    "atlas": "items",
+    "frame": "greninjite"
+  },
+  "GRIP_CLAW": {
+    "atlas": "items",
+    "frame": "grip_claw"
+  },
+  "GRISEOUS_ORB": {
+    "file": "items-extra/GRISEOUS_ORB.png"
+  },
+  "GROUNDIUM_Z": {
+    "file": "items-extra/GROUNDIUM_Z.png"
+  },
+  "GYARADOSITE": {
+    "atlas": "items",
+    "frame": "gyaradosite"
+  },
+  "HABAN_BERRY": {
+    "atlas": "items",
+    "frame": "haban_berry"
+  },
+  "HARD_STONE": {
+    "atlas": "items",
+    "frame": "hard_stone"
+  },
+  "HAWLUCHANITE": {
+    "atlas": "items",
+    "frame": "hawluchanite"
+  },
+  "HEAT_ROCK": {
+    "file": "items-extra/HEAT_ROCK.png"
+  },
+  "HERACRONITE": {
+    "atlas": "items",
+    "frame": "heracronite"
+  },
+  "HOUNDOOMINITE": {
+    "atlas": "items",
+    "frame": "houndoominite"
+  },
+  "ICE_STONE": {
+    "atlas": "items",
+    "frame": "ice_stone"
+  },
+  "ICICLE_PLATE": {
+    "atlas": "items",
+    "frame": "icicle_plate"
+  },
+  "ICIUM_Z": {
+    "file": "items-extra/ICIUM_Z.png"
+  },
+  "ICY_ROCK": {
+    "file": "items-extra/ICY_ROCK.png"
+  },
+  "INSECT_PLATE": {
+    "atlas": "items",
+    "frame": "insect_plate"
+  },
+  "IRON_PLATE": {
+    "atlas": "items",
+    "frame": "iron_plate"
+  },
+  "JABOCA_BERRY": {
+    "file": "items-extra/JABOCA_BERRY.png"
+  },
+  "KASIB_BERRY": {
+    "atlas": "items",
+    "frame": "kasib_berry"
+  },
+  "KEBIA_BERRY": {
+    "atlas": "items",
+    "frame": "kebia_berry"
+  },
+  "KINGS_ROCK": {
+    "atlas": "items",
+    "frame": "kings_rock"
+  },
+  "LANSAT_BERRY": {
+    "atlas": "items",
+    "frame": "lansat_berry"
+  },
+  "LATIASITE": {
+    "atlas": "items",
+    "frame": "latiasite"
+  },
+  "LATIOSITE": {
+    "atlas": "items",
+    "frame": "latiosite"
+  },
+  "LEAF_STONE": {
+    "atlas": "items",
+    "frame": "leaf_stone"
+  },
+  "LEFTOVERS": {
+    "atlas": "items",
+    "frame": "leftovers"
+  },
+  "LEPPA_BERRY": {
+    "atlas": "items",
+    "frame": "leppa_berry"
+  },
+  "LIECHI_BERRY": {
+    "atlas": "items",
+    "frame": "liechi_berry"
+  },
+  "LIFE_ORB": {
+    "file": "items-extra/LIFE_ORB.png"
+  },
+  "LIGHT_BALL": {
+    "atlas": "items",
+    "frame": "light_ball"
+  },
+  "LIGHT_CLAY": {
+    "file": "items-extra/LIGHT_CLAY.png"
+  },
+  "LINKING_CORD": {
+    "atlas": "items",
+    "frame": "linking_cord"
+  },
+  "LOADED_DICE": {
+    "atlas": "items",
+    "frame": "loaded_dice"
+  },
+  "LOPUNNITE": {
+    "atlas": "items",
+    "frame": "lopunnite"
+  },
+  "LUCARIONITE": {
+    "atlas": "items",
+    "frame": "lucarionite"
+  },
+  "LUCARIONITE_Z": {
+    "atlas": "items",
+    "frame": "lucarionite_z"
+  },
+  "LUCKY_EGG": {
+    "atlas": "items",
+    "frame": "lucky_egg"
+  },
+  "LUCK_INCENSE": {
+    "file": "items-extra/LUCK_INCENSE.png"
+  },
+  "LUM_BERRY": {
+    "atlas": "items",
+    "frame": "lum_berry"
+  },
+  "LUSTROUS_ORB": {
+    "file": "items-extra/LUSTROUS_ORB.png"
+  },
+  "MACHO_BRACE": {
+    "atlas": "items",
+    "frame": "macho_brace"
+  },
+  "MAGNET": {
+    "atlas": "items",
+    "frame": "magnet"
+  },
+  "MALAMARITE": {
+    "atlas": "items",
+    "frame": "malamarite"
+  },
+  "MANECTITE": {
+    "atlas": "items",
+    "frame": "manectite"
+  },
+  "MASTER_BALL": {
+    "atlas": "items",
+    "frame": "mb"
+  },
+  "MAWILITE": {
+    "atlas": "items",
+    "frame": "mawilite"
+  },
+  "MAX_MUSHROOMS": {
+    "atlas": "items",
+    "frame": "max_mushrooms"
+  },
+  "MEADOW_PLATE": {
+    "atlas": "items",
+    "frame": "meadow_plate"
+  },
+  "MEGANIUMITE": {
+    "atlas": "items",
+    "frame": "meganiumite"
+  },
+  "MEGA_BRACELET": {
+    "atlas": "items",
+    "frame": "mega_bracelet"
+  },
+  "MENTAL_HERB": {
+    "file": "items-extra/MENTAL_HERB.png"
+  },
+  "MEOWSTICITE": {
+    "atlas": "items",
+    "frame": "meowsticite"
+  },
+  "METAGROSSITE": {
+    "atlas": "items",
+    "frame": "metagrossite"
+  },
+  "METAL_COAT": {
+    "atlas": "items",
+    "frame": "metal_coat"
+  },
+  "METAL_POWDER": {
+    "atlas": "items",
+    "frame": "metal_powder"
+  },
+  "METRONOME": {
+    "atlas": "items",
+    "frame": "metronome"
+  },
+  "MEWTWONITE_X": {
+    "atlas": "items",
+    "frame": "mewtwonite_x"
+  },
+  "MEWTWONITE_Y": {
+    "atlas": "items",
+    "frame": "mewtwonite_y"
+  },
+  "MIND_PLATE": {
+    "atlas": "items",
+    "frame": "mind_plate"
+  },
+  "MIRACLE_SEED": {
+    "atlas": "items",
+    "frame": "miracle_seed"
+  },
+  "MISTY_SEED": {
+    "file": "items-extra/MISTY_SEED.png"
+  },
+  "MOON_STONE": {
+    "atlas": "items",
+    "frame": "moon_stone"
+  },
+  "MULTI_LENS": {
+    "atlas": "items",
+    "frame": "multi_lens"
+  },
+  "MUSCLE_BAND": {
+    "atlas": "items",
+    "frame": "muscle_band"
+  },
+  "MYSTIC_WATER": {
+    "atlas": "items",
+    "frame": "mystic_water"
+  },
+  "NEVER_MELT_ICE": {
+    "atlas": "items",
+    "frame": "never_melt_ice"
+  },
+  "NORMALIUM_Z": {
+    "file": "items-extra/NORMALIUM_Z.png"
+  },
+  "NUGGET": {
+    "atlas": "items",
+    "frame": "nugget"
+  },
+  "OCCA_BERRY": {
+    "atlas": "items",
+    "frame": "occa_berry"
+  },
+  "ORAN_BERRY": {
+    "atlas": "items",
+    "frame": "oran_berry"
+  },
+  "PASSHO_BERRY": {
+    "atlas": "items",
+    "frame": "passho_berry"
+  },
+  "PAYAPA_BERRY": {
+    "atlas": "items",
+    "frame": "payapa_berry"
+  },
+  "PETAYA_BERRY": {
+    "atlas": "items",
+    "frame": "petaya_berry"
+  },
+  "PIDGEOTITE": {
+    "atlas": "items",
+    "frame": "pidgeotite"
+  },
+  "PIXIE_PLATE": {
+    "atlas": "items",
+    "frame": "pixie_plate"
+  },
+  "POISONIUM_Z": {
+    "file": "items-extra/POISONIUM_Z.png"
+  },
+  "POISON_BARB": {
+    "atlas": "items",
+    "frame": "poison_barb"
+  },
+  "POKE_BALL": {
+    "atlas": "items",
+    "frame": "pb"
+  },
+  "POWER_HERB": {
+    "atlas": "items",
+    "frame": "power_herb"
+  },
+  "PROTECTIVE_PADS": {
+    "file": "items-extra/PROTECTIVE_PADS.png"
+  },
+  "PSYCHIC_SEED": {
+    "file": "items-extra/PSYCHIC_SEED.png"
+  },
+  "PSYCHIUM_Z": {
+    "file": "items-extra/PSYCHIUM_Z.png"
+  },
+  "PUNCHING_GLOVE": {
+    "file": "items-extra/PUNCHING_GLOVE.png"
+  },
+  "PYROARITE": {
+    "atlas": "items",
+    "frame": "pyroarite"
+  },
+  "QUICK_CLAW": {
+    "atlas": "items",
+    "frame": "quick_claw"
+  },
+  "QUICK_POWDER": {
+    "atlas": "items",
+    "frame": "quick_powder"
+  },
+  "RAICHUNITE_X": {
+    "atlas": "items",
+    "frame": "raichunite_x"
+  },
+  "RAICHUNITE_Y": {
+    "atlas": "items",
+    "frame": "raichunite_y"
+  },
+  "RARER_CANDY": {
+    "atlas": "items",
+    "frame": "rarer_candy"
+  },
+  "RARE_CANDY": {
+    "atlas": "items",
+    "frame": "rare_candy"
+  },
+  "RAYQUAZITE": {
+    "atlas": "items",
+    "frame": "rayquazite"
+  },
+  "RED_ORB": {
+    "atlas": "items",
+    "frame": "red_orb"
+  },
+  "RINDO_BERRY": {
+    "atlas": "items",
+    "frame": "rindo_berry"
+  },
+  "ROCKIUM_Z": {
+    "file": "items-extra/ROCKIUM_Z.png"
+  },
+  "ROCKY_HELMET": {
+    "file": "items-extra/ROCKY_HELMET.png"
+  },
+  "ROOT_FOSSIL": {
+    "file": "items-extra/ROOT_FOSSIL.png"
+  },
+  "ROSELI_BERRY": {
+    "file": "items-extra/ROSELI_BERRY.png"
+  },
+  "ROWAP_BERRY": {
+    "file": "items-extra/ROWAP_BERRY.png"
+  },
+  "SAFETY_GOGGLES": {
+    "file": "items-extra/SAFETY_GOGGLES.png"
+  },
+  "SALAC_BERRY": {
+    "atlas": "items",
+    "frame": "salac_berry"
+  },
+  "SCEPTILITE": {
+    "atlas": "items",
+    "frame": "sceptilite"
+  },
+  "SCIZORITE": {
+    "atlas": "items",
+    "frame": "scizorite"
+  },
+  "SCOLIPITE": {
+    "atlas": "items",
+    "frame": "scolipite"
+  },
+  "SCOPE_LENS": {
+    "atlas": "items",
+    "frame": "scope_lens"
+  },
+  "SCOVILLAINITE": {
+    "atlas": "items",
+    "frame": "scovillainite"
+  },
+  "SHARP_BEAK": {
+    "atlas": "items",
+    "frame": "sharp_beak"
+  },
+  "SHELL_BELL": {
+    "atlas": "items",
+    "frame": "shell_bell"
+  },
+  "SHINY_STONE": {
+    "atlas": "items",
+    "frame": "shiny_stone"
+  },
+  "SHUCA_BERRY": {
+    "atlas": "items",
+    "frame": "shuca_berry"
+  },
+  "SILK_SCARF": {
+    "atlas": "items",
+    "frame": "silk_scarf"
+  },
+  "SILVER_POWDER": {
+    "atlas": "items",
+    "frame": "silver_powder"
+  },
+  "SITRUS_BERRY": {
+    "atlas": "items",
+    "frame": "sitrus_berry"
+  },
+  "SKARMORITE": {
+    "atlas": "items",
+    "frame": "skarmorite"
+  },
+  "SKY_PLATE": {
+    "atlas": "items",
+    "frame": "sky_plate"
+  },
+  "SMOOTH_ROCK": {
+    "file": "items-extra/SMOOTH_ROCK.png"
+  },
+  "SOFT_SAND": {
+    "atlas": "items",
+    "frame": "soft_sand"
+  },
+  "SOOTHE_BELL": {
+    "atlas": "items",
+    "frame": "soothe_bell"
+  },
+  "SOUL_DEW": {
+    "atlas": "items",
+    "frame": "soul_dew"
+  },
+  "SPELL_TAG": {
+    "atlas": "items",
+    "frame": "spell_tag"
+  },
+  "SPLASH_PLATE": {
+    "atlas": "items",
+    "frame": "splash_plate"
+  },
+  "SPOOKY_PLATE": {
+    "atlas": "items",
+    "frame": "spooky_plate"
+  },
+  "STARF_BERRY": {
+    "atlas": "items",
+    "frame": "starf_berry"
+  },
+  "STEELIUM_Z": {
+    "file": "items-extra/STEELIUM_Z.png"
+  },
+  "STEELIXITE": {
+    "atlas": "items",
+    "frame": "steelixite"
+  },
+  "STONE_PLATE": {
+    "atlas": "items",
+    "frame": "stone_plate"
+  },
+  "SUN_STONE": {
+    "atlas": "items",
+    "frame": "sun_stone"
+  },
+  "SWAMPERTITE": {
+    "atlas": "items",
+    "frame": "swampertite"
+  },
+  "TANGA_BERRY": {
+    "atlas": "items",
+    "frame": "tanga_berry"
+  },
+  "TERA_ORB": {
+    "atlas": "items",
+    "frame": "tera_orb"
+  },
+  "TERA_SHARD": null,
+  "TERRAIN_EXTENDER": {
+    "file": "items-extra/TERRAIN_EXTENDER.png"
+  },
+  "THROAT_SPRAY": {
+    "file": "items-extra/THROAT_SPRAY.png"
+  },
+  "THUNDER_STONE": {
+    "atlas": "items",
+    "frame": "thunder_stone"
+  },
+  "TOXIC_ORB": {
+    "atlas": "items",
+    "frame": "toxic_orb"
+  },
+  "TOXIC_PLATE": {
+    "atlas": "items",
+    "frame": "toxic_plate"
+  },
+  "TWISTED_SPOON": {
+    "atlas": "items",
+    "frame": "twisted_spoon"
+  },
+  "TYRANITARITE": {
+    "atlas": "items",
+    "frame": "tyranitarite"
+  },
+  "ULTRA_BALL": {
+    "atlas": "items",
+    "frame": "ub"
+  },
+  "UTILITY_UMBRELLA": {
+    "file": "items-extra/UTILITY_UMBRELLA.png"
+  },
+  "VENUSAURITE": {
+    "atlas": "items",
+    "frame": "venusaurite"
+  },
+  "VOUCHER": {
+    "atlas": "items",
+    "frame": "coupon"
+  },
+  "WACAN_BERRY": {
+    "atlas": "items",
+    "frame": "wacan_berry"
+  },
+  "WATERIUM_Z": {
+    "file": "items-extra/WATERIUM_Z.png"
+  },
+  "WATER_STONE": {
+    "atlas": "items",
+    "frame": "water_stone"
+  },
+  "WEAKNESS_POLICY": {
+    "atlas": "items",
+    "frame": "weakness_policy"
+  },
+  "WHITE_HERB": {
+    "atlas": "items",
+    "frame": "white_herb"
+  },
+  "WIDE_LENS": {
+    "atlas": "items",
+    "frame": "wide_lens"
+  },
+  "WISE_GLASSES": {
+    "atlas": "items",
+    "frame": "wise_glasses"
+  },
+  "YACHE_BERRY": {
+    "atlas": "items",
+    "frame": "yache_berry"
+  },
+  "ZAP_PLATE": {
+    "atlas": "items",
+    "frame": "zap_plate"
+  },
+  "ZOOM_LENS": {
+    "atlas": "items",
+    "frame": "zoom_lens"
+  },
+  "BUG_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "bug_tera_shard"
+  },
+  "DARK_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "dark_tera_shard"
+  },
+  "DRAGON_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "dragon_tera_shard"
+  },
+  "ELECTRIC_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "electric_tera_shard"
+  },
+  "FAIRY_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "fairy_tera_shard"
+  },
+  "FIGHTING_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "fighting_tera_shard"
+  },
+  "FIRE_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "fire_tera_shard"
+  },
+  "FLYING_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "flying_tera_shard"
+  },
+  "GHOST_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "ghost_tera_shard"
+  },
+  "GRASS_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "grass_tera_shard"
+  },
+  "GROUND_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "ground_tera_shard"
+  },
+  "ICE_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "ice_tera_shard"
+  },
+  "NORMAL_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "normal_tera_shard"
+  },
+  "POISON_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "poison_tera_shard"
+  },
+  "PSYCHIC_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "psychic_tera_shard"
+  },
+  "ROCK_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "rock_tera_shard"
+  },
+  "STEEL_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "steel_tera_shard"
+  },
+  "STELLAR_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "stellar_tera_shard"
+  },
+  "WATER_TERA_SHARD": {
+    "atlas": "items",
+    "frame": "water_tera_shard"
+  }
+}

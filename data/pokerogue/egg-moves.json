@@ -1,0 +1,3428 @@
+{
+  "BULBASAUR": [
+    "GIGA_DRAIN",
+    "GUNK_SHOT",
+    "EARTH_POWER",
+    "SAPPY_SEED"
+  ],
+  "CHARMANDER": [
+    "DRAGON_DANCE",
+    "AEROBLAST",
+    "EARTH_POWER",
+    "BITTER_BLADE"
+  ],
+  "SQUIRTLE": [
+    "AURA_SPHERE",
+    "ARMOR_CANNON",
+    "SHORE_UP",
+    "ORIGIN_PULSE"
+  ],
+  "CATERPIE": [
+    "SANDSEAR_STORM",
+    "SILK_TRAP",
+    "TWIN_BEAM",
+    "BLEAKWIND_STORM"
+  ],
+  "WEEDLE": [
+    "CLOSE_COMBAT",
+    "NOXIOUS_TORQUE",
+    "ATTACK_ORDER",
+    "VICTORY_DANCE"
+  ],
+  "PIDGEY": [
+    "BLEAKWIND_STORM",
+    "FOCUS_BLAST",
+    "CALM_MIND",
+    "BOOMBURST"
+  ],
+  "RATTATA": [
+    "ICE_FANG",
+    "PSYCHIC_FANGS",
+    "FIRE_FANG",
+    "EXTREME_SPEED"
+  ],
+  "SPEAROW": [
+    "FLOATY_FALL",
+    "TRIPLE_ARROWS",
+    "SWORDS_DANCE",
+    "HYPER_DRILL"
+  ],
+  "EKANS": [
+    "POWER_WHIP",
+    "DRAGON_DANCE",
+    "SUCKER_PUNCH",
+    "SHED_TAIL"
+  ],
+  "SANDSHREW": [
+    "U_TURN",
+    "DIRE_CLAW",
+    "SHORE_UP",
+    "MIGHTY_CLEAVE"
+  ],
+  "NIDORAN_F": [
+    "BANEFUL_BUNKER",
+    "MOONLIGHT",
+    "BARB_BARRAGE",
+    "THOUSAND_WAVES"
+  ],
+  "NIDORAN_M": [
+    "DRAGON_DANCE",
+    "ICICLE_CRASH",
+    "NOXIOUS_TORQUE",
+    "PRECIPICE_BLADES"
+  ],
+  "VULPIX": [
+    "MOONBLAST",
+    "TELEPORT",
+    "MORNING_SUN",
+    "TAIL_GLOW"
+  ],
+  "ZUBAT": [
+    "FLOATY_FALL",
+    "DIRE_CLAW",
+    "SWORDS_DANCE",
+    "COLLISION_COURSE"
+  ],
+  "ODDISH": [
+    "SLUDGE_BOMB",
+    "FIERY_DANCE",
+    "STRENGTH_SAP",
+    "SPORE"
+  ],
+  "PARAS": [
+    "SAPPY_SEED",
+    "HORN_LEECH",
+    "CRABHAMMER",
+    "BITTER_BLADE"
+  ],
+  "VENONAT": [
+    "SLUDGE_BOMB",
+    "TOXIC_THREAD",
+    "EARTH_POWER",
+    "STORED_POWER"
+  ],
+  "DIGLETT": [
+    "TRIPLE_DIVE",
+    "SWORDS_DANCE",
+    "TRIPLE_AXEL",
+    "HEADLONG_RUSH"
+  ],
+  "MEOWTH": [
+    "HEART_STAMP",
+    "SWORDS_DANCE",
+    "SIZZLY_SLIDE",
+    "TAIL_SLAP"
+  ],
+  "PSYDUCK": [
+    "FROST_BREATH",
+    "AQUA_STEP",
+    "MYSTICAL_POWER",
+    "BOUNCY_BUBBLE"
+  ],
+  "MANKEY": [
+    "DRAIN_PUNCH",
+    "SLACK_OFF",
+    "METEOR_MASH",
+    "NO_RETREAT"
+  ],
+  "GROWLITHE": [
+    "ZING_ZAP",
+    "DRAGON_DANCE",
+    "MORNING_SUN",
+    "SACRED_FIRE"
+  ],
+  "POLIWAG": [
+    "SLACK_OFF",
+    "WILDBOLT_STORM",
+    "DRAIN_PUNCH",
+    "SURGING_STRIKES"
+  ],
+  "ABRA": [
+    "AURA_SPHERE",
+    "BADDY_BAD",
+    "ICE_BEAM",
+    "PSYSTRIKE"
+  ],
+  "MACHOP": [
+    "DRAIN_PUNCH",
+    "METEOR_MASH",
+    "MOUNTAIN_GALE",
+    "FISSURE"
+  ],
+  "BELLSPROUT": [
+    "GUNK_SHOT",
+    "STRENGTH_SAP",
+    "COIL",
+    "SAPPY_SEED"
+  ],
+  "TENTACOOL": [
+    "BANEFUL_BUNKER",
+    "MALIGNANT_CHAIN",
+    "BOUNCY_BUBBLE",
+    "STRENGTH_SAP"
+  ],
+  "GEODUDE": [
+    "FLARE_BLITZ",
+    "HEAD_SMASH",
+    "SHORE_UP",
+    "SHELL_SMASH"
+  ],
+  "PONYTA": [
+    "HEADLONG_RUSH",
+    "FIRE_LASH",
+    "HORN_LEECH",
+    "VICTORY_DANCE"
+  ],
+  "SLOWPOKE": [
+    "SPLISHY_SPLASH",
+    "FROST_BREATH",
+    "SHED_TAIL",
+    "MYSTICAL_POWER"
+  ],
+  "MAGNEMITE": [
+    "PARABOLIC_CHARGE",
+    "FLAMETHROWER",
+    "THUNDERCLAP",
+    "ICE_BEAM"
+  ],
+  "FARFETCHD": [
+    "IVY_CUDGEL",
+    "TRIPLE_ARROWS",
+    "DRILL_RUN",
+    "VICTORY_DANCE"
+  ],
+  "DODUO": [
+    "TRIPLE_AXEL",
+    "HIGH_JUMP_KICK",
+    "FLOATY_FALL",
+    "HYPER_DRILL"
+  ],
+  "SEEL": [
+    "FREEZE_DRY",
+    "BOUNCY_BUBBLE",
+    "SLACK_OFF",
+    "STEAM_ERUPTION"
+  ],
+  "GRIMER": [
+    "SUCKER_PUNCH",
+    "CURSE",
+    "NOXIOUS_TORQUE",
+    "STRENGTH_SAP"
+  ],
+  "SHELLDER": [
+    "ROCK_BLAST",
+    "WATER_SHURIKEN",
+    "FREEZE_DRY",
+    "BULLET_SEED"
+  ],
+  "GASTLY": [
+    "FROST_BREATH",
+    "AURA_SPHERE",
+    "PARTING_SHOT",
+    "DARK_VOID"
+  ],
+  "ONIX": [
+    "SHORE_UP",
+    "BODY_PRESS",
+    "COIL",
+    "DIAMOND_STORM"
+  ],
+  "DROWZEE": [
+    "BADDY_BAD",
+    "STRENGTH_SAP",
+    "LUMINA_CRASH",
+    "DARK_VOID"
+  ],
+  "KRABBY": [
+    "DIRE_CLAW",
+    "DRAGON_HAMMER",
+    "IVY_CUDGEL",
+    "JET_PUNCH"
+  ],
+  "VOLTORB": [
+    "NASTY_PLOT",
+    "FUSION_FLARE",
+    "ENERGY_BALL",
+    "ELECTRO_DRIFT"
+  ],
+  "EXEGGCUTE": [
+    "FICKLE_BEAM",
+    "APPLE_ACID",
+    "HEAT_WAVE",
+    "LUMINA_CRASH"
+  ],
+  "CUBONE": [
+    "HEAD_SMASH",
+    "WOOD_HAMMER",
+    "SHADOW_SNEAK",
+    "BITTER_BLADE"
+  ],
+  "LICKITUNG": [
+    "FACADE",
+    "FIRE_LASH",
+    "BULK_UP",
+    "OBSTRUCT"
+  ],
+  "KOFFING": [
+    "SCALD",
+    "RECOVER",
+    "BODY_PRESS",
+    "MALIGNANT_CHAIN"
+  ],
+  "RHYHORN": [
+    "SHORE_UP",
+    "ICE_HAMMER",
+    "ACCELEROCK",
+    "HEAD_SMASH"
+  ],
+  "TANGELA": [
+    "NATURES_MADNESS",
+    "BATON_PASS",
+    "JUNGLE_HEALING",
+    "SAPPY_SEED"
+  ],
+  "KANGASKHAN": [
+    "POWER_UP_PUNCH",
+    "TRAILBLAZE",
+    "COVET",
+    "SEISMIC_TOSS"
+  ],
+  "HORSEA": [
+    "SNIPE_SHOT",
+    "TAKE_HEART",
+    "SHELL_SIDE_ARM",
+    "DRAGON_ENERGY"
+  ],
+  "GOLDEEN": [
+    "ICICLE_CRASH",
+    "SUPERCELL_SLAM",
+    "DRAGON_DANCE",
+    "FISHIOUS_REND"
+  ],
+  "STARYU": [
+    "TRIPLE_AXEL",
+    "MYSTICAL_POWER",
+    "MOONBLAST",
+    "BOUNCY_BUBBLE"
+  ],
+  "SCYTHER": [
+    "MIGHTY_CLEAVE",
+    "FELL_STINGER",
+    "STORM_THROW",
+    "BITTER_BLADE"
+  ],
+  "PINSIR": [
+    "HEADLONG_RUSH",
+    "LEECH_LIFE",
+    "CRUSH_GRIP",
+    "EXTREME_SPEED"
+  ],
+  "TAUROS": [
+    "PLAY_ROUGH",
+    "FLARE_BLITZ",
+    "WICKED_TORQUE",
+    "COLLISION_COURSE"
+  ],
+  "MAGIKARP": [
+    "FLIP_TURN",
+    "ICE_SPINNER",
+    "KNOCK_OFF",
+    "DRAGON_ASCENT"
+  ],
+  "LAPRAS": [
+    "RECOVER",
+    "FREEZE_DRY",
+    "SCALD",
+    "SHELL_SMASH"
+  ],
+  "DITTO": [
+    "MIMIC",
+    "SKETCH",
+    "METRONOME",
+    "IMPRISON"
+  ],
+  "EEVEE": [
+    "WISH",
+    "NO_RETREAT",
+    "ZIPPY_ZAP",
+    "BOOMBURST"
+  ],
+  "PORYGON": [
+    "VOLT_SWITCH",
+    "DAZZLING_GLEAM",
+    "FLAMETHROWER",
+    "TECHNO_BLAST"
+  ],
+  "OMANYTE": [
+    "FREEZE_DRY",
+    "GIGA_DRAIN",
+    "POWER_GEM",
+    "STEAM_ERUPTION"
+  ],
+  "KABUTO": [
+    "CEASELESS_EDGE",
+    "HIGH_HORSEPOWER",
+    "MIGHTY_CLEAVE",
+    "CRABHAMMER"
+  ],
+  "AERODACTYL": [
+    "HEAD_SMASH",
+    "HIGH_HORSEPOWER",
+    "STONE_AXE",
+    "DRAGON_ASCENT"
+  ],
+  "ARTICUNO": [
+    "EARTH_POWER",
+    "CALM_MIND",
+    "AURORA_VEIL",
+    "AEROBLAST"
+  ],
+  "ZAPDOS": [
+    "EARTH_POWER",
+    "CALM_MIND",
+    "SPLISHY_SPLASH",
+    "BLEAKWIND_STORM"
+  ],
+  "MOLTRES": [
+    "EARTH_POWER",
+    "CALM_MIND",
+    "SPRINGTIDE_STORM",
+    "AEROBLAST"
+  ],
+  "DRATINI": [
+    "DRAGON_HAMMER",
+    "HYPER_VOICE",
+    "CALM_MIND",
+    "CRUSH_GRIP"
+  ],
+  "MEWTWO": [
+    "METEOR_MASH",
+    "MOONBLAST",
+    "THUNDEROUS_KICK",
+    "PHOTON_GEYSER"
+  ],
+  "MEW": [
+    "PHOTON_GEYSER",
+    "MOONBLAST",
+    "ASTRAL_BARRAGE",
+    "SHELL_SMASH"
+  ],
+  "CHIKORITA": [
+    "MOONBLAST",
+    "EARTH_POWER",
+    "GROWTH",
+    "SPORE"
+  ],
+  "CYNDAQUIL": [
+    "BURNING_BULWARK",
+    "EARTH_POWER",
+    "FIERY_DANCE",
+    "ELECTRO_DRIFT"
+  ],
+  "TOTODILE": [
+    "THUNDER_FANG",
+    "DRAGON_DANCE",
+    "HYPER_FANG",
+    "SURGING_STRIKES"
+  ],
+  "SENTRET": [
+    "TIDY_UP",
+    "FAKE_OUT",
+    "NUZZLE",
+    "EXTREME_SPEED"
+  ],
+  "HOOTHOOT": [
+    "TAKE_HEART",
+    "ESPER_WING",
+    "AEROBLAST",
+    "BOOMBURST"
+  ],
+  "LEDYBA": [
+    "POLLEN_PUFF",
+    "MAT_BLOCK",
+    "PARTING_SHOT",
+    "SPORE"
+  ],
+  "SPINARAK": [
+    "PARTING_SHOT",
+    "ATTACK_ORDER",
+    "GASTRO_ACID",
+    "STRENGTH_SAP"
+  ],
+  "CHINCHOU": [
+    "THUNDERCLAP",
+    "BOUNCY_BUBBLE",
+    "THUNDER_CAGE",
+    "TAIL_GLOW"
+  ],
+  "PICHU": [
+    "MOONBLAST",
+    "WAVE_CRASH",
+    "BULK_UP",
+    "TRIPLE_AXEL"
+  ],
+  "CLEFFA": [
+    "CALM_MIND",
+    "EARTH_POWER",
+    "ESPER_WING",
+    "LUNAR_BLESSING"
+  ],
+  "IGGLYBUFF": [
+    "DRAIN_PUNCH",
+    "GRAV_APPLE",
+    "SOFT_BOILED",
+    "EXTREME_SPEED"
+  ],
+  "TOGEPI": [
+    "SCORCHING_SANDS",
+    "SPLISHY_SPLASH",
+    "RELIC_SONG",
+    "FIERY_DANCE"
+  ],
+  "NATU": [
+    "REVIVAL_BLESSING",
+    "NASTY_PLOT",
+    "MOONBLAST",
+    "OBLIVION_WING"
+  ],
+  "MAREEP": [
+    "FLAMETHROWER",
+    "PARABOLIC_CHARGE",
+    "CORE_ENFORCER",
+    "TAIL_GLOW"
+  ],
+  "HOPPIP": [
+    "FLOATY_FALL",
+    "STRENGTH_SAP",
+    "SAPPY_SEED",
+    "SPORE"
+  ],
+  "AIPOM": [
+    "ROCK_BLAST",
+    "STORM_THROW",
+    "FAKE_OUT",
+    "SWORDS_DANCE"
+  ],
+  "SUNKERN": [
+    "SPORE",
+    "QUIVER_DANCE",
+    "FIERY_DANCE",
+    "HYDRO_STEAM"
+  ],
+  "YANMA": [
+    "NASTY_PLOT",
+    "EARTH_POWER",
+    "HEAT_WAVE",
+    "BLEAKWIND_STORM"
+  ],
+  "WOOPER": [
+    "SCORCHING_SANDS",
+    "RECOVER",
+    "FLIP_TURN",
+    "TRIPLE_DIVE"
+  ],
+  "MURKROW": [
+    "CROSS_CHOP",
+    "FLOATY_FALL",
+    "TIDY_UP",
+    "WICKED_BLOW"
+  ],
+  "MISDREAVUS": [
+    "TAKE_HEART",
+    "MOONBLAST",
+    "AURA_SPHERE",
+    "MOONGEIST_BEAM"
+  ],
+  "UNOWN": [
+    "NATURE_POWER",
+    "COSMIC_POWER",
+    "ANCIENT_POWER",
+    "MYSTICAL_POWER"
+  ],
+  "GIRAFARIG": [
+    "MYSTICAL_POWER",
+    "NIGHT_DAZE",
+    "LIFE_DEW",
+    "BOOMBURST"
+  ],
+  "PINECO": [
+    "METAL_BURST",
+    "RECOVER",
+    "LEECH_LIFE",
+    "SPIN_OUT"
+  ],
+  "DUNSPARCE": [
+    "WICKED_TORQUE",
+    "MAGICAL_TORQUE",
+    "BLAZING_TORQUE",
+    "EXTREME_SPEED"
+  ],
+  "GLIGAR": [
+    "FLY",
+    "LEECH_LIFE",
+    "BANEFUL_BUNKER",
+    "MIGHTY_CLEAVE"
+  ],
+  "SNUBBULL": [
+    "FACADE",
+    "HIGH_HORSEPOWER",
+    "SWORDS_DANCE",
+    "EXTREME_SPEED"
+  ],
+  "QWILFISH": [
+    "BARB_BARRAGE",
+    "BANEFUL_BUNKER",
+    "RECOVER",
+    "FISHIOUS_REND"
+  ],
+  "SHUCKLE": [
+    "SALT_CURE",
+    "STUFF_CHEEKS",
+    "BODY_PRESS",
+    "PAIN_SPLIT"
+  ],
+  "HERACROSS": [
+    "ROCK_BLAST",
+    "STORM_THROW",
+    "IRON_HEAD",
+    "SCALE_SHOT"
+  ],
+  "SNEASEL": [
+    "DIRE_CLAW",
+    "DARKEST_LARIAT",
+    "TRIPLE_AXEL",
+    "CLOSE_COMBAT"
+  ],
+  "TEDDIURSA": [
+    "FACADE",
+    "FAKE_OUT",
+    "SLACK_OFF",
+    "PRECIPICE_BLADES"
+  ],
+  "SLUGMA": [
+    "BURNING_BULWARK",
+    "POWER_GEM",
+    "SOLAR_BEAM",
+    "MAGMA_STORM"
+  ],
+  "SWINUB": [
+    "SLACK_OFF",
+    "MOUNTAIN_GALE",
+    "STONE_AXE",
+    "PRECIPICE_BLADES"
+  ],
+  "CORSOLA": [
+    "SCALD",
+    "FREEZE_DRY",
+    "STRENGTH_SAP",
+    "SALT_CURE"
+  ],
+  "REMORAID": [
+    "WATER_SHURIKEN",
+    "TAKE_HEART",
+    "SHELL_SIDE_ARM",
+    "BOUNCY_BUBBLE"
+  ],
+  "DELIBIRD": [
+    "BONEMERANG",
+    "FLOATY_FALL",
+    "VICTORY_DANCE",
+    "GLACIAL_LANCE"
+  ],
+  "SKARMORY": [
+    "ROOST",
+    "BEHEMOTH_BLADE",
+    "CEASELESS_EDGE",
+    "BEAK_BLAST"
+  ],
+  "HOUNDOUR": [
+    "EARTH_POWER",
+    "THUNDERBOLT",
+    "MOONBLAST",
+    "FIERY_WRATH"
+  ],
+  "PHANPY": [
+    "SHORE_UP",
+    "BULK_UP",
+    "MOUNTAIN_GALE",
+    "COLLISION_COURSE"
+  ],
+  "STANTLER": [
+    "RAGING_BULL",
+    "HORN_LEECH",
+    "SWORDS_DANCE",
+    "HIGH_JUMP_KICK"
+  ],
+  "SMEARGLE": [
+    "CONVERSION",
+    "BURNING_BULWARK",
+    "SALT_CURE",
+    "DARK_VOID"
+  ],
+  "TYROGUE": [
+    "DARKEST_LARIAT",
+    "THUNDEROUS_KICK",
+    "METEOR_MASH",
+    "VICTORY_DANCE"
+  ],
+  "SMOOCHUM": [
+    "LUSTER_PURGE",
+    "AURA_SPHERE",
+    "FREEZE_DRY",
+    "QUIVER_DANCE"
+  ],
+  "ELEKID": [
+    "FIRE_LASH",
+    "PLAY_ROUGH",
+    "POWER_WHIP",
+    "SHIFT_GEAR"
+  ],
+  "MAGBY": [
+    "THUNDERCLAP",
+    "EARTH_POWER",
+    "ENERGY_BALL",
+    "BLUE_FLARE"
+  ],
+  "MILTANK": [
+    "BODY_PRESS",
+    "BULK_UP",
+    "KNOCK_OFF",
+    "SIZZLY_SLIDE"
+  ],
+  "RAIKOU": [
+    "PARABOLIC_CHARGE",
+    "NASTY_PLOT",
+    "FROST_BREATH",
+    "ELECTRO_DRIFT"
+  ],
+  "ENTEI": [
+    "BURNING_BULWARK",
+    "PLAY_ROUGH",
+    "EARTHQUAKE",
+    "DRAGON_DANCE"
+  ],
+  "SUICUNE": [
+    "RECOVER",
+    "NASTY_PLOT",
+    "FREEZE_DRY",
+    "STEAM_ERUPTION"
+  ],
+  "LARVITAR": [
+    "DRAGON_DANCE",
+    "MOUNTAIN_GALE",
+    "SHORE_UP",
+    "DIAMOND_STORM"
+  ],
+  "LUGIA": [
+    "STORED_POWER",
+    "STEAM_ERUPTION",
+    "AURA_SPHERE",
+    "LUMINA_CRASH"
+  ],
+  "HO_OH": [
+    "BEAK_BLAST",
+    "PETAL_BLIZZARD",
+    "REVIVAL_BLESSING",
+    "DRAGON_DANCE"
+  ],
+  "CELEBI": [
+    "PHOTON_GEYSER",
+    "MATCHA_GOTCHA",
+    "REVIVAL_BLESSING",
+    "QUIVER_DANCE"
+  ],
+  "TREECKO": [
+    "NASTY_PLOT",
+    "CLANGING_SCALES",
+    "SECRET_SWORD",
+    "SEED_FLARE"
+  ],
+  "TORCHIC": [
+    "THUNDEROUS_KICK",
+    "ZING_ZAP",
+    "BURNING_BULWARK",
+    "PYRO_BALL"
+  ],
+  "MUDKIP": [
+    "SHORE_UP",
+    "ICICLE_CRASH",
+    "TRIPLE_DIVE",
+    "PRECIPICE_BLADES"
+  ],
+  "POOCHYENA": [
+    "KNOCK_OFF",
+    "CLOSE_COMBAT",
+    "DIRE_CLAW",
+    "VICTORY_DANCE"
+  ],
+  "ZIGZAGOON": [
+    "EXTREME_SPEED",
+    "NUZZLE",
+    "HIGH_HORSEPOWER",
+    "TIDY_UP"
+  ],
+  "WURMPLE": [
+    "BATON_PASS",
+    "BLEAKWIND_STORM",
+    "STORED_POWER",
+    "MALIGNANT_CHAIN"
+  ],
+  "LOTAD": [
+    "REVELATION_DANCE",
+    "APPLE_ACID",
+    "ICE_BEAM",
+    "QUIVER_DANCE"
+  ],
+  "SEEDOT": [
+    "SWORDS_DANCE",
+    "SACRED_SWORD",
+    "KOWTOW_CLEAVE",
+    "BITTER_BLADE"
+  ],
+  "TAILLOW": [
+    "BOOMBURST",
+    "FACADE",
+    "HEADLONG_RUSH",
+    "NO_RETREAT"
+  ],
+  "WINGULL": [
+    "THUNDER",
+    "FLIP_TURN",
+    "CALM_MIND",
+    "STEAM_ERUPTION"
+  ],
+  "RALTS": [
+    "PSYBLADE",
+    "HYPER_VOICE",
+    "GLITZY_GLOW",
+    "NO_RETREAT"
+  ],
+  "SURSKIT": [
+    "POLLEN_PUFF",
+    "FIERY_DANCE",
+    "BOUNCY_BUBBLE",
+    "AEROBLAST"
+  ],
+  "SHROOMISH": [
+    "ACCELEROCK",
+    "TRAILBLAZE",
+    "STORM_THROW",
+    "SAPPY_SEED"
+  ],
+  "SLAKOTH": [
+    "ENTRAINMENT",
+    "DRAIN_PUNCH",
+    "PARTING_SHOT",
+    "CRUSH_GRIP"
+  ],
+  "NINCADA": [
+    "BULLDOZE",
+    "STICKY_WEB",
+    "SPIRIT_SHACKLE",
+    "SHELL_SMASH"
+  ],
+  "WHISMUR": [
+    "ALLURING_VOICE",
+    "SHIFT_GEAR",
+    "SPARKLING_ARIA",
+    "TORCH_SONG"
+  ],
+  "MAKUHITA": [
+    "HAMMER_ARM",
+    "SLACK_OFF",
+    "HEAT_CRASH",
+    "DOUBLE_IRON_BASH"
+  ],
+  "AZURILL": [
+    "JET_PUNCH",
+    "DRAIN_PUNCH",
+    "BULK_UP",
+    "SURGING_STRIKES"
+  ],
+  "NOSEPASS": [
+    "RECOVER",
+    "THUNDER_CAGE",
+    "CALM_MIND",
+    "TACHYON_CUTTER"
+  ],
+  "SKITTY": [
+    "FIRE_LASH",
+    "ENTRAINMENT",
+    "TIDY_UP",
+    "V_CREATE"
+  ],
+  "SABLEYE": [
+    "RECOVER",
+    "WILL_O_WISP",
+    "CURSE",
+    "TOPSY_TURVY"
+  ],
+  "MAWILE": [
+    "BULLET_PUNCH",
+    "HORN_LEECH",
+    "EARTHQUAKE",
+    "MAGICAL_TORQUE"
+  ],
+  "ARON": [
+    "HEAD_SMASH",
+    "BODY_PRESS",
+    "HEAT_CRASH",
+    "SHORE_UP"
+  ],
+  "MEDITITE": [
+    "THUNDEROUS_KICK",
+    "SUCKER_PUNCH",
+    "BULLET_PUNCH",
+    "PHOTON_GEYSER"
+  ],
+  "ELECTRIKE": [
+    "FROST_BREATH",
+    "HEAT_WAVE",
+    "NASTY_PLOT",
+    "ELECTRO_DRIFT"
+  ],
+  "PLUSLE": [
+    "FLAMETHROWER",
+    "GLITZY_GLOW",
+    "SPLISHY_SPLASH",
+    "TAIL_GLOW"
+  ],
+  "MINUN": [
+    "ICE_BEAM",
+    "BADDY_BAD",
+    "SPARKLY_SWIRL",
+    "TAIL_GLOW"
+  ],
+  "VOLBEAT": [
+    "BATON_PASS",
+    "STICKY_WEB",
+    "DECORATE",
+    "VICTORY_DANCE"
+  ],
+  "ILLUMISE": [
+    "PARTING_SHOT",
+    "GLITZY_GLOW",
+    "POWDER",
+    "QUIVER_DANCE"
+  ],
+  "GULPIN": [
+    "MALIGNANT_CHAIN",
+    "EARTH_POWER",
+    "CALM_MIND",
+    "STRENGTH_SAP"
+  ],
+  "CARVANHA": [
+    "THUNDER_FANG",
+    "GUNK_SHOT",
+    "OBSTRUCT",
+    "SURGING_STRIKES"
+  ],
+  "WAILMER": [
+    "TAKE_HEART",
+    "COMEUPPANCE",
+    "SLACK_OFF",
+    "STEAM_ERUPTION"
+  ],
+  "NUMEL": [
+    "TRICK_ROOM",
+    "ENERGY_BALL",
+    "SLACK_OFF",
+    "BLUE_FLARE"
+  ],
+  "TORKOAL": [
+    "MORNING_SUN",
+    "BURNING_BULWARK",
+    "BODY_PRESS",
+    "HYDRO_STEAM"
+  ],
+  "SPOINK": [
+    "AURA_SPHERE",
+    "MILK_DRINK",
+    "EXPANDING_FORCE",
+    "TAIL_GLOW"
+  ],
+  "SPINDA": [
+    "SUPERPOWER",
+    "SLACK_OFF",
+    "FLEUR_CANNON",
+    "V_CREATE"
+  ],
+  "TRAPINCH": [
+    "FIRE_LASH",
+    "DRAGON_DARTS",
+    "THOUSAND_ARROWS",
+    "DRAGON_ENERGY"
+  ],
+  "CACNEA": [
+    "EARTH_POWER",
+    "CEASELESS_EDGE",
+    "NIGHT_DAZE",
+    "IVY_CUDGEL"
+  ],
+  "SWABLU": [
+    "ROOST",
+    "TAKE_HEART",
+    "AEROBLAST",
+    "BOOMBURST"
+  ],
+  "ZANGOOSE": [
+    "FAKE_OUT",
+    "HIGH_HORSEPOWER",
+    "EXTREME_SPEED",
+    "TIDY_UP"
+  ],
+  "SEVIPER": [
+    "ICE_BEAM",
+    "BITTER_BLADE",
+    "SUCKER_PUNCH",
+    "NO_RETREAT"
+  ],
+  "LUNATONE": [
+    "LUMINA_CRASH",
+    "MOONGEIST_BEAM",
+    "SHELL_SMASH",
+    "DARK_VOID"
+  ],
+  "SOLROCK": [
+    "MIGHTY_CLEAVE",
+    "PSYSHIELD_BASH",
+    "SHELL_SMASH",
+    "SACRED_FIRE"
+  ],
+  "BARBOACH": [
+    "DRAGON_DANCE",
+    "ZING_ZAP",
+    "ICE_SPINNER",
+    "TRIPLE_DIVE"
+  ],
+  "CORPHISH": [
+    "CEASELESS_EDGE",
+    "SHELL_SIDE_ARM",
+    "SUCKER_PUNCH",
+    "JET_PUNCH"
+  ],
+  "BALTOY": [
+    "RECOVER",
+    "GLARE",
+    "RUINATION",
+    "MYSTICAL_POWER"
+  ],
+  "LILEEP": [
+    "POWER_GEM",
+    "SCALD",
+    "STRENGTH_SAP",
+    "SAPPY_SEED"
+  ],
+  "ANORITH": [
+    "FIRST_IMPRESSION",
+    "LEECH_LIFE",
+    "DRAGON_DANCE",
+    "MIGHTY_CLEAVE"
+  ],
+  "FEEBAS": [
+    "CALM_MIND",
+    "FREEZE_DRY",
+    "MOONBLAST",
+    "STEAM_ERUPTION"
+  ],
+  "CASTFORM": [
+    "BOOMBURST",
+    "HYDRO_STEAM",
+    "ERUPTION",
+    "QUIVER_DANCE"
+  ],
+  "KECLEON": [
+    "ZIPPY_ZAP",
+    "COIL",
+    "EXTREME_SPEED",
+    "MULTI_ATTACK"
+  ],
+  "SHUPPET": [
+    "STORM_THROW",
+    "TIDY_UP",
+    "PARTING_SHOT",
+    "SPECTRAL_THIEF"
+  ],
+  "DUSKULL": [
+    "BULK_UP",
+    "DRAIN_PUNCH",
+    "RECOVER",
+    "RAGE_FIST"
+  ],
+  "TROPIUS": [
+    "STUFF_CHEEKS",
+    "EARTH_POWER",
+    "APPLE_ACID",
+    "SAPPY_SEED"
+  ],
+  "ABSOL": [
+    "KOWTOW_CLEAVE",
+    "SACRED_SWORD",
+    "PSYBLADE",
+    "BITTER_BLADE"
+  ],
+  "WYNAUT": [
+    "RECOVER",
+    "SHED_TAIL",
+    "TAUNT",
+    "COMEUPPANCE"
+  ],
+  "SNORUNT": [
+    "SPARKLY_SWIRL",
+    "NASTY_PLOT",
+    "EARTH_POWER",
+    "BLOOD_MOON"
+  ],
+  "SPHEAL": [
+    "FLIP_TURN",
+    "FREEZE_DRY",
+    "SLACK_OFF",
+    "STEAM_ERUPTION"
+  ],
+  "CLAMPERL": [
+    "SHELL_SIDE_ARM",
+    "SNIPE_SHOT",
+    "GIGA_DRAIN",
+    "BOUNCY_BUBBLE"
+  ],
+  "RELICANTH": [
+    "DRAGON_DANCE",
+    "SHORE_UP",
+    "WAVE_CRASH",
+    "DIAMOND_STORM"
+  ],
+  "LUVDISC": [
+    "BATON_PASS",
+    "HEART_SWAP",
+    "GLITZY_GLOW",
+    "REVIVAL_BLESSING"
+  ],
+  "BAGON": [
+    "WAVE_CRASH",
+    "RAGING_FURY",
+    "DRAGON_DANCE",
+    "DRAGON_DARTS"
+  ],
+  "BELDUM": [
+    "PSYSHIELD_BASH",
+    "DRAIN_PUNCH",
+    "ICE_HAMMER",
+    "SHIFT_GEAR"
+  ],
+  "REGIROCK": [
+    "STONE_AXE",
+    "BODY_PRESS",
+    "SHORE_UP",
+    "SALT_CURE"
+  ],
+  "REGICE": [
+    "EARTH_POWER",
+    "TAKE_HEART",
+    "RECOVER",
+    "FREEZE_DRY"
+  ],
+  "REGISTEEL": [
+    "BODY_PRESS",
+    "SIZZLY_SLIDE",
+    "RECOVER",
+    "GIGATON_HAMMER"
+  ],
+  "LATIAS": [
+    "CORE_ENFORCER",
+    "FUSION_FLARE",
+    "SPARKLY_SWIRL",
+    "MYSTICAL_POWER"
+  ],
+  "LATIOS": [
+    "CORE_ENFORCER",
+    "BLUE_FLARE",
+    "NASTY_PLOT",
+    "TACHYON_CUTTER"
+  ],
+  "KYOGRE": [
+    "RECOVER",
+    "HURRICANE",
+    "FREEZY_FROST",
+    "WILDBOLT_STORM"
+  ],
+  "GROUDON": [
+    "STONE_AXE",
+    "SOLAR_BLADE",
+    "MORNING_SUN",
+    "SACRED_FIRE"
+  ],
+  "RAYQUAZA": [
+    "V_CREATE",
+    "NASTY_PLOT",
+    "CORE_ENFORCER",
+    "DRAGON_DARTS"
+  ],
+  "JIRACHI": [
+    "TACHYON_CUTTER",
+    "TRIPLE_ARROWS",
+    "ROCK_SLIDE",
+    "SHELL_SMASH"
+  ],
+  "DEOXYS": [
+    "COLLISION_COURSE",
+    "FUSION_FLARE",
+    "PARTING_SHOT",
+    "LUMINA_CRASH"
+  ],
+  "TURTWIG": [
+    "SHELL_SMASH",
+    "STONE_AXE",
+    "ICE_SPINNER",
+    "SAPPY_SEED"
+  ],
+  "CHIMCHAR": [
+    "THUNDERBOLT",
+    "SECRET_SWORD",
+    "ICE_PUNCH",
+    "SACRED_FIRE"
+  ],
+  "PIPLUP": [
+    "KINGS_SHIELD",
+    "TACHYON_CUTTER",
+    "FREEZE_DRY",
+    "STEAM_ERUPTION"
+  ],
+  "STARLY": [
+    "KNOCK_OFF",
+    "HEAD_CHARGE",
+    "FLARE_BLITZ",
+    "SUPERPOWER"
+  ],
+  "BIDOOF": [
+    "EXTREME_SPEED",
+    "STOCKPILE",
+    "POWER_TRIP",
+    "AQUA_STEP"
+  ],
+  "KRICKETOT": [
+    "BONEMERANG",
+    "VICTORY_DANCE",
+    "STONE_AXE",
+    "POPULATION_BOMB"
+  ],
+  "SHINX": [
+    "THUNDEROUS_KICK",
+    "TRIPLE_AXEL",
+    "ZIPPY_ZAP",
+    "BOLT_STRIKE"
+  ],
+  "BUDEW": [
+    "FIERY_DANCE",
+    "ACID_SPRAY",
+    "BOUNCY_BUBBLE",
+    "QUIVER_DANCE"
+  ],
+  "CRANIDOS": [
+    "VOLT_TACKLE",
+    "ACCELEROCK",
+    "FLARE_BLITZ",
+    "DRAGON_DANCE"
+  ],
+  "SHIELDON": [
+    "SHORE_UP",
+    "BODY_PRESS",
+    "KINGS_SHIELD",
+    "DIAMOND_STORM"
+  ],
+  "BURMY": [
+    "FIERY_DANCE",
+    "DEFEND_ORDER",
+    "HEAL_ORDER",
+    "SAPPY_SEED"
+  ],
+  "COMBEE": [
+    "POWER_TRIP",
+    "FLOATY_FALL",
+    "BODY_PRESS",
+    "SPORE"
+  ],
+  "PACHIRISU": [
+    "FREEZY_FROST",
+    "SIZZLY_SLIDE",
+    "SLACK_OFF",
+    "THUNDER_CAGE"
+  ],
+  "BUIZEL": [
+    "JET_PUNCH",
+    "TRIPLE_AXEL",
+    "SUPERCELL_SLAM",
+    "TRIPLE_DIVE"
+  ],
+  "CHERUBI": [
+    "SLEEP_POWDER",
+    "SOLAR_BLADE",
+    "HEAT_WAVE",
+    "STRENGTH_SAP"
+  ],
+  "SHELLOS": [
+    "BOUNCY_BUBBLE",
+    "GIGA_DRAIN",
+    "FREEZY_FROST",
+    "STEAM_ERUPTION"
+  ],
+  "DRIFLOON": [
+    "PSYCHO_SHIFT",
+    "MIND_BLOWN",
+    "CALM_MIND",
+    "OBLIVION_WING"
+  ],
+  "BUNEARY": [
+    "LOVELY_KISS",
+    "FAKE_OUT",
+    "SWORDS_DANCE",
+    "WICKED_BLOW"
+  ],
+  "GLAMEOW": [
+    "PARTING_SHOT",
+    "HIGH_HORSEPOWER",
+    "SWORDS_DANCE",
+    "EXTREME_SPEED"
+  ],
+  "CHINGLING": [
+    "ALLURING_VOICE",
+    "EERIE_SPELL",
+    "BUZZY_BUZZ",
+    "TORCH_SONG"
+  ],
+  "STUNKY": [
+    "DIRE_CLAW",
+    "FIRE_LASH",
+    "RECOVER",
+    "PARTING_SHOT"
+  ],
+  "BRONZOR": [
+    "RECOVER",
+    "BODY_PRESS",
+    "GLARE",
+    "PSYSHIELD_BASH"
+  ],
+  "BONSLY": [
+    "ACCELEROCK",
+    "SWORDS_DANCE",
+    "STRENGTH_SAP",
+    "SAPPY_SEED"
+  ],
+  "MIME_JR": [
+    "CHILLY_RECEPTION",
+    "MOONBLAST",
+    "FROST_BREATH",
+    "LUMINA_CRASH"
+  ],
+  "HAPPINY": [
+    "COTTON_GUARD",
+    "SEISMIC_TOSS",
+    "SIZZLY_SLIDE",
+    "REVIVAL_BLESSING"
+  ],
+  "CHATOT": [
+    "SPARKLING_ARIA",
+    "BOOMBURST",
+    "BATON_PASS",
+    "TORCH_SONG"
+  ],
+  "SPIRITOMB": [
+    "PARTING_SHOT",
+    "BADDY_BAD",
+    "SPIRIT_BREAK",
+    "STRENGTH_SAP"
+  ],
+  "GIBLE": [
+    "DRAGON_HAMMER",
+    "BITTER_BLADE",
+    "LANDS_WRATH",
+    "DRAGON_DANCE"
+  ],
+  "MUNCHLAX": [
+    "OBSTRUCT",
+    "GRAV_APPLE",
+    "SUCKER_PUNCH",
+    "SLACK_OFF"
+  ],
+  "RIOLU": [
+    "THUNDEROUS_KICK",
+    "BULLET_PUNCH",
+    "TRIPLE_AXEL",
+    "TACHYON_CUTTER"
+  ],
+  "HIPPOPOTAS": [
+    "SHORE_UP",
+    "STONE_AXE",
+    "BULK_UP",
+    "SALT_CURE"
+  ],
+  "SKORUPI": [
+    "COIL",
+    "DIRE_CLAW",
+    "CRABHAMMER",
+    "WICKED_BLOW"
+  ],
+  "CROAGUNK": [
+    "DIRE_CLAW",
+    "TRIPLE_AXEL",
+    "THUNDEROUS_KICK",
+    "VICTORY_DANCE"
+  ],
+  "CARNIVINE": [
+    "STRENGTH_SAP",
+    "FIRE_LASH",
+    "COIL",
+    "SAPPY_SEED"
+  ],
+  "FINNEON": [
+    "QUIVER_DANCE",
+    "SPLISHY_SPLASH",
+    "FREEZE_DRY",
+    "OBLIVION_WING"
+  ],
+  "MANTYKE": [
+    "SPLISHY_SPLASH",
+    "FREEZY_FROST",
+    "CALM_MIND",
+    "BOUNCY_BUBBLE"
+  ],
+  "SNOVER": [
+    "LANDS_WRATH",
+    "POWDER",
+    "GIGA_DRAIN",
+    "SAPPY_SEED"
+  ],
+  "ROTOM": [
+    "STRENGTH_SAP",
+    "FIERY_DANCE",
+    "SPLISHY_SPLASH",
+    "ELECTRO_DRIFT"
+  ],
+  "UXIE": [
+    "LUMINA_CRASH",
+    "AURA_SPHERE",
+    "RECOVER",
+    "TAIL_GLOW"
+  ],
+  "MESPRIT": [
+    "PHOTON_GEYSER",
+    "AURA_SPHERE",
+    "RECOVER",
+    "TAIL_GLOW"
+  ],
+  "AZELF": [
+    "PSYSTRIKE",
+    "AURA_SPHERE",
+    "ICE_BEAM",
+    "TAIL_GLOW"
+  ],
+  "DIALGA": [
+    "CORE_ENFORCER",
+    "TAKE_HEART",
+    "RECOVER",
+    "TACHYON_CUTTER"
+  ],
+  "PALKIA": [
+    "MALIGNANT_CHAIN",
+    "TAKE_HEART",
+    "RECOVER",
+    "ORIGIN_PULSE"
+  ],
+  "HEATRAN": [
+    "THUNDERBOLT",
+    "TAR_SHOT",
+    "ERUPTION",
+    "TACHYON_CUTTER"
+  ],
+  "REGIGIGAS": [
+    "OBSTRUCT",
+    "RECOVER",
+    "STORM_THROW",
+    "LANDS_WRATH"
+  ],
+  "GIRATINA": [
+    "DRAGON_DANCE",
+    "SPECTRAL_THIEF",
+    "RECOVER",
+    "COLLISION_COURSE"
+  ],
+  "CRESSELIA": [
+    "COSMIC_POWER",
+    "BODY_PRESS",
+    "SIZZLY_SLIDE",
+    "LUMINA_CRASH"
+  ],
+  "PHIONE": [
+    "BOUNCY_BUBBLE",
+    "FREEZE_DRY",
+    "STORED_POWER",
+    "ORIGIN_PULSE"
+  ],
+  "MANAPHY": [
+    "BOUNCY_BUBBLE",
+    "FROST_BREATH",
+    "WILDBOLT_STORM",
+    "ORIGIN_PULSE"
+  ],
+  "DARKRAI": [
+    "DOOM_DESIRE",
+    "MOONBLAST",
+    "FIERY_DANCE",
+    "FIERY_WRATH"
+  ],
+  "SHAYMIN": [
+    "MATCHA_GOTCHA",
+    "HEAT_WAVE",
+    "AEROBLAST",
+    "QUIVER_DANCE"
+  ],
+  "ARCEUS": [
+    "NO_RETREAT",
+    "COLLISION_COURSE",
+    "ASTRAL_BARRAGE",
+    "MULTI_ATTACK"
+  ],
+  "VICTINI": [
+    "BLUE_FLARE",
+    "BOLT_STRIKE",
+    "LUSTER_PURGE",
+    "VICTORY_DANCE"
+  ],
+  "SNIVY": [
+    "BURNING_JEALOUSY",
+    "LEECH_LIFE",
+    "SUPERPOWER",
+    "DRACO_METEOR"
+  ],
+  "TEPIG": [
+    "SUCKER_PUNCH",
+    "VOLT_TACKLE",
+    "AXE_KICK",
+    "NO_RETREAT"
+  ],
+  "OSHAWOTT": [
+    "FREEZE_DRY",
+    "SHELL_SIDE_ARM",
+    "SACRED_SWORD",
+    "SHELL_SMASH"
+  ],
+  "PATRAT": [
+    "FAKE_OUT",
+    "INSTRUCT",
+    "DYNAMIC_PUNCH",
+    "EXTREME_SPEED"
+  ],
+  "LILLIPUP": [
+    "CLOSE_COMBAT",
+    "BODY_SLAM",
+    "HIGH_HORSEPOWER",
+    "LAST_RESPECTS"
+  ],
+  "PURRLOIN": [
+    "ENCORE",
+    "OBSTRUCT",
+    "PARTING_SHOT",
+    "WICKED_BLOW"
+  ],
+  "PANSAGE": [
+    "SWORDS_DANCE",
+    "FIRE_LASH",
+    "EARTHQUAKE",
+    "IVY_CUDGEL"
+  ],
+  "PANSEAR": [
+    "NASTY_PLOT",
+    "HYDRO_STEAM",
+    "EARTH_POWER",
+    "ERUPTION"
+  ],
+  "PANPOUR": [
+    "NASTY_PLOT",
+    "ENERGY_BALL",
+    "EARTH_POWER",
+    "WATER_SPOUT"
+  ],
+  "MUNNA": [
+    "COSMIC_POWER",
+    "AURA_SPHERE",
+    "LUNAR_BLESSING",
+    "MYSTICAL_POWER"
+  ],
+  "PIDOVE": [
+    "SLASH",
+    "TIDY_UP",
+    "FLOATY_FALL",
+    "TRIPLE_ARROWS"
+  ],
+  "BLITZLE": [
+    "HORN_LEECH",
+    "SWORDS_DANCE",
+    "FLARE_BLITZ",
+    "BOLT_STRIKE"
+  ],
+  "ROGGENROLA": [
+    "BODY_PRESS",
+    "SPIKY_SHIELD",
+    "SHORE_UP",
+    "DIAMOND_STORM"
+  ],
+  "WOOBAT": [
+    "ESPER_WING",
+    "STORED_POWER",
+    "MYSTICAL_FIRE",
+    "OBLIVION_WING"
+  ],
+  "DRILBUR": [
+    "METEOR_MASH",
+    "ICE_SPINNER",
+    "SUPERCELL_SLAM",
+    "HEADLONG_RUSH"
+  ],
+  "AUDINO": [
+    "TAKE_HEART",
+    "MOONBLAST",
+    "WISH",
+    "MATCHA_GOTCHA"
+  ],
+  "TIMBURR": [
+    "MACH_PUNCH",
+    "DRAIN_PUNCH",
+    "ICE_HAMMER",
+    "DOUBLE_IRON_BASH"
+  ],
+  "TYMPOLE": [
+    "JET_PUNCH",
+    "HIGH_HORSEPOWER",
+    "BULK_UP",
+    "SURGING_STRIKES"
+  ],
+  "THROH": [
+    "MACH_PUNCH",
+    "SLACK_OFF",
+    "METEOR_MASH",
+    "RAGE_FIST"
+  ],
+  "SAWK": [
+    "DRAIN_PUNCH",
+    "SUCKER_PUNCH",
+    "METEOR_MASH",
+    "VICTORY_DANCE"
+  ],
+  "SEWADDLE": [
+    "STONE_AXE",
+    "PSYCHO_CUT",
+    "BITTER_BLADE",
+    "VICTORY_DANCE"
+  ],
+  "VENIPEDE": [
+    "BANEFUL_BUNKER",
+    "LEECH_LIFE",
+    "NOXIOUS_TORQUE",
+    "POWER_TRIP"
+  ],
+  "COTTONEE": [
+    "POLLEN_PUFF",
+    "PARTING_SHOT",
+    "SLEEP_POWDER",
+    "SEED_FLARE"
+  ],
+  "PETILIL": [
+    "THUNDEROUS_KICK",
+    "SPARKLING_ARIA",
+    "FIERY_DANCE",
+    "FLOWER_TRICK"
+  ],
+  "BASCULIN": [
+    "WILD_CHARGE",
+    "CLOSE_COMBAT",
+    "ICE_SPINNER",
+    "NO_RETREAT"
+  ],
+  "SANDILE": [
+    "DIRE_CLAW",
+    "SUCKER_PUNCH",
+    "FIRE_LASH",
+    "HEADLONG_RUSH"
+  ],
+  "DARUMAKA": [
+    "DRAIN_PUNCH",
+    "ZIPPY_ZAP",
+    "HEADLONG_RUSH",
+    "PYRO_BALL"
+  ],
+  "MARACTUS": [
+    "EARTH_POWER",
+    "SIZZLY_SLIDE",
+    "FIERY_DANCE",
+    "QUIVER_DANCE"
+  ],
+  "DWEBBLE": [
+    "CRABHAMMER",
+    "STONE_AXE",
+    "LEECH_LIFE",
+    "MIGHTY_CLEAVE"
+  ],
+  "SCRAGGY": [
+    "SUCKER_PUNCH",
+    "DRAGON_DANCE",
+    "PARTING_SHOT",
+    "TRIPLE_AXEL"
+  ],
+  "SIGILYPH": [
+    "MOONBLAST",
+    "PSYCHO_SHIFT",
+    "ESPER_WING",
+    "OBLIVION_WING"
+  ],
+  "YAMASK": [
+    "STRENGTH_SAP",
+    "GLARE",
+    "AURA_SPHERE",
+    "ASTRAL_BARRAGE"
+  ],
+  "TIRTOUGA": [
+    "ICE_SPINNER",
+    "AQUA_STEP",
+    "SHORE_UP",
+    "MIGHTY_CLEAVE"
+  ],
+  "ARCHEN": [
+    "MIGHTY_CLEAVE",
+    "BONEMERANG",
+    "FLOATY_FALL",
+    "COLLISION_COURSE"
+  ],
+  "TRUBBISH": [
+    "STEALTH_ROCK",
+    "RECOVER",
+    "DIRE_CLAW",
+    "GIGATON_HAMMER"
+  ],
+  "ZORUA": [
+    "MALIGNANT_CHAIN",
+    "MOONBLAST",
+    "SECRET_SWORD",
+    "FIERY_WRATH"
+  ],
+  "MINCCINO": [
+    "ICICLE_SPEAR",
+    "TIDY_UP",
+    "LOW_KICK",
+    "POPULATION_BOMB"
+  ],
+  "GOTHITA": [
+    "RECOVER",
+    "MOONBLAST",
+    "AURA_SPHERE",
+    "LUMINA_CRASH"
+  ],
+  "SOLOSIS": [
+    "MIST_BALL",
+    "SPEED_SWAP",
+    "FLAMETHROWER",
+    "LIGHT_OF_RUIN"
+  ],
+  "DUCKLETT": [
+    "SPLISHY_SPLASH",
+    "SANDSEAR_STORM",
+    "WILDBOLT_STORM",
+    "QUIVER_DANCE"
+  ],
+  "VANILLITE": [
+    "EARTH_POWER",
+    "AURORA_VEIL",
+    "CALM_MIND",
+    "SPARKLY_SWIRL"
+  ],
+  "DEERLING": [
+    "TIDY_UP",
+    "HEADBUTT",
+    "AXE_KICK",
+    "FLOWER_TRICK"
+  ],
+  "EMOLGA": [
+    "ICICLE_CRASH",
+    "ZING_ZAP",
+    "FLOATY_FALL",
+    "ELECTRIFY"
+  ],
+  "KARRABLAST": [
+    "LEECH_LIFE",
+    "BITTER_BLADE",
+    "OBSTRUCT",
+    "DOUBLE_IRON_BASH"
+  ],
+  "FOONGUS": [
+    "POLLEN_PUFF",
+    "PARTING_SHOT",
+    "FOUL_PLAY",
+    "SAPPY_SEED"
+  ],
+  "FRILLISH": [
+    "CALM_MIND",
+    "BUZZY_BUZZ",
+    "FREEZE_DRY",
+    "STEAM_ERUPTION"
+  ],
+  "ALOMOMOLA": [
+    "FLIP_TURN",
+    "LOVELY_KISS",
+    "FREEZY_FROST",
+    "REVIVAL_BLESSING"
+  ],
+  "JOLTIK": [
+    "WILDBOLT_STORM",
+    "PARABOLIC_CHARGE",
+    "EARTH_POWER",
+    "QUIVER_DANCE"
+  ],
+  "FERROSEED": [
+    "SYNTHESIS",
+    "CEASELESS_EDGE",
+    "SPIKY_SHIELD",
+    "SAPPY_SEED"
+  ],
+  "KLINK": [
+    "TRIPLE_AXEL",
+    "HIGH_HORSEPOWER",
+    "RECOVER",
+    "AURA_WHEEL"
+  ],
+  "TYNAMO": [
+    "SCALD",
+    "LEECH_LIFE",
+    "GUNK_SHOT",
+    "PLASMA_FISTS"
+  ],
+  "ELGYEM": [
+    "THUNDERCLAP",
+    "BADDY_BAD",
+    "AURA_SPHERE",
+    "PHOTON_GEYSER"
+  ],
+  "LITWICK": [
+    "GIGA_DRAIN",
+    "BITTER_MALICE",
+    "MOONBLAST",
+    "BLUE_FLARE"
+  ],
+  "AXEW": [
+    "STONE_AXE",
+    "CROSS_POISON",
+    "FIRST_IMPRESSION",
+    "BITTER_BLADE"
+  ],
+  "CUBCHOO": [
+    "DRAIN_PUNCH",
+    "AQUA_STEP",
+    "ICE_SHARD",
+    "MOUNTAIN_GALE"
+  ],
+  "CRYOGONAL": [
+    "FREEZING_GLARE",
+    "AURORA_VEIL",
+    "NASTY_PLOT",
+    "ORIGIN_PULSE"
+  ],
+  "SHELMET": [
+    "POWER_GEM",
+    "MAT_BLOCK",
+    "NIGHT_DAZE",
+    "NASTY_PLOT"
+  ],
+  "STUNFISK": [
+    "THUNDERCLAP",
+    "SANDSEAR_STORM",
+    "STRENGTH_SAP",
+    "THUNDER_CAGE"
+  ],
+  "MIENFOO": [
+    "GUNK_SHOT",
+    "SUPERCELL_SLAM",
+    "MOUNTAIN_GALE",
+    "WICKED_BLOW"
+  ],
+  "DRUDDIGON": [
+    "FIRE_LASH",
+    "MORNING_SUN",
+    "BODY_SLAM",
+    "CLANGOROUS_SOUL"
+  ],
+  "GOLETT": [
+    "BULK_UP",
+    "DRAIN_PUNCH",
+    "MACH_PUNCH",
+    "RAGE_FIST"
+  ],
+  "PAWNIARD": [
+    "SUCKER_PUNCH",
+    "SPIRIT_BREAK",
+    "LAST_RESPECTS",
+    "BITTER_BLADE"
+  ],
+  "BOUFFALANT": [
+    "HORN_LEECH",
+    "HIGH_JUMP_KICK",
+    "HEAD_SMASH",
+    "FLARE_BLITZ"
+  ],
+  "RUFFLET": [
+    "FLOATY_FALL",
+    "AURA_SPHERE",
+    "DRILL_RUN",
+    "NO_RETREAT"
+  ],
+  "VULLABY": [
+    "FOUL_PLAY",
+    "BODY_PRESS",
+    "ROOST",
+    "RUINATION"
+  ],
+  "HEATMOR": [
+    "EARTH_POWER",
+    "MORNING_SUN",
+    "POWER_WHIP",
+    "NO_RETREAT"
+  ],
+  "DURANT": [
+    "HIGH_HORSEPOWER",
+    "FIRST_IMPRESSION",
+    "U_TURN",
+    "BEHEMOTH_BASH"
+  ],
+  "DEINO": [
+    "FIERY_WRATH",
+    "ESPER_WING",
+    "SLUDGE_BOMB",
+    "FICKLE_BEAM"
+  ],
+  "LARVESTA": [
+    "THUNDERBOLT",
+    "DAZZLING_GLEAM",
+    "SCALD",
+    "SANDSEAR_STORM"
+  ],
+  "COBALION": [
+    "BEHEMOTH_BLADE",
+    "MIGHTY_CLEAVE",
+    "CEASELESS_EDGE",
+    "VICTORY_DANCE"
+  ],
+  "TERRAKION": [
+    "MIGHTY_CLEAVE",
+    "HEADLONG_RUSH",
+    "KNOCK_OFF",
+    "VICTORY_DANCE"
+  ],
+  "VIRIZION": [
+    "SAPPY_SEED",
+    "PSYBLADE",
+    "STONE_AXE",
+    "VICTORY_DANCE"
+  ],
+  "TORNADUS": [
+    "PARTING_SHOT",
+    "THUNDER",
+    "MUDDY_WATER",
+    "SANDSEAR_STORM"
+  ],
+  "THUNDURUS": [
+    "PARTING_SHOT",
+    "HURRICANE",
+    "ICY_WIND",
+    "SANDSEAR_STORM"
+  ],
+  "RESHIRAM": [
+    "ENERGY_BALL",
+    "TAKE_HEART",
+    "FICKLE_BEAM",
+    "ERUPTION"
+  ],
+  "ZEKROM": [
+    "TRIPLE_AXEL",
+    "THUNDEROUS_KICK",
+    "DRAGON_HAMMER",
+    "DRAGON_ENERGY"
+  ],
+  "LANDORUS": [
+    "STONE_AXE",
+    "FLOATY_FALL",
+    "ROOST",
+    "THOUSAND_WAVES"
+  ],
+  "KYUREM": [
+    "DRAGON_DARTS",
+    "GLACIAL_LANCE",
+    "NO_RETREAT",
+    "DRAGON_ENERGY"
+  ],
+  "KELDEO": [
+    "SPLISHY_SPLASH",
+    "THUNDERBOLT",
+    "ICE_BEAM",
+    "BOUNCY_BUBBLE"
+  ],
+  "MELOETTA": [
+    "BODY_SLAM",
+    "PSYCHIC_NOISE",
+    "TRIPLE_ARROWS",
+    "TORCH_SONG"
+  ],
+  "GENESECT": [
+    "EXTREME_SPEED",
+    "SHIFT_GEAR",
+    "DYNAMAX_CANNON",
+    "NASTY_PLOT"
+  ],
+  "CHESPIN": [
+    "BODY_PRESS",
+    "STONE_AXE",
+    "SUCKER_PUNCH",
+    "IVY_CUDGEL"
+  ],
+  "FENNEKIN": [
+    "TWIN_BEAM",
+    "MOONBLAST",
+    "THUNDERBOLT",
+    "FIERY_DANCE"
+  ],
+  "FROAKIE": [
+    "MOONBLAST",
+    "SHELL_SIDE_ARM",
+    "NIGHT_DAZE",
+    "STEAM_ERUPTION"
+  ],
+  "BUNNELBY": [
+    "DRAIN_PUNCH",
+    "TIDY_UP",
+    "LANDS_WRATH",
+    "EXTREME_SPEED"
+  ],
+  "FLETCHLING": [
+    "DRILL_RUN",
+    "BURNING_BULWARK",
+    "HEAD_SMASH",
+    "VOLT_TACKLE"
+  ],
+  "SCATTERBUG": [
+    "FOCUS_BLAST",
+    "AFTER_YOU",
+    "DECORATE",
+    "BLIZZARD"
+  ],
+  "LITLEO": [
+    "EARTH_POWER",
+    "TAKE_HEART",
+    "BURNING_BULWARK",
+    "BOOMBURST"
+  ],
+  "FLABEBE": [
+    "GLITZY_GLOW",
+    "MYSTICAL_FIRE",
+    "TAKE_HEART",
+    "SEED_FLARE"
+  ],
+  "SKIDDO": [
+    "HIGH_HORSEPOWER",
+    "GRASSY_GLIDE",
+    "STONE_AXE",
+    "SAPPY_SEED"
+  ],
+  "PANCHAM": [
+    "HEADLONG_RUSH",
+    "SUCKER_PUNCH",
+    "METEOR_MASH",
+    "WICKED_BLOW"
+  ],
+  "FURFROU": [
+    "BONEMERANG",
+    "SLACK_OFF",
+    "BODY_SLAM",
+    "TIDY_UP"
+  ],
+  "ESPURR": [
+    "LUSTER_PURGE",
+    "MOONBLAST",
+    "MYSTICAL_FIRE",
+    "DARK_VOID"
+  ],
+  "HONEDGE": [
+    "TACHYON_CUTTER",
+    "SECRET_SWORD",
+    "BEHEMOTH_BLADE",
+    "BITTER_BLADE"
+  ],
+  "SPRITZEE": [
+    "SPEED_SWAP",
+    "REVIVAL_BLESSING",
+    "ROOST",
+    "TORCH_SONG"
+  ],
+  "SWIRLIX": [
+    "BELLY_DRUM",
+    "SILK_TRAP",
+    "MAGICAL_TORQUE",
+    "HEADLONG_RUSH"
+  ],
+  "INKAY": [
+    "POWER_TRIP",
+    "SPIN_OUT",
+    "RECOVER",
+    "PSYCHO_BOOST"
+  ],
+  "BINACLE": [
+    "ICE_PUNCH",
+    "CRABHAMMER",
+    "METEOR_MASH",
+    "MIGHTY_CLEAVE"
+  ],
+  "SKRELP": [
+    "BOUNCY_BUBBLE",
+    "AURA_SPHERE",
+    "CALM_MIND",
+    "CORE_ENFORCER"
+  ],
+  "CLAUNCHER": [
+    "SHELL_SMASH",
+    "ARMOR_CANNON",
+    "ENERGY_BALL",
+    "ORIGIN_PULSE"
+  ],
+  "HELIOPTILE": [
+    "WEATHER_BALL",
+    "HYDRO_STEAM",
+    "EARTH_POWER",
+    "BOOMBURST"
+  ],
+  "TYRUNT": [
+    "HYPER_FANG",
+    "DOUBLE_EDGE",
+    "DRAGON_DANCE",
+    "FLARE_BLITZ"
+  ],
+  "AMAURA": [
+    "RECOVER",
+    "TERA_STARSTORM",
+    "POWER_GEM",
+    "GEOMANCY"
+  ],
+  "HAWLUCHA": [
+    "DARKEST_LARIAT",
+    "HEADLONG_RUSH",
+    "FLOATY_FALL",
+    "TRIPLE_AXEL"
+  ],
+  "DEDENNE": [
+    "BOOMBURST",
+    "FAKE_OUT",
+    "NASTY_PLOT",
+    "REVIVAL_BLESSING"
+  ],
+  "CARBINK": [
+    "BODY_PRESS",
+    "RECOVER",
+    "SPARKLY_SWIRL",
+    "DIAMOND_STORM"
+  ],
+  "GOOMY": [
+    "DRAGON_HAMMER",
+    "SHELL_SIDE_ARM",
+    "CALM_MIND",
+    "RECOVER"
+  ],
+  "KLEFKI": [
+    "HEAL_BELL",
+    "ENCORE",
+    "INSTRUCT",
+    "TOPSY_TURVY"
+  ],
+  "PHANTUMP": [
+    "RAGE_FIST",
+    "SLEEP_POWDER",
+    "BULK_UP",
+    "SAPPY_SEED"
+  ],
+  "PUMPKABOO": [
+    "SPIRIT_SHACKLE",
+    "FIRE_LASH",
+    "DIRE_CLAW",
+    "SAPPY_SEED"
+  ],
+  "BERGMITE": [
+    "STONE_AXE",
+    "METAL_BURST",
+    "BODY_PRESS",
+    "GLACIAL_LANCE"
+  ],
+  "NOIBAT": [
+    "AEROBLAST",
+    "OVERDRIVE",
+    "NASTY_PLOT",
+    "CLANGING_SCALES"
+  ],
+  "XERNEAS": [
+    "EARTH_POWER",
+    "SPRINGTIDE_STORM",
+    "STORED_POWER",
+    "STRENGTH_SAP"
+  ],
+  "YVELTAL": [
+    "SLUDGE_WAVE",
+    "LIGHT_OF_RUIN",
+    "ESPER_WING",
+    "FIERY_WRATH"
+  ],
+  "ZYGARDE": [
+    "DRAGON_DARTS",
+    "ARMOR_CANNON",
+    "TAKE_HEART",
+    "HEAL_ORDER"
+  ],
+  "DIANCIE": [
+    "MAGICAL_TORQUE",
+    "FIERY_DANCE",
+    "RECOVER",
+    "GEOMANCY"
+  ],
+  "HOOPA": [
+    "SUCKER_PUNCH",
+    "SECRET_SWORD",
+    "FIERY_WRATH",
+    "PHOTON_GEYSER"
+  ],
+  "VOLCANION": [
+    "STRANGE_STEAM",
+    "TAKE_HEART",
+    "SEARING_SHOT",
+    "THUNDERCLAP"
+  ],
+  "ETERNAL_FLOETTE": [
+    "MYSTICAL_FIRE",
+    "CHLOROBLAST",
+    "LUSTER_PURGE",
+    "EARTH_POWER"
+  ],
+  "ROWLET": [
+    "THOUSAND_ARROWS",
+    "STONE_EDGE",
+    "FIRST_IMPRESSION",
+    "VICTORY_DANCE"
+  ],
+  "LITTEN": [
+    "SUCKER_PUNCH",
+    "PARTING_SHOT",
+    "SLACK_OFF",
+    "SACRED_FIRE"
+  ],
+  "POPPLIO": [
+    "PSYCHIC_NOISE",
+    "MOONLIGHT",
+    "OVERDRIVE",
+    "TORCH_SONG"
+  ],
+  "PIKIPEK": [
+    "TRAILBLAZE",
+    "BONE_RUSH",
+    "BURNING_BULWARK",
+    "POPULATION_BOMB"
+  ],
+  "YUNGOOS": [
+    "FAKE_OUT",
+    "HIGH_HORSEPOWER",
+    "TIDY_UP",
+    "EXTREME_SPEED"
+  ],
+  "GRUBBIN": [
+    "THUNDERCLAP",
+    "EARTH_POWER",
+    "CALM_MIND",
+    "ICE_BEAM"
+  ],
+  "CRABRAWLER": [
+    "METEOR_MASH",
+    "DRAIN_PUNCH",
+    "ICE_SHARD",
+    "JET_PUNCH"
+  ],
+  "ORICORIO": [
+    "QUIVER_DANCE",
+    "FIERY_DANCE",
+    "THUNDERCLAP",
+    "OBLIVION_WING"
+  ],
+  "CUTIEFLY": [
+    "STICKY_WEB",
+    "SLEEP_POWDER",
+    "HEAT_WAVE",
+    "SPARKLY_SWIRL"
+  ],
+  "ROCKRUFF": [
+    "HIGH_HORSEPOWER",
+    "TIDY_UP",
+    "ICE_SPINNER",
+    "MIGHTY_CLEAVE"
+  ],
+  "WISHIWASHI": [
+    "HEAL_ORDER",
+    "FREEZE_DRY",
+    "WATER_SHURIKEN",
+    "TAIL_GLOW"
+  ],
+  "MAREANIE": [
+    "CEASELESS_EDGE",
+    "BARB_BARRAGE",
+    "BODY_PRESS",
+    "FLIP_TURN"
+  ],
+  "MUDBRAY": [
+    "BODY_PRESS",
+    "YAWN",
+    "HEAT_CRASH",
+    "SHORE_UP"
+  ],
+  "DEWPIDER": [
+    "AQUA_JET",
+    "SILK_TRAP",
+    "SWORDS_DANCE",
+    "BOUNCY_BUBBLE"
+  ],
+  "FOMANTIS": [
+    "SUPERPOWER",
+    "HEADLONG_RUSH",
+    "ICE_HAMMER",
+    "BITTER_BLADE"
+  ],
+  "MORELULL": [
+    "CALM_MIND",
+    "LEECH_SEED",
+    "DRAINING_KISS",
+    "MATCHA_GOTCHA"
+  ],
+  "SALANDIT": [
+    "SCALD",
+    "MALIGNANT_CHAIN",
+    "CORE_ENFORCER",
+    "ERUPTION"
+  ],
+  "STUFFUL": [
+    "DRAIN_PUNCH",
+    "METEOR_MASH",
+    "ICE_HAMMER",
+    "CRUSH_GRIP"
+  ],
+  "BOUNSWEET": [
+    "TRIPLE_AXEL",
+    "FIRST_IMPRESSION",
+    "THUNDEROUS_KICK",
+    "AQUA_STEP"
+  ],
+  "COMFEY": [
+    "REVIVAL_BLESSING",
+    "TAKE_HEART",
+    "STRENGTH_SAP",
+    "MATCHA_GOTCHA"
+  ],
+  "ORANGURU": [
+    "JUNGLE_HEALING",
+    "SLEEP_POWDER",
+    "FOLLOW_ME",
+    "LUMINA_CRASH"
+  ],
+  "PASSIMIAN": [
+    "PYRO_BALL",
+    "SUCKER_PUNCH",
+    "ZING_ZAP",
+    "VICTORY_DANCE"
+  ],
+  "WIMPOD": [
+    "BULLET_PUNCH",
+    "OBSTRUCT",
+    "JET_PUNCH",
+    "SURGING_STRIKES"
+  ],
+  "SANDYGAST": [
+    "BITTER_MALICE",
+    "SPLISHY_SPLASH",
+    "TAKE_HEART",
+    "SALT_CURE"
+  ],
+  "PYUKUMUKU": [
+    "COMEUPPANCE",
+    "BANEFUL_BUNKER",
+    "TOXIC_SPIKES",
+    "SALT_CURE"
+  ],
+  "TYPE_NULL": [
+    "DIRE_CLAW",
+    "RECOVER",
+    "COMBAT_TORQUE",
+    "NO_RETREAT"
+  ],
+  "MINIOR": [
+    "EARTH_POWER",
+    "FLOATY_FALL",
+    "TRI_ATTACK",
+    "DIAMOND_STORM"
+  ],
+  "KOMALA": [
+    "SLACK_OFF",
+    "EXTREME_SPEED",
+    "KNOCK_OFF",
+    "COLLISION_COURSE"
+  ],
+  "TURTONATOR": [
+    "BURNING_BULWARK",
+    "MORNING_SUN",
+    "BODY_PRESS",
+    "CORE_ENFORCER"
+  ],
+  "TOGEDEMARU": [
+    "FAKE_OUT",
+    "DRILL_RUN",
+    "METEOR_MASH",
+    "AURA_WHEEL"
+  ],
+  "MIMIKYU": [
+    "SPIRIT_BREAK",
+    "TIDY_UP",
+    "FIRE_LASH",
+    "SPECTRAL_THIEF"
+  ],
+  "BRUXISH": [
+    "PLAY_ROUGH",
+    "FIRE_FANG",
+    "TRIPLE_DIVE",
+    "DRAGON_DANCE"
+  ],
+  "DRAMPA": [
+    "ROOST",
+    "TRICK_ROOM",
+    "THUNDERCLAP",
+    "CORE_ENFORCER"
+  ],
+  "DHELMISE": [
+    "SPIRIT_SHACKLE",
+    "IVY_CUDGEL",
+    "TRIPLE_DIVE",
+    "STRENGTH_SAP"
+  ],
+  "JANGMO_O": [
+    "BODY_PRESS",
+    "SHELL_SIDE_ARM",
+    "SECRET_SWORD",
+    "GLAIVE_RUSH"
+  ],
+  "TAPU_KOKO": [
+    "PLAY_ROUGH",
+    "ZING_ZAP",
+    "SWORDS_DANCE",
+    "TRIPLE_AXEL"
+  ],
+  "TAPU_LELE": [
+    "MOONLIGHT",
+    "NASTY_PLOT",
+    "HEAT_WAVE",
+    "EXPANDING_FORCE"
+  ],
+  "TAPU_BULU": [
+    "GRASSY_GLIDE",
+    "LANDS_WRATH",
+    "PLAY_ROUGH",
+    "VICTORY_DANCE"
+  ],
+  "TAPU_FINI": [
+    "SPRINGTIDE_STORM",
+    "EARTH_POWER",
+    "RECOVER",
+    "QUIVER_DANCE"
+  ],
+  "COSMOG": [
+    "PHOTON_GEYSER",
+    "PRECIPICE_BLADES",
+    "SACRED_FIRE",
+    "ASTRAL_BARRAGE"
+  ],
+  "NIHILEGO": [
+    "STRENGTH_SAP",
+    "MALIGNANT_CHAIN",
+    "EARTH_POWER",
+    "QUIVER_DANCE"
+  ],
+  "BUZZWOLE": [
+    "FIRST_IMPRESSION",
+    "DRAIN_PUNCH",
+    "ROCK_BLAST",
+    "DOUBLE_IRON_BASH"
+  ],
+  "PHEROMOSA": [
+    "SECRET_SWORD",
+    "VICTORY_DANCE",
+    "ATTACK_ORDER",
+    "DIAMOND_STORM"
+  ],
+  "XURKITREE": [
+    "OVERHEAT",
+    "GIGA_DRAIN",
+    "GLITZY_GLOW",
+    "THUNDERCLAP"
+  ],
+  "CELESTEELA": [
+    "RECOVER",
+    "BUZZY_BUZZ",
+    "EARTH_POWER",
+    "OBLIVION_WING"
+  ],
+  "KARTANA": [
+    "MIGHTY_CLEAVE",
+    "DUAL_CHOP",
+    "BEHEMOTH_BLADE",
+    "BITTER_BLADE"
+  ],
+  "GUZZLORD": [
+    "SUCKER_PUNCH",
+    "COMEUPPANCE",
+    "DRAGON_HAMMER",
+    "SHED_TAIL"
+  ],
+  "NECROZMA": [
+    "NIHIL_LIGHT",
+    "SACRED_FIRE",
+    "ASTRAL_BARRAGE",
+    "CLANGOROUS_SOUL"
+  ],
+  "MAGEARNA": [
+    "TAKE_HEART",
+    "FLAMETHROWER",
+    "MOONBLAST",
+    "MAKE_IT_RAIN"
+  ],
+  "MARSHADOW": [
+    "POWER_UP_PUNCH",
+    "BONEMERANG",
+    "METEOR_MASH",
+    "TRIPLE_AXEL"
+  ],
+  "POIPOLE": [
+    "MALIGNANT_CHAIN",
+    "ICE_BEAM",
+    "ARMOR_CANNON",
+    "CLANGING_SCALES"
+  ],
+  "STAKATAKA": [
+    "BODY_PRESS",
+    "HEAL_ORDER",
+    "CURSE",
+    "DOUBLE_IRON_BASH"
+  ],
+  "BLACEPHALON": [
+    "CHILLY_RECEPTION",
+    "MOONBLAST",
+    "ENERGY_BALL",
+    "MOONGEIST_BEAM"
+  ],
+  "ZERAORA": [
+    "ICE_PUNCH",
+    "FIRE_LASH",
+    "COLLISION_COURSE",
+    "SWORDS_DANCE"
+  ],
+  "MELTAN": [
+    "BULLET_PUNCH",
+    "DRAIN_PUNCH",
+    "BULK_UP",
+    "PLASMA_FISTS"
+  ],
+  "ALOLA_RATTATA": [
+    "FALSE_SURRENDER",
+    "PSYCHIC_FANGS",
+    "COIL",
+    "EXTREME_SPEED"
+  ],
+  "ALOLA_SANDSHREW": [
+    "SPIKY_SHIELD",
+    "LIQUIDATION",
+    "SHIFT_GEAR",
+    "GLACIAL_LANCE"
+  ],
+  "ALOLA_VULPIX": [
+    "MOONBLAST",
+    "GLARE",
+    "MYSTICAL_FIRE",
+    "LUNAR_BLESSING"
+  ],
+  "ALOLA_DIGLETT": [
+    "THOUSAND_WAVES",
+    "SWORDS_DANCE",
+    "TRIPLE_DIVE",
+    "PYRO_BALL"
+  ],
+  "ALOLA_MEOWTH": [
+    "BADDY_BAD",
+    "BUZZY_BUZZ",
+    "PARTING_SHOT",
+    "MAKE_IT_RAIN"
+  ],
+  "ALOLA_GEODUDE": [
+    "LANDS_WRATH",
+    "FUSION_BOLT",
+    "STONE_AXE",
+    "EXTREME_SPEED"
+  ],
+  "ALOLA_GRIMER": [
+    "SUCKER_PUNCH",
+    "BARB_BARRAGE",
+    "RECOVER",
+    "SURGING_STRIKES"
+  ],
+  "BATTLE_BOND_GRENINJA": [
+    "MOONBLAST",
+    "AURA_SPHERE",
+    "CALM_MIND",
+    "FIERY_WRATH"
+  ],
+  "GROOKEY": [
+    "ROCK_SLIDE",
+    "PLAY_ROUGH",
+    "GRASSY_GLIDE",
+    "CLANGOROUS_SOUL"
+  ],
+  "SCORBUNNY": [
+    "EXTREME_SPEED",
+    "HIGH_JUMP_KICK",
+    "SUPERCELL_SLAM",
+    "TRIPLE_AXEL"
+  ],
+  "SOBBLE": [
+    "AEROBLAST",
+    "FROST_BREATH",
+    "ENERGY_BALL",
+    "NASTY_PLOT"
+  ],
+  "SKWOVET": [
+    "SUCKER_PUNCH",
+    "SLACK_OFF",
+    "COIL",
+    "SAPPY_SEED"
+  ],
+  "ROOKIDEE": [
+    "ROOST",
+    "BODY_PRESS",
+    "KINGS_SHIELD",
+    "BEHEMOTH_BASH"
+  ],
+  "BLIPBUG": [
+    "RECOVER",
+    "LUSTER_PURGE",
+    "COSMIC_POWER",
+    "TAIL_GLOW"
+  ],
+  "NICKIT": [
+    "BADDY_BAD",
+    "MYSTICAL_FIRE",
+    "SPARKLY_SWIRL",
+    "MAKE_IT_RAIN"
+  ],
+  "GOSSIFLEUR": [
+    "BATON_PASS",
+    "TAILWIND",
+    "SAPPY_SEED",
+    "SPORE"
+  ],
+  "WOOLOO": [
+    "NUZZLE",
+    "MILK_DRINK",
+    "BODY_PRESS",
+    "MULTI_ATTACK"
+  ],
+  "CHEWTLE": [
+    "ICE_FANG",
+    "PSYCHIC_FANGS",
+    "SHELL_SMASH",
+    "MIGHTY_CLEAVE"
+  ],
+  "YAMPER": [
+    "ICE_FANG",
+    "SWORDS_DANCE",
+    "THUNDER_FANG",
+    "BOLT_STRIKE"
+  ],
+  "ROLYCOLY": [
+    "BLAZING_TORQUE",
+    "BURNING_BULWARK",
+    "RECOVER",
+    "DIAMOND_STORM"
+  ],
+  "APPLIN": [
+    "CORE_ENFORCER",
+    "TEMPER_FLARE",
+    "SAPPY_SEED",
+    "MATCHA_GOTCHA"
+  ],
+  "SILICOBRA": [
+    "SHORE_UP",
+    "PARTING_SHOT",
+    "GUNK_SHOT",
+    "THOUSAND_ARROWS"
+  ],
+  "CRAMORANT": [
+    "APPLE_ACID",
+    "AEROBLAST",
+    "ROOST",
+    "BOLT_BEAK"
+  ],
+  "ARROKUDA": [
+    "SUPERCELL_SLAM",
+    "TRIPLE_DIVE",
+    "ICE_SPINNER",
+    "SWORDS_DANCE"
+  ],
+  "TOXEL": [
+    "BUZZY_BUZZ",
+    "BUG_BUZZ",
+    "SPARKLING_ARIA",
+    "TORCH_SONG"
+  ],
+  "SIZZLIPEDE": [
+    "BURNING_BULWARK",
+    "ZING_ZAP",
+    "FIRST_IMPRESSION",
+    "BITTER_BLADE"
+  ],
+  "CLOBBOPUS": [
+    "STORM_THROW",
+    "JET_PUNCH",
+    "FLIP_TURN",
+    "SURGING_STRIKES"
+  ],
+  "SINISTEA": [
+    "SPLISHY_SPLASH",
+    "MATCHA_GOTCHA",
+    "DRAINING_KISS",
+    "MOONGEIST_BEAM"
+  ],
+  "HATENNA": [
+    "RECOVER",
+    "MOONBLAST",
+    "BUZZY_BUZZ",
+    "TORCH_SONG"
+  ],
+  "IMPIDIMP": [
+    "SLACK_OFF",
+    "PARTING_SHOT",
+    "OCTOLOCK",
+    "WICKED_BLOW"
+  ],
+  "MILCERY": [
+    "MOONBLAST",
+    "CHILLY_RECEPTION",
+    "EARTH_POWER",
+    "GEOMANCY"
+  ],
+  "FALINKS": [
+    "BATON_PASS",
+    "POWER_TRIP",
+    "SACRED_SWORD",
+    "HEAL_ORDER"
+  ],
+  "PINCURCHIN": [
+    "TRICK_ROOM",
+    "VOLT_SWITCH",
+    "STRENGTH_SAP",
+    "THUNDERCLAP"
+  ],
+  "SNOM": [
+    "FROST_BREATH",
+    "ROOST",
+    "SLEEP_POWDER",
+    "EARTH_POWER"
+  ],
+  "STONJOURNER": [
+    "AXE_KICK",
+    "HELPING_HAND",
+    "ACCELEROCK",
+    "DIAMOND_STORM"
+  ],
+  "EISCUE": [
+    "TRIPLE_AXEL",
+    "AQUA_STEP",
+    "AXE_KICK",
+    "SHELL_SMASH"
+  ],
+  "INDEEDEE": [
+    "MATCHA_GOTCHA",
+    "EXPANDING_FORCE",
+    "MOONBLAST",
+    "REVIVAL_BLESSING"
+  ],
+  "MORPEKO": [
+    "ICE_SPINNER",
+    "OBSTRUCT",
+    "STUFF_CHEEKS",
+    "COLLISION_COURSE"
+  ],
+  "CUFANT": [
+    "LIQUIDATION",
+    "CURSE",
+    "HAMMER_ARM",
+    "GIGATON_HAMMER"
+  ],
+  "DRACOZOLT": [
+    "TRIPLE_AXEL",
+    "GUNK_SHOT",
+    "FIRE_LASH",
+    "DRAGON_DANCE"
+  ],
+  "ARCTOZOLT": [
+    "ZIPPY_ZAP",
+    "AQUA_STEP",
+    "HIGH_HORSEPOWER",
+    "MOUNTAIN_GALE"
+  ],
+  "DRACOVISH": [
+    "TRIPLE_AXEL",
+    "DRAGON_HAMMER",
+    "THUNDER_FANG",
+    "DRAGON_DANCE"
+  ],
+  "ARCTOVISH": [
+    "ICE_FANG",
+    "THUNDER_FANG",
+    "HIGH_HORSEPOWER",
+    "DRAGON_DANCE"
+  ],
+  "DURALUDON": [
+    "HEAT_WAVE",
+    "BODY_PRESS",
+    "THUNDERCLAP",
+    "CORE_ENFORCER"
+  ],
+  "DREEPY": [
+    "SPIRIT_SHACKLE",
+    "POWER_UP_PUNCH",
+    "FIRE_LASH",
+    "DIRE_CLAW"
+  ],
+  "ZACIAN": [
+    "SPIRIT_BREAK",
+    "MIGHTY_CLEAVE",
+    "EARTHQUAKE",
+    "BITTER_BLADE"
+  ],
+  "ZAMAZENTA": [
+    "BULK_UP",
+    "KINGS_SHIELD",
+    "POWER_TRIP",
+    "SLACK_OFF"
+  ],
+  "ETERNATUS": [
+    "BODY_PRESS",
+    "NASTY_PLOT",
+    "MALIGNANT_CHAIN",
+    "DRAGON_ENERGY"
+  ],
+  "KUBFU": [
+    "METEOR_MASH",
+    "DRAIN_PUNCH",
+    "JET_PUNCH",
+    "DRAGON_DANCE"
+  ],
+  "ZARUDE": [
+    "LEAF_BLADE",
+    "HEADLONG_RUSH",
+    "WICKED_BLOW",
+    "VICTORY_DANCE"
+  ],
+  "REGIELEKI": [
+    "NASTY_PLOT",
+    "ICE_BEAM",
+    "EARTH_POWER",
+    "ELECTRO_DRIFT"
+  ],
+  "REGIDRAGO": [
+    "SHELL_SIDE_ARM",
+    "FLAMETHROWER",
+    "TAKE_HEART",
+    "DRAGON_DARTS"
+  ],
+  "GLASTRIER": [
+    "SPEED_SWAP",
+    "RECOVER",
+    "HIGH_HORSEPOWER",
+    "GLACIAL_LANCE"
+  ],
+  "SPECTRIER": [
+    "EARTH_POWER",
+    "MOONLIGHT",
+    "AURA_SPHERE",
+    "ASTRAL_BARRAGE"
+  ],
+  "CALYREX": [
+    "SAPPY_SEED",
+    "RECOVER",
+    "SECRET_SWORD",
+    "PHOTON_GEYSER"
+  ],
+  "ENAMORUS": [
+    "AEROBLAST",
+    "THOUSAND_ARROWS",
+    "POWER_TRIP",
+    "FLEUR_CANNON"
+  ],
+  "GALAR_MEOWTH": [
+    "LIQUIDATION",
+    "HORN_LEECH",
+    "BULLET_PUNCH",
+    "BEHEMOTH_BASH"
+  ],
+  "GALAR_PONYTA": [
+    "MAGICAL_TORQUE",
+    "EXTREME_SPEED",
+    "FLARE_BLITZ",
+    "PSYSHIELD_BASH"
+  ],
+  "GALAR_SLOWPOKE": [
+    "SHED_TAIL",
+    "BADDY_BAD",
+    "MOONBLAST",
+    "PHOTON_GEYSER"
+  ],
+  "GALAR_FARFETCHD": [
+    "ROOST",
+    "SACRED_SWORD",
+    "KINGS_SHIELD",
+    "BEHEMOTH_BLADE"
+  ],
+  "GALAR_ARTICUNO": [
+    "SECRET_SWORD",
+    "NIGHT_DAZE",
+    "ICE_BEAM",
+    "OBLIVION_WING"
+  ],
+  "GALAR_ZAPDOS": [
+    "POISON_JAB",
+    "FLOATY_FALL",
+    "ROOST",
+    "BOLT_BEAK"
+  ],
+  "GALAR_MOLTRES": [
+    "ROOST",
+    "SLUDGE_BOMB",
+    "FLAMETHROWER",
+    "AEROBLAST"
+  ],
+  "GALAR_CORSOLA": [
+    "SHELL_SMASH",
+    "AURA_SPHERE",
+    "INFERNAL_PARADE",
+    "ASTRAL_BARRAGE"
+  ],
+  "GALAR_ZIGZAGOON": [
+    "CEASELESS_EDGE",
+    "FACADE",
+    "PARTING_SHOT",
+    "EXTREME_SPEED"
+  ],
+  "GALAR_DARUMAKA": [
+    "ICE_SPINNER",
+    "ZING_ZAP",
+    "DRAIN_PUNCH",
+    "PYRO_BALL"
+  ],
+  "GALAR_YAMASK": [
+    "STRENGTH_SAP",
+    "DIRE_CLAW",
+    "THOUSAND_WAVES",
+    "SPECTRAL_THIEF"
+  ],
+  "GALAR_STUNFISK": [
+    "SPIKY_SHIELD",
+    "THOUSAND_ARROWS",
+    "STRENGTH_SAP",
+    "DOUBLE_IRON_BASH"
+  ],
+  "HISUI_GROWLITHE": [
+    "WAVE_CRASH",
+    "HEAD_SMASH",
+    "VOLT_TACKLE",
+    "DRAGON_DANCE"
+  ],
+  "HISUI_VOLTORB": [
+    "DAZZLING_GLEAM",
+    "LEECH_SEED",
+    "APPLE_ACID",
+    "MIND_BLOWN"
+  ],
+  "HISUI_QWILFISH": [
+    "CEASELESS_EDGE",
+    "BANEFUL_BUNKER",
+    "RECOVER",
+    "FISHIOUS_REND"
+  ],
+  "HISUI_SNEASEL": [
+    "DRAIN_PUNCH",
+    "KNOCK_OFF",
+    "PSYCHIC_FANGS",
+    "TRIPLE_AXEL"
+  ],
+  "HISUI_BASCULIN": [
+    "LAST_RESPECTS",
+    "ATTACK_ORDER",
+    "SPLISHY_SPLASH",
+    "NO_RETREAT"
+  ],
+  "HISUI_ZORUA": [
+    "MOONBLAST",
+    "SECRET_SWORD",
+    "PARTING_SHOT",
+    "BLOOD_MOON"
+  ],
+  "SPRIGATITO": [
+    "BLAZE_KICK",
+    "TRIPLE_AXEL",
+    "SUCKER_PUNCH",
+    "WICKED_BLOW"
+  ],
+  "FUECOCO": [
+    "PSYCHIC_NOISE",
+    "SLACK_OFF",
+    "OVERDRIVE",
+    "ASTRAL_BARRAGE"
+  ],
+  "QUAXLY": [
+    "DRAGON_DANCE",
+    "TRIPLE_AXEL",
+    "POWER_TRIP",
+    "THUNDEROUS_KICK"
+  ],
+  "LECHONK": [
+    "STUFF_CHEEKS",
+    "CRUNCH",
+    "EARTHQUAKE",
+    "FILLET_AWAY"
+  ],
+  "TAROUNTULA": [
+    "STONE_AXE",
+    "LEECH_LIFE",
+    "FAKE_OUT",
+    "SPORE"
+  ],
+  "NYMBLE": [
+    "KNOCK_OFF",
+    "FELL_STINGER",
+    "ATTACK_ORDER",
+    "WICKED_BLOW"
+  ],
+  "PAWMI": [
+    "DRAIN_PUNCH",
+    "METEOR_MASH",
+    "JET_PUNCH",
+    "PLASMA_FISTS"
+  ],
+  "TANDEMAUS": [
+    "BATON_PASS",
+    "FAKE_OUT",
+    "POWER_UP_PUNCH",
+    "REVIVAL_BLESSING"
+  ],
+  "FIDOUGH": [
+    "SOFT_BOILED",
+    "HIGH_HORSEPOWER",
+    "SIZZLY_SLIDE",
+    "TIDY_UP"
+  ],
+  "SMOLIV": [
+    "STRENGTH_SAP",
+    "EARTH_POWER",
+    "CALM_MIND",
+    "BOOMBURST"
+  ],
+  "SQUAWKABILLY": [
+    "PARTING_SHOT",
+    "BULK_UP",
+    "CLOSE_COMBAT",
+    "EXTREME_SPEED"
+  ],
+  "NACLI": [
+    "KNOCK_OFF",
+    "TOXIC",
+    "SAND_TOMB",
+    "DIAMOND_STORM"
+  ],
+  "CHARCADET": [
+    "SACRED_SWORD",
+    "PHOTON_GEYSER",
+    "MOONBLAST",
+    "SPECTRAL_THIEF"
+  ],
+  "TADBULB": [
+    "PARABOLIC_CHARGE",
+    "SCALD",
+    "EARTH_POWER",
+    "ELECTRO_SHOT"
+  ],
+  "WATTREL": [
+    "NASTY_PLOT",
+    "SPLISHY_SPLASH",
+    "SANDSEAR_STORM",
+    "WILDBOLT_STORM"
+  ],
+  "MASCHIFF": [
+    "PARTING_SHOT",
+    "LEECH_LIFE",
+    "PSYCHIC_FANGS",
+    "NO_RETREAT"
+  ],
+  "SHROODLE": [
+    "GASTRO_ACID",
+    "PARTING_SHOT",
+    "TOXIC",
+    "SKETCH"
+  ],
+  "BRAMBLIN": [
+    "TAILWIND",
+    "STRENGTH_SAP",
+    "FLOWER_TRICK",
+    "LAST_RESPECTS"
+  ],
+  "TOEDSCOOL": [
+    "STRENGTH_SAP",
+    "TOPSY_TURVY",
+    "SAPPY_SEED",
+    "TAIL_GLOW"
+  ],
+  "KLAWF": [
+    "CRABHAMMER",
+    "SHORE_UP",
+    "MIGHTY_CLEAVE",
+    "SHELL_SMASH"
+  ],
+  "CAPSAKID": [
+    "APPLE_ACID",
+    "FIRE_LASH",
+    "FICKLE_BEAM",
+    "STRENGTH_SAP"
+  ],
+  "RELLOR": [
+    "HEAL_BLOCK",
+    "RECOVER",
+    "MAGIC_POWDER",
+    "LUMINA_CRASH"
+  ],
+  "FLITTLE": [
+    "COSMIC_POWER",
+    "AURA_SPHERE",
+    "ROOST",
+    "FIERY_DANCE"
+  ],
+  "TINKATINK": [
+    "NUZZLE",
+    "PYRO_BALL",
+    "IVY_CUDGEL",
+    "OBSTRUCT"
+  ],
+  "WIGLETT": [
+    "SHELL_SMASH",
+    "FLAIL",
+    "SEED_BOMB",
+    "TRIPLE_AXEL"
+  ],
+  "BOMBIRDIER": [
+    "FLOATY_FALL",
+    "SWORDS_DANCE",
+    "SUCKER_PUNCH",
+    "MIGHTY_CLEAVE"
+  ],
+  "FINIZEN": [
+    "TRIPLE_AXEL",
+    "DRAIN_PUNCH",
+    "HEADLONG_RUSH",
+    "SURGING_STRIKES"
+  ],
+  "VAROOM": [
+    "COMBAT_TORQUE",
+    "U_TURN",
+    "BLAZING_TORQUE",
+    "NOXIOUS_TORQUE"
+  ],
+  "CYCLIZAR": [
+    "PARTING_SHOT",
+    "FIRE_LASH",
+    "HIGH_HORSEPOWER",
+    "MAGICAL_TORQUE"
+  ],
+  "ORTHWORM": [
+    "SIZZLY_SLIDE",
+    "COIL",
+    "BODY_PRESS",
+    "SHORE_UP"
+  ],
+  "GLIMMET": [
+    "CALM_MIND",
+    "GIGA_DRAIN",
+    "FIERY_DANCE",
+    "MALIGNANT_CHAIN"
+  ],
+  "GREAVARD": [
+    "SHADOW_BONE",
+    "SIZZLY_SLIDE",
+    "SHORE_UP",
+    "COLLISION_COURSE"
+  ],
+  "FLAMIGO": [
+    "THUNDEROUS_KICK",
+    "TRIPLE_AXEL",
+    "TROP_KICK",
+    "AQUA_STEP"
+  ],
+  "CETODDLE": [
+    "ZING_ZAP",
+    "HIGH_HORSEPOWER",
+    "SLACK_OFF",
+    "DRAGON_DANCE"
+  ],
+  "VELUZA": [
+    "PSYBLADE",
+    "LEAF_BLADE",
+    "CEASELESS_EDGE",
+    "BITTER_BLADE"
+  ],
+  "DONDOZO": [
+    "SOFT_BOILED",
+    "SIZZLY_SLIDE",
+    "BREAKING_SWIPE",
+    "SALT_CURE"
+  ],
+  "TATSUGIRI": [
+    "SLUDGE_BOMB",
+    "DECORATE",
+    "CORE_ENFORCER",
+    "FILLET_AWAY"
+  ],
+  "GREAT_TUSK": [
+    "STONE_AXE",
+    "MORNING_SUN",
+    "COLLISION_COURSE",
+    "SHIFT_GEAR"
+  ],
+  "SCREAM_TAIL": [
+    "TORCH_SONG",
+    "GLITZY_GLOW",
+    "MOONLIGHT",
+    "SPARKLY_SWIRL"
+  ],
+  "BRUTE_BONNET": [
+    "SAPPY_SEED",
+    "STRENGTH_SAP",
+    "EARTHQUAKE",
+    "WICKED_BLOW"
+  ],
+  "FLUTTER_MANE": [
+    "MOONLIGHT",
+    "NASTY_PLOT",
+    "EARTH_POWER",
+    "MOONGEIST_BEAM"
+  ],
+  "SLITHER_WING": [
+    "ROCK_SLIDE",
+    "THUNDEROUS_KICK",
+    "SUNSTEEL_STRIKE",
+    "VICTORY_DANCE"
+  ],
+  "SANDY_SHOCKS": [
+    "MORNING_SUN",
+    "THUNDERCLAP",
+    "NASTY_PLOT",
+    "ICE_BEAM"
+  ],
+  "IRON_TREADS": [
+    "FUSION_BOLT",
+    "SHIFT_GEAR",
+    "ICICLE_CRASH",
+    "SUNSTEEL_STRIKE"
+  ],
+  "IRON_BUNDLE": [
+    "EARTH_POWER",
+    "SPLISHY_SPLASH",
+    "VOLT_SWITCH",
+    "NASTY_PLOT"
+  ],
+  "IRON_HANDS": [
+    "DRAIN_PUNCH",
+    "BULK_UP",
+    "PLASMA_FISTS",
+    "ICE_HAMMER"
+  ],
+  "IRON_JUGULIS": [
+    "FIERY_WRATH",
+    "ROOST",
+    "NASTY_PLOT",
+    "OBLIVION_WING"
+  ],
+  "IRON_MOTH": [
+    "EARTH_POWER",
+    "SEARING_SHOT",
+    "MALIGNANT_CHAIN",
+    "QUIVER_DANCE"
+  ],
+  "IRON_THORNS": [
+    "PLASMA_FISTS",
+    "ICICLE_CRASH",
+    "SHIFT_GEAR",
+    "DIAMOND_STORM"
+  ],
+  "FRIGIBAX": [
+    "BEHEMOTH_BLADE",
+    "DRAGON_DANCE",
+    "SACRED_SWORD",
+    "MOUNTAIN_GALE"
+  ],
+  "GIMMIGHOUL": [
+    "HAPPY_HOUR",
+    "AURA_SPHERE",
+    "SURF",
+    "ASTRAL_BARRAGE"
+  ],
+  "WO_CHIEN": [
+    "SPORE",
+    "FIERY_WRATH",
+    "SAPPY_SEED",
+    "STRENGTH_SAP"
+  ],
+  "CHIEN_PAO": [
+    "KNOCK_OFF",
+    "PARTING_SHOT",
+    "TRIPLE_AXEL",
+    "BITTER_BLADE"
+  ],
+  "TING_LU": [
+    "CURSE",
+    "CEASELESS_EDGE",
+    "HORN_LEECH",
+    "PRECIPICE_BLADES"
+  ],
+  "CHI_YU": [
+    "FIERY_WRATH",
+    "HYDRO_STEAM",
+    "MORNING_SUN",
+    "BLUE_FLARE"
+  ],
+  "ROARING_MOON": [
+    "FIRE_LASH",
+    "DRAGON_HAMMER",
+    "METEOR_MASH",
+    "DRAGON_ASCENT"
+  ],
+  "IRON_VALIANT": [
+    "PHOTON_GEYSER",
+    "MAGICAL_TORQUE",
+    "SECRET_SWORD",
+    "NO_RETREAT"
+  ],
+  "KORAIDON": [
+    "SUNSTEEL_STRIKE",
+    "SOLAR_BLADE",
+    "DRAGON_DARTS",
+    "BITTER_BLADE"
+  ],
+  "MIRAIDON": [
+    "SURF",
+    "WILDBOLT_STORM",
+    "SPACIAL_REND",
+    "RISING_VOLTAGE"
+  ],
+  "WALKING_WAKE": [
+    "STEAM_ERUPTION",
+    "FUSION_FLARE",
+    "SLUDGE_WAVE",
+    "CORE_ENFORCER"
+  ],
+  "IRON_LEAVES": [
+    "BITTER_BLADE",
+    "U_TURN",
+    "MIGHTY_CLEAVE",
+    "VICTORY_DANCE"
+  ],
+  "POLTCHAGEIST": [
+    "PARABOLIC_CHARGE",
+    "BOUNCY_BUBBLE",
+    "LEECH_SEED",
+    "SPARKLY_SWIRL"
+  ],
+  "OKIDOGI": [
+    "COMBAT_TORQUE",
+    "TIDY_UP",
+    "DIRE_CLAW",
+    "WICKED_BLOW"
+  ],
+  "MUNKIDORI": [
+    "TWIN_BEAM",
+    "HEAT_WAVE",
+    "EARTH_POWER",
+    "MALIGNANT_CHAIN"
+  ],
+  "FEZANDIPITI": [
+    "BARB_BARRAGE",
+    "BONEMERANG",
+    "TRIPLE_AXEL",
+    "VICTORY_DANCE"
+  ],
+  "OGERPON": [
+    "SLEEP_POWDER",
+    "BONEMERANG",
+    "TRIPLE_AXEL",
+    "FLOWER_TRICK"
+  ],
+  "GOUGING_FIRE": [
+    "EXTREME_SPEED",
+    "DRAGON_DANCE",
+    "ZING_ZAP",
+    "SACRED_FIRE"
+  ],
+  "RAGING_BOLT": [
+    "NASTY_PLOT",
+    "FLAMETHROWER",
+    "MORNING_SUN",
+    "ELECTRO_DRIFT"
+  ],
+  "IRON_BOULDER": [
+    "PSYBLADE",
+    "KOWTOW_CLEAVE",
+    "STONE_AXE",
+    "BITTER_BLADE"
+  ],
+  "IRON_CROWN": [
+    "NASTY_PLOT",
+    "SECRET_SWORD",
+    "PSYSTRIKE",
+    "ELECTRO_DRIFT"
+  ],
+  "TERAPAGOS": [
+    "MOONBLAST",
+    "NASTY_PLOT",
+    "ASTRAL_BARRAGE",
+    "RECOVER"
+  ],
+  "PECHARUNT": [
+    "TAKE_HEART",
+    "BODY_PRESS",
+    "SAPPY_SEED",
+    "ASTRAL_BARRAGE"
+  ],
+  "PALDEA_TAUROS": [
+    "U_TURN",
+    "SUCKER_PUNCH",
+    "HORN_LEECH",
+    "THUNDEROUS_KICK"
+  ],
+  "PALDEA_WOOPER": [
+    "STONE_AXE",
+    "RECOVER",
+    "BANEFUL_BUNKER",
+    "BARB_BARRAGE"
+  ],
+  "BLOODMOON_URSALUNA": [
+    "NASTY_PLOT",
+    "ROCK_POLISH",
+    "SANDSEAR_STORM",
+    "BOOMBURST"
+  ]
+}

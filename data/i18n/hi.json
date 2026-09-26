@@ -1,0 +1,3625 @@
+{
+  "lang": "hi",
+  "_meta": {
+    "pokerogueSupported": true,
+    "fallbackChain": [
+      "en"
+    ],
+    "fallbackNote": "Sections contain only strings that exist for this language (no silent English copies). Resolve missing keys via fallbackChain at runtime. Exception: champion trainer names listed in _fallbacks.",
+    "pokeapiLanguages": []
+  },
+  "species": {
+    "BULBASAUR": "बल्बासॉर",
+    "IVYSAUR": "आइवीसॉर",
+    "VENUSAUR": "वीनासॉर",
+    "CHARMANDER": "चारमैंडर",
+    "CHARMELEON": "चार्मिलियन",
+    "CHARIZARD": "चारिज़ार्ड",
+    "SQUIRTLE": "स्क्वर्टल",
+    "WARTORTLE": "वॉरटॉर्टल",
+    "BLASTOISE": "ब्लास्टॉइस",
+    "CATERPIE": "कैटरपी",
+    "METAPOD": "मेटापॉड",
+    "BUTTERFREE": "बटरफ़्री",
+    "WEEDLE": "वीडल",
+    "KAKUNA": "ककूना",
+    "BEEDRILL": "बीड्रिल",
+    "PIDGEY": "पिजी",
+    "PIDGEOTTO": "पिजियोटो",
+    "PIDGEOT": "पिजिऑट",
+    "RATTATA": "रटैटा",
+    "RATICATE": "रैटिकेट",
+    "SPEAROW": "स्पीरो",
+    "FEAROW": "फ़ीरो",
+    "EKANS": "एकंस",
+    "ARBOK": "आरबॉक",
+    "PIKACHU": "पिकाचू",
+    "RAICHU": "राइचू",
+    "SANDSHREW": "सैंडश्रू",
+    "SANDSLASH": "सैंडस्लैश",
+    "NIDORAN_F": "नीडोरैन ♀",
+    "NIDORINA": "नीडोरीना",
+    "NIDOQUEEN": "नीडोक्वीन",
+    "NIDORAN_M": "नीडोरैन♂",
+    "NIDORINO": "नीडोरीनो",
+    "NIDOKING": "नीडोकिंग",
+    "CLEFAIRY": "क्लफ़ेरी",
+    "CLEFABLE": "क्लफ़ेबल",
+    "VULPIX": "वलपिक्स",
+    "NINETALES": "नाइनटेल्स",
+    "JIGGLYPUFF": "जिग्लीपफ़",
+    "WIGGLYTUFF": "विग्लीटफ़",
+    "ZUBAT": "ज़ूबैट",
+    "GOLBAT": "गोलबैट",
+    "ODDISH": "ऑडिश",
+    "GLOOM": "ग्लूम",
+    "VILEPLUME": "वायलप्लूम",
+    "PARAS": "पैरस",
+    "PARASECT": "पैरासेक्ट",
+    "VENONAT": "वेनोनैट",
+    "VENOMOTH": "वेनोमॉथ",
+    "DIGLETT": "डिगलेट",
+    "DUGTRIO": "डगट्रियो",
+    "MEOWTH": "म्याउथ",
+    "PERSIAN": "पर्शियन",
+    "PSYDUCK": "साईडक",
+    "GOLDUCK": "गोल्डक",
+    "MANKEY": "मैंकी",
+    "PRIMEAPE": "प्राइमेप",
+    "GROWLITHE": "ग्राउलिथ",
+    "ARCANINE": "आर्केनाइन",
+    "POLIWAG": "पॉलीवैग",
+    "POLIWHIRL": "पॉलीवर्ल",
+    "POLIWRATH": "पॉलीरैथ",
+    "ABRA": "आबरा",
+    "KADABRA": "काडाबरा",
+    "ALAKAZAM": "आलाकज़ाम",
+    "MACHOP": "मचॉप",
+    "MACHOKE": "मचोक",
+    "MACHAMP": "मचैम्प",
+    "BELLSPROUT": "बेलस्प्राउट",
+    "WEEPINBELL": "वीपिनबेल",
+    "VICTREEBEL": "विक्ट्रीबेल",
+    "TENTACOOL": "टेंटाकूल",
+    "TENTACRUEL": "टेंटाक्रूअल",
+    "GEODUDE": "जियोडूड",
+    "GRAVELER": "ग्रैवलर",
+    "GOLEM": "गोलेम",
+    "PONYTA": "पोनीटा",
+    "RAPIDASH": "रैपिडैश",
+    "SLOWPOKE": "स्लोपोक",
+    "SLOWBRO": "स्लोब्रो",
+    "MAGNEMITE": "मैग्नेमाइट",
+    "MAGNETON": "मैग्नेटॉन",
+    "FARFETCHD": "फ़ारफ़ेच्ड",
+    "DODUO": "डोडुओ",
+    "DODRIO": "डोड्रियो",
+    "SEEL": "सील",
+    "DEWGONG": "डूगॉन्ग",
+    "GRIMER": "ग्राइमर",
+    "MUK": "मक",
+    "SHELLDER": "शेल्डर",
+    "CLOYSTER": "क्लॉइस्टर",
+    "GASTLY": "गैस्टली",
+    "HAUNTER": "हॉन्टर",
+    "GENGAR": "गेंगार",
+    "ONIX": "ऑनिक्स",
+    "DROWZEE": "ड्राउज़ी",
+    "HYPNO": "हिप्नो",
+    "KRABBY": "क्रैबी",
+    "KINGLER": "किंगलर",
+    "VOLTORB": "वोल्टॉर्ब",
+    "ELECTRODE": "इलेक्ट्रोड",
+    "EXEGGCUTE": "एक्ज़ेगक्यूट",
+    "EXEGGUTOR": "एक्ज़ेग्यूटॉर",
+    "CUBONE": "क्यूबोन",
+    "MAROWAK": "मैरोवैक",
+    "HITMONLEE": "हिटमॉनली",
+    "HITMONCHAN": "हिटमॉनचैन",
+    "LICKITUNG": "लिकिटंग",
+    "KOFFING": "कॉफ़िंग",
+    "WEEZING": "वीज़िंग",
+    "RHYHORN": "राइहॉर्न",
+    "RHYDON": "राइडॉन",
+    "CHANSEY": "चैनसी",
+    "TANGELA": "टैंगेला",
+    "KANGASKHAN": "कैंगसखान",
+    "HORSEA": "हॉर्सी",
+    "SEADRA": "सीड्रा",
+    "GOLDEEN": "गोल्डीन",
+    "SEAKING": "सीकिंग",
+    "STARYU": "स्टार्यू",
+    "STARMIE": "स्टारमी",
+    "MR_MIME": "मिस्टर माइम",
+    "SCYTHER": "साइथर",
+    "JYNX": "जिंक्स",
+    "ELECTABUZZ": "इलेक्टाबज़",
+    "MAGMAR": "मैग्मार",
+    "PINSIR": "पिंसर",
+    "TAUROS": "टॉरोस",
+    "MAGIKARP": "मैजिकार्प",
+    "GYARADOS": "गैराडोस",
+    "LAPRAS": "लैप्रस",
+    "DITTO": "डिट्टो",
+    "EEVEE": "ईवी",
+    "VAPOREON": "वेपोरियॉन",
+    "JOLTEON": "जोल्टियॉन",
+    "FLAREON": "फ़्लेरियॉन",
+    "PORYGON": "पोरिगॉन",
+    "OMANYTE": "ऑमानाइट",
+    "OMASTAR": "ओमास्टार",
+    "KABUTO": "कबूटो",
+    "KABUTOPS": "कबूटॉप्स",
+    "AERODACTYL": "ऐरोडैक्टिल",
+    "SNORLAX": "स्नोरलैक्स",
+    "ARTICUNO": "आर्टिकूनो",
+    "ZAPDOS": "ज़ैपडोस",
+    "MOLTRES": "मोल्ट्रेस",
+    "DRATINI": "ड्रटिनी",
+    "DRAGONAIR": "ड्रैगनेयर",
+    "DRAGONITE": "ड्रैगनाइट",
+    "MEWTWO": "म्यूटू",
+    "MEW": "म्यू",
+    "CHIKORITA": "चिकोरीटा",
+    "BAYLEEF": "बेलीफ़",
+    "MEGANIUM": "मैगेनियम",
+    "CYNDAQUIL": "सिंडाक्विल",
+    "QUILAVA": "क्विलावा",
+    "TYPHLOSION": "टाइफ़्लोज़न",
+    "TOTODILE": "टोटोडाइल",
+    "CROCONAW": "क्रॉकोनॉ",
+    "FERALIGATR": "फ़रैलिगेटर",
+    "SENTRET": "सेंट्रेट",
+    "FURRET": "फ़रेट",
+    "HOOTHOOT": "हूटहूट",
+    "NOCTOWL": "नॉक्टाउल",
+    "LEDYBA": "लेडिबा",
+    "LEDIAN": "लेडियन",
+    "SPINARAK": "स्पिनारैक",
+    "ARIADOS": "एरियाडोस",
+    "CROBAT": "क्रोबैट",
+    "CHINCHOU": "चिंचाओ",
+    "LANTURN": "लैंटर्न",
+    "PICHU": "पिचू",
+    "CLEFFA": "क्लेफ़ा",
+    "IGGLYBUFF": "इग्लीबफ़",
+    "TOGEPI": "टोगेपी",
+    "TOGETIC": "टोगेटिक",
+    "NATU": "नाटू",
+    "XATU": "ज़ाटू",
+    "MAREEP": "मरीप",
+    "FLAAFFY": "फ़्लैफ़ी",
+    "AMPHAROS": "ऐम्फ़रॉस",
+    "BELLOSSOM": "बेलॉसम",
+    "MARILL": "मैरिल",
+    "AZUMARILL": "अज़ूमैरिल",
+    "SUDOWOODO": "सूडोवूडो",
+    "POLITOED": "पॉलीटोड",
+    "HOPPIP": "हॉपिप",
+    "SKIPLOOM": "स्किप्लूम",
+    "JUMPLUFF": "जम्प्लफ़",
+    "AIPOM": "एइपॉम",
+    "SUNKERN": "संकर्न",
+    "SUNFLORA": "सनफ़्लोरा",
+    "YANMA": "यैनमा",
+    "WOOPER": "वूपर",
+    "QUAGSIRE": "क्वैगसायर",
+    "ESPEON": "एस्पियॉन",
+    "UMBREON": "अम्ब्रियॉन",
+    "MURKROW": "मरक्रो",
+    "SLOWKING": "स्लोकिंग",
+    "MISDREAVUS": "मिसड्रीवस",
+    "UNOWN": "अनोन",
+    "WOBBUFFET": "वॉबफ़ेट",
+    "GIRAFARIG": "जिराफ़रिग",
+    "PINECO": "पाइनको",
+    "FORRETRESS": "फ़ॉरेट्रेस",
+    "DUNSPARCE": "डंस्पार्स",
+    "GLIGAR": "ग्लाइगार",
+    "STEELIX": "स्टीलिक्स",
+    "SNUBBULL": "स्नबल",
+    "GRANBULL": "ग्रैनबुल",
+    "QWILFISH": "क्विलफ़िश",
+    "SCIZOR": "सिज़ॉर",
+    "SHUCKLE": "शकल",
+    "HERACROSS": "हेराक्रॉस",
+    "SNEASEL": "स्नीज़ल",
+    "TEDDIURSA": "टेडीअर्सा",
+    "URSARING": "अर्सारिंग",
+    "SLUGMA": "स्लग्मा",
+    "MAGCARGO": "मैगकार्गो",
+    "SWINUB": "स्वाइनब",
+    "PILOSWINE": "पाइलोस्वाइन",
+    "CORSOLA": "कॉर्सला",
+    "REMORAID": "रेमोरेड",
+    "OCTILLERY": "ऑक्टिलरी",
+    "DELIBIRD": "डेलीबर्ड",
+    "MANTINE": "मैंटीन",
+    "SKARMORY": "स्कार्मरी",
+    "HOUNDOUR": "हाउंडाउर",
+    "HOUNDOOM": "हाउंडूम",
+    "KINGDRA": "किंगड्रा",
+    "PHANPY": "फ़ैंपी",
+    "DONPHAN": "डॉनफ़ैन",
+    "PORYGON2": "पोरिगॉन2",
+    "STANTLER": "स्टैंट्लर",
+    "SMEARGLE": "स्मीर्गल",
+    "TYROGUE": "टाइरोग",
+    "HITMONTOP": "हिटमॉनटॉप",
+    "SMOOCHUM": "स्मूचम",
+    "ELEKID": "एलेकिड",
+    "MAGBY": "मैग्बी",
+    "MILTANK": "मिलटैंक",
+    "BLISSEY": "ब्लिसी",
+    "RAIKOU": "राइको",
+    "ENTEI": "एंटेइ",
+    "SUICUNE": "सुइकून",
+    "LARVITAR": "लार्विटार",
+    "PUPITAR": "प्यूपिटार",
+    "TYRANITAR": "टायरैनिटार",
+    "LUGIA": "लूगिया",
+    "HO_OH": "हो-ओह",
+    "CELEBI": "सेलेबी",
+    "TREECKO": "ट्रीको",
+    "GROVYLE": "ग्रोवाइल",
+    "SCEPTILE": "सेप्टाइल",
+    "TORCHIC": "टॉर्चिक",
+    "COMBUSKEN": "कम्बसकेन",
+    "BLAZIKEN": "ब्लेज़िकेन",
+    "MUDKIP": "मडकिप",
+    "MARSHTOMP": "मार्शटॉम्प",
+    "SWAMPERT": "स्वॉम्पर्ट",
+    "POOCHYENA": "पूचीयेना",
+    "MIGHTYENA": "माइटिएना",
+    "ZIGZAGOON": "ज़िगज़ागून",
+    "LINOONE": "लाइनून",
+    "WURMPLE": "वर्मपल",
+    "SILCOON": "सिल्कून",
+    "BEAUTIFLY": "ब्यूटीफ़्लाई",
+    "CASCOON": "कैसकून",
+    "DUSTOX": "डस्टॉक्स",
+    "LOTAD": "लोटैड",
+    "LOMBRE": "लॉम्ब्रे",
+    "LUDICOLO": "लुडिकोलो",
+    "SEEDOT": "सीडॉट",
+    "NUZLEAF": "नज़लीफ़",
+    "SHIFTRY": "शिफ़्ट्री",
+    "TAILLOW": "टेलो",
+    "SWELLOW": "स्वेलो",
+    "WINGULL": "विंगल",
+    "PELIPPER": "पेलिपर",
+    "RALTS": "रॉल्ट्स",
+    "KIRLIA": "कर्लिया",
+    "GARDEVOIR": "गार्डेवुआर",
+    "SURSKIT": "सर्स्किट",
+    "MASQUERAIN": "मैस्करेन",
+    "SHROOMISH": "श्रूमिश",
+    "BRELOOM": "ब्रेलूम",
+    "SLAKOTH": "स्लैकॉथ",
+    "VIGOROTH": "विगरॉथ",
+    "SLAKING": "स्लैकिंग",
+    "NINCADA": "निंकाडा",
+    "NINJASK": "निंजास्क",
+    "SHEDINJA": "शेडिंजा",
+    "WHISMUR": "व्हिस्मर",
+    "LOUDRED": "लाउड्रेड",
+    "EXPLOUD": "एक्सप्लाउड",
+    "MAKUHITA": "माकुहिता",
+    "HARIYAMA": "हरियामा",
+    "AZURILL": "अज़ूरिल",
+    "NOSEPASS": "नोज़पास",
+    "SKITTY": "स्किटी",
+    "DELCATTY": "डेलकैटी",
+    "SABLEYE": "सेबलआई",
+    "MAWILE": "मॉवाइल",
+    "ARON": "ऐरॉन",
+    "LAIRON": "लैरॉन",
+    "AGGRON": "ऐग्रॉन",
+    "MEDITITE": "मेडिटाइट",
+    "MEDICHAM": "मेडीचैम",
+    "ELECTRIKE": "इलेक्ट्राइक",
+    "MANECTRIC": "मेनेक्ट्रिक",
+    "PLUSLE": "प्लसल",
+    "MINUN": "माइनून",
+    "VOLBEAT": "वोल्बीट",
+    "ILLUMISE": "इलुमीज़े",
+    "ROSELIA": "रोज़ेलिया",
+    "GULPIN": "गल्पिन",
+    "SWALOT": "स्वलॉट",
+    "CARVANHA": "कार्वाना",
+    "SHARPEDO": "शार्पीडो",
+    "WAILMER": "वेलमर",
+    "WAILORD": "वेलॉर्ड",
+    "NUMEL": "नमल",
+    "CAMERUPT": "कैमरप्ट",
+    "TORKOAL": "टॉर्कोल",
+    "SPOINK": "स्पॉइंक",
+    "GRUMPIG": "ग्रम्पिग",
+    "SPINDA": "स्पिंडा",
+    "TRAPINCH": "ट्रैपिंच",
+    "VIBRAVA": "वाइब्रावा",
+    "FLYGON": "फ़्लाईगॉन",
+    "CACNEA": "कैक्निया",
+    "CACTURNE": "कैक्टर्न",
+    "SWABLU": "स्वाब्लू",
+    "ALTARIA": "ऑल्टारिया",
+    "ZANGOOSE": "ज़ैंगूस",
+    "SEVIPER": "सवाइपर",
+    "LUNATONE": "लूनाटोन",
+    "SOLROCK": "सोलरॉक",
+    "BARBOACH": "बार्बोच",
+    "WHISCASH": "विसकैश",
+    "CORPHISH": "कॉर्फ़िश",
+    "CRAWDAUNT": "क्रॉडॉन्ट",
+    "BALTOY": "बैलटॉय",
+    "CLAYDOL": "क्लेडॉल",
+    "LILEEP": "लिलीप",
+    "CRADILY": "क्रेडिली",
+    "ANORITH": "ऐनोरिथ",
+    "ARMALDO": "आर्माल्डो",
+    "FEEBAS": "फ़ीबैस",
+    "MILOTIC": "माइलोटिक",
+    "CASTFORM": "कैस्टफ़ॉर्म",
+    "KECLEON": "केक्लियॉन",
+    "SHUPPET": "शपेट",
+    "BANETTE": "बेनैट",
+    "DUSKULL": "डस्कल",
+    "DUSCLOPS": "डस्क्लॉप्स",
+    "TROPIUS": "ट्रॉपियस",
+    "CHIMECHO": "चाइमेको",
+    "ABSOL": "ऐब्सॉल",
+    "WYNAUT": "वायनॉट",
+    "SNORUNT": "स्नोरंट",
+    "GLALIE": "ग्लेली",
+    "SPHEAL": "स्फ़ील",
+    "SEALEO": "सीलियो",
+    "WALREIN": "वॉलरेन",
+    "CLAMPERL": "क्लैम्पर्ल",
+    "HUNTAIL": "हंटेल",
+    "GOREBYSS": "गोराबिस",
+    "RELICANTH": "रेलीकैंथ",
+    "LUVDISC": "लवडिस्क",
+    "BAGON": "बेगॉन",
+    "SHELGON": "शेलगॉन",
+    "SALAMENCE": "सैलामेंस",
+    "BELDUM": "बेलडम",
+    "METANG": "मटैंग",
+    "METAGROSS": "मेटाग्रोस",
+    "REGIROCK": "रेजीरॉक",
+    "REGICE": "रेजाइस",
+    "REGISTEEL": "रेजीस्टील",
+    "LATIAS": "लाटियास",
+    "LATIOS": "लाटियोस",
+    "KYOGRE": "कायोगर",
+    "GROUDON": "ग्राउडॉन",
+    "RAYQUAZA": "रेक्वेज़ा",
+    "JIRACHI": "जराची",
+    "DEOXYS": "डियॉक्सिस",
+    "TURTWIG": "टर्टविग",
+    "GROTLE": "ग्रॉटल",
+    "TORTERRA": "टॉर्टेरा",
+    "CHIMCHAR": "चिमचार",
+    "MONFERNO": "मॉन्फ़र्नो",
+    "INFERNAPE": "इंफ़र्नेप",
+    "PIPLUP": "पिपलप",
+    "PRINPLUP": "प्रिनप्लप",
+    "EMPOLEON": "एम्पोलियॉन",
+    "STARLY": "स्टार्ली",
+    "STARAVIA": "स्टारेविया",
+    "STARAPTOR": "स्टारैप्टर",
+    "BIDOOF": "बीडूफ़",
+    "BIBAREL": "बीबरेल",
+    "KRICKETOT": "क्रिकेटॉट",
+    "KRICKETUNE": "क्रिकेट्यून",
+    "SHINX": "शिंक्स",
+    "LUXIO": "लक्सियो",
+    "LUXRAY": "लक्सरे",
+    "BUDEW": "बडू",
+    "ROSERADE": "रोज़रेड",
+    "CRANIDOS": "क्रेनिडॉस",
+    "RAMPARDOS": "रैम्पराडॉस",
+    "SHIELDON": "शील्डॉन",
+    "BASTIODON": "बैस्टियोडॉन",
+    "BURMY": "बर्मी",
+    "WORMADAM": "वर्माडैम",
+    "MOTHIM": "मॉथिम",
+    "COMBEE": "कॉम्बी",
+    "VESPIQUEN": "वेस्पक्विन",
+    "PACHIRISU": "पाचीरिसू",
+    "BUIZEL": "बुईज़ल",
+    "FLOATZEL": "फ़्लोटज़ल",
+    "CHERUBI": "चेरुबी",
+    "CHERRIM": "चेरिम",
+    "SHELLOS": "शेलॉस",
+    "GASTRODON": "गैस्ट्रोडॉन",
+    "AMBIPOM": "ऐम्बिपॉम",
+    "DRIFLOON": "ड्रिफ़्लून",
+    "DRIFBLIM": "ड्रिफ़्ब्लिम",
+    "BUNEARY": "बनीरी",
+    "LOPUNNY": "लॉपनी",
+    "MISMAGIUS": "मिसमैगियस",
+    "HONCHKROW": "हॉन्चक्रो",
+    "GLAMEOW": "ग्लैमियाउ",
+    "PURUGLY": "परअग्ली",
+    "CHINGLING": "चिंगलिंग",
+    "STUNKY": "स्टंकी",
+    "SKUNTANK": "स्कंटैंक",
+    "BRONZOR": "ब्रॉन्ज़ोर",
+    "BRONZONG": "ब्रॉन्ज़ॉन्ग",
+    "BONSLY": "बॉन्स्लाइ",
+    "MIME_JR": "माइम जूनियर",
+    "HAPPINY": "हैप्पीनी",
+    "CHATOT": "चैटॉट",
+    "SPIRITOMB": "स्पिरिटूम्ब",
+    "GIBLE": "गिबल",
+    "GABITE": "गबाइट",
+    "GARCHOMP": "गारचॉम्प",
+    "MUNCHLAX": "मंचलैक्स",
+    "RIOLU": "रियोलु",
+    "LUCARIO": "लुकारियो",
+    "HIPPOPOTAS": "हिप्पोपोटास",
+    "HIPPOWDON": "हिप्पाउडॉन",
+    "SKORUPI": "स्कोरुपी",
+    "DRAPION": "ड्रापियॉन",
+    "CROAGUNK": "क्रोगंक",
+    "TOXICROAK": "टॉक्सिक्रोक",
+    "CARNIVINE": "कार्निवाइन",
+    "FINNEON": "फ़िनियॉन",
+    "LUMINEON": "लूमिनियॉन",
+    "MANTYKE": "मैंटाइक",
+    "SNOVER": "स्नोवर",
+    "ABOMASNOW": "अबॉमास्नो",
+    "WEAVILE": "वीवाइल",
+    "MAGNEZONE": "मैग्नेज़ोन",
+    "LICKILICKY": "लिकीलिकी",
+    "RHYPERIOR": "राइपिरियर",
+    "TANGROWTH": "टैंग्रोथ",
+    "ELECTIVIRE": "इलेक्टिवायर",
+    "MAGMORTAR": "मैग्मॉर्टर",
+    "TOGEKISS": "टोगेकिस",
+    "YANMEGA": "यैनमेगा",
+    "LEAFEON": "लीफ़ियॉन",
+    "GLACEON": "ग्लेसियॉन",
+    "GLISCOR": "ग्लाइस्कोर",
+    "MAMOSWINE": "मैमोस्वाइन",
+    "PORYGON_Z": "पोरिगॉन-Z",
+    "GALLADE": "गलेड",
+    "PROBOPASS": "प्रोबोपास",
+    "DUSKNOIR": "डस्कनुआर",
+    "FROSLASS": "फ़्रॉस्लैस",
+    "ROTOM": "रोटॉम",
+    "UXIE": "युक्सी",
+    "MESPRIT": "मेस्प्रिट",
+    "AZELF": "ऐज़ेल्फ़",
+    "DIALGA": "डियाल्गा",
+    "PALKIA": "पाल्किया",
+    "HEATRAN": "हीट्रैन",
+    "REGIGIGAS": "रेजीगीगस",
+    "GIRATINA": "गिराटीना",
+    "CRESSELIA": "क्रसेलिया",
+    "PHIONE": "फ़ियोने",
+    "MANAPHY": "मैनाफ़ी",
+    "DARKRAI": "डार्कराय",
+    "SHAYMIN": "शेमिन",
+    "ARCEUS": "आर्कियस",
+    "VICTINI": "विक्टीनी",
+    "SNIVY": "स्नाइवी",
+    "SERVINE": "सर्वाइन",
+    "SERPERIOR": "सर्पिरियर",
+    "TEPIG": "टेपिग",
+    "PIGNITE": "पिग्नाइट",
+    "EMBOAR": "एम्बोर",
+    "OSHAWOTT": "ऑशावॉट",
+    "DEWOTT": "डूवॉट",
+    "SAMUROTT": "सैमुरॉट",
+    "PATRAT": "पट्रैट",
+    "WATCHOG": "वॉचॉग",
+    "LILLIPUP": "लिलीपप",
+    "HERDIER": "हर्डियर",
+    "STOUTLAND": "स्टाउटलैंड",
+    "PURRLOIN": "पर्लायन",
+    "LIEPARD": "लाइपर्ड",
+    "PANSAGE": "पैंसेज",
+    "SIMISAGE": "सिमीसेज",
+    "PANSEAR": "पैंसीयर",
+    "SIMISEAR": "सिमीसीयर",
+    "PANPOUR": "पैंपोर",
+    "SIMIPOUR": "सिमीपोर",
+    "MUNNA": "मूना",
+    "MUSHARNA": "मुशर्ना",
+    "PIDOVE": "पिडव",
+    "TRANQUILL": "ट्रैंक्विल",
+    "UNFEZANT": "अनफ़ेज़ेंट",
+    "BLITZLE": "ब्लिट्ज़्ल",
+    "ZEBSTRIKA": "ज़ेब्स्ट्राइका",
+    "ROGGENROLA": "रॉगेनरोला",
+    "BOLDORE": "बोल्डोर",
+    "GIGALITH": "गीगालिथ",
+    "WOOBAT": "वूबैट",
+    "SWOOBAT": "स्वूबैट",
+    "DRILBUR": "ड्रिलबर",
+    "EXCADRILL": "एक्सकाड्रिल",
+    "AUDINO": "ऑडिनो",
+    "TIMBURR": "टिम्बर",
+    "GURDURR": "गर्डर",
+    "CONKELDURR": "कॉन्केल्डर",
+    "TYMPOLE": "टिम्पोल",
+    "PALPITOAD": "पैल्पिटोड",
+    "SEISMITOAD": "साइज़्मिटोड",
+    "THROH": "थ्रोह",
+    "SAWK": "सॉक",
+    "SEWADDLE": "सवाडल",
+    "SWADLOON": "स्वाडलून",
+    "LEAVANNY": "लीवैनी",
+    "VENIPEDE": "वेनिपीड",
+    "WHIRLIPEDE": "वर्लिपीड",
+    "SCOLIPEDE": "स्कोलिपीड",
+    "COTTONEE": "कॉटनी",
+    "WHIMSICOTT": "व्हिम्सिकॉट",
+    "PETILIL": "पेटिलिल",
+    "LILLIGANT": "लिलीगेंट",
+    "BASCULIN": "बैस्क्युलिन",
+    "SANDILE": "सैंडायल",
+    "KROKOROK": "क्रॉकोरॉक",
+    "KROOKODILE": "क्रूकोडाइल",
+    "DARUMAKA": "डारुमाका",
+    "DARMANITAN": "डारमैनिटैन",
+    "MARACTUS": "मरैक्टस",
+    "DWEBBLE": "ड्वेबल",
+    "CRUSTLE": "क्रस्टल",
+    "SCRAGGY": "स्क्रैगी",
+    "SCRAFTY": "स्क्राफ़्टी",
+    "SIGILYPH": "सिजिलिफ़",
+    "YAMASK": "यामैस्क",
+    "COFAGRIGUS": "कॉफ़ाग्रीगस",
+    "TIRTOUGA": "टिर्टूगा",
+    "CARRACOSTA": "काराकॉस्टा",
+    "ARCHEN": "आर्केन",
+    "ARCHEOPS": "आर्कियॉप्स",
+    "TRUBBISH": "ट्रबिश",
+    "GARBODOR": "गारबोडर",
+    "ZORUA": "ज़ोरुआ",
+    "ZOROARK": "ज़ोरोआर्क",
+    "MINCCINO": "मिंचीनो",
+    "CINCCINO": "चिंचीनो",
+    "GOTHITA": "गॉथीटा",
+    "GOTHORITA": "गॉथोरीटा",
+    "GOTHITELLE": "गॉथीटेल",
+    "SOLOSIS": "सोलोसिस",
+    "DUOSION": "डुओज़न",
+    "REUNICLUS": "रीयूनीक्लस",
+    "DUCKLETT": "डकलेट",
+    "SWANNA": "स्वाना",
+    "VANILLITE": "वनिलाइट",
+    "VANILLISH": "वनिलिश",
+    "VANILLUXE": "वनिलक्स",
+    "DEERLING": "डीयर्लिंग",
+    "SAWSBUCK": "सॉस्बक",
+    "EMOLGA": "इमोल्गा",
+    "KARRABLAST": "कैराब्लास्ट",
+    "ESCAVALIER": "एस्कावेलियर",
+    "FOONGUS": "फ़ूंगस",
+    "AMOONGUSS": "अमूंगस",
+    "FRILLISH": "फ़्रिलिश",
+    "JELLICENT": "जेलिसेंट",
+    "ALOMOMOLA": "अलोममोला",
+    "JOLTIK": "जोल्टिक",
+    "GALVANTULA": "गैल्वैंचुला",
+    "FERROSEED": "फ़रॉसीड",
+    "FERROTHORN": "फ़रोथॉर्न",
+    "KLINK": "क्लिंक",
+    "KLANG": "क्लैंग",
+    "KLINKLANG": "क्लिंक्लैंग",
+    "TYNAMO": "टायनमो",
+    "EELEKTRIK": "ईलैक्ट्रिक",
+    "EELEKTROSS": "ईलैक्ट्रॉस",
+    "ELGYEM": "एल्जियेम",
+    "BEHEEYEM": "बीहियेम",
+    "LITWICK": "लिट्विक",
+    "LAMPENT": "लैम्पेंट",
+    "CHANDELURE": "शैंडेल्युर",
+    "AXEW": "ऐक्स्यू",
+    "FRAXURE": "फ़्रैक्श्युर",
+    "HAXORUS": "हैक्सोरस",
+    "CUBCHOO": "कबचू",
+    "BEARTIC": "बेयरटिक",
+    "CRYOGONAL": "क्रायॉग्नल",
+    "SHELMET": "शेलमेट",
+    "ACCELGOR": "ऐक्सेल्गोर",
+    "STUNFISK": "स्टनफ़िस्क",
+    "MIENFOO": "मींफ़ू",
+    "MIENSHAO": "मिनशाओ",
+    "DRUDDIGON": "ड्रडिगन",
+    "GOLETT": "गोलेट",
+    "GOLURK": "गोलर्क",
+    "PAWNIARD": "पॉन्यार्ड",
+    "BISHARP": "बिशार्प",
+    "BOUFFALANT": "बूफ़ालांट",
+    "RUFFLET": "रफ़लेट",
+    "BRAVIARY": "ब्रेविअरी",
+    "VULLABY": "वलाबाइ",
+    "MANDIBUZZ": "मैंडिबज़",
+    "HEATMOR": "हीटमोर",
+    "DURANT": "डुरैंट",
+    "DEINO": "डाइनो",
+    "ZWEILOUS": "ज़्वाइलस",
+    "HYDREIGON": "हाईड्रैगन",
+    "LARVESTA": "लार्वेस्टा",
+    "VOLCARONA": "वॉलकरोना",
+    "COBALION": "कोबेलियन",
+    "TERRAKION": "टेराकियन",
+    "VIRIZION": "वराइज़ियन",
+    "TORNADUS": "टोर्नेडस",
+    "THUNDURUS": "थंडरस",
+    "RESHIRAM": "रेशिरैम",
+    "ZEKROM": "ज़ेक्रोम",
+    "LANDORUS": "लैंडोरस",
+    "KYUREM": "क्यूरेम",
+    "KELDEO": "केल्डियो",
+    "MELOETTA": "मेलोएटा",
+    "GENESECT": "जेनेसेक्ट",
+    "CHESPIN": "चेस्पिन",
+    "QUILLADIN": "क्विलडिन",
+    "CHESNAUGHT": "चेसनॉट",
+    "FENNEKIN": "फ़ेनेकन",
+    "BRAIXEN": "ब्रेक्सन",
+    "DELPHOX": "डेलफ़ॉक्स",
+    "FROAKIE": "फ़्रोकी",
+    "FROGADIER": "फ़्रॉगाडीयर",
+    "GRENINJA": "ग्रेनिंजा",
+    "BUNNELBY": "बनलबी",
+    "DIGGERSBY": "डिगरस्बी",
+    "FLETCHLING": "फ़्लेचलिंग",
+    "FLETCHINDER": "फ़्लेचिंडर",
+    "TALONFLAME": "टैलनफ़्लेम",
+    "SCATTERBUG": "स्कैटरबग",
+    "SPEWPA": "स्प्यूपा",
+    "VIVILLON": "विवियॉन",
+    "LITLEO": "लिट्लियो",
+    "PYROAR": "पाइरोर",
+    "FLABEBE": "फ़्लबेबे",
+    "FLOETTE": "फ़्लोएट",
+    "FLORGES": "फ़्लोर्जेस",
+    "SKIDDO": "स्किडू",
+    "GOGOAT": "गोगोट",
+    "PANCHAM": "पैंचम",
+    "PANGORO": "पैंगोरो",
+    "FURFROU": "फ़ुरफ़्रू",
+    "ESPURR": "एस्पर",
+    "MEOWSTIC": "मियाउस्टिक",
+    "HONEDGE": "होनेज",
+    "DOUBLADE": "डब्लेड",
+    "AEGISLASH": "ईजिस्लैश",
+    "SPRITZEE": "स्प्रिट्ज़ी",
+    "AROMATISSE": "अरोमाटीस",
+    "SWIRLIX": "स्वर्लिक्स",
+    "SLURPUFF": "स्लर्पफ़",
+    "INKAY": "इंके",
+    "MALAMAR": "मैलामार",
+    "BINACLE": "बायनिकल",
+    "BARBARACLE": "बार्बेरेकल",
+    "SKRELP": "स्क्रल्प",
+    "DRAGALGE": "ड्रगैल्जी",
+    "CLAUNCHER": "क्लॉन्चर",
+    "CLAWITZER": "क्लॉविट्ज़र",
+    "HELIOPTILE": "हीलियॉप्टाइल",
+    "HELIOLISK": "हिलियॉलिस्क",
+    "TYRUNT": "टाइरंट",
+    "TYRANTRUM": "टाइरेंट्रम",
+    "AMAURA": "अमोरा",
+    "AURORUS": "अरॉरस",
+    "SYLVEON": "सिल्वियॉन",
+    "HAWLUCHA": "हलूचा",
+    "DEDENNE": "डेडेन्ने",
+    "CARBINK": "कार्बिंक",
+    "GOOMY": "गूमी",
+    "SLIGGOO": "स्लिगू",
+    "GOODRA": "गूड्रा",
+    "KLEFKI": "क्लेफ़्की",
+    "PHANTUMP": "फ़ैंटम्प",
+    "TREVENANT": "ट्रेवेनंट",
+    "PUMPKABOO": "पंपकबू",
+    "GOURGEIST": "गॉर्गाइस्ट",
+    "BERGMITE": "बर्गमाइट",
+    "AVALUGG": "ऐवलग",
+    "NOIBAT": "नॉइबैट",
+    "NOIVERN": "नॉइवर्न",
+    "XERNEAS": "ज़र्नियस",
+    "YVELTAL": "इवेल्टाल",
+    "ZYGARDE": "ज़ाइगार्ड",
+    "DIANCIE": "डायंसी",
+    "HOOPA": "हूपा",
+    "VOLCANION": "वोल्केनियन",
+    "ROWLET": "राउलेट",
+    "DARTRIX": "डार्ट्रिक्स",
+    "DECIDUEYE": "डेसिजुआई",
+    "LITTEN": "लिटन",
+    "TORRACAT": "टोराकैट",
+    "INCINEROAR": "इंसिनिरोर",
+    "POPPLIO": "पॉप्लियो",
+    "BRIONNE": "ब्रिऑन",
+    "PRIMARINA": "प्रिमारीना",
+    "PIKIPEK": "पिकीपेक",
+    "TRUMBEAK": "ट्रम्बीक",
+    "TOUCANNON": "टुकैनन",
+    "YUNGOOS": "यंगूस",
+    "GUMSHOOS": "गमशूज़",
+    "GRUBBIN": "ग्रबिन",
+    "CHARJABUG": "चार्जाबग",
+    "VIKAVOLT": "वाइकावोल्ट",
+    "CRABRAWLER": "क्रैब्रॉलर",
+    "CRABOMINABLE": "क्रैबॉमिनेबल",
+    "ORICORIO": "ऑरिकोरियो",
+    "CUTIEFLY": "क्यूटीफ़्लाई",
+    "RIBOMBEE": "रिबॉम्बी",
+    "ROCKRUFF": "रॉकरफ़",
+    "LYCANROC": "लाईकनरॉक",
+    "WISHIWASHI": "विशीवाशी",
+    "MAREANIE": "मरीनी",
+    "TOXAPEX": "टॉक्सापेक्स",
+    "MUDBRAY": "मडब्रे",
+    "MUDSDALE": "मड्सडेल",
+    "DEWPIDER": "ड्यूपिडर",
+    "ARAQUANID": "अरैक्वानिड",
+    "FOMANTIS": "फ़ॉमैंटिस",
+    "LURANTIS": "लुरैंटिस",
+    "MORELULL": "मोरलल",
+    "SHIINOTIC": "शीनॉटिक",
+    "SALANDIT": "सलैंडिट",
+    "SALAZZLE": "सलैज़ल",
+    "STUFFUL": "स्टफ़ल",
+    "BEWEAR": "बवेयर",
+    "BOUNSWEET": "बाउंस्वीट",
+    "STEENEE": "स्टीनी",
+    "TSAREENA": "ज़ारीना",
+    "COMFEY": "कम्फ़े",
+    "ORANGURU": "ओरैंगुरू",
+    "PASSIMIAN": "पैस्सिमियन",
+    "WIMPOD": "विम्पॉड",
+    "GOLISOPOD": "गोलाइसोपॉड",
+    "SANDYGAST": "सैंडीगैस्ट",
+    "PALOSSAND": "पैलोसैंड",
+    "PYUKUMUKU": "प्युकुमुकु",
+    "TYPE_NULL": "टाइप - नल",
+    "SILVALLY": "सिलवैलाइ",
+    "MINIOR": "मिनियोर",
+    "KOMALA": "कोमाला",
+    "TURTONATOR": "टर्टोनेटर",
+    "TOGEDEMARU": "टोगेडेमारू",
+    "MIMIKYU": "मिमीक्यू",
+    "BRUXISH": "ब्रक्सिश",
+    "DRAMPA": "ड्रैम्पा",
+    "DHELMISE": "डेल्माइस",
+    "JANGMO_O": "जैंग्मो-ओ",
+    "HAKAMO_O": "हाकामो-ओ",
+    "KOMMO_O": "कॉमो-ओ",
+    "TAPU_KOKO": "टापू कोको",
+    "TAPU_LELE": "टापू लेले",
+    "TAPU_BULU": "टापू बूलू",
+    "TAPU_FINI": "टापू फ़िनी",
+    "COSMOG": "कॉज़्मॉग",
+    "COSMOEM": "कॉज़्मोएम",
+    "SOLGALEO": "सोलगलेयो",
+    "LUNALA": "लुनाला",
+    "NIHILEGO": "नाइलीगो",
+    "BUZZWOLE": "बज़वोल",
+    "PHEROMOSA": "फ़ैरामोसा",
+    "XURKITREE": "ज़र्किट्री",
+    "CELESTEELA": "सेलेस्टीला",
+    "KARTANA": "कार्ताना",
+    "GUZZLORD": "गज़लॉर्ड",
+    "NECROZMA": "नैक्रॉज़्मा",
+    "MAGEARNA": "मगियरना",
+    "MARSHADOW": "मार्शैडो",
+    "POIPOLE": "पॉइपोल",
+    "NAGANADEL": "नागानाडल",
+    "STAKATAKA": "स्टैकाटैका",
+    "BLACEPHALON": "ब्लसेफ़लॉन",
+    "ZERAORA": "ज़ेराऑरा",
+    "MELTAN": "मेल्टन",
+    "MELMETAL": "मेलमेटल",
+    "GROOKEY": "ग्रूकी",
+    "THWACKEY": "थ्वैकी",
+    "RILLABOOM": "रिलाबूम",
+    "SCORBUNNY": "स्कोरबनी",
+    "RABOOT": "राबूट",
+    "CINDERACE": "सिंडरएस",
+    "SOBBLE": "सॉबल",
+    "DRIZZILE": "ड्रिज़ाइल",
+    "INTELEON": "इंटेलियन",
+    "SKWOVET": "स्क्वोवेट",
+    "GREEDENT": "ग्रीडेन्ट",
+    "ROOKIDEE": "रुकिडी",
+    "CORVISQUIRE": "कॉर्विस्क्वायर",
+    "CORVIKNIGHT": "कोर्विनाइट",
+    "BLIPBUG": "ब्लिपबग",
+    "DOTTLER": "डॉट्लर",
+    "ORBEETLE": "ऑर्बीटल",
+    "NICKIT": "निकिट",
+    "THIEVUL": "थीवल",
+    "GOSSIFLEUR": "गॉसिफ़्लर",
+    "ELDEGOSS": "एल्डेगॉस",
+    "WOOLOO": "वुलू",
+    "DUBWOOL": "डबवुल",
+    "CHEWTLE": "च्यूटल",
+    "DREDNAW": "ड्रेडनॉ",
+    "YAMPER": "यैम्पर",
+    "BOLTUND": "बोल्टंड",
+    "ROLYCOLY": "रोलीकोली",
+    "CARKOL": "कार्कोल",
+    "COALOSSAL": "कोलॉसल",
+    "APPLIN": "ऐप्लिन",
+    "FLAPPLE": "फ़्लैपल",
+    "APPLETUN": "ऐप्पलटन",
+    "SILICOBRA": "सिलिकोबरा",
+    "SANDACONDA": "सैंडाकॉन्डा",
+    "CRAMORANT": "क्रैमोरंट",
+    "ARROKUDA": "ऐरोकुडा",
+    "BARRASKEWDA": "बैरास्क्युडा",
+    "TOXEL": "टॉक्सल",
+    "TOXTRICITY": "टॉक्स्ट्रिसिटी",
+    "SIZZLIPEDE": "सिज़्लीपीड",
+    "CENTISKORCH": "सेंटीस्कॉर्च",
+    "CLOBBOPUS": "क्लॉबोपस",
+    "GRAPPLOCT": "ग्रैपलॉक्ट",
+    "SINISTEA": "सिनिस्टी",
+    "POLTEAGEIST": "पोल्टीगाइस्ट",
+    "HATENNA": "हैटेना",
+    "HATTREM": "हैट्रम",
+    "HATTERENE": "हैटेरीन",
+    "IMPIDIMP": "इंपिडिंप",
+    "MORGREM": "मॉरग्रम",
+    "GRIMMSNARL": "ग्रिमस्नार्ल",
+    "OBSTAGOON": "ऑब्स्टागून",
+    "PERRSERKER": "पर्ज़र्कर",
+    "CURSOLA": "कर्सला",
+    "SIRFETCHD": "सरफ़ेच्ड",
+    "MR_RIME": "मिस्टर राइम",
+    "RUNERIGUS": "रूनेरीगस",
+    "MILCERY": "मिलसरी",
+    "ALCREMIE": "एलक्रमी",
+    "FALINKS": "फ़ेलिंक्स",
+    "PINCURCHIN": "पिंकर्चिन",
+    "SNOM": "स्नॉम",
+    "FROSMOTH": "फ़्रॉस्मॉथ",
+    "STONJOURNER": "स्टोनजर्नर",
+    "EISCUE": "आइस्क्यू",
+    "INDEEDEE": "इंडीडी",
+    "MORPEKO": "मोरपेको",
+    "CUFANT": "क्यूफ़ंट",
+    "COPPERAJAH": "कॉपरआजा",
+    "DRACOZOLT": "ड्रैकोज़ोल्ट",
+    "ARCTOZOLT": "आर्कटोज़ोल्ट",
+    "DRACOVISH": "ड्रैकोविश",
+    "ARCTOVISH": "आर्कटोविश",
+    "DURALUDON": "डुरैलुडॉन",
+    "DREEPY": "ड्रीपी",
+    "DRAKLOAK": "ड्रैक्लोक",
+    "DRAGAPULT": "ड्रैगापुल्ट",
+    "ZACIAN": "ज़ाशियन",
+    "ZAMAZENTA": "ज़ामाज़ैंटा",
+    "ETERNATUS": "इटर्नेटस",
+    "KUBFU": "कबफ़ू",
+    "URSHIFU": "अर्शिफ़ू",
+    "ZARUDE": "ज़ारूद",
+    "REGIELEKI": "रेजीइलैकी",
+    "REGIDRAGO": "रेजीड्रेगो",
+    "GLASTRIER": "ग्लैस्ट्रीयर",
+    "SPECTRIER": "स्पैक्ट्रीयर",
+    "CALYREX": "कैलिरैक्स",
+    "WYRDEER": "वियरडियर",
+    "KLEAVOR": "क्लीवॉर",
+    "URSALUNA": "अर्सालूना",
+    "BASCULEGION": "बैस्क्यूलीजन",
+    "SNEASLER": "स्नीज़लर",
+    "OVERQWIL": "ओवरक्विल",
+    "ENAMORUS": "एनैमरस",
+    "SPRIGATITO": "स्प्रिगाटीटो",
+    "FLORAGATO": "फ़्लोरागाटो",
+    "MEOWSCARADA": "म्याउस्कराडा",
+    "FUECOCO": "फ़ुएकोको",
+    "CROCALOR": "क्रॉकालॉर",
+    "SKELEDIRGE": "स्कैलेडर्ज",
+    "QUAXLY": "क्वैक्सली",
+    "QUAXWELL": "क्वैक्सवेल",
+    "QUAQUAVAL": "क्वैक्ववल",
+    "LECHONK": "लचॉन्क",
+    "OINKOLOGNE": "ऑइंकलॉन",
+    "TAROUNTULA": "टरॉन्ट्युला",
+    "SPIDOPS": "स्पाइडॉप्स",
+    "NYMBLE": "निम्बल",
+    "LOKIX": "लोकिक्स",
+    "PAWMI": "पॉमी",
+    "PAWMO": "पॉमो",
+    "PAWMOT": "पॉमट",
+    "TANDEMAUS": "टैंडामाउस",
+    "MAUSHOLD": "माउसहोल्ड",
+    "FIDOUGH": "फ़ाइडो",
+    "DACHSBUN": "डाक्सबन",
+    "SMOLIV": "स्मॉलिव",
+    "DOLLIV": "डॉलिव",
+    "ARBOLIVA": "आर्बोलीवा",
+    "SQUAWKABILLY": "स्क्वॉकाबिली",
+    "NACLI": "नैक्ली",
+    "NACLSTACK": "नैकलस्टैक",
+    "GARGANACL": "गार्गनैकल",
+    "CHARCADET": "चारकडेट",
+    "ARMAROUGE": "आर्मरूज़",
+    "CERULEDGE": "सरूलेज",
+    "TADBULB": "टैडबल्ब",
+    "BELLIBOLT": "बेलिबोल्ट",
+    "WATTREL": "वॉट्रल",
+    "KILOWATTREL": "किलोवॉट्रल",
+    "MASCHIFF": "मैसचिफ़",
+    "MABOSSTIFF": "मैबॉस्टिफ़",
+    "SHROODLE": "श्रूडल",
+    "GRAFAIAI": "ग्रफ़ायआय",
+    "BRAMBLIN": "ब्रैम्बलिन",
+    "BRAMBLEGHAST": "ब्रैम्बलगैस्ट",
+    "TOEDSCOOL": "टोडस्कूल",
+    "TOEDSCRUEL": "टोडस्क्रूअल",
+    "KLAWF": "क्लॉफ़",
+    "CAPSAKID": "कैप्साकिड",
+    "SCOVILLAIN": "स्कोविलन",
+    "RELLOR": "रैलॉर",
+    "RABSCA": "रैब्स्का",
+    "FLITTLE": "फ़्लिटल",
+    "ESPATHRA": "एस्पैथ्रा",
+    "TINKATINK": "टिंकाटिंक",
+    "TINKATUFF": "टिंकाटफ़",
+    "TINKATON": "टिंकाटन",
+    "WIGLETT": "विगलेट",
+    "WUGTRIO": "वगट्रियो",
+    "BOMBIRDIER": "बॉम्बर्डियर",
+    "FINIZEN": "फ़िनिज़न",
+    "PALAFIN": "पैलाफ़िन",
+    "VAROOM": "वरूम",
+    "REVAVROOM": "रेवाव्रूम",
+    "CYCLIZAR": "साइक्लिज़ार",
+    "ORTHWORM": "ऑर्थवर्म",
+    "GLIMMET": "ग्लिमेट",
+    "GLIMMORA": "ग्लिमोरा",
+    "GREAVARD": "ग्रीवर्ड",
+    "HOUNDSTONE": "हाउंडस्टोन",
+    "FLAMIGO": "फ़्लमीगो",
+    "CETODDLE": "सिटॉडल",
+    "CETITAN": "सिटाइटन",
+    "VELUZA": "वलूज़ा",
+    "DONDOZO": "डॉनडोज़ो",
+    "TATSUGIRI": "तात्सुगिरी",
+    "ANNIHILAPE": "अनायलेप",
+    "CLODSIRE": "क्लॉडसायर",
+    "FARIGIRAF": "फ़रिगरैफ़",
+    "DUDUNSPARCE": "डडनस्पार्स",
+    "KINGAMBIT": "किंगैम्बिट",
+    "GREAT_TUSK": "ग्रेट टस्क",
+    "SCREAM_TAIL": "स्क्रीम टेल",
+    "BRUTE_BONNET": "ब्रूट बॉनेट",
+    "FLUTTER_MANE": "फ़्लटर मेन",
+    "SLITHER_WING": "स्लिदर विंग",
+    "SANDY_SHOCKS": "सैंडी शॉक्स",
+    "IRON_TREADS": "आयरन ट्रैड्स",
+    "IRON_BUNDLE": "आयरन बंडल",
+    "IRON_HANDS": "आयरन हैंड्स",
+    "IRON_JUGULIS": "आयरन जग्युलस",
+    "IRON_MOTH": "आयरन मॉथ",
+    "IRON_THORNS": "आयरन थॉर्न्स",
+    "FRIGIBAX": "फ़्रिजिबैक्स",
+    "ARCTIBAX": "आर्क्टबैक्स",
+    "BAXCALIBUR": "बैकस्कैलीबर",
+    "GIMMIGHOUL": "गिम्मिगूल",
+    "GHOLDENGO": "गोल्डनगो",
+    "WO_CHIEN": "वो-चिएन",
+    "CHIEN_PAO": "चिएन-पाओ",
+    "TING_LU": "टिंग-लू",
+    "CHI_YU": "ची-यू",
+    "ROARING_MOON": "रोरिंग मून",
+    "IRON_VALIANT": "आयरन वैलियंट",
+    "KORAIDON": "कोराइडॉन",
+    "MIRAIDON": "मिराइडॉन",
+    "WALKING_WAKE": "वॉकिंग वेक",
+    "IRON_LEAVES": "आयरन लीव्स",
+    "DIPPLIN": "डिप्लिन",
+    "POLTCHAGEIST": "पोलचागाइस्ट",
+    "SINISTCHA": "सिनिस्चा",
+    "OKIDOGI": "ओकिडोगी",
+    "MUNKIDORI": "मंकीडोरी",
+    "FEZANDIPITI": "फ़ेज़न्डिपिटी",
+    "OGERPON": "ओगरपॉन",
+    "ARCHALUDON": "आर्चालुडॉन",
+    "HYDRAPPLE": "हाइड्रैपल",
+    "GOUGING_FIRE": "गाउजिंग फ़ायर",
+    "RAGING_BOLT": "रेजिंग बोल्ट",
+    "IRON_BOULDER": "आयरन बोलडर",
+    "IRON_CROWN": "आयरन क्राउन",
+    "TERAPAGOS": "टेरापागोस",
+    "PECHARUNT": "पेचारंट",
+    "ALOLA_RATTATA": "अलोला रटैटा",
+    "ALOLA_RATICATE": "अलोला रैटिकेट",
+    "ALOLA_RAICHU": "अलोला राइचू",
+    "ALOLA_SANDSHREW": "अलोला सैंडश्रू",
+    "ALOLA_SANDSLASH": "अलोला सैंडस्लैश",
+    "ALOLA_VULPIX": "अलोला वलपिक्स",
+    "ALOLA_NINETALES": "अलोला नाइनटेल्स",
+    "ALOLA_DIGLETT": "अलोला डिगलेट",
+    "ALOLA_DUGTRIO": "अलोला डगट्रियो",
+    "ALOLA_MEOWTH": "अलोला म्याउथ",
+    "ALOLA_PERSIAN": "अलोला पर्शियन",
+    "ALOLA_GEODUDE": "अलोला जियोडूड",
+    "ALOLA_GRAVELER": "अलोला ग्रैवलर",
+    "ALOLA_GOLEM": "अलोला गोलेम",
+    "ALOLA_GRIMER": "अलोला ग्राइमर",
+    "ALOLA_MUK": "अलोला मक",
+    "ALOLA_EXEGGUTOR": "अलोला एक्ज़ेग्यूटॉर",
+    "ALOLA_MAROWAK": "अलोला मैरोवैक",
+    "BATTLE_BOND_GRENINJA": "ग्रेनिंजा",
+    "ETERNAL_FLOETTE": "फ़्लोएट",
+    "GALAR_MEOWTH": "गलार म्याउथ",
+    "GALAR_PONYTA": "गलार पोनीटा",
+    "GALAR_RAPIDASH": "गलार रैपिडैश",
+    "GALAR_SLOWPOKE": "गलार स्लोपोक",
+    "GALAR_SLOWBRO": "गलार स्लोब्रो",
+    "GALAR_FARFETCHD": "गलार फ़ारफ़ेच्ड",
+    "GALAR_WEEZING": "गलार वीज़िंग",
+    "GALAR_MR_MIME": "गलार मिस्टर माइम",
+    "GALAR_ARTICUNO": "गलार आर्टिकूनो",
+    "GALAR_ZAPDOS": "गलार ज़ैपडोस",
+    "GALAR_MOLTRES": "गलार मोल्ट्रेस",
+    "GALAR_SLOWKING": "गलार स्लोकिंग",
+    "GALAR_CORSOLA": "गलार कॉर्सला",
+    "GALAR_ZIGZAGOON": "गलार ज़िगज़ागून",
+    "GALAR_LINOONE": "गलार लाइनून",
+    "GALAR_DARUMAKA": "गलार डारुमाका",
+    "GALAR_DARMANITAN": "गलार डारमैनिटैन",
+    "GALAR_YAMASK": "गलार यामैस्क",
+    "GALAR_STUNFISK": "गलार स्टनफ़िस्क",
+    "HISUI_GROWLITHE": "हिसुइ ग्राउलिथ",
+    "HISUI_ARCANINE": "हिसुइ आर्केनाइन",
+    "HISUI_VOLTORB": "हिसुइ वोल्टॉर्ब",
+    "HISUI_ELECTRODE": "हिसुइ इलेक्ट्रोड",
+    "HISUI_TYPHLOSION": "हिसुइ टाइफ़्लोज़न",
+    "HISUI_QWILFISH": "हिसुइ क्विलफ़िश",
+    "HISUI_SNEASEL": "हिसुइ स्नीज़ल",
+    "HISUI_SAMUROTT": "हिसुइ सैमुरॉट",
+    "HISUI_LILLIGANT": "हिसुइ लिलीगेंट",
+    "HISUI_BASCULIN": "हिसुइ बैस्क्युलिन",
+    "HISUI_ZORUA": "हिसुइ ज़ोरुआ",
+    "HISUI_ZOROARK": "हिसुइ ज़ोरोआर्क",
+    "HISUI_BRAVIARY": "हिसुइ ब्रेविअरी",
+    "HISUI_SLIGGOO": "हिसुइ स्लिगू",
+    "HISUI_GOODRA": "हिसुइ गूड्रा",
+    "HISUI_AVALUGG": "हिसुइ ऐवलग",
+    "HISUI_DECIDUEYE": "हिसुइ डेसिजुआई",
+    "PALDEA_TAUROS": "पैलडीया टॉरोस",
+    "PALDEA_WOOPER": "पैलडीया वूपर",
+    "BLOODMOON_URSALUNA": "अर्सालूना"
+  },
+  "forms": {
+    "VENUSAUR:mega": "मेगा वीनासॉर",
+    "VENUSAUR:gigantamax": "जायगैंटामैक्स वीनासॉर",
+    "CHARIZARD:mega-x": "मेगा चारिज़ार्ड X",
+    "CHARIZARD:mega-y": "मेगा चारिज़ार्ड Y",
+    "CHARIZARD:gigantamax": "जायगैंटामैक्स चारिज़ार्ड",
+    "BLASTOISE:mega": "मेगा ब्लास्टॉइस",
+    "BLASTOISE:gigantamax": "जायगैंटामैक्स ब्लास्टॉइस",
+    "BUTTERFREE:gigantamax": "जायगैंटामैक्स बटरफ़्री",
+    "BEEDRILL:mega": "मेगा बीड्रिल",
+    "PIDGEOT:mega": "मेगा पिजिऑट",
+    "PIKACHU:gigantamax": "जायगैंटामैक्स पिकाचू",
+    "RAICHU:mega-x": "मेगा राइचू X",
+    "RAICHU:mega-y": "मेगा राइचू Y",
+    "CLEFABLE:mega": "मेगा क्लफ़ेबल",
+    "MEOWTH:gigantamax": "जायगैंटामैक्स म्याउथ",
+    "ALAKAZAM:mega": "मेगा आलाकज़ाम",
+    "MACHAMP:gigantamax": "जायगैंटामैक्स मचैम्प",
+    "VICTREEBEL:mega": "मेगा विक्ट्रीबेल",
+    "SLOWBRO:mega": "मेगा स्लोब्रो",
+    "GENGAR:mega": "मेगा गेंगार",
+    "GENGAR:gigantamax": "जायगैंटामैक्स गेंगार",
+    "KINGLER:gigantamax": "जायगैंटामैक्स किंगलर",
+    "KANGASKHAN:mega": "मेगा कैंगसखान",
+    "STARMIE:mega": "मेगा स्टारमी",
+    "PINSIR:mega": "मेगा पिंसर",
+    "GYARADOS:mega": "मेगा गैराडोस",
+    "LAPRAS:gigantamax": "जायगैंटामैक्स लैप्रस",
+    "EEVEE:gigantamax": "जायगैंटामैक्स ईवी",
+    "AERODACTYL:mega": "मेगा ऐरोडैक्टिल",
+    "SNORLAX:gigantamax": "जायगैंटामैक्स स्नोरलैक्स",
+    "DRAGONITE:mega": "मेगा ड्रैगनाइट",
+    "MEWTWO:mega-x": "मेगा म्यूटू X",
+    "MEWTWO:mega-y": "मेगा म्यूटू Y",
+    "MEGANIUM:mega": "मेगा मैगेनियम",
+    "FERALIGATR:mega": "मेगा फ़रैलिगेटर",
+    "AMPHAROS:mega": "मेगा ऐम्फ़रॉस",
+    "STEELIX:mega": "मेगा स्टीलिक्स",
+    "SCIZOR:mega": "मेगा सिज़ॉर",
+    "HERACROSS:mega": "मेगा हेराक्रॉस",
+    "SKARMORY:mega": "मेगा स्कार्मरी",
+    "HOUNDOOM:mega": "मेगा हाउंडूम",
+    "TYRANITAR:mega": "मेगा टायरैनिटार",
+    "SCEPTILE:mega": "मेगा सेप्टाइल",
+    "BLAZIKEN:mega": "मेगा ब्लेज़िकेन",
+    "SWAMPERT:mega": "मेगा स्वॉम्पर्ट",
+    "GARDEVOIR:mega": "मेगा गार्डेवुआर",
+    "SABLEYE:mega": "मेगा सेबलआई",
+    "MAWILE:mega": "मेगा मॉवाइल",
+    "AGGRON:mega": "मेगा ऐग्रॉन",
+    "MEDICHAM:mega": "मेगा मेडीचैम",
+    "MANECTRIC:mega": "मेगा मेनेक्ट्रिक",
+    "SHARPEDO:mega": "मेगा शार्पीडो",
+    "CAMERUPT:mega": "मेगा कैमरप्ट",
+    "ALTARIA:mega": "मेगा ऑल्टारिया",
+    "BANETTE:mega": "मेगा बेनैट",
+    "CHIMECHO:mega": "मेगा चाइमेको",
+    "ABSOL:mega": "मेगा ऐब्सॉल",
+    "GLALIE:mega": "मेगा ग्लेली",
+    "SALAMENCE:mega": "मेगा सैलामेंस",
+    "METAGROSS:mega": "मेगा मेटाग्रोस",
+    "LATIAS:mega": "मेगा लाटियास",
+    "LATIOS:mega": "मेगा लाटियोस",
+    "KYOGRE:primal": "प्राइम कायोगर",
+    "GROUDON:primal": "प्राइम ग्राउडॉन",
+    "RAYQUAZA:mega": "मेगा रेक्वेज़ा",
+    "STARAPTOR:mega": "मेगा स्टारैप्टर",
+    "LOPUNNY:mega": "मेगा लॉपनी",
+    "GARCHOMP:mega": "मेगा गारचॉम्प",
+    "LUCARIO:mega": "मेगा लुकारियो",
+    "ABOMASNOW:mega": "मेगा अबॉमास्नो",
+    "GALLADE:mega": "मेगा गलेड",
+    "FROSLASS:mega": "मेगा फ़्रॉस्लैस",
+    "HEATRAN:mega": "मेगा हीट्रैन",
+    "DARKRAI:mega": "मेगा डार्कराय",
+    "EMBOAR:mega": "मेगा एम्बोर",
+    "EXCADRILL:mega": "मेगा एक्सकाड्रिल",
+    "AUDINO:mega": "मेगा ऑडिनो",
+    "SCOLIPEDE:mega": "मेगा स्कोलिपीड",
+    "SCRAFTY:mega": "मेगा स्क्राफ़्टी",
+    "GARBODOR:gigantamax": "जायगैंटामैक्स गारबोडर",
+    "EELEKTROSS:mega": "मेगा ईलैक्ट्रॉस",
+    "CHANDELURE:mega": "मेगा शैंडेल्युर",
+    "GOLURK:mega": "मेगा गोलर्क",
+    "CHESNAUGHT:mega": "मेगा चेसनॉट",
+    "DELPHOX:mega": "मेगा डेलफ़ॉक्स",
+    "GRENINJA:mega": "मेगा ग्रेनिंजा",
+    "PYROAR:mega": "मेगा पाइरोर",
+    "MEOWSTIC:mega": "मेगा मियाउस्टिक",
+    "MALAMAR:mega": "मेगा मैलामार",
+    "BARBARACLE:mega": "मेगा बार्बेरेकल",
+    "DRAGALGE:mega": "मेगा ड्रगैल्जी",
+    "HAWLUCHA:mega": "मेगा हलूचा",
+    "ZYGARDE:mega": "मेगा ज़ाइगार्ड",
+    "DIANCIE:mega": "मेगा डायंसी",
+    "CRABOMINABLE:mega": "मेगा क्रैबॉमिनेबल",
+    "GOLISOPOD:mega": "मेगा गोलाइसोपॉड",
+    "DRAMPA:mega": "मेगा ड्रैम्पा",
+    "MAGEARNA:mega": "मेगा मगियरना",
+    "MAGEARNA:mega-original": "मेगा मगियरना",
+    "ZERAORA:mega": "मेगा ज़ेराऑरा",
+    "MELMETAL:gigantamax": "जायगैंटामैक्स मेलमेटल",
+    "RILLABOOM:gigantamax": "जायगैंटामैक्स रिलाबूम",
+    "CINDERACE:gigantamax": "जायगैंटामैक्स सिंडरएस",
+    "INTELEON:gigantamax": "जायगैंटामैक्स इंटेलियन",
+    "CORVIKNIGHT:gigantamax": "जायगैंटामैक्स कोर्विनाइट",
+    "ORBEETLE:gigantamax": "जायगैंटामैक्स ऑर्बीटल",
+    "DREDNAW:gigantamax": "जायगैंटामैक्स ड्रेडनॉ",
+    "COALOSSAL:gigantamax": "जायगैंटामैक्स कोलॉसल",
+    "FLAPPLE:gigantamax": "जायगैंटामैक्स फ़्लैपल",
+    "APPLETUN:gigantamax": "जायगैंटामैक्स ऐप्पलटन",
+    "SANDACONDA:gigantamax": "जायगैंटामैक्स सैंडाकॉन्डा",
+    "TOXTRICITY:gigantamax": "जायगैंटामैक्स टॉक्स्ट्रिसिटी",
+    "CENTISKORCH:gigantamax": "जायगैंटामैक्स सेंटीस्कॉर्च",
+    "HATTERENE:gigantamax": "जायगैंटामैक्स हैटेरीन",
+    "GRIMMSNARL:gigantamax": "जायगैंटामैक्स ग्रिमस्नार्ल",
+    "ALCREMIE:gigantamax": "जायगैंटामैक्स एलक्रमी",
+    "FALINKS:mega": "मेगा फ़ेलिंक्स",
+    "COPPERAJAH:gigantamax": "जायगैंटामैक्स कॉपरआजा",
+    "DURALUDON:gigantamax": "जायगैंटामैक्स डुरैलुडॉन",
+    "ETERNATUS:eternamax": "इटर्नामैक्स इटर्नेटस",
+    "URSHIFU:gigantamax-single": "सिंगल स्ट्राइक स्टाइल जायगैंटामैक्स अर्शिफ़ू",
+    "URSHIFU:gigantamax-rapid": "रैपिड स्ट्राइक स्टाइल जायगैंटामैक्स अर्शिफ़ू",
+    "SCOVILLAIN:mega": "मेगा स्कोविलन",
+    "GLIMMORA:mega": "मेगा ग्लिमोरा",
+    "TATSUGIRI:mega-curly": "मेगा तात्सुगिरी",
+    "TATSUGIRI:mega-droopy": "मेगा तात्सुगिरी",
+    "TATSUGIRI:mega-stretchy": "मेगा तात्सुगिरी",
+    "BAXCALIBUR:mega": "मेगा बैकस्कैलीबर",
+    "ETERNAL_FLOETTE:mega": "मेगा फ़्लोएट",
+    "GALAR_DARMANITAN:": "गलार डारमैनिटैन"
+  },
+  "formLabels": {
+    "VENUSAUR:mega": "मेगा",
+    "VENUSAUR:gigantamax": "जायगैंटामैक्स",
+    "CHARIZARD:mega-x": "मेगा X",
+    "CHARIZARD:mega-y": "मेगा Y",
+    "CHARIZARD:gigantamax": "जायगैंटामैक्स",
+    "BLASTOISE:mega": "मेगा",
+    "BLASTOISE:gigantamax": "जायगैंटामैक्स",
+    "BUTTERFREE:gigantamax": "जायगैंटामैक्स",
+    "BEEDRILL:mega": "मेगा",
+    "PIDGEOT:mega": "मेगा",
+    "PIKACHU:": "नॉर्मल",
+    "PIKACHU:gigantamax": "जायगैंटामैक्स",
+    "RAICHU:": "नॉर्मल",
+    "RAICHU:mega-x": "मेगा X",
+    "RAICHU:mega-y": "मेगा Y",
+    "CLEFABLE:mega": "मेगा",
+    "MEOWTH:gigantamax": "जायगैंटामैक्स",
+    "ALAKAZAM:mega": "मेगा",
+    "MACHAMP:gigantamax": "जायगैंटामैक्स",
+    "VICTREEBEL:mega": "मेगा",
+    "SLOWBRO:mega": "मेगा",
+    "GENGAR:mega": "मेगा",
+    "GENGAR:gigantamax": "जायगैंटामैक्स",
+    "KINGLER:gigantamax": "जायगैंटामैक्स",
+    "KANGASKHAN:mega": "मेगा",
+    "STARMIE:mega": "मेगा",
+    "PINSIR:mega": "मेगा",
+    "GYARADOS:mega": "मेगा",
+    "LAPRAS:gigantamax": "जायगैंटामैक्स",
+    "EEVEE:": "नॉर्मल",
+    "EEVEE:gigantamax": "जायगैंटामैक्स",
+    "AERODACTYL:mega": "मेगा",
+    "SNORLAX:gigantamax": "जायगैंटामैक्स",
+    "DRAGONITE:mega": "मेगा",
+    "MEWTWO:mega-x": "मेगा X",
+    "MEWTWO:mega-y": "मेगा Y",
+    "MEGANIUM:mega": "मेगा",
+    "FERALIGATR:mega": "मेगा",
+    "PICHU:": "नॉर्मल",
+    "AMPHAROS:mega": "मेगा",
+    "UNOWN:a": "A",
+    "UNOWN:b": "B",
+    "UNOWN:c": "C",
+    "UNOWN:d": "D",
+    "UNOWN:e": "E",
+    "UNOWN:f": "F",
+    "UNOWN:g": "G",
+    "UNOWN:h": "H",
+    "UNOWN:i": "I",
+    "UNOWN:j": "J",
+    "UNOWN:k": "K",
+    "UNOWN:l": "L",
+    "UNOWN:m": "M",
+    "UNOWN:n": "N",
+    "UNOWN:o": "O",
+    "UNOWN:p": "P",
+    "UNOWN:q": "Q",
+    "UNOWN:r": "R",
+    "UNOWN:s": "S",
+    "UNOWN:t": "T",
+    "UNOWN:u": "U",
+    "UNOWN:v": "V",
+    "UNOWN:w": "W",
+    "UNOWN:x": "X",
+    "UNOWN:y": "Y",
+    "UNOWN:z": "Z",
+    "UNOWN:exclamation": "!",
+    "UNOWN:question": "?",
+    "STEELIX:mega": "मेगा",
+    "SCIZOR:mega": "मेगा",
+    "HERACROSS:mega": "मेगा",
+    "SKARMORY:mega": "मेगा",
+    "HOUNDOOM:mega": "मेगा",
+    "TYRANITAR:mega": "मेगा",
+    "SCEPTILE:mega": "मेगा",
+    "BLAZIKEN:mega": "मेगा",
+    "SWAMPERT:mega": "मेगा",
+    "GARDEVOIR:mega": "मेगा",
+    "SABLEYE:mega": "मेगा",
+    "MAWILE:mega": "मेगा",
+    "AGGRON:mega": "मेगा",
+    "MEDICHAM:mega": "मेगा",
+    "MANECTRIC:mega": "मेगा",
+    "SHARPEDO:mega": "मेगा",
+    "CAMERUPT:mega": "मेगा",
+    "ALTARIA:mega": "मेगा",
+    "CASTFORM:": "नॉर्मल",
+    "CASTFORM:sunny": "सन",
+    "CASTFORM:rainy": "रेन वॉटर",
+    "CASTFORM:snowy": "स्नो क्लाउड",
+    "BANETTE:mega": "मेगा",
+    "CHIMECHO:mega": "मेगा",
+    "ABSOL:mega": "मेगा",
+    "GLALIE:mega": "मेगा",
+    "SALAMENCE:mega": "मेगा",
+    "METAGROSS:mega": "मेगा",
+    "LATIAS:mega": "मेगा",
+    "LATIOS:mega": "मेगा",
+    "KYOGRE:primal": "प्राइम",
+    "GROUDON:primal": "प्राइम",
+    "RAYQUAZA:mega": "मेगा",
+    "DEOXYS:normal": "नॉर्मल",
+    "DEOXYS:attack": "अटैक",
+    "DEOXYS:defense": "डिफ़ेंस",
+    "DEOXYS:speed": "स्पीड",
+    "STARAPTOR:mega": "मेगा",
+    "BURMY:plant": "प्लांट क्लोक",
+    "BURMY:sandy": "सैंडी क्लोक",
+    "BURMY:trash": "ट्रैश क्लोक",
+    "WORMADAM:plant": "प्लांट क्लोक",
+    "WORMADAM:sandy": "सैंडी क्लोक",
+    "WORMADAM:trash": "ट्रैश क्लोक",
+    "CHERRIM:overcast": "ओवरकास्ट",
+    "CHERRIM:sunshine": "सनशाइन",
+    "SHELLOS:east": "ईस्ट-सी",
+    "SHELLOS:west": "वेस्ट-सी",
+    "GASTRODON:east": "ईस्ट-सी",
+    "GASTRODON:west": "वेस्ट-सी",
+    "LOPUNNY:mega": "मेगा",
+    "GARCHOMP:mega": "मेगा",
+    "LUCARIO:mega": "मेगा",
+    "ABOMASNOW:mega": "मेगा",
+    "GALLADE:mega": "मेगा",
+    "FROSLASS:mega": "मेगा",
+    "ROTOM:": "नॉर्मल",
+    "ROTOM:heat": "हीट",
+    "ROTOM:wash": "वॉश",
+    "ROTOM:frost": "फ़्रॉस्ट",
+    "ROTOM:fan": "फ़ैन",
+    "ROTOM:mow": "कट",
+    "DIALGA:": "नॉर्मल",
+    "DIALGA:origin": "ओरिजिन",
+    "PALKIA:": "नॉर्मल",
+    "PALKIA:origin": "ओरिजिन",
+    "HEATRAN:mega": "मेगा",
+    "GIRATINA:altered": "अनदर",
+    "GIRATINA:origin": "ओरिजिन",
+    "DARKRAI:mega": "मेगा",
+    "SHAYMIN:land": "लैंड",
+    "SHAYMIN:sky": "स्काई",
+    "ARCEUS:normal": "नॉर्मल",
+    "ARCEUS:fighting": "फ़ाइटिंग",
+    "ARCEUS:flying": "फ़्लाइंग",
+    "ARCEUS:poison": "पॉइज़न",
+    "ARCEUS:ground": "ग्राउंड",
+    "ARCEUS:rock": "रॉक",
+    "ARCEUS:bug": "बग",
+    "ARCEUS:ghost": "घोस्ट",
+    "ARCEUS:steel": "स्टील",
+    "ARCEUS:fire": "फ़ायर",
+    "ARCEUS:water": "वॉटर",
+    "ARCEUS:grass": "ग्रास",
+    "ARCEUS:electric": "इलेक्ट्रिक",
+    "ARCEUS:psychic": "साइकिक",
+    "ARCEUS:ice": "आइस",
+    "ARCEUS:dragon": "इलेक्ट्रिक",
+    "ARCEUS:dark": "डार्क",
+    "ARCEUS:fairy": "फ़ेरी",
+    "EMBOAR:mega": "मेगा",
+    "EXCADRILL:mega": "मेगा",
+    "AUDINO:mega": "मेगा",
+    "SCOLIPEDE:mega": "मेगा",
+    "BASCULIN:red-striped": "रेड-स्ट्राइप",
+    "BASCULIN:blue-striped": "ब्लू-स्ट्राइप",
+    "DARMANITAN:": "नॉर्मल मोड",
+    "DARMANITAN:zen": "ज़ेन मोड",
+    "SCRAFTY:mega": "मेगा",
+    "GARBODOR:gigantamax": "जायगैंटामैक्स",
+    "DEERLING:spring": "स्प्रिंग",
+    "DEERLING:summer": "समर",
+    "DEERLING:autumn": "ऑटम",
+    "DEERLING:winter": "विंटर",
+    "SAWSBUCK:spring": "स्प्रिंग",
+    "SAWSBUCK:summer": "समर",
+    "SAWSBUCK:autumn": "ऑटम",
+    "SAWSBUCK:winter": "विंटर",
+    "EELEKTROSS:mega": "मेगा",
+    "CHANDELURE:mega": "मेगा",
+    "GOLURK:mega": "मेगा",
+    "TORNADUS:incarnate": "इंकार्नेशन",
+    "TORNADUS:therian": "सेक्रेड बीस्ट",
+    "THUNDURUS:incarnate": "इंकार्नेशन",
+    "THUNDURUS:therian": "सेक्रेड बीस्ट",
+    "LANDORUS:incarnate": "इंकार्नेशन",
+    "LANDORUS:therian": "सेक्रेड बीस्ट",
+    "KYUREM:": "नॉर्मल",
+    "KYUREM:black": "ब्लैक",
+    "KYUREM:white": "व्हाइट",
+    "KELDEO:ordinary": "ऑर्डिनरी",
+    "KELDEO:resolute": "रेज़लूट",
+    "MELOETTA:aria": "सिंगिंग",
+    "MELOETTA:pirouette": "स्टेप",
+    "GENESECT:": "नो-कैसेट",
+    "GENESECT:shock": "शॉक कैसेट",
+    "GENESECT:burn": "बर्न कैसेट",
+    "GENESECT:chill": "फ़्रीज़ कैसेट",
+    "GENESECT:douse": "ऐक्वा कैसेट",
+    "CHESNAUGHT:mega": "मेगा",
+    "DELPHOX:mega": "मेगा",
+    "GRENINJA:mega": "मेगा",
+    "SCATTERBUG:meadow": "मेडो पैटर्न",
+    "SCATTERBUG:icy-snow": "आइसी स्नो पैटर्न",
+    "SCATTERBUG:polar": "पोलर पैटर्न",
+    "SCATTERBUG:tundra": "टंड्रा पैटर्न",
+    "SCATTERBUG:continental": "कॉन्टिनेंटल पैटर्न",
+    "SCATTERBUG:garden": "गार्डन पैटर्न",
+    "SCATTERBUG:elegant": "एलिगेंट पैटर्न",
+    "SCATTERBUG:modern": "मॉडर्न पैटर्न",
+    "SCATTERBUG:marine": "मरीन पैटर्न",
+    "SCATTERBUG:archipelago": "आइलैंड पैटर्न",
+    "SCATTERBUG:high-plains": "हाई-प्लेन पैटर्न",
+    "SCATTERBUG:sandstorm": "सैंडस्टॉर्म पैटर्न",
+    "SCATTERBUG:river": "रिवर पैटर्न",
+    "SCATTERBUG:monsoon": "मॉनसून पैटर्न",
+    "SCATTERBUG:savanna": "सवाना पैटर्न",
+    "SCATTERBUG:sun": "सन पैटर्न",
+    "SCATTERBUG:ocean": "ओशन पैटर्न",
+    "SCATTERBUG:jungle": "वाइल्ड पैटर्न",
+    "SCATTERBUG:fancy": "फ़ैंसी पैटर्न",
+    "SCATTERBUG:poke-ball": "पोके बॉल पैटर्न",
+    "SPEWPA:meadow": "मेडो पैटर्न",
+    "SPEWPA:icy-snow": "आइसी स्नो पैटर्न",
+    "SPEWPA:polar": "पोलर पैटर्न",
+    "SPEWPA:tundra": "टंड्रा पैटर्न",
+    "SPEWPA:continental": "कॉन्टिनेंटल पैटर्न",
+    "SPEWPA:garden": "गार्डन पैटर्न",
+    "SPEWPA:elegant": "एलिगेंट पैटर्न",
+    "SPEWPA:modern": "मॉडर्न पैटर्न",
+    "SPEWPA:marine": "मरीन पैटर्न",
+    "SPEWPA:archipelago": "आइलैंड पैटर्न",
+    "SPEWPA:high-plains": "हाई-प्लेन पैटर्न",
+    "SPEWPA:sandstorm": "सैंडस्टॉर्म पैटर्न",
+    "SPEWPA:river": "रिवर पैटर्न",
+    "SPEWPA:monsoon": "मॉनसून पैटर्न",
+    "SPEWPA:savanna": "सवाना पैटर्न",
+    "SPEWPA:sun": "सन पैटर्न",
+    "SPEWPA:ocean": "ओशन पैटर्न",
+    "SPEWPA:jungle": "वाइल्ड पैटर्न",
+    "SPEWPA:fancy": "फ़ैंसी पैटर्न",
+    "SPEWPA:poke-ball": "पोके बॉल पैटर्न",
+    "VIVILLON:meadow": "मेडो पैटर्न",
+    "VIVILLON:icy-snow": "आइसी स्नो पैटर्न",
+    "VIVILLON:polar": "पोलर पैटर्न",
+    "VIVILLON:tundra": "टंड्रा पैटर्न",
+    "VIVILLON:continental": "कॉन्टिनेंटल पैटर्न",
+    "VIVILLON:garden": "गार्डन पैटर्न",
+    "VIVILLON:elegant": "एलिगेंट पैटर्न",
+    "VIVILLON:modern": "मॉडर्न पैटर्न",
+    "VIVILLON:marine": "मरीन पैटर्न",
+    "VIVILLON:archipelago": "आइलैंड पैटर्न",
+    "VIVILLON:high-plains": "हाई-प्लेन पैटर्न",
+    "VIVILLON:sandstorm": "सैंडस्टॉर्म पैटर्न",
+    "VIVILLON:river": "रिवर पैटर्न",
+    "VIVILLON:monsoon": "मॉनसून पैटर्न",
+    "VIVILLON:savanna": "सवाना पैटर्न",
+    "VIVILLON:sun": "सन पैटर्न",
+    "VIVILLON:ocean": "ओशन पैटर्न",
+    "VIVILLON:jungle": "वाइल्ड पैटर्न",
+    "VIVILLON:fancy": "फ़ैंसी पैटर्न",
+    "VIVILLON:poke-ball": "पोके बॉल पैटर्न",
+    "PYROAR:mega": "मेगा",
+    "FLABEBE:red": "रेड फ़्लावर",
+    "FLABEBE:yellow": "येलो फ़्लावर",
+    "FLABEBE:orange": "ऑरेंज फ़्लावर",
+    "FLABEBE:blue": "ब्लू फ़्लावर",
+    "FLABEBE:white": "व्हाइट फ़्लावर",
+    "FLOETTE:red": "रेड फ़्लावर",
+    "FLOETTE:yellow": "येलो फ़्लावर",
+    "FLOETTE:orange": "ऑरेंज फ़्लावर",
+    "FLOETTE:blue": "ब्लू फ़्लावर",
+    "FLOETTE:white": "व्हाइट फ़्लावर",
+    "FLORGES:red": "रेड फ़्लावर",
+    "FLORGES:yellow": "येलो फ़्लावर",
+    "FLORGES:orange": "ऑरेंज फ़्लावर",
+    "FLORGES:blue": "ब्लू फ़्लावर",
+    "FLORGES:white": "व्हाइट फ़्लावर",
+    "FURFROU:": "नैचुरल फ़ॉर्म",
+    "FURFROU:heart": "हार्ट कट",
+    "FURFROU:star": "स्टार कट",
+    "FURFROU:diamond": "डायमंड कट",
+    "FURFROU:debutante": "लेडी कट",
+    "FURFROU:matron": "मैडम कट",
+    "FURFROU:dandy": "जेंटलमैन कट",
+    "FURFROU:la-reine": "क्वीन कट",
+    "FURFROU:kabuki": "काबुकी कट",
+    "FURFROU:pharaoh": "किंगडम कट",
+    "MEOWSTIC:male": "मेल",
+    "MEOWSTIC:female": "फ़ीमेल",
+    "MEOWSTIC:mega": "मेगा",
+    "AEGISLASH:shield": "शील्ड",
+    "AEGISLASH:blade": "ब्लेड",
+    "MALAMAR:mega": "मेगा",
+    "BARBARACLE:mega": "मेगा",
+    "DRAGALGE:mega": "मेगा",
+    "HAWLUCHA:mega": "मेगा",
+    "PUMPKABOO:": "ऐवरेज प्रकार",
+    "PUMPKABOO:small": "छोटा प्रकार",
+    "PUMPKABOO:large": "बड़ा प्रकार",
+    "PUMPKABOO:super": "जम्बो प्रकार",
+    "GOURGEIST:": "ऐवरेज प्रकार",
+    "GOURGEIST:small": "छोटा प्रकार",
+    "GOURGEIST:large": "बड़ा प्रकार",
+    "GOURGEIST:super": "जम्बो प्रकार",
+    "ZYGARDE:50": "50%",
+    "ZYGARDE:10": "10%",
+    "ZYGARDE:complete": "कम्प्लीट",
+    "ZYGARDE:mega": "मेगा",
+    "DIANCIE:mega": "मेगा",
+    "HOOPA:": "कंफ़ाइन",
+    "HOOPA:unbound": "अनबाउंड",
+    "CRABOMINABLE:mega": "मेगा",
+    "ORICORIO:baile": "फ़्लेम डांस स्टाइल",
+    "ORICORIO:pompom": "पॉम-पॉम डांस स्टाइल",
+    "ORICORIO:pau": "हुला डांस स्टाइल",
+    "ORICORIO:sensu": "फ़ैन डांस स्टाइल",
+    "ROCKRUFF:": "नॉर्मल",
+    "LYCANROC:midday": "मिड-डे",
+    "LYCANROC:midnight": "मिडनाइट",
+    "LYCANROC:dusk": "ट्वाइलाइट",
+    "WISHIWASHI:": "सोलो",
+    "WISHIWASHI:school": "स्कूल",
+    "GOLISOPOD:mega": "मेगा",
+    "SILVALLY:normal": "टाइप: नॉर्मल",
+    "SILVALLY:fighting": "टाइप: फ़ाइटिंग",
+    "SILVALLY:flying": "टाइप: फ़्लाइंग",
+    "SILVALLY:poison": "टाइप: पॉइज़न",
+    "SILVALLY:ground": "टाइप: ग्राउंड",
+    "SILVALLY:rock": "टाइप: रॉक",
+    "SILVALLY:bug": "टाइप: बग",
+    "SILVALLY:ghost": "टाइप: घोस्ट",
+    "SILVALLY:steel": "टाइप: स्टील",
+    "SILVALLY:fire": "टाइप: फ़ायर",
+    "SILVALLY:water": "टाइप: वॉटर",
+    "SILVALLY:grass": "टाइप: ग्रास",
+    "SILVALLY:electric": "टाइप: इलेक्ट्रिक",
+    "SILVALLY:psychic": "टाइप: साइकिक",
+    "SILVALLY:ice": "टाइप: आइस",
+    "SILVALLY:dragon": "टाइप: ड्रैगन",
+    "SILVALLY:dark": "टाइप: डार्क",
+    "SILVALLY:fairy": "टाइप: फ़ेरी",
+    "MINIOR:red-meteor": "रेड मीटियोर",
+    "MINIOR:orange-meteor": "ऑरेंज मीटियोर",
+    "MINIOR:yellow-meteor": "येलो मीटियोर",
+    "MINIOR:green-meteor": "ग्रीन मीटियोर",
+    "MINIOR:blue-meteor": "ब्लू मीटियोर",
+    "MINIOR:indigo-meteor": "इंडिगो मीटियोर",
+    "MINIOR:violet-meteor": "वायलेट मीटियोर",
+    "MINIOR:red": "रेड कोर",
+    "MINIOR:orange": "ऑरेंज कोर",
+    "MINIOR:yellow": "येलो कोर",
+    "MINIOR:green": "ग्रीन कोर",
+    "MINIOR:blue": "ब्लू कोर",
+    "MINIOR:indigo": "इंडिगो कोर",
+    "MINIOR:violet": "वायलेट कोर",
+    "MIMIKYU:disguised": "डिस्गाइज़",
+    "MIMIKYU:busted": "रिवील",
+    "DRAMPA:mega": "मेगा",
+    "NECROZMA:": "नॉर्मल",
+    "NECROZMA:dusk-mane": "ट्वाइलाइट मेन",
+    "NECROZMA:dawn-wings": "मॉर्निंग विंग",
+    "NECROZMA:ultra": "अल्ट्रा",
+    "MAGEARNA:": "नॉर्मल",
+    "MAGEARNA:mega": "मेगा",
+    "MAGEARNA:mega-original": "मेगा",
+    "MARSHADOW:": "नॉर्मल",
+    "ZERAORA:mega": "मेगा",
+    "MELMETAL:gigantamax": "जायगैंटामैक्स",
+    "RILLABOOM:gigantamax": "जायगैंटामैक्स",
+    "CINDERACE:gigantamax": "जायगैंटामैक्स",
+    "INTELEON:gigantamax": "जायगैंटामैक्स",
+    "CORVIKNIGHT:gigantamax": "जायगैंटामैक्स",
+    "ORBEETLE:gigantamax": "जायगैंटामैक्स",
+    "DREDNAW:gigantamax": "जायगैंटामैक्स",
+    "COALOSSAL:gigantamax": "जायगैंटामैक्स",
+    "FLAPPLE:gigantamax": "जायगैंटामैक्स",
+    "APPLETUN:gigantamax": "जायगैंटामैक्स",
+    "SANDACONDA:gigantamax": "जायगैंटामैक्स",
+    "CRAMORANT:": "नॉर्मल",
+    "CRAMORANT:gulping": "गल्प",
+    "CRAMORANT:gorging": "स्वॉलो",
+    "TOXTRICITY:amped": "ऐम्प्ड",
+    "TOXTRICITY:gigantamax": "जायगैंटामैक्स",
+    "CENTISKORCH:gigantamax": "जायगैंटामैक्स",
+    "SINISTEA:phony": "फ़ेक",
+    "SINISTEA:antique": "ऐंटीक",
+    "POLTEAGEIST:phony": "फ़ेक",
+    "POLTEAGEIST:antique": "ऐंटीक",
+    "HATTERENE:gigantamax": "जायगैंटामैक्स",
+    "GRIMMSNARL:gigantamax": "जायगैंटामैक्स",
+    "ALCREMIE:vanilla-cream": "वनिला क्रीम",
+    "ALCREMIE:ruby-cream": "रूबी क्रीम",
+    "ALCREMIE:matcha-cream": "माच्चा क्रीम",
+    "ALCREMIE:mint-cream": "मिंट क्रीम",
+    "ALCREMIE:lemon-cream": "लेमन क्रीम",
+    "ALCREMIE:salted-cream": "सॉल्ट क्रीम",
+    "ALCREMIE:ruby-swirl": "रूबी मिक्स",
+    "ALCREMIE:caramel-swirl": "कैरेमल मिक्स",
+    "ALCREMIE:rainbow-swirl": "रेनबो मिक्स",
+    "ALCREMIE:gigantamax": "जायगैंटामैक्स",
+    "FALINKS:mega": "मेगा",
+    "EISCUE:": "आइस फ़ेस",
+    "INDEEDEE:male": "मेल",
+    "INDEEDEE:female": "फ़ीमेल",
+    "MORPEKO:full-belly": "फ़ुल-बेली मोड",
+    "MORPEKO:hangry": "हंग्री मोड",
+    "COPPERAJAH:gigantamax": "जायगैंटामैक्स",
+    "DURALUDON:gigantamax": "जायगैंटामैक्स",
+    "ZACIAN:hero-of-many-battles": "कई बैटल का हीरो",
+    "ZACIAN:crowned": "किंग ऑफ़ सॉर्ड",
+    "ZAMAZENTA:hero-of-many-battles": "कई बैटल का हीरो",
+    "ZAMAZENTA:crowned": "किंग ऑफ़ शील्ड",
+    "ETERNATUS:eternamax": "इटर्नामैक्स",
+    "URSHIFU:single-strike": "सिंगल स्ट्राइक स्टाइल",
+    "URSHIFU:rapid-strike": "रैपिड स्ट्राइक स्टाइल",
+    "URSHIFU:gigantamax-single": "सिंगल स्ट्राइक स्टाइल जायगैंटामैक्स",
+    "URSHIFU:gigantamax-rapid": "रैपिड स्ट्राइक स्टाइल जायगैंटामैक्स",
+    "ZARUDE:": "नॉर्मल",
+    "ENAMORUS:incarnate": "इंकार्नेशन",
+    "ENAMORUS:therian": "सेक्रेड बीस्ट",
+    "OINKOLOGNE:male": "मेल",
+    "OINKOLOGNE:female": "फ़ीमेल",
+    "MAUSHOLD:four": "फ़ैमिली ऑफ़ फ़ोर",
+    "MAUSHOLD:three": "फ़ैमिली ऑफ़ थ्री",
+    "SCOVILLAIN:mega": "मेगा",
+    "GLIMMORA:mega": "मेगा",
+    "TATSUGIRI:mega-curly": "मेगा",
+    "TATSUGIRI:mega-droopy": "मेगा",
+    "TATSUGIRI:mega-stretchy": "मेगा",
+    "DUDUNSPARCE:two-segment": "द्विभाग फ़ॉर्म",
+    "DUDUNSPARCE:three-segment": "त्रिभाग फ़ॉर्म",
+    "BAXCALIBUR:mega": "मेगा",
+    "POLTCHAGEIST:counterfeit": "काउंटरफ़िट",
+    "POLTCHAGEIST:artisan": "आर्टिसन",
+    "SINISTCHA:unremarkable": "अनरिमार्केबल",
+    "SINISTCHA:masterpiece": "मास्टरपीस",
+    "TERAPAGOS:": "नॉर्मल",
+    "ETERNAL_FLOETTE:mega": "मेगा",
+    "GALAR_DARMANITAN:": "गलार फ़ॉर्म",
+    "GALAR_DARMANITAN:zen": "ज़ेन मोड",
+    "PALDEA_TAUROS:combat": "कॉम्बैट ब्रीड",
+    "PALDEA_TAUROS:blaze": "ब्लेज़ ब्रीड",
+    "PALDEA_TAUROS:aqua": "एक्वा ब्रीड"
+  },
+  "moves": {
+    "POUND": {
+      "name": "पाउंड",
+      "effect": null
+    },
+    "KARATE_CHOP": {
+      "name": "कराटे चॉप",
+      "effect": null
+    },
+    "DOUBLE_SLAP": {
+      "name": "डबल स्लैप",
+      "effect": null
+    },
+    "FIRE_PUNCH": {
+      "name": "फ़ायर पंच",
+      "effect": null
+    },
+    "ICE_PUNCH": {
+      "name": "आइस पंच",
+      "effect": null
+    },
+    "THUNDER_PUNCH": {
+      "name": "थंडर पंच",
+      "effect": null
+    },
+    "SCRATCH": {
+      "name": "स्क्रैच",
+      "effect": null
+    },
+    "VISE_GRIP": {
+      "name": "वाइस ग्रिप",
+      "effect": null
+    },
+    "CUT": {
+      "name": "कट",
+      "effect": null
+    },
+    "GUST": {
+      "name": "हवा का झोंका",
+      "effect": null
+    },
+    "WING_ATTACK": {
+      "name": "विंग अटैक",
+      "effect": null
+    },
+    "FLY": {
+      "name": "फ़्लाई",
+      "effect": null
+    },
+    "SLAM": {
+      "name": "स्लैम",
+      "effect": null
+    },
+    "VINE_WHIP": {
+      "name": "वाइन विप",
+      "effect": null
+    },
+    "STOMP": {
+      "name": "स्टॉम्प",
+      "effect": null
+    },
+    "DOUBLE_KICK": {
+      "name": "डबल किक",
+      "effect": null
+    },
+    "SAND_ATTACK": {
+      "name": "सैंड अटैक",
+      "effect": null
+    },
+    "HEADBUTT": {
+      "name": "हेडबट",
+      "effect": null
+    },
+    "HORN_ATTACK": {
+      "name": "हॉर्न अटैक",
+      "effect": null
+    },
+    "HORN_DRILL": {
+      "name": "हॉर्न ड्रिल",
+      "effect": null
+    },
+    "TACKLE": {
+      "name": "टैकल",
+      "effect": null
+    },
+    "BODY_SLAM": {
+      "name": "बॉडी स्लैम",
+      "effect": null
+    },
+    "WRAP": {
+      "name": "जकड़ना",
+      "effect": null
+    },
+    "TAKE_DOWN": {
+      "name": "टेक डाउन",
+      "effect": null
+    },
+    "POISON_STING": {
+      "name": "पॉइज़न स्टिंग",
+      "effect": null
+    },
+    "TWINEEDLE": {
+      "name": "डबल नीडल",
+      "effect": null
+    },
+    "BITE": {
+      "name": "बाइट",
+      "effect": null
+    },
+    "ACID": {
+      "name": "ऐसिड",
+      "effect": null
+    },
+    "EMBER": {
+      "name": "एम्बर",
+      "effect": null
+    },
+    "FLAMETHROWER": {
+      "name": "फ़्लेमथ्रोअर",
+      "effect": null
+    },
+    "WATER_GUN": {
+      "name": "वॉटर गन",
+      "effect": null
+    },
+    "HYDRO_PUMP": {
+      "name": "हाइड्रो पंप",
+      "effect": null
+    },
+    "SURF": {
+      "name": "सर्फ़",
+      "effect": null
+    },
+    "ICE_BEAM": {
+      "name": "आइस बीम",
+      "effect": null
+    },
+    "BLIZZARD": {
+      "name": "ब्लिज़र्ड",
+      "effect": null
+    },
+    "PSYBEAM": {
+      "name": "साइबीम",
+      "effect": null
+    },
+    "BUBBLE_BEAM": {
+      "name": "बबल बीम",
+      "effect": null
+    },
+    "AURORA_BEAM": {
+      "name": "ऑरोरा बीम",
+      "effect": null
+    },
+    "HYPER_BEAM": {
+      "name": "हाइपर बीम",
+      "effect": null
+    },
+    "PECK": {
+      "name": "पेक",
+      "effect": null
+    },
+    "DRILL_PECK": {
+      "name": "ड्रिल पेक",
+      "effect": null
+    },
+    "SUBMISSION": {
+      "name": "सब्मिशन",
+      "effect": null
+    },
+    "LOW_KICK": {
+      "name": "अड़ंगी",
+      "effect": null
+    },
+    "COUNTER": {
+      "name": "काउंटर",
+      "effect": null
+    },
+    "ABSORB": {
+      "name": "ऐब्सॉर्ब",
+      "effect": null
+    },
+    "MEGA_DRAIN": {
+      "name": "मेगा ड्रेन",
+      "effect": null
+    },
+    "RAZOR_LEAF": {
+      "name": "रेज़र लीफ़",
+      "effect": null
+    },
+    "SOLAR_BEAM": {
+      "name": "सोलर बीम",
+      "effect": null
+    },
+    "FIRE_SPIN": {
+      "name": "फ़ायर स्पिन",
+      "effect": null
+    },
+    "THUNDER_SHOCK": {
+      "name": "थंडर शॉक",
+      "effect": null
+    },
+    "THUNDERBOLT": {
+      "name": "थंडरबोल्ट",
+      "effect": null
+    },
+    "THUNDER": {
+      "name": "थंडर",
+      "effect": null
+    },
+    "ROCK_THROW": {
+      "name": "रॉक थ्रो",
+      "effect": null
+    },
+    "EARTHQUAKE": {
+      "name": "अर्थक्वेक",
+      "effect": null
+    },
+    "FISSURE": {
+      "name": "फ़िशर",
+      "effect": null
+    },
+    "DIG": {
+      "name": "खोदना",
+      "effect": null
+    },
+    "CONFUSION": {
+      "name": "कंफ़्यूज़न",
+      "effect": null
+    },
+    "PSYCHIC": {
+      "name": "साइकिक",
+      "effect": null
+    },
+    "QUICK_ATTACK": {
+      "name": "क्विक अटैक",
+      "effect": null
+    },
+    "NIGHT_SHADE": {
+      "name": "नाइट शेड",
+      "effect": null
+    },
+    "LICK": {
+      "name": "लिक",
+      "effect": null
+    },
+    "SMOG": {
+      "name": "स्मॉग",
+      "effect": null
+    },
+    "SLUDGE": {
+      "name": "कीचड़",
+      "effect": null
+    },
+    "BONE_CLUB": {
+      "name": "बोन क्लब",
+      "effect": null
+    },
+    "FIRE_BLAST": {
+      "name": "फ़ायर ब्लास्ट",
+      "effect": null
+    },
+    "WATERFALL": {
+      "name": "वॉटरफ़ॉल",
+      "effect": null
+    },
+    "SWIFT": {
+      "name": "स्विफ़्ट",
+      "effect": null
+    },
+    "SKULL_BASH": {
+      "name": "स्कल बैश",
+      "effect": null
+    },
+    "HIGH_JUMP_KICK": {
+      "name": "हाई जम्प किक",
+      "effect": null
+    },
+    "LEECH_LIFE": {
+      "name": "लीच लाइफ़",
+      "effect": null
+    },
+    "SKY_ATTACK": {
+      "name": "स्काइ अटैक",
+      "effect": null
+    },
+    "TRANSFORM": {
+      "name": "ट्रांसफ़ॉर्म",
+      "effect": null
+    },
+    "BUBBLE": {
+      "name": "बबल",
+      "effect": null
+    },
+    "PSYWAVE": {
+      "name": "साइवेव",
+      "effect": null
+    },
+    "SPLASH": {
+      "name": "स्प्लैश",
+      "effect": null
+    },
+    "CRABHAMMER": {
+      "name": "क्रैबहैमर",
+      "effect": null
+    },
+    "REST": {
+      "name": "रेस्ट",
+      "effect": null
+    },
+    "ROCK_SLIDE": {
+      "name": "रॉक स्लाइड",
+      "effect": null
+    },
+    "HYPER_FANG": {
+      "name": "हाइपर फ़ैंग",
+      "effect": null
+    },
+    "TRI_ATTACK": {
+      "name": "ट्राइ अटैक",
+      "effect": null
+    },
+    "SLASH": {
+      "name": "स्लैश",
+      "effect": null
+    },
+    "STRUGGLE": {
+      "name": "स्ट्रगल",
+      "effect": null
+    },
+    "FLAME_WHEEL": {
+      "name": "फ़्लेम व्हील",
+      "effect": null
+    },
+    "AEROBLAST": {
+      "name": "ऐरोब्लास्ट",
+      "effect": null
+    },
+    "POWDER_SNOW": {
+      "name": "पाउडर स्नो",
+      "effect": null
+    },
+    "FEINT_ATTACK": {
+      "name": "फ़ेइंट अटैक",
+      "effect": null
+    },
+    "SLUDGE_BOMB": {
+      "name": "कीचड़ बम",
+      "effect": null
+    },
+    "MUD_SLAP": {
+      "name": "मड-स्लैप",
+      "effect": null
+    },
+    "OCTAZOOKA": {
+      "name": "ऑक्टाज़ूका",
+      "effect": null
+    },
+    "ZAP_CANNON": {
+      "name": "ज़ैप कैनन",
+      "effect": null
+    },
+    "ICY_WIND": {
+      "name": "आइसी विंड",
+      "effect": null
+    },
+    "LOCK_ON": {
+      "name": "लॉक-ऑन",
+      "effect": null
+    },
+    "OUTRAGE": {
+      "name": "आउट्रेज",
+      "effect": null
+    },
+    "GIGA_DRAIN": {
+      "name": "गीगा ड्रेन",
+      "effect": null
+    },
+    "CHARM": {
+      "name": "चार्म",
+      "effect": null
+    },
+    "ROLLOUT": {
+      "name": "रोलआउट",
+      "effect": null
+    },
+    "SPARK": {
+      "name": "स्पार्क",
+      "effect": null
+    },
+    "FURY_CUTTER": {
+      "name": "फ़्युरी कटर",
+      "effect": null
+    },
+    "STEEL_WING": {
+      "name": "स्टील विंग",
+      "effect": null
+    },
+    "RETURN": {
+      "name": "रिटर्न",
+      "effect": null
+    },
+    "PRESENT": {
+      "name": "प्रेज़ेंट",
+      "effect": null
+    },
+    "FRUSTRATION": {
+      "name": "फ़्रस्ट्रेशन",
+      "effect": null
+    },
+    "SACRED_FIRE": {
+      "name": "सेक्रेड फ़ायर",
+      "effect": null
+    },
+    "DYNAMIC_PUNCH": {
+      "name": "डाइनैमिक पंच",
+      "effect": null
+    },
+    "MEGAHORN": {
+      "name": "मेगाहॉर्न",
+      "effect": null
+    },
+    "DRAGON_BREATH": {
+      "name": "ड्रैगन ब्रेथ",
+      "effect": null
+    },
+    "IRON_TAIL": {
+      "name": "आयरन टेल",
+      "effect": null
+    },
+    "METAL_CLAW": {
+      "name": "मेटल क्लॉ",
+      "effect": null
+    },
+    "HIDDEN_POWER": {
+      "name": "हिडन पावर",
+      "effect": null
+    },
+    "CROSS_CHOP": {
+      "name": "क्रॉस चॉप",
+      "effect": null
+    },
+    "TWISTER": {
+      "name": "ट्विस्टर",
+      "effect": null
+    },
+    "CRUNCH": {
+      "name": "क्रंच",
+      "effect": null
+    },
+    "MIRROR_COAT": {
+      "name": "मिरर कोट",
+      "effect": null
+    },
+    "ANCIENT_POWER": {
+      "name": "एन्शंट पावर",
+      "effect": null
+    },
+    "SHADOW_BALL": {
+      "name": "शैडो बॉल",
+      "effect": null
+    },
+    "FUTURE_SIGHT": {
+      "name": "फ़्यूचर साइट",
+      "effect": null
+    },
+    "ROCK_SMASH": {
+      "name": "रॉक स्मैश",
+      "effect": null
+    },
+    "HEAT_WAVE": {
+      "name": "हीट वेव",
+      "effect": null
+    },
+    "SUPERPOWER": {
+      "name": "सुपरपावर",
+      "effect": null
+    },
+    "BRICK_BREAK": {
+      "name": "ब्रिक ब्रेक",
+      "effect": null
+    },
+    "YAWN": {
+      "name": "यॉन",
+      "effect": null
+    },
+    "LUSTER_PURGE": {
+      "name": "लस्टर पर्ज",
+      "effect": null
+    },
+    "MIST_BALL": {
+      "name": "मिस्ट बॉल",
+      "effect": null
+    },
+    "FEATHER_DANCE": {
+      "name": "फ़ेदर डांस",
+      "effect": null
+    },
+    "BLAZE_KICK": {
+      "name": "ब्लेज़ किक",
+      "effect": null
+    },
+    "POISON_FANG": {
+      "name": "पॉइज़न फ़ैंग",
+      "effect": null
+    },
+    "CRUSH_CLAW": {
+      "name": "क्रश क्लॉ",
+      "effect": null
+    },
+    "BLAST_BURN": {
+      "name": "ब्लास्ट बर्न",
+      "effect": null
+    },
+    "HYDRO_CANNON": {
+      "name": "हाइड्रो कैनन",
+      "effect": null
+    },
+    "METEOR_MASH": {
+      "name": "मीटियोर मैश",
+      "effect": null
+    },
+    "ASTONISH": {
+      "name": "ऐस्टॉनिश",
+      "effect": null
+    },
+    "WEATHER_BALL": {
+      "name": "वेदर बॉल",
+      "effect": null
+    },
+    "AIR_CUTTER": {
+      "name": "एयर कटर",
+      "effect": null
+    },
+    "OVERHEAT": {
+      "name": "ओवरहीट",
+      "effect": null
+    },
+    "ROCK_TOMB": {
+      "name": "रॉक टूम",
+      "effect": null
+    },
+    "SILVER_WIND": {
+      "name": "सिल्वर विंड",
+      "effect": null
+    },
+    "METAL_SOUND": {
+      "name": "मेटल साउंड",
+      "effect": null
+    },
+    "SIGNAL_BEAM": {
+      "name": "सिग्नल बीम",
+      "effect": null
+    },
+    "SHADOW_PUNCH": {
+      "name": "शैडो पंच",
+      "effect": null
+    },
+    "EXTRASENSORY": {
+      "name": "एक्स्ट्रासेंसरी",
+      "effect": null
+    },
+    "SAND_TOMB": {
+      "name": "सैंड टूम",
+      "effect": null
+    },
+    "MUDDY_WATER": {
+      "name": "मडी वॉटर",
+      "effect": null
+    },
+    "BULLET_SEED": {
+      "name": "बुलेट सीड",
+      "effect": null
+    },
+    "AERIAL_ACE": {
+      "name": "एरियल एस",
+      "effect": null
+    },
+    "ICICLE_SPEAR": {
+      "name": "आइसिकल स्पीयर",
+      "effect": null
+    },
+    "DRAGON_CLAW": {
+      "name": "ड्रैगन क्लॉ",
+      "effect": null
+    },
+    "FRENZY_PLANT": {
+      "name": "फ़्रेन्ज़ी प्लांट",
+      "effect": null
+    },
+    "MUD_SHOT": {
+      "name": "मड शॉट",
+      "effect": null
+    },
+    "VOLT_TACKLE": {
+      "name": "Volt Tackle",
+      "effect": null
+    },
+    "MAGICAL_LEAF": {
+      "name": "मैजिकल लीफ़",
+      "effect": null
+    },
+    "LEAF_BLADE": {
+      "name": "लीफ़ ब्लेड",
+      "effect": null
+    },
+    "ROCK_BLAST": {
+      "name": "रॉक ब्लास्ट",
+      "effect": null
+    },
+    "WATER_PULSE": {
+      "name": "वॉटर पल्स",
+      "effect": null
+    },
+    "DOOM_DESIRE": {
+      "name": "डूम डिज़ायर",
+      "effect": null
+    },
+    "PSYCHO_BOOST": {
+      "name": "साइको बूस्ट",
+      "effect": null
+    },
+    "GYRO_BALL": {
+      "name": "जायरो बॉल",
+      "effect": null
+    },
+    "BRINE": {
+      "name": "सॉल्टी वॉटर",
+      "effect": null
+    },
+    "CLOSE_COMBAT": {
+      "name": "क्लोज़ कॉम्बैट",
+      "effect": null
+    },
+    "PAYBACK": {
+      "name": "पेबैक",
+      "effect": null
+    },
+    "LAST_RESORT": {
+      "name": "लास्ट रिज़ॉर्ट",
+      "effect": null
+    },
+    "SUCKER_PUNCH": {
+      "name": "सर्प्राइज़ पंच",
+      "effect": null
+    },
+    "FORCE_PALM": {
+      "name": "फ़ोर्स पाम",
+      "effect": null
+    },
+    "AURA_SPHERE": {
+      "name": "ऑरा स्फ़ीयर",
+      "effect": null
+    },
+    "POISON_JAB": {
+      "name": "पॉइज़न जैब",
+      "effect": null
+    },
+    "DARK_PULSE": {
+      "name": "डार्क पल्स",
+      "effect": null
+    },
+    "NIGHT_SLASH": {
+      "name": "नाइट स्लैश",
+      "effect": null
+    },
+    "AQUA_TAIL": {
+      "name": "ऐक्वा टेल",
+      "effect": null
+    },
+    "SEED_BOMB": {
+      "name": "सीड बम",
+      "effect": null
+    },
+    "AIR_SLASH": {
+      "name": "एयर स्लैश",
+      "effect": null
+    },
+    "X_SCISSOR": {
+      "name": "एक्स-सिज़र",
+      "effect": null
+    },
+    "BUG_BUZZ": {
+      "name": "बग बज़",
+      "effect": null
+    },
+    "DRAGON_PULSE": {
+      "name": "ड्रैगन पल्स",
+      "effect": null
+    },
+    "POWER_GEM": {
+      "name": "पावर जेम",
+      "effect": null
+    },
+    "DRAIN_PUNCH": {
+      "name": "ड्रेन पंच",
+      "effect": null
+    },
+    "FOCUS_BLAST": {
+      "name": "फ़ोकस ब्लास्ट",
+      "effect": null
+    },
+    "ENERGY_BALL": {
+      "name": "एनर्जि बॉल",
+      "effect": null
+    },
+    "BRAVE_BIRD": {
+      "name": "ब्रेव बर्ड",
+      "effect": null
+    },
+    "EARTH_POWER": {
+      "name": "पृथ्वी शक्ति",
+      "effect": null
+    },
+    "GIGA_IMPACT": {
+      "name": "गीगा इम्पैक्ट",
+      "effect": null
+    },
+    "BULLET_PUNCH": {
+      "name": "बुलेट पंच",
+      "effect": null
+    },
+    "AVALANCHE": {
+      "name": "ऐवलांच",
+      "effect": null
+    },
+    "ICE_SHARD": {
+      "name": "आइस शार्ड",
+      "effect": null
+    },
+    "SHADOW_CLAW": {
+      "name": "शैडो क्लॉ",
+      "effect": null
+    },
+    "THUNDER_FANG": {
+      "name": "थंडर फ़ैंग",
+      "effect": null
+    },
+    "ICE_FANG": {
+      "name": "आइस फ़ैंग",
+      "effect": null
+    },
+    "FIRE_FANG": {
+      "name": "फ़ायर फ़ैंग",
+      "effect": null
+    },
+    "SHADOW_SNEAK": {
+      "name": "शैडो स्नीक",
+      "effect": null
+    },
+    "MUD_BOMB": {
+      "name": "मड बम",
+      "effect": null
+    },
+    "PSYCHO_CUT": {
+      "name": "साइको कट",
+      "effect": null
+    },
+    "ZEN_HEADBUTT": {
+      "name": "ज़ेन हेडबट",
+      "effect": null
+    },
+    "MIRROR_SHOT": {
+      "name": "मिरर शॉट",
+      "effect": null
+    },
+    "FLASH_CANNON": {
+      "name": "फ़्लैश कैनन",
+      "effect": null
+    },
+    "DRACO_METEOR": {
+      "name": "ड्रेको मीटियोर",
+      "effect": null
+    },
+    "DISCHARGE": {
+      "name": "डिस्चार्ज",
+      "effect": null
+    },
+    "LEAF_STORM": {
+      "name": "लीफ़ स्टॉर्म",
+      "effect": null
+    },
+    "POWER_WHIP": {
+      "name": "पावर व्हिप",
+      "effect": null
+    },
+    "ROCK_WRECKER": {
+      "name": "रॉक रेकर",
+      "effect": null
+    },
+    "CROSS_POISON": {
+      "name": "क्रॉस पॉइज़न",
+      "effect": null
+    },
+    "GUNK_SHOT": {
+      "name": "गंक शॉट",
+      "effect": null
+    },
+    "IRON_HEAD": {
+      "name": "आयरन हेड",
+      "effect": null
+    },
+    "MAGNET_BOMB": {
+      "name": "मैग्नेट बम",
+      "effect": null
+    },
+    "STONE_EDGE": {
+      "name": "स्टोन एज",
+      "effect": null
+    },
+    "GRASS_KNOT": {
+      "name": "ग्रास नॉट",
+      "effect": null
+    },
+    "BUG_BITE": {
+      "name": "बग बाईट",
+      "effect": null
+    },
+    "CHARGE_BEAM": {
+      "name": "चार्ज बीम",
+      "effect": null
+    },
+    "AQUA_JET": {
+      "name": "ऐक्वा जेट",
+      "effect": null
+    },
+    "ROAR_OF_TIME": {
+      "name": "रोर ऑफ टाइम",
+      "effect": null
+    },
+    "SPACIAL_REND": {
+      "name": "स्पेशियल रेंड​",
+      "effect": null
+    },
+    "CRUSH_GRIP": {
+      "name": "क्रश ग्रिप",
+      "effect": null
+    },
+    "MAGMA_STORM": {
+      "name": "मैग्मा स्टॉर्म",
+      "effect": null
+    },
+    "SEED_FLARE": {
+      "name": "सीड फ़्लेयर",
+      "effect": null
+    },
+    "OMINOUS_WIND": {
+      "name": "ऑमिनस",
+      "effect": null
+    },
+    "SHADOW_FORCE": {
+      "name": "शैडो फ़ोर्स",
+      "effect": null
+    },
+    "PSYSHOCK": {
+      "name": "साइशॉक",
+      "effect": null
+    },
+    "SMACK_DOWN": {
+      "name": "स्मैक डाउन",
+      "effect": null
+    },
+    "FLAME_BURST": {
+      "name": "फ़्लेम बर्स्ट",
+      "effect": null
+    },
+    "SLUDGE_WAVE": {
+      "name": "स्लज वेव",
+      "effect": null
+    },
+    "HEAVY_SLAM": {
+      "name": "हेवी स्लैम",
+      "effect": null
+    },
+    "SYNCHRONOISE": {
+      "name": "सिंक्रोनॉइज़",
+      "effect": null
+    },
+    "FLAME_CHARGE": {
+      "name": "फ़्लेम चार्ज",
+      "effect": null
+    },
+    "LOW_SWEEP": {
+      "name": "लो किक",
+      "effect": null
+    },
+    "ACID_SPRAY": {
+      "name": "ऐसिड स्प्रे",
+      "effect": null
+    },
+    "FOUL_PLAY": {
+      "name": "फ़ाउल प्ले",
+      "effect": null
+    },
+    "SCALD": {
+      "name": "स्कॉल्ड",
+      "effect": null
+    },
+    "HEX": {
+      "name": "हेक्स",
+      "effect": null
+    },
+    "INCINERATE": {
+      "name": "इंसिनरेट",
+      "effect": null
+    },
+    "ACROBATICS": {
+      "name": "कलाबाज़ी",
+      "effect": null
+    },
+    "VOLT_SWITCH": {
+      "name": "वोल्ट स्विच",
+      "effect": null
+    },
+    "STRUGGLE_BUG": {
+      "name": "स्ट्रगल बग",
+      "effect": null
+    },
+    "BULLDOZE": {
+      "name": "बुलडोज़",
+      "effect": null
+    },
+    "FROST_BREATH": {
+      "name": "फ़्रॉस्ट ब्रेथ",
+      "effect": null
+    },
+    "DRAGON_TAIL": {
+      "name": "ड्रैगन टेल",
+      "effect": null
+    },
+    "WILD_CHARGE": {
+      "name": "वाइल्ड चार्ज",
+      "effect": null
+    },
+    "DRILL_RUN": {
+      "name": "ड्रिल रन",
+      "effect": null
+    },
+    "HEART_STAMP": {
+      "name": "हार्ट स्टैम्प",
+      "effect": null
+    },
+    "SACRED_SWORD": {
+      "name": "सेक्रेड सॉर्ड",
+      "effect": null
+    },
+    "RAZOR_SHELL": {
+      "name": "रेज़र शेल",
+      "effect": null
+    },
+    "LEAF_TORNADO": {
+      "name": "लीफ़ टोरनेडो",
+      "effect": null
+    },
+    "PSYSTRIKE": {
+      "name": "साइस्ट्राइक",
+      "effect": null
+    },
+    "HURRICANE": {
+      "name": "तूफ़ान",
+      "effect": null
+    },
+    "TECHNO_BLAST": {
+      "name": "टेक्नो ब्लास्ट",
+      "effect": null
+    },
+    "SECRET_SWORD": {
+      "name": "सीक्रेट स्वॉर्ड",
+      "effect": null
+    },
+    "GLACIATE": {
+      "name": "ग्लेशीएट",
+      "effect": null
+    },
+    "FREEZE_SHOCK": {
+      "name": "फ़्रीज़ शॉक",
+      "effect": null
+    },
+    "ICE_BURN": {
+      "name": "आइस बर्न",
+      "effect": null
+    },
+    "SNARL": {
+      "name": "गुर्राना",
+      "effect": null
+    },
+    "V_CREATE": {
+      "name": "वी-क्रीऐट",
+      "effect": null
+    },
+    "FUSION_FLARE": {
+      "name": "फ़्यूज़न फ़्लेयर",
+      "effect": null
+    },
+    "FUSION_BOLT": {
+      "name": "फ़्यूज़न बोल्ट",
+      "effect": null
+    },
+    "FLYING_PRESS": {
+      "name": "फ़्लाइंग प्रेस",
+      "effect": null
+    },
+    "FELL_STINGER": {
+      "name": "फ़ेल स्टिंगर",
+      "effect": null
+    },
+    "PARABOLIC_CHARGE": {
+      "name": "पैराबॉलिक चार्ज",
+      "effect": null
+    },
+    "PETAL_BLIZZARD": {
+      "name": "पेटल ब्लिज़र्ड",
+      "effect": null
+    },
+    "DISARMING_VOICE": {
+      "name": "चार्मिंग वॉइस",
+      "effect": null
+    },
+    "DRAINING_KISS": {
+      "name": "ड्रेनिंग किस",
+      "effect": null
+    },
+    "PLAY_ROUGH": {
+      "name": "प्ले रफ़",
+      "effect": null
+    },
+    "FAIRY_WIND": {
+      "name": "फ़ेरी विंड",
+      "effect": null
+    },
+    "MOONBLAST": {
+      "name": "मून ब्लास्ट",
+      "effect": null
+    },
+    "BOOMBURST": {
+      "name": "बूमबर्स्ट",
+      "effect": null
+    },
+    "HYPERSPACE_HOLE": {
+      "name": "हाइपरस्पेस होल",
+      "effect": null
+    },
+    "WATER_SHURIKEN": {
+      "name": "वॉटर शुरिकेन",
+      "effect": null
+    },
+    "MYSTICAL_FIRE": {
+      "name": "मिस्टिकल फ़ायर",
+      "effect": null
+    },
+    "GEOMANCY": {
+      "name": "जियोमैंसी",
+      "effect": null
+    },
+    "DAZZLING_GLEAM": {
+      "name": "डैज़्लिंग ग्लीम",
+      "effect": null
+    },
+    "INFESTATION": {
+      "name": "इंफ़ेस्टेशन",
+      "effect": null
+    },
+    "POWER_UP_PUNCH": {
+      "name": "पावर-अप पंच",
+      "effect": null
+    },
+    "OBLIVION_WING": {
+      "name": "ऑब्लिवियन विंग",
+      "effect": null
+    },
+    "ORIGIN_PULSE": {
+      "name": "ऑरिजिन पल्स",
+      "effect": null
+    },
+    "PRECIPICE_BLADES": {
+      "name": "क्लिफ़ ब्लेड",
+      "effect": null
+    },
+    "DRAGON_ASCENT": {
+      "name": "ड्रैगन असेंट",
+      "effect": null
+    },
+    "HYPERSPACE_FURY": {
+      "name": "हाइपरस्पेस फ़्युरी",
+      "effect": null
+    },
+    "SPIRIT_SHACKLE": {
+      "name": "स्पिरिट शैकल",
+      "effect": null
+    },
+    "DARKEST_LARIAT": {
+      "name": "डार्केस्ट लैरीयट",
+      "effect": null
+    },
+    "SPARKLING_ARIA": {
+      "name": "स्पार्कलिंग आरिया",
+      "effect": null
+    },
+    "HIGH_HORSEPOWER": {
+      "name": "हाई हॉर्सपावर",
+      "effect": null
+    },
+    "LEAFAGE": {
+      "name": "लीफ़ेज",
+      "effect": null
+    },
+    "LUNGE": {
+      "name": "लंज",
+      "effect": null
+    },
+    "BEAK_BLAST": {
+      "name": "बीक ब्लास्ट",
+      "effect": null
+    },
+    "CLANGING_SCALES": {
+      "name": "क्लैंगिंग स्केल्ज़",
+      "effect": null
+    },
+    "BRUTAL_SWING": {
+      "name": "ब्रूटल स्विंग",
+      "effect": null
+    },
+    "PSYCHIC_FANGS": {
+      "name": "साइकिक फैंग्स",
+      "effect": null
+    },
+    "SHADOW_BONE": {
+      "name": "शैडो बोन",
+      "effect": null
+    },
+    "LIQUIDATION": {
+      "name": "एक्वा ब्रेक",
+      "effect": null
+    },
+    "SUNSTEEL_STRIKE": {
+      "name": "सनस्टील स्ट्राइक",
+      "effect": null
+    },
+    "MOONGEIST_BEAM": {
+      "name": "मूनगाइस्ट बीम",
+      "effect": null
+    },
+    "NATURES_MADNESS": {
+      "name": "नेचर मैडनेस",
+      "effect": null
+    },
+    "MIND_BLOWN": {
+      "name": "माइंड ब्लोन",
+      "effect": null
+    },
+    "PLASMA_FISTS": {
+      "name": "प्लाज़्मा फ़िस्ट",
+      "effect": null
+    },
+    "DOUBLE_IRON_BASH": {
+      "name": "डबल आइरन बैश",
+      "effect": null
+    },
+    "DYNAMAX_CANNON": {
+      "name": "डायनामैक्स कैनन",
+      "effect": null
+    },
+    "MAX_FLARE": {
+      "name": "मैक्स फ़्लेयर",
+      "effect": null
+    },
+    "MAX_FLUTTERBY": {
+      "name": "मैक्स फ़्लटरबाई",
+      "effect": null
+    },
+    "MAX_LIGHTNING": {
+      "name": "मैक्स लाइटनिंग",
+      "effect": null
+    },
+    "MAX_STRIKE": {
+      "name": "मैक्स स्ट्राइक",
+      "effect": null
+    },
+    "MAX_KNUCKLE": {
+      "name": "मैक्स नकल",
+      "effect": null
+    },
+    "MAX_PHANTASM": {
+      "name": "मैक्स फ़ैंटैज़्म",
+      "effect": null
+    },
+    "MAX_HAILSTORM": {
+      "name": "मैक्स हेलस्टॉर्म",
+      "effect": null
+    },
+    "MAX_OOZE": {
+      "name": "मैक्स ऊज़",
+      "effect": null
+    },
+    "MAX_GEYSER": {
+      "name": "मैक्स गीज़र",
+      "effect": null
+    },
+    "MAX_AIRSTREAM": {
+      "name": "मैक्स एयरस्ट्रीम",
+      "effect": null
+    },
+    "MAX_STARFALL": {
+      "name": "मैक्स स्टारफ़ॉल",
+      "effect": null
+    },
+    "MAX_WYRMWIND": {
+      "name": "मैक्स वर्मविंड",
+      "effect": null
+    },
+    "MAX_MINDSTORM": {
+      "name": "मैक्स माइंडस्टॉर्म",
+      "effect": null
+    },
+    "MAX_ROCKFALL": {
+      "name": "मैक्स रॉकफ़ॉल",
+      "effect": null
+    },
+    "MAX_QUAKE": {
+      "name": "मैक्स क्वेक",
+      "effect": null
+    },
+    "MAX_DARKNESS": {
+      "name": "मैक्स डार्कनेस",
+      "effect": null
+    },
+    "MAX_OVERGROWTH": {
+      "name": "मैक्स ओवरग्रोथ",
+      "effect": null
+    },
+    "MAX_STEELSPIKE": {
+      "name": "मैक्स स्टीलस्पाइक",
+      "effect": null
+    },
+    "DRUM_BEATING": {
+      "name": "ड्रम बीटिंग",
+      "effect": null
+    },
+    "PYRO_BALL": {
+      "name": "पाइरो बॉल",
+      "effect": null
+    },
+    "BEHEMOTH_BLADE": {
+      "name": "बहीमथ ब्लेड",
+      "effect": null
+    },
+    "BEHEMOTH_BASH": {
+      "name": "बहीमथ बैश",
+      "effect": null
+    },
+    "AURA_WHEEL": {
+      "name": "ऑरा व्हील",
+      "effect": null
+    },
+    "BREAKING_SWIPE": {
+      "name": "ब्रेकिंग स्वाइप",
+      "effect": null
+    },
+    "OBSTRUCT": {
+      "name": "ऑब्स्ट्रक्ट",
+      "effect": null
+    },
+    "METEOR_BEAM": {
+      "name": "मीटियोर बीम",
+      "effect": null
+    },
+    "POLTERGEIST": {
+      "name": "पोल्टर्गाइस्ट",
+      "effect": null
+    },
+    "THUNDER_CAGE": {
+      "name": "थंडर केज",
+      "effect": null
+    },
+    "DRAGON_ENERGY": {
+      "name": "ड्रैगन एनर्जि",
+      "effect": null
+    },
+    "FLOWER_TRICK": {
+      "name": "फ़्लावर ट्रिक",
+      "effect": null
+    },
+    "TORCH_SONG": {
+      "name": "टॉर्च सॉन्ग",
+      "effect": null
+    },
+    "AQUA_STEP": {
+      "name": "एक्वा स्टेप",
+      "effect": null
+    },
+    "CHILLING_WATER": {
+      "name": "चिलिंग वॉटर",
+      "effect": null
+    },
+    "RAGE_FIST": {
+      "name": "एंगर पंच",
+      "effect": null
+    },
+    "GIGATON_HAMMER": {
+      "name": "गिगाटन हैमर",
+      "effect": null
+    },
+    "UPPER_HAND": {
+      "name": "अपर हैंड",
+      "effect": null
+    }
+  },
+  "abilities": {},
+  "types": {
+    "unknown": "???",
+    "normal": "नॉर्मल",
+    "fighting": "फ़ाइटिंग",
+    "flying": "फ़्लाइंग",
+    "poison": "पॉइज़न",
+    "ground": "ग्राउंड",
+    "rock": "रॉक",
+    "bug": "बग",
+    "ghost": "घोस्ट",
+    "steel": "स्टील",
+    "fire": "फ़ायर",
+    "water": "वॉटर",
+    "grass": "ग्रास",
+    "electric": "इलेक्ट्रिक",
+    "psychic": "साइकिक",
+    "ice": "आइस",
+    "dragon": "इलेक्ट्रिक",
+    "dark": "डार्क",
+    "fairy": "फ़ेरी"
+  },
+  "natures": {},
+  "stats": {
+    "HP": {
+      "name": "HP",
+      "short": "HP"
+    },
+    "ATK": {
+      "name": "अटैक",
+      "short": null
+    },
+    "DEF": {
+      "name": "डिफ़ेंस",
+      "short": null
+    },
+    "SPD": {
+      "name": "स्पीड",
+      "short": null
+    }
+  },
+  "statusEffects": {},
+  "items": {
+    "DRAGON_SCALE": {
+      "name": "ड्रैगन स्केल",
+      "description": null
+    },
+    "DYNAMAX_BAND": {
+      "name": "डायनामैक्स बैंड",
+      "description": null
+    },
+    "GREAT_BALL": {
+      "name": "ग्रेट बॉल",
+      "description": null
+    },
+    "KINGS_ROCK": {
+      "name": "किंग रॉक",
+      "description": null
+    },
+    "LUCKY_EGG": {
+      "name": "लकी एग",
+      "description": null
+    },
+    "MASTER_BALL": {
+      "name": "मास्टर बॉल",
+      "description": null
+    },
+    "MAX_MUSHROOMS": {
+      "name": "मैक्स मुशरूम",
+      "description": null
+    },
+    "MEGA_BRACELET": {
+      "name": "मेगा ब्रेसलेट",
+      "description": null
+    },
+    "METAL_COAT": {
+      "name": "मेटल कोट",
+      "description": null
+    },
+    "POKE_BALL": {
+      "name": "पोके बॉल",
+      "description": null
+    },
+    "RARE_CANDY": {
+      "name": "रेयर कैंडी",
+      "description": null
+    },
+    "SUN_STONE": {
+      "name": "सन स्टोन",
+      "description": null
+    },
+    "ULTRA_BALL": {
+      "name": "अल्ट्रा बॉल",
+      "description": null
+    },
+    "BURN_DRIVE": {
+      "name": "बर्न कैसेट",
+      "description": null
+    },
+    "CHILL_DRIVE": {
+      "name": "फ़्रीज़ कैसेट",
+      "description": null
+    },
+    "DOUSE_DRIVE": {
+      "name": "ऐक्वा कैसेट",
+      "description": null
+    },
+    "HYPER_POTION": {
+      "name": "सुपर दवा",
+      "description": null
+    },
+    "MAP": {
+      "name": "मैप",
+      "description": null
+    },
+    "MAX_POTION": {
+      "name": "मैक्स दवा",
+      "description": null
+    },
+    "MAX_REVIVE": {
+      "name": "मैक्स रिवाइव",
+      "description": null
+    },
+    "POTION": {
+      "name": "दवा",
+      "description": null
+    },
+    "REVIVE": {
+      "name": "रिवाइव",
+      "description": null
+    },
+    "SHOCK_DRIVE": {
+      "name": "शॉक कैसेट",
+      "description": null
+    },
+    "SUPER_POTION": {
+      "name": "हाइपर दवा",
+      "description": null
+    },
+    "SWEET_APPLE": {
+      "name": "स्वीट ऐप्पल",
+      "description": null
+    },
+    "SYRUPY_APPLE": {
+      "name": "सिरपी ऐप्पल",
+      "description": null
+    },
+    "TART_APPLE": {
+      "name": "टार्ट ऐप्पल",
+      "description": null
+    },
+    "UPGRADE": {
+      "name": "अपग्रेड",
+      "description": null
+    },
+    "X_ATTACK": {
+      "name": "X अटैक",
+      "description": null
+    },
+    "X_DEFENSE": {
+      "name": "X डिफ़ेंस",
+      "description": null
+    },
+    "X_SPEED": {
+      "name": "X स्पीड",
+      "description": null
+    }
+  },
+  "itemTemplates": {
+    "TM_WITH_INFO": {
+      "name": "TM{{moveId}} - {{moveName}}",
+      "description": null,
+      "localeKey": "modifierType:ModifierType.TmModifierTypeWithInfo"
+    }
+  },
+  "trainers": {
+    "red": "Red",
+    "lance": "Lance",
+    "steven": "Steven",
+    "cynthia": "Cynthia",
+    "alder": "Alder",
+    "diantha": "Diantha",
+    "kukui": "Kukui",
+    "leon": "Leon",
+    "geeta": "Geeta"
+  },
+  "trainerTitles": {},
+  "zCrystals": {},
+  "zMoves": {},
+  "maxMoves": {
+    "MAX_FLARE": "मैक्स फ़्लेयर",
+    "MAX_FLUTTERBY": "मैक्स फ़्लटरबाई",
+    "MAX_LIGHTNING": "मैक्स लाइटनिंग",
+    "MAX_STRIKE": "मैक्स स्ट्राइक",
+    "MAX_KNUCKLE": "मैक्स नकल",
+    "MAX_PHANTASM": "मैक्स फ़ैंटैज़्म",
+    "MAX_HAILSTORM": "मैक्स हेलस्टॉर्म",
+    "MAX_OOZE": "मैक्स ऊज़",
+    "MAX_GEYSER": "मैक्स गीज़र",
+    "MAX_AIRSTREAM": "मैक्स एयरस्ट्रीम",
+    "MAX_STARFALL": "मैक्स स्टारफ़ॉल",
+    "MAX_WYRMWIND": "मैक्स वर्मविंड",
+    "MAX_MINDSTORM": "मैक्स माइंडस्टॉर्म",
+    "MAX_ROCKFALL": "मैक्स रॉकफ़ॉल",
+    "MAX_QUAKE": "मैक्स क्वेक",
+    "MAX_DARKNESS": "मैक्स डार्कनेस",
+    "MAX_OVERGROWTH": "मैक्स ओवरग्रोथ",
+    "MAX_STEELSPIKE": "मैक्स स्टीलस्पाइक",
+    "G_MAX_WILDFIRE": "जी-मैक्स वाइल्डफ़ायर",
+    "G_MAX_BEFUDDLE": "जी-मैक्स बिफ़डल",
+    "G_MAX_VOLT_CRASH": "जी-मैक्स वोल्ट क्रैश",
+    "G_MAX_GOLD_RUSH": "जी-मैक्स गोल्ड रश",
+    "G_MAX_CHI_STRIKE": "जी-मैक्स ची स्ट्राइक",
+    "G_MAX_TERROR": "जी-मैक्स टेरर",
+    "G_MAX_RESONANCE": "जी-मैक्स रेज़ोनेंस",
+    "G_MAX_CUDDLE": "जी-मैक्स कडल",
+    "G_MAX_REPLENISH": "जी-मैक्स रिप्लेनिश",
+    "G_MAX_MALODOR": "जी-मैक्स मैलोडर",
+    "G_MAX_STONESURGE": "जी-मैक्स स्टोनसर्ज",
+    "G_MAX_WIND_RAGE": "जी-मैक्स विंड रेज",
+    "G_MAX_STUN_SHOCK": "जी-मैक्स स्टन शॉक",
+    "G_MAX_FINALE": "जी-मैक्स फ़िनाले",
+    "G_MAX_DEPLETION": "जी-मैक्स डिप्लीशन",
+    "G_MAX_GRAVITAS": "जी-मैक्स ग्रैविटस",
+    "G_MAX_VOLCALITH": "जी-मैक्स वॉलकलिथ",
+    "G_MAX_SANDBLAST": "जी-मैक्स सैंडब्लास्ट",
+    "G_MAX_SNOOZE": "जी-मैक्स स्नूज़",
+    "G_MAX_TARTNESS": "जी-मैक्स टार्टनेस",
+    "G_MAX_SWEETNESS": "जी-मैक्स स्वीटनेस",
+    "G_MAX_SMITE": "जी-मैक्स स्माइट",
+    "G_MAX_STEELSURGE": "जी-मैक्स स्टीलसर्ज",
+    "G_MAX_MELTDOWN": "जी-मैक्स मेल्टडाउन",
+    "G_MAX_FOAM_BURST": "जी-मैक्स फ़ोम बर्स्ट",
+    "G_MAX_CENTIFERNO": "जी-मैक्स सेंटीफ़र्नो",
+    "G_MAX_VINE_LASH": "जी-मैक्स वाइन लैश",
+    "G_MAX_CANNONADE": "जी-मैक्स कैननेड",
+    "G_MAX_DRUM_SOLO": "जी-मैक्स ड्रम सोलो",
+    "G_MAX_FIREBALL": "जी-मैक्स फ़ायरबॉल",
+    "G_MAX_HYDROSNIPE": "जी-मैक्स हाइड्रोस्नाइप",
+    "G_MAX_ONE_BLOW": "जी-मैक्स वन ब्लो",
+    "G_MAX_RAPID_FLOW": "जी-मैक्स रैपिड फ़्लो"
+  },
+  "_provenance": {
+    "species": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "forms": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "formLabels": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "moves": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "abilities": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "types": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "natures": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "stats": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "statusEffects": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "items": {
+      "DRAGON_SCALE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.DRAGON_SCALE"
+      },
+      "DYNAMAX_BAND": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.DYNAMAX_BAND"
+      },
+      "GREAT_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "pokeball:greatBall"
+      },
+      "KINGS_ROCK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.KINGS_ROCK"
+      },
+      "LUCKY_EGG": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.LUCKY_EGG"
+      },
+      "MASTER_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "pokeball:masterBall"
+      },
+      "MAX_MUSHROOMS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MAX_MUSHROOMS"
+      },
+      "MEGA_BRACELET": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MEGA_BRACELET"
+      },
+      "METAL_COAT": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.metal_coat"
+      },
+      "POKE_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "pokeball:pokeBall"
+      },
+      "RARE_CANDY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.RARE_CANDY"
+      },
+      "SUN_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.SUN_STONE"
+      },
+      "ULTRA_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "pokeball:ultraBall"
+      },
+      "BURN_DRIVE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BURN_DRIVE"
+      },
+      "CHILL_DRIVE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CHILL_DRIVE"
+      },
+      "DOUSE_DRIVE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DOUSE_DRIVE"
+      },
+      "HYPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.HYPER_POTION"
+      },
+      "MAP": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MAP"
+      },
+      "MAX_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MAX_POTION"
+      },
+      "MAX_REVIVE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MAX_REVIVE"
+      },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
+      "REVIVE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.REVIVE"
+      },
+      "SHOCK_DRIVE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SHOCK_DRIVE"
+      },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
+      },
+      "SWEET_APPLE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.SWEET_APPLE"
+      },
+      "SYRUPY_APPLE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.SYRUPY_APPLE"
+      },
+      "TART_APPLE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.TART_APPLE"
+      },
+      "UPGRADE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.UPGRADE"
+      },
+      "X_ATTACK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
+      },
+      "X_DEFENSE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
+      },
+      "X_SPEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
+      }
+    },
+    "itemTemplates": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "trainers": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "trainerTitles": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "zCrystals": {},
+    "zMoves": {},
+    "maxMoves": {
+      "MAX_FLARE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxFlare.name"
+      },
+      "MAX_FLUTTERBY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxFlutterby.name"
+      },
+      "MAX_LIGHTNING": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxLightning.name"
+      },
+      "MAX_STRIKE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxStrike.name"
+      },
+      "MAX_KNUCKLE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxKnuckle.name"
+      },
+      "MAX_PHANTASM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxPhantasm.name"
+      },
+      "MAX_HAILSTORM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxHailstorm.name"
+      },
+      "MAX_OOZE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxOoze.name"
+      },
+      "MAX_GEYSER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxGeyser.name"
+      },
+      "MAX_AIRSTREAM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxAirstream.name"
+      },
+      "MAX_STARFALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxStarfall.name"
+      },
+      "MAX_WYRMWIND": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxWyrmwind.name"
+      },
+      "MAX_MINDSTORM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxMindstorm.name"
+      },
+      "MAX_ROCKFALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxRockfall.name"
+      },
+      "MAX_QUAKE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxQuake.name"
+      },
+      "MAX_DARKNESS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxDarkness.name"
+      },
+      "MAX_OVERGROWTH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxOvergrowth.name"
+      },
+      "MAX_STEELSPIKE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxSteelspike.name"
+      },
+      "G_MAX_WILDFIRE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxWildfire.name"
+      },
+      "G_MAX_BEFUDDLE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxBefuddle.name"
+      },
+      "G_MAX_VOLT_CRASH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxVoltCrash.name"
+      },
+      "G_MAX_GOLD_RUSH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxGoldRush.name"
+      },
+      "G_MAX_CHI_STRIKE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxChiStrike.name"
+      },
+      "G_MAX_TERROR": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxTerror.name"
+      },
+      "G_MAX_RESONANCE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxResonance.name"
+      },
+      "G_MAX_CUDDLE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxCuddle.name"
+      },
+      "G_MAX_REPLENISH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxReplenish.name"
+      },
+      "G_MAX_MALODOR": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxMalodor.name"
+      },
+      "G_MAX_STONESURGE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxStonesurge.name"
+      },
+      "G_MAX_WIND_RAGE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxWindRage.name"
+      },
+      "G_MAX_STUN_SHOCK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxStunShock.name"
+      },
+      "G_MAX_FINALE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxFinale.name"
+      },
+      "G_MAX_DEPLETION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxDepletion.name"
+      },
+      "G_MAX_GRAVITAS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxGravitas.name"
+      },
+      "G_MAX_VOLCALITH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxVolcalith.name"
+      },
+      "G_MAX_SANDBLAST": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxSandblast.name"
+      },
+      "G_MAX_SNOOZE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxSnooze.name"
+      },
+      "G_MAX_TARTNESS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxTartness.name"
+      },
+      "G_MAX_SWEETNESS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxSweetness.name"
+      },
+      "G_MAX_SMITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxSmite.name"
+      },
+      "G_MAX_STEELSURGE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxSteelsurge.name"
+      },
+      "G_MAX_MELTDOWN": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxMeltdown.name"
+      },
+      "G_MAX_FOAM_BURST": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxFoamBurst.name"
+      },
+      "G_MAX_CENTIFERNO": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxCentiferno.name"
+      },
+      "G_MAX_VINE_LASH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxVineLash.name"
+      },
+      "G_MAX_CANNONADE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxCannonade.name"
+      },
+      "G_MAX_DRUM_SOLO": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxDrumSolo.name"
+      },
+      "G_MAX_FIREBALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxFireball.name"
+      },
+      "G_MAX_HYDROSNIPE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxHydrosnipe.name"
+      },
+      "G_MAX_ONE_BLOW": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxOneBlow.name"
+      },
+      "G_MAX_RAPID_FLOW": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxRapidFlow.name"
+      }
+    }
+  },
+  "_fallbacks": {
+    "trainers.red": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "red"
+    },
+    "trainers.lance": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "lance"
+    },
+    "trainers.steven": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "steven"
+    },
+    "trainers.cynthia": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "cynthia"
+    },
+    "trainers.alder": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "alder"
+    },
+    "trainers.diantha": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "diantha"
+    },
+    "trainers.kukui": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "kukui"
+    },
+    "trainers.leon": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "leon"
+    },
+    "trainers.geeta": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "geeta"
+    }
+  }
+}

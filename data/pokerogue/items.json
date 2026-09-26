@@ -1,0 +1,4485 @@
+{
+  "ABOMASITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.ABOMASITE",
+    "pokeapiIdentifier": "abomasite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "abomasite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "ABOMASNOW"
+    ]
+  },
+  "ABSOLITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.ABSOLITE",
+    "pokeapiIdentifier": "absolite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "absolite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "ABSOL"
+    ]
+  },
+  "ABSOLITE_Z": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.ABSOLITE_Z",
+    "pokeapiIdentifier": "absolite-z",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "absolite_z",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "ABSOL"
+    ]
+  },
+  "ABSORB_BULB": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "absorb-bulb",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "absorb_bulb",
+    "required": true
+  },
+  "ADAMANT_ORB": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "adamant-orb",
+    "pokeapiCategory": "species-specific",
+    "group": "held",
+    "atlasFrame": "adamant_orb",
+    "required": true
+  },
+  "ADRENALINE_ORB": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "adrenaline-orb",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "adrenaline_orb",
+    "required": true
+  },
+  "AERODACTYLITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.AERODACTYLITE",
+    "pokeapiIdentifier": "aerodactylite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "aerodactylite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "AERODACTYL"
+    ]
+  },
+  "AGGRONITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.AGGRONITE",
+    "pokeapiIdentifier": "aggronite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "aggronite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "AGGRON"
+    ]
+  },
+  "AIR_BALLOON": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "air-balloon",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "air_balloon",
+    "required": true
+  },
+  "ALAKAZITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.ALAKAZITE",
+    "pokeapiIdentifier": "alakazite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "alakazite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "ALAKAZAM"
+    ]
+  },
+  "AMPHAROSITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.AMPHAROSITE",
+    "pokeapiIdentifier": "ampharosite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "ampharosite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "AMPHAROS"
+    ]
+  },
+  "AMULET_COIN": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.AMULET_COIN",
+    "pokeapiIdentifier": "amulet-coin",
+    "pokeapiCategory": "training",
+    "group": "modifier",
+    "atlasFrame": "amulet_coin",
+    "required": true
+  },
+  "APICOT_BERRY": {
+    "pokerogueLocaleKey": "berry:apicot",
+    "pokeapiIdentifier": "apicot-berry",
+    "pokeapiCategory": "in-a-pinch",
+    "group": "berry",
+    "atlasFrame": "apicot_berry",
+    "required": true
+  },
+  "ASSAULT_VEST": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "assault-vest",
+    "pokeapiCategory": "held-items",
+    "group": "held",
+    "atlasFrame": "assault_vest",
+    "required": true
+  },
+  "BABIRI_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "babiri-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "babiri_berry",
+    "required": true
+  },
+  "BARBARACITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.BARBARACITE",
+    "pokeapiIdentifier": "barbaracite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "barbaracite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "BARBARACLE"
+    ]
+  },
+  "BAXCALIBRITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.BAXCALIBRITE",
+    "pokeapiIdentifier": "baxcalibrite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "baxcalibrite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "BAXCALIBUR"
+    ]
+  },
+  "BEEDRILLITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.BEEDRILLITE",
+    "pokeapiIdentifier": "beedrillite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "beedrillite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "BEEDRILL"
+    ]
+  },
+  "BERRY_POUCH": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.BERRY_POUCH",
+    "pokeapiIdentifier": "berry-pouch",
+    "pokeapiCategory": "gameplay",
+    "group": "modifier",
+    "atlasFrame": "berry_pouch",
+    "required": true
+  },
+  "BIG_NUGGET": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.BIG_NUGGET",
+    "pokeapiIdentifier": "big-nugget",
+    "pokeapiCategory": "loot",
+    "group": "modifier",
+    "atlasFrame": "big_nugget",
+    "required": true
+  },
+  "BIG_ROOT": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "big-root",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "big_root",
+    "required": true
+  },
+  "BINDING_BAND": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "binding-band",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "binding_band",
+    "required": true
+  },
+  "BLACK_BELT": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.black_belt",
+    "pokeapiIdentifier": "black-belt",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "black_belt",
+    "required": true
+  },
+  "BLACK_GLASSES": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.black_glasses",
+    "pokeapiIdentifier": "black-glasses",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "black_glasses",
+    "required": true
+  },
+  "BLACK_SLUDGE": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "black-sludge",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "black_sludge",
+    "required": true
+  },
+  "BLANK_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.BLANK_PLATE",
+    "pokeapiIdentifier": "blank-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "blank_plate",
+    "required": true
+  },
+  "BLASTOISINITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.BLASTOISINITE",
+    "pokeapiIdentifier": "blastoisinite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "blastoisinite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "BLASTOISE"
+    ]
+  },
+  "BLAZIKENITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.BLAZIKENITE",
+    "pokeapiIdentifier": "blazikenite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "blazikenite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "BLAZIKEN"
+    ]
+  },
+  "BLUE_ORB": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.BLUE_ORB",
+    "pokeapiIdentifier": "blue-orb",
+    "pokeapiCategory": "plot-advancement",
+    "group": "formChange",
+    "atlasFrame": "blue_orb",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "KYOGRE"
+    ]
+  },
+  "BLUNDER_POLICY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "blunder-policy",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "blunder_policy",
+    "required": true
+  },
+  "BOOSTER_ENERGY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "booster-energy",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "booster_energy",
+    "required": true
+  },
+  "BRIGHT_POWDER": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "bright-powder",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "bright_powder",
+    "required": true
+  },
+  "BUGINIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "buginium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "buginium_z",
+    "required": true
+  },
+  "CANDY_JAR": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.CANDY_JAR",
+    "pokeapiIdentifier": "candy-jar",
+    "pokeapiCategory": "unused",
+    "group": "modifier",
+    "atlasFrame": "candy_jar",
+    "required": true
+  },
+  "CELL_BATTERY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "cell-battery",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "cell_battery",
+    "required": true
+  },
+  "CHANDELURITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.CHANDELURITE",
+    "pokeapiIdentifier": "chandelurite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "chandelurite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "CHANDELURE"
+    ]
+  },
+  "CHARCOAL": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.charcoal",
+    "pokeapiIdentifier": "charcoal",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "charcoal",
+    "required": true
+  },
+  "CHARIZARDITE_X": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.CHARIZARDITE_X",
+    "pokeapiIdentifier": "charizardite-x",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "charizardite_x",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "CHARIZARD"
+    ]
+  },
+  "CHARIZARDITE_Y": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.CHARIZARDITE_Y",
+    "pokeapiIdentifier": "charizardite-y",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "charizardite_y",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "CHARIZARD"
+    ]
+  },
+  "CHARTI_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "charti-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "charti_berry",
+    "required": true
+  },
+  "CHESNAUGHTITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.CHESNAUGHTITE",
+    "pokeapiIdentifier": "chesnaughtite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "chesnaughtite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "CHESNAUGHT"
+    ]
+  },
+  "CHILAN_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "chilan-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "chilan_berry",
+    "required": true
+  },
+  "CHOICE_BAND": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "choice-band",
+    "pokeapiCategory": "choice",
+    "group": "held",
+    "atlasFrame": "choice_band",
+    "required": true
+  },
+  "CHOICE_SCARF": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "choice-scarf",
+    "pokeapiCategory": "choice",
+    "group": "held",
+    "atlasFrame": "choice_scarf",
+    "required": true
+  },
+  "CHOICE_SPECS": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "choice-specs",
+    "pokeapiCategory": "choice",
+    "group": "held",
+    "atlasFrame": "choice_specs",
+    "required": true
+  },
+  "CHOPLE_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "chople-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "chople_berry",
+    "required": true
+  },
+  "CLAW_FOSSIL": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "claw-fossil",
+    "pokeapiCategory": "dex-completion",
+    "group": "held",
+    "atlasFrame": "claw_fossil",
+    "required": true
+  },
+  "CLEAR_AMULET": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "clear-amulet",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "clear_amulet",
+    "required": true
+  },
+  "COBA_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "coba-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "coba_berry",
+    "required": true
+  },
+  "COIN_CASE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.COIN_CASE",
+    "pokeapiIdentifier": "coin-case",
+    "pokeapiCategory": "gameplay",
+    "group": "modifier",
+    "atlasFrame": "coin_case",
+    "required": true
+  },
+  "COLBUR_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "colbur-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "colbur_berry",
+    "required": true
+  },
+  "COVERT_CLOAK": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "covert-cloak",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "covert_cloak",
+    "required": true
+  },
+  "DAMP_ROCK": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "damp-rock",
+    "pokeapiCategory": "held-items",
+    "group": "held",
+    "atlasFrame": "damp_rock",
+    "required": true
+  },
+  "DARKINIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "darkinium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "darkinium_z",
+    "required": true
+  },
+  "DAWN_STONE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.DAWN_STONE",
+    "pokeapiIdentifier": "dawn-stone",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "dawn_stone",
+    "required": true
+  },
+  "DELPHOXITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.DELPHOXITE",
+    "pokeapiIdentifier": "delphoxite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "delphoxite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "DELPHOX"
+    ]
+  },
+  "DIANCITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.DIANCITE",
+    "pokeapiIdentifier": "diancite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "diancite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "DIANCIE"
+    ]
+  },
+  "DRACO_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.DRACO_PLATE",
+    "pokeapiIdentifier": "draco-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "draco_plate",
+    "required": true
+  },
+  "DRAGALGITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.DRAGALGITE",
+    "pokeapiIdentifier": "dragalgite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "dragalgite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "DRAGALGE"
+    ]
+  },
+  "DRAGONINITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.DRAGONINITE",
+    "pokeapiIdentifier": "dragoninite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "dragoninite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "DRAGONITE"
+    ]
+  },
+  "DRAGONIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "dragonium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "dragonium_z",
+    "required": true
+  },
+  "DRAGON_FANG": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.dragon_fang",
+    "pokeapiIdentifier": "dragon-fang",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "dragon_fang",
+    "required": true
+  },
+  "DRAGON_SCALE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.DRAGON_SCALE",
+    "pokeapiIdentifier": "dragon-scale",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "dragon_scale",
+    "required": true
+  },
+  "DREAD_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.DREAD_PLATE",
+    "pokeapiIdentifier": "dread-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "dread_plate",
+    "required": true
+  },
+  "DUSK_STONE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.DUSK_STONE",
+    "pokeapiIdentifier": "dusk-stone",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "dusk_stone",
+    "required": true
+  },
+  "DYNAMAX_BAND": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.DYNAMAX_BAND",
+    "pokeapiIdentifier": "dynamax-band",
+    "pokeapiCategory": "plot-advancement",
+    "group": "modifier",
+    "atlasFrame": "dynamax_band",
+    "required": true
+  },
+  "DYNAMAX_CANDY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "dynamax-candy",
+    "pokeapiCategory": "vitamins",
+    "group": "gimmick",
+    "atlasFrame": "dynamax_candy",
+    "required": true
+  },
+  "EARTH_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.EARTH_PLATE",
+    "pokeapiIdentifier": "earth-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "earth_plate",
+    "required": true
+  },
+  "ELECTRIC_SEED": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "electric-seed",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "electric_seed",
+    "required": true
+  },
+  "ELECTRIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "electrium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "electrium_z",
+    "required": true
+  },
+  "EMBOARITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.EMBOARITE",
+    "pokeapiIdentifier": "emboarite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "emboarite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "EMBOAR"
+    ]
+  },
+  "ENIGMA_BERRY": {
+    "pokerogueLocaleKey": "berry:enigma",
+    "pokeapiIdentifier": "enigma-berry",
+    "pokeapiCategory": "other",
+    "group": "berry",
+    "atlasFrame": "enigma_berry",
+    "required": true
+  },
+  "EVIOLITE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.EVIOLITE",
+    "pokeapiIdentifier": "eviolite",
+    "pokeapiCategory": "held-items",
+    "group": "modifier",
+    "atlasFrame": "eviolite",
+    "required": true
+  },
+  "EXCADRITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.EXCADRITE",
+    "pokeapiIdentifier": "excadrite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "excadrite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "EXCADRILL"
+    ]
+  },
+  "EXPERT_BELT": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "expert-belt",
+    "pokeapiCategory": "held-items",
+    "group": "held",
+    "atlasFrame": "expert_belt",
+    "required": true
+  },
+  "EXP_SHARE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.EXP_SHARE",
+    "pokeapiIdentifier": "exp-share",
+    "pokeapiCategory": "training",
+    "group": "modifier",
+    "atlasFrame": "exp_share",
+    "required": true
+  },
+  "FAIRIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "fairium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "fairium_z",
+    "required": true
+  },
+  "FAIRY_FEATHER": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.fairy_feather",
+    "pokeapiIdentifier": "fairy-feather",
+    "pokeapiCategory": "held-items",
+    "group": "typeBooster",
+    "atlasFrame": "fairy_feather",
+    "required": true
+  },
+  "FERALIGITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.FERALIGITE",
+    "pokeapiIdentifier": "feraligite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "feraligite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "FERALIGATR"
+    ]
+  },
+  "FIGHTINIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "fightinium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "fightinium_z",
+    "required": true
+  },
+  "FIRE_STONE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.FIRE_STONE",
+    "pokeapiIdentifier": "fire-stone",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "fire_stone",
+    "required": true
+  },
+  "FIRIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "firium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "firium_z",
+    "required": true
+  },
+  "FIST_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.FIST_PLATE",
+    "pokeapiIdentifier": "fist-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "fist_plate",
+    "required": true
+  },
+  "FLAME_ORB": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.FLAME_ORB",
+    "pokeapiIdentifier": "flame-orb",
+    "pokeapiCategory": "bad-held-items",
+    "group": "modifier",
+    "atlasFrame": "flame_orb",
+    "required": true
+  },
+  "FLAME_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.FLAME_PLATE",
+    "pokeapiIdentifier": "flame-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "flame_plate",
+    "required": true
+  },
+  "FLYINIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "flyinium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "flyinium_z",
+    "required": true
+  },
+  "FOCUS_BAND": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.FOCUS_BAND",
+    "pokeapiIdentifier": "focus-band",
+    "pokeapiCategory": "held-items",
+    "group": "modifier",
+    "atlasFrame": "focus_band",
+    "required": true
+  },
+  "FOCUS_SASH": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "focus-sash",
+    "pokeapiCategory": "held-items",
+    "group": "held",
+    "atlasFrame": "focus_sash",
+    "required": true
+  },
+  "FROSLASSITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.FROSLASSITE",
+    "pokeapiIdentifier": "froslassite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "froslassite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "FROSLASS"
+    ]
+  },
+  "GALLADITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.GALLADITE",
+    "pokeapiIdentifier": "galladite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "galladite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "GALLADE"
+    ]
+  },
+  "GANLON_BERRY": {
+    "pokerogueLocaleKey": "berry:ganlon",
+    "pokeapiIdentifier": "ganlon-berry",
+    "pokeapiCategory": "in-a-pinch",
+    "group": "berry",
+    "atlasFrame": "ganlon_berry",
+    "required": true
+  },
+  "GARCHOMPITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.GARCHOMPITE",
+    "pokeapiIdentifier": "garchompite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "garchompite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "GARCHOMP"
+    ]
+  },
+  "GARCHOMPITE_Z": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.GARCHOMPITE_Z",
+    "pokeapiIdentifier": "garchompite-z",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "garchompite_z",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "GARCHOMP"
+    ]
+  },
+  "GARDEVOIRITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.GARDEVOIRITE",
+    "pokeapiIdentifier": "gardevoirite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "gardevoirite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "GARDEVOIR"
+    ]
+  },
+  "GENGARITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.GENGARITE",
+    "pokeapiIdentifier": "gengarite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "gengarite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "GENGAR"
+    ]
+  },
+  "GHOSTIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "ghostium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "ghostium_z",
+    "required": true
+  },
+  "GLALITITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.GLALITITE",
+    "pokeapiIdentifier": "glalitite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "glalitite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "GLALIE"
+    ]
+  },
+  "GLIMMORANITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.GLIMMORANITE",
+    "pokeapiIdentifier": "glimmoranite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "glimmoranite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "GLIMMORA"
+    ]
+  },
+  "GOLDEN_PUNCH": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.GOLDEN_PUNCH",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "golden_punch",
+    "required": true
+  },
+  "GRASSIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "grassium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "grassium_z",
+    "required": true
+  },
+  "GRASSY_SEED": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "grassy-seed",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "grassy_seed",
+    "required": true
+  },
+  "GREAT_BALL": {
+    "pokerogueLocaleKey": "pokeball:greatBall",
+    "pokeapiIdentifier": "great-ball",
+    "pokeapiCategory": "standard-balls",
+    "group": "ball",
+    "atlasFrame": "gb",
+    "required": true
+  },
+  "GRENINJITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.GRENINJITE",
+    "pokeapiIdentifier": "greninjite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "greninjite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "GRENINJA"
+    ]
+  },
+  "GRIP_CLAW": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.GRIP_CLAW",
+    "pokeapiIdentifier": "grip-claw",
+    "pokeapiCategory": "held-items",
+    "group": "modifier",
+    "atlasFrame": "grip_claw",
+    "required": true
+  },
+  "GRISEOUS_ORB": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "griseous-orb",
+    "pokeapiCategory": "species-specific",
+    "group": "held",
+    "atlasFrame": "griseous_orb",
+    "required": true
+  },
+  "GROUNDIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "groundium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "groundium_z",
+    "required": true
+  },
+  "GYARADOSITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.GYARADOSITE",
+    "pokeapiIdentifier": "gyaradosite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "gyaradosite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "GYARADOS"
+    ]
+  },
+  "HABAN_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "haban-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "haban_berry",
+    "required": true
+  },
+  "HARD_STONE": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.hard_stone",
+    "pokeapiIdentifier": "hard-stone",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "hard_stone",
+    "required": true
+  },
+  "HAWLUCHANITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.HAWLUCHANITE",
+    "pokeapiIdentifier": "hawluchanite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "hawluchanite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "HAWLUCHA"
+    ]
+  },
+  "HEAT_ROCK": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "heat-rock",
+    "pokeapiCategory": "held-items",
+    "group": "held",
+    "atlasFrame": "heat_rock",
+    "required": true
+  },
+  "HERACRONITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.HERACRONITE",
+    "pokeapiIdentifier": "heracronite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "heracronite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "HERACROSS"
+    ]
+  },
+  "HOUNDOOMINITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.HOUNDOOMINITE",
+    "pokeapiIdentifier": "houndoominite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "houndoominite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "HOUNDOOM"
+    ]
+  },
+  "ICE_STONE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.ICE_STONE",
+    "pokeapiIdentifier": "ice-stone",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "ice_stone",
+    "required": true
+  },
+  "ICICLE_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.ICICLE_PLATE",
+    "pokeapiIdentifier": "icicle-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "icicle_plate",
+    "required": true
+  },
+  "ICIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "icium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "icium_z",
+    "required": true
+  },
+  "ICY_ROCK": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "icy-rock",
+    "pokeapiCategory": "held-items",
+    "group": "held",
+    "atlasFrame": "icy_rock",
+    "required": true
+  },
+  "INSECT_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.INSECT_PLATE",
+    "pokeapiIdentifier": "insect-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "insect_plate",
+    "required": true
+  },
+  "IRON_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.IRON_PLATE",
+    "pokeapiIdentifier": "iron-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "iron_plate",
+    "required": true
+  },
+  "JABOCA_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "jaboca-berry",
+    "pokeapiCategory": "other",
+    "group": "berries2",
+    "atlasFrame": "jaboca_berry",
+    "required": true
+  },
+  "KASIB_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "kasib-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "kasib_berry",
+    "required": true
+  },
+  "KEBIA_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "kebia-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "kebia_berry",
+    "required": true
+  },
+  "KINGS_ROCK": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.KINGS_ROCK",
+    "pokeapiIdentifier": "kings-rock",
+    "pokeapiCategory": "held-items",
+    "group": "modifier",
+    "atlasFrame": "kings_rock",
+    "required": true
+  },
+  "LANSAT_BERRY": {
+    "pokerogueLocaleKey": "berry:lansat",
+    "pokeapiIdentifier": "lansat-berry",
+    "pokeapiCategory": "in-a-pinch",
+    "group": "berry",
+    "atlasFrame": "lansat_berry",
+    "required": true
+  },
+  "LATIASITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.LATIASITE",
+    "pokeapiIdentifier": "latiasite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "latiasite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "LATIAS"
+    ]
+  },
+  "LATIOSITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.LATIOSITE",
+    "pokeapiIdentifier": "latiosite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "latiosite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "LATIOS"
+    ]
+  },
+  "LEAF_STONE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.LEAF_STONE",
+    "pokeapiIdentifier": "leaf-stone",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "leaf_stone",
+    "required": true
+  },
+  "LEFTOVERS": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.LEFTOVERS",
+    "pokeapiIdentifier": "leftovers",
+    "pokeapiCategory": "held-items",
+    "group": "modifier",
+    "atlasFrame": "leftovers",
+    "required": true
+  },
+  "LEPPA_BERRY": {
+    "pokerogueLocaleKey": "berry:leppa",
+    "pokeapiIdentifier": "leppa-berry",
+    "pokeapiCategory": "medicine",
+    "group": "berry",
+    "atlasFrame": "leppa_berry",
+    "required": true
+  },
+  "LIECHI_BERRY": {
+    "pokerogueLocaleKey": "berry:liechi",
+    "pokeapiIdentifier": "liechi-berry",
+    "pokeapiCategory": "in-a-pinch",
+    "group": "berry",
+    "atlasFrame": "liechi_berry",
+    "required": true
+  },
+  "LIFE_ORB": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "life-orb",
+    "pokeapiCategory": "held-items",
+    "group": "held",
+    "atlasFrame": "life_orb",
+    "required": true
+  },
+  "LIGHT_BALL": {
+    "pokerogueLocaleKey": "modifierType:SpeciesBoosterItem.LIGHT_BALL",
+    "pokeapiIdentifier": "light-ball",
+    "pokeapiCategory": "species-specific",
+    "group": "speciesBooster",
+    "atlasFrame": "light_ball",
+    "required": true
+  },
+  "LIGHT_CLAY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "light-clay",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "light_clay",
+    "required": true
+  },
+  "LINKING_CORD": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.LINKING_CORD",
+    "pokeapiIdentifier": "linking-cord",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "linking_cord",
+    "required": true
+  },
+  "LOADED_DICE": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "loaded-dice",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "loaded_dice",
+    "required": true
+  },
+  "LOPUNNITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.LOPUNNITE",
+    "pokeapiIdentifier": "lopunnite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "lopunnite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "LOPUNNY"
+    ]
+  },
+  "LUCARIONITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.LUCARIONITE",
+    "pokeapiIdentifier": "lucarionite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "lucarionite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "LUCARIO"
+    ]
+  },
+  "LUCARIONITE_Z": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.LUCARIONITE_Z",
+    "pokeapiIdentifier": "lucarionite-z",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "lucarionite_z",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "LUCARIO"
+    ]
+  },
+  "LUCKY_EGG": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.LUCKY_EGG",
+    "pokeapiIdentifier": "lucky-egg",
+    "pokeapiCategory": "training",
+    "group": "modifier",
+    "atlasFrame": "lucky_egg",
+    "required": true
+  },
+  "LUCK_INCENSE": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "luck-incense",
+    "pokeapiCategory": "training",
+    "group": "recipes",
+    "atlasFrame": "luck_incense",
+    "required": true
+  },
+  "LUM_BERRY": {
+    "pokerogueLocaleKey": "berry:lum",
+    "pokeapiIdentifier": "lum-berry",
+    "pokeapiCategory": "medicine",
+    "group": "berry",
+    "atlasFrame": "lum_berry",
+    "required": true
+  },
+  "LUSTROUS_ORB": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "lustrous-orb",
+    "pokeapiCategory": "species-specific",
+    "group": "held",
+    "atlasFrame": "lustrous_orb",
+    "required": true
+  },
+  "MACHO_BRACE": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "macho-brace",
+    "pokeapiCategory": "effort-training",
+    "group": "held2",
+    "atlasFrame": "macho_brace",
+    "required": true
+  },
+  "MAGNET": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.magnet",
+    "pokeapiIdentifier": "magnet",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "magnet",
+    "required": true
+  },
+  "MALAMARITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.MALAMARITE",
+    "pokeapiIdentifier": "malamarite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "malamarite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "MALAMAR"
+    ]
+  },
+  "MANECTITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.MANECTITE",
+    "pokeapiIdentifier": "manectite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "manectite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "MANECTRIC"
+    ]
+  },
+  "MASTER_BALL": {
+    "pokerogueLocaleKey": "pokeball:masterBall",
+    "pokeapiIdentifier": "master-ball",
+    "pokeapiCategory": "standard-balls",
+    "group": "ball",
+    "atlasFrame": "mb",
+    "required": true
+  },
+  "MAWILITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.MAWILITE",
+    "pokeapiIdentifier": "mawilite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "mawilite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "MAWILE"
+    ]
+  },
+  "MAX_MUSHROOMS": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.MAX_MUSHROOMS",
+    "pokeapiIdentifier": "max-mushrooms",
+    "pokeapiCategory": "stat-boosts",
+    "group": "formChange",
+    "atlasFrame": "max_mushrooms",
+    "required": true
+  },
+  "MEADOW_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.MEADOW_PLATE",
+    "pokeapiIdentifier": "meadow-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "meadow_plate",
+    "required": true
+  },
+  "MEGANIUMITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.MEGANIUMITE",
+    "pokeapiIdentifier": "meganiumite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "meganiumite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "MEGANIUM"
+    ]
+  },
+  "MEGA_BRACELET": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MEGA_BRACELET",
+    "pokeapiIdentifier": "mega-bracelet",
+    "pokeapiCategory": "gameplay",
+    "group": "modifier",
+    "atlasFrame": "mega_bracelet",
+    "required": true
+  },
+  "MENTAL_HERB": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "mental-herb",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "mental_herb",
+    "required": true
+  },
+  "MEOWSTICITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.MEOWSTICITE",
+    "pokeapiIdentifier": "meowsticite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "meowsticite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "MEOWSTIC"
+    ]
+  },
+  "METAGROSSITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.METAGROSSITE",
+    "pokeapiIdentifier": "metagrossite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "metagrossite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "METAGROSS"
+    ]
+  },
+  "METAL_COAT": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.metal_coat",
+    "pokeapiIdentifier": "metal-coat",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "metal_coat",
+    "required": true
+  },
+  "METAL_POWDER": {
+    "pokerogueLocaleKey": "modifierType:SpeciesBoosterItem.METAL_POWDER",
+    "pokeapiIdentifier": "metal-powder",
+    "pokeapiCategory": "species-specific",
+    "group": "speciesBooster",
+    "atlasFrame": "metal_powder",
+    "required": true
+  },
+  "METRONOME": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "metronome",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "metronome",
+    "required": true
+  },
+  "MEWTWONITE_X": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.MEWTWONITE_X",
+    "pokeapiIdentifier": "mewtwonite-x",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "mewtwonite_x",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "MEWTWO"
+    ]
+  },
+  "MEWTWONITE_Y": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.MEWTWONITE_Y",
+    "pokeapiIdentifier": "mewtwonite-y",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "mewtwonite_y",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "MEWTWO"
+    ]
+  },
+  "MIND_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.MIND_PLATE",
+    "pokeapiIdentifier": "mind-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "mind_plate",
+    "required": true
+  },
+  "MIRACLE_SEED": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.miracle_seed",
+    "pokeapiIdentifier": "miracle-seed",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "miracle_seed",
+    "required": true
+  },
+  "MISTY_SEED": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "misty-seed",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "misty_seed",
+    "required": true
+  },
+  "MOON_STONE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.MOON_STONE",
+    "pokeapiIdentifier": "moon-stone",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "moon_stone",
+    "required": true
+  },
+  "MULTI_LENS": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MULTI_LENS",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "multi_lens",
+    "required": true
+  },
+  "MUSCLE_BAND": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "muscle-band",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "muscle_band",
+    "required": true
+  },
+  "MYSTIC_WATER": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.mystic_water",
+    "pokeapiIdentifier": "mystic-water",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "mystic_water",
+    "required": true
+  },
+  "NEVER_MELT_ICE": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.never_melt_ice",
+    "pokeapiIdentifier": "never-melt-ice",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "never_melt_ice",
+    "required": true
+  },
+  "NORMALIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "normalium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "normalium_z",
+    "required": true
+  },
+  "NUGGET": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.NUGGET",
+    "pokeapiIdentifier": "nugget",
+    "pokeapiCategory": "loot",
+    "group": "modifier",
+    "atlasFrame": "nugget",
+    "required": true
+  },
+  "OCCA_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "occa-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "occa_berry",
+    "required": true
+  },
+  "ORAN_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "oran-berry",
+    "pokeapiCategory": "medicine",
+    "group": "berries2",
+    "atlasFrame": "oran_berry",
+    "required": true
+  },
+  "PASSHO_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "passho-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "passho_berry",
+    "required": true
+  },
+  "PAYAPA_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "payapa-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "payapa_berry",
+    "required": true
+  },
+  "PETAYA_BERRY": {
+    "pokerogueLocaleKey": "berry:petaya",
+    "pokeapiIdentifier": "petaya-berry",
+    "pokeapiCategory": "in-a-pinch",
+    "group": "berry",
+    "atlasFrame": "petaya_berry",
+    "required": true
+  },
+  "PIDGEOTITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.PIDGEOTITE",
+    "pokeapiIdentifier": "pidgeotite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "pidgeotite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "PIDGEOT"
+    ]
+  },
+  "PIXIE_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.PIXIE_PLATE",
+    "pokeapiIdentifier": "pixie-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "pixie_plate",
+    "required": true
+  },
+  "POISONIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "poisonium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "poisonium_z",
+    "required": true
+  },
+  "POISON_BARB": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.poison_barb",
+    "pokeapiIdentifier": "poison-barb",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "poison_barb",
+    "required": true
+  },
+  "POKE_BALL": {
+    "pokerogueLocaleKey": "pokeball:pokeBall",
+    "pokeapiIdentifier": "poke-ball",
+    "pokeapiCategory": "standard-balls",
+    "group": "ball",
+    "atlasFrame": "pb",
+    "required": true
+  },
+  "POWER_HERB": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "power-herb",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "power_herb",
+    "required": true
+  },
+  "PROTECTIVE_PADS": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "protective-pads",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "protective_pads",
+    "required": true
+  },
+  "PSYCHIC_SEED": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "psychic-seed",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "psychic_seed",
+    "required": true
+  },
+  "PSYCHIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "psychium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "psychium_z",
+    "required": true
+  },
+  "PUNCHING_GLOVE": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "punching-glove",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "punching_glove",
+    "required": true
+  },
+  "PYROARITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.PYROARITE",
+    "pokeapiIdentifier": "pyroarite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "pyroarite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "PYROAR"
+    ]
+  },
+  "QUICK_CLAW": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.QUICK_CLAW",
+    "pokeapiIdentifier": "quick-claw",
+    "pokeapiCategory": "held-items",
+    "group": "modifier",
+    "atlasFrame": "quick_claw",
+    "required": true
+  },
+  "QUICK_POWDER": {
+    "pokerogueLocaleKey": "modifierType:SpeciesBoosterItem.QUICK_POWDER",
+    "pokeapiIdentifier": "quick-powder",
+    "pokeapiCategory": "species-specific",
+    "group": "speciesBooster",
+    "atlasFrame": "quick_powder",
+    "required": true
+  },
+  "RAICHUNITE_X": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.RAICHUNITE_X",
+    "pokeapiIdentifier": "raichunite-x",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "raichunite_x",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "RAICHU"
+    ]
+  },
+  "RAICHUNITE_Y": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.RAICHUNITE_Y",
+    "pokeapiIdentifier": "raichunite-y",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "raichunite_y",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "RAICHU"
+    ]
+  },
+  "RARER_CANDY": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.RARER_CANDY",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "rarer_candy",
+    "required": true
+  },
+  "RARE_CANDY": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.RARE_CANDY",
+    "pokeapiIdentifier": "rare-candy",
+    "pokeapiCategory": "vitamins",
+    "group": "modifier",
+    "atlasFrame": "rare_candy",
+    "required": true
+  },
+  "RAYQUAZITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.RAYQUAZITE",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "formChange",
+    "atlasFrame": "rayquazite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "RAYQUAZA"
+    ]
+  },
+  "RED_ORB": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.RED_ORB",
+    "pokeapiIdentifier": "red-orb",
+    "pokeapiCategory": "plot-advancement",
+    "group": "formChange",
+    "atlasFrame": "red_orb",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "GROUDON"
+    ]
+  },
+  "RINDO_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "rindo-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "rindo_berry",
+    "required": true
+  },
+  "ROCKIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "rockium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "rockium_z",
+    "required": true
+  },
+  "ROCKY_HELMET": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "rocky-helmet",
+    "pokeapiCategory": "held-items",
+    "group": "held",
+    "atlasFrame": "rocky_helmet",
+    "required": true
+  },
+  "ROOT_FOSSIL": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "root-fossil",
+    "pokeapiCategory": "dex-completion",
+    "group": "held",
+    "atlasFrame": "root_fossil",
+    "required": true
+  },
+  "ROSELI_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "roseli-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "roseli_berry",
+    "required": true
+  },
+  "ROWAP_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "rowap-berry",
+    "pokeapiCategory": "other",
+    "group": "berries2",
+    "atlasFrame": "rowap_berry",
+    "required": true
+  },
+  "SAFETY_GOGGLES": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "safety-goggles",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "safety_goggles",
+    "required": true
+  },
+  "SALAC_BERRY": {
+    "pokerogueLocaleKey": "berry:salac",
+    "pokeapiIdentifier": "salac-berry",
+    "pokeapiCategory": "in-a-pinch",
+    "group": "berry",
+    "atlasFrame": "salac_berry",
+    "required": true
+  },
+  "SCEPTILITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SCEPTILITE",
+    "pokeapiIdentifier": "sceptilite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "sceptilite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "SCEPTILE"
+    ]
+  },
+  "SCIZORITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SCIZORITE",
+    "pokeapiIdentifier": "scizorite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "scizorite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "SCIZOR"
+    ]
+  },
+  "SCOLIPITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SCOLIPITE",
+    "pokeapiIdentifier": "scolipite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "scolipite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "SCOLIPEDE"
+    ]
+  },
+  "SCOPE_LENS": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.SCOPE_LENS",
+    "pokeapiIdentifier": "scope-lens",
+    "pokeapiCategory": "held-items",
+    "group": "modifier",
+    "atlasFrame": "scope_lens",
+    "required": true
+  },
+  "SCOVILLAINITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SCOVILLAINITE",
+    "pokeapiIdentifier": "scovillainite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "scovillainite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "SCOVILLAIN"
+    ]
+  },
+  "SHARP_BEAK": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.sharp_beak",
+    "pokeapiIdentifier": "sharp-beak",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "sharp_beak",
+    "required": true
+  },
+  "SHELL_BELL": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.SHELL_BELL",
+    "pokeapiIdentifier": "shell-bell",
+    "pokeapiCategory": "held-items",
+    "group": "modifier",
+    "atlasFrame": "shell_bell",
+    "required": true
+  },
+  "SHINY_STONE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.SHINY_STONE",
+    "pokeapiIdentifier": "shiny-stone",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "shiny_stone",
+    "required": true
+  },
+  "SHUCA_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "shuca-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "shuca_berry",
+    "required": true
+  },
+  "SILK_SCARF": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.silk_scarf",
+    "pokeapiIdentifier": "silk-scarf",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "silk_scarf",
+    "required": true
+  },
+  "SILVER_POWDER": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.silver_powder",
+    "pokeapiIdentifier": "silver-powder",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "silver_powder",
+    "required": true
+  },
+  "SITRUS_BERRY": {
+    "pokerogueLocaleKey": "berry:sitrus",
+    "pokeapiIdentifier": "sitrus-berry",
+    "pokeapiCategory": "medicine",
+    "group": "berry",
+    "atlasFrame": "sitrus_berry",
+    "required": true
+  },
+  "SKARMORITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SKARMORITE",
+    "pokeapiIdentifier": "skarmorite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "skarmorite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "SKARMORY"
+    ]
+  },
+  "SKY_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SKY_PLATE",
+    "pokeapiIdentifier": "sky-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "sky_plate",
+    "required": true
+  },
+  "SMOOTH_ROCK": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "smooth-rock",
+    "pokeapiCategory": "held-items",
+    "group": "held",
+    "atlasFrame": "smooth_rock",
+    "required": true
+  },
+  "SOFT_SAND": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.soft_sand",
+    "pokeapiIdentifier": "soft-sand",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "soft_sand",
+    "required": true
+  },
+  "SOOTHE_BELL": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.SOOTHE_BELL",
+    "pokeapiIdentifier": "soothe-bell",
+    "pokeapiCategory": "training",
+    "group": "modifier",
+    "atlasFrame": "soothe_bell",
+    "required": true
+  },
+  "SOUL_DEW": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.SOUL_DEW",
+    "pokeapiIdentifier": "soul-dew",
+    "pokeapiCategory": "species-specific",
+    "group": "modifier",
+    "atlasFrame": "soul_dew",
+    "required": true
+  },
+  "SPELL_TAG": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.spell_tag",
+    "pokeapiIdentifier": "spell-tag",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "spell_tag",
+    "required": true
+  },
+  "SPLASH_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SPLASH_PLATE",
+    "pokeapiIdentifier": "splash-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "splash_plate",
+    "required": true
+  },
+  "SPOOKY_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SPOOKY_PLATE",
+    "pokeapiIdentifier": "spooky-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "spooky_plate",
+    "required": true
+  },
+  "STARF_BERRY": {
+    "pokerogueLocaleKey": "berry:starf",
+    "pokeapiIdentifier": "starf-berry",
+    "pokeapiCategory": "in-a-pinch",
+    "group": "berry",
+    "atlasFrame": "starf_berry",
+    "required": true
+  },
+  "STEELIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "steelium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "steelium_z",
+    "required": true
+  },
+  "STEELIXITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.STEELIXITE",
+    "pokeapiIdentifier": "steelixite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "steelixite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "STEELIX"
+    ]
+  },
+  "STONE_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.STONE_PLATE",
+    "pokeapiIdentifier": "stone-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "stone_plate",
+    "required": true
+  },
+  "SUN_STONE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.SUN_STONE",
+    "pokeapiIdentifier": "sun-stone",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "sun_stone",
+    "required": true
+  },
+  "SWAMPERTITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SWAMPERTITE",
+    "pokeapiIdentifier": "swampertite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "swampertite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "SWAMPERT"
+    ]
+  },
+  "TANGA_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "tanga-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "tanga_berry",
+    "required": true
+  },
+  "TERA_ORB": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TERA_ORB",
+    "pokeapiIdentifier": "tera-orb",
+    "pokeapiCategory": "event-items",
+    "group": "modifier",
+    "atlasFrame": "tera_orb",
+    "required": true
+  },
+  "TERA_SHARD": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "gimmick",
+    "atlasFrame": "tera_shard",
+    "required": true
+  },
+  "TERRAIN_EXTENDER": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "terrain-extender",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "terrain_extender",
+    "required": true
+  },
+  "THROAT_SPRAY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "throat-spray",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "throat_spray",
+    "required": true
+  },
+  "THUNDER_STONE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.THUNDER_STONE",
+    "pokeapiIdentifier": "thunder-stone",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "thunder_stone",
+    "required": true
+  },
+  "TOXIC_ORB": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TOXIC_ORB",
+    "pokeapiIdentifier": "toxic-orb",
+    "pokeapiCategory": "bad-held-items",
+    "group": "modifier",
+    "atlasFrame": "toxic_orb",
+    "required": true
+  },
+  "TOXIC_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.TOXIC_PLATE",
+    "pokeapiIdentifier": "toxic-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "toxic_plate",
+    "required": true
+  },
+  "TWISTED_SPOON": {
+    "pokerogueLocaleKey": "modifierType:AttackTypeBoosterItem.twisted_spoon",
+    "pokeapiIdentifier": "twisted-spoon",
+    "pokeapiCategory": "type-enhancement",
+    "group": "typeBooster",
+    "atlasFrame": "twisted_spoon",
+    "required": true
+  },
+  "TYRANITARITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.TYRANITARITE",
+    "pokeapiIdentifier": "tyranitarite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "tyranitarite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "TYRANITAR"
+    ]
+  },
+  "ULTRA_BALL": {
+    "pokerogueLocaleKey": "pokeball:ultraBall",
+    "pokeapiIdentifier": "ultra-ball",
+    "pokeapiCategory": "standard-balls",
+    "group": "ball",
+    "atlasFrame": "ub",
+    "required": true
+  },
+  "UTILITY_UMBRELLA": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "utility-umbrella",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "utility_umbrella",
+    "required": true
+  },
+  "VENUSAURITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.VENUSAURITE",
+    "pokeapiIdentifier": "venusaurite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "venusaurite",
+    "required": true,
+    "rosterMegaStoneFor": [
+      "VENUSAUR"
+    ]
+  },
+  "VOUCHER": {
+    "pokerogueLocaleKey": "voucher:eggVoucher",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "voucher",
+    "atlasFrame": "coupon",
+    "required": true
+  },
+  "WACAN_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "wacan-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "wacan_berry",
+    "required": true
+  },
+  "WATERIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "waterium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "waterium_z",
+    "required": true
+  },
+  "WATER_STONE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.WATER_STONE",
+    "pokeapiIdentifier": "water-stone",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "water_stone",
+    "required": true
+  },
+  "WEAKNESS_POLICY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "weakness-policy",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "weakness_policy",
+    "required": true
+  },
+  "WHITE_HERB": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.WHITE_HERB",
+    "pokeapiIdentifier": "white-herb",
+    "pokeapiCategory": "held-items",
+    "group": "modifier",
+    "atlasFrame": "white_herb",
+    "required": true
+  },
+  "WIDE_LENS": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.WIDE_LENS",
+    "pokeapiIdentifier": "wide-lens",
+    "pokeapiCategory": "held-items",
+    "group": "modifier",
+    "atlasFrame": "wide_lens",
+    "required": true
+  },
+  "WISE_GLASSES": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "wise-glasses",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "wise_glasses",
+    "required": true
+  },
+  "YACHE_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "yache-berry",
+    "pokeapiCategory": "type-protection",
+    "group": "berries2",
+    "atlasFrame": "yache_berry",
+    "required": true
+  },
+  "ZAP_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.ZAP_PLATE",
+    "pokeapiIdentifier": "zap-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "zap_plate",
+    "required": true
+  },
+  "ZOOM_LENS": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "zoom-lens",
+    "pokeapiCategory": "held-items",
+    "group": "held2",
+    "atlasFrame": "zoom_lens",
+    "required": true
+  },
+  "ABILITY_CHARM": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.ABILITY_CHARM",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "ability_charm",
+    "required": false
+  },
+  "ABILITY_SHIELD": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "ability-shield",
+    "pokeapiCategory": "held-items",
+    "group": "pokeapi:held-items",
+    "atlasFrame": "ability_shield",
+    "required": false
+  },
+  "ADAMANT_CRYSTAL": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.ADAMANT_CRYSTAL",
+    "pokeapiIdentifier": "adamant-crystal",
+    "pokeapiCategory": "gameplay",
+    "group": "formChange",
+    "atlasFrame": "adamant_crystal",
+    "required": false
+  },
+  "AGUAV_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "aguav-berry",
+    "pokeapiCategory": "picky-healing",
+    "group": "pokeapi:picky-healing",
+    "atlasFrame": "aguav_berry",
+    "required": false
+  },
+  "ALORAICHIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "aloraichium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "aloraichium_z",
+    "required": false
+  },
+  "ALTARIANITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.ALTARIANITE",
+    "pokeapiIdentifier": "altarianite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "altarianite",
+    "required": false
+  },
+  "AUDINITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.AUDINITE",
+    "pokeapiIdentifier": "audinite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "audinite",
+    "required": false
+  },
+  "AUSPICIOUS_ARMOR": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.AUSPICIOUS_ARMOR",
+    "pokeapiIdentifier": "auspicious-armor",
+    "pokeapiCategory": "picnic",
+    "group": "evolution",
+    "atlasFrame": "auspicious_armor",
+    "required": false
+  },
+  "BANETTITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.BANETTITE",
+    "pokeapiIdentifier": "banettite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "banettite",
+    "required": false
+  },
+  "BATON": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.BATON",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "baton",
+    "required": false
+  },
+  "BERRY_SWEET": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "berry-sweet",
+    "pokeapiCategory": "evolution",
+    "group": "pokeapi:evolution",
+    "atlasFrame": "berry_sweet",
+    "required": false
+  },
+  "BLACK_AUGURITE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.BLACK_AUGURITE",
+    "pokeapiIdentifier": "black-augurite",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "black_augurite",
+    "required": false
+  },
+  "BUG_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "bug-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "bug_gem",
+    "required": false
+  },
+  "BUG_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.BUG_MEMORY",
+    "pokeapiIdentifier": "bug-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "bug_memory",
+    "required": false
+  },
+  "BUG_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.bug",
+    "pokeapiIdentifier": "bug-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "bug_tera_shard",
+    "required": false
+  },
+  "BURN_DRIVE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.BURN_DRIVE",
+    "pokeapiIdentifier": "burn-drive",
+    "pokeapiCategory": "species-specific",
+    "group": "formChange",
+    "atlasFrame": "burn_drive",
+    "required": false
+  },
+  "CALCIUM": {
+    "pokerogueLocaleKey": "modifierType:BaseStatBoosterItem.calcium",
+    "pokeapiIdentifier": "calcium",
+    "pokeapiCategory": "vitamins",
+    "group": "vitamin",
+    "atlasFrame": "calcium",
+    "required": false
+  },
+  "CAMERUPTITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.CAMERUPTITE",
+    "pokeapiIdentifier": "cameruptite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "cameruptite",
+    "required": false
+  },
+  "CARBOS": {
+    "pokerogueLocaleKey": "modifierType:BaseStatBoosterItem.carbos",
+    "pokeapiIdentifier": "carbos",
+    "pokeapiCategory": "vitamins",
+    "group": "vitamin",
+    "atlasFrame": "carbos",
+    "required": false
+  },
+  "CATCHING_CHARM": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.CATCHING_CHARM",
+    "pokeapiIdentifier": "catching-charm",
+    "pokeapiCategory": "gameplay",
+    "group": "modifier",
+    "atlasFrame": "catching_charm",
+    "required": false
+  },
+  "CHILL_DRIVE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.CHILL_DRIVE",
+    "pokeapiIdentifier": "chill-drive",
+    "pokeapiCategory": "species-specific",
+    "group": "formChange",
+    "atlasFrame": "chill_drive",
+    "required": false
+  },
+  "CHIMECHITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.CHIMECHITE",
+    "pokeapiIdentifier": "chimechite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "chimechite",
+    "required": false
+  },
+  "CHIPPED_POT": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.CHIPPED_POT",
+    "pokeapiIdentifier": "chipped-pot",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "chipped_pot",
+    "required": false
+  },
+  "CLEFABLITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.CLEFABLITE",
+    "pokeapiIdentifier": "clefablite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "clefablite",
+    "required": false
+  },
+  "CLOVER_SWEET": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "clover-sweet",
+    "pokeapiCategory": "evolution",
+    "group": "pokeapi:evolution",
+    "atlasFrame": "clover_sweet",
+    "required": false
+  },
+  "CORNERSTONE_MASK": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.CORNERSTONE_MASK",
+    "pokeapiIdentifier": "cornerstone-mask",
+    "pokeapiCategory": "held-items",
+    "group": "formChange",
+    "atlasFrame": "cornerstone_mask",
+    "required": false
+  },
+  "CRABOMINITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.CRABOMINITE",
+    "pokeapiIdentifier": "crabominite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "crabominite",
+    "required": false
+  },
+  "CRACKED_POT": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.CRACKED_POT",
+    "pokeapiIdentifier": "cracked-pot",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "cracked_pot",
+    "required": false
+  },
+  "CUSTAP_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "custap-berry",
+    "pokeapiCategory": "in-a-pinch",
+    "group": "pokeapi:in-a-pinch",
+    "atlasFrame": "custap_berry",
+    "required": false
+  },
+  "DARKRANITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.DARKRANITE",
+    "pokeapiIdentifier": "darkranite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "darkranite",
+    "required": false
+  },
+  "DARK_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "dark-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "dark_gem",
+    "required": false
+  },
+  "DARK_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.DARK_MEMORY",
+    "pokeapiIdentifier": "dark-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "dark_memory",
+    "required": false
+  },
+  "DARK_STONE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.DARK_STONE",
+    "pokeapiIdentifier": "dark-stone",
+    "pokeapiCategory": "plot-advancement",
+    "group": "formChange",
+    "atlasFrame": "dark_stone",
+    "required": false
+  },
+  "DARK_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.dark",
+    "pokeapiIdentifier": "dark-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "dark_tera_shard",
+    "required": false
+  },
+  "DECIDIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "decidium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "decidium_z",
+    "required": false
+  },
+  "DEEP_SEA_SCALE": {
+    "pokerogueLocaleKey": "modifierType:SpeciesBoosterItem.DEEP_SEA_SCALE",
+    "pokeapiIdentifier": "deep-sea-scale",
+    "pokeapiCategory": "species-specific",
+    "group": "speciesBooster",
+    "atlasFrame": "deep_sea_scale",
+    "required": false
+  },
+  "DEEP_SEA_TOOTH": {
+    "pokerogueLocaleKey": "modifierType:SpeciesBoosterItem.DEEP_SEA_TOOTH",
+    "pokeapiIdentifier": "deep-sea-tooth",
+    "pokeapiCategory": "species-specific",
+    "group": "speciesBooster",
+    "atlasFrame": "deep_sea_tooth",
+    "required": false
+  },
+  "DESTINY_KNOT": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "destiny-knot",
+    "pokeapiCategory": "held-items",
+    "group": "pokeapi:held-items",
+    "atlasFrame": "destiny_knot",
+    "required": false
+  },
+  "DIRE_HIT": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.DIRE_HIT",
+    "pokeapiIdentifier": "dire-hit",
+    "pokeapiCategory": "stat-boosts",
+    "group": "modifier",
+    "atlasFrame": "dire_hit",
+    "required": false
+  },
+  "DNA_SPLICERS": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.DNA_SPLICERS",
+    "pokeapiIdentifier": "dna-splicers",
+    "pokeapiCategory": "gameplay",
+    "group": "modifier",
+    "atlasFrame": "dna_splicers",
+    "required": false
+  },
+  "DOUSE_DRIVE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.DOUSE_DRIVE",
+    "pokeapiIdentifier": "douse-drive",
+    "pokeapiCategory": "species-specific",
+    "group": "formChange",
+    "atlasFrame": "douse_drive",
+    "required": false
+  },
+  "DRAGON_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "dragon-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "dragon_gem",
+    "required": false
+  },
+  "DRAGON_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.DRAGON_MEMORY",
+    "pokeapiIdentifier": "dragon-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "dragon_memory",
+    "required": false
+  },
+  "DRAGON_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.dragon",
+    "pokeapiIdentifier": "dragon-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "dragon_tera_shard",
+    "required": false
+  },
+  "DRAMPANITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.DRAMPANITE",
+    "pokeapiIdentifier": "drampanite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "drampanite",
+    "required": false
+  },
+  "DUBIOUS_DISC": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.DUBIOUS_DISC",
+    "pokeapiIdentifier": "dubious-disc",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "dubious_disc",
+    "required": false
+  },
+  "EELEKTROSSITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.EELEKTROSSITE",
+    "pokeapiIdentifier": "eelektrossite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "eelektrossite",
+    "required": false
+  },
+  "EEVIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "eevium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "eevium_z",
+    "required": false
+  },
+  "EJECT_BUTTON": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "eject-button",
+    "pokeapiCategory": "held-items",
+    "group": "pokeapi:held-items",
+    "atlasFrame": "eject_button",
+    "required": false
+  },
+  "EJECT_PACK": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "eject-pack",
+    "pokeapiCategory": "held-items",
+    "group": "pokeapi:held-items",
+    "atlasFrame": "eject_pack",
+    "required": false
+  },
+  "ELECTIRIZER": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.ELECTIRIZER",
+    "pokeapiIdentifier": "electirizer",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "electirizer",
+    "required": false
+  },
+  "ELECTRIC_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "electric-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "electric_gem",
+    "required": false
+  },
+  "ELECTRIC_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.ELECTRIC_MEMORY",
+    "pokeapiIdentifier": "electric-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "electric_memory",
+    "required": false
+  },
+  "ELECTRIC_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.electric",
+    "pokeapiIdentifier": "electric-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "electric_tera_shard",
+    "required": false
+  },
+  "ELIXIR": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.ELIXIR",
+    "pokeapiIdentifier": "elixir",
+    "pokeapiCategory": "pp-recovery",
+    "group": "modifier",
+    "atlasFrame": "elixir",
+    "required": false
+  },
+  "ENEMY_ATTACK_BURN_CHANCE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.ENEMY_ATTACK_BURN_CHANCE",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "enemy_attack_burn_chance",
+    "required": false
+  },
+  "ENEMY_ATTACK_PARALYZE_CHANCE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.ENEMY_ATTACK_PARALYZE_CHANCE",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "enemy_attack_paralyze_chance",
+    "required": false
+  },
+  "ENEMY_ATTACK_POISON_CHANCE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.ENEMY_ATTACK_POISON_CHANCE",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "enemy_attack_poison_chance",
+    "required": false
+  },
+  "ENEMY_DAMAGE_BOOSTER": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.ENEMY_DAMAGE_BOOSTER",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "enemy_damage_booster",
+    "required": false
+  },
+  "ENEMY_DAMAGE_REDUCTION": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.ENEMY_DAMAGE_REDUCTION",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "enemy_damage_reduction",
+    "required": false
+  },
+  "ENEMY_ENDURE_CHANCE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.ENEMY_ENDURE_CHANCE",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "enemy_endure_chance",
+    "required": false
+  },
+  "ENEMY_FUSED_CHANCE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.ENEMY_FUSED_CHANCE",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "enemy_fused_chance",
+    "required": false
+  },
+  "ENEMY_HEAL": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.ENEMY_HEAL",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "enemy_heal",
+    "required": false
+  },
+  "ENEMY_STATUS_EFFECT_HEAL_CHANCE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.ENEMY_STATUS_EFFECT_HEAL_CHANCE",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "enemy_status_effect_heal_chance",
+    "required": false
+  },
+  "ETHER": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.ETHER",
+    "pokeapiIdentifier": "ether",
+    "pokeapiCategory": "pp-recovery",
+    "group": "modifier",
+    "atlasFrame": "ether",
+    "required": false
+  },
+  "EVOLUTION_TRACKER_GIMMIGHOUL": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.EVOLUTION_TRACKER_GIMMIGHOUL",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "evolution_tracker_gimmighoul",
+    "required": false
+  },
+  "EVOLUTION_TRACKER_PRIMEAPE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.EVOLUTION_TRACKER_PRIMEAPE",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "evolution_tracker_primeape",
+    "required": false
+  },
+  "EVOLUTION_TRACKER_STANTLER": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.EVOLUTION_TRACKER_STANTLER",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "evolution_tracker_stantler",
+    "required": false
+  },
+  "EXP_BALANCE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.EXP_BALANCE",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "exp_balance",
+    "required": false
+  },
+  "EXP_CHARM": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.EXP_CHARM",
+    "pokeapiIdentifier": "exp-charm",
+    "pokeapiCategory": "gameplay",
+    "group": "modifier",
+    "atlasFrame": "exp_charm",
+    "required": false
+  },
+  "FAIRY_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "fairy-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "fairy_gem",
+    "required": false
+  },
+  "FAIRY_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.FAIRY_MEMORY",
+    "pokeapiIdentifier": "fairy-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "fairy_memory",
+    "required": false
+  },
+  "FAIRY_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.fairy",
+    "pokeapiIdentifier": "fairy-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "fairy_tera_shard",
+    "required": false
+  },
+  "FALINKSITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.FALINKSITE",
+    "pokeapiIdentifier": "falinksite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "falinksite",
+    "required": false
+  },
+  "FIGHTING_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "fighting-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "fighting_gem",
+    "required": false
+  },
+  "FIGHTING_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.FIGHTING_MEMORY",
+    "pokeapiIdentifier": "fighting-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "fighting_memory",
+    "required": false
+  },
+  "FIGHTING_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.fighting",
+    "pokeapiIdentifier": "fighting-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "fighting_tera_shard",
+    "required": false
+  },
+  "FIGY_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "figy-berry",
+    "pokeapiCategory": "picky-healing",
+    "group": "pokeapi:picky-healing",
+    "atlasFrame": "figy_berry",
+    "required": false
+  },
+  "FIRE_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "fire-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "fire_gem",
+    "required": false
+  },
+  "FIRE_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.FIRE_MEMORY",
+    "pokeapiIdentifier": "fire-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "fire_memory",
+    "required": false
+  },
+  "FIRE_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.fire",
+    "pokeapiIdentifier": "fire-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "fire_tera_shard",
+    "required": false
+  },
+  "FLOAT_STONE": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "float-stone",
+    "pokeapiCategory": "held-items",
+    "group": "pokeapi:held-items",
+    "atlasFrame": "float_stone",
+    "required": false
+  },
+  "FLOETTITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.FLOETTITE",
+    "pokeapiIdentifier": "floettite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "floettite",
+    "required": false
+  },
+  "FLOWER_SWEET": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "flower-sweet",
+    "pokeapiCategory": "evolution",
+    "group": "pokeapi:evolution",
+    "atlasFrame": "flower_sweet",
+    "required": false
+  },
+  "FLYING_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "flying-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "flying_gem",
+    "required": false
+  },
+  "FLYING_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.FLYING_MEMORY",
+    "pokeapiIdentifier": "flying-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "flying_memory",
+    "required": false
+  },
+  "FLYING_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.flying",
+    "pokeapiIdentifier": "flying-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "flying_tera_shard",
+    "required": false
+  },
+  "FULL_HEAL": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.FULL_HEAL",
+    "pokeapiIdentifier": "full-heal",
+    "pokeapiCategory": "status-cures",
+    "group": "modifier",
+    "atlasFrame": "full_heal",
+    "required": false
+  },
+  "FULL_INCENSE": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "full-incense",
+    "pokeapiCategory": "bad-held-items",
+    "group": "pokeapi:bad-held-items",
+    "atlasFrame": "full_incense",
+    "required": false
+  },
+  "FULL_RESTORE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.FULL_RESTORE",
+    "pokeapiIdentifier": "full-restore",
+    "pokeapiCategory": "healing",
+    "group": "modifier",
+    "atlasFrame": "full_restore",
+    "required": false
+  },
+  "GALARICA_CUFF": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.GALARICA_CUFF",
+    "pokeapiIdentifier": "galarica-cuff",
+    "pokeapiCategory": "collectibles",
+    "group": "evolution",
+    "atlasFrame": "galarica_cuff",
+    "required": false
+  },
+  "GALARICA_WREATH": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.GALARICA_WREATH",
+    "pokeapiIdentifier": "galarica-wreath",
+    "pokeapiCategory": "collectibles",
+    "group": "evolution",
+    "atlasFrame": "galarica_wreath",
+    "required": false
+  },
+  "GHOST_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "ghost-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "ghost_gem",
+    "required": false
+  },
+  "GHOST_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.GHOST_MEMORY",
+    "pokeapiIdentifier": "ghost-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "ghost_memory",
+    "required": false
+  },
+  "GHOST_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.ghost",
+    "pokeapiIdentifier": "ghost-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "ghost_tera_shard",
+    "required": false
+  },
+  "GOLDEN_EGG": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.GOLDEN_EGG",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "golden_egg",
+    "required": false
+  },
+  "GOLDEN_EXP_CHARM": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.GOLDEN_EXP_CHARM",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "golden_exp_charm",
+    "required": false
+  },
+  "GOLDEN_POKEBALL": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.GOLDEN_POKEBALL",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "golden_pokeball",
+    "required": false
+  },
+  "GOLISOPITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.GOLISOPITE",
+    "pokeapiIdentifier": "golisopite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "golisopite",
+    "required": false
+  },
+  "GOLURKITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.GOLURKITE",
+    "pokeapiIdentifier": "golurkite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "golurkite",
+    "required": false
+  },
+  "GRACIDEA": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.GRACIDEA",
+    "pokeapiIdentifier": "gracidea",
+    "pokeapiCategory": "event-items",
+    "group": "formChange",
+    "atlasFrame": "gracidea",
+    "required": false
+  },
+  "GRASS_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "grass-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "grass_gem",
+    "required": false
+  },
+  "GRASS_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.GRASS_MEMORY",
+    "pokeapiIdentifier": "grass-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "grass_memory",
+    "required": false
+  },
+  "GRASS_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.grass",
+    "pokeapiIdentifier": "grass-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "grass_tera_shard",
+    "required": false
+  },
+  "GRISEOUS_CORE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.GRISEOUS_CORE",
+    "pokeapiIdentifier": "griseous-core",
+    "pokeapiCategory": "gameplay",
+    "group": "formChange",
+    "atlasFrame": "griseous_core",
+    "required": false
+  },
+  "GROUND_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "ground-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "ground_gem",
+    "required": false
+  },
+  "GROUND_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.GROUND_MEMORY",
+    "pokeapiIdentifier": "ground-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "ground_memory",
+    "required": false
+  },
+  "GROUND_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.ground",
+    "pokeapiIdentifier": "ground-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "ground_tera_shard",
+    "required": false
+  },
+  "HARD_METEORITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.HARD_METEORITE",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "formChange",
+    "atlasFrame": "hard_meteorite",
+    "required": false
+  },
+  "HEALING_CHARM": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.HEALING_CHARM",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "healing_charm",
+    "required": false
+  },
+  "HEARTHFLAME_MASK": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.HEARTHFLAME_MASK",
+    "pokeapiIdentifier": "hearthflame-mask",
+    "pokeapiCategory": "held-items",
+    "group": "formChange",
+    "atlasFrame": "hearthflame_mask",
+    "required": false
+  },
+  "HEATRANITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.HEATRANITE",
+    "pokeapiIdentifier": "heatranite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "heatranite",
+    "required": false
+  },
+  "HEAVY_DUTY_BOOTS": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "heavy-duty-boots",
+    "pokeapiCategory": "held-items",
+    "group": "pokeapi:held-items",
+    "atlasFrame": "heavy_duty_boots",
+    "required": false
+  },
+  "HP_UP": {
+    "pokerogueLocaleKey": "modifierType:BaseStatBoosterItem.hp_up",
+    "pokeapiIdentifier": "hp-up",
+    "pokeapiCategory": "vitamins",
+    "group": "vitamin",
+    "atlasFrame": "hp_up",
+    "required": false
+  },
+  "HYPER_POTION": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.HYPER_POTION",
+    "pokeapiIdentifier": "hyper-potion",
+    "pokeapiCategory": "healing",
+    "group": "modifier",
+    "atlasFrame": "hyper_potion",
+    "required": false
+  },
+  "IAPAPA_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "iapapa-berry",
+    "pokeapiCategory": "picky-healing",
+    "group": "pokeapi:picky-healing",
+    "atlasFrame": "iapapa_berry",
+    "required": false
+  },
+  "ICE_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "ice-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "ice_gem",
+    "required": false
+  },
+  "ICE_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.ICE_MEMORY",
+    "pokeapiIdentifier": "ice-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "ice_memory",
+    "required": false
+  },
+  "ICE_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.ice",
+    "pokeapiIdentifier": "ice-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "ice_tera_shard",
+    "required": false
+  },
+  "ICY_REINS_OF_UNITY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.ICY_REINS_OF_UNITY",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "formChange",
+    "atlasFrame": "icy_reins_of_unity",
+    "required": false
+  },
+  "INCINIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "incinium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "incinium_z",
+    "required": false
+  },
+  "IRON": {
+    "pokerogueLocaleKey": "modifierType:BaseStatBoosterItem.iron",
+    "pokeapiIdentifier": "iron",
+    "pokeapiCategory": "vitamins",
+    "group": "vitamin",
+    "atlasFrame": "iron",
+    "required": false
+  },
+  "IRON_BALL": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "iron-ball",
+    "pokeapiCategory": "bad-held-items",
+    "group": "pokeapi:bad-held-items",
+    "atlasFrame": "iron_ball",
+    "required": false
+  },
+  "IV_SCANNER": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.IV_SCANNER",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "iv_scanner",
+    "required": false
+  },
+  "KANGASKHANITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.KANGASKHANITE",
+    "pokeapiIdentifier": "kangaskhanite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "kangaskhanite",
+    "required": false
+  },
+  "KOMMONIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "kommonium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "kommonium_z",
+    "required": false
+  },
+  "LAGGING_TAIL": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "lagging-tail",
+    "pokeapiCategory": "bad-held-items",
+    "group": "pokeapi:bad-held-items",
+    "atlasFrame": "lagging_tail",
+    "required": false
+  },
+  "LAX_INCENSE": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "lax-incense",
+    "pokeapiCategory": "held-items",
+    "group": "pokeapi:held-items",
+    "atlasFrame": "lax_incense",
+    "required": false
+  },
+  "LEADERS_CREST": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.LEADERS_CREST",
+    "pokeapiIdentifier": "leaders-crest",
+    "pokeapiCategory": "picnic",
+    "group": "evolution",
+    "atlasFrame": "leaders_crest",
+    "required": false
+  },
+  "LEEK": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.LEEK",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "leek",
+    "required": false
+  },
+  "LEGEND_PLATE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.LEGEND_PLATE",
+    "pokeapiIdentifier": "legend-plate",
+    "pokeapiCategory": "plates",
+    "group": "formChange",
+    "atlasFrame": "legend_plate",
+    "required": false
+  },
+  "LIGHT_STONE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.LIGHT_STONE",
+    "pokeapiIdentifier": "light-stone",
+    "pokeapiCategory": "plot-advancement",
+    "group": "formChange",
+    "atlasFrame": "light_stone",
+    "required": false
+  },
+  "LOCK_CAPSULE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.LOCK_CAPSULE",
+    "pokeapiIdentifier": "lock-capsule",
+    "pokeapiCategory": "unused",
+    "group": "modifier",
+    "atlasFrame": "lock_capsule",
+    "required": false
+  },
+  "LOVE_SWEET": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "love-sweet",
+    "pokeapiCategory": "evolution",
+    "group": "pokeapi:evolution",
+    "atlasFrame": "love_sweet",
+    "required": false
+  },
+  "LUCKY_PUNCH": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "lucky-punch",
+    "pokeapiCategory": "species-specific",
+    "group": "pokeapi:species-specific",
+    "atlasFrame": "lucky_punch",
+    "required": false
+  },
+  "LUMINOUS_MOSS": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "luminous-moss",
+    "pokeapiCategory": "held-items",
+    "group": "pokeapi:held-items",
+    "atlasFrame": "luminous_moss",
+    "required": false
+  },
+  "LUNALIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "lunalium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "lunalium_z",
+    "required": false
+  },
+  "LURE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.LURE",
+    "pokeapiIdentifier": "lure",
+    "pokeapiCategory": "spelunking",
+    "group": "modifier",
+    "atlasFrame": "lure",
+    "required": false
+  },
+  "LUSTROUS_GLOBE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.LUSTROUS_GLOBE",
+    "pokeapiIdentifier": "lustrous-globe",
+    "pokeapiCategory": "gameplay",
+    "group": "formChange",
+    "atlasFrame": "lustrous_globe",
+    "required": false
+  },
+  "LUXURY_BALL": {
+    "pokerogueLocaleKey": "pokeball:luxuryBall",
+    "pokeapiIdentifier": "luxury-ball",
+    "pokeapiCategory": "special-balls",
+    "group": "ball",
+    "atlasFrame": "lb",
+    "required": false
+  },
+  "LYCANIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "lycanium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "lycanium_z",
+    "required": false
+  },
+  "MAGEARNITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.MAGEARNITE",
+    "pokeapiIdentifier": "magearnite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "magearnite",
+    "required": false
+  },
+  "MAGMARIZER": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.MAGMARIZER",
+    "pokeapiIdentifier": "magmarizer",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "magmarizer",
+    "required": false
+  },
+  "MAGO_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "mago-berry",
+    "pokeapiCategory": "picky-healing",
+    "group": "pokeapi:picky-healing",
+    "atlasFrame": "mago_berry",
+    "required": false
+  },
+  "MALICIOUS_ARMOR": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.MALICIOUS_ARMOR",
+    "pokeapiIdentifier": "malicious-armor",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "malicious_armor",
+    "required": false
+  },
+  "MAP": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MAP",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "map",
+    "required": false
+  },
+  "MARSHADIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "marshadium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "marshadium_z",
+    "required": false
+  },
+  "MASTERPIECE_TEACUP": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.MASTERPIECE_TEACUP",
+    "pokeapiIdentifier": "masterpiece-teacup",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "masterpiece_teacup",
+    "required": false
+  },
+  "MAX_ELIXIR": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MAX_ELIXIR",
+    "pokeapiIdentifier": "max-elixir",
+    "pokeapiCategory": "pp-recovery",
+    "group": "modifier",
+    "atlasFrame": "max_elixir",
+    "required": false
+  },
+  "MAX_ETHER": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MAX_ETHER",
+    "pokeapiIdentifier": "max-ether",
+    "pokeapiCategory": "pp-recovery",
+    "group": "modifier",
+    "atlasFrame": "max_ether",
+    "required": false
+  },
+  "MAX_LURE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MAX_LURE",
+    "pokeapiIdentifier": "max-lure",
+    "pokeapiCategory": "spelunking",
+    "group": "modifier",
+    "atlasFrame": "max_lure",
+    "required": false
+  },
+  "MAX_POTION": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MAX_POTION",
+    "pokeapiIdentifier": "max-potion",
+    "pokeapiCategory": "healing",
+    "group": "modifier",
+    "atlasFrame": "max_potion",
+    "required": false
+  },
+  "MAX_REVIVE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MAX_REVIVE",
+    "pokeapiIdentifier": "max-revive",
+    "pokeapiCategory": "revival",
+    "group": "modifier",
+    "atlasFrame": "max_revive",
+    "required": false
+  },
+  "MEDICHAMITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.MEDICHAMITE",
+    "pokeapiIdentifier": "medichamite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "medichamite",
+    "required": false
+  },
+  "MEMORY_MUSHROOM": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MEMORY_MUSHROOM",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "memory_mushroom",
+    "required": false
+  },
+  "METAL_ALLOY": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.METAL_ALLOY",
+    "pokeapiIdentifier": "metal-alloy",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "metal_alloy",
+    "required": false
+  },
+  "MEWNIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "mewnium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "mewnium_z",
+    "required": false
+  },
+  "MICLE_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "micle-berry",
+    "pokeapiCategory": "in-a-pinch",
+    "group": "pokeapi:in-a-pinch",
+    "atlasFrame": "micle_berry",
+    "required": false
+  },
+  "MIMIKIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "mimikium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "mimikium_z",
+    "required": false
+  },
+  "MINI_BLACK_HOLE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MINI_BLACK_HOLE",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "mini_black_hole",
+    "required": false
+  },
+  "MIRROR_HERB": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "mirror-herb",
+    "pokeapiCategory": "held-items",
+    "group": "pokeapi:held-items",
+    "atlasFrame": "mirror_herb",
+    "required": false
+  },
+  "MOON_FLUTE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.MOON_FLUTE",
+    "pokeapiIdentifier": "moon-flute",
+    "pokeapiCategory": "plot-advancement",
+    "group": "evolution",
+    "atlasFrame": "moon_flute",
+    "required": false
+  },
+  "MYSTERY_ENCOUNTER_BLACK_SLUDGE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MYSTERY_ENCOUNTER_BLACK_SLUDGE",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "mystery_encounter_black_sludge",
+    "required": false
+  },
+  "MYSTERY_ENCOUNTER_GOLDEN_BUG_NET": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MYSTERY_ENCOUNTER_GOLDEN_BUG_NET",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "mystery_encounter_golden_bug_net",
+    "required": false
+  },
+  "MYSTERY_ENCOUNTER_MACHO_BRACE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MYSTERY_ENCOUNTER_MACHO_BRACE",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "mystery_encounter_macho_brace",
+    "required": false
+  },
+  "MYSTERY_ENCOUNTER_OLD_GATEAU": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MYSTERY_ENCOUNTER_OLD_GATEAU",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "mystery_encounter_old_gateau",
+    "required": false
+  },
+  "MYSTERY_ENCOUNTER_SHUCKLE_JUICE_BAD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MYSTERY_ENCOUNTER_SHUCKLE_JUICE_BAD",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "mystery_encounter_shuckle_juice_bad",
+    "required": false
+  },
+  "MYSTERY_ENCOUNTER_SHUCKLE_JUICE_GOOD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MYSTERY_ENCOUNTER_SHUCKLE_JUICE_GOOD",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "mystery_encounter_shuckle_juice_good",
+    "required": false
+  },
+  "MYSTICAL_ROCK": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.MYSTICAL_ROCK",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "mystical_rock",
+    "required": false
+  },
+  "NORMAL_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "normal-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "normal_gem",
+    "required": false
+  },
+  "NORMAL_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.NORMAL_MEMORY",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "formChange",
+    "atlasFrame": "normal_memory",
+    "required": false
+  },
+  "NORMAL_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.normal",
+    "pokeapiIdentifier": "normal-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "normal_tera_shard",
+    "required": false
+  },
+  "N_LUNARIZER": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.N_LUNARIZER",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "formChange",
+    "atlasFrame": "n_lunarizer",
+    "required": false
+  },
+  "N_SOLARIZER": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.N_SOLARIZER",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "formChange",
+    "atlasFrame": "n_solarizer",
+    "required": false
+  },
+  "ODD_INCENSE": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "odd-incense",
+    "pokeapiCategory": "type-enhancement",
+    "group": "pokeapi:type-enhancement",
+    "atlasFrame": "odd_incense",
+    "required": false
+  },
+  "OVAL_CHARM": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.OVAL_CHARM",
+    "pokeapiIdentifier": "oval-charm",
+    "pokeapiCategory": "gameplay",
+    "group": "modifier",
+    "atlasFrame": "oval_charm",
+    "required": false
+  },
+  "OVAL_STONE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.OVAL_STONE",
+    "pokeapiIdentifier": "oval-stone",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "oval_stone",
+    "required": false
+  },
+  "PASS_ORB": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "pass-orb",
+    "pokeapiCategory": "held-items",
+    "group": "pokeapi:held-items",
+    "atlasFrame": "pass_orb",
+    "required": false
+  },
+  "PEAT_BLOCK": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.PEAT_BLOCK",
+    "pokeapiIdentifier": "peat-block",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "peat_block",
+    "required": false
+  },
+  "PIKANIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "pikanium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "pikanium_z",
+    "required": false
+  },
+  "PIKASHUNIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "pikashunium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "pikashunium_z",
+    "required": false
+  },
+  "PINK_NECTAR": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "pink-nectar",
+    "pokeapiCategory": "species-specific",
+    "group": "pokeapi:species-specific",
+    "atlasFrame": "pink_nectar",
+    "required": false
+  },
+  "PINSIRITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.PINSIRITE",
+    "pokeapiIdentifier": "pinsirite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "pinsirite",
+    "required": false
+  },
+  "POISON_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "poison-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "poison_gem",
+    "required": false
+  },
+  "POISON_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.POISON_MEMORY",
+    "pokeapiIdentifier": "poison-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "poison_memory",
+    "required": false
+  },
+  "POISON_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.poison",
+    "pokeapiIdentifier": "poison-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "poison_tera_shard",
+    "required": false
+  },
+  "POTION": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.POTION",
+    "pokeapiIdentifier": "potion",
+    "pokeapiCategory": "healing",
+    "group": "modifier",
+    "atlasFrame": "potion",
+    "required": false
+  },
+  "PP_MAX": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.PP_MAX",
+    "pokeapiIdentifier": "pp-max",
+    "pokeapiCategory": "vitamins",
+    "group": "modifier",
+    "atlasFrame": "pp_max",
+    "required": false
+  },
+  "PP_UP": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.PP_UP",
+    "pokeapiIdentifier": "pp-up",
+    "pokeapiCategory": "vitamins",
+    "group": "modifier",
+    "atlasFrame": "pp_up",
+    "required": false
+  },
+  "PRIMARIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "primarium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "primarium_z",
+    "required": false
+  },
+  "PRISM_SCALE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.PRISM_SCALE",
+    "pokeapiIdentifier": "prism-scale",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "prism_scale",
+    "required": false
+  },
+  "PRISON_BOTTLE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.PRISON_BOTTLE",
+    "pokeapiIdentifier": "prison-bottle",
+    "pokeapiCategory": "gameplay",
+    "group": "formChange",
+    "atlasFrame": "prison_bottle",
+    "required": false
+  },
+  "PROTECTOR": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.PROTECTOR",
+    "pokeapiIdentifier": "protector",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "protector",
+    "required": false
+  },
+  "PROTEIN": {
+    "pokerogueLocaleKey": "modifierType:BaseStatBoosterItem.protein",
+    "pokeapiIdentifier": "protein",
+    "pokeapiCategory": "vitamins",
+    "group": "vitamin",
+    "atlasFrame": "protein",
+    "required": false
+  },
+  "PSYCHIC_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "psychic-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "psychic_gem",
+    "required": false
+  },
+  "PSYCHIC_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.PSYCHIC_MEMORY",
+    "pokeapiIdentifier": "psychic-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "psychic_memory",
+    "required": false
+  },
+  "PSYCHIC_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.psychic",
+    "pokeapiIdentifier": "psychic-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "psychic_tera_shard",
+    "required": false
+  },
+  "PURPLE_NECTAR": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "purple-nectar",
+    "pokeapiCategory": "species-specific",
+    "group": "pokeapi:species-specific",
+    "atlasFrame": "purple_nectar",
+    "required": false
+  },
+  "RAZOR_CLAW": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.RAZOR_CLAW",
+    "pokeapiIdentifier": "razor-claw",
+    "pokeapiCategory": "held-items",
+    "group": "evolution",
+    "atlasFrame": "razor_claw",
+    "required": false
+  },
+  "RAZOR_FANG": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.RAZOR_FANG",
+    "pokeapiIdentifier": "razor-fang",
+    "pokeapiCategory": "held-items",
+    "group": "evolution",
+    "atlasFrame": "razor_fang",
+    "required": false
+  },
+  "REAPER_CLOTH": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.REAPER_CLOTH",
+    "pokeapiIdentifier": "reaper-cloth",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "reaper_cloth",
+    "required": false
+  },
+  "RED_CARD": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "red-card",
+    "pokeapiCategory": "held-items",
+    "group": "pokeapi:held-items",
+    "atlasFrame": "red_card",
+    "required": false
+  },
+  "RED_NECTAR": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "red-nectar",
+    "pokeapiCategory": "species-specific",
+    "group": "pokeapi:species-specific",
+    "atlasFrame": "red_nectar",
+    "required": false
+  },
+  "RELIC_GOLD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.RELIC_GOLD",
+    "pokeapiIdentifier": "relic-gold",
+    "pokeapiCategory": "loot",
+    "group": "modifier",
+    "atlasFrame": "relic_gold",
+    "required": false
+  },
+  "REVEAL_GLASS": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.REVEAL_GLASS",
+    "pokeapiIdentifier": "reveal-glass",
+    "pokeapiCategory": "gameplay",
+    "group": "formChange",
+    "atlasFrame": "reveal_glass",
+    "required": false
+  },
+  "REVIVE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.REVIVE",
+    "pokeapiIdentifier": "revive",
+    "pokeapiCategory": "revival",
+    "group": "modifier",
+    "atlasFrame": "revive",
+    "required": false
+  },
+  "REVIVER_SEED": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.REVIVER_SEED",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "reviver_seed",
+    "required": false
+  },
+  "RIBBON_SWEET": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "ribbon-sweet",
+    "pokeapiCategory": "evolution",
+    "group": "pokeapi:evolution",
+    "atlasFrame": "ribbon_sweet",
+    "required": false
+  },
+  "RING_TARGET": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "ring-target",
+    "pokeapiCategory": "held-items",
+    "group": "pokeapi:held-items",
+    "atlasFrame": "ring_target",
+    "required": false
+  },
+  "ROCK_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "rock-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "rock_gem",
+    "required": false
+  },
+  "ROCK_INCENSE": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "rock-incense",
+    "pokeapiCategory": "type-enhancement",
+    "group": "pokeapi:type-enhancement",
+    "atlasFrame": "rock_incense",
+    "required": false
+  },
+  "ROCK_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.ROCK_MEMORY",
+    "pokeapiIdentifier": "rock-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "rock_memory",
+    "required": false
+  },
+  "ROCK_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.rock",
+    "pokeapiIdentifier": "rock-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "rock_tera_shard",
+    "required": false
+  },
+  "ROGUE_BALL": {
+    "pokerogueLocaleKey": "pokeball:rogueBall",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "ball",
+    "atlasFrame": "rb",
+    "required": false
+  },
+  "ROOM_SERVICE": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "room-service",
+    "pokeapiCategory": "held-items",
+    "group": "pokeapi:held-items",
+    "atlasFrame": "room_service",
+    "required": false
+  },
+  "ROSE_INCENSE": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "rose-incense",
+    "pokeapiCategory": "type-enhancement",
+    "group": "pokeapi:type-enhancement",
+    "atlasFrame": "rose_incense",
+    "required": false
+  },
+  "RUSTED_SHIELD": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.RUSTED_SHIELD",
+    "pokeapiIdentifier": "rusted-shield",
+    "pokeapiCategory": "species-specific",
+    "group": "formChange",
+    "atlasFrame": "rusted_shield",
+    "required": false
+  },
+  "RUSTED_SWORD": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.RUSTED_SWORD",
+    "pokeapiIdentifier": "rusted-sword",
+    "pokeapiCategory": "species-specific",
+    "group": "formChange",
+    "atlasFrame": "rusted_sword",
+    "required": false
+  },
+  "SABLENITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SABLENITE",
+    "pokeapiIdentifier": "sablenite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "sablenite",
+    "required": false
+  },
+  "SACHET": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.SACHET",
+    "pokeapiIdentifier": "sachet",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "sachet",
+    "required": false
+  },
+  "SACRED_ASH": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.SACRED_ASH",
+    "pokeapiIdentifier": "sacred-ash",
+    "pokeapiCategory": "revival",
+    "group": "modifier",
+    "atlasFrame": "sacred_ash",
+    "required": false
+  },
+  "SALAMENCITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SALAMENCITE",
+    "pokeapiIdentifier": "salamencite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "salamencite",
+    "required": false
+  },
+  "SCRAFTINITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SCRAFTINITE",
+    "pokeapiIdentifier": "scraftinite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "scraftinite",
+    "required": false
+  },
+  "SCROLL_OF_DARKNESS": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.SCROLL_OF_DARKNESS",
+    "pokeapiIdentifier": "scroll-of-darkness",
+    "pokeapiCategory": "gameplay",
+    "group": "evolution",
+    "atlasFrame": "scroll_of_darkness",
+    "required": false
+  },
+  "SCROLL_OF_WATERS": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.SCROLL_OF_WATERS",
+    "pokeapiIdentifier": "scroll-of-waters",
+    "pokeapiCategory": "gameplay",
+    "group": "evolution",
+    "atlasFrame": "scroll_of_waters",
+    "required": false
+  },
+  "SEA_INCENSE": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "sea-incense",
+    "pokeapiCategory": "type-enhancement",
+    "group": "pokeapi:type-enhancement",
+    "atlasFrame": "sea_incense",
+    "required": false
+  },
+  "SHADOW_REINS_OF_UNITY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SHADOW_REINS_OF_UNITY",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "formChange",
+    "atlasFrame": "shadow_reins_of_unity",
+    "required": false
+  },
+  "SHARPEDONITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SHARPEDONITE",
+    "pokeapiIdentifier": "sharpedonite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "sharpedonite",
+    "required": false
+  },
+  "SHARP_METEORITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SHARP_METEORITE",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "formChange",
+    "atlasFrame": "sharp_meteorite",
+    "required": false
+  },
+  "SHED_SHELL": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "shed-shell",
+    "pokeapiCategory": "held-items",
+    "group": "pokeapi:held-items",
+    "atlasFrame": "shed_shell",
+    "required": false
+  },
+  "SHINY_CHARM": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.SHINY_CHARM",
+    "pokeapiIdentifier": "shiny-charm",
+    "pokeapiCategory": "gameplay",
+    "group": "modifier",
+    "atlasFrame": "shiny_charm",
+    "required": false
+  },
+  "SHOCK_DRIVE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SHOCK_DRIVE",
+    "pokeapiIdentifier": "shock-drive",
+    "pokeapiCategory": "species-specific",
+    "group": "formChange",
+    "atlasFrame": "shock_drive",
+    "required": false
+  },
+  "SLOWBRONITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SLOWBRONITE",
+    "pokeapiIdentifier": "slowbronite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "slowbronite",
+    "required": false
+  },
+  "SMOKE_BALL": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "smoke-ball",
+    "pokeapiCategory": "held-items",
+    "group": "pokeapi:held-items",
+    "atlasFrame": "smoke_ball",
+    "required": false
+  },
+  "SMOOTH_METEORITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.SMOOTH_METEORITE",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "formChange",
+    "atlasFrame": "smooth_meteorite",
+    "required": false
+  },
+  "SNORLIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "snorlium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "snorlium_z",
+    "required": false
+  },
+  "SNOWBALL": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "snowball",
+    "pokeapiCategory": "held-items",
+    "group": "pokeapi:held-items",
+    "atlasFrame": "snowball",
+    "required": false
+  },
+  "SOLGANIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "solganium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "solganium_z",
+    "required": false
+  },
+  "STARAPTITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.STARAPTITE",
+    "pokeapiIdentifier": "staraptite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "staraptite",
+    "required": false
+  },
+  "STARMINITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.STARMINITE",
+    "pokeapiIdentifier": "starminite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "starminite",
+    "required": false
+  },
+  "STAR_SWEET": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "star-sweet",
+    "pokeapiCategory": "evolution",
+    "group": "pokeapi:evolution",
+    "atlasFrame": "star_sweet",
+    "required": false
+  },
+  "STEEL_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "steel-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "steel_gem",
+    "required": false
+  },
+  "STEEL_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.STEEL_MEMORY",
+    "pokeapiIdentifier": "steel-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "steel_memory",
+    "required": false
+  },
+  "STEEL_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.steel",
+    "pokeapiIdentifier": "steel-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "steel_tera_shard",
+    "required": false
+  },
+  "STELLAR_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.stellar",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "teraShard",
+    "atlasFrame": "stellar_tera_shard",
+    "required": false
+  },
+  "STICK": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "stick",
+    "pokeapiCategory": "species-specific",
+    "group": "pokeapi:species-specific",
+    "atlasFrame": "stick",
+    "required": false
+  },
+  "STICKY_BARB": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "sticky-barb",
+    "pokeapiCategory": "bad-held-items",
+    "group": "pokeapi:bad-held-items",
+    "atlasFrame": "sticky_barb",
+    "required": false
+  },
+  "STRAWBERRY_SWEET": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.STRAWBERRY_SWEET",
+    "pokeapiIdentifier": "strawberry-sweet",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "strawberry_sweet",
+    "required": false
+  },
+  "SUN_FLUTE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.SUN_FLUTE",
+    "pokeapiIdentifier": "sun-flute",
+    "pokeapiCategory": "plot-advancement",
+    "group": "evolution",
+    "atlasFrame": "sun_flute",
+    "required": false
+  },
+  "SUPER_EXP_CHARM": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.SUPER_EXP_CHARM",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "modifier",
+    "atlasFrame": "super_exp_charm",
+    "required": false
+  },
+  "SUPER_LURE": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.SUPER_LURE",
+    "pokeapiIdentifier": "super-lure",
+    "pokeapiCategory": "spelunking",
+    "group": "modifier",
+    "atlasFrame": "super_lure",
+    "required": false
+  },
+  "SUPER_POTION": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.SUPER_POTION",
+    "pokeapiIdentifier": "super-potion",
+    "pokeapiCategory": "healing",
+    "group": "modifier",
+    "atlasFrame": "super_potion",
+    "required": false
+  },
+  "SWEET_APPLE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.SWEET_APPLE",
+    "pokeapiIdentifier": "sweet-apple",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "sweet_apple",
+    "required": false
+  },
+  "SYRUPY_APPLE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.SYRUPY_APPLE",
+    "pokeapiIdentifier": "syrupy-apple",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "syrupy_apple",
+    "required": false
+  },
+  "TAPUNIUM_Z": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "tapunium-z--held",
+    "pokeapiCategory": "z-crystals",
+    "group": "zCrystal",
+    "atlasFrame": "tapunium_z",
+    "required": false
+  },
+  "TART_APPLE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.TART_APPLE",
+    "pokeapiIdentifier": "tart-apple",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "tart_apple",
+    "required": false
+  },
+  "TATSUGIRINITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.TATSUGIRINITE",
+    "pokeapiIdentifier": "tatsugirinite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "tatsugirinite",
+    "required": false
+  },
+  "THICK_CLUB": {
+    "pokerogueLocaleKey": "modifierType:SpeciesBoosterItem.THICK_CLUB",
+    "pokeapiIdentifier": "thick-club",
+    "pokeapiCategory": "species-specific",
+    "group": "speciesBooster",
+    "atlasFrame": "thick_club",
+    "required": false
+  },
+  "ULTRANECROZIUM_Z": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.ULTRANECROZIUM_Z",
+    "pokeapiIdentifier": "ultranecrozium-z--held",
+    "pokeapiCategory": "unused",
+    "group": "formChange",
+    "atlasFrame": "ultranecrozium_z",
+    "required": false
+  },
+  "UNREMARKABLE_TEACUP": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.UNREMARKABLE_TEACUP",
+    "pokeapiIdentifier": "unremarkable-teacup",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "unremarkable_teacup",
+    "required": false
+  },
+  "UPGRADE": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.UPGRADE",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "evolution",
+    "atlasFrame": "upgrade",
+    "required": false
+  },
+  "UP_GRADE": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "up-grade",
+    "pokeapiCategory": "evolution",
+    "group": "pokeapi:evolution",
+    "atlasFrame": "up_grade",
+    "required": false
+  },
+  "VICTREEBELITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.VICTREEBELITE",
+    "pokeapiIdentifier": "victreebelite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "victreebelite",
+    "required": false
+  },
+  "VOUCHER_GOLDEN": {
+    "pokerogueLocaleKey": "voucher:eggVoucherGold",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "voucher",
+    "atlasFrame": "golden_mystic_ticket",
+    "required": false
+  },
+  "VOUCHER_PLUS": {
+    "pokerogueLocaleKey": "voucher:eggVoucherPlus",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "voucher",
+    "atlasFrame": "pair_of_tickets",
+    "required": false
+  },
+  "VOUCHER_PREMIUM": {
+    "pokerogueLocaleKey": "voucher:eggVoucherPremium",
+    "pokeapiIdentifier": null,
+    "pokeapiCategory": null,
+    "group": "voucher",
+    "atlasFrame": "mystic_ticket",
+    "required": false
+  },
+  "WATER_GEM": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "water-gem",
+    "pokeapiCategory": "jewels",
+    "group": "pokeapi:jewels",
+    "atlasFrame": "water_gem",
+    "required": false
+  },
+  "WATER_MEMORY": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.WATER_MEMORY",
+    "pokeapiIdentifier": "water-memory",
+    "pokeapiCategory": "memories",
+    "group": "formChange",
+    "atlasFrame": "water_memory",
+    "required": false
+  },
+  "WATER_TERA_SHARD": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.water",
+    "pokeapiIdentifier": "water-tera-shard",
+    "pokeapiCategory": "tera-shard",
+    "group": "teraShard",
+    "atlasFrame": "water_tera_shard",
+    "required": false
+  },
+  "WAVE_INCENSE": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "wave-incense",
+    "pokeapiCategory": "type-enhancement",
+    "group": "pokeapi:type-enhancement",
+    "atlasFrame": "wave_incense",
+    "required": false
+  },
+  "WELLSPRING_MASK": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.WELLSPRING_MASK",
+    "pokeapiIdentifier": "wellspring-mask",
+    "pokeapiCategory": "held-items",
+    "group": "formChange",
+    "atlasFrame": "wellspring_mask",
+    "required": false
+  },
+  "WHIPPED_DREAM": {
+    "pokerogueLocaleKey": "modifierType:EvolutionItem.WHIPPED_DREAM",
+    "pokeapiIdentifier": "whipped-dream",
+    "pokeapiCategory": "evolution",
+    "group": "evolution",
+    "atlasFrame": "whipped_dream",
+    "required": false
+  },
+  "WIKI_BERRY": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "wiki-berry",
+    "pokeapiCategory": "picky-healing",
+    "group": "pokeapi:picky-healing",
+    "atlasFrame": "wiki_berry",
+    "required": false
+  },
+  "X_ACCURACY": {
+    "pokerogueLocaleKey": "modifierType:TempStatStageBoosterItem.x_accuracy",
+    "pokeapiIdentifier": "x-accuracy",
+    "pokeapiCategory": "stat-boosts",
+    "group": "xItem",
+    "atlasFrame": "x_accuracy",
+    "required": false
+  },
+  "X_ATTACK": {
+    "pokerogueLocaleKey": "modifierType:TempStatStageBoosterItem.x_attack",
+    "pokeapiIdentifier": "x-attack",
+    "pokeapiCategory": "stat-boosts",
+    "group": "xItem",
+    "atlasFrame": "x_attack",
+    "required": false
+  },
+  "X_DEFENSE": {
+    "pokerogueLocaleKey": "modifierType:TempStatStageBoosterItem.x_defense",
+    "pokeapiIdentifier": "x-defense",
+    "pokeapiCategory": "stat-boosts",
+    "group": "xItem",
+    "atlasFrame": "x_defense",
+    "required": false
+  },
+  "X_SPEED": {
+    "pokerogueLocaleKey": "modifierType:TempStatStageBoosterItem.x_speed",
+    "pokeapiIdentifier": "x-speed",
+    "pokeapiCategory": "stat-boosts",
+    "group": "xItem",
+    "atlasFrame": "x_speed",
+    "required": false
+  },
+  "X_SP_ATK": {
+    "pokerogueLocaleKey": "modifierType:TempStatStageBoosterItem.x_sp_atk",
+    "pokeapiIdentifier": "x-sp-atk",
+    "pokeapiCategory": "stat-boosts",
+    "group": "xItem",
+    "atlasFrame": "x_sp_atk",
+    "required": false
+  },
+  "X_SP_DEF": {
+    "pokerogueLocaleKey": "modifierType:TempStatStageBoosterItem.x_sp_def",
+    "pokeapiIdentifier": "x-sp-def",
+    "pokeapiCategory": "stat-boosts",
+    "group": "xItem",
+    "atlasFrame": "x_sp_def",
+    "required": false
+  },
+  "YELLOW_NECTAR": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "yellow-nectar",
+    "pokeapiCategory": "species-specific",
+    "group": "pokeapi:species-specific",
+    "atlasFrame": "yellow_nectar",
+    "required": false
+  },
+  "ZERAORITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.ZERAORITE",
+    "pokeapiIdentifier": "zeraorite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "zeraorite",
+    "required": false
+  },
+  "ZINC": {
+    "pokerogueLocaleKey": "modifierType:BaseStatBoosterItem.zinc",
+    "pokeapiIdentifier": "zinc",
+    "pokeapiCategory": "vitamins",
+    "group": "vitamin",
+    "atlasFrame": "zinc",
+    "required": false
+  },
+  "ZYGARDITE": {
+    "pokerogueLocaleKey": "modifierType:FormChangeItem.ZYGARDITE",
+    "pokeapiIdentifier": "zygardite",
+    "pokeapiCategory": "mega-stones",
+    "group": "formChange",
+    "atlasFrame": "zygardite",
+    "required": false
+  }
+}

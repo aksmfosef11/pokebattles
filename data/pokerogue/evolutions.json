@@ -1,0 +1,8441 @@
+{
+  "BULBASAUR": [
+    {
+      "to": "IVYSAUR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "IVYSAUR": [
+    {
+      "to": "VENUSAUR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CHARMANDER": [
+    {
+      "to": "CHARMELEON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CHARMELEON": [
+    {
+      "to": "CHARIZARD",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SQUIRTLE": [
+    {
+      "to": "WARTORTLE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "WARTORTLE": [
+    {
+      "to": "BLASTOISE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CATERPIE": [
+    {
+      "to": "METAPOD",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 7,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "METAPOD": [
+    {
+      "to": "BUTTERFREE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 10,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "WEEDLE": [
+    {
+      "to": "KAKUNA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 7,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "KAKUNA": [
+    {
+      "to": "BEEDRILL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 10,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PIDGEY": [
+    {
+      "to": "PIDGEOTTO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 18,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PIDGEOTTO": [
+    {
+      "to": "PIDGEOT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "RATTATA": [
+    {
+      "to": "RATICATE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SPEAROW": [
+    {
+      "to": "FEAROW",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "EKANS": [
+    {
+      "to": "ARBOK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 22,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PIKACHU": [
+    {
+      "to": "ALOLA_RAICHU",
+      "preFormKey": "",
+      "evoFormKey": "",
+      "level": 1,
+      "item": "SHINY_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "ALOLA_RAICHU",
+      "preFormKey": "partner",
+      "evoFormKey": "",
+      "level": 1,
+      "item": "SHINY_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "RAICHU",
+      "preFormKey": "",
+      "evoFormKey": "",
+      "level": 1,
+      "item": "THUNDER_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "RAICHU",
+      "preFormKey": "partner",
+      "evoFormKey": "",
+      "level": 1,
+      "item": "THUNDER_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "SANDSHREW": [
+    {
+      "to": "SANDSLASH",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 22,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "NIDORAN_F": [
+    {
+      "to": "NIDORINA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "NIDORINA": [
+    {
+      "to": "NIDOQUEEN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "MOON_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        32,
+        36,
+        42
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "NIDORAN_M": [
+    {
+      "to": "NIDORINO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "NIDORINO": [
+    {
+      "to": "NIDOKING",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "MOON_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        32,
+        36,
+        42
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CLEFAIRY": [
+    {
+      "to": "CLEFABLE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "MOON_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        32,
+        32,
+        36
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "VULPIX": [
+    {
+      "to": "NINETALES",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "FIRE_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "JIGGLYPUFF": [
+    {
+      "to": "WIGGLYTUFF",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "MOON_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ZUBAT": [
+    {
+      "to": "GOLBAT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 22,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GOLBAT": [
+    {
+      "to": "CROBAT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.FRIENDSHIP, value: 120 }",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 120
+        }
+      ],
+      "evoDelay": [
+        42,
+        48,
+        54
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ODDISH": [
+    {
+      "to": "GLOOM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 21,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GLOOM": [
+    {
+      "to": "VILEPLUME",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LEAF_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "BELLOSSOM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "SUN_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PARAS": [
+    {
+      "to": "PARASECT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 24,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "VENONAT": [
+    {
+      "to": "VENOMOTH",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 31,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DIGLETT": [
+    {
+      "to": "DUGTRIO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 26,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MEOWTH": [
+    {
+      "to": "PERSIAN",
+      "preFormKey": "",
+      "evoFormKey": "",
+      "level": 28,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "PSYDUCK": [
+    {
+      "to": "GOLDUCK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 33,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MANKEY": [
+    {
+      "to": "PRIMEAPE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 28,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PRIMEAPE": [
+    {
+      "to": "ANNIHILAPE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": "{ key: EvoCondKey.MOVE, move: MoveId.RAGE_FIST }",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "RAGE_FIST"
+        }
+      ],
+      "evoDelay": [
+        45,
+        55,
+        65
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GROWLITHE": [
+    {
+      "to": "ARCANINE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "FIRE_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "POLIWAG": [
+    {
+      "to": "POLIWHIRL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "POLIWHIRL": [
+    {
+      "to": "POLIWRATH",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "WATER_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "POLITOED",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ABRA": [
+    {
+      "to": "KADABRA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "KADABRA": [
+    {
+      "to": "ALAKAZAM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        40,
+        45,
+        50
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MACHOP": [
+    {
+      "to": "MACHOKE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 28,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MACHOKE": [
+    {
+      "to": "MACHAMP",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        38,
+        46,
+        54
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BELLSPROUT": [
+    {
+      "to": "WEEPINBELL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 21,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "WEEPINBELL": [
+    {
+      "to": "VICTREEBEL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LEAF_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        31,
+        36,
+        41
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TENTACOOL": [
+    {
+      "to": "TENTACRUEL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GEODUDE": [
+    {
+      "to": "GRAVELER",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GRAVELER": [
+    {
+      "to": "GOLEM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        35,
+        45,
+        55
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PONYTA": [
+    {
+      "to": "RAPIDASH",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 40,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SLOWPOKE": [
+    {
+      "to": "SLOWBRO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 37,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "SLOWKING",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        37,
+        37,
+        37
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MAGNEMITE": [
+    {
+      "to": "MAGNETON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MAGNETON": [
+    {
+      "to": "MAGNEZONE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "THUNDER_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        50,
+        55,
+        60
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DODUO": [
+    {
+      "to": "DODRIO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 31,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SEEL": [
+    {
+      "to": "DEWGONG",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 34,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GRIMER": [
+    {
+      "to": "MUK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 38,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SHELLDER": [
+    {
+      "to": "CLOYSTER",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "WATER_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        36,
+        40,
+        44
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GASTLY": [
+    {
+      "to": "HAUNTER",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HAUNTER": [
+    {
+      "to": "GENGAR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        40,
+        45,
+        50
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ONIX": [
+    {
+      "to": "STEELIX",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": "{ key: EvoCondKey.MOVE_TYPE, pkmnType: PokemonType.STEEL }",
+      "conditionData": [
+        {
+          "key": "MOVE_TYPE",
+          "pkmnType": "STEEL"
+        }
+      ],
+      "evoDelay": [
+        35,
+        40,
+        45
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DROWZEE": [
+    {
+      "to": "HYPNO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 26,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "KRABBY": [
+    {
+      "to": "KINGLER",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 28,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "VOLTORB": [
+    {
+      "to": "ELECTRODE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "EXEGGCUTE": [
+    {
+      "to": "ALOLA_EXEGGUTOR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "SUN_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        35,
+        40,
+        40
+      ],
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "EXEGGUTOR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LEAF_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        35,
+        40,
+        40
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CUBONE": [
+    {
+      "to": "ALOLA_MAROWAK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 28,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "MAROWAK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 28,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "LICKITUNG": [
+    {
+      "to": "LICKILICKY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 33,
+      "item": null,
+      "condition": "{ key: EvoCondKey.MOVE, move: MoveId.ROLLOUT }",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "ROLLOUT"
+        }
+      ],
+      "evoDelay": [
+        33,
+        38,
+        48
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "KOFFING": [
+    {
+      "to": "GALAR_WEEZING",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "WEEZING",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "RHYHORN": [
+    {
+      "to": "RHYDON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 42,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "RHYDON": [
+    {
+      "to": "RHYPERIOR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "PROTECTOR",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        72,
+        82,
+        92
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CHANSEY": [
+    {
+      "to": "BLISSEY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.FRIENDSHIP, value: 180 }",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 180
+        }
+      ],
+      "evoDelay": [
+        40,
+        45,
+        45
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TANGELA": [
+    {
+      "to": "TANGROWTH",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 33,
+      "item": null,
+      "condition": "{ key: EvoCondKey.MOVE, move: MoveId.ANCIENT_POWER }",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "ANCIENT_POWER"
+        }
+      ],
+      "evoDelay": [
+        33,
+        39,
+        45
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HORSEA": [
+    {
+      "to": "SEADRA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SEADRA": [
+    {
+      "to": "KINGDRA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "DRAGON_SCALE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        42,
+        52,
+        62
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GOLDEEN": [
+    {
+      "to": "SEAKING",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 33,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "STARYU": [
+    {
+      "to": "STARMIE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "WATER_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        20,
+        25,
+        30
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SCYTHER": [
+    {
+      "to": "SCIZOR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": "{ key: EvoCondKey.MOVE_TYPE, pkmnType: PokemonType.STEEL }",
+      "conditionData": [
+        {
+          "key": "MOVE_TYPE",
+          "pkmnType": "STEEL"
+        }
+      ],
+      "evoDelay": [
+        40,
+        50,
+        60
+      ],
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "KLEAVOR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "BLACK_AUGURITE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        40,
+        50,
+        60
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ELECTABUZZ": [
+    {
+      "to": "ELECTIVIRE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "ELECTIRIZER",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        50,
+        60,
+        70
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MAGMAR": [
+    {
+      "to": "MAGMORTAR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "MAGMARIZER",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        50,
+        60,
+        70
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MAGIKARP": [
+    {
+      "to": "GYARADOS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "EEVEE": [
+    {
+      "to": "SYLVEON",
+      "preFormKey": "",
+      "evoFormKey": "",
+      "level": 1,
+      "item": null,
+      "condition": "[ { key: EvoCondKey.FRIENDSHIP, value: 120 }, { key: EvoCondKey.MOVE_TYPE, pkmnType: PokemonType.FAIRY }, ]",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 120
+        },
+        {
+          "key": "MOVE_TYPE",
+          "pkmnType": "FAIRY"
+        }
+      ],
+      "evoDelay": [
+        24,
+        28,
+        28
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "SYLVEON",
+      "preFormKey": "partner",
+      "evoFormKey": "",
+      "level": 1,
+      "item": null,
+      "condition": "[ { key: EvoCondKey.FRIENDSHIP, value: 120 }, { key: EvoCondKey.MOVE_TYPE, pkmnType: PokemonType.FAIRY }, ]",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 120
+        },
+        {
+          "key": "MOVE_TYPE",
+          "pkmnType": "FAIRY"
+        }
+      ],
+      "evoDelay": [
+        24,
+        28,
+        28
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "ESPEON",
+      "preFormKey": "",
+      "evoFormKey": "",
+      "level": 1,
+      "item": null,
+      "condition": "[ { key: EvoCondKey.FRIENDSHIP, value: 120 }, { key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY] }, ]",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 120
+        },
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": [
+        24,
+        28,
+        28
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "ESPEON",
+      "preFormKey": "partner",
+      "evoFormKey": "",
+      "level": 1,
+      "item": null,
+      "condition": "[ { key: EvoCondKey.FRIENDSHIP, value: 120 }, { key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY] }, ]",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 120
+        },
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": [
+        24,
+        28,
+        28
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "UMBREON",
+      "preFormKey": "",
+      "evoFormKey": "",
+      "level": 1,
+      "item": null,
+      "condition": "[ { key: EvoCondKey.FRIENDSHIP, value: 120 }, { key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT] }, ]",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 120
+        },
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": [
+        24,
+        28,
+        28
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "UMBREON",
+      "preFormKey": "partner",
+      "evoFormKey": "",
+      "level": 1,
+      "item": null,
+      "condition": "[ { key: EvoCondKey.FRIENDSHIP, value: 120 }, { key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT] }, ]",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 120
+        },
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": [
+        24,
+        28,
+        28
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "VAPOREON",
+      "preFormKey": "",
+      "evoFormKey": "",
+      "level": 1,
+      "item": "WATER_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        28,
+        28
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "VAPOREON",
+      "preFormKey": "partner",
+      "evoFormKey": "",
+      "level": 1,
+      "item": "WATER_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        28,
+        28
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "JOLTEON",
+      "preFormKey": "",
+      "evoFormKey": "",
+      "level": 1,
+      "item": "THUNDER_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        28,
+        28
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "JOLTEON",
+      "preFormKey": "partner",
+      "evoFormKey": "",
+      "level": 1,
+      "item": "THUNDER_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        28,
+        28
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "FLAREON",
+      "preFormKey": "",
+      "evoFormKey": "",
+      "level": 1,
+      "item": "FIRE_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        28,
+        28
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "FLAREON",
+      "preFormKey": "partner",
+      "evoFormKey": "",
+      "level": 1,
+      "item": "FIRE_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        28,
+        28
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "LEAFEON",
+      "preFormKey": "",
+      "evoFormKey": "",
+      "level": 1,
+      "item": "LEAF_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        28,
+        28
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "LEAFEON",
+      "preFormKey": "partner",
+      "evoFormKey": "",
+      "level": 1,
+      "item": "LEAF_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        28,
+        28
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "GLACEON",
+      "preFormKey": "",
+      "evoFormKey": "",
+      "level": 1,
+      "item": "ICE_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        28,
+        28
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "GLACEON",
+      "preFormKey": "partner",
+      "evoFormKey": "",
+      "level": 1,
+      "item": "ICE_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        28,
+        28
+      ],
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "PORYGON": [
+    {
+      "to": "PORYGON2",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "UPGRADE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        32,
+        40,
+        48
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "OMANYTE": [
+    {
+      "to": "OMASTAR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 40,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "KABUTO": [
+    {
+      "to": "KABUTOPS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 40,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DRATINI": [
+    {
+      "to": "DRAGONAIR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DRAGONAIR": [
+    {
+      "to": "DRAGONITE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 55,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CHIKORITA": [
+    {
+      "to": "BAYLEEF",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BAYLEEF": [
+    {
+      "to": "MEGANIUM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CYNDAQUIL": [
+    {
+      "to": "QUILAVA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 14,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "QUILAVA": [
+    {
+      "to": "HISUI_TYPHLOSION",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "TYPHLOSION",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TOTODILE": [
+    {
+      "to": "CROCONAW",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 18,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CROCONAW": [
+    {
+      "to": "FERALIGATR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SENTRET": [
+    {
+      "to": "FURRET",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 15,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HOOTHOOT": [
+    {
+      "to": "NOCTOWL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "LEDYBA": [
+    {
+      "to": "LEDIAN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 18,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SPINARAK": [
+    {
+      "to": "ARIADOS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 22,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CHINCHOU": [
+    {
+      "to": "LANTURN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 27,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PICHU": [
+    {
+      "to": "PIKACHU",
+      "preFormKey": "spiky",
+      "evoFormKey": "partner",
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.FRIENDSHIP, value: 90 }",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 90
+        }
+      ],
+      "evoDelay": [
+        12,
+        12,
+        16
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "PIKACHU",
+      "preFormKey": "",
+      "evoFormKey": "",
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.FRIENDSHIP, value: 90 }",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 90
+        }
+      ],
+      "evoDelay": [
+        12,
+        12,
+        16
+      ],
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "CLEFFA": [
+    {
+      "to": "CLEFAIRY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.FRIENDSHIP, value: 160 }",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 160
+        }
+      ],
+      "evoDelay": [
+        12,
+        12,
+        16
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "IGGLYBUFF": [
+    {
+      "to": "JIGGLYPUFF",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.FRIENDSHIP, value: 70 }",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 70
+        }
+      ],
+      "evoDelay": [
+        12,
+        12,
+        16
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TOGEPI": [
+    {
+      "to": "TOGETIC",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.FRIENDSHIP, value: 70 }",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 70
+        }
+      ],
+      "evoDelay": [
+        20,
+        25,
+        25
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TOGETIC": [
+    {
+      "to": "TOGEKISS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "SHINY_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        40,
+        45,
+        50
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "NATU": [
+    {
+      "to": "XATU",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MAREEP": [
+    {
+      "to": "FLAAFFY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 15,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FLAAFFY": [
+    {
+      "to": "AMPHAROS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MARILL": [
+    {
+      "to": "AZUMARILL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 18,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HOPPIP": [
+    {
+      "to": "SKIPLOOM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 18,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SKIPLOOM": [
+    {
+      "to": "JUMPLUFF",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 27,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "AIPOM": [
+    {
+      "to": "AMBIPOM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": "{ key: EvoCondKey.MOVE, move: MoveId.DOUBLE_HIT }",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "DOUBLE_HIT"
+        }
+      ],
+      "evoDelay": [
+        33,
+        38,
+        38
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SUNKERN": [
+    {
+      "to": "SUNFLORA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "SUN_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        16,
+        18,
+        20
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "YANMA": [
+    {
+      "to": "YANMEGA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 33,
+      "item": null,
+      "condition": "{ key: EvoCondKey.MOVE, move: MoveId.ANCIENT_POWER }",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "ANCIENT_POWER"
+        }
+      ],
+      "evoDelay": [
+        34,
+        42,
+        50
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "WOOPER": [
+    {
+      "to": "QUAGSIRE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MURKROW": [
+    {
+      "to": "HONCHKROW",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "DUSK_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        26,
+        32,
+        38
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MISDREAVUS": [
+    {
+      "to": "MISMAGIUS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "DUSK_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        22,
+        26,
+        30
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GIRAFARIG": [
+    {
+      "to": "FARIGIRAF",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": "{ key: EvoCondKey.MOVE, move: MoveId.TWIN_BEAM }",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "TWIN_BEAM"
+        }
+      ],
+      "evoDelay": [
+        33,
+        38,
+        48
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PINECO": [
+    {
+      "to": "FORRETRESS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 31,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DUNSPARCE": [
+    {
+      "to": "DUDUNSPARCE",
+      "preFormKey": "",
+      "evoFormKey": "three-segment",
+      "level": 32,
+      "item": null,
+      "condition": "[ { key: EvoCondKey.RANDOM_FORM, value: 4 }, { key: EvoCondKey.MOVE, move: MoveId.HYPER_DRILL }, ]",
+      "conditionData": [
+        {
+          "key": "RANDOM_FORM",
+          "value": 4
+        },
+        {
+          "key": "MOVE",
+          "move": "HYPER_DRILL"
+        }
+      ],
+      "evoDelay": [
+        33,
+        38,
+        48
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "DUDUNSPARCE",
+      "preFormKey": "",
+      "evoFormKey": "two-segment",
+      "level": 32,
+      "item": null,
+      "condition": "{ key: EvoCondKey.MOVE, move: MoveId.HYPER_DRILL }",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "HYPER_DRILL"
+        }
+      ],
+      "evoDelay": [
+        33,
+        38,
+        48
+      ],
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "GLIGAR": [
+    {
+      "to": "GLISCOR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "RAZOR_FANG",
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT] }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": [
+        48,
+        56,
+        64
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SNUBBULL": [
+    {
+      "to": "GRANBULL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 23,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SNEASEL": [
+    {
+      "to": "WEAVILE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "RAZOR_CLAW",
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT] }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": [
+        48,
+        56,
+        64
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TEDDIURSA": [
+    {
+      "to": "URSARING",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "URSARING": [
+    {
+      "to": "URSALUNA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "PEAT_BLOCK",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        70,
+        85,
+        100
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SLUGMA": [
+    {
+      "to": "MAGCARGO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 38,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SWINUB": [
+    {
+      "to": "PILOSWINE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 33,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PILOSWINE": [
+    {
+      "to": "MAMOSWINE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 33,
+      "item": null,
+      "condition": "{ key: EvoCondKey.MOVE, move: MoveId.ANCIENT_POWER }",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "ANCIENT_POWER"
+        }
+      ],
+      "evoDelay": [
+        48,
+        56,
+        64
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "REMORAID": [
+    {
+      "to": "OCTILLERY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HOUNDOUR": [
+    {
+      "to": "HOUNDOOM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 24,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PHANPY": [
+    {
+      "to": "DONPHAN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PORYGON2": [
+    {
+      "to": "PORYGON_Z",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "DUBIOUS_DISC",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        64,
+        72,
+        80
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "STANTLER": [
+    {
+      "to": "WYRDEER",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 31,
+      "item": null,
+      "condition": "{ key: EvoCondKey.MOVE, move: MoveId.PSYSHIELD_BASH }",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "PSYSHIELD_BASH"
+        }
+      ],
+      "evoDelay": [
+        35,
+        45,
+        55
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TYROGUE": [
+    {
+      "to": "HITMONLEE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TYROGUE, move: MoveId.LOW_SWEEP }",
+      "conditionData": [
+        {
+          "key": "TYROGUE",
+          "move": "LOW_SWEEP"
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "HITMONCHAN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TYROGUE, move: MoveId.MACH_PUNCH }",
+      "conditionData": [
+        {
+          "key": "TYROGUE",
+          "move": "MACH_PUNCH"
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "HITMONTOP",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TYROGUE, move: MoveId.RAPID_SPIN }",
+      "conditionData": [
+        {
+          "key": "TYROGUE",
+          "move": "RAPID_SPIN"
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SMOOCHUM": [
+    {
+      "to": "JYNX",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ELEKID": [
+    {
+      "to": "ELECTABUZZ",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MAGBY": [
+    {
+      "to": "MAGMAR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "LARVITAR": [
+    {
+      "to": "PUPITAR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PUPITAR": [
+    {
+      "to": "TYRANITAR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 55,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TREECKO": [
+    {
+      "to": "GROVYLE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GROVYLE": [
+    {
+      "to": "SCEPTILE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TORCHIC": [
+    {
+      "to": "COMBUSKEN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "COMBUSKEN": [
+    {
+      "to": "BLAZIKEN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MUDKIP": [
+    {
+      "to": "MARSHTOMP",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MARSHTOMP": [
+    {
+      "to": "SWAMPERT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "POOCHYENA": [
+    {
+      "to": "MIGHTYENA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 18,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ZIGZAGOON": [
+    {
+      "to": "LINOONE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "WURMPLE": [
+    {
+      "to": "SILCOON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 7,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY] }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "CASCOON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 7,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SILCOON": [
+    {
+      "to": "BEAUTIFLY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 10,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CASCOON": [
+    {
+      "to": "DUSTOX",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 10,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "LOTAD": [
+    {
+      "to": "LOMBRE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 14,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "LOMBRE": [
+    {
+      "to": "LUDICOLO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "WATER_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        35,
+        42,
+        49
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SEEDOT": [
+    {
+      "to": "NUZLEAF",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 14,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "NUZLEAF": [
+    {
+      "to": "SHIFTRY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LEAF_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        35,
+        42,
+        49
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TAILLOW": [
+    {
+      "to": "SWELLOW",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 22,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "WINGULL": [
+    {
+      "to": "PELIPPER",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "RALTS": [
+    {
+      "to": "KIRLIA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "KIRLIA": [
+    {
+      "to": "GARDEVOIR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "GALLADE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "DAWN_STONE",
+      "condition": "{ key: EvoCondKey.GENDER, gender: Gender.MALE }",
+      "conditionData": [
+        {
+          "key": "GENDER",
+          "gender": "MALE"
+        }
+      ],
+      "evoDelay": [
+        30,
+        30,
+        30
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SURSKIT": [
+    {
+      "to": "MASQUERAIN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 22,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SHROOMISH": [
+    {
+      "to": "BRELOOM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 23,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SLAKOTH": [
+    {
+      "to": "VIGOROTH",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 18,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "VIGOROTH": [
+    {
+      "to": "SLAKING",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "NINCADA": [
+    {
+      "to": "NINJASK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "SHEDINJA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": "{ key: EvoCondKey.SHEDINJA }",
+      "conditionData": [
+        {
+          "key": "SHEDINJA"
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "WHISMUR": [
+    {
+      "to": "LOUDRED",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "LOUDRED": [
+    {
+      "to": "EXPLOUD",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 40,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MAKUHITA": [
+    {
+      "to": "HARIYAMA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 24,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "AZURILL": [
+    {
+      "to": "MARILL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.FRIENDSHIP, value: 70 }",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 70
+        }
+      ],
+      "evoDelay": [
+        12,
+        12,
+        12
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "NOSEPASS": [
+    {
+      "to": "PROBOPASS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "THUNDER_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        32,
+        36,
+        40
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SKITTY": [
+    {
+      "to": "DELCATTY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "MOON_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        16,
+        20,
+        20
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ARON": [
+    {
+      "to": "LAIRON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "LAIRON": [
+    {
+      "to": "AGGRON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 42,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MEDITITE": [
+    {
+      "to": "MEDICHAM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 37,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ELECTRIKE": [
+    {
+      "to": "MANECTRIC",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 26,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ROSELIA": [
+    {
+      "to": "ROSERADE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "SHINY_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        32,
+        32,
+        36
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GULPIN": [
+    {
+      "to": "SWALOT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 26,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CARVANHA": [
+    {
+      "to": "SHARPEDO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "WAILMER": [
+    {
+      "to": "WAILORD",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 40,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "NUMEL": [
+    {
+      "to": "CAMERUPT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 33,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SPOINK": [
+    {
+      "to": "GRUMPIG",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TRAPINCH": [
+    {
+      "to": "VIBRAVA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "VIBRAVA": [
+    {
+      "to": "FLYGON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 45,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CACNEA": [
+    {
+      "to": "CACTURNE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SWABLU": [
+    {
+      "to": "ALTARIA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BARBOACH": [
+    {
+      "to": "WHISCASH",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CORPHISH": [
+    {
+      "to": "CRAWDAUNT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BALTOY": [
+    {
+      "to": "CLAYDOL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "LILEEP": [
+    {
+      "to": "CRADILY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 40,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ANORITH": [
+    {
+      "to": "ARMALDO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 40,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FEEBAS": [
+    {
+      "to": "MILOTIC",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "PRISM_SCALE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SHUPPET": [
+    {
+      "to": "BANETTE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 37,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DUSKULL": [
+    {
+      "to": "DUSCLOPS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 37,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DUSCLOPS": [
+    {
+      "to": "DUSKNOIR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "REAPER_CLOTH",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        47,
+        57,
+        67
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "WYNAUT": [
+    {
+      "to": "WOBBUFFET",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 15,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SNORUNT": [
+    {
+      "to": "GLALIE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 42,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "FROSLASS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "DAWN_STONE",
+      "condition": "{ key: EvoCondKey.GENDER, gender: Gender.FEMALE }",
+      "conditionData": [
+        {
+          "key": "GENDER",
+          "gender": "FEMALE"
+        }
+      ],
+      "evoDelay": [
+        42,
+        42,
+        42
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SPHEAL": [
+    {
+      "to": "SEALEO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SEALEO": [
+    {
+      "to": "WALREIN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 44,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CLAMPERL": [
+    {
+      "to": "HUNTAIL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": "{ key: EvoCondKey.HELD_ITEM, itemKey: \"DEEP_SEA_TOOTH\" }",
+      "conditionData": [
+        {
+          "key": "HELD_ITEM",
+          "itemKey": "DEEP_SEA_TOOTH"
+        }
+      ],
+      "evoDelay": [
+        40,
+        40,
+        50
+      ],
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "GOREBYSS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": "{ key: EvoCondKey.HELD_ITEM, itemKey: \"DEEP_SEA_SCALE\" }",
+      "conditionData": [
+        {
+          "key": "HELD_ITEM",
+          "itemKey": "DEEP_SEA_SCALE"
+        }
+      ],
+      "evoDelay": [
+        40,
+        40,
+        50
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BAGON": [
+    {
+      "to": "SHELGON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SHELGON": [
+    {
+      "to": "SALAMENCE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 50,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BELDUM": [
+    {
+      "to": "METANG",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "METANG": [
+    {
+      "to": "METAGROSS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 45,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TURTWIG": [
+    {
+      "to": "GROTLE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 18,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GROTLE": [
+    {
+      "to": "TORTERRA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CHIMCHAR": [
+    {
+      "to": "MONFERNO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 14,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MONFERNO": [
+    {
+      "to": "INFERNAPE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PIPLUP": [
+    {
+      "to": "PRINPLUP",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PRINPLUP": [
+    {
+      "to": "EMPOLEON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "STARLY": [
+    {
+      "to": "STARAVIA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 14,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "STARAVIA": [
+    {
+      "to": "STARAPTOR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 34,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BIDOOF": [
+    {
+      "to": "BIBAREL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 15,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "KRICKETOT": [
+    {
+      "to": "KRICKETUNE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 10,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SHINX": [
+    {
+      "to": "LUXIO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 15,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "LUXIO": [
+    {
+      "to": "LUXRAY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BUDEW": [
+    {
+      "to": "ROSELIA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "[ { key: EvoCondKey.FRIENDSHIP, value: 70 }, { key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY] }, ]",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 70
+        },
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": [
+        12,
+        12,
+        16
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CRANIDOS": [
+    {
+      "to": "RAMPARDOS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SHIELDON": [
+    {
+      "to": "BASTIODON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BURMY": [
+    {
+      "to": "MOTHIM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": "{ key: EvoCondKey.GENDER, gender: Gender.MALE }",
+      "conditionData": [
+        {
+          "key": "GENDER",
+          "gender": "MALE"
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "WORMADAM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": "{ key: EvoCondKey.GENDER, gender: Gender.FEMALE }",
+      "conditionData": [
+        {
+          "key": "GENDER",
+          "gender": "FEMALE"
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "COMBEE": [
+    {
+      "to": "VESPIQUEN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 21,
+      "item": null,
+      "condition": "{ key: EvoCondKey.GENDER, gender: Gender.FEMALE }",
+      "conditionData": [
+        {
+          "key": "GENDER",
+          "gender": "FEMALE"
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BUIZEL": [
+    {
+      "to": "FLOATZEL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 26,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CHERUBI": [
+    {
+      "to": "CHERRIM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SHELLOS": [
+    {
+      "to": "GASTRODON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DRIFLOON": [
+    {
+      "to": "DRIFBLIM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 28,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BUNEARY": [
+    {
+      "to": "LOPUNNY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.FRIENDSHIP, value: 50 }",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 50
+        }
+      ],
+      "evoDelay": [
+        25,
+        25,
+        30
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GLAMEOW": [
+    {
+      "to": "PURUGLY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 38,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CHINGLING": [
+    {
+      "to": "CHIMECHO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "[ { key: EvoCondKey.FRIENDSHIP, value: 90 }, { key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT] }, ]",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 90
+        },
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": [
+        20,
+        25,
+        25
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "STUNKY": [
+    {
+      "to": "SKUNTANK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 34,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BRONZOR": [
+    {
+      "to": "BRONZONG",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 33,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BONSLY": [
+    {
+      "to": "SUDOWOODO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": "{ key: EvoCondKey.MOVE, move: MoveId.MIMIC }",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "MIMIC"
+        }
+      ],
+      "evoDelay": [
+        19,
+        24,
+        24
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MIME_JR": [
+    {
+      "to": "GALAR_MR_MIME",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 18,
+      "item": null,
+      "condition": "[ { key: EvoCondKey.MOVE, move: MoveId.MIMIC }, { key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT] }, ]",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "MIMIC"
+        },
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": [
+        19,
+        24,
+        24
+      ],
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "MR_MIME",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 18,
+      "item": null,
+      "condition": "[ { key: EvoCondKey.MOVE, move: MoveId.MIMIC }, { key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY] }, ]",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "MIMIC"
+        },
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": [
+        19,
+        24,
+        24
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HAPPINY": [
+    {
+      "to": "CHANSEY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "OVAL_STONE",
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY] }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": [
+        20,
+        25,
+        25
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GIBLE": [
+    {
+      "to": "GABITE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 24,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GABITE": [
+    {
+      "to": "GARCHOMP",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 48,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MUNCHLAX": [
+    {
+      "to": "SNORLAX",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.FRIENDSHIP, value: 120 }",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 120
+        }
+      ],
+      "evoDelay": [
+        30,
+        30,
+        30
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "RIOLU": [
+    {
+      "to": "LUCARIO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "[ { key: EvoCondKey.FRIENDSHIP, value: 120 }, { key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY] }, ]",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 120
+        },
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": [
+        32,
+        32,
+        32
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HIPPOPOTAS": [
+    {
+      "to": "HIPPOWDON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 34,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SKORUPI": [
+    {
+      "to": "DRAPION",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 40,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CROAGUNK": [
+    {
+      "to": "TOXICROAK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 37,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FINNEON": [
+    {
+      "to": "LUMINEON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 31,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MANTYKE": [
+    {
+      "to": "MANTINE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 28,
+      "item": null,
+      "condition": "{ key: EvoCondKey.SPECIES_CAUGHT, speciesCaught: SpeciesId.REMORAID }",
+      "conditionData": [
+        {
+          "key": "SPECIES_CAUGHT",
+          "speciesCaught": "REMORAID"
+        }
+      ],
+      "evoDelay": [
+        28,
+        28,
+        48
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SNOVER": [
+    {
+      "to": "ABOMASNOW",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 40,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SNIVY": [
+    {
+      "to": "SERVINE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 17,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SERVINE": [
+    {
+      "to": "SERPERIOR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TEPIG": [
+    {
+      "to": "PIGNITE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 17,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PIGNITE": [
+    {
+      "to": "EMBOAR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "OSHAWOTT": [
+    {
+      "to": "DEWOTT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 17,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DEWOTT": [
+    {
+      "to": "HISUI_SAMUROTT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "SAMUROTT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PATRAT": [
+    {
+      "to": "WATCHOG",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "LILLIPUP": [
+    {
+      "to": "HERDIER",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HERDIER": [
+    {
+      "to": "STOUTLAND",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PURRLOIN": [
+    {
+      "to": "LIEPARD",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PANSAGE": [
+    {
+      "to": "SIMISAGE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LEAF_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        28,
+        32
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PANSEAR": [
+    {
+      "to": "SIMISEAR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "FIRE_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        28,
+        32
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PANPOUR": [
+    {
+      "to": "SIMIPOUR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "WATER_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        28,
+        32
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MUNNA": [
+    {
+      "to": "MUSHARNA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "MOON_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        28,
+        32,
+        32
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PIDOVE": [
+    {
+      "to": "TRANQUILL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 21,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TRANQUILL": [
+    {
+      "to": "UNFEZANT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BLITZLE": [
+    {
+      "to": "ZEBSTRIKA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 27,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ROGGENROLA": [
+    {
+      "to": "BOLDORE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BOLDORE": [
+    {
+      "to": "GIGALITH",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        35,
+        40,
+        45
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "WOOBAT": [
+    {
+      "to": "SWOOBAT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.FRIENDSHIP, value: 90 }",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 90
+        }
+      ],
+      "evoDelay": [
+        20,
+        25,
+        25
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DRILBUR": [
+    {
+      "to": "EXCADRILL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 31,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TIMBURR": [
+    {
+      "to": "GURDURR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GURDURR": [
+    {
+      "to": "CONKELDURR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        35,
+        40,
+        45
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TYMPOLE": [
+    {
+      "to": "PALPITOAD",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PALPITOAD": [
+    {
+      "to": "SEISMITOAD",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SEWADDLE": [
+    {
+      "to": "SWADLOON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SWADLOON": [
+    {
+      "to": "LEAVANNY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.FRIENDSHIP, value: 120 }",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 120
+        }
+      ],
+      "evoDelay": [
+        30,
+        35,
+        35
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "VENIPEDE": [
+    {
+      "to": "WHIRLIPEDE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 22,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "WHIRLIPEDE": [
+    {
+      "to": "SCOLIPEDE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "COTTONEE": [
+    {
+      "to": "WHIMSICOTT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "SUN_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        28,
+        32,
+        32
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PETILIL": [
+    {
+      "to": "HISUI_LILLIGANT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "DAWN_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        28,
+        32,
+        32
+      ],
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "LILLIGANT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "SUN_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        28,
+        32,
+        32
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SANDILE": [
+    {
+      "to": "KROKOROK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 29,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "KROKOROK": [
+    {
+      "to": "KROOKODILE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 40,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DARUMAKA": [
+    {
+      "to": "DARMANITAN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DWEBBLE": [
+    {
+      "to": "CRUSTLE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 34,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SCRAGGY": [
+    {
+      "to": "SCRAFTY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 39,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "YAMASK": [
+    {
+      "to": "COFAGRIGUS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 34,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TIRTOUGA": [
+    {
+      "to": "CARRACOSTA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 37,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ARCHEN": [
+    {
+      "to": "ARCHEOPS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 37,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TRUBBISH": [
+    {
+      "to": "GARBODOR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ZORUA": [
+    {
+      "to": "ZOROARK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MINCCINO": [
+    {
+      "to": "CINCCINO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "SHINY_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        32,
+        32
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GOTHITA": [
+    {
+      "to": "GOTHORITA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GOTHORITA": [
+    {
+      "to": "GOTHITELLE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 41,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SOLOSIS": [
+    {
+      "to": "DUOSION",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DUOSION": [
+    {
+      "to": "REUNICLUS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 41,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DUCKLETT": [
+    {
+      "to": "SWANNA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "VANILLITE": [
+    {
+      "to": "VANILLISH",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "VANILLISH": [
+    {
+      "to": "VANILLUXE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 47,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DEERLING": [
+    {
+      "to": "SAWSBUCK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 34,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "KARRABLAST": [
+    {
+      "to": "ESCAVALIER",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": "{ key: EvoCondKey.SPECIES_CAUGHT, speciesCaught: SpeciesId.SHELMET }",
+      "conditionData": [
+        {
+          "key": "SPECIES_CAUGHT",
+          "speciesCaught": "SHELMET"
+        }
+      ],
+      "evoDelay": [
+        30,
+        30,
+        35
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FOONGUS": [
+    {
+      "to": "AMOONGUSS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 39,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FRILLISH": [
+    {
+      "to": "JELLICENT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 40,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "JOLTIK": [
+    {
+      "to": "GALVANTULA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FERROSEED": [
+    {
+      "to": "FERROTHORN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 40,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "KLINK": [
+    {
+      "to": "KLANG",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 38,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "KLANG": [
+    {
+      "to": "KLINKLANG",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 49,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TYNAMO": [
+    {
+      "to": "EELEKTRIK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 39,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "EELEKTRIK": [
+    {
+      "to": "EELEKTROSS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "THUNDER_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        49,
+        54,
+        54
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ELGYEM": [
+    {
+      "to": "BEHEEYEM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 42,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "LITWICK": [
+    {
+      "to": "LAMPENT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 41,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "LAMPENT": [
+    {
+      "to": "CHANDELURE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "DUSK_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        51,
+        56,
+        56
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "AXEW": [
+    {
+      "to": "FRAXURE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 38,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FRAXURE": [
+    {
+      "to": "HAXORUS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 48,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CUBCHOO": [
+    {
+      "to": "BEARTIC",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 37,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SHELMET": [
+    {
+      "to": "ACCELGOR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": "{ key: EvoCondKey.SPECIES_CAUGHT, speciesCaught: SpeciesId.KARRABLAST }",
+      "conditionData": [
+        {
+          "key": "SPECIES_CAUGHT",
+          "speciesCaught": "KARRABLAST"
+        }
+      ],
+      "evoDelay": [
+        30,
+        30,
+        35
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MIENFOO": [
+    {
+      "to": "MIENSHAO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 50,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GOLETT": [
+    {
+      "to": "GOLURK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 43,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PAWNIARD": [
+    {
+      "to": "BISHARP",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 52,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BISHARP": [
+    {
+      "to": "KINGAMBIT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LEADERS_CREST",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        70,
+        85,
+        100
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "RUFFLET": [
+    {
+      "to": "HISUI_BRAVIARY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 54,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "BRAVIARY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 54,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "VULLABY": [
+    {
+      "to": "MANDIBUZZ",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 54,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DEINO": [
+    {
+      "to": "ZWEILOUS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 50,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ZWEILOUS": [
+    {
+      "to": "HYDREIGON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 64,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "LARVESTA": [
+    {
+      "to": "VOLCARONA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 59,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CHESPIN": [
+    {
+      "to": "QUILLADIN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "QUILLADIN": [
+    {
+      "to": "CHESNAUGHT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FENNEKIN": [
+    {
+      "to": "BRAIXEN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BRAIXEN": [
+    {
+      "to": "DELPHOX",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FROAKIE": [
+    {
+      "to": "FROGADIER",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FROGADIER": [
+    {
+      "to": "GRENINJA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BUNNELBY": [
+    {
+      "to": "DIGGERSBY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FLETCHLING": [
+    {
+      "to": "FLETCHINDER",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 17,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FLETCHINDER": [
+    {
+      "to": "TALONFLAME",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SCATTERBUG": [
+    {
+      "to": "SPEWPA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 9,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SPEWPA": [
+    {
+      "to": "VIVILLON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 12,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "LITLEO": [
+    {
+      "to": "PYROAR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FLABEBE": [
+    {
+      "to": "FLOETTE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 19,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FLOETTE": [
+    {
+      "to": "FLORGES",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "SHINY_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        29,
+        34,
+        39
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SKIDDO": [
+    {
+      "to": "GOGOAT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PANCHAM": [
+    {
+      "to": "PANGORO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": "{ key: EvoCondKey.PARTY_TYPE, pkmnType: PokemonType.DARK }",
+      "conditionData": [
+        {
+          "key": "PARTY_TYPE",
+          "pkmnType": "DARK"
+        }
+      ],
+      "evoDelay": [
+        32,
+        36,
+        40
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ESPURR": [
+    {
+      "to": "MEOWSTIC",
+      "preFormKey": "",
+      "evoFormKey": "female",
+      "level": 25,
+      "item": null,
+      "condition": "{ key: EvoCondKey.GENDER, gender: Gender.FEMALE, }",
+      "conditionData": [
+        {
+          "key": "GENDER",
+          "gender": "FEMALE"
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "MEOWSTIC",
+      "preFormKey": "",
+      "evoFormKey": "",
+      "level": 25,
+      "item": null,
+      "condition": "{ key: EvoCondKey.GENDER, gender: Gender.MALE, }",
+      "conditionData": [
+        {
+          "key": "GENDER",
+          "gender": "MALE"
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "HONEDGE": [
+    {
+      "to": "DOUBLADE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DOUBLADE": [
+    {
+      "to": "AEGISLASH",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "DUSK_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        50,
+        60,
+        70
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SPRITZEE": [
+    {
+      "to": "AROMATISSE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "SACHET",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        25,
+        30,
+        35
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SWIRLIX": [
+    {
+      "to": "SLURPUFF",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "WHIPPED_DREAM",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        25,
+        30,
+        35
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "INKAY": [
+    {
+      "to": "MALAMAR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": "{ key: EvoCondKey.MOVE, move: MoveId.TOPSY_TURVY }",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "TOPSY_TURVY"
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BINACLE": [
+    {
+      "to": "BARBARACLE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 39,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SKRELP": [
+    {
+      "to": "DRAGALGE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 48,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CLAUNCHER": [
+    {
+      "to": "CLAWITZER",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 37,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HELIOPTILE": [
+    {
+      "to": "HELIOLISK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "SUN_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        32,
+        36,
+        36
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TYRUNT": [
+    {
+      "to": "TYRANTRUM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 39,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "AMAURA": [
+    {
+      "to": "AURORUS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 39,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GOOMY": [
+    {
+      "to": "HISUI_SLIGGOO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 40,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "SLIGGOO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 40,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SLIGGOO": [
+    {
+      "to": "GOODRA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 50,
+      "item": null,
+      "condition": "{ key: EvoCondKey.WEATHER, weather: [WeatherType.RAIN, WeatherType.FOG, WeatherType.HEAVY_RAIN] }",
+      "conditionData": [
+        {
+          "key": "WEATHER",
+          "weather": [
+            "RAIN",
+            "FOG",
+            "HEAVY_RAIN"
+          ]
+        }
+      ],
+      "evoDelay": [
+        50,
+        60,
+        70
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PHANTUMP": [
+    {
+      "to": "TREVENANT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PUMPKABOO": [
+    {
+      "to": "GOURGEIST",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BERGMITE": [
+    {
+      "to": "HISUI_AVALUGG",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 37,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "AVALUGG",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 37,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "NOIBAT": [
+    {
+      "to": "NOIVERN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 48,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ROWLET": [
+    {
+      "to": "DARTRIX",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 17,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DARTRIX": [
+    {
+      "to": "HISUI_DECIDUEYE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "DECIDUEYE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 34,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "LITTEN": [
+    {
+      "to": "TORRACAT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 17,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TORRACAT": [
+    {
+      "to": "INCINEROAR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 34,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "POPPLIO": [
+    {
+      "to": "BRIONNE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 17,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BRIONNE": [
+    {
+      "to": "PRIMARINA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 34,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PIKIPEK": [
+    {
+      "to": "TRUMBEAK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 14,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TRUMBEAK": [
+    {
+      "to": "TOUCANNON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 28,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "YUNGOOS": [
+    {
+      "to": "GUMSHOOS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GRUBBIN": [
+    {
+      "to": "CHARJABUG",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CHARJABUG": [
+    {
+      "to": "VIKAVOLT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "THUNDER_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        40,
+        45,
+        45
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CRABRAWLER": [
+    {
+      "to": "CRABOMINABLE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "ICE_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        35,
+        40,
+        40
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CUTIEFLY": [
+    {
+      "to": "RIBOMBEE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ROCKRUFF": [
+    {
+      "to": "LYCANROC",
+      "preFormKey": "own-tempo",
+      "evoFormKey": "dusk",
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "LYCANROC",
+      "preFormKey": "",
+      "evoFormKey": "midday",
+      "level": 25,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "LYCANROC",
+      "preFormKey": "",
+      "evoFormKey": "midnight",
+      "level": 25,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "MAREANIE": [
+    {
+      "to": "TOXAPEX",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 38,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MUDBRAY": [
+    {
+      "to": "MUDSDALE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DEWPIDER": [
+    {
+      "to": "ARAQUANID",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 22,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FOMANTIS": [
+    {
+      "to": "LURANTIS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 34,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MORELULL": [
+    {
+      "to": "SHIINOTIC",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 24,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SALANDIT": [
+    {
+      "to": "SALAZZLE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 33,
+      "item": null,
+      "condition": "{ key: EvoCondKey.GENDER, gender: Gender.FEMALE }",
+      "conditionData": [
+        {
+          "key": "GENDER",
+          "gender": "FEMALE"
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "STUFFUL": [
+    {
+      "to": "BEWEAR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 27,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BOUNSWEET": [
+    {
+      "to": "STEENEE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 18,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "STEENEE": [
+    {
+      "to": "TSAREENA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 28,
+      "item": null,
+      "condition": "{ key: EvoCondKey.MOVE, move: MoveId.STOMP }",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "STOMP"
+        }
+      ],
+      "evoDelay": [
+        29,
+        34,
+        39
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "WIMPOD": [
+    {
+      "to": "GOLISOPOD",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SANDYGAST": [
+    {
+      "to": "PALOSSAND",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 42,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TYPE_NULL": [
+    {
+      "to": "SILVALLY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.FRIENDSHIP, value: 100 }",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 100
+        }
+      ],
+      "evoDelay": [
+        50,
+        60,
+        70
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "JANGMO_O": [
+    {
+      "to": "HAKAMO_O",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HAKAMO_O": [
+    {
+      "to": "KOMMO_O",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 45,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "COSMOG": [
+    {
+      "to": "COSMOEM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.FRIENDSHIP, value: 43 }",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 43
+        }
+      ],
+      "evoDelay": [
+        43,
+        53,
+        59
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "COSMOEM": [
+    {
+      "to": "SOLGALEO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 13,
+      "item": "SUN_FLUTE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        53,
+        73,
+        79
+      ],
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "LUNALA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 13,
+      "item": "MOON_FLUTE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        53,
+        73,
+        79
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "POIPOLE": [
+    {
+      "to": "NAGANADEL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 29,
+      "item": null,
+      "condition": "{ key: EvoCondKey.MOVE, move: MoveId.DRAGON_PULSE }",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "DRAGON_PULSE"
+        }
+      ],
+      "evoDelay": [
+        53,
+        59,
+        61
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MELTAN": [
+    {
+      "to": "MELMETAL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        50,
+        70
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GROOKEY": [
+    {
+      "to": "THWACKEY",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "THWACKEY": [
+    {
+      "to": "RILLABOOM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SCORBUNNY": [
+    {
+      "to": "RABOOT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "RABOOT": [
+    {
+      "to": "CINDERACE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SOBBLE": [
+    {
+      "to": "DRIZZILE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DRIZZILE": [
+    {
+      "to": "INTELEON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SKWOVET": [
+    {
+      "to": "GREEDENT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 24,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ROOKIDEE": [
+    {
+      "to": "CORVISQUIRE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 18,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CORVISQUIRE": [
+    {
+      "to": "CORVIKNIGHT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 38,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BLIPBUG": [
+    {
+      "to": "DOTTLER",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 10,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DOTTLER": [
+    {
+      "to": "ORBEETLE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "NICKIT": [
+    {
+      "to": "THIEVUL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 18,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GOSSIFLEUR": [
+    {
+      "to": "ELDEGOSS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "WOOLOO": [
+    {
+      "to": "DUBWOOL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 24,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CHEWTLE": [
+    {
+      "to": "DREDNAW",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 22,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "YAMPER": [
+    {
+      "to": "BOLTUND",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ROLYCOLY": [
+    {
+      "to": "CARKOL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 18,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CARKOL": [
+    {
+      "to": "COALOSSAL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 34,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "APPLIN": [
+    {
+      "to": "DIPPLIN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "SYRUPY_APPLE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        24,
+        28
+      ],
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "FLAPPLE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "TART_APPLE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        24,
+        28
+      ],
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "APPLETUN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "SWEET_APPLE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        24,
+        24,
+        28
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SILICOBRA": [
+    {
+      "to": "SANDACONDA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ARROKUDA": [
+    {
+      "to": "BARRASKEWDA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 26,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TOXEL": [
+    {
+      "to": "TOXTRICITY",
+      "preFormKey": "",
+      "evoFormKey": "lowkey",
+      "level": 30,
+      "item": null,
+      "condition": "{ key: EvoCondKey.NATURE, nature: [ Nature.LONELY, Nature.BOLD, Nature.RELAXED, Nature.TIMID, Nature.SERIOUS, Nature.MODEST, Nature.MILD, Nature.QUIET, Nature.BASHFUL, Nature.CALM, Nature.GENTLE, Nature.CAREFUL, ], }",
+      "conditionData": [
+        {
+          "key": "NATURE",
+          "nature": [
+            "LONELY",
+            "BOLD",
+            "RELAXED",
+            "TIMID",
+            "SERIOUS",
+            "MODEST",
+            "MILD",
+            "QUIET",
+            "BASHFUL",
+            "CALM",
+            "GENTLE",
+            "CAREFUL"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "TOXTRICITY",
+      "preFormKey": "",
+      "evoFormKey": "amped",
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "SIZZLIPEDE": [
+    {
+      "to": "CENTISKORCH",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 28,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CLOBBOPUS": [
+    {
+      "to": "GRAPPLOCT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": "{ key: EvoCondKey.MOVE, move: MoveId.TAUNT }",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "TAUNT"
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SINISTEA": [
+    {
+      "to": "POLTEAGEIST",
+      "preFormKey": "phony",
+      "evoFormKey": "phony",
+      "level": 1,
+      "item": "CRACKED_POT",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "POLTEAGEIST",
+      "preFormKey": "antique",
+      "evoFormKey": "antique",
+      "level": 1,
+      "item": "CHIPPED_POT",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "HATENNA": [
+    {
+      "to": "HATTREM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HATTREM": [
+    {
+      "to": "HATTERENE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 42,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "IMPIDIMP": [
+    {
+      "to": "MORGREM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MORGREM": [
+    {
+      "to": "GRIMMSNARL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 42,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MILCERY": [
+    {
+      "to": "ALCREMIE",
+      "preFormKey": "",
+      "evoFormKey": "vanilla-cream",
+      "level": 1,
+      "item": "STRAWBERRY_SWEET",
+      "condition": "{ key: EvoCondKey.BIOME, biome: [BiomeId.TOWN, BiomeId.PLAINS, BiomeId.GRASS, BiomeId.TALL_GRASS, BiomeId.METROPOLIS], }",
+      "conditionData": [
+        {
+          "key": "BIOME",
+          "biome": [
+            "TOWN",
+            "PLAINS",
+            "GRASS",
+            "TALL_GRASS",
+            "METROPOLIS"
+          ]
+        }
+      ],
+      "evoDelay": [
+        20,
+        25,
+        25
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "ALCREMIE",
+      "preFormKey": "",
+      "evoFormKey": "ruby-cream",
+      "level": 1,
+      "item": "STRAWBERRY_SWEET",
+      "condition": "{ key: EvoCondKey.BIOME, biome: [BiomeId.BADLANDS, BiomeId.VOLCANO, BiomeId.GRAVEYARD, BiomeId.FACTORY, BiomeId.SLUM], }",
+      "conditionData": [
+        {
+          "key": "BIOME",
+          "biome": [
+            "BADLANDS",
+            "VOLCANO",
+            "GRAVEYARD",
+            "FACTORY",
+            "SLUM"
+          ]
+        }
+      ],
+      "evoDelay": [
+        20,
+        25,
+        25
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "ALCREMIE",
+      "preFormKey": "",
+      "evoFormKey": "matcha-cream",
+      "level": 1,
+      "item": "STRAWBERRY_SWEET",
+      "condition": "{ key: EvoCondKey.BIOME, biome: [BiomeId.FOREST, BiomeId.SWAMP, BiomeId.MEADOW, BiomeId.JUNGLE] }",
+      "conditionData": [
+        {
+          "key": "BIOME",
+          "biome": [
+            "FOREST",
+            "SWAMP",
+            "MEADOW",
+            "JUNGLE"
+          ]
+        }
+      ],
+      "evoDelay": [
+        20,
+        25,
+        25
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "ALCREMIE",
+      "preFormKey": "",
+      "evoFormKey": "mint-cream",
+      "level": 1,
+      "item": "STRAWBERRY_SWEET",
+      "condition": "{ key: EvoCondKey.BIOME, biome: [BiomeId.SEA, BiomeId.BEACH, BiomeId.LAKE, BiomeId.SEABED] }",
+      "conditionData": [
+        {
+          "key": "BIOME",
+          "biome": [
+            "SEA",
+            "BEACH",
+            "LAKE",
+            "SEABED"
+          ]
+        }
+      ],
+      "evoDelay": [
+        20,
+        25,
+        25
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "ALCREMIE",
+      "preFormKey": "",
+      "evoFormKey": "lemon-cream",
+      "level": 1,
+      "item": "STRAWBERRY_SWEET",
+      "condition": "{ key: EvoCondKey.BIOME, biome: [BiomeId.DESERT, BiomeId.POWER_PLANT, BiomeId.DOJO, BiomeId.RUINS, BiomeId.CONSTRUCTION_SITE], }",
+      "conditionData": [
+        {
+          "key": "BIOME",
+          "biome": [
+            "DESERT",
+            "POWER_PLANT",
+            "DOJO",
+            "RUINS",
+            "CONSTRUCTION_SITE"
+          ]
+        }
+      ],
+      "evoDelay": [
+        20,
+        25,
+        25
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "ALCREMIE",
+      "preFormKey": "",
+      "evoFormKey": "salted-cream",
+      "level": 1,
+      "item": "STRAWBERRY_SWEET",
+      "condition": "{ key: EvoCondKey.BIOME, biome: [BiomeId.MOUNTAIN, BiomeId.CAVE, BiomeId.ICE_CAVE, BiomeId.FAIRY_CAVE, BiomeId.SNOWY_FOREST], }",
+      "conditionData": [
+        {
+          "key": "BIOME",
+          "biome": [
+            "MOUNTAIN",
+            "CAVE",
+            "ICE_CAVE",
+            "FAIRY_CAVE",
+            "SNOWY_FOREST"
+          ]
+        }
+      ],
+      "evoDelay": [
+        20,
+        25,
+        25
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "ALCREMIE",
+      "preFormKey": "",
+      "evoFormKey": "ruby-swirl",
+      "level": 1,
+      "item": "STRAWBERRY_SWEET",
+      "condition": "{ key: EvoCondKey.BIOME, biome: [BiomeId.WASTELAND, BiomeId.LABORATORY] }",
+      "conditionData": [
+        {
+          "key": "BIOME",
+          "biome": [
+            "WASTELAND",
+            "LABORATORY"
+          ]
+        }
+      ],
+      "evoDelay": [
+        20,
+        25,
+        25
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "ALCREMIE",
+      "preFormKey": "",
+      "evoFormKey": "caramel-swirl",
+      "level": 1,
+      "item": "STRAWBERRY_SWEET",
+      "condition": "{ key: EvoCondKey.BIOME, biome: [BiomeId.TEMPLE, BiomeId.ISLAND] }",
+      "conditionData": [
+        {
+          "key": "BIOME",
+          "biome": [
+            "TEMPLE",
+            "ISLAND"
+          ]
+        }
+      ],
+      "evoDelay": [
+        20,
+        25,
+        25
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "ALCREMIE",
+      "preFormKey": "",
+      "evoFormKey": "rainbow-swirl",
+      "level": 1,
+      "item": "STRAWBERRY_SWEET",
+      "condition": "{ key: EvoCondKey.BIOME, biome: [BiomeId.ABYSS, BiomeId.SPACE, BiomeId.END] }",
+      "conditionData": [
+        {
+          "key": "BIOME",
+          "biome": [
+            "ABYSS",
+            "SPACE",
+            "END"
+          ]
+        }
+      ],
+      "evoDelay": [
+        20,
+        25,
+        25
+      ],
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "SNOM": [
+    {
+      "to": "FROSMOTH",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "[ { key: EvoCondKey.FRIENDSHIP, value: 90 }, { key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT] }, ]",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 90
+        },
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": [
+        20,
+        25,
+        25
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CUFANT": [
+    {
+      "to": "COPPERAJAH",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 34,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DURALUDON": [
+    {
+      "to": "ARCHALUDON",
+      "preFormKey": "",
+      "evoFormKey": "",
+      "level": 1,
+      "item": "METAL_ALLOY",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        65,
+        80,
+        95
+      ],
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "DREEPY": [
+    {
+      "to": "DRAKLOAK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 50,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DRAKLOAK": [
+    {
+      "to": "DRAGAPULT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 60,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "KUBFU": [
+    {
+      "to": "URSHIFU",
+      "preFormKey": "",
+      "evoFormKey": "single-strike",
+      "level": 1,
+      "item": "SCROLL_OF_DARKNESS",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        50,
+        60,
+        70
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "URSHIFU",
+      "preFormKey": "",
+      "evoFormKey": "rapid-strike",
+      "level": 1,
+      "item": "SCROLL_OF_WATERS",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        50,
+        60,
+        70
+      ],
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "SPRIGATITO": [
+    {
+      "to": "FLORAGATO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FLORAGATO": [
+    {
+      "to": "MEOWSCARADA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FUECOCO": [
+    {
+      "to": "CROCALOR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CROCALOR": [
+    {
+      "to": "SKELEDIRGE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "QUAXLY": [
+    {
+      "to": "QUAXWELL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 16,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "QUAXWELL": [
+    {
+      "to": "QUAQUAVAL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 36,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "LECHONK": [
+    {
+      "to": "OINKOLOGNE",
+      "preFormKey": "",
+      "evoFormKey": "female",
+      "level": 18,
+      "item": null,
+      "condition": "{ key: EvoCondKey.GENDER, gender: Gender.FEMALE, }",
+      "conditionData": [
+        {
+          "key": "GENDER",
+          "gender": "FEMALE"
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "OINKOLOGNE",
+      "preFormKey": "",
+      "evoFormKey": "",
+      "level": 18,
+      "item": null,
+      "condition": "{ key: EvoCondKey.GENDER, gender: Gender.MALE }",
+      "conditionData": [
+        {
+          "key": "GENDER",
+          "gender": "MALE"
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "TAROUNTULA": [
+    {
+      "to": "SPIDOPS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 15,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "NYMBLE": [
+    {
+      "to": "LOKIX",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 24,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PAWMI": [
+    {
+      "to": "PAWMO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 18,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PAWMO": [
+    {
+      "to": "PAWMOT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TANDEMAUS": [
+    {
+      "to": "MAUSHOLD",
+      "preFormKey": "",
+      "evoFormKey": "three",
+      "level": 25,
+      "item": null,
+      "condition": "{ key: EvoCondKey.RANDOM_FORM, value: 4 }",
+      "conditionData": [
+        {
+          "key": "RANDOM_FORM",
+          "value": 4
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "MAUSHOLD",
+      "preFormKey": "",
+      "evoFormKey": "four",
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "FIDOUGH": [
+    {
+      "to": "DACHSBUN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 26,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SMOLIV": [
+    {
+      "to": "DOLLIV",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "DOLLIV": [
+    {
+      "to": "ARBOLIVA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "NACLI": [
+    {
+      "to": "NACLSTACK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 24,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "NACLSTACK": [
+    {
+      "to": "GARGANACL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 38,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CHARCADET": [
+    {
+      "to": "ARMAROUGE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "AUSPICIOUS_ARMOR",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        35
+      ],
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "CERULEDGE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "MALICIOUS_ARMOR",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        35
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TADBULB": [
+    {
+      "to": "BELLIBOLT",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "THUNDER_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        20,
+        28,
+        28
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "WATTREL": [
+    {
+      "to": "KILOWATTREL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "MASCHIFF": [
+    {
+      "to": "MABOSSTIFF",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "SHROODLE": [
+    {
+      "to": "GRAFAIAI",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 28,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "BRAMBLIN": [
+    {
+      "to": "BRAMBLEGHAST",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TOEDSCOOL": [
+    {
+      "to": "TOEDSCRUEL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CAPSAKID": [
+    {
+      "to": "SCOVILLAIN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "FIRE_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        25,
+        30,
+        30
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "RELLOR": [
+    {
+      "to": "RABSCA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 29,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FLITTLE": [
+    {
+      "to": "ESPATHRA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TINKATINK": [
+    {
+      "to": "TINKATUFF",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 24,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "TINKATUFF": [
+    {
+      "to": "TINKATON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 38,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "WIGLETT": [
+    {
+      "to": "WUGTRIO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 26,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FINIZEN": [
+    {
+      "to": "PALAFIN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 38,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "VAROOM": [
+    {
+      "to": "REVAVROOM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 40,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GLIMMET": [
+    {
+      "to": "GLIMMORA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GREAVARD": [
+    {
+      "to": "HOUNDSTONE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "CETODDLE": [
+    {
+      "to": "CETITAN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "ICE_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        40,
+        44,
+        48
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "FRIGIBAX": [
+    {
+      "to": "ARCTIBAX",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ARCTIBAX": [
+    {
+      "to": "BAXCALIBUR",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 54,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GIMMIGHOUL": [
+    {
+      "to": "GHOLDENGO",
+      "preFormKey": "chest",
+      "evoFormKey": "",
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.EVO_TREASURE_TRACKER, value: 10 }",
+      "conditionData": [
+        {
+          "key": "EVO_TREASURE_TRACKER",
+          "value": 10
+        }
+      ],
+      "evoDelay": [
+        50,
+        60,
+        70
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "GHOLDENGO",
+      "preFormKey": "roaming",
+      "evoFormKey": "",
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.EVO_TREASURE_TRACKER, value: 10 }",
+      "conditionData": [
+        {
+          "key": "EVO_TREASURE_TRACKER",
+          "value": 10
+        }
+      ],
+      "evoDelay": [
+        50,
+        60,
+        70
+      ],
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "DIPPLIN": [
+    {
+      "to": "HYDRAPPLE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.MOVE, move: MoveId.DRAGON_CHEER }",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "DRAGON_CHEER"
+        }
+      ],
+      "evoDelay": [
+        56,
+        68,
+        80
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "POLTCHAGEIST": [
+    {
+      "to": "SINISTCHA",
+      "preFormKey": "counterfeit",
+      "evoFormKey": "unremarkable",
+      "level": 1,
+      "item": "UNREMARKABLE_TEACUP",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "SINISTCHA",
+      "preFormKey": "artisan",
+      "evoFormKey": "masterpiece",
+      "level": 1,
+      "item": "MASTERPIECE_TEACUP",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "ALOLA_RATTATA": [
+    {
+      "to": "ALOLA_RATICATE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ALOLA_SANDSHREW": [
+    {
+      "to": "ALOLA_SANDSLASH",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "ICE_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        22,
+        22,
+        22
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ALOLA_VULPIX": [
+    {
+      "to": "ALOLA_NINETALES",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "ICE_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        35,
+        40
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ALOLA_DIGLETT": [
+    {
+      "to": "ALOLA_DUGTRIO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 26,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ALOLA_MEOWTH": [
+    {
+      "to": "ALOLA_PERSIAN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": null,
+      "condition": "{ key: EvoCondKey.FRIENDSHIP, value: 120 }",
+      "conditionData": [
+        {
+          "key": "FRIENDSHIP",
+          "value": 120
+        }
+      ],
+      "evoDelay": [
+        28,
+        28,
+        28
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ALOLA_GEODUDE": [
+    {
+      "to": "ALOLA_GRAVELER",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 25,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ALOLA_GRAVELER": [
+    {
+      "to": "ALOLA_GOLEM",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LINKING_CORD",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        35,
+        45,
+        55
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "ALOLA_GRIMER": [
+    {
+      "to": "ALOLA_MUK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 38,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GALAR_MEOWTH": [
+    {
+      "to": "PERRSERKER",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 28,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GALAR_PONYTA": [
+    {
+      "to": "GALAR_RAPIDASH",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 40,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GALAR_SLOWPOKE": [
+    {
+      "to": "GALAR_SLOWBRO",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "GALARICA_CUFF",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        37,
+        37,
+        37
+      ],
+      "class": "SpeciesEvolution"
+    },
+    {
+      "to": "GALAR_SLOWKING",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "GALARICA_WREATH",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        37,
+        37,
+        37
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GALAR_FARFETCHD": [
+    {
+      "to": "SIRFETCHD",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GALAR_MR_MIME": [
+    {
+      "to": "MR_RIME",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 42,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GALAR_CORSOLA": [
+    {
+      "to": "CURSOLA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 38,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GALAR_ZIGZAGOON": [
+    {
+      "to": "GALAR_LINOONE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GALAR_LINOONE": [
+    {
+      "to": "OBSTAGOON",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 35,
+      "item": null,
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DUSK, TimeOfDay.NIGHT], }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DUSK",
+            "NIGHT"
+          ]
+        }
+      ],
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GALAR_DARUMAKA": [
+    {
+      "to": "GALAR_DARMANITAN",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "ICE_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        35,
+        35,
+        35
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "GALAR_YAMASK": [
+    {
+      "to": "RUNERIGUS",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 34,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HISUI_GROWLITHE": [
+    {
+      "to": "HISUI_ARCANINE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "FIRE_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        35,
+        40,
+        45
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HISUI_VOLTORB": [
+    {
+      "to": "HISUI_ELECTRODE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "LEAF_STONE",
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": [
+        30,
+        30,
+        30
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HISUI_QWILFISH": [
+    {
+      "to": "OVERQWIL",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 32,
+      "item": null,
+      "condition": "{ key: EvoCondKey.MOVE, move: MoveId.BARB_BARRAGE }",
+      "conditionData": [
+        {
+          "key": "MOVE",
+          "move": "BARB_BARRAGE"
+        }
+      ],
+      "evoDelay": [
+        38,
+        48,
+        58
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HISUI_SNEASEL": [
+    {
+      "to": "SNEASLER",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 1,
+      "item": "RAZOR_CLAW",
+      "condition": "{ key: EvoCondKey.TIME, time: [TimeOfDay.DAWN, TimeOfDay.DAY] }",
+      "conditionData": [
+        {
+          "key": "TIME",
+          "time": [
+            "DAWN",
+            "DAY"
+          ]
+        }
+      ],
+      "evoDelay": [
+        48,
+        54,
+        60
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HISUI_BASCULIN": [
+    {
+      "to": "BASCULEGION",
+      "preFormKey": "",
+      "evoFormKey": "female",
+      "level": 40,
+      "item": null,
+      "condition": "[{ key: EvoCondKey.GENDER, gender: Gender.FEMALE }]",
+      "conditionData": [
+        {
+          "key": "GENDER",
+          "gender": "FEMALE"
+        }
+      ],
+      "evoDelay": [
+        45,
+        65,
+        85
+      ],
+      "class": "SpeciesFormEvolution"
+    },
+    {
+      "to": "BASCULEGION",
+      "preFormKey": "",
+      "evoFormKey": "male",
+      "level": 40,
+      "item": null,
+      "condition": "[{ key: EvoCondKey.GENDER, gender: Gender.MALE }]",
+      "conditionData": [
+        {
+          "key": "GENDER",
+          "gender": "MALE"
+        }
+      ],
+      "evoDelay": [
+        45,
+        65,
+        85
+      ],
+      "class": "SpeciesFormEvolution"
+    }
+  ],
+  "HISUI_ZORUA": [
+    {
+      "to": "HISUI_ZOROARK",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 30,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "HISUI_SLIGGOO": [
+    {
+      "to": "HISUI_GOODRA",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 50,
+      "item": null,
+      "condition": "{ key: EvoCondKey.WEATHER, weather: [WeatherType.RAIN, WeatherType.FOG, WeatherType.HEAVY_RAIN] }",
+      "conditionData": [
+        {
+          "key": "WEATHER",
+          "weather": [
+            "RAIN",
+            "FOG",
+            "HEAVY_RAIN"
+          ]
+        }
+      ],
+      "evoDelay": [
+        60,
+        70,
+        80
+      ],
+      "class": "SpeciesEvolution"
+    }
+  ],
+  "PALDEA_WOOPER": [
+    {
+      "to": "CLODSIRE",
+      "preFormKey": null,
+      "evoFormKey": null,
+      "level": 20,
+      "item": null,
+      "condition": null,
+      "conditionData": null,
+      "evoDelay": null,
+      "class": "SpeciesEvolution"
+    }
+  ]
+}

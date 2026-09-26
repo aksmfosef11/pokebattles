@@ -1,0 +1,31 @@
+# The nginx image fills in ${API_UPSTREAM} from the environment at start-up.
+server {
+  listen 80;
+  server_name _;
+  root /usr/share/nginx/html;
+  client_max_body_size 1m;
+
+  location /api/ {
+    proxy_pass ${API_UPSTREAM};
+    proxy_http_version 1.1;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+  }
+
+  # Sprites load one by one as they appear, and built scripts have hashed names: let browsers keep them.
+  location /assets/ {
+    add_header Cache-Control "public, max-age=86400";
+    try_files $uri =404;
+  }
+
+  location /locales/ {
+    add_header Cache-Control "no-cache";
+    try_files $uri =404;
+  }
+
+  location / {
+    add_header Cache-Control "no-cache";
+    try_files $uri /index.html;
+  }
+}

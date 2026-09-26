@@ -1,0 +1,5328 @@
+{
+  "lang": "vi",
+  "_meta": {
+    "pokerogueSupported": true,
+    "fallbackChain": [
+      "en"
+    ],
+    "fallbackNote": "Sections contain only strings that exist for this language (no silent English copies). Resolve missing keys via fallbackChain at runtime. Exception: champion trainer names listed in _fallbacks.",
+    "pokeapiLanguages": []
+  },
+  "species": {
+    "BULBASAUR": "Bulbasaur",
+    "IVYSAUR": "Ivysaur",
+    "VENUSAUR": "Venusaur",
+    "CHARMANDER": "Charmander",
+    "CHARMELEON": "Charmeleon",
+    "CHARIZARD": "Charizard",
+    "SQUIRTLE": "Squirtle",
+    "WARTORTLE": "Wartortle",
+    "BLASTOISE": "Blastoise",
+    "CATERPIE": "Caterpie",
+    "METAPOD": "Metapod",
+    "BUTTERFREE": "Butterfree",
+    "WEEDLE": "Weedle",
+    "KAKUNA": "Kakuna",
+    "BEEDRILL": "Beedrill",
+    "PIDGEY": "Pidgey",
+    "PIDGEOTTO": "Pidgeotto",
+    "PIDGEOT": "Pidgeot",
+    "RATTATA": "Rattata",
+    "RATICATE": "Raticate",
+    "SPEAROW": "Spearow",
+    "FEAROW": "Fearow",
+    "EKANS": "Ekans",
+    "ARBOK": "Arbok",
+    "PIKACHU": "Pikachu",
+    "RAICHU": "Raichu",
+    "SANDSHREW": "Sandshrew",
+    "SANDSLASH": "Sandslash",
+    "NIDORAN_F": "Nidoran♀",
+    "NIDORINA": "Nidorina",
+    "NIDOQUEEN": "Nidoqueen",
+    "NIDORAN_M": "Nidoran♂",
+    "NIDORINO": "Nidorino",
+    "NIDOKING": "Nidoking",
+    "CLEFAIRY": "Clefairy",
+    "CLEFABLE": "Clefable",
+    "VULPIX": "Vulpix",
+    "NINETALES": "Ninetales",
+    "JIGGLYPUFF": "Jigglypuff",
+    "WIGGLYTUFF": "Wigglytuff",
+    "ZUBAT": "Zubat",
+    "GOLBAT": "Golbat",
+    "ODDISH": "Oddish",
+    "GLOOM": "Gloom",
+    "VILEPLUME": "Vileplume",
+    "PARAS": "Paras",
+    "PARASECT": "Parasect",
+    "VENONAT": "Venonat",
+    "VENOMOTH": "Venomoth",
+    "DIGLETT": "Diglett",
+    "DUGTRIO": "Dugtrio",
+    "MEOWTH": "Meowth",
+    "PERSIAN": "Persian",
+    "PSYDUCK": "Psyduck",
+    "GOLDUCK": "Golduck",
+    "MANKEY": "Mankey",
+    "PRIMEAPE": "Primeape",
+    "GROWLITHE": "Growlithe",
+    "ARCANINE": "Arcanine",
+    "POLIWAG": "Poliwag",
+    "POLIWHIRL": "Poliwhirl",
+    "POLIWRATH": "Poliwrath",
+    "ABRA": "Abra",
+    "KADABRA": "Kadabra",
+    "ALAKAZAM": "Alakazam",
+    "MACHOP": "Machop",
+    "MACHOKE": "Machoke",
+    "MACHAMP": "Machamp",
+    "BELLSPROUT": "Bellsprout",
+    "WEEPINBELL": "Weepinbell",
+    "VICTREEBEL": "Victreebel",
+    "TENTACOOL": "Tentacool",
+    "TENTACRUEL": "Tentacruel",
+    "GEODUDE": "Geodude",
+    "GRAVELER": "Graveler",
+    "GOLEM": "Golem",
+    "PONYTA": "Ponyta",
+    "RAPIDASH": "Rapidash",
+    "SLOWPOKE": "Slowpoke",
+    "SLOWBRO": "Slowbro",
+    "MAGNEMITE": "Magnemite",
+    "MAGNETON": "Magneton",
+    "FARFETCHD": "Farfetch’d",
+    "DODUO": "Doduo",
+    "DODRIO": "Dodrio",
+    "SEEL": "Seel",
+    "DEWGONG": "Dewgong",
+    "GRIMER": "Grimer",
+    "MUK": "Muk",
+    "SHELLDER": "Shellder",
+    "CLOYSTER": "Cloyster",
+    "GASTLY": "Gastly",
+    "HAUNTER": "Haunter",
+    "GENGAR": "Gengar",
+    "ONIX": "Onix",
+    "DROWZEE": "Drowzee",
+    "HYPNO": "Hypno",
+    "KRABBY": "Krabby",
+    "KINGLER": "Kingler",
+    "VOLTORB": "Voltorb",
+    "ELECTRODE": "Electrode",
+    "EXEGGCUTE": "Exeggcute",
+    "EXEGGUTOR": "Exeggutor",
+    "CUBONE": "Cubone",
+    "MAROWAK": "Marowak",
+    "HITMONLEE": "Hitmonlee",
+    "HITMONCHAN": "Hitmonchan",
+    "LICKITUNG": "Lickitung",
+    "KOFFING": "Koffing",
+    "WEEZING": "Weezing",
+    "RHYHORN": "Rhyhorn",
+    "RHYDON": "Rhydon",
+    "CHANSEY": "Chansey",
+    "TANGELA": "Tangela",
+    "KANGASKHAN": "Kangaskhan",
+    "HORSEA": "Horsea",
+    "SEADRA": "Seadra",
+    "GOLDEEN": "Goldeen",
+    "SEAKING": "Seaking",
+    "STARYU": "Staryu",
+    "STARMIE": "Starmie",
+    "MR_MIME": "Mr. Mime",
+    "SCYTHER": "Scyther",
+    "JYNX": "Jynx",
+    "ELECTABUZZ": "Electabuzz",
+    "MAGMAR": "Magmar",
+    "PINSIR": "Pinsir",
+    "TAUROS": "Tauros",
+    "MAGIKARP": "Magikarp",
+    "GYARADOS": "Gyarados",
+    "LAPRAS": "Lapras",
+    "DITTO": "Ditto",
+    "EEVEE": "Eevee",
+    "VAPOREON": "Vaporeon",
+    "JOLTEON": "Jolteon",
+    "FLAREON": "Flareon",
+    "PORYGON": "Porygon",
+    "OMANYTE": "Omanyte",
+    "OMASTAR": "Omastar",
+    "KABUTO": "Kabuto",
+    "KABUTOPS": "Kabutops",
+    "AERODACTYL": "Aerodactyl",
+    "SNORLAX": "Snorlax",
+    "ARTICUNO": "Articuno",
+    "ZAPDOS": "Zapdos",
+    "MOLTRES": "Moltres",
+    "DRATINI": "Dratini",
+    "DRAGONAIR": "Dragonair",
+    "DRAGONITE": "Dragonite",
+    "MEWTWO": "Mewtwo",
+    "MEW": "Mew",
+    "CHIKORITA": "Chikorita",
+    "BAYLEEF": "Bayleef",
+    "MEGANIUM": "Meganium",
+    "CYNDAQUIL": "Cyndaquil",
+    "QUILAVA": "Quilava",
+    "TYPHLOSION": "Typhlosion",
+    "TOTODILE": "Totodile",
+    "CROCONAW": "Croconaw",
+    "FERALIGATR": "Feraligatr",
+    "SENTRET": "Sentret",
+    "FURRET": "Furret",
+    "HOOTHOOT": "Hoothoot",
+    "NOCTOWL": "Noctowl",
+    "LEDYBA": "Ledyba",
+    "LEDIAN": "Ledian",
+    "SPINARAK": "Spinarak",
+    "ARIADOS": "Ariados",
+    "CROBAT": "Crobat",
+    "CHINCHOU": "Chinchou",
+    "LANTURN": "Lanturn",
+    "PICHU": "Pichu",
+    "CLEFFA": "Cleffa",
+    "IGGLYBUFF": "Igglybuff",
+    "TOGEPI": "Togepi",
+    "TOGETIC": "Togetic",
+    "NATU": "Natu",
+    "XATU": "Xatu",
+    "MAREEP": "Mareep",
+    "FLAAFFY": "Flaaffy",
+    "AMPHAROS": "Ampharos",
+    "BELLOSSOM": "Bellossom",
+    "MARILL": "Marill",
+    "AZUMARILL": "Azumarill",
+    "SUDOWOODO": "Sudowoodo",
+    "POLITOED": "Politoed",
+    "HOPPIP": "Hoppip",
+    "SKIPLOOM": "Skiploom",
+    "JUMPLUFF": "Jumpluff",
+    "AIPOM": "Aipom",
+    "SUNKERN": "Sunkern",
+    "SUNFLORA": "Sunflora",
+    "YANMA": "Yanma",
+    "WOOPER": "Wooper",
+    "QUAGSIRE": "Quagsire",
+    "ESPEON": "Espeon",
+    "UMBREON": "Umbreon",
+    "MURKROW": "Murkrow",
+    "SLOWKING": "Slowking",
+    "MISDREAVUS": "Misdreavus",
+    "UNOWN": "Unown",
+    "WOBBUFFET": "Wobbuffet",
+    "GIRAFARIG": "Girafarig",
+    "PINECO": "Pineco",
+    "FORRETRESS": "Forretress",
+    "DUNSPARCE": "Dunsparce",
+    "GLIGAR": "Gligar",
+    "STEELIX": "Steelix",
+    "SNUBBULL": "Snubbull",
+    "GRANBULL": "Granbull",
+    "QWILFISH": "Qwilfish",
+    "SCIZOR": "Scizor",
+    "SHUCKLE": "Shuckle",
+    "HERACROSS": "Heracross",
+    "SNEASEL": "Sneasel",
+    "TEDDIURSA": "Teddiursa",
+    "URSARING": "Ursaring",
+    "SLUGMA": "Slugma",
+    "MAGCARGO": "Magcargo",
+    "SWINUB": "Swinub",
+    "PILOSWINE": "Piloswine",
+    "CORSOLA": "Corsola",
+    "REMORAID": "Remoraid",
+    "OCTILLERY": "Octillery",
+    "DELIBIRD": "Delibird",
+    "MANTINE": "Mantine",
+    "SKARMORY": "Skarmory",
+    "HOUNDOUR": "Houndour",
+    "HOUNDOOM": "Houndoom",
+    "KINGDRA": "Kingdra",
+    "PHANPY": "Phanpy",
+    "DONPHAN": "Donphan",
+    "PORYGON2": "Porygon2",
+    "STANTLER": "Stantler",
+    "SMEARGLE": "Smeargle",
+    "TYROGUE": "Tyrogue",
+    "HITMONTOP": "Hitmontop",
+    "SMOOCHUM": "Smoochum",
+    "ELEKID": "Elekid",
+    "MAGBY": "Magby",
+    "MILTANK": "Miltank",
+    "BLISSEY": "Blissey",
+    "RAIKOU": "Raikou",
+    "ENTEI": "Entei",
+    "SUICUNE": "Suicune",
+    "LARVITAR": "Larvitar",
+    "PUPITAR": "Pupitar",
+    "TYRANITAR": "Tyranitar",
+    "LUGIA": "Lugia",
+    "HO_OH": "Ho-Oh",
+    "CELEBI": "Celebi",
+    "TREECKO": "Treecko",
+    "GROVYLE": "Grovyle",
+    "SCEPTILE": "Sceptile",
+    "TORCHIC": "Torchic",
+    "COMBUSKEN": "Combusken",
+    "BLAZIKEN": "Blaziken",
+    "MUDKIP": "Mudkip",
+    "MARSHTOMP": "Marshtomp",
+    "SWAMPERT": "Swampert",
+    "POOCHYENA": "Poochyena",
+    "MIGHTYENA": "Mightyena",
+    "ZIGZAGOON": "Zigzagoon",
+    "LINOONE": "Linoone",
+    "WURMPLE": "Wurmple",
+    "SILCOON": "Silcoon",
+    "BEAUTIFLY": "Beautifly",
+    "CASCOON": "Cascoon",
+    "DUSTOX": "Dustox",
+    "LOTAD": "Lotad",
+    "LOMBRE": "Lombre",
+    "LUDICOLO": "Ludicolo",
+    "SEEDOT": "Seedot",
+    "NUZLEAF": "Nuzleaf",
+    "SHIFTRY": "Shiftry",
+    "TAILLOW": "Taillow",
+    "SWELLOW": "Swellow",
+    "WINGULL": "Wingull",
+    "PELIPPER": "Pelipper",
+    "RALTS": "Ralts",
+    "KIRLIA": "Kirlia",
+    "GARDEVOIR": "Gardevoir",
+    "SURSKIT": "Surskit",
+    "MASQUERAIN": "Masquerain",
+    "SHROOMISH": "Shroomish",
+    "BRELOOM": "Breloom",
+    "SLAKOTH": "Slakoth",
+    "VIGOROTH": "Vigoroth",
+    "SLAKING": "Slaking",
+    "NINCADA": "Nincada",
+    "NINJASK": "Ninjask",
+    "SHEDINJA": "Shedinja",
+    "WHISMUR": "Whismur",
+    "LOUDRED": "Loudred",
+    "EXPLOUD": "Exploud",
+    "MAKUHITA": "Makuhita",
+    "HARIYAMA": "Hariyama",
+    "AZURILL": "Azurill",
+    "NOSEPASS": "Nosepass",
+    "SKITTY": "Skitty",
+    "DELCATTY": "Delcatty",
+    "SABLEYE": "Sableye",
+    "MAWILE": "Mawile",
+    "ARON": "Aron",
+    "LAIRON": "Lairon",
+    "AGGRON": "Aggron",
+    "MEDITITE": "Meditite",
+    "MEDICHAM": "Medicham",
+    "ELECTRIKE": "Electrike",
+    "MANECTRIC": "Manectric",
+    "PLUSLE": "Plusle",
+    "MINUN": "Minun",
+    "VOLBEAT": "Volbeat",
+    "ILLUMISE": "Illumise",
+    "ROSELIA": "Roselia",
+    "GULPIN": "Gulpin",
+    "SWALOT": "Swalot",
+    "CARVANHA": "Carvanha",
+    "SHARPEDO": "Sharpedo",
+    "WAILMER": "Wailmer",
+    "WAILORD": "Wailord",
+    "NUMEL": "Numel",
+    "CAMERUPT": "Camerupt",
+    "TORKOAL": "Torkoal",
+    "SPOINK": "Spoink",
+    "GRUMPIG": "Grumpig",
+    "SPINDA": "Spinda",
+    "TRAPINCH": "Trapinch",
+    "VIBRAVA": "Vibrava",
+    "FLYGON": "Flygon",
+    "CACNEA": "Cacnea",
+    "CACTURNE": "Cacturne",
+    "SWABLU": "Swablu",
+    "ALTARIA": "Altaria",
+    "ZANGOOSE": "Zangoose",
+    "SEVIPER": "Seviper",
+    "LUNATONE": "Lunatone",
+    "SOLROCK": "Solrock",
+    "BARBOACH": "Barboach",
+    "WHISCASH": "Whiscash",
+    "CORPHISH": "Corphish",
+    "CRAWDAUNT": "Crawdaunt",
+    "BALTOY": "Baltoy",
+    "CLAYDOL": "Claydol",
+    "LILEEP": "Lileep",
+    "CRADILY": "Cradily",
+    "ANORITH": "Anorith",
+    "ARMALDO": "Armaldo",
+    "FEEBAS": "Feebas",
+    "MILOTIC": "Milotic",
+    "CASTFORM": "Castform",
+    "KECLEON": "Kecleon",
+    "SHUPPET": "Shuppet",
+    "BANETTE": "Banette",
+    "DUSKULL": "Duskull",
+    "DUSCLOPS": "Dusclops",
+    "TROPIUS": "Tropius",
+    "CHIMECHO": "Chimecho",
+    "ABSOL": "Absol",
+    "WYNAUT": "Wynaut",
+    "SNORUNT": "Snorunt",
+    "GLALIE": "Glalie",
+    "SPHEAL": "Spheal",
+    "SEALEO": "Sealeo",
+    "WALREIN": "Walrein",
+    "CLAMPERL": "Clamperl",
+    "HUNTAIL": "Huntail",
+    "GOREBYSS": "Gorebyss",
+    "RELICANTH": "Relicanth",
+    "LUVDISC": "Luvdisc",
+    "BAGON": "Bagon",
+    "SHELGON": "Shelgon",
+    "SALAMENCE": "Salamence",
+    "BELDUM": "Beldum",
+    "METANG": "Metang",
+    "METAGROSS": "Metagross",
+    "REGIROCK": "Regirock",
+    "REGICE": "Regice",
+    "REGISTEEL": "Registeel",
+    "LATIAS": "Latias",
+    "LATIOS": "Latios",
+    "KYOGRE": "Kyogre",
+    "GROUDON": "Groudon",
+    "RAYQUAZA": "Rayquaza",
+    "JIRACHI": "Jirachi",
+    "DEOXYS": "Deoxys",
+    "TURTWIG": "Turtwig",
+    "GROTLE": "Grotle",
+    "TORTERRA": "Torterra",
+    "CHIMCHAR": "Chimchar",
+    "MONFERNO": "Monferno",
+    "INFERNAPE": "Infernape",
+    "PIPLUP": "Piplup",
+    "PRINPLUP": "Prinplup",
+    "EMPOLEON": "Empoleon",
+    "STARLY": "Starly",
+    "STARAVIA": "Staravia",
+    "STARAPTOR": "Staraptor",
+    "BIDOOF": "Bidoof",
+    "BIBAREL": "Bibarel",
+    "KRICKETOT": "Kricketot",
+    "KRICKETUNE": "Kricketune",
+    "SHINX": "Shinx",
+    "LUXIO": "Luxio",
+    "LUXRAY": "Luxray",
+    "BUDEW": "Budew",
+    "ROSERADE": "Roserade",
+    "CRANIDOS": "Cranidos",
+    "RAMPARDOS": "Rampardos",
+    "SHIELDON": "Shieldon",
+    "BASTIODON": "Bastiodon",
+    "BURMY": "Burmy",
+    "WORMADAM": "Wormadam",
+    "MOTHIM": "Mothim",
+    "COMBEE": "Combee",
+    "VESPIQUEN": "Vespiquen",
+    "PACHIRISU": "Pachirisu",
+    "BUIZEL": "Buizel",
+    "FLOATZEL": "Floatzel",
+    "CHERUBI": "Cherubi",
+    "CHERRIM": "Cherrim",
+    "SHELLOS": "Shellos",
+    "GASTRODON": "Gastrodon",
+    "AMBIPOM": "Ambipom",
+    "DRIFLOON": "Drifloon",
+    "DRIFBLIM": "Drifblim",
+    "BUNEARY": "Buneary",
+    "LOPUNNY": "Lopunny",
+    "MISMAGIUS": "Mismagius",
+    "HONCHKROW": "Honchkrow",
+    "GLAMEOW": "Glameow",
+    "PURUGLY": "Purugly",
+    "CHINGLING": "Chingling",
+    "STUNKY": "Stunky",
+    "SKUNTANK": "Skuntank",
+    "BRONZOR": "Bronzor",
+    "BRONZONG": "Bronzong",
+    "BONSLY": "Bonsly",
+    "MIME_JR": "Mime Jr.",
+    "HAPPINY": "Happiny",
+    "CHATOT": "Chatot",
+    "SPIRITOMB": "Spiritomb",
+    "GIBLE": "Gible",
+    "GABITE": "Gabite",
+    "GARCHOMP": "Garchomp",
+    "MUNCHLAX": "Munchlax",
+    "RIOLU": "Riolu",
+    "LUCARIO": "Lucario",
+    "HIPPOPOTAS": "Hippopotas",
+    "HIPPOWDON": "Hippowdon",
+    "SKORUPI": "Skorupi",
+    "DRAPION": "Drapion",
+    "CROAGUNK": "Croagunk",
+    "TOXICROAK": "Toxicroak",
+    "CARNIVINE": "Carnivine",
+    "FINNEON": "Finneon",
+    "LUMINEON": "Lumineon",
+    "MANTYKE": "Mantyke",
+    "SNOVER": "Snover",
+    "ABOMASNOW": "Abomasnow",
+    "WEAVILE": "Weavile",
+    "MAGNEZONE": "Magnezone",
+    "LICKILICKY": "Lickilicky",
+    "RHYPERIOR": "Rhyperior",
+    "TANGROWTH": "Tangrowth",
+    "ELECTIVIRE": "Electivire",
+    "MAGMORTAR": "Magmortar",
+    "TOGEKISS": "Togekiss",
+    "YANMEGA": "Yanmega",
+    "LEAFEON": "Leafeon",
+    "GLACEON": "Glaceon",
+    "GLISCOR": "Gliscor",
+    "MAMOSWINE": "Mamoswine",
+    "PORYGON_Z": "Porygon-Z",
+    "GALLADE": "Gallade",
+    "PROBOPASS": "Probopass",
+    "DUSKNOIR": "Dusknoir",
+    "FROSLASS": "Froslass",
+    "ROTOM": "Rotom",
+    "UXIE": "Uxie",
+    "MESPRIT": "Mesprit",
+    "AZELF": "Azelf",
+    "DIALGA": "Dialga",
+    "PALKIA": "Palkia",
+    "HEATRAN": "Heatran",
+    "REGIGIGAS": "Regigigas",
+    "GIRATINA": "Giratina",
+    "CRESSELIA": "Cresselia",
+    "PHIONE": "Phione",
+    "MANAPHY": "Manaphy",
+    "DARKRAI": "Darkrai",
+    "SHAYMIN": "Shaymin",
+    "ARCEUS": "Arceus",
+    "VICTINI": "Victini",
+    "SNIVY": "Snivy",
+    "SERVINE": "Servine",
+    "SERPERIOR": "Serperior",
+    "TEPIG": "Tepig",
+    "PIGNITE": "Pignite",
+    "EMBOAR": "Emboar",
+    "OSHAWOTT": "Oshawott",
+    "DEWOTT": "Dewott",
+    "SAMUROTT": "Samurott",
+    "PATRAT": "Patrat",
+    "WATCHOG": "Watchog",
+    "LILLIPUP": "Lillipup",
+    "HERDIER": "Herdier",
+    "STOUTLAND": "Stoutland",
+    "PURRLOIN": "Purrloin",
+    "LIEPARD": "Liepard",
+    "PANSAGE": "Pansage",
+    "SIMISAGE": "Simisage",
+    "PANSEAR": "Pansear",
+    "SIMISEAR": "Simisear",
+    "PANPOUR": "Panpour",
+    "SIMIPOUR": "Simipour",
+    "MUNNA": "Munna",
+    "MUSHARNA": "Musharna",
+    "PIDOVE": "Pidove",
+    "TRANQUILL": "Tranquill",
+    "UNFEZANT": "Unfezant",
+    "BLITZLE": "Blitzle",
+    "ZEBSTRIKA": "Zebstrika",
+    "ROGGENROLA": "Roggenrola",
+    "BOLDORE": "Boldore",
+    "GIGALITH": "Gigalith",
+    "WOOBAT": "Woobat",
+    "SWOOBAT": "Swoobat",
+    "DRILBUR": "Drilbur",
+    "EXCADRILL": "Excadrill",
+    "AUDINO": "Audino",
+    "TIMBURR": "Timburr",
+    "GURDURR": "Gurdurr",
+    "CONKELDURR": "Conkeldurr",
+    "TYMPOLE": "Tympole",
+    "PALPITOAD": "Palpitoad",
+    "SEISMITOAD": "Seismitoad",
+    "THROH": "Throh",
+    "SAWK": "Sawk",
+    "SEWADDLE": "Sewaddle",
+    "SWADLOON": "Swadloon",
+    "LEAVANNY": "Leavanny",
+    "VENIPEDE": "Venipede",
+    "WHIRLIPEDE": "Whirlipede",
+    "SCOLIPEDE": "Scolipede",
+    "COTTONEE": "Cottonee",
+    "WHIMSICOTT": "Whimsicott",
+    "PETILIL": "Petilil",
+    "LILLIGANT": "Lilligant",
+    "BASCULIN": "Basculin",
+    "SANDILE": "Sandile",
+    "KROKOROK": "Krokorok",
+    "KROOKODILE": "Krookodile",
+    "DARUMAKA": "Darumaka",
+    "DARMANITAN": "Darmanitan",
+    "MARACTUS": "Maractus",
+    "DWEBBLE": "Dwebble",
+    "CRUSTLE": "Crustle",
+    "SCRAGGY": "Scraggy",
+    "SCRAFTY": "Scrafty",
+    "SIGILYPH": "Sigilyph",
+    "YAMASK": "Yamask",
+    "COFAGRIGUS": "Cofagrigus",
+    "TIRTOUGA": "Tirtouga",
+    "CARRACOSTA": "Carracosta",
+    "ARCHEN": "Archen",
+    "ARCHEOPS": "Archeops",
+    "TRUBBISH": "Trubbish",
+    "GARBODOR": "Garbodor",
+    "ZORUA": "Zorua",
+    "ZOROARK": "Zoroark",
+    "MINCCINO": "Minccino",
+    "CINCCINO": "Cinccino",
+    "GOTHITA": "Gothita",
+    "GOTHORITA": "Gothorita",
+    "GOTHITELLE": "Gothitelle",
+    "SOLOSIS": "Solosis",
+    "DUOSION": "Duosion",
+    "REUNICLUS": "Reuniclus",
+    "DUCKLETT": "Ducklett",
+    "SWANNA": "Swanna",
+    "VANILLITE": "Vanillite",
+    "VANILLISH": "Vanillish",
+    "VANILLUXE": "Vanilluxe",
+    "DEERLING": "Deerling",
+    "SAWSBUCK": "Sawsbuck",
+    "EMOLGA": "Emolga",
+    "KARRABLAST": "Karrablast",
+    "ESCAVALIER": "Escavalier",
+    "FOONGUS": "Foongus",
+    "AMOONGUSS": "Amoonguss",
+    "FRILLISH": "Frillish",
+    "JELLICENT": "Jellicent",
+    "ALOMOMOLA": "Alomomola",
+    "JOLTIK": "Joltik",
+    "GALVANTULA": "Galvantula",
+    "FERROSEED": "Ferroseed",
+    "FERROTHORN": "Ferrothorn",
+    "KLINK": "Klink",
+    "KLANG": "Klang",
+    "KLINKLANG": "Klinklang",
+    "TYNAMO": "Tynamo",
+    "EELEKTRIK": "Eelektrik",
+    "EELEKTROSS": "Eelektross",
+    "ELGYEM": "Elgyem",
+    "BEHEEYEM": "Beheeyem",
+    "LITWICK": "Litwick",
+    "LAMPENT": "Lampent",
+    "CHANDELURE": "Chandelure",
+    "AXEW": "Axew",
+    "FRAXURE": "Fraxure",
+    "HAXORUS": "Haxorus",
+    "CUBCHOO": "Cubchoo",
+    "BEARTIC": "Beartic",
+    "CRYOGONAL": "Cryogonal",
+    "SHELMET": "Shelmet",
+    "ACCELGOR": "Accelgor",
+    "STUNFISK": "Stunfisk",
+    "MIENFOO": "Mienfoo",
+    "MIENSHAO": "Mienshao",
+    "DRUDDIGON": "Druddigon",
+    "GOLETT": "Golett",
+    "GOLURK": "Golurk",
+    "PAWNIARD": "Pawniard",
+    "BISHARP": "Bisharp",
+    "BOUFFALANT": "Bouffalant",
+    "RUFFLET": "Rufflet",
+    "BRAVIARY": "Braviary",
+    "VULLABY": "Vullaby",
+    "MANDIBUZZ": "Mandibuzz",
+    "HEATMOR": "Heatmor",
+    "DURANT": "Durant",
+    "DEINO": "Deino",
+    "ZWEILOUS": "Zweilous",
+    "HYDREIGON": "Hydreigon",
+    "LARVESTA": "Larvesta",
+    "VOLCARONA": "Volcarona",
+    "COBALION": "Cobalion",
+    "TERRAKION": "Terrakion",
+    "VIRIZION": "Virizion",
+    "TORNADUS": "Tornadus",
+    "THUNDURUS": "Thundurus",
+    "RESHIRAM": "Reshiram",
+    "ZEKROM": "Zekrom",
+    "LANDORUS": "Landorus",
+    "KYUREM": "Kyurem",
+    "KELDEO": "Keldeo",
+    "MELOETTA": "Meloetta",
+    "GENESECT": "Genesect",
+    "CHESPIN": "Chespin",
+    "QUILLADIN": "Quilladin",
+    "CHESNAUGHT": "Chesnaught",
+    "FENNEKIN": "Fennekin",
+    "BRAIXEN": "Braixen",
+    "DELPHOX": "Delphox",
+    "FROAKIE": "Froakie",
+    "FROGADIER": "Frogadier",
+    "GRENINJA": "Greninja",
+    "BUNNELBY": "Bunnelby",
+    "DIGGERSBY": "Diggersby",
+    "FLETCHLING": "Fletchling",
+    "FLETCHINDER": "Fletchinder",
+    "TALONFLAME": "Talonflame",
+    "SCATTERBUG": "Scatterbug",
+    "SPEWPA": "Spewpa",
+    "VIVILLON": "Vivillon",
+    "LITLEO": "Litleo",
+    "PYROAR": "Pyroar",
+    "FLABEBE": "Flabébé",
+    "FLOETTE": "Floette",
+    "FLORGES": "Florges",
+    "SKIDDO": "Skiddo",
+    "GOGOAT": "Gogoat",
+    "PANCHAM": "Pancham",
+    "PANGORO": "Pangoro",
+    "FURFROU": "Furfrou",
+    "ESPURR": "Espurr",
+    "MEOWSTIC": "Meowstic",
+    "HONEDGE": "Honedge",
+    "DOUBLADE": "Doublade",
+    "AEGISLASH": "Aegislash",
+    "SPRITZEE": "Spritzee",
+    "AROMATISSE": "Aromatisse",
+    "SWIRLIX": "Swirlix",
+    "SLURPUFF": "Slurpuff",
+    "INKAY": "Inkay",
+    "MALAMAR": "Malamar",
+    "BINACLE": "Binacle",
+    "BARBARACLE": "Barbaracle",
+    "SKRELP": "Skrelp",
+    "DRAGALGE": "Dragalge",
+    "CLAUNCHER": "Clauncher",
+    "CLAWITZER": "Clawitzer",
+    "HELIOPTILE": "Helioptile",
+    "HELIOLISK": "Heliolisk",
+    "TYRUNT": "Tyrunt",
+    "TYRANTRUM": "Tyrantrum",
+    "AMAURA": "Amaura",
+    "AURORUS": "Aurorus",
+    "SYLVEON": "Sylveon",
+    "HAWLUCHA": "Hawlucha",
+    "DEDENNE": "Dedenne",
+    "CARBINK": "Carbink",
+    "GOOMY": "Goomy",
+    "SLIGGOO": "Sliggoo",
+    "GOODRA": "Goodra",
+    "KLEFKI": "Klefki",
+    "PHANTUMP": "Phantump",
+    "TREVENANT": "Trevenant",
+    "PUMPKABOO": "Pumpkaboo",
+    "GOURGEIST": "Gourgeist",
+    "BERGMITE": "Bergmite",
+    "AVALUGG": "Avalugg",
+    "NOIBAT": "Noibat",
+    "NOIVERN": "Noivern",
+    "XERNEAS": "Xerneas",
+    "YVELTAL": "Yveltal",
+    "ZYGARDE": "Zygarde",
+    "DIANCIE": "Diancie",
+    "HOOPA": "Hoopa",
+    "VOLCANION": "Volcanion",
+    "ROWLET": "Rowlet",
+    "DARTRIX": "Dartrix",
+    "DECIDUEYE": "Decidueye",
+    "LITTEN": "Litten",
+    "TORRACAT": "Torracat",
+    "INCINEROAR": "Incineroar",
+    "POPPLIO": "Popplio",
+    "BRIONNE": "Brionne",
+    "PRIMARINA": "Primarina",
+    "PIKIPEK": "Pikipek",
+    "TRUMBEAK": "Trumbeak",
+    "TOUCANNON": "Toucannon",
+    "YUNGOOS": "Yungoos",
+    "GUMSHOOS": "Gumshoos",
+    "GRUBBIN": "Grubbin",
+    "CHARJABUG": "Charjabug",
+    "VIKAVOLT": "Vikavolt",
+    "CRABRAWLER": "Crabrawler",
+    "CRABOMINABLE": "Crabominable",
+    "ORICORIO": "Oricorio",
+    "CUTIEFLY": "Cutiefly",
+    "RIBOMBEE": "Ribombee",
+    "ROCKRUFF": "Rockruff",
+    "LYCANROC": "Lycanroc",
+    "WISHIWASHI": "Wishiwashi",
+    "MAREANIE": "Mareanie",
+    "TOXAPEX": "Toxapex",
+    "MUDBRAY": "Mudbray",
+    "MUDSDALE": "Mudsdale",
+    "DEWPIDER": "Dewpider",
+    "ARAQUANID": "Araquanid",
+    "FOMANTIS": "Fomantis",
+    "LURANTIS": "Lurantis",
+    "MORELULL": "Morelull",
+    "SHIINOTIC": "Shiinotic",
+    "SALANDIT": "Salandit",
+    "SALAZZLE": "Salazzle",
+    "STUFFUL": "Stufful",
+    "BEWEAR": "Bewear",
+    "BOUNSWEET": "Bounsweet",
+    "STEENEE": "Steenee",
+    "TSAREENA": "Tsareena",
+    "COMFEY": "Comfey",
+    "ORANGURU": "Oranguru",
+    "PASSIMIAN": "Passimian",
+    "WIMPOD": "Wimpod",
+    "GOLISOPOD": "Golisopod",
+    "SANDYGAST": "Sandygast",
+    "PALOSSAND": "Palossand",
+    "PYUKUMUKU": "Pyukumuku",
+    "TYPE_NULL": "Type: Null",
+    "SILVALLY": "Silvally",
+    "MINIOR": "Minior",
+    "KOMALA": "Komala",
+    "TURTONATOR": "Turtonator",
+    "TOGEDEMARU": "Togedemaru",
+    "MIMIKYU": "Mimikyu",
+    "BRUXISH": "Bruxish",
+    "DRAMPA": "Drampa",
+    "DHELMISE": "Dhelmise",
+    "JANGMO_O": "Jangmo-o",
+    "HAKAMO_O": "Hakamo-o",
+    "KOMMO_O": "Kommo-o",
+    "TAPU_KOKO": "Tapu Koko",
+    "TAPU_LELE": "Tapu Lele",
+    "TAPU_BULU": "Tapu Bulu",
+    "TAPU_FINI": "Tapu Fini",
+    "COSMOG": "Cosmog",
+    "COSMOEM": "Cosmoem",
+    "SOLGALEO": "Solgaleo",
+    "LUNALA": "Lunala",
+    "NIHILEGO": "Nihilego",
+    "BUZZWOLE": "Buzzwole",
+    "PHEROMOSA": "Pheromosa",
+    "XURKITREE": "Xurkitree",
+    "CELESTEELA": "Celesteela",
+    "KARTANA": "Kartana",
+    "GUZZLORD": "Guzzlord",
+    "NECROZMA": "Necrozma",
+    "MAGEARNA": "Magearna",
+    "MARSHADOW": "Marshadow",
+    "POIPOLE": "Poipole",
+    "NAGANADEL": "Naganadel",
+    "STAKATAKA": "Stakataka",
+    "BLACEPHALON": "Blacephalon",
+    "ZERAORA": "Zeraora",
+    "MELTAN": "Meltan",
+    "MELMETAL": "Melmetal",
+    "GROOKEY": "Grookey",
+    "THWACKEY": "Thwackey",
+    "RILLABOOM": "Rillaboom",
+    "SCORBUNNY": "Scorbunny",
+    "RABOOT": "Raboot",
+    "CINDERACE": "Cinderace",
+    "SOBBLE": "Sobble",
+    "DRIZZILE": "Drizzile",
+    "INTELEON": "Inteleon",
+    "SKWOVET": "Skwovet",
+    "GREEDENT": "Greedent",
+    "ROOKIDEE": "Rookidee",
+    "CORVISQUIRE": "Corvisquire",
+    "CORVIKNIGHT": "Corviknight",
+    "BLIPBUG": "Blipbug",
+    "DOTTLER": "Dottler",
+    "ORBEETLE": "Orbeetle",
+    "NICKIT": "Nickit",
+    "THIEVUL": "Thievul",
+    "GOSSIFLEUR": "Gossifleur",
+    "ELDEGOSS": "Eldegoss",
+    "WOOLOO": "Wooloo",
+    "DUBWOOL": "Dubwool",
+    "CHEWTLE": "Chewtle",
+    "DREDNAW": "Drednaw",
+    "YAMPER": "Yamper",
+    "BOLTUND": "Boltund",
+    "ROLYCOLY": "Rolycoly",
+    "CARKOL": "Carkol",
+    "COALOSSAL": "Coalossal",
+    "APPLIN": "Applin",
+    "FLAPPLE": "Flapple",
+    "APPLETUN": "Appletun",
+    "SILICOBRA": "Silicobra",
+    "SANDACONDA": "Sandaconda",
+    "CRAMORANT": "Cramorant",
+    "ARROKUDA": "Arrokuda",
+    "BARRASKEWDA": "Barraskewda",
+    "TOXEL": "Toxel",
+    "TOXTRICITY": "Toxtricity",
+    "SIZZLIPEDE": "Sizzlipede",
+    "CENTISKORCH": "Centiskorch",
+    "CLOBBOPUS": "Clobbopus",
+    "GRAPPLOCT": "Grapploct",
+    "SINISTEA": "Sinistea",
+    "POLTEAGEIST": "Polteageist",
+    "HATENNA": "Hatenna",
+    "HATTREM": "Hattrem",
+    "HATTERENE": "Hatterene",
+    "IMPIDIMP": "Impidimp",
+    "MORGREM": "Morgrem",
+    "GRIMMSNARL": "Grimmsnarl",
+    "OBSTAGOON": "Obstagoon",
+    "PERRSERKER": "Perrserker",
+    "CURSOLA": "Cursola",
+    "SIRFETCHD": "Sirfetch’d",
+    "MR_RIME": "Mr. Rime",
+    "RUNERIGUS": "Runerigus",
+    "MILCERY": "Milcery",
+    "ALCREMIE": "Alcremie",
+    "FALINKS": "Falinks",
+    "PINCURCHIN": "Pincurchin",
+    "SNOM": "Snom",
+    "FROSMOTH": "Frosmoth",
+    "STONJOURNER": "Stonjourner",
+    "EISCUE": "Eiscue",
+    "INDEEDEE": "Indeedee",
+    "MORPEKO": "Morpeko",
+    "CUFANT": "Cufant",
+    "COPPERAJAH": "Copperajah",
+    "DRACOZOLT": "Dracozolt",
+    "ARCTOZOLT": "Arctozolt",
+    "DRACOVISH": "Dracovish",
+    "ARCTOVISH": "Arctovish",
+    "DURALUDON": "Duraludon",
+    "DREEPY": "Dreepy",
+    "DRAKLOAK": "Drakloak",
+    "DRAGAPULT": "Dragapult",
+    "ZACIAN": "Zacian",
+    "ZAMAZENTA": "Zamazenta",
+    "ETERNATUS": "Eternatus",
+    "KUBFU": "Kubfu",
+    "URSHIFU": "Urshifu",
+    "ZARUDE": "Zarude",
+    "REGIELEKI": "Regieleki",
+    "REGIDRAGO": "Regidrago",
+    "GLASTRIER": "Glastrier",
+    "SPECTRIER": "Spectrier",
+    "CALYREX": "Calyrex",
+    "WYRDEER": "Wyrdeer",
+    "KLEAVOR": "Kleavor",
+    "URSALUNA": "Ursaluna",
+    "BASCULEGION": "Basculegion",
+    "SNEASLER": "Sneasler",
+    "OVERQWIL": "Overqwil",
+    "ENAMORUS": "Enamorus",
+    "SPRIGATITO": "Sprigatito",
+    "FLORAGATO": "Floragato",
+    "MEOWSCARADA": "Meowscarada",
+    "FUECOCO": "Fuecoco",
+    "CROCALOR": "Crocalor",
+    "SKELEDIRGE": "Skeledirge",
+    "QUAXLY": "Quaxly",
+    "QUAXWELL": "Quaxwell",
+    "QUAQUAVAL": "Quaquaval",
+    "LECHONK": "Lechonk",
+    "OINKOLOGNE": "Oinkologne",
+    "TAROUNTULA": "Tarountula",
+    "SPIDOPS": "Spidops",
+    "NYMBLE": "Nymble",
+    "LOKIX": "Lokix",
+    "PAWMI": "Pawmi",
+    "PAWMO": "Pawmo",
+    "PAWMOT": "Pawmot",
+    "TANDEMAUS": "Tandemaus",
+    "MAUSHOLD": "Maushold",
+    "FIDOUGH": "Fidough",
+    "DACHSBUN": "Dachsbun",
+    "SMOLIV": "Smoliv",
+    "DOLLIV": "Dolliv",
+    "ARBOLIVA": "Arboliva",
+    "SQUAWKABILLY": "Squawkabilly",
+    "NACLI": "Nacli",
+    "NACLSTACK": "Naclstack",
+    "GARGANACL": "Garganacl",
+    "CHARCADET": "Charcadet",
+    "ARMAROUGE": "Armarouge",
+    "CERULEDGE": "Ceruledge",
+    "TADBULB": "Tadbulb",
+    "BELLIBOLT": "Bellibolt",
+    "WATTREL": "Wattrel",
+    "KILOWATTREL": "Kilowattrel",
+    "MASCHIFF": "Maschiff",
+    "MABOSSTIFF": "Mabosstiff",
+    "SHROODLE": "Shroodle",
+    "GRAFAIAI": "Grafaiai",
+    "BRAMBLIN": "Bramblin",
+    "BRAMBLEGHAST": "Brambleghast",
+    "TOEDSCOOL": "Toedscool",
+    "TOEDSCRUEL": "Toedscruel",
+    "KLAWF": "Klawf",
+    "CAPSAKID": "Capsakid",
+    "SCOVILLAIN": "Scovillain",
+    "RELLOR": "Rellor",
+    "RABSCA": "Rabsca",
+    "FLITTLE": "Flittle",
+    "ESPATHRA": "Espathra",
+    "TINKATINK": "Tinkatink",
+    "TINKATUFF": "Tinkatuff",
+    "TINKATON": "Tinkaton",
+    "WIGLETT": "Wiglett",
+    "WUGTRIO": "Wugtrio",
+    "BOMBIRDIER": "Bombirdier",
+    "FINIZEN": "Finizen",
+    "PALAFIN": "Palafin",
+    "VAROOM": "Varoom",
+    "REVAVROOM": "Revavroom",
+    "CYCLIZAR": "Cyclizar",
+    "ORTHWORM": "Orthworm",
+    "GLIMMET": "Glimmet",
+    "GLIMMORA": "Glimmora",
+    "GREAVARD": "Greavard",
+    "HOUNDSTONE": "Houndstone",
+    "FLAMIGO": "Flamigo",
+    "CETODDLE": "Cetoddle",
+    "CETITAN": "Cetitan",
+    "VELUZA": "Veluza",
+    "DONDOZO": "Dondozo",
+    "TATSUGIRI": "Tatsugiri",
+    "ANNIHILAPE": "Annihilape",
+    "CLODSIRE": "Clodsire",
+    "FARIGIRAF": "Farigiraf",
+    "DUDUNSPARCE": "Dudunsparce",
+    "KINGAMBIT": "Kingambit",
+    "GREAT_TUSK": "Great Tusk",
+    "SCREAM_TAIL": "Scream Tail",
+    "BRUTE_BONNET": "Brute Bonnet",
+    "FLUTTER_MANE": "Flutter Mane",
+    "SLITHER_WING": "Slither Wing",
+    "SANDY_SHOCKS": "Sandy Shocks",
+    "IRON_TREADS": "Iron Treads",
+    "IRON_BUNDLE": "Iron Bundle",
+    "IRON_HANDS": "Iron Hands",
+    "IRON_JUGULIS": "Iron Jugulis",
+    "IRON_MOTH": "Iron Moth",
+    "IRON_THORNS": "Iron Thorns",
+    "FRIGIBAX": "Frigibax",
+    "ARCTIBAX": "Arctibax",
+    "BAXCALIBUR": "Baxcalibur",
+    "GIMMIGHOUL": "Gimmighoul",
+    "GHOLDENGO": "Gholdengo",
+    "WO_CHIEN": "Wo-Chien",
+    "CHIEN_PAO": "Chien-Pao",
+    "TING_LU": "Ting-Lu",
+    "CHI_YU": "Chi-Yu",
+    "ROARING_MOON": "Roaring Moon",
+    "IRON_VALIANT": "Iron Valiant",
+    "KORAIDON": "Koraidon",
+    "MIRAIDON": "Miraidon",
+    "WALKING_WAKE": "Walking Wake",
+    "IRON_LEAVES": "Iron Leaves",
+    "DIPPLIN": "Dipplin",
+    "POLTCHAGEIST": "Poltchageist",
+    "SINISTCHA": "Sinistcha",
+    "OKIDOGI": "Okidogi",
+    "MUNKIDORI": "Munkidori",
+    "FEZANDIPITI": "Fezandipiti",
+    "OGERPON": "Ogerpon",
+    "ARCHALUDON": "Archaludon",
+    "HYDRAPPLE": "Hydrapple",
+    "GOUGING_FIRE": "Gouging Fire",
+    "RAGING_BOLT": "Raging Bolt",
+    "IRON_BOULDER": "Iron Boulder",
+    "IRON_CROWN": "Iron Crown",
+    "TERAPAGOS": "Terapagos",
+    "PECHARUNT": "Pecharunt",
+    "ALOLA_RATTATA": "Rattata Alola",
+    "ALOLA_RATICATE": "Raticate Alola",
+    "ALOLA_RAICHU": "Raichu Alola",
+    "ALOLA_SANDSHREW": "Sandshrew Alola",
+    "ALOLA_SANDSLASH": "Sandslash Alola",
+    "ALOLA_VULPIX": "Vulpix Alola",
+    "ALOLA_NINETALES": "Ninetales Alola",
+    "ALOLA_DIGLETT": "Diglett Alola",
+    "ALOLA_DUGTRIO": "Dugtrio Alola",
+    "ALOLA_MEOWTH": "Meowth Alola",
+    "ALOLA_PERSIAN": "Persian Alola",
+    "ALOLA_GEODUDE": "Geodude Alola",
+    "ALOLA_GRAVELER": "Graveler Alola",
+    "ALOLA_GOLEM": "Golem Alola",
+    "ALOLA_GRIMER": "Grimer Alola",
+    "ALOLA_MUK": "Muk Alola",
+    "ALOLA_EXEGGUTOR": "Exeggutor Alola",
+    "ALOLA_MAROWAK": "Marowak Alola",
+    "BATTLE_BOND_GRENINJA": "Greninja Liên Kết Chiến Đấu",
+    "ETERNAL_FLOETTE": "Floette Hoa Vĩnh Cửu",
+    "GALAR_MEOWTH": "Meowth Galar",
+    "GALAR_PONYTA": "Ponyta Galar",
+    "GALAR_RAPIDASH": "Rapidash Galar",
+    "GALAR_SLOWPOKE": "Slowpoke Galar",
+    "GALAR_SLOWBRO": "Slowbro Galar",
+    "GALAR_FARFETCHD": "Farfetch’d Galar",
+    "GALAR_WEEZING": "Weezing Galar",
+    "GALAR_MR_MIME": "Mr. Mime Galar",
+    "GALAR_ARTICUNO": "Articuno Galar",
+    "GALAR_ZAPDOS": "Zapdos Galar",
+    "GALAR_MOLTRES": "Moltres Galar",
+    "GALAR_SLOWKING": "Slowking Galar",
+    "GALAR_CORSOLA": "Corsola Galar",
+    "GALAR_ZIGZAGOON": "Zigzagoon Galar",
+    "GALAR_LINOONE": "Linoone Galar",
+    "GALAR_DARUMAKA": "Darumaka Galar",
+    "GALAR_DARMANITAN": "Darmanitan Galar",
+    "GALAR_YAMASK": "Yamask Galar",
+    "GALAR_STUNFISK": "Stunfisk Galar",
+    "HISUI_GROWLITHE": "Growlithe Hisui",
+    "HISUI_ARCANINE": "Arcanine Hisui",
+    "HISUI_VOLTORB": "Voltorb Hisui",
+    "HISUI_ELECTRODE": "Electrode Hisui",
+    "HISUI_TYPHLOSION": "Typhlosion Hisui",
+    "HISUI_QWILFISH": "Qwilfish Hisui",
+    "HISUI_SNEASEL": "Sneasel Hisui",
+    "HISUI_SAMUROTT": "Samurott Hisui",
+    "HISUI_LILLIGANT": "Lilligant Hisui",
+    "HISUI_BASCULIN": "Basculin Hisui",
+    "HISUI_ZORUA": "Zorua Hisui",
+    "HISUI_ZOROARK": "Zoroark Hisui",
+    "HISUI_BRAVIARY": "Braviary Hisui",
+    "HISUI_SLIGGOO": "Sliggoo Hisui",
+    "HISUI_GOODRA": "Goodra Hisui",
+    "HISUI_AVALUGG": "Avalugg Hisui",
+    "HISUI_DECIDUEYE": "Decidueye Hisui",
+    "PALDEA_TAUROS": "Tauros Paldea",
+    "PALDEA_WOOPER": "Wooper Paldea",
+    "BLOODMOON_URSALUNA": "Ursaluna Trăng Máu"
+  },
+  "forms": {
+    "VENUSAUR:mega": "Mega Venusaur",
+    "VENUSAUR:gigantamax": "Venusaur G-Max",
+    "CHARIZARD:mega-x": "Mega Charizard X",
+    "CHARIZARD:mega-y": "Mega Charizard Y",
+    "CHARIZARD:gigantamax": "Charizard G-Max",
+    "BLASTOISE:mega": "Mega Blastoise",
+    "BLASTOISE:gigantamax": "Blastoise G-Max",
+    "BUTTERFREE:gigantamax": "Butterfree G-Max",
+    "BEEDRILL:mega": "Mega Beedrill",
+    "PIDGEOT:mega": "Mega Pidgeot",
+    "PIKACHU:": "Pikachu (Thường)",
+    "PIKACHU:partner": "Pikachu (Bạn Đồng Hành)",
+    "PIKACHU:cosplay": "Pikachu (Cosplay)",
+    "PIKACHU:cool-cosplay": "Pikachu (Cosplay Ngầu)",
+    "PIKACHU:beauty-cosplay": "Pikachu (Cosplay Xinh Đẹp)",
+    "PIKACHU:cute-cosplay": "Pikachu (Cosplay Đáng Yêu)",
+    "PIKACHU:smart-cosplay": "Pikachu (Cosplay Thông Minh)",
+    "PIKACHU:tough-cosplay": "Pikachu (Cosplay Cứng Rắn)",
+    "PIKACHU:gigantamax": "Pikachu G-Max",
+    "RAICHU:": "Raichu (Thường)",
+    "RAICHU:mega-x": "Mega Raichu X",
+    "RAICHU:mega-y": "Mega Raichu Y",
+    "CLEFABLE:mega": "Mega Clefable",
+    "MEOWTH:gigantamax": "Meowth G-Max",
+    "ALAKAZAM:mega": "Mega Alakazam",
+    "MACHAMP:gigantamax": "Machamp G-Max",
+    "VICTREEBEL:mega": "Mega Victreebel",
+    "SLOWBRO:mega": "Mega Slowbro",
+    "GENGAR:mega": "Mega Gengar",
+    "GENGAR:gigantamax": "Gengar G-Max",
+    "KINGLER:gigantamax": "Kingler G-Max",
+    "KANGASKHAN:mega": "Mega Kangaskhan",
+    "STARMIE:mega": "Mega Starmie",
+    "PINSIR:mega": "Mega Pinsir",
+    "GYARADOS:mega": "Mega Gyarados",
+    "LAPRAS:gigantamax": "Lapras G-Max",
+    "EEVEE:": "Eevee (Thường)",
+    "EEVEE:partner": "Eevee (Bạn Đồng Hành)",
+    "EEVEE:gigantamax": "Eevee G-Max",
+    "AERODACTYL:mega": "Mega Aerodactyl",
+    "SNORLAX:gigantamax": "Snorlax G-Max",
+    "DRAGONITE:mega": "Mega Dragonite",
+    "MEWTWO:mega-x": "Mega Mewtwo X",
+    "MEWTWO:mega-y": "Mega Mewtwo Y",
+    "MEGANIUM:mega": "Mega Meganium",
+    "FERALIGATR:mega": "Mega Feraligatr",
+    "PICHU:": "Pichu (Thường)",
+    "PICHU:spiky": "Pichu (Tai Nhọn)",
+    "AMPHAROS:mega": "Mega Ampharos",
+    "UNOWN:a": "Unown (A)",
+    "UNOWN:b": "Unown (B)",
+    "UNOWN:c": "Unown (C)",
+    "UNOWN:d": "Unown (D)",
+    "UNOWN:e": "Unown (E)",
+    "UNOWN:f": "Unown (F)",
+    "UNOWN:g": "Unown (G)",
+    "UNOWN:h": "Unown (H)",
+    "UNOWN:i": "Unown (I)",
+    "UNOWN:j": "Unown (J)",
+    "UNOWN:k": "Unown (K)",
+    "UNOWN:l": "Unown (L)",
+    "UNOWN:m": "Unown (M)",
+    "UNOWN:n": "Unown (N)",
+    "UNOWN:o": "Unown (O)",
+    "UNOWN:p": "Unown (P)",
+    "UNOWN:q": "Unown (Q)",
+    "UNOWN:r": "Unown (R)",
+    "UNOWN:s": "Unown (S)",
+    "UNOWN:t": "Unown (T)",
+    "UNOWN:u": "Unown (U)",
+    "UNOWN:v": "Unown (V)",
+    "UNOWN:w": "Unown (W)",
+    "UNOWN:x": "Unown (X)",
+    "UNOWN:y": "Unown (Y)",
+    "UNOWN:z": "Unown (Z)",
+    "UNOWN:exclamation": "Unown (!)",
+    "UNOWN:question": "Unown (?)",
+    "STEELIX:mega": "Mega Steelix",
+    "SCIZOR:mega": "Mega Scizor",
+    "HERACROSS:mega": "Mega Heracross",
+    "SKARMORY:mega": "Mega Skarmory",
+    "HOUNDOOM:mega": "Mega Houndoom",
+    "TYRANITAR:mega": "Mega Tyranitar",
+    "SCEPTILE:mega": "Mega Sceptile",
+    "BLAZIKEN:mega": "Mega Blaziken",
+    "SWAMPERT:mega": "Mega Swampert",
+    "GARDEVOIR:mega": "Mega Gardevoir",
+    "SABLEYE:mega": "Mega Sableye",
+    "MAWILE:mega": "Mega Mawile",
+    "AGGRON:mega": "Mega Aggron",
+    "MEDICHAM:mega": "Mega Medicham",
+    "MANECTRIC:mega": "Mega Manectric",
+    "SHARPEDO:mega": "Mega Sharpedo",
+    "CAMERUPT:mega": "Mega Camerupt",
+    "ALTARIA:mega": "Mega Altaria",
+    "CASTFORM:": "Castform (Dạng Thường)",
+    "CASTFORM:sunny": "Castform (Dạng Nắng)",
+    "CASTFORM:rainy": "Castform (Dạng Mưa)",
+    "CASTFORM:snowy": "Castform (Dạng Tuyết)",
+    "BANETTE:mega": "Mega Banette",
+    "CHIMECHO:mega": "Mega Chimecho",
+    "ABSOL:mega": "Mega Absol",
+    "ABSOL:mega-z": "Mega Absol Z",
+    "GLALIE:mega": "Mega Glalie",
+    "SALAMENCE:mega": "Mega Salamence",
+    "METAGROSS:mega": "Mega Metagross",
+    "LATIAS:mega": "Mega Latias",
+    "LATIOS:mega": "Mega Latios",
+    "KYOGRE:primal": "Primal Kyogre",
+    "GROUDON:primal": "Primal Groudon",
+    "RAYQUAZA:mega": "Mega Rayquaza",
+    "DEOXYS:normal": "Deoxys (Dạng Thường)",
+    "DEOXYS:attack": "Deoxys (Dạng Công)",
+    "DEOXYS:defense": "Deoxys (Dạng Thủ)",
+    "DEOXYS:speed": "Deoxys (Dạng Tốc)",
+    "STARAPTOR:mega": "Mega Staraptor",
+    "BURMY:plant": "Burmy (Vỏ Thảo Mộc)",
+    "BURMY:sandy": "Burmy (Vỏ Cát)",
+    "BURMY:trash": "Burmy (Vỏ Rác)",
+    "WORMADAM:plant": "Wormadam (Vỏ Thảo Mộc)",
+    "WORMADAM:sandy": "Wormadam (Vỏ Cát)",
+    "WORMADAM:trash": "Wormadam (Vỏ Rác)",
+    "CHERRIM:overcast": "Cherrim (Dạng U Ám)",
+    "CHERRIM:sunshine": "Cherrim (Dạng Rực Rỡ)",
+    "SHELLOS:east": "Shellos (Dạng Biển Đông)",
+    "SHELLOS:west": "Shellos (Dạng Biển Tây)",
+    "GASTRODON:east": "Gastrodon (Dạng Biển Đông)",
+    "GASTRODON:west": "Gastrodon (Dạng Biển Tây)",
+    "LOPUNNY:mega": "Mega Lopunny",
+    "GARCHOMP:mega": "Mega Garchomp",
+    "GARCHOMP:mega-z": "Mega Garchomp Z",
+    "LUCARIO:mega": "Mega Lucario",
+    "LUCARIO:mega-z": "Mega Lucario Z",
+    "ABOMASNOW:mega": "Mega Abomasnow",
+    "GALLADE:mega": "Mega Gallade",
+    "FROSLASS:mega": "Mega Froslass",
+    "ROTOM:": "Rotom (Thường)",
+    "ROTOM:heat": "Rotom (Nhiệt)",
+    "ROTOM:wash": "Rotom (Tẩy Rửa)",
+    "ROTOM:frost": "Rotom (Sương Giá)",
+    "ROTOM:fan": "Rotom (Quạt Máy)",
+    "ROTOM:mow": "Rotom (Cắt Cỏ)",
+    "DIALGA:": "Dialga (Thường)",
+    "DIALGA:origin": "Dialga (Dạng Nguyên Thủy)",
+    "PALKIA:": "Palkia (Thường)",
+    "PALKIA:origin": "Palkia (Dạng Nguyên Thủy)",
+    "HEATRAN:mega": "Mega Heatran",
+    "GIRATINA:altered": "Giratina (Dạng Biến Chất)",
+    "GIRATINA:origin": "Giratina (Dạng Nguyên Thủy)",
+    "DARKRAI:mega": "Mega Darkrai",
+    "SHAYMIN:land": "Shaymin (Dạng Mặt Đất)",
+    "SHAYMIN:sky": "Shaymin (Dạng Bầu Trời)",
+    "ARCEUS:normal": "Arceus (Thường)",
+    "ARCEUS:fighting": "Arceus (Giác Đấu)",
+    "ARCEUS:flying": "Arceus (Bay)",
+    "ARCEUS:poison": "Arceus (Độc)",
+    "ARCEUS:ground": "Arceus (Đất)",
+    "ARCEUS:rock": "Arceus (Đá)",
+    "ARCEUS:bug": "Arceus (Côn Trùng)",
+    "ARCEUS:ghost": "Arceus (Ma)",
+    "ARCEUS:steel": "Arceus (Thép)",
+    "ARCEUS:fire": "Arceus (Lửa)",
+    "ARCEUS:water": "Arceus (Nước)",
+    "ARCEUS:grass": "Arceus (Cỏ)",
+    "ARCEUS:electric": "Arceus (Điện)",
+    "ARCEUS:psychic": "Arceus (Siêu Linh)",
+    "ARCEUS:ice": "Arceus (Băng)",
+    "ARCEUS:dragon": "Arceus (Rồng)",
+    "ARCEUS:dark": "Arceus (Bóng Tối)",
+    "ARCEUS:fairy": "Arceus (Tiên)",
+    "EMBOAR:mega": "Mega Emboar",
+    "EXCADRILL:mega": "Mega Excadrill",
+    "AUDINO:mega": "Mega Audino",
+    "SCOLIPEDE:mega": "Mega Scolipede",
+    "BASCULIN:red-striped": "Basculin (Dạng Vảy Đỏ)",
+    "BASCULIN:blue-striped": "Basculin (Dạng Vảy Xanh)",
+    "DARMANITAN:": "Darmanitan (Chế Độ Thường)",
+    "DARMANITAN:zen": "Darmanitan (Chế Độ Thiền)",
+    "SCRAFTY:mega": "Mega Scrafty",
+    "GARBODOR:gigantamax": "Garbodor G-Max",
+    "DEERLING:spring": "Deerling (Hoa Xuân)",
+    "DEERLING:summer": "Deerling (Nắng Hạ)",
+    "DEERLING:autumn": "Deerling (Gió Thu)",
+    "DEERLING:winter": "Deerling (Tuyết Đông)",
+    "SAWSBUCK:spring": "Sawsbuck (Hoa Xuân)",
+    "SAWSBUCK:summer": "Sawsbuck (Nắng Hạ)",
+    "SAWSBUCK:autumn": "Sawsbuck (Gió Thu)",
+    "SAWSBUCK:winter": "Sawsbuck (Tuyết Đông)",
+    "EELEKTROSS:mega": "Mega Eelektross",
+    "CHANDELURE:mega": "Mega Chandelure",
+    "GOLURK:mega": "Mega Golurk",
+    "TORNADUS:incarnate": "Tornadus (Dạng Hiện Thân)",
+    "TORNADUS:therian": "Tornadus (Dạng Ma Thú)",
+    "THUNDURUS:incarnate": "Thundurus (Dạng Hiện Thân)",
+    "THUNDURUS:therian": "Thundurus (Dạng Ma Thú)",
+    "LANDORUS:incarnate": "Landorus (Dạng Hiện Thân)",
+    "LANDORUS:therian": "Landorus (Dạng Ma Thú)",
+    "KYUREM:": "Kyurem (Thường)",
+    "KYUREM:black": "Kyurem (Đen)",
+    "KYUREM:white": "Kyurem (Trắng)",
+    "KELDEO:ordinary": "Keldeo (Dạng Tập Sự)",
+    "KELDEO:resolute": "Keldeo (Đại Quyết Đoán)",
+    "MELOETTA:aria": "Meloetta (Dạng Nữ Ca)",
+    "MELOETTA:pirouette": "Meloetta (Dạng Nữ Chiến)",
+    "GENESECT:": "Genesect (Thường)",
+    "GENESECT:shock": "Genesect (Đĩa Điện)",
+    "GENESECT:burn": "Genesect (Đĩa Lửa)",
+    "GENESECT:chill": "Genesect (Đĩa Băng)",
+    "GENESECT:douse": "Genesect (Đĩa Thủy)",
+    "CHESNAUGHT:mega": "Mega Chesnaught",
+    "DELPHOX:mega": "Mega Delphox",
+    "GRENINJA:mega": "Mega Greninja",
+    "SCATTERBUG:meadow": "Scatterbug (Hoa Văn Đồng Cỏ)",
+    "SCATTERBUG:icy-snow": "Scatterbug (Hoa Văn Băng Giá)",
+    "SCATTERBUG:polar": "Scatterbug (Hoa Văn Băng Cực)",
+    "SCATTERBUG:tundra": "Scatterbug (Hoa Văn Đồng Băng)",
+    "SCATTERBUG:continental": "Scatterbug (Hoa Văn Lục Địa)",
+    "SCATTERBUG:garden": "Scatterbug (Hoa Văn Vườn Cây)",
+    "SCATTERBUG:elegant": "Scatterbug (Hoa Văn Thanh Lịch)",
+    "SCATTERBUG:modern": "Scatterbug (Hoa Văn Hiện Đại)",
+    "SCATTERBUG:marine": "Scatterbug (Hoa Văn Hải Dương)",
+    "SCATTERBUG:archipelago": "Scatterbug (Hoa Văn Quần Đảo)",
+    "SCATTERBUG:high-plains": "Scatterbug (Hoa Văn Cao Bằng)",
+    "SCATTERBUG:sandstorm": "Scatterbug (Hoa Văn Bão Cát)",
+    "SCATTERBUG:river": "Scatterbug (Hoa Văn Dòng Sông)",
+    "SCATTERBUG:monsoon": "Scatterbug (Hoa Văn Gió Mùa)",
+    "SCATTERBUG:savanna": "Scatterbug (Hoa Văn Thảo Nguyên)",
+    "SCATTERBUG:sun": "Scatterbug (Hoa Văn Mặt Trời)",
+    "SCATTERBUG:ocean": "Scatterbug (Hoa Văn Biển Cả)",
+    "SCATTERBUG:jungle": "Scatterbug (Hoa Văn Rừng Rậm)",
+    "SCATTERBUG:fancy": "Scatterbug (Hoa Văn Xinh Đẹp)",
+    "SCATTERBUG:poke-ball": "Scatterbug (Hoa Văn Poké Ball)",
+    "SPEWPA:meadow": "Spewpa (Hoa Văn Đồng Cỏ)",
+    "SPEWPA:icy-snow": "Spewpa (Hoa Văn Băng Giá)",
+    "SPEWPA:polar": "Spewpa (Hoa Văn Băng Cực)",
+    "SPEWPA:tundra": "Spewpa (Hoa Văn Đồng Băng)",
+    "SPEWPA:continental": "Spewpa (Hoa Văn Lục Địa)",
+    "SPEWPA:garden": "Spewpa (Hoa Văn Vườn Cây)",
+    "SPEWPA:elegant": "Spewpa (Hoa Văn Thanh Lịch)",
+    "SPEWPA:modern": "Spewpa (Hoa Văn Hiện Đại)",
+    "SPEWPA:marine": "Spewpa (Hoa Văn Hải Dương)",
+    "SPEWPA:archipelago": "Spewpa (Hoa Văn Quần Đảo)",
+    "SPEWPA:high-plains": "Spewpa (Hoa Văn Cao Bằng)",
+    "SPEWPA:sandstorm": "Spewpa (Hoa Văn Bão Cát)",
+    "SPEWPA:river": "Spewpa (Hoa Văn Dòng Sông)",
+    "SPEWPA:monsoon": "Spewpa (Hoa Văn Gió Mùa)",
+    "SPEWPA:savanna": "Spewpa (Hoa Văn Thảo Nguyên)",
+    "SPEWPA:sun": "Spewpa (Hoa Văn Mặt Trời)",
+    "SPEWPA:ocean": "Spewpa (Hoa Văn Biển Cả)",
+    "SPEWPA:jungle": "Spewpa (Hoa Văn Rừng Rậm)",
+    "SPEWPA:fancy": "Spewpa (Hoa Văn Xinh Đẹp)",
+    "SPEWPA:poke-ball": "Spewpa (Hoa Văn Poké Ball)",
+    "VIVILLON:meadow": "Vivillon (Hoa Văn Đồng Cỏ)",
+    "VIVILLON:icy-snow": "Vivillon (Hoa Văn Băng Giá)",
+    "VIVILLON:polar": "Vivillon (Hoa Văn Băng Cực)",
+    "VIVILLON:tundra": "Vivillon (Hoa Văn Đồng Băng)",
+    "VIVILLON:continental": "Vivillon (Hoa Văn Lục Địa)",
+    "VIVILLON:garden": "Vivillon (Hoa Văn Vườn Cây)",
+    "VIVILLON:elegant": "Vivillon (Hoa Văn Thanh Lịch)",
+    "VIVILLON:modern": "Vivillon (Hoa Văn Hiện Đại)",
+    "VIVILLON:marine": "Vivillon (Hoa Văn Hải Dương)",
+    "VIVILLON:archipelago": "Vivillon (Hoa Văn Quần Đảo)",
+    "VIVILLON:high-plains": "Vivillon (Hoa Văn Cao Bằng)",
+    "VIVILLON:sandstorm": "Vivillon (Hoa Văn Bão Cát)",
+    "VIVILLON:river": "Vivillon (Hoa Văn Dòng Sông)",
+    "VIVILLON:monsoon": "Vivillon (Hoa Văn Gió Mùa)",
+    "VIVILLON:savanna": "Vivillon (Hoa Văn Thảo Nguyên)",
+    "VIVILLON:sun": "Vivillon (Hoa Văn Mặt Trời)",
+    "VIVILLON:ocean": "Vivillon (Hoa Văn Biển Cả)",
+    "VIVILLON:jungle": "Vivillon (Hoa Văn Rừng Rậm)",
+    "VIVILLON:fancy": "Vivillon (Hoa Văn Xinh Đẹp)",
+    "VIVILLON:poke-ball": "Vivillon (Hoa Văn Poké Ball)",
+    "PYROAR:mega": "Mega Pyroar",
+    "FLABEBE:red": "Flabébé (Hoa Đỏ)",
+    "FLABEBE:yellow": "Flabébé (Hoa Vàng)",
+    "FLABEBE:orange": "Flabébé (Hoa Cam)",
+    "FLABEBE:blue": "Flabébé (Hoa Lam)",
+    "FLABEBE:white": "Flabébé (Hoa Trắng)",
+    "FLOETTE:red": "Floette (Hoa Đỏ)",
+    "FLOETTE:yellow": "Floette (Hoa Vàng)",
+    "FLOETTE:orange": "Floette (Hoa Cam)",
+    "FLOETTE:blue": "Floette (Hoa Lam)",
+    "FLOETTE:white": "Floette (Hoa Trắng)",
+    "FLORGES:red": "Florges (Hoa Đỏ)",
+    "FLORGES:yellow": "Florges (Hoa Vàng)",
+    "FLORGES:orange": "Florges (Hoa Cam)",
+    "FLORGES:blue": "Florges (Hoa Lam)",
+    "FLORGES:white": "Florges (Hoa Trắng)",
+    "FURFROU:": "Furfrou (Lông Không Tỉa)",
+    "FURFROU:heart": "Furfrou (Tỉa Trái Tim)",
+    "FURFROU:star": "Furfrou (Tỉa Ngôi Sao)",
+    "FURFROU:diamond": "Furfrou (Tỉa Kim Cương)",
+    "FURFROU:debutante": "Furfrou (Tỉa Tinh Tế)",
+    "FURFROU:matron": "Furfrou (Tỉa Sang Trọng)",
+    "FURFROU:dandy": "Furfrou (Tỉa Quý Tộc)",
+    "FURFROU:la-reine": "Furfrou (Tỉa Lông Dài)",
+    "FURFROU:kabuki": "Furfrou (Tỉa Cắt Moi)",
+    "FURFROU:pharaoh": "Furfrou (Tỉa Ai Cập)",
+    "MEOWSTIC:male": "Meowstic (Đực)",
+    "MEOWSTIC:female": "Meowstic (Cái)",
+    "MEOWSTIC:mega": "Mega Meowstic",
+    "AEGISLASH:shield": "Aegislash (Thủ Thế)",
+    "AEGISLASH:blade": "Aegislash (Công Thế)",
+    "MALAMAR:mega": "Mega Malamar",
+    "BARBARACLE:mega": "Mega Barbaracle",
+    "DRAGALGE:mega": "Mega Dragalge",
+    "HAWLUCHA:mega": "Mega Hawlucha",
+    "PUMPKABOO:": "Pumpkaboo (Dạng Trung)",
+    "PUMPKABOO:small": "Pumpkaboo (Dạng Nhỏ)",
+    "PUMPKABOO:large": "Pumpkaboo (Dạng Lớn)",
+    "PUMPKABOO:super": "Pumpkaboo (Dạng Cực Lớn)",
+    "GOURGEIST:": "Gourgeist (Dạng Trung)",
+    "GOURGEIST:small": "Gourgeist (Dạng Nhỏ)",
+    "GOURGEIST:large": "Gourgeist (Dạng Lớn)",
+    "GOURGEIST:super": "Gourgeist (Dạng Cực Lớn)",
+    "XERNEAS:neutral": "Xerneas (Dạng Tĩnh Tại)",
+    "XERNEAS:active": "Xerneas (Dạng Hoạt Hoá)",
+    "ZYGARDE:50": "Zygarde (Dạng 50%)",
+    "ZYGARDE:10": "Zygarde (Dạng 10%)",
+    "ZYGARDE:50-pc": "Zygarde (Dạng 50% Sức Mạnh)",
+    "ZYGARDE:10-pc": "Zygarde (Dạng 10% Sức Mạnh)",
+    "ZYGARDE:complete": "Zygarde (Dạng Hoàn Chỉnh)",
+    "ZYGARDE:mega": "Mega Zygarde",
+    "DIANCIE:mega": "Mega Diancie",
+    "HOOPA:": "Hoopa (Phong Ấn)",
+    "HOOPA:unbound": "Hoopa (Tự Do)",
+    "CRABOMINABLE:mega": "Mega Crabominable",
+    "ORICORIO:baile": "Oricorio (Vũ Điệu Rực Lửa)",
+    "ORICORIO:pompom": "Oricorio (Vũ Điệu Cổ Động)",
+    "ORICORIO:pau": "Oricorio (Vũ Điệu Hula)",
+    "ORICORIO:sensu": "Oricorio (Vũ Điệu Quạt)",
+    "ROCKRUFF:": "Rockruff (Thường)",
+    "ROCKRUFF:own-tempo": "Rockruff (Nhịp Điệu Riêng)",
+    "LYCANROC:midday": "Lycanroc (Dạng Ban Ngày)",
+    "LYCANROC:midnight": "Lycanroc (Dạng Ban Đêm)",
+    "LYCANROC:dusk": "Lycanroc (Dạng Hoàng Hôn)",
+    "WISHIWASHI:": "Wishiwashi (Dạng Đơn Thể)",
+    "WISHIWASHI:school": "Wishiwashi (Đàn Cá)",
+    "GOLISOPOD:mega": "Mega Golisopod",
+    "SILVALLY:normal": "Silvally (Hệ: Thường)",
+    "SILVALLY:fighting": "Silvally (Hệ: Giác Đấu)",
+    "SILVALLY:flying": "Silvally (Hệ: Bay)",
+    "SILVALLY:poison": "Silvally (Hệ: Độc)",
+    "SILVALLY:ground": "Silvally (Hệ: Đất)",
+    "SILVALLY:rock": "Silvally (Hệ: Đá)",
+    "SILVALLY:bug": "Silvally (Hệ: Côn Trùng)",
+    "SILVALLY:ghost": "Silvally (Hệ: Ma)",
+    "SILVALLY:steel": "Silvally (Hệ: Sắt)",
+    "SILVALLY:fire": "Silvally (Hệ: Lửa)",
+    "SILVALLY:water": "Silvally (Hệ: Nước)",
+    "SILVALLY:grass": "Silvally (Hệ: Cỏ)",
+    "SILVALLY:electric": "Silvally (Hệ: Điện)",
+    "SILVALLY:psychic": "Silvally (Hệ: Siêu Linh)",
+    "SILVALLY:ice": "Silvally (Hệ: Băng)",
+    "SILVALLY:dragon": "Silvally (Hệ: Rồng)",
+    "SILVALLY:dark": "Silvally (Hệ: Bóng Tối)",
+    "SILVALLY:fairy": "Silvally (Hệ: Tiên)",
+    "MINIOR:red-meteor": "Minior (Thiên Thạch Đỏ)",
+    "MINIOR:orange-meteor": "Minior (Thiên Thạch Cam)",
+    "MINIOR:yellow-meteor": "Minior (Thiên Thạch Vàng)",
+    "MINIOR:green-meteor": "Minior (Thiên Thạch Lục)",
+    "MINIOR:blue-meteor": "Minior (Thiên Thạch Lam)",
+    "MINIOR:indigo-meteor": "Minior (Thiên Thạch Chàm)",
+    "MINIOR:violet-meteor": "Minior (Thiên Thạch Tím)",
+    "MINIOR:red": "Minior (Tâm Thạch Đỏ)",
+    "MINIOR:orange": "Minior (Tâm Thạch Cam)",
+    "MINIOR:yellow": "Minior (Tâm Thạch Vàng)",
+    "MINIOR:green": "Minior (Tâm Thạch Lục)",
+    "MINIOR:blue": "Minior (Tâm Thạch Lam)",
+    "MINIOR:indigo": "Minior (Tâm Thạch Chàm)",
+    "MINIOR:violet": "Minior (Tâm Thạch Tím)",
+    "MIMIKYU:disguised": "Mimikyu (Dạng Ẩn Thân)",
+    "MIMIKYU:busted": "Mimikyu (Dạng Hiện Hình)",
+    "DRAMPA:mega": "Mega Drampa",
+    "NECROZMA:": "Necrozma (Thường)",
+    "NECROZMA:dusk-mane": "Necrozma (Bờm Hoàng Hôn)",
+    "NECROZMA:dawn-wings": "Necrozma (Cánh Bình Minh)",
+    "NECROZMA:ultra": "Necrozma (Ultra)",
+    "MAGEARNA:": "Magearna (Thường)",
+    "MAGEARNA:original": "Magearna (Nguyên Bản)",
+    "MAGEARNA:mega": "Mega Magearna",
+    "MAGEARNA:mega-original": "Mega Magearna",
+    "MARSHADOW:": "Marshadow (Thường)",
+    "MARSHADOW:zenith": "Marshadow (Thiên Đỉnh)",
+    "ZERAORA:mega": "Mega Zeraora",
+    "MELMETAL:gigantamax": "Melmetal G-Max",
+    "RILLABOOM:gigantamax": "Rillaboom G-Max",
+    "CINDERACE:gigantamax": "Cinderace G-Max",
+    "INTELEON:gigantamax": "Inteleon G-Max",
+    "CORVIKNIGHT:gigantamax": "Corviknight G-Max",
+    "ORBEETLE:gigantamax": "Orbeetle G-Max",
+    "DREDNAW:gigantamax": "Drednaw G-Max",
+    "COALOSSAL:gigantamax": "Coalossal G-Max",
+    "FLAPPLE:gigantamax": "Flapple G-Max",
+    "APPLETUN:gigantamax": "Appletun G-Max",
+    "SANDACONDA:gigantamax": "Sandaconda G-Max",
+    "CRAMORANT:": "Cramorant (Thường)",
+    "CRAMORANT:gulping": "Cramorant (Nuốt Chửng)",
+    "CRAMORANT:gorging": "Cramorant (Ngấu Nghiến)",
+    "TOXTRICITY:amped": "Toxtricity (Dạng Cuồng Nhiệt)",
+    "TOXTRICITY:lowkey": "Toxtricity (Dạng Trầm Lắng)",
+    "TOXTRICITY:gigantamax": "Toxtricity G-Max",
+    "CENTISKORCH:gigantamax": "Centiskorch G-Max",
+    "SINISTEA:phony": "Sinistea (Dạng Thứ Phẩm)",
+    "SINISTEA:antique": "Sinistea (Dạng Nguyên Tác)",
+    "POLTEAGEIST:phony": "Polteageist (Dạng Thứ Phẩm)",
+    "POLTEAGEIST:antique": "Polteageist (Dạng Nguyên Tác)",
+    "HATTERENE:gigantamax": "Hatterene G-Max",
+    "GRIMMSNARL:gigantamax": "Grimmsnarl G-Max",
+    "ALCREMIE:vanilla-cream": "Alcremie (Kem Vani)",
+    "ALCREMIE:ruby-cream": "Alcremie (Kem Ruby)",
+    "ALCREMIE:matcha-cream": "Alcremie (Kem Trà Xanh)",
+    "ALCREMIE:mint-cream": "Alcremie (Kem Bạc Hà)",
+    "ALCREMIE:lemon-cream": "Alcremie (Kem Chanh)",
+    "ALCREMIE:salted-cream": "Alcremie (Kem Muối)",
+    "ALCREMIE:ruby-swirl": "Alcremie (Hỗn Hợp Ruby)",
+    "ALCREMIE:caramel-swirl": "Alcremie (Xoáy Caramel)",
+    "ALCREMIE:rainbow-swirl": "Alcremie (Xoáy Cầu Vồng)",
+    "ALCREMIE:gigantamax": "Alcremie G-Max",
+    "FALINKS:mega": "Mega Falinks",
+    "EISCUE:": "Eiscue (Đầu Băng)",
+    "EISCUE:no-ice": "Eiscue (Không Băng)",
+    "INDEEDEE:male": "Indeedee (Đực)",
+    "INDEEDEE:female": "Indeedee (Cái)",
+    "MORPEKO:full-belly": "Morpeko (Chế Độ Đầy Bụng)",
+    "MORPEKO:hangry": "Morpeko (Chế Độ Bực Đói)",
+    "COPPERAJAH:gigantamax": "Copperajah G-Max",
+    "DURALUDON:gigantamax": "Duraludon G-Max",
+    "ZACIAN:hero-of-many-battles": "Zacian (Dũng Giả Cổ Tích)",
+    "ZACIAN:crowned": "Zacian (Lên Vương)",
+    "ZAMAZENTA:hero-of-many-battles": "Zamazenta (Dũng Giả Cổ Tích)",
+    "ZAMAZENTA:crowned": "Zamazenta (Lên Vương)",
+    "ETERNATUS:eternamax": "Eternatus E-Max",
+    "URSHIFU:single-strike": "Urshifu (Nhất Kích Quyền)",
+    "URSHIFU:rapid-strike": "Urshifu (Liên Kích Quyền)",
+    "URSHIFU:gigantamax-single": "Urshifu G-Max Nhất Kích Quyền",
+    "URSHIFU:gigantamax-rapid": "Urshifu G-Max Liên Kích Quyền",
+    "ZARUDE:": "Zarude (Thường)",
+    "ZARUDE:dada": "Zarude (Dada)",
+    "CALYREX:": "Calyrex (Thường)",
+    "CALYREX:ice": "Calyrex (Cưỡi Ngựa Băng)",
+    "CALYREX:shadow": "Calyrex (Cưỡi Ngựa Ma)",
+    "ENAMORUS:incarnate": "Enamorus (Dạng Tái Sinh)",
+    "ENAMORUS:therian": "Enamorus (Dạng Ma Thú)",
+    "OINKOLOGNE:male": "Oinkologne (Đực)",
+    "OINKOLOGNE:female": "Oinkologne (Cái)",
+    "MAUSHOLD:four": "Maushold (Gia Đình 4)",
+    "MAUSHOLD:three": "Maushold (Gia Đình 3)",
+    "SQUAWKABILLY:green-plumage": "Squawkabilly (Lông Lục)",
+    "SQUAWKABILLY:blue-plumage": "Squawkabilly (Lông Lam)",
+    "SQUAWKABILLY:yellow-plumage": "Squawkabilly (Lông Vàng)",
+    "SQUAWKABILLY:white-plumage": "Squawkabilly (Lông Trắng)",
+    "SCOVILLAIN:mega": "Mega Scovillain",
+    "PALAFIN:zero": "Palafin (Hình Thái Ngây Thơ)",
+    "PALAFIN:hero": "Palafin (Hình Thái Anh Hùng)",
+    "REVAVROOM:segin-starmobile": "Revavroom (Động Cơ Bóng Tối)",
+    "REVAVROOM:schedar-starmobile": "Revavroom (Động Cơ Bùng Cháy)",
+    "REVAVROOM:navi-starmobile": "Revavroom (Động Cơ Khí Độc)",
+    "REVAVROOM:ruchbah-starmobile": "Revavroom (Động Cơ Tiên Linh)",
+    "REVAVROOM:caph-starmobile": "Revavroom (Động Cơ Chiến Đấu)",
+    "GLIMMORA:mega": "Mega Glimmora",
+    "TATSUGIRI:curly": "Tatsugiri (Cá Hồi Đỏ)",
+    "TATSUGIRI:droopy": "Tatsugiri (Cá Hồi Hồng)",
+    "TATSUGIRI:stretchy": "Tatsugiri (Cá Hồi Vàng)",
+    "TATSUGIRI:mega-curly": "Mega Tatsugiri",
+    "TATSUGIRI:mega-droopy": "Mega Tatsugiri",
+    "TATSUGIRI:mega-stretchy": "Mega Tatsugiri",
+    "DUDUNSPARCE:two-segment": "Dudunsparce (Dạng Hai Đoạn)",
+    "DUDUNSPARCE:three-segment": "Dudunsparce (Dạng Ba Đoạn)",
+    "BAXCALIBUR:mega": "Mega Baxcalibur",
+    "GIMMIGHOUL:chest": "Gimmighoul (Dạng Rương)",
+    "GIMMIGHOUL:roaming": "Gimmighoul (Dạng Du Mục)",
+    "KORAIDON:apex-build": "Koraidon (Dạng Bạo Long)",
+    "MIRAIDON:ultimate-mode": "Miraidon (Chế Độ Hoàn Thiện)",
+    "POLTCHAGEIST:counterfeit": "Poltchageist (Dạng Đồ Giả)",
+    "POLTCHAGEIST:artisan": "Poltchageist (Dạng Đồ Cổ)",
+    "SINISTCHA:unremarkable": "Sinistcha (Dạng Thường)",
+    "SINISTCHA:masterpiece": "Sinistcha (Dạng Tiểu Xảo)",
+    "OGERPON:teal-mask": "Ogerpon (Mặt Nạ Lục Quỷ)",
+    "OGERPON:wellspring-mask": "Ogerpon (Mặt Nạ Thủy Quỷ)",
+    "OGERPON:hearthflame-mask": "Ogerpon (Mặt Nạ Hoả Quỷ)",
+    "OGERPON:cornerstone-mask": "Ogerpon (Mặt Nạ Thạch Quỷ)",
+    "OGERPON:teal-mask-tera": "Ogerpon (Mặt Nạ Lục Quỷ Tera)",
+    "OGERPON:wellspring-mask-tera": "Ogerpon (Mặt Nạ Thủy Quỷ Tera)",
+    "OGERPON:hearthflame-mask-tera": "Ogerpon (Mặt Nạ Hoả Quỷ Tera)",
+    "OGERPON:cornerstone-mask-tera": "Ogerpon (Mặt Nạ Thạch Quỷ Tera)",
+    "TERAPAGOS:": "Terapagos (Dạng Thường)",
+    "TERAPAGOS:terastal": "Terapagos (Dạng Tera)",
+    "TERAPAGOS:stellar": "Terapagos (Dạng Sao)",
+    "BATTLE_BOND_GRENINJA:battle-bond": "Greninja Liên Kết Chiến Đấu",
+    "BATTLE_BOND_GRENINJA:ash": "Greninja Liên Kết Chiến Đấu",
+    "ETERNAL_FLOETTE:": "Floette Hoa Vĩnh Cửu",
+    "ETERNAL_FLOETTE:mega": "Mega Floette",
+    "GALAR_DARMANITAN:": "Darmanitan Galar",
+    "GALAR_DARMANITAN:zen": "Darmanitan (Chế Độ Thiền)",
+    "PALDEA_TAUROS:combat": "Tauros (Giống Chiến)",
+    "PALDEA_TAUROS:blaze": "Tauros (Giống Lửa)",
+    "PALDEA_TAUROS:aqua": "Tauros (Giống Nước)"
+  },
+  "formLabels": {
+    "VENUSAUR:mega": "Mega",
+    "VENUSAUR:gigantamax": "G-Max",
+    "CHARIZARD:mega-x": "Mega X",
+    "CHARIZARD:mega-y": "Mega Y",
+    "CHARIZARD:gigantamax": "G-Max",
+    "BLASTOISE:mega": "Mega",
+    "BLASTOISE:gigantamax": "G-Max",
+    "BUTTERFREE:gigantamax": "G-Max",
+    "BEEDRILL:mega": "Mega",
+    "PIDGEOT:mega": "Mega",
+    "PIKACHU:": "Thường",
+    "PIKACHU:partner": "Bạn Đồng Hành",
+    "PIKACHU:cosplay": "Cosplay",
+    "PIKACHU:cool-cosplay": "Cosplay Ngầu",
+    "PIKACHU:beauty-cosplay": "Cosplay Xinh Đẹp",
+    "PIKACHU:cute-cosplay": "Cosplay Đáng Yêu",
+    "PIKACHU:smart-cosplay": "Cosplay Thông Minh",
+    "PIKACHU:tough-cosplay": "Cosplay Cứng Rắn",
+    "PIKACHU:gigantamax": "G-Max",
+    "RAICHU:": "Thường",
+    "RAICHU:mega-x": "Mega X",
+    "RAICHU:mega-y": "Mega Y",
+    "CLEFABLE:mega": "Mega",
+    "MEOWTH:gigantamax": "G-Max",
+    "ALAKAZAM:mega": "Mega",
+    "MACHAMP:gigantamax": "G-Max",
+    "VICTREEBEL:mega": "Mega",
+    "SLOWBRO:mega": "Mega",
+    "GENGAR:mega": "Mega",
+    "GENGAR:gigantamax": "G-Max",
+    "KINGLER:gigantamax": "G-Max",
+    "KANGASKHAN:mega": "Mega",
+    "STARMIE:mega": "Mega",
+    "PINSIR:mega": "Mega",
+    "GYARADOS:mega": "Mega",
+    "LAPRAS:gigantamax": "G-Max",
+    "EEVEE:": "Thường",
+    "EEVEE:partner": "Bạn Đồng Hành",
+    "EEVEE:gigantamax": "G-Max",
+    "AERODACTYL:mega": "Mega",
+    "SNORLAX:gigantamax": "G-Max",
+    "DRAGONITE:mega": "Mega",
+    "MEWTWO:mega-x": "Mega X",
+    "MEWTWO:mega-y": "Mega Y",
+    "MEGANIUM:mega": "Mega",
+    "FERALIGATR:mega": "Mega",
+    "PICHU:": "Thường",
+    "PICHU:spiky": "Tai Nhọn",
+    "AMPHAROS:mega": "Mega",
+    "UNOWN:a": "A",
+    "UNOWN:b": "B",
+    "UNOWN:c": "C",
+    "UNOWN:d": "D",
+    "UNOWN:e": "E",
+    "UNOWN:f": "F",
+    "UNOWN:g": "G",
+    "UNOWN:h": "H",
+    "UNOWN:i": "I",
+    "UNOWN:j": "J",
+    "UNOWN:k": "K",
+    "UNOWN:l": "L",
+    "UNOWN:m": "M",
+    "UNOWN:n": "N",
+    "UNOWN:o": "O",
+    "UNOWN:p": "P",
+    "UNOWN:q": "Q",
+    "UNOWN:r": "R",
+    "UNOWN:s": "S",
+    "UNOWN:t": "T",
+    "UNOWN:u": "U",
+    "UNOWN:v": "V",
+    "UNOWN:w": "W",
+    "UNOWN:x": "X",
+    "UNOWN:y": "Y",
+    "UNOWN:z": "Z",
+    "UNOWN:exclamation": "!",
+    "UNOWN:question": "?",
+    "STEELIX:mega": "Mega",
+    "SCIZOR:mega": "Mega",
+    "HERACROSS:mega": "Mega",
+    "SKARMORY:mega": "Mega",
+    "HOUNDOOM:mega": "Mega",
+    "TYRANITAR:mega": "Mega",
+    "SCEPTILE:mega": "Mega",
+    "BLAZIKEN:mega": "Mega",
+    "SWAMPERT:mega": "Mega",
+    "GARDEVOIR:mega": "Mega",
+    "SABLEYE:mega": "Mega",
+    "MAWILE:mega": "Mega",
+    "AGGRON:mega": "Mega",
+    "MEDICHAM:mega": "Mega",
+    "MANECTRIC:mega": "Mega",
+    "SHARPEDO:mega": "Mega",
+    "CAMERUPT:mega": "Mega",
+    "ALTARIA:mega": "Mega",
+    "CASTFORM:": "Dạng Thường",
+    "CASTFORM:sunny": "Dạng Nắng",
+    "CASTFORM:rainy": "Dạng Mưa",
+    "CASTFORM:snowy": "Dạng Tuyết",
+    "BANETTE:mega": "Mega",
+    "CHIMECHO:mega": "Mega",
+    "ABSOL:mega": "Mega",
+    "ABSOL:mega-z": "Mega Z",
+    "GLALIE:mega": "Mega",
+    "SALAMENCE:mega": "Mega",
+    "METAGROSS:mega": "Mega",
+    "LATIAS:mega": "Mega",
+    "LATIOS:mega": "Mega",
+    "KYOGRE:primal": "Primal",
+    "GROUDON:primal": "Primal",
+    "RAYQUAZA:mega": "Mega",
+    "DEOXYS:normal": "Dạng Thường",
+    "DEOXYS:attack": "Dạng Công",
+    "DEOXYS:defense": "Dạng Thủ",
+    "DEOXYS:speed": "Dạng Tốc",
+    "STARAPTOR:mega": "Mega",
+    "BURMY:plant": "Vỏ Thảo Mộc",
+    "BURMY:sandy": "Vỏ Cát",
+    "BURMY:trash": "Vỏ Rác",
+    "WORMADAM:plant": "Vỏ Thảo Mộc",
+    "WORMADAM:sandy": "Vỏ Cát",
+    "WORMADAM:trash": "Vỏ Rác",
+    "CHERRIM:overcast": "Dạng U Ám",
+    "CHERRIM:sunshine": "Dạng Rực Rỡ",
+    "SHELLOS:east": "Dạng Biển Đông",
+    "SHELLOS:west": "Dạng Biển Tây",
+    "GASTRODON:east": "Dạng Biển Đông",
+    "GASTRODON:west": "Dạng Biển Tây",
+    "LOPUNNY:mega": "Mega",
+    "GARCHOMP:mega": "Mega",
+    "GARCHOMP:mega-z": "Mega Z",
+    "LUCARIO:mega": "Mega",
+    "LUCARIO:mega-z": "Mega Z",
+    "ABOMASNOW:mega": "Mega",
+    "GALLADE:mega": "Mega",
+    "FROSLASS:mega": "Mega",
+    "ROTOM:": "Thường",
+    "ROTOM:heat": "Nhiệt",
+    "ROTOM:wash": "Tẩy Rửa",
+    "ROTOM:frost": "Sương Giá",
+    "ROTOM:fan": "Quạt Máy",
+    "ROTOM:mow": "Cắt Cỏ",
+    "DIALGA:": "Thường",
+    "DIALGA:origin": "Dạng Nguyên Thủy",
+    "PALKIA:": "Thường",
+    "PALKIA:origin": "Dạng Nguyên Thủy",
+    "HEATRAN:mega": "Mega",
+    "GIRATINA:altered": "Dạng Biến Chất",
+    "GIRATINA:origin": "Dạng Nguyên Thủy",
+    "DARKRAI:mega": "Mega",
+    "SHAYMIN:land": "Dạng Mặt Đất",
+    "SHAYMIN:sky": "Dạng Bầu Trời",
+    "ARCEUS:normal": "Thường",
+    "ARCEUS:fighting": "Giác Đấu",
+    "ARCEUS:flying": "Bay",
+    "ARCEUS:poison": "Độc",
+    "ARCEUS:ground": "Đất",
+    "ARCEUS:rock": "Đá",
+    "ARCEUS:bug": "Côn Trùng",
+    "ARCEUS:ghost": "Ma",
+    "ARCEUS:steel": "Thép",
+    "ARCEUS:fire": "Lửa",
+    "ARCEUS:water": "Nước",
+    "ARCEUS:grass": "Cỏ",
+    "ARCEUS:electric": "Điện",
+    "ARCEUS:psychic": "Siêu Linh",
+    "ARCEUS:ice": "Băng",
+    "ARCEUS:dragon": "Rồng",
+    "ARCEUS:dark": "Bóng Tối",
+    "ARCEUS:fairy": "Tiên",
+    "EMBOAR:mega": "Mega",
+    "EXCADRILL:mega": "Mega",
+    "AUDINO:mega": "Mega",
+    "SCOLIPEDE:mega": "Mega",
+    "BASCULIN:red-striped": "Dạng Vảy Đỏ",
+    "BASCULIN:blue-striped": "Dạng Vảy Xanh",
+    "DARMANITAN:": "Chế Độ Thường",
+    "DARMANITAN:zen": "Chế Độ Thiền",
+    "SCRAFTY:mega": "Mega",
+    "GARBODOR:gigantamax": "G-Max",
+    "DEERLING:spring": "Hoa Xuân",
+    "DEERLING:summer": "Nắng Hạ",
+    "DEERLING:autumn": "Gió Thu",
+    "DEERLING:winter": "Tuyết Đông",
+    "SAWSBUCK:spring": "Hoa Xuân",
+    "SAWSBUCK:summer": "Nắng Hạ",
+    "SAWSBUCK:autumn": "Gió Thu",
+    "SAWSBUCK:winter": "Tuyết Đông",
+    "EELEKTROSS:mega": "Mega",
+    "CHANDELURE:mega": "Mega",
+    "GOLURK:mega": "Mega",
+    "TORNADUS:incarnate": "Dạng Hiện Thân",
+    "TORNADUS:therian": "Dạng Ma Thú",
+    "THUNDURUS:incarnate": "Dạng Hiện Thân",
+    "THUNDURUS:therian": "Dạng Ma Thú",
+    "LANDORUS:incarnate": "Dạng Hiện Thân",
+    "LANDORUS:therian": "Dạng Ma Thú",
+    "KYUREM:": "Thường",
+    "KYUREM:black": "Đen",
+    "KYUREM:white": "Trắng",
+    "KELDEO:ordinary": "Dạng Tập Sự",
+    "KELDEO:resolute": "Đại Quyết Đoán",
+    "MELOETTA:aria": "Dạng Nữ Ca",
+    "MELOETTA:pirouette": "Dạng Nữ Chiến",
+    "GENESECT:": "Thường",
+    "GENESECT:shock": "Đĩa Điện",
+    "GENESECT:burn": "Đĩa Lửa",
+    "GENESECT:chill": "Đĩa Băng",
+    "GENESECT:douse": "Đĩa Thủy",
+    "CHESNAUGHT:mega": "Mega",
+    "DELPHOX:mega": "Mega",
+    "GRENINJA:mega": "Mega",
+    "SCATTERBUG:meadow": "Hoa Văn Đồng Cỏ",
+    "SCATTERBUG:icy-snow": "Hoa Văn Băng Giá",
+    "SCATTERBUG:polar": "Hoa Văn Băng Cực",
+    "SCATTERBUG:tundra": "Hoa Văn Đồng Băng",
+    "SCATTERBUG:continental": "Hoa Văn Lục Địa",
+    "SCATTERBUG:garden": "Hoa Văn Vườn Cây",
+    "SCATTERBUG:elegant": "Hoa Văn Thanh Lịch",
+    "SCATTERBUG:modern": "Hoa Văn Hiện Đại",
+    "SCATTERBUG:marine": "Hoa Văn Hải Dương",
+    "SCATTERBUG:archipelago": "Hoa Văn Quần Đảo",
+    "SCATTERBUG:high-plains": "Hoa Văn Cao Bằng",
+    "SCATTERBUG:sandstorm": "Hoa Văn Bão Cát",
+    "SCATTERBUG:river": "Hoa Văn Dòng Sông",
+    "SCATTERBUG:monsoon": "Hoa Văn Gió Mùa",
+    "SCATTERBUG:savanna": "Hoa Văn Thảo Nguyên",
+    "SCATTERBUG:sun": "Hoa Văn Mặt Trời",
+    "SCATTERBUG:ocean": "Hoa Văn Biển Cả",
+    "SCATTERBUG:jungle": "Hoa Văn Rừng Rậm",
+    "SCATTERBUG:fancy": "Hoa Văn Xinh Đẹp",
+    "SCATTERBUG:poke-ball": "Hoa Văn Poké Ball",
+    "SPEWPA:meadow": "Hoa Văn Đồng Cỏ",
+    "SPEWPA:icy-snow": "Hoa Văn Băng Giá",
+    "SPEWPA:polar": "Hoa Văn Băng Cực",
+    "SPEWPA:tundra": "Hoa Văn Đồng Băng",
+    "SPEWPA:continental": "Hoa Văn Lục Địa",
+    "SPEWPA:garden": "Hoa Văn Vườn Cây",
+    "SPEWPA:elegant": "Hoa Văn Thanh Lịch",
+    "SPEWPA:modern": "Hoa Văn Hiện Đại",
+    "SPEWPA:marine": "Hoa Văn Hải Dương",
+    "SPEWPA:archipelago": "Hoa Văn Quần Đảo",
+    "SPEWPA:high-plains": "Hoa Văn Cao Bằng",
+    "SPEWPA:sandstorm": "Hoa Văn Bão Cát",
+    "SPEWPA:river": "Hoa Văn Dòng Sông",
+    "SPEWPA:monsoon": "Hoa Văn Gió Mùa",
+    "SPEWPA:savanna": "Hoa Văn Thảo Nguyên",
+    "SPEWPA:sun": "Hoa Văn Mặt Trời",
+    "SPEWPA:ocean": "Hoa Văn Biển Cả",
+    "SPEWPA:jungle": "Hoa Văn Rừng Rậm",
+    "SPEWPA:fancy": "Hoa Văn Xinh Đẹp",
+    "SPEWPA:poke-ball": "Hoa Văn Poké Ball",
+    "VIVILLON:meadow": "Hoa Văn Đồng Cỏ",
+    "VIVILLON:icy-snow": "Hoa Văn Băng Giá",
+    "VIVILLON:polar": "Hoa Văn Băng Cực",
+    "VIVILLON:tundra": "Hoa Văn Đồng Băng",
+    "VIVILLON:continental": "Hoa Văn Lục Địa",
+    "VIVILLON:garden": "Hoa Văn Vườn Cây",
+    "VIVILLON:elegant": "Hoa Văn Thanh Lịch",
+    "VIVILLON:modern": "Hoa Văn Hiện Đại",
+    "VIVILLON:marine": "Hoa Văn Hải Dương",
+    "VIVILLON:archipelago": "Hoa Văn Quần Đảo",
+    "VIVILLON:high-plains": "Hoa Văn Cao Bằng",
+    "VIVILLON:sandstorm": "Hoa Văn Bão Cát",
+    "VIVILLON:river": "Hoa Văn Dòng Sông",
+    "VIVILLON:monsoon": "Hoa Văn Gió Mùa",
+    "VIVILLON:savanna": "Hoa Văn Thảo Nguyên",
+    "VIVILLON:sun": "Hoa Văn Mặt Trời",
+    "VIVILLON:ocean": "Hoa Văn Biển Cả",
+    "VIVILLON:jungle": "Hoa Văn Rừng Rậm",
+    "VIVILLON:fancy": "Hoa Văn Xinh Đẹp",
+    "VIVILLON:poke-ball": "Hoa Văn Poké Ball",
+    "PYROAR:mega": "Mega",
+    "FLABEBE:red": "Hoa Đỏ",
+    "FLABEBE:yellow": "Hoa Vàng",
+    "FLABEBE:orange": "Hoa Cam",
+    "FLABEBE:blue": "Hoa Lam",
+    "FLABEBE:white": "Hoa Trắng",
+    "FLOETTE:red": "Hoa Đỏ",
+    "FLOETTE:yellow": "Hoa Vàng",
+    "FLOETTE:orange": "Hoa Cam",
+    "FLOETTE:blue": "Hoa Lam",
+    "FLOETTE:white": "Hoa Trắng",
+    "FLORGES:red": "Hoa Đỏ",
+    "FLORGES:yellow": "Hoa Vàng",
+    "FLORGES:orange": "Hoa Cam",
+    "FLORGES:blue": "Hoa Lam",
+    "FLORGES:white": "Hoa Trắng",
+    "FURFROU:": "Lông Không Tỉa",
+    "FURFROU:heart": "Tỉa Trái Tim",
+    "FURFROU:star": "Tỉa Ngôi Sao",
+    "FURFROU:diamond": "Tỉa Kim Cương",
+    "FURFROU:debutante": "Tỉa Tinh Tế",
+    "FURFROU:matron": "Tỉa Sang Trọng",
+    "FURFROU:dandy": "Tỉa Quý Tộc",
+    "FURFROU:la-reine": "Tỉa Lông Dài",
+    "FURFROU:kabuki": "Tỉa Cắt Moi",
+    "FURFROU:pharaoh": "Tỉa Ai Cập",
+    "MEOWSTIC:male": "Đực",
+    "MEOWSTIC:female": "Cái",
+    "MEOWSTIC:mega": "Mega",
+    "AEGISLASH:shield": "Thủ Thế",
+    "AEGISLASH:blade": "Công Thế",
+    "MALAMAR:mega": "Mega",
+    "BARBARACLE:mega": "Mega",
+    "DRAGALGE:mega": "Mega",
+    "HAWLUCHA:mega": "Mega",
+    "PUMPKABOO:": "Dạng Trung",
+    "PUMPKABOO:small": "Dạng Nhỏ",
+    "PUMPKABOO:large": "Dạng Lớn",
+    "PUMPKABOO:super": "Dạng Cực Lớn",
+    "GOURGEIST:": "Dạng Trung",
+    "GOURGEIST:small": "Dạng Nhỏ",
+    "GOURGEIST:large": "Dạng Lớn",
+    "GOURGEIST:super": "Dạng Cực Lớn",
+    "XERNEAS:neutral": "Dạng Tĩnh Tại",
+    "XERNEAS:active": "Dạng Hoạt Hoá",
+    "ZYGARDE:50": "Dạng 50%",
+    "ZYGARDE:10": "Dạng 10%",
+    "ZYGARDE:50-pc": "Dạng 50% Sức Mạnh",
+    "ZYGARDE:10-pc": "Dạng 10% Sức Mạnh",
+    "ZYGARDE:complete": "Dạng Hoàn Chỉnh",
+    "ZYGARDE:mega": "Mega",
+    "DIANCIE:mega": "Mega",
+    "HOOPA:": "Phong Ấn",
+    "HOOPA:unbound": "Tự Do",
+    "CRABOMINABLE:mega": "Mega",
+    "ORICORIO:baile": "Vũ Điệu Rực Lửa",
+    "ORICORIO:pompom": "Vũ Điệu Cổ Động",
+    "ORICORIO:pau": "Vũ Điệu Hula",
+    "ORICORIO:sensu": "Vũ Điệu Quạt",
+    "ROCKRUFF:": "Thường",
+    "ROCKRUFF:own-tempo": "Nhịp Điệu Riêng",
+    "LYCANROC:midday": "Dạng Ban Ngày",
+    "LYCANROC:midnight": "Dạng Ban Đêm",
+    "LYCANROC:dusk": "Dạng Hoàng Hôn",
+    "WISHIWASHI:": "Dạng Đơn Thể",
+    "WISHIWASHI:school": "Đàn Cá",
+    "GOLISOPOD:mega": "Mega",
+    "SILVALLY:normal": "Hệ: Thường",
+    "SILVALLY:fighting": "Hệ: Giác Đấu",
+    "SILVALLY:flying": "Hệ: Bay",
+    "SILVALLY:poison": "Hệ: Độc",
+    "SILVALLY:ground": "Hệ: Đất",
+    "SILVALLY:rock": "Hệ: Đá",
+    "SILVALLY:bug": "Hệ: Côn Trùng",
+    "SILVALLY:ghost": "Hệ: Ma",
+    "SILVALLY:steel": "Hệ: Sắt",
+    "SILVALLY:fire": "Hệ: Lửa",
+    "SILVALLY:water": "Hệ: Nước",
+    "SILVALLY:grass": "Hệ: Cỏ",
+    "SILVALLY:electric": "Hệ: Điện",
+    "SILVALLY:psychic": "Hệ: Siêu Linh",
+    "SILVALLY:ice": "Hệ: Băng",
+    "SILVALLY:dragon": "Hệ: Rồng",
+    "SILVALLY:dark": "Hệ: Bóng Tối",
+    "SILVALLY:fairy": "Hệ: Tiên",
+    "MINIOR:red-meteor": "Thiên Thạch Đỏ",
+    "MINIOR:orange-meteor": "Thiên Thạch Cam",
+    "MINIOR:yellow-meteor": "Thiên Thạch Vàng",
+    "MINIOR:green-meteor": "Thiên Thạch Lục",
+    "MINIOR:blue-meteor": "Thiên Thạch Lam",
+    "MINIOR:indigo-meteor": "Thiên Thạch Chàm",
+    "MINIOR:violet-meteor": "Thiên Thạch Tím",
+    "MINIOR:red": "Tâm Thạch Đỏ",
+    "MINIOR:orange": "Tâm Thạch Cam",
+    "MINIOR:yellow": "Tâm Thạch Vàng",
+    "MINIOR:green": "Tâm Thạch Lục",
+    "MINIOR:blue": "Tâm Thạch Lam",
+    "MINIOR:indigo": "Tâm Thạch Chàm",
+    "MINIOR:violet": "Tâm Thạch Tím",
+    "MIMIKYU:disguised": "Dạng Ẩn Thân",
+    "MIMIKYU:busted": "Dạng Hiện Hình",
+    "DRAMPA:mega": "Mega",
+    "NECROZMA:": "Thường",
+    "NECROZMA:dusk-mane": "Bờm Hoàng Hôn",
+    "NECROZMA:dawn-wings": "Cánh Bình Minh",
+    "NECROZMA:ultra": "Ultra",
+    "MAGEARNA:": "Thường",
+    "MAGEARNA:original": "Nguyên Bản",
+    "MAGEARNA:mega": "Mega",
+    "MAGEARNA:mega-original": "Mega",
+    "MARSHADOW:": "Thường",
+    "MARSHADOW:zenith": "Thiên Đỉnh",
+    "ZERAORA:mega": "Mega",
+    "MELMETAL:gigantamax": "G-Max",
+    "RILLABOOM:gigantamax": "G-Max",
+    "CINDERACE:gigantamax": "G-Max",
+    "INTELEON:gigantamax": "G-Max",
+    "CORVIKNIGHT:gigantamax": "G-Max",
+    "ORBEETLE:gigantamax": "G-Max",
+    "DREDNAW:gigantamax": "G-Max",
+    "COALOSSAL:gigantamax": "G-Max",
+    "FLAPPLE:gigantamax": "G-Max",
+    "APPLETUN:gigantamax": "G-Max",
+    "SANDACONDA:gigantamax": "G-Max",
+    "CRAMORANT:": "Thường",
+    "CRAMORANT:gulping": "Nuốt Chửng",
+    "CRAMORANT:gorging": "Ngấu Nghiến",
+    "TOXTRICITY:amped": "Dạng Cuồng Nhiệt",
+    "TOXTRICITY:lowkey": "Dạng Trầm Lắng",
+    "TOXTRICITY:gigantamax": "G-Max",
+    "CENTISKORCH:gigantamax": "G-Max",
+    "SINISTEA:phony": "Dạng Thứ Phẩm",
+    "SINISTEA:antique": "Dạng Nguyên Tác",
+    "POLTEAGEIST:phony": "Dạng Thứ Phẩm",
+    "POLTEAGEIST:antique": "Dạng Nguyên Tác",
+    "HATTERENE:gigantamax": "G-Max",
+    "GRIMMSNARL:gigantamax": "G-Max",
+    "ALCREMIE:vanilla-cream": "Kem Vani",
+    "ALCREMIE:ruby-cream": "Kem Ruby",
+    "ALCREMIE:matcha-cream": "Kem Trà Xanh",
+    "ALCREMIE:mint-cream": "Kem Bạc Hà",
+    "ALCREMIE:lemon-cream": "Kem Chanh",
+    "ALCREMIE:salted-cream": "Kem Muối",
+    "ALCREMIE:ruby-swirl": "Hỗn Hợp Ruby",
+    "ALCREMIE:caramel-swirl": "Xoáy Caramel",
+    "ALCREMIE:rainbow-swirl": "Xoáy Cầu Vồng",
+    "ALCREMIE:gigantamax": "G-Max",
+    "FALINKS:mega": "Mega",
+    "EISCUE:": "Đầu Băng",
+    "EISCUE:no-ice": "Không Băng",
+    "INDEEDEE:male": "Đực",
+    "INDEEDEE:female": "Cái",
+    "MORPEKO:full-belly": "Chế Độ Đầy Bụng",
+    "MORPEKO:hangry": "Chế Độ Bực Đói",
+    "COPPERAJAH:gigantamax": "G-Max",
+    "DURALUDON:gigantamax": "G-Max",
+    "ZACIAN:hero-of-many-battles": "Dũng Giả Cổ Tích",
+    "ZACIAN:crowned": "Lên Vương",
+    "ZAMAZENTA:hero-of-many-battles": "Dũng Giả Cổ Tích",
+    "ZAMAZENTA:crowned": "Lên Vương",
+    "ETERNATUS:eternamax": "E-Max",
+    "URSHIFU:single-strike": "Nhất Kích Quyền",
+    "URSHIFU:rapid-strike": "Liên Kích Quyền",
+    "URSHIFU:gigantamax-single": "G-Max Nhất Kích Quyền",
+    "URSHIFU:gigantamax-rapid": "G-Max Liên Kích Quyền",
+    "ZARUDE:": "Thường",
+    "ZARUDE:dada": "Dada",
+    "CALYREX:": "Thường",
+    "CALYREX:ice": "Cưỡi Ngựa Băng",
+    "CALYREX:shadow": "Cưỡi Ngựa Ma",
+    "ENAMORUS:incarnate": "Dạng Tái Sinh",
+    "ENAMORUS:therian": "Dạng Ma Thú",
+    "OINKOLOGNE:male": "Đực",
+    "OINKOLOGNE:female": "Cái",
+    "MAUSHOLD:four": "Gia Đình 4",
+    "MAUSHOLD:three": "Gia Đình 3",
+    "SQUAWKABILLY:green-plumage": "Lông Lục",
+    "SQUAWKABILLY:blue-plumage": "Lông Lam",
+    "SQUAWKABILLY:yellow-plumage": "Lông Vàng",
+    "SQUAWKABILLY:white-plumage": "Lông Trắng",
+    "SCOVILLAIN:mega": "Mega",
+    "PALAFIN:zero": "Hình Thái Ngây Thơ",
+    "PALAFIN:hero": "Hình Thái Anh Hùng",
+    "REVAVROOM:segin-starmobile": "Động Cơ Bóng Tối",
+    "REVAVROOM:schedar-starmobile": "Động Cơ Bùng Cháy",
+    "REVAVROOM:navi-starmobile": "Động Cơ Khí Độc",
+    "REVAVROOM:ruchbah-starmobile": "Động Cơ Tiên Linh",
+    "REVAVROOM:caph-starmobile": "Động Cơ Chiến Đấu",
+    "GLIMMORA:mega": "Mega",
+    "TATSUGIRI:curly": "Cá Hồi Đỏ",
+    "TATSUGIRI:droopy": "Cá Hồi Hồng",
+    "TATSUGIRI:stretchy": "Cá Hồi Vàng",
+    "TATSUGIRI:mega-curly": "Mega",
+    "TATSUGIRI:mega-droopy": "Mega",
+    "TATSUGIRI:mega-stretchy": "Mega",
+    "DUDUNSPARCE:two-segment": "Dạng Hai Đoạn",
+    "DUDUNSPARCE:three-segment": "Dạng Ba Đoạn",
+    "BAXCALIBUR:mega": "Mega",
+    "GIMMIGHOUL:chest": "Dạng Rương",
+    "GIMMIGHOUL:roaming": "Dạng Du Mục",
+    "KORAIDON:apex-build": "Dạng Bạo Long",
+    "MIRAIDON:ultimate-mode": "Chế Độ Hoàn Thiện",
+    "POLTCHAGEIST:counterfeit": "Dạng Đồ Giả",
+    "POLTCHAGEIST:artisan": "Dạng Đồ Cổ",
+    "SINISTCHA:unremarkable": "Dạng Thường",
+    "SINISTCHA:masterpiece": "Dạng Tiểu Xảo",
+    "OGERPON:teal-mask": "Mặt Nạ Lục Quỷ",
+    "OGERPON:wellspring-mask": "Mặt Nạ Thủy Quỷ",
+    "OGERPON:hearthflame-mask": "Mặt Nạ Hoả Quỷ",
+    "OGERPON:cornerstone-mask": "Mặt Nạ Thạch Quỷ",
+    "OGERPON:teal-mask-tera": "Mặt Nạ Lục Quỷ Tera",
+    "OGERPON:wellspring-mask-tera": "Mặt Nạ Thủy Quỷ Tera",
+    "OGERPON:hearthflame-mask-tera": "Mặt Nạ Hoả Quỷ Tera",
+    "OGERPON:cornerstone-mask-tera": "Mặt Nạ Thạch Quỷ Tera",
+    "TERAPAGOS:": "Dạng Thường",
+    "TERAPAGOS:terastal": "Dạng Tera",
+    "TERAPAGOS:stellar": "Dạng Sao",
+    "BATTLE_BOND_GRENINJA:battle-bond": "Liên Kết Chiến Đấu",
+    "BATTLE_BOND_GRENINJA:ash": "Liên Kết Chiến Đấu",
+    "ETERNAL_FLOETTE:": "Hoa Vĩnh Hằng",
+    "ETERNAL_FLOETTE:mega": "Mega",
+    "GALAR_DARMANITAN:": "Dạng Galar",
+    "GALAR_DARMANITAN:zen": "Chế Độ Thiền",
+    "PALDEA_TAUROS:combat": "Giống Chiến",
+    "PALDEA_TAUROS:blaze": "Giống Lửa",
+    "PALDEA_TAUROS:aqua": "Giống Nước"
+  },
+  "moves": {},
+  "abilities": {},
+  "types": {
+    "unknown": "Không Rõ",
+    "normal": "Thường",
+    "fighting": "Giác Đấu",
+    "flying": "Bay",
+    "poison": "Độc",
+    "ground": "Đất",
+    "rock": "Đá",
+    "bug": "Côn Trùng",
+    "ghost": "Ma",
+    "steel": "Thép",
+    "fire": "Lửa",
+    "water": "Nước",
+    "grass": "Cỏ",
+    "electric": "Điện",
+    "psychic": "Siêu Linh",
+    "ice": "Băng",
+    "dragon": "Rồng",
+    "dark": "Bóng Tối",
+    "fairy": "Tiên",
+    "stellar": "Ngôi Sao"
+  },
+  "natures": {
+    "HARDY": "Cứng Đầu",
+    "LONELY": "Đơn Độc",
+    "BRAVE": "Dũng Cảm",
+    "ADAMANT": "Cứng Cỏi",
+    "NAUGHTY": "Ngỗ Nghịch",
+    "BOLD": "Táo Bạo",
+    "DOCILE": "Hiền Hoà",
+    "RELAXED": "Thư Giãn",
+    "IMPISH": "Tinh Quái",
+    "LAX": "Lơ Là",
+    "TIMID": "Rụt Rè",
+    "HASTY": "Nhanh Nhẹn",
+    "SERIOUS": "Chín Chắn",
+    "JOLLY": "Vui Vẻ",
+    "NAIVE": "Ngây Thơ",
+    "MODEST": "Khiêm Tốn",
+    "MILD": "Dịu Dàng",
+    "QUIET": "Trầm Lặng",
+    "BASHFUL": "Nhút Nhát",
+    "RASH": "Liều Lĩnh",
+    "CALM": "Điềm Tĩnh",
+    "GENTLE": "Nhẹ Nhàng",
+    "SASSY": "Xấc Xược",
+    "CAREFUL": "Cẩn Trọng",
+    "QUIRKY": "Lập Dị"
+  },
+  "stats": {
+    "HP": {
+      "name": "HP",
+      "short": "HP"
+    },
+    "ATK": {
+      "name": "Tấn công",
+      "short": "TCô"
+    },
+    "DEF": {
+      "name": "Phòng thủ",
+      "short": "PTh"
+    },
+    "SPATK": {
+      "name": "T.công Đ.b.",
+      "short": "TCĐB"
+    },
+    "SPDEF": {
+      "name": "P.thủ Đ.b.",
+      "short": "PTĐB"
+    },
+    "SPD": {
+      "name": "Tốc độ",
+      "short": "TĐộ"
+    },
+    "ACC": {
+      "name": "Độ Chuẩn",
+      "short": null
+    },
+    "EVA": {
+      "name": "Độ Né Tránh",
+      "short": null
+    }
+  },
+  "statusEffects": {
+    "NONE": {
+      "name": "Không"
+    },
+    "POISON": {
+      "name": "Nhiễm Độc",
+      "description": "bị trúng độc",
+      "obtain": "{{pokemonNameWithAffix}}\nđang bị trúng độc!",
+      "obtainSource": "{{pokemonNameWithAffix}}\nbị hạ độc bởi {{sourceText}}!",
+      "activation": "{{pokemonNameWithAffix}} bị thương\nbởi độc!",
+      "overlap": "{{pokemonNameWithAffix}} đang\nbị trúng độc rồi!",
+      "heal": "{{pokemonNameWithAffix}} đã\nđược cứu khỏi độc tố!"
+    },
+    "TOXIC": {
+      "name": "Độc Hại",
+      "description": "trúng độc",
+      "obtain": "{{pokemonNameWithAffix}}\nbị trúng độc rất nặng!",
+      "obtainSource": "{{pokemonNameWithAffix}}\nbị trúng độc rất nặng bởi {{sourceText}}!",
+      "activation": "{{pokemonNameWithAffix}} bị thương\nbởi độc!",
+      "overlap": "{{pokemonNameWithAffix}} đang\ntrúng độc rồi!",
+      "heal": "{{pokemonNameWithAffix}} được\ncứu khỏi độc tố!"
+    },
+    "PARALYSIS": {
+      "name": "Tê Liệt",
+      "description": "tê liệt",
+      "obtain": "{{pokemonNameWithAffix}} bị tê liệt,\ncó khả năng nó không thể di chuyển!",
+      "obtainSource": "{{pokemonNameWithAffix}} bị tê liệt bởi {{sourceText}}!\nCó khả năng sẽ không di chuyển được!",
+      "activation": "{{pokemonNameWithAffix}} bị tê liệt!\nNó không thể di chuyển được!",
+      "overlap": "{{pokemonNameWithAffix}} đã\nbị tê liệt rồi!",
+      "heal": "{{pokemonNameWithAffix}} đã được\nhồi phục khỏi tê liệt!"
+    },
+    "SLEEP": {
+      "name": "Ngủ Say",
+      "description": "ngủ say",
+      "obtain": "{{pokemonNameWithAffix}}\nrơi vào mộng đẹp!",
+      "obtainSource": "{{pokemonNameWithAffix}}\nrơi vào giấc ngủ bởi {{sourceText}}!",
+      "activation": "{{pokemonNameWithAffix}} rơi vào giấc ngủ.",
+      "overlap": "{{pokemonNameWithAffix}} đã\nngủ mất rồi!",
+      "heal": "{{pokemonNameWithAffix}} thức tỉnh!"
+    },
+    "FREEZE": {
+      "name": "Đóng Băng",
+      "description": "đóng băng",
+      "obtain": "{{pokemonNameWithAffix}}\nbị đóng thành băng!",
+      "obtainSource": "{{pokemonNameWithAffix}}\nbị đóng băng bởi {{sourceText}}!",
+      "activation": "{{pokemonNameWithAffix}} bị\nđóng thành băng!",
+      "overlap": "{{pokemonNameWithAffix}} đang\nbị đóng băng rồi!",
+      "heal": "{{pokemonNameWithAffix}} đã\ntan băng!",
+      "healByMove": "{{moveName}} của {{pokemonNameWithAffix}}\nđã làm rã băng!"
+    },
+    "BURN": {
+      "name": "Bỏng",
+      "description": "bỏng",
+      "obtain": "{{pokemonNameWithAffix}}\nbị bỏng!",
+      "obtainSource": "{{pokemonNameWithAffix}}\nbị làm bỏng bởi {{sourceText}}!",
+      "activation": "{{pokemonNameWithAffix}} bị thương\nbởi bỏng!",
+      "overlap": "{{pokemonNameWithAffix}} đang\nbị bỏng rồi!",
+      "heal": "{{pokemonNameWithAffix}} đã\nđược cứu khỏi bỏng!"
+    }
+  },
+  "items": {
+    "ABOMASITE": {
+      "name": "Abomasite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "ABSOLITE": {
+      "name": "Absolite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "ABSOLITE_Z": {
+      "name": "Absolite Z",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "AERODACTYLITE": {
+      "name": "Aerodactylite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "AGGRONITE": {
+      "name": "Aggronite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "ALAKAZITE": {
+      "name": "Alakazite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "AMPHAROSITE": {
+      "name": "Ampharosite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "AMULET_COIN": {
+      "name": "Bùa Xu Vàng",
+      "description": "Tăng tiền thưởng lên 20%."
+    },
+    "APICOT_BERRY": {
+      "name": "Apicot Berry",
+      "description": "Tăng chỉ số P.thủ Đ.b. nếu HP dưới 25%."
+    },
+    "BARBARACITE": {
+      "name": "Barbaracite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "BAXCALIBRITE": {
+      "name": "Baxcalibrite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "BEEDRILLITE": {
+      "name": "Beedrillite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "BERRY_POUCH": {
+      "name": "Túi Berry",
+      "description": "Tăng 30% khả năng Berry đã sử dụng sẽ không bị tiêu thụ."
+    },
+    "BIG_NUGGET": {
+      "name": "Vàng Viên",
+      "description": null
+    },
+    "BLACK_BELT": {
+      "name": "Đai Đen",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Giác Đấu của Pokémon lên 20%."
+    },
+    "BLACK_GLASSES": {
+      "name": "Kính Râm",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Bóng Tối của Pokémon lên 20%."
+    },
+    "BLANK_PLATE": {
+      "name": "Bản Trống",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "BLASTOISINITE": {
+      "name": "Blastoisinite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "BLAZIKENITE": {
+      "name": "Blazikenite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "BLUE_ORB": {
+      "name": "Thủy Lam Cầu",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "CANDY_JAR": {
+      "name": "Lọ Kẹo",
+      "description": "Tăng số cấp được tăng bởi Kẹo Hiếm lên 1."
+    },
+    "CHANDELURITE": {
+      "name": "Chandelurite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "CHARCOAL": {
+      "name": "Than Củi",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Lửa của Pokémon lên 20%."
+    },
+    "CHARIZARDITE_X": {
+      "name": "Charizardite X",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "CHARIZARDITE_Y": {
+      "name": "Charizardite Y",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "CHESNAUGHTITE": {
+      "name": "Chesnaughtite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "COIN_CASE": {
+      "name": "Túi Đầu Tư",
+      "description": "Sau mỗi 10 trận chiến, bạn sẽ nhận được 10% tiền lãi."
+    },
+    "DAWN_STONE": {
+      "name": "Triều Minh Thạch",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "DELPHOXITE": {
+      "name": "Delphoxite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "DIANCITE": {
+      "name": "Diancite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "DRACO_PLATE": {
+      "name": "Bản Long Vương",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "DRAGALGITE": {
+      "name": "Dragalgite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "DRAGONINITE": {
+      "name": "Dragoninite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "DRAGON_FANG": {
+      "name": "Nanh Rồng",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Rồng của Pokémon lên 20%."
+    },
+    "DRAGON_SCALE": {
+      "name": "Vảy Rồng",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "DREAD_PLATE": {
+      "name": "Bản Sợ Hãi",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "DUSK_STONE": {
+      "name": "Hôn Vãn Thạch",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "DYNAMAX_BAND": {
+      "name": "Vòng Dynamax",
+      "description": "Cơ hội sở hữu Nấm Max sẽ mở ra."
+    },
+    "EARTH_PLATE": {
+      "name": "Bản Địa Chất",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "EMBOARITE": {
+      "name": "Emboarite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "ENIGMA_BERRY": {
+      "name": "Enigma Berry",
+      "description": "Hồi phục 25% HP nếu trúng đòn tấn công có hiệu quả vượt trội."
+    },
+    "EVIOLITE": {
+      "name": "Đá Tiến Trưởng",
+      "description": "Viên đá bí ẩn này sẽ tăng chỉ số Phòng thủ và P.thủ Đ.b. khi được giữ bởi một Pokémon vẫn còn khả năng tiến hóa."
+    },
+    "EXCADRITE": {
+      "name": "Excadrite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "EXP_SHARE": {
+      "name": "Máy Chia ĐKN",
+      "description": "Những Pokémon không tham gia chiến đấu sẽ nhận được 20% số điểm ĐKN của Pokémon đang tham chiến."
+    },
+    "FAIRY_FEATHER": {
+      "name": "Lông Tiên",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Tiên của Pokémon lên 20%."
+    },
+    "FERALIGITE": {
+      "name": "Feraligite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "FIRE_STONE": {
+      "name": "Hoả Thạch",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "FIST_PLATE": {
+      "name": "Bản Nắm Đấm",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "FLAME_ORB": {
+      "name": "Hoả Cầu",
+      "description": "Đó là một quả cầu kỳ lạ, khi chạm vào sẽ tỏa nhiệt và gây bỏng cho Pokémon trong trận chiến."
+    },
+    "FLAME_PLATE": {
+      "name": "Bản Bùng Lửa",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "FOCUS_BAND": {
+      "name": "Băng Đeo Tập Trung",
+      "description": "Tăng 10% cơ hội sống sót với 1 HP sau khi bị thương đủ để bất tỉnh."
+    },
+    "FROSLASSITE": {
+      "name": "Froslassite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "GALLADITE": {
+      "name": "Galladite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "GANLON_BERRY": {
+      "name": "Ganlon Berry",
+      "description": "Tăng chỉ số Phòng thủ nếu HP dưới 25%."
+    },
+    "GARCHOMPITE": {
+      "name": "Garchompite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "GARCHOMPITE_Z": {
+      "name": "Garchompite Z",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "GARDEVOIRITE": {
+      "name": "Gardevoirite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "GENGARITE": {
+      "name": "Gengarite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "GLALITITE": {
+      "name": "Glalitite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "GLIMMORANITE": {
+      "name": "Glimmoranite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "GOLDEN_PUNCH": {
+      "name": "Găng Tay Vàng",
+      "description": "Khiến 50% sát thương trực tiếp gây ra thành tiền."
+    },
+    "GREAT_BALL": {
+      "name": "Great Ball",
+      "description": null
+    },
+    "GRENINJITE": {
+      "name": "Greninjite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "GRIP_CLAW": {
+      "name": "Móng Vuốt Kẹp",
+      "description": null
+    },
+    "GYARADOSITE": {
+      "name": "Gyaradosite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "HARD_STONE": {
+      "name": "Đá Cứng",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Đá của Pokémon lên 20%."
+    },
+    "HAWLUCHANITE": {
+      "name": "Hawluchanite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "HERACRONITE": {
+      "name": "Heracronite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "HOUNDOOMINITE": {
+      "name": "Houndoominite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "ICE_STONE": {
+      "name": "Băng Thạch",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "ICICLE_PLATE": {
+      "name": "Bản Lạnh Lẽo",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "INSECT_PLATE": {
+      "name": "Bản Côn Trùng",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "IRON_PLATE": {
+      "name": "Bản Sắt Thép",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "KINGS_ROCK": {
+      "name": "Đá Vương Quyền",
+      "description": "Tăng 10% khả năng đòn tấn công sẽ khiến đối thủ giật mình."
+    },
+    "LANSAT_BERRY": {
+      "name": "Lansat Berry",
+      "description": "Tăng tỷ lệ chí mạng nếu HP dưới 25%."
+    },
+    "LATIASITE": {
+      "name": "Latiasite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "LATIOSITE": {
+      "name": "Latiosite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "LEAF_STONE": {
+      "name": "Thảo Thạch",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "LEFTOVERS": {
+      "name": "Lõi Táo Thừa",
+      "description": "Hồi phục 1/16 lượng HP tối đa của Pokémon mỗi lượt."
+    },
+    "LEPPA_BERRY": {
+      "name": "Leppa Berry",
+      "description": "Khôi phục 10 điểm NL cho một chiêu thức nếu điểm NL của chiêu thức đó bằng 0."
+    },
+    "LIECHI_BERRY": {
+      "name": "Liechi Berry",
+      "description": "Tăng chỉ số Tấn công nếu HP dưới 25%."
+    },
+    "LIGHT_BALL": {
+      "name": "Bóng Ánh Sáng",
+      "description": "Đó là một quả cầu bí ẩn giúp tăng chỉ số Tấn công và T.công Đ.b. của Pikachu."
+    },
+    "LINKING_CORD": {
+      "name": "Cáp Trao Đổi",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "LOPUNNITE": {
+      "name": "Lopunnite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "LUCARIONITE": {
+      "name": "Lucarionite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "LUCARIONITE_Z": {
+      "name": "Lucarionite Z",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "LUCKY_EGG": {
+      "name": "Trứng May Mắn",
+      "description": null
+    },
+    "LUM_BERRY": {
+      "name": "Lum Berry",
+      "description": "Chữa mọi trạng thái bất thường kéo dài, kể cả rối loạn."
+    },
+    "MAGNET": {
+      "name": "Nam Châm",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Điện của Pokémon lên 20%."
+    },
+    "MALAMARITE": {
+      "name": "Malamarite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "MANECTITE": {
+      "name": "Manectite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "MASTER_BALL": {
+      "name": "Master Ball",
+      "description": null
+    },
+    "MAWILITE": {
+      "name": "Mawilite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "MAX_MUSHROOMS": {
+      "name": "Nấm Max",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "MEADOW_PLATE": {
+      "name": "Bản Đồng Cỏ",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "MEGANIUMITE": {
+      "name": "Meganiumite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "MEGA_BRACELET": {
+      "name": "Vòng Mega",
+      "description": "Cơ hội sở hữu Đá Mega sẽ mở ra."
+    },
+    "MEOWSTICITE": {
+      "name": "Meowsticite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "METAGROSSITE": {
+      "name": "Metagrossite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "METAL_COAT": {
+      "name": "Bọc Sắt",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Thép của Pokémon lên 20%."
+    },
+    "METAL_POWDER": {
+      "name": "Vụn Sắt",
+      "description": "Loại bột kỳ lạ này cực kỳ mịn nhưng lại cứng, giúp tăng chỉ số Phòng thủ của Ditto."
+    },
+    "MEWTWONITE_X": {
+      "name": "Mewtwonite X",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "MEWTWONITE_Y": {
+      "name": "Mewtwonite Y",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "MIND_PLATE": {
+      "name": "Bản Tâm Trí",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "MIRACLE_SEED": {
+      "name": "Hạt Thần",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Cỏ của Pokémon lên 20%."
+    },
+    "MOON_STONE": {
+      "name": "Nguyệt Quang Thạch",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "MULTI_LENS": {
+      "name": "Ống Kính Đa Năng",
+      "description": null
+    },
+    "MYSTIC_WATER": {
+      "name": "Nước Diệu Kì",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Nước của Pokémon lên 20%."
+    },
+    "NEVER_MELT_ICE": {
+      "name": "Băng Vĩnh Cửu",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Băng của Pokémon lên 20%."
+    },
+    "NUGGET": {
+      "name": "Vàng",
+      "description": null
+    },
+    "PETAYA_BERRY": {
+      "name": "Petaya Berry",
+      "description": "Tăng chỉ số T.công Đ.b. nếu HP dưới 25%."
+    },
+    "PIDGEOTITE": {
+      "name": "Pidgeotite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "PIXIE_PLATE": {
+      "name": "Bản Đáng Yêu",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "POISON_BARB": {
+      "name": "Gai Độc",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Độc của Pokémon lên 20%."
+    },
+    "POKE_BALL": {
+      "name": "Poké Ball",
+      "description": null
+    },
+    "PYROARITE": {
+      "name": "Pyroarite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "QUICK_CLAW": {
+      "name": "Móng Tăng Tốc",
+      "description": "Tăng 10% cơ hội di chuyển trước bất kể tốc độ (sau chiêu thức ưu tiên)."
+    },
+    "QUICK_POWDER": {
+      "name": "Bột Tăng Tốc",
+      "description": "Loại bột kỳ lạ này cực kỳ mịn nhưng lại cứng, giúp tăng chỉ số Tốc độ của Ditto."
+    },
+    "RAICHUNITE_X": {
+      "name": "Raichunite X",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "RAICHUNITE_Y": {
+      "name": "Raichunite Y",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "RARER_CANDY": {
+      "name": "Kẹo Siêu Hiếm",
+      "description": null
+    },
+    "RARE_CANDY": {
+      "name": "Kẹo Hiếm",
+      "description": null
+    },
+    "RAYQUAZITE": {
+      "name": "Rayquazite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "RED_ORB": {
+      "name": "Thổ Hồng Cầu",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SALAC_BERRY": {
+      "name": "Salac Berry",
+      "description": "Tăng chỉ số Tốc độ nếu HP dưới 25%."
+    },
+    "SCEPTILITE": {
+      "name": "Sceptilite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SCIZORITE": {
+      "name": "Scizorite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SCOLIPITE": {
+      "name": "Scolipite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SCOPE_LENS": {
+      "name": "Ống Kính Ngắm",
+      "description": "Đây là một loại ống kính dùng để dò tìm điểm yếu. Nó giúp tăng tỷ lệ chí mạng của Pokémon."
+    },
+    "SCOVILLAINITE": {
+      "name": "Scovillainite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SHARP_BEAK": {
+      "name": "Mỏ Sắc",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Bay của Pokémon lên 20%."
+    },
+    "SHELL_BELL": {
+      "name": "Ốc Chuông Gió",
+      "description": "Hồi phục 1/8 lượng sát thương mà Pokémon gây ra."
+    },
+    "SHINY_STONE": {
+      "name": "Huy Quang Thạch",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "SILK_SCARF": {
+      "name": "Khăn Lụa",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Thường của Pokémon lên 20%."
+    },
+    "SILVER_POWDER": {
+      "name": "Bột Bạc",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Côn Trùng của Pokémon lên 20%."
+    },
+    "SITRUS_BERRY": {
+      "name": "Sitrus Berry",
+      "description": "Hồi 25% HP nếu HP thấp hơn 50%."
+    },
+    "SKARMORITE": {
+      "name": "Skarmorite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SKY_PLATE": {
+      "name": "Bản Nắm Đấm",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SOFT_SAND": {
+      "name": "Cát Mịn",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Đất của Pokémon lên 20%."
+    },
+    "SOOTHE_BELL": {
+      "name": "Chuông Xoa Dịu",
+      "description": null
+    },
+    "SOUL_DEW": {
+      "name": "Sương U Linh",
+      "description": "Tăng ảnh hưởng của tính cách Pokémon lên chỉ số của nó thêm 10% (cộng dồn)."
+    },
+    "SPELL_TAG": {
+      "name": "Bùa Chú",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Ma của Pokémon lên 20%."
+    },
+    "SPLASH_PLATE": {
+      "name": "Bản Té Nước",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SPOOKY_PLATE": {
+      "name": "Bản Hù Doạ",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "STARF_BERRY": {
+      "name": "Starf Berry",
+      "description": "Tăng một chỉ số ngẫu nhiên nếu HP dưới 25%."
+    },
+    "STEELIXITE": {
+      "name": "Steelixite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "STONE_PLATE": {
+      "name": "Bản Sỏi Đá",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SUN_STONE": {
+      "name": "Thái Dương Thạch",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "SWAMPERTITE": {
+      "name": "Swampertite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "TERA_ORB": {
+      "name": "Cầu Tera",
+      "description": "Cho phép Pokémon sử dụng Kết Tinh Tera. Thời gian hồi chậm. Và từ giờ, bạn sẽ có thể nhận được mảnh Tera."
+    },
+    "THUNDER_STONE": {
+      "name": "Lôi Thạch",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "TOXIC_ORB": {
+      "name": "Độc Cầu",
+      "description": "Đó là một quả cầu kỳ dị, khi chạm vào sẽ tỏa ra chất độc và sẽ gây độc nặng cho Pokémon trong trận chiến."
+    },
+    "TOXIC_PLATE": {
+      "name": "Bản Độc Hại",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "TWISTED_SPOON": {
+      "name": "Thìa Uốn",
+      "description": "Tăng sức mạnh của các chiêu thức thuộc hệ Siêu Linh của Pokémon lên 20%."
+    },
+    "TYRANITARITE": {
+      "name": "Tyranitarite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "ULTRA_BALL": {
+      "name": "Ultra Ball",
+      "description": null
+    },
+    "VENUSAURITE": {
+      "name": "Venusaurite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "VOUCHER": {
+      "name": "Vé Trứng",
+      "description": null
+    },
+    "WATER_STONE": {
+      "name": "Thủy Thạch",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "WHITE_HERB": {
+      "name": "Cỏ Bạch Lang",
+      "description": "Một vật phẩm dành cho Pokémon. Nó sẽ khôi phục bất kỳ chỉ số nào bị giảm trong trận chiến."
+    },
+    "WIDE_LENS": {
+      "name": "Ống Kính Góc Rộng",
+      "description": null
+    },
+    "ZAP_PLATE": {
+      "name": "Bản Tê Liệt",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "ABILITY_CHARM": {
+      "name": "Bùa Đặc Tính",
+      "description": "Tăng đáng kể khả năng Pokémon hoang dã sở hữu Đặc Tính Ẩn."
+    },
+    "ADAMANT_CRYSTAL": {
+      "name": "Đá Bất Khuất",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "ALTARIANITE": {
+      "name": "Altarianite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "AUDINITE": {
+      "name": "Audinite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "AUSPICIOUS_ARMOR": {
+      "name": "Giáp Bí Ẩn",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "BANETTITE": {
+      "name": "Banettite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "BATON": {
+      "name": "Gậy Chuyền Sức",
+      "description": "Cho phép truyền hiệu ứng khi đổi Pokémon, đồng thời cũng bỏ qua các bẫy."
+    },
+    "BLACK_AUGURITE": {
+      "name": "Mảnh Đá Đen",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "BUG_MEMORY": {
+      "name": "Kí Ức Côn Trùng",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "BUG_TERA_SHARD": {
+      "name": "Mảnh Tera Côn Trùng",
+      "description": "Thay đổi hệ Tera của Pokémon thành Côn Trùng."
+    },
+    "BURN_DRIVE": {
+      "name": "Đĩa Lửa",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "CALCIUM": {
+      "name": "Canxi",
+      "description": "Tăng chỉ số T.công Đ.b. cơ bản của Pokémon sở hữu lên 10%. Chỉ số IV càng cao, giới hạn cộng dồn càng lớn."
+    },
+    "CAMERUPTITE": {
+      "name": "Cameruptite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "CARBOS": {
+      "name": "Đường",
+      "description": "Tăng chỉ số Tốc độ cơ bản của Pokémon sở hữu lên 10%. Chỉ số IV càng cao, giới hạn cộng dồn càng lớn."
+    },
+    "CATCHING_CHARM": {
+      "name": "Bùa Thu Phục",
+      "description": "Tăng khả năng thu phục được Pokémon."
+    },
+    "CHILL_DRIVE": {
+      "name": "Đĩa Băng",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "CHIMECHITE": {
+      "name": "Chimechite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "CHIPPED_POT": {
+      "name": "Ấm Nứt",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "CLEFABLITE": {
+      "name": "Clefablite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "CORNERSTONE_MASK": {
+      "name": "Mặt Nạ Sơn Tinh",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "CRABOMINITE": {
+      "name": "Crabominite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "CRACKED_POT": {
+      "name": "Ấm Nứt",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "DARKRANITE": {
+      "name": "Darkranite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "DARK_MEMORY": {
+      "name": "Kí Ức Bóng Tối",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "DARK_STONE": {
+      "name": "Hắc Thạch",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "DARK_TERA_SHARD": {
+      "name": "Mảnh Tera Bóng Tối",
+      "description": "Thay đổi hệ Tera của Pokémon thành Bóng Tối."
+    },
+    "DEEP_SEA_SCALE": {
+      "name": "Vảy Sâu Hải",
+      "description": "Vảy này tỏa sáng với màu hồng nhạt và giúp tăng chỉ số P.thủ Đ.b. của Clamperl."
+    },
+    "DEEP_SEA_TOOTH": {
+      "name": "Xỉ Sâu Hải",
+      "description": "Chiếc răng nanh này sáng lấp lánh ánh bạc và giúp tăng chỉ số T.công Đ.b. của Clamperl."
+    },
+    "DIRE_HIT": {
+      "name": "Thuốc Đòn Đánh",
+      "description": null
+    },
+    "DNA_SPLICERS": {
+      "name": "Máy Ghép DNA",
+      "description": null
+    },
+    "DOUSE_DRIVE": {
+      "name": "Đĩa Thủy",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "DRAGON_MEMORY": {
+      "name": "Kí Ức Rồng",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "DRAGON_TERA_SHARD": {
+      "name": "Mảnh Tera Rồng",
+      "description": "Thay đổi hệ Tera của Pokémon thành Rồng."
+    },
+    "DRAMPANITE": {
+      "name": "Drampanite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "DUBIOUS_DISC": {
+      "name": "Đĩa Kì Bí",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "EELEKTROSSITE": {
+      "name": "Eelektrossite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "ELECTIRIZER": {
+      "name": "Ắc Quy Điện",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "ELECTRIC_MEMORY": {
+      "name": "Kí Ức Điện",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "ELECTRIC_TERA_SHARD": {
+      "name": "Mảnh Tera Điện",
+      "description": "Thay đổi hệ Tera của Pokémon thành Điện."
+    },
+    "ELIXIR": {
+      "name": "Tinh Dược",
+      "description": null
+    },
+    "ENEMY_ATTACK_BURN_CHANCE": {
+      "name": "Thẻ Bỏng Da",
+      "description": null
+    },
+    "ENEMY_ATTACK_PARALYZE_CHANCE": {
+      "name": "Thẻ Tê Liệt",
+      "description": null
+    },
+    "ENEMY_ATTACK_POISON_CHANCE": {
+      "name": "Thẻ Độc Tố",
+      "description": null
+    },
+    "ENEMY_DAMAGE_BOOSTER": {
+      "name": "Thẻ Sát Thương",
+      "description": "Tăng sát thương thêm 5%."
+    },
+    "ENEMY_DAMAGE_REDUCTION": {
+      "name": "Thẻ Bảo Hộ",
+      "description": "Giảm sát thương nhận vào 2,5%."
+    },
+    "ENEMY_ENDURE_CHANCE": {
+      "name": "Thẻ Chịu Đựng",
+      "description": null
+    },
+    "ENEMY_FUSED_CHANCE": {
+      "name": "Thẻ Hợp Nhất",
+      "description": "Tăng 1% khả năng Pokémon hoang dã gặp được ở dạng hợp thể."
+    },
+    "ENEMY_HEAL": {
+      "name": "Thẻ Phục Hồi",
+      "description": "Hồi phục 2% lượng máu tối đa mỗi lượt."
+    },
+    "ENEMY_STATUS_EFFECT_HEAL_CHANCE": {
+      "name": "Thẻ Chữa Trị",
+      "description": "Tăng 2,5% cơ hội mỗi lượt để chữa lành một trạng thái bất lợi."
+    },
+    "ETHER": {
+      "name": "Thuốc Dung Môi",
+      "description": null
+    },
+    "EVOLUTION_TRACKER_GIMMIGHOUL": {
+      "name": "Kho Báu",
+      "description": "Pokémon này rất thích kho báu! Hãy tiếp tục thu thập kho báu và điều gì đó bất ngờ có thể xảy ra!"
+    },
+    "EXP_BALANCE": {
+      "name": "Máy Cân ĐKN",
+      "description": "Tính ĐKN nhận được từ các trận chiến dành cho các Pokémon trong đội có cấp độ thấp hơn."
+    },
+    "EXP_CHARM": {
+      "name": "Bùa ĐKN",
+      "description": null
+    },
+    "FAIRY_MEMORY": {
+      "name": "Kí Ức Tiên",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "FAIRY_TERA_SHARD": {
+      "name": "Mảnh Tera Tiên",
+      "description": "Thay đổi hệ Tera của Pokémon thành Tiên."
+    },
+    "FALINKSITE": {
+      "name": "Falinksite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "FIGHTING_MEMORY": {
+      "name": "Kí Ức Giác Đấu",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "FIGHTING_TERA_SHARD": {
+      "name": "Mảnh Tera Giác Đấu",
+      "description": "Thay đổi hệ Tera của Pokémon thành Giác Đấu."
+    },
+    "FIRE_MEMORY": {
+      "name": "Kí Ức Lửa",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "FIRE_TERA_SHARD": {
+      "name": "Mảnh Tera Lửa",
+      "description": "Thay đổi hệ Tera của Pokémon thành Lửa."
+    },
+    "FLOETTITE": {
+      "name": "Floettite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "FLYING_MEMORY": {
+      "name": "Kí Ức Bay",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "FLYING_TERA_SHARD": {
+      "name": "Mảnh Tera Bay",
+      "description": "Thay đổi hệ Tera của Pokémon thành Bay."
+    },
+    "FULL_HEAL": {
+      "name": "Thuốc Chữa Hiệu Ứng",
+      "description": null
+    },
+    "FULL_RESTORE": {
+      "name": "Thuốc Hồi Đầy Đủ",
+      "description": null
+    },
+    "GALARICA_CUFF": {
+      "name": "Vòng Tay Galarica",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "GALARICA_WREATH": {
+      "name": "Vòng Hoa Galarica",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "GHOST_MEMORY": {
+      "name": "Kí Ức Ma",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "GHOST_TERA_SHARD": {
+      "name": "Mảnh Tera Ma",
+      "description": "Thay đổi hệ Tera của Pokémon thành Ma."
+    },
+    "GOLDEN_EGG": {
+      "name": "Trứng Vàng",
+      "description": null
+    },
+    "GOLDEN_EXP_CHARM": {
+      "name": "Bùa ĐKN Vàng",
+      "description": null
+    },
+    "GOLDEN_POKEBALL": {
+      "name": "Poké Ball Vàng",
+      "description": "Thêm 1 tùy chọn vật phẩm bổ sung vào cuối mỗi trận chiến."
+    },
+    "GOLISOPITE": {
+      "name": "Golisopite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "GOLURKITE": {
+      "name": "Golurkite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "GRACIDEA": {
+      "name": "Hoa Thanh Nhã",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "GRASS_MEMORY": {
+      "name": "Kí Ức Cỏ",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "GRASS_TERA_SHARD": {
+      "name": "Mảnh Tera Cỏ",
+      "description": "Thay đổi hệ Tera của Pokémon thành Cỏ."
+    },
+    "GRISEOUS_CORE": {
+      "name": "Lõi Xám Đục",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "GROUND_MEMORY": {
+      "name": "Kí Ức Đất",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "GROUND_TERA_SHARD": {
+      "name": "Mảnh Tera Đất",
+      "description": "Thay đổi hệ Tera của Pokémon thành Đất."
+    },
+    "HARD_METEORITE": {
+      "name": "Thiên Thạch Cứng Cáp",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "HEALING_CHARM": {
+      "name": "Bùa Hồi Máu",
+      "description": "Tăng hiệu quả của các chiêu thức và vật phẩm hồi phục HP lên 10% (không bao gồm Đá Hồi Sinh)."
+    },
+    "HEARTHFLAME_MASK": {
+      "name": "Mặt Nạ Hoả Tinh",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "HEATRANITE": {
+      "name": "Heatranite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "HP_UP": {
+      "name": "Tăng HP",
+      "description": "Tăng chỉ số HP cơ bản của Pokémon sở hữu lên 10%. Chỉ số IV càng cao, giới hạn cộng dồn càng lớn."
+    },
+    "HYPER_POTION": {
+      "name": "Thuốc Hồi Phục Lớn",
+      "description": null
+    },
+    "ICE_MEMORY": {
+      "name": "Kí Ức Băng",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "ICE_TERA_SHARD": {
+      "name": "Mảnh Tera Băng",
+      "description": "Thay đổi hệ Tera của Pokémon thành Băng."
+    },
+    "ICY_REINS_OF_UNITY": {
+      "name": "Dây Cưỡi Băng Giá",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "IRON": {
+      "name": "Sắt",
+      "description": "Tăng chỉ số Phòng thủ cơ bản của Pokémon sở hữu lên 10%. Chỉ số IV càng cao, giới hạn cộng dồn càng lớn."
+    },
+    "IV_SCANNER": {
+      "name": "Máy Quét IV",
+      "description": "Cho phép quét chỉ số IV của Pokémon hoang dã."
+    },
+    "KANGASKHANITE": {
+      "name": "Kangaskhanite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "LEADERS_CREST": {
+      "name": "Huy Hiệu Chỉ Huy",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "LEEK": {
+      "name": "Hành Lá",
+      "description": "Cuống hành lá dài và cứng này giúp tăng tỷ lệ chí mạng cho các chiêu thức của Farfetch’d."
+    },
+    "LEGEND_PLATE": {
+      "name": "Bản Huyền Thoại",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "LIGHT_STONE": {
+      "name": "Quang Thạch",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "LOCK_CAPSULE": {
+      "name": "Viên Nang Khoá",
+      "description": "Cho phép bạn khóa độ hiếm của vật phẩm khi quay lại vật phẩm."
+    },
+    "LURE": {
+      "name": "Bình Mồi",
+      "description": null
+    },
+    "LUSTROUS_GLOBE": {
+      "name": "Cầu Huỳnh Quang",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "LUXURY_BALL": {
+      "name": "Luxury Ball",
+      "description": null
+    },
+    "MAGEARNITE": {
+      "name": "Magearnite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "MAGMARIZER": {
+      "name": "Lõi Mắc Ma",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "MALICIOUS_ARMOR": {
+      "name": "Giáp Tà Ác",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "MAP": {
+      "name": "Bản Đồ",
+      "description": "Cho phép bạn lựa chọn điểm đến tại giao lộ."
+    },
+    "MASTERPIECE_TEACUP": {
+      "name": "Cốc Trà Tuyệt Hảo",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "MAX_ELIXIR": {
+      "name": "Tinh Dược Max",
+      "description": null
+    },
+    "MAX_ETHER": {
+      "name": "Thuốc Dung Môi Max",
+      "description": null
+    },
+    "MAX_LURE": {
+      "name": "Bình Mồi Max",
+      "description": null
+    },
+    "MAX_POTION": {
+      "name": "Thuốc Hồi Phục Max",
+      "description": null
+    },
+    "MAX_REVIVE": {
+      "name": "Đá Hồi Sinh Max",
+      "description": null
+    },
+    "MEDICHAMITE": {
+      "name": "Medichamite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "MEMORY_MUSHROOM": {
+      "name": "Nấm Kí Ức",
+      "description": "Thức tỉnh ký ức về một chiêu thức đã bị Pokémon lãng quên."
+    },
+    "METAL_ALLOY": {
+      "name": "Sắt Hợp Kim",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "MINI_BLACK_HOLE": {
+      "name": "Hố Đen Mini",
+      "description": null
+    },
+    "MOON_FLUTE": {
+      "name": "Sáo Nguyệt Quang",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "MYSTERY_ENCOUNTER_BLACK_SLUDGE": {
+      "name": "Bùn Đen",
+      "description": "Mùi hôi thối nồng nặc đến mức làm các cửa hàng chỉ bán cho bạn những mặt hàng với giá cao hơn bình thường."
+    },
+    "MYSTERY_ENCOUNTER_GOLDEN_BUG_NET": {
+      "name": "Vợt Bọ Hoàng Kim",
+      "description": "Mang lại may mắn cho người sở hữu, giúp họ tìm thấy Pokémon hệ Côn trùng thường xuyên hơn. Có trọng lượng khá lạ."
+    },
+    "MYSTERY_ENCOUNTER_MACHO_BRACE": {
+      "name": "Vòng Chiến Binh",
+      "description": "Hạ đối thủ giúp Pokémon sở hữu nhận một điểm cộng dồn. Mỗi điểm tăng nhẹ chỉ số. Đạt tối đa sẽ nhận thêm chỉ số."
+    },
+    "MYSTERY_ENCOUNTER_OLD_GATEAU": {
+      "name": "Bánh Gato",
+      "description": "Tăng một số chỉ số của Pokémon sở hữu."
+    },
+    "MYSTERY_ENCOUNTER_SHUCKLE_JUICE_BAD": {
+      "name": "Nước Shuckle Hỏng",
+      "description": "Giảm tất cả các chỉ số cơ bản của Pokémon sở hữu. Bạn đã bị Shuckle nguyền rủa."
+    },
+    "MYSTERY_ENCOUNTER_SHUCKLE_JUICE_GOOD": {
+      "name": "Nước Hoa Quả Shuckle",
+      "description": "Tăng tất cả các chỉ số cơ bản của Pokémon cầm nó. Bạn đã được Shuckle ban phước."
+    },
+    "MYSTICAL_ROCK": {
+      "name": "Đá Nhiễu Loạn",
+      "description": "Tăng thêm 2 lượt hiệu lực cho địa hình và thời tiết do chiêu thức hoặc Đặc Tính của Pokémon sở hữu gây ra."
+    },
+    "NORMAL_MEMORY": {
+      "name": "Kí Ức Thường",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "NORMAL_TERA_SHARD": {
+      "name": "Mảnh Tera Thường",
+      "description": "Thay đổi hệ Tera của Pokémon thành Thường."
+    },
+    "N_LUNARIZER": {
+      "name": "Máy Nguyệt Ấn",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "N_SOLARIZER": {
+      "name": "Máy Quang Ấn",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "OVAL_CHARM": {
+      "name": "Dây Chuyền Bầu Dục",
+      "description": "Khi nhiều Pokémon tham gia vào một trận chiến, mỗi Pokémon sẽ nhận được thêm 10% tổng số ĐKN."
+    },
+    "OVAL_STONE": {
+      "name": "Đá Bầu Dục",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "PEAT_BLOCK": {
+      "name": "Khối Bùn Khô",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "PINSIRITE": {
+      "name": "Pinsirite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "POISON_MEMORY": {
+      "name": "Kí Ức Độc",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "POISON_TERA_SHARD": {
+      "name": "Mảnh Tera Độc",
+      "description": "Thay đổi hệ Tera của Pokémon thành Độc."
+    },
+    "POTION": {
+      "name": "Thuốc Hồi Phục",
+      "description": null
+    },
+    "PP_MAX": {
+      "name": "Nước Tăng Lực Max",
+      "description": null
+    },
+    "PP_UP": {
+      "name": "Nước Tăng Lực",
+      "description": null
+    },
+    "PRISM_SCALE": {
+      "name": "Vảy Lăng Kính",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "PRISON_BOTTLE": {
+      "name": "Lọ Phong Ấn",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "PROTECTOR": {
+      "name": "Áo Bảo Hộ",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "PROTEIN": {
+      "name": "Đạm",
+      "description": "Tăng chỉ số Tấn công cơ bản của Pokémon sở hữu lên 10%. Chỉ số IV càng cao, giới hạn cộng dồn càng lớn."
+    },
+    "PSYCHIC_MEMORY": {
+      "name": "Kí Ức Tâm Linh",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "PSYCHIC_TERA_SHARD": {
+      "name": "Mảnh Tera Siêu Linh",
+      "description": "Thay đổi hệ Tera của Pokémon thành Siêu Linh."
+    },
+    "RAZOR_CLAW": {
+      "name": "Vuốt Sắc Nhọn",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "RAZOR_FANG": {
+      "name": "Nanh Sắc Nhọn",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "REAPER_CLOTH": {
+      "name": "Vải Tử Thần",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "RELIC_GOLD": {
+      "name": "Vàng Cổ",
+      "description": null
+    },
+    "REVEAL_GLASS": {
+      "name": "Gương Phản Chiếu",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "REVIVE": {
+      "name": "Đá Hồi Sinh",
+      "description": null
+    },
+    "REVIVER_SEED": {
+      "name": "Hạt Mầm Tái Sinh",
+      "description": "Hồi sinh Pokémon giữ vật phẩm với 1/2 HP khi bị bất tỉnh do trúng đòn trực diện."
+    },
+    "ROCK_MEMORY": {
+      "name": "Kí Ức Đá",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "ROCK_TERA_SHARD": {
+      "name": "Mảnh Tera Đá",
+      "description": "Thay đổi hệ Tera của Pokémon thành Đá."
+    },
+    "ROGUE_BALL": {
+      "name": "Rogue Ball",
+      "description": null
+    },
+    "RUSTED_SHIELD": {
+      "name": "Khiên Rỉ Sét",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "RUSTED_SWORD": {
+      "name": "Kiếm Rỉ Sét",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SABLENITE": {
+      "name": "Sablenite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SACHET": {
+      "name": "Túi Thơm",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "SACRED_ASH": {
+      "name": "Tro Thánh",
+      "description": null
+    },
+    "SALAMENCITE": {
+      "name": "Salamencite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SCRAFTINITE": {
+      "name": "Scraftinite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SCROLL_OF_DARKNESS": {
+      "name": "Cuộn Giấy Bóng Đêm",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "SCROLL_OF_WATERS": {
+      "name": "Cuộn Giấy Thủy Triều",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "SHADOW_REINS_OF_UNITY": {
+      "name": "Dây Cưỡi Bóng Đêm",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SHARPEDONITE": {
+      "name": "Sharpedonite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SHARP_METEORITE": {
+      "name": "Thiên Thạch Sắc Nhọn",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SHINY_CHARM": {
+      "name": "Bùa Toả Sáng",
+      "description": "Tăng đáng kể khả năng bắt gặp Pokémon hoang dã ở dạng Toả Sáng."
+    },
+    "SHOCK_DRIVE": {
+      "name": "Đĩa Điện",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SLOWBRONITE": {
+      "name": "Slowbronite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "SMOOTH_METEORITE": {
+      "name": "Thiên Thạch Mềm Mại",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "STARAPTITE": {
+      "name": "Staraptite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "STARMINITE": {
+      "name": "Starminite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "STEEL_MEMORY": {
+      "name": "Kí Ức Thép",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "STEEL_TERA_SHARD": {
+      "name": "Mảnh Tera Thép",
+      "description": "Thay đổi hệ Tera của Pokémon thành Thép."
+    },
+    "STELLAR_TERA_SHARD": {
+      "name": "Mảnh Tera Ngôi Sao",
+      "description": "Thay đổi hệ Tera của Pokémon thành Ngôi Sao."
+    },
+    "STRAWBERRY_SWEET": {
+      "name": "Kẹo Dâu",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "SUN_FLUTE": {
+      "name": "Sáo Ánh Dương",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "SUPER_EXP_CHARM": {
+      "name": "Siêu Bùa ĐKN",
+      "description": null
+    },
+    "SUPER_LURE": {
+      "name": "Bình Mồi Lớn",
+      "description": null
+    },
+    "SUPER_POTION": {
+      "name": "Siêu Thuốc Hồi Phục",
+      "description": null
+    },
+    "SWEET_APPLE": {
+      "name": "Táo Ngọt",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "SYRUPY_APPLE": {
+      "name": "Táo Siro",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "TART_APPLE": {
+      "name": "Táo Chua",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "TATSUGIRINITE": {
+      "name": "Tatsugirinite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "THICK_CLUB": {
+      "name": "Chày Xương",
+      "description": "Loại xương cứng không rõ nguồn gốc này giúp tăng chỉ số Tấn công của Cubone hoặc Marowak."
+    },
+    "ULTRANECROZIUM_Z": {
+      "name": "Ultranecrozium Z",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "UNREMARKABLE_TEACUP": {
+      "name": "Cốc Trà Thường",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "UPGRADE": {
+      "name": "Nâng Cấp",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "VICTREEBELITE": {
+      "name": "Victreebelite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "VOUCHER_GOLDEN": {
+      "name": "Vé Trứng Vàng",
+      "description": null
+    },
+    "VOUCHER_PLUS": {
+      "name": "Vé Trứng Plus",
+      "description": null
+    },
+    "VOUCHER_PREMIUM": {
+      "name": "Vé Trứng Premium",
+      "description": null
+    },
+    "WATER_MEMORY": {
+      "name": "Kí Ức Nước",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "WATER_TERA_SHARD": {
+      "name": "Mảnh Tera Nước",
+      "description": "Thay đổi hệ Tera của Pokémon thành Nước."
+    },
+    "WELLSPRING_MASK": {
+      "name": "Mặt Nạ Thủy Tinh",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "WHIPPED_DREAM": {
+      "name": "Mộng Kem Tươi",
+      "description": "Khiến Pokémon nào đó tiến hóa."
+    },
+    "X_ACCURACY": {
+      "name": "X Chuẩn Xác",
+      "description": "Tăng chỉ số Độ Chuẩn của tất cả thành viên trong tổ đội lên 1 bậc trong tối đa 5 trận chiến."
+    },
+    "X_ATTACK": {
+      "name": "X Tấn Công",
+      "description": "Tăng chỉ số Tấn công của tất cả thành viên trong tổ đội lên 20% trong tối đa 5 trận chiến."
+    },
+    "X_DEFENSE": {
+      "name": "X Phòng Thủ",
+      "description": "Tăng chỉ số Phòng thủ của tất cả thành viên trong tổ đội lên 20% trong tối đa 5 trận chiến."
+    },
+    "X_SPEED": {
+      "name": "X Tốc Độ",
+      "description": "Tăng chỉ số Tốc độ của tất cả thành viên trong tổ đội lên 20% trong tối đa 5 trận chiến."
+    },
+    "X_SP_ATK": {
+      "name": "X T.Công Đ.B",
+      "description": "Tăng chỉ số T.công Đ.b. của tất cả thành viên trong tổ đội lên 20% trong tối đa 5 trận chiến."
+    },
+    "X_SP_DEF": {
+      "name": "X P.Thủ Đ.B",
+      "description": "Tăng chỉ số P.thủ Đ.b. của tất cả thành viên trong tổ đội lên 20% trong tối đa 5 trận chiến."
+    },
+    "ZERAORITE": {
+      "name": "Zeraorite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    },
+    "ZINC": {
+      "name": "Kẽm",
+      "description": "Tăng chỉ số P.thủ Đ.b. cơ bản của Pokémon sở hữu lên 10%. Chỉ số IV càng cao, giới hạn cộng dồn càng lớn."
+    },
+    "ZYGARDITE": {
+      "name": "Zygardite",
+      "description": "Khiến Pokémon nào đó thay đổi hình thái."
+    }
+  },
+  "itemTemplates": {
+    "TM": {
+      "name": "TM{{moveId}} - {{moveName}}",
+      "description": "Dạy chiêu thức {{moveName}} cho một Pokémon.",
+      "localeKey": "modifierType:ModifierType.TmModifierType"
+    },
+    "TM_WITH_INFO": {
+      "name": "TM{{moveId}} - {{moveName}}",
+      "description": "Dạy chiêu thức {{moveName}} cho Pokémon.\n(Giữ phím C hoặc Shift để xem thêm thông tin)",
+      "localeKey": "modifierType:ModifierType.TmModifierTypeWithInfo"
+    },
+    "TERA_SHARD": {
+      "name": "Mảnh Tera {{teraType}}",
+      "description": "Thay đổi hệ Tera của Pokémon thành {{teraType}}.",
+      "localeKey": "modifierType:ModifierType.TerastallizeModifierType"
+    },
+    "MINT": {
+      "name": "Bạc Hà {{natureName}}",
+      "description": "Thay đổi tính cách thành {{natureName}} và mở khóa vĩnh viễn cho Pokémon khởi đầu.",
+      "localeKey": "modifierType:ModifierType.PokemonNatureChangeModifierType"
+    },
+    "POKEBALL_BUNDLE": {
+      "name": "{{modifierCount}}× {{pokeballName}}",
+      "description": "Nhận {{pokeballName}} ×{{modifierCount}} (Túi đồ: {{pokeballAmount}}) \nTỉ lệ thu phục: {{catchRate}}",
+      "localeKey": "modifierType:ModifierType.AddPokeballModifierType"
+    },
+    "VOUCHER_BUNDLE": {
+      "name": "{{modifierCount}}× {{voucherTypeName}}",
+      "description": "Nhận {{voucherTypeName}} ×{{modifierCount}}.",
+      "localeKey": "modifierType:ModifierType.AddVoucherModifierType"
+    }
+  },
+  "trainers": {
+    "bugTypeSuperfan": "Siêu Hâm Mộ Hệ Côn Trùng",
+    "expertPokemonBreeder": "Chuyên Gia Nuôi Dưỡng Pokémon",
+    "alternatePlayerM": "???",
+    "alternatePlayerF": "???",
+    "red": "Red",
+    "lance": "Lance",
+    "steven": "Steven",
+    "cynthia": "Cynthia",
+    "alder": "Alder",
+    "diantha": "Diantha",
+    "kukui": "Kukui",
+    "leon": "Leon",
+    "geeta": "Geeta"
+  },
+  "trainerTitles": {
+    "eliteFour": "Tứ Thiên Vương",
+    "eliteFourFemale": "Tứ Thiên Vương",
+    "gymLeader": "Chủ Hội Quán",
+    "gymLeaderFemale": "Chủ Hội Quán",
+    "gymLeaderDouble": "Cặp Chủ Hội Quán",
+    "champion": "Nhà Vô Địch",
+    "championFemale": "Nhà Vô Địch",
+    "championDouble": "Cặp Đôi Nhà Vô Địch",
+    "rival": "Kì Thủ",
+    "professor": "Tiến Sĩ",
+    "frontierBrain": "Trùm Chiến Đấu",
+    "rocketBoss": "Trùm Đội Hoả Tiễn",
+    "magmaBoss": "Trùm Đội Magma",
+    "aquaBoss": "Trùm Đội Aqua",
+    "galacticBoss": "Trùm Đội Galactic",
+    "plasmaBoss": "Trùm Đội Plasma",
+    "flareBoss": "Trùm Đội Flare",
+    "aetherBoss": "Chủ Tịch Aether",
+    "skullBoss": "Trùm Đội Skull",
+    "macroBoss": "Chủ Tịch Macro Cosmos",
+    "starBoss": "Trùm Đội Star",
+    "rocketAdmin": "Quản Lý Đội Hoả Tiễn",
+    "rocketAdminFemale": "Nữ Quản Đội Hoả Tiễn",
+    "magmaAdmin": "Quản Lý Đội Magma",
+    "magmaAdminFemale": "Nữ Quản Đội Magma",
+    "aquaAdmin": "Quản Lý Đội Aqua",
+    "aquaAdminFemale": "Nữ Quản Đội Aqua",
+    "galacticCommander": "Chỉ Huy Đội Galactic",
+    "galacticCommanderFemale": "Nữ Chỉ Huy Đội Galactic",
+    "plasmaSage": "Hiền Triết Plasma",
+    "plasmaAdmin": "Quản Lý Đội Plasma",
+    "flareAdmin": "Quản Lý Đội Flare",
+    "flareAdminFemale": "Nữ Quản Đội Flare",
+    "aetherAdmin": "Quản Lý Quỹ Aether",
+    "skullAdmin": "Quản Lý Đội Skull",
+    "macroAdmin": "Quản Lý Đội Macro Cosmos",
+    "starAdmin": "Đội Trưởng Đội Star",
+    "theWinstrates": "Thành Viên Gia Tộc"
+  },
+  "zCrystals": {
+    "ULTRANECROZIUM_Z": "Ultranecrozium Z"
+  },
+  "zMoves": {},
+  "maxMoves": {},
+  "_provenance": {
+    "species": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "forms": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "formLabels": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "moves": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "abilities": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "types": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "natures": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "stats": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "statusEffects": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "items": {
+      "ABOMASITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ABOMASITE"
+      },
+      "ABSOLITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ABSOLITE"
+      },
+      "ABSOLITE_Z": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ABSOLITE_Z"
+      },
+      "AERODACTYLITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.AERODACTYLITE"
+      },
+      "AGGRONITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.AGGRONITE"
+      },
+      "ALAKAZITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ALAKAZITE"
+      },
+      "AMPHAROSITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.AMPHAROSITE"
+      },
+      "AMULET_COIN": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.AMULET_COIN"
+      },
+      "APICOT_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:apicot"
+      },
+      "BARBARACITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BARBARACITE"
+      },
+      "BAXCALIBRITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BAXCALIBRITE"
+      },
+      "BEEDRILLITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BEEDRILLITE"
+      },
+      "BERRY_POUCH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.BERRY_POUCH"
+      },
+      "BIG_NUGGET": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.BIG_NUGGET"
+      },
+      "BLACK_BELT": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.black_belt"
+      },
+      "BLACK_GLASSES": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.black_glasses"
+      },
+      "BLANK_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BLANK_PLATE"
+      },
+      "BLASTOISINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BLASTOISINITE"
+      },
+      "BLAZIKENITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BLAZIKENITE"
+      },
+      "BLUE_ORB": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BLUE_ORB"
+      },
+      "CANDY_JAR": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.CANDY_JAR"
+      },
+      "CHANDELURITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CHANDELURITE"
+      },
+      "CHARCOAL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.charcoal"
+      },
+      "CHARIZARDITE_X": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CHARIZARDITE_X"
+      },
+      "CHARIZARDITE_Y": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CHARIZARDITE_Y"
+      },
+      "CHESNAUGHTITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CHESNAUGHTITE"
+      },
+      "COIN_CASE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.COIN_CASE"
+      },
+      "DAWN_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.DAWN_STONE"
+      },
+      "DELPHOXITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DELPHOXITE"
+      },
+      "DIANCITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DIANCITE"
+      },
+      "DRACO_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DRACO_PLATE"
+      },
+      "DRAGALGITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DRAGALGITE"
+      },
+      "DRAGONINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DRAGONINITE"
+      },
+      "DRAGON_FANG": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.dragon_fang"
+      },
+      "DRAGON_SCALE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.DRAGON_SCALE"
+      },
+      "DREAD_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DREAD_PLATE"
+      },
+      "DUSK_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.DUSK_STONE"
+      },
+      "DYNAMAX_BAND": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.DYNAMAX_BAND"
+      },
+      "EARTH_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.EARTH_PLATE"
+      },
+      "EMBOARITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.EMBOARITE"
+      },
+      "ENIGMA_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:enigma"
+      },
+      "EVIOLITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.EVIOLITE"
+      },
+      "EXCADRITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.EXCADRITE"
+      },
+      "EXP_SHARE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.EXP_SHARE"
+      },
+      "FAIRY_FEATHER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.fairy_feather"
+      },
+      "FERALIGITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.FERALIGITE"
+      },
+      "FIRE_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.FIRE_STONE"
+      },
+      "FIST_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.FIST_PLATE"
+      },
+      "FLAME_ORB": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.FLAME_ORB"
+      },
+      "FLAME_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.FLAME_PLATE"
+      },
+      "FOCUS_BAND": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.FOCUS_BAND"
+      },
+      "FROSLASSITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.FROSLASSITE"
+      },
+      "GALLADITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GALLADITE"
+      },
+      "GANLON_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:ganlon"
+      },
+      "GARCHOMPITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GARCHOMPITE"
+      },
+      "GARCHOMPITE_Z": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GARCHOMPITE_Z"
+      },
+      "GARDEVOIRITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GARDEVOIRITE"
+      },
+      "GENGARITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GENGARITE"
+      },
+      "GLALITITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GLALITITE"
+      },
+      "GLIMMORANITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GLIMMORANITE"
+      },
+      "GOLDEN_PUNCH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.GOLDEN_PUNCH"
+      },
+      "GREAT_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "pokeball:greatBall"
+      },
+      "GRENINJITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GRENINJITE"
+      },
+      "GRIP_CLAW": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.GRIP_CLAW"
+      },
+      "GYARADOSITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GYARADOSITE"
+      },
+      "HARD_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.hard_stone"
+      },
+      "HAWLUCHANITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.HAWLUCHANITE"
+      },
+      "HERACRONITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.HERACRONITE"
+      },
+      "HOUNDOOMINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.HOUNDOOMINITE"
+      },
+      "ICE_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.ICE_STONE"
+      },
+      "ICICLE_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ICICLE_PLATE"
+      },
+      "INSECT_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.INSECT_PLATE"
+      },
+      "IRON_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.IRON_PLATE"
+      },
+      "KINGS_ROCK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.KINGS_ROCK"
+      },
+      "LANSAT_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:lansat"
+      },
+      "LATIASITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.LATIASITE"
+      },
+      "LATIOSITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.LATIOSITE"
+      },
+      "LEAF_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.LEAF_STONE"
+      },
+      "LEFTOVERS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.LEFTOVERS"
+      },
+      "LEPPA_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:leppa"
+      },
+      "LIECHI_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:liechi"
+      },
+      "LIGHT_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:SpeciesBoosterItem.LIGHT_BALL"
+      },
+      "LINKING_CORD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.LINKING_CORD"
+      },
+      "LOPUNNITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.LOPUNNITE"
+      },
+      "LUCARIONITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.LUCARIONITE"
+      },
+      "LUCARIONITE_Z": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.LUCARIONITE_Z"
+      },
+      "LUCKY_EGG": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.LUCKY_EGG"
+      },
+      "LUM_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:lum"
+      },
+      "MAGNET": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.magnet"
+      },
+      "MALAMARITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MALAMARITE"
+      },
+      "MANECTITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MANECTITE"
+      },
+      "MASTER_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "pokeball:masterBall"
+      },
+      "MAWILITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MAWILITE"
+      },
+      "MAX_MUSHROOMS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MAX_MUSHROOMS"
+      },
+      "MEADOW_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MEADOW_PLATE"
+      },
+      "MEGANIUMITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MEGANIUMITE"
+      },
+      "MEGA_BRACELET": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MEGA_BRACELET"
+      },
+      "MEOWSTICITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MEOWSTICITE"
+      },
+      "METAGROSSITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.METAGROSSITE"
+      },
+      "METAL_COAT": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.metal_coat"
+      },
+      "METAL_POWDER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:SpeciesBoosterItem.METAL_POWDER"
+      },
+      "MEWTWONITE_X": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MEWTWONITE_X"
+      },
+      "MEWTWONITE_Y": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MEWTWONITE_Y"
+      },
+      "MIND_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MIND_PLATE"
+      },
+      "MIRACLE_SEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.miracle_seed"
+      },
+      "MOON_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.MOON_STONE"
+      },
+      "MULTI_LENS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MULTI_LENS"
+      },
+      "MYSTIC_WATER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.mystic_water"
+      },
+      "NEVER_MELT_ICE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.never_melt_ice"
+      },
+      "NUGGET": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.NUGGET"
+      },
+      "PETAYA_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:petaya"
+      },
+      "PIDGEOTITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.PIDGEOTITE"
+      },
+      "PIXIE_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.PIXIE_PLATE"
+      },
+      "POISON_BARB": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.poison_barb"
+      },
+      "POKE_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "pokeball:pokeBall"
+      },
+      "PYROARITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.PYROARITE"
+      },
+      "QUICK_CLAW": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.QUICK_CLAW"
+      },
+      "QUICK_POWDER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:SpeciesBoosterItem.QUICK_POWDER"
+      },
+      "RAICHUNITE_X": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.RAICHUNITE_X"
+      },
+      "RAICHUNITE_Y": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.RAICHUNITE_Y"
+      },
+      "RARER_CANDY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.RARER_CANDY"
+      },
+      "RARE_CANDY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.RARE_CANDY"
+      },
+      "RAYQUAZITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.RAYQUAZITE"
+      },
+      "RED_ORB": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.RED_ORB"
+      },
+      "SALAC_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:salac"
+      },
+      "SCEPTILITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SCEPTILITE"
+      },
+      "SCIZORITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SCIZORITE"
+      },
+      "SCOLIPITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SCOLIPITE"
+      },
+      "SCOPE_LENS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SCOPE_LENS"
+      },
+      "SCOVILLAINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SCOVILLAINITE"
+      },
+      "SHARP_BEAK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.sharp_beak"
+      },
+      "SHELL_BELL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SHELL_BELL"
+      },
+      "SHINY_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.SHINY_STONE"
+      },
+      "SILK_SCARF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.silk_scarf"
+      },
+      "SILVER_POWDER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.silver_powder"
+      },
+      "SITRUS_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:sitrus"
+      },
+      "SKARMORITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SKARMORITE"
+      },
+      "SKY_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SKY_PLATE"
+      },
+      "SOFT_SAND": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.soft_sand"
+      },
+      "SOOTHE_BELL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SOOTHE_BELL"
+      },
+      "SOUL_DEW": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SOUL_DEW"
+      },
+      "SPELL_TAG": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.spell_tag"
+      },
+      "SPLASH_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SPLASH_PLATE"
+      },
+      "SPOOKY_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SPOOKY_PLATE"
+      },
+      "STARF_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:starf"
+      },
+      "STEELIXITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.STEELIXITE"
+      },
+      "STONE_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.STONE_PLATE"
+      },
+      "SUN_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.SUN_STONE"
+      },
+      "SWAMPERTITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SWAMPERTITE"
+      },
+      "TERA_ORB": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TERA_ORB"
+      },
+      "THUNDER_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.THUNDER_STONE"
+      },
+      "TOXIC_ORB": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TOXIC_ORB"
+      },
+      "TOXIC_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.TOXIC_PLATE"
+      },
+      "TWISTED_SPOON": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.twisted_spoon"
+      },
+      "TYRANITARITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.TYRANITARITE"
+      },
+      "ULTRA_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "pokeball:ultraBall"
+      },
+      "VENUSAURITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.VENUSAURITE"
+      },
+      "VOUCHER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "voucher:eggVoucher"
+      },
+      "WATER_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.WATER_STONE"
+      },
+      "WHITE_HERB": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.WHITE_HERB"
+      },
+      "WIDE_LENS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.WIDE_LENS"
+      },
+      "ZAP_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ZAP_PLATE"
+      },
+      "ABILITY_CHARM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.ABILITY_CHARM"
+      },
+      "ADAMANT_CRYSTAL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ADAMANT_CRYSTAL"
+      },
+      "ALTARIANITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ALTARIANITE"
+      },
+      "AUDINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.AUDINITE"
+      },
+      "AUSPICIOUS_ARMOR": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.AUSPICIOUS_ARMOR"
+      },
+      "BANETTITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BANETTITE"
+      },
+      "BATON": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.BATON"
+      },
+      "BLACK_AUGURITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.BLACK_AUGURITE"
+      },
+      "BUG_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BUG_MEMORY"
+      },
+      "BUG_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.bug"
+      },
+      "BURN_DRIVE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BURN_DRIVE"
+      },
+      "CALCIUM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:BaseStatBoosterItem.calcium"
+      },
+      "CAMERUPTITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CAMERUPTITE"
+      },
+      "CARBOS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:BaseStatBoosterItem.carbos"
+      },
+      "CATCHING_CHARM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.CATCHING_CHARM"
+      },
+      "CHILL_DRIVE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CHILL_DRIVE"
+      },
+      "CHIMECHITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CHIMECHITE"
+      },
+      "CHIPPED_POT": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.CHIPPED_POT"
+      },
+      "CLEFABLITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CLEFABLITE"
+      },
+      "CORNERSTONE_MASK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CORNERSTONE_MASK"
+      },
+      "CRABOMINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CRABOMINITE"
+      },
+      "CRACKED_POT": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.CRACKED_POT"
+      },
+      "DARKRANITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DARKRANITE"
+      },
+      "DARK_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DARK_MEMORY"
+      },
+      "DARK_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DARK_STONE"
+      },
+      "DARK_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.dark"
+      },
+      "DEEP_SEA_SCALE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:SpeciesBoosterItem.DEEP_SEA_SCALE"
+      },
+      "DEEP_SEA_TOOTH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:SpeciesBoosterItem.DEEP_SEA_TOOTH"
+      },
+      "DIRE_HIT": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.DIRE_HIT"
+      },
+      "DNA_SPLICERS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.DNA_SPLICERS"
+      },
+      "DOUSE_DRIVE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DOUSE_DRIVE"
+      },
+      "DRAGON_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DRAGON_MEMORY"
+      },
+      "DRAGON_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.dragon"
+      },
+      "DRAMPANITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DRAMPANITE"
+      },
+      "DUBIOUS_DISC": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.DUBIOUS_DISC"
+      },
+      "EELEKTROSSITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.EELEKTROSSITE"
+      },
+      "ELECTIRIZER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.ELECTIRIZER"
+      },
+      "ELECTRIC_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ELECTRIC_MEMORY"
+      },
+      "ELECTRIC_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.electric"
+      },
+      "ELIXIR": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.ELIXIR"
+      },
+      "ENEMY_ATTACK_BURN_CHANCE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.ENEMY_ATTACK_BURN_CHANCE"
+      },
+      "ENEMY_ATTACK_PARALYZE_CHANCE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.ENEMY_ATTACK_PARALYZE_CHANCE"
+      },
+      "ENEMY_ATTACK_POISON_CHANCE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.ENEMY_ATTACK_POISON_CHANCE"
+      },
+      "ENEMY_DAMAGE_BOOSTER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.ENEMY_DAMAGE_BOOSTER"
+      },
+      "ENEMY_DAMAGE_REDUCTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.ENEMY_DAMAGE_REDUCTION"
+      },
+      "ENEMY_ENDURE_CHANCE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.ENEMY_ENDURE_CHANCE"
+      },
+      "ENEMY_FUSED_CHANCE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.ENEMY_FUSED_CHANCE"
+      },
+      "ENEMY_HEAL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.ENEMY_HEAL"
+      },
+      "ENEMY_STATUS_EFFECT_HEAL_CHANCE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.ENEMY_STATUS_EFFECT_HEAL_CHANCE"
+      },
+      "ETHER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.ETHER"
+      },
+      "EVOLUTION_TRACKER_GIMMIGHOUL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.EVOLUTION_TRACKER_GIMMIGHOUL"
+      },
+      "EXP_BALANCE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.EXP_BALANCE"
+      },
+      "EXP_CHARM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.EXP_CHARM"
+      },
+      "FAIRY_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.FAIRY_MEMORY"
+      },
+      "FAIRY_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.fairy"
+      },
+      "FALINKSITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.FALINKSITE"
+      },
+      "FIGHTING_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.FIGHTING_MEMORY"
+      },
+      "FIGHTING_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.fighting"
+      },
+      "FIRE_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.FIRE_MEMORY"
+      },
+      "FIRE_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.fire"
+      },
+      "FLOETTITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.FLOETTITE"
+      },
+      "FLYING_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.FLYING_MEMORY"
+      },
+      "FLYING_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.flying"
+      },
+      "FULL_HEAL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.FULL_HEAL"
+      },
+      "FULL_RESTORE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.FULL_RESTORE"
+      },
+      "GALARICA_CUFF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.GALARICA_CUFF"
+      },
+      "GALARICA_WREATH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.GALARICA_WREATH"
+      },
+      "GHOST_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GHOST_MEMORY"
+      },
+      "GHOST_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.ghost"
+      },
+      "GOLDEN_EGG": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.GOLDEN_EGG"
+      },
+      "GOLDEN_EXP_CHARM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.GOLDEN_EXP_CHARM"
+      },
+      "GOLDEN_POKEBALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.GOLDEN_POKEBALL"
+      },
+      "GOLISOPITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GOLISOPITE"
+      },
+      "GOLURKITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GOLURKITE"
+      },
+      "GRACIDEA": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GRACIDEA"
+      },
+      "GRASS_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GRASS_MEMORY"
+      },
+      "GRASS_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.grass"
+      },
+      "GRISEOUS_CORE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GRISEOUS_CORE"
+      },
+      "GROUND_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GROUND_MEMORY"
+      },
+      "GROUND_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.ground"
+      },
+      "HARD_METEORITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.HARD_METEORITE"
+      },
+      "HEALING_CHARM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.HEALING_CHARM"
+      },
+      "HEARTHFLAME_MASK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.HEARTHFLAME_MASK"
+      },
+      "HEATRANITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.HEATRANITE"
+      },
+      "HP_UP": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:BaseStatBoosterItem.hp_up"
+      },
+      "HYPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.HYPER_POTION"
+      },
+      "ICE_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ICE_MEMORY"
+      },
+      "ICE_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.ice"
+      },
+      "ICY_REINS_OF_UNITY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ICY_REINS_OF_UNITY"
+      },
+      "IRON": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:BaseStatBoosterItem.iron"
+      },
+      "IV_SCANNER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.IV_SCANNER"
+      },
+      "KANGASKHANITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.KANGASKHANITE"
+      },
+      "LEADERS_CREST": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.LEADERS_CREST"
+      },
+      "LEEK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.LEEK"
+      },
+      "LEGEND_PLATE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.LEGEND_PLATE"
+      },
+      "LIGHT_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.LIGHT_STONE"
+      },
+      "LOCK_CAPSULE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.LOCK_CAPSULE"
+      },
+      "LURE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.LURE"
+      },
+      "LUSTROUS_GLOBE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.LUSTROUS_GLOBE"
+      },
+      "LUXURY_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "pokeball:luxuryBall"
+      },
+      "MAGEARNITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MAGEARNITE"
+      },
+      "MAGMARIZER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.MAGMARIZER"
+      },
+      "MALICIOUS_ARMOR": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.MALICIOUS_ARMOR"
+      },
+      "MAP": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MAP"
+      },
+      "MASTERPIECE_TEACUP": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.MASTERPIECE_TEACUP"
+      },
+      "MAX_ELIXIR": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MAX_ELIXIR"
+      },
+      "MAX_ETHER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MAX_ETHER"
+      },
+      "MAX_LURE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MAX_LURE"
+      },
+      "MAX_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MAX_POTION"
+      },
+      "MAX_REVIVE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MAX_REVIVE"
+      },
+      "MEDICHAMITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MEDICHAMITE"
+      },
+      "MEMORY_MUSHROOM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MEMORY_MUSHROOM"
+      },
+      "METAL_ALLOY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.METAL_ALLOY"
+      },
+      "MINI_BLACK_HOLE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MINI_BLACK_HOLE"
+      },
+      "MOON_FLUTE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.MOON_FLUTE"
+      },
+      "MYSTERY_ENCOUNTER_BLACK_SLUDGE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MYSTERY_ENCOUNTER_BLACK_SLUDGE"
+      },
+      "MYSTERY_ENCOUNTER_GOLDEN_BUG_NET": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MYSTERY_ENCOUNTER_GOLDEN_BUG_NET"
+      },
+      "MYSTERY_ENCOUNTER_MACHO_BRACE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MYSTERY_ENCOUNTER_MACHO_BRACE"
+      },
+      "MYSTERY_ENCOUNTER_OLD_GATEAU": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MYSTERY_ENCOUNTER_OLD_GATEAU"
+      },
+      "MYSTERY_ENCOUNTER_SHUCKLE_JUICE_BAD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MYSTERY_ENCOUNTER_SHUCKLE_JUICE_BAD"
+      },
+      "MYSTERY_ENCOUNTER_SHUCKLE_JUICE_GOOD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MYSTERY_ENCOUNTER_SHUCKLE_JUICE_GOOD"
+      },
+      "MYSTICAL_ROCK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MYSTICAL_ROCK"
+      },
+      "NORMAL_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.NORMAL_MEMORY"
+      },
+      "NORMAL_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.normal"
+      },
+      "N_LUNARIZER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.N_LUNARIZER"
+      },
+      "N_SOLARIZER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.N_SOLARIZER"
+      },
+      "OVAL_CHARM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.OVAL_CHARM"
+      },
+      "OVAL_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.OVAL_STONE"
+      },
+      "PEAT_BLOCK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.PEAT_BLOCK"
+      },
+      "PINSIRITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.PINSIRITE"
+      },
+      "POISON_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.POISON_MEMORY"
+      },
+      "POISON_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.poison"
+      },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
+      "PP_MAX": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.PP_MAX"
+      },
+      "PP_UP": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.PP_UP"
+      },
+      "PRISM_SCALE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.PRISM_SCALE"
+      },
+      "PRISON_BOTTLE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.PRISON_BOTTLE"
+      },
+      "PROTECTOR": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.PROTECTOR"
+      },
+      "PROTEIN": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:BaseStatBoosterItem.protein"
+      },
+      "PSYCHIC_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.PSYCHIC_MEMORY"
+      },
+      "PSYCHIC_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.psychic"
+      },
+      "RAZOR_CLAW": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.RAZOR_CLAW"
+      },
+      "RAZOR_FANG": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.RAZOR_FANG"
+      },
+      "REAPER_CLOTH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.REAPER_CLOTH"
+      },
+      "RELIC_GOLD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.RELIC_GOLD"
+      },
+      "REVEAL_GLASS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.REVEAL_GLASS"
+      },
+      "REVIVE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.REVIVE"
+      },
+      "REVIVER_SEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.REVIVER_SEED"
+      },
+      "ROCK_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ROCK_MEMORY"
+      },
+      "ROCK_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.rock"
+      },
+      "ROGUE_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "pokeball:rogueBall"
+      },
+      "RUSTED_SHIELD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.RUSTED_SHIELD"
+      },
+      "RUSTED_SWORD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.RUSTED_SWORD"
+      },
+      "SABLENITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SABLENITE"
+      },
+      "SACHET": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.SACHET"
+      },
+      "SACRED_ASH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SACRED_ASH"
+      },
+      "SALAMENCITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SALAMENCITE"
+      },
+      "SCRAFTINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SCRAFTINITE"
+      },
+      "SCROLL_OF_DARKNESS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.SCROLL_OF_DARKNESS"
+      },
+      "SCROLL_OF_WATERS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.SCROLL_OF_WATERS"
+      },
+      "SHADOW_REINS_OF_UNITY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SHADOW_REINS_OF_UNITY"
+      },
+      "SHARPEDONITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SHARPEDONITE"
+      },
+      "SHARP_METEORITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SHARP_METEORITE"
+      },
+      "SHINY_CHARM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SHINY_CHARM"
+      },
+      "SHOCK_DRIVE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SHOCK_DRIVE"
+      },
+      "SLOWBRONITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SLOWBRONITE"
+      },
+      "SMOOTH_METEORITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SMOOTH_METEORITE"
+      },
+      "STARAPTITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.STARAPTITE"
+      },
+      "STARMINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.STARMINITE"
+      },
+      "STEEL_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.STEEL_MEMORY"
+      },
+      "STEEL_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.steel"
+      },
+      "STELLAR_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.stellar"
+      },
+      "STRAWBERRY_SWEET": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.STRAWBERRY_SWEET"
+      },
+      "SUN_FLUTE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.SUN_FLUTE"
+      },
+      "SUPER_EXP_CHARM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_EXP_CHARM"
+      },
+      "SUPER_LURE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_LURE"
+      },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
+      },
+      "SWEET_APPLE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.SWEET_APPLE"
+      },
+      "SYRUPY_APPLE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.SYRUPY_APPLE"
+      },
+      "TART_APPLE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.TART_APPLE"
+      },
+      "TATSUGIRINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.TATSUGIRINITE"
+      },
+      "THICK_CLUB": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:SpeciesBoosterItem.THICK_CLUB"
+      },
+      "ULTRANECROZIUM_Z": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ULTRANECROZIUM_Z"
+      },
+      "UNREMARKABLE_TEACUP": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.UNREMARKABLE_TEACUP"
+      },
+      "UPGRADE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.UPGRADE"
+      },
+      "VICTREEBELITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.VICTREEBELITE"
+      },
+      "VOUCHER_GOLDEN": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "voucher:eggVoucherGold"
+      },
+      "VOUCHER_PLUS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "voucher:eggVoucherPlus"
+      },
+      "VOUCHER_PREMIUM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "voucher:eggVoucherPremium"
+      },
+      "WATER_MEMORY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.WATER_MEMORY"
+      },
+      "WATER_TERA_SHARD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.water"
+      },
+      "WELLSPRING_MASK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.WELLSPRING_MASK"
+      },
+      "WHIPPED_DREAM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.WHIPPED_DREAM"
+      },
+      "X_ACCURACY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_accuracy"
+      },
+      "X_ATTACK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
+      },
+      "X_DEFENSE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
+      },
+      "X_SPEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
+      },
+      "X_SP_ATK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
+      },
+      "X_SP_DEF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
+      },
+      "ZERAORITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ZERAORITE"
+      },
+      "ZINC": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:BaseStatBoosterItem.zinc"
+      },
+      "ZYGARDITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ZYGARDITE"
+      }
+    },
+    "itemTemplates": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "trainers": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "trainerTitles": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "zCrystals": {
+      "ULTRANECROZIUM_Z": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ULTRANECROZIUM_Z"
+      }
+    },
+    "zMoves": {},
+    "maxMoves": {}
+  },
+  "_fallbacks": {
+    "trainers.red": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "red"
+    },
+    "trainers.lance": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "lance"
+    },
+    "trainers.steven": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "steven"
+    },
+    "trainers.cynthia": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "cynthia"
+    },
+    "trainers.alder": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "alder"
+    },
+    "trainers.diantha": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "diantha"
+    },
+    "trainers.kukui": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "kukui"
+    },
+    "trainers.leon": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "leon"
+    },
+    "trainers.geeta": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "geeta"
+    }
+  }
+}

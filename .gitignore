@@ -1,0 +1,8 @@
+node_modules/
+dist/
+vendor/
+*.log
+.env
+apps/server/data/*.sqlite*
+apps/server/data/pglite/
+apps/server/data/pglite.lock

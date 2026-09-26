@@ -1,0 +1,654 @@
+{
+  "sources": {
+    "pokerogueAssets": {
+      "url": "https://github.com/pagefaultgames/pokerogue-assets",
+      "ref": "submodule `assets` of pokerogue@main",
+      "commit": "909b43612324622608023b3beb2f24f4ef159c1d"
+    },
+    "pokeapiSprites": {
+      "url": "https://github.com/PokeAPI/sprites",
+      "ref": "master",
+      "commit": "a13b1f4ccd77f35fd1370d2db5f0051221e9683f"
+    }
+  },
+  "notes": {
+    "pokemon": "pokemon/manifest.json paths are relative to this assets/ directory and have no extension: append .png (texture) / .json (TexturePacker atlas). Files are byte-identical copies using PokéRogue's own names (e.g. 6-mega-x). Like PokéRogue's 'Mixed Animated' sprite set, the animated images/pokemon/exp/ atlas is copied when one exists; report.staticSprites lists fronts that are a single still frame.",
+    "items": "items-manifest.json: { atlas: 'items', frame } refers to items.png/items.json; { file } is a standalone PNG from PokeAPI/sprites; null = no icon in either source.",
+    "audio": "audio/manifest.json: bgm[name] = { file, loop } with PokéRogue's playBgm names (loop = loop-point seconds from its getBgmLoopPoint, 0 = whole track, null = play once); se[key] = { file, duration } with its playSound keys (se/…, ui/…). Files keep PokéRogue's paths below audio/.",
+    "teraShards": "PokéRogue has per-type icons (<type>_tera_shard frames) and a templated name '{{teraType}} Tera Shard' (see i18n itemTemplates.TERA_SHARD); there is no generic TERA_SHARD icon or name."
+  },
+  "counts": {
+    "rosterSpecies": 429,
+    "formsWithSprites": 565,
+    "files": 4650
+  },
+  "bytes": {
+    "total": 103531609,
+    "byDir": {
+      "arenas": {
+        "files": 36,
+        "bytes": 20531
+      },
+      "audio/bgm": {
+        "files": 15,
+        "bytes": 29356175
+      },
+      "audio/manifest.json": {
+        "files": 1,
+        "bytes": 3659
+      },
+      "audio/se": {
+        "files": 20,
+        "bytes": 3215160
+      },
+      "audio/ui": {
+        "files": 3,
+        "bytes": 155436
+      },
+      "items-extra": {
+        "files": 54,
+        "bytes": 90765
+      },
+      "items-manifest.json": {
+        "files": 1,
+        "bytes": 19447
+      },
+      "items.json": {
+        "files": 1,
+        "bytes": 171287
+      },
+      "items.png": {
+        "files": 1,
+        "bytes": 66390
+      },
+      "pokemon/back-shiny": {
+        "files": 1112,
+        "bytes": 16691517
+      },
+      "pokemon/back": {
+        "files": 1112,
+        "bytes": 16618045
+      },
+      "pokemon/front-shiny": {
+        "files": 1112,
+        "bytes": 18371415
+      },
+      "pokemon/front": {
+        "files": 1112,
+        "bytes": 18237298
+      },
+      "pokemon/manifest.json": {
+        "files": 1,
+        "bytes": 135739
+      },
+      "trainers": {
+        "files": 19,
+        "bytes": 162239
+      },
+      "types": {
+        "files": 49,
+        "bytes": 216506
+      }
+    }
+  },
+  "itemsExtraSources": {
+    "ABSORB_BULB": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/absorb-bulb.png",
+    "ADAMANT_ORB": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/adamant-orb.png",
+    "ADRENALINE_ORB": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/adrenaline-orb.png",
+    "AIR_BALLOON": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/air-balloon.png",
+    "ASSAULT_VEST": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/assault-vest.png",
+    "BRIGHT_POWDER": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/bright-powder.png",
+    "BUGINIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/buginium-z--held.png",
+    "CELL_BATTERY": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/cell-battery.png",
+    "CHOICE_BAND": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/choice-band.png",
+    "CLAW_FOSSIL": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/claw-fossil.png",
+    "CLEAR_AMULET": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/gen9/clear-amulet.png",
+    "COVERT_CLOAK": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/gen9/covert-cloak.png",
+    "DAMP_ROCK": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/damp-rock.png",
+    "DARKINIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/darkinium-z--held.png",
+    "DRAGONIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/dragonium-z--held.png",
+    "ELECTRIC_SEED": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/electric-seed.png",
+    "ELECTRIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/electrium-z--held.png",
+    "FAIRIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/fairium-z--held.png",
+    "FIGHTINIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/fightinium-z--held.png",
+    "FIRIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/firium-z--held.png",
+    "FLYINIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/flyinium-z--held.png",
+    "GHOSTIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/ghostium-z--held.png",
+    "GRASSIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/grassium-z--held.png",
+    "GRASSY_SEED": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/grassy-seed.png",
+    "GRISEOUS_ORB": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/griseous-orb.png",
+    "GROUNDIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/groundium-z--held.png",
+    "HEAT_ROCK": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/heat-rock.png",
+    "ICIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/icium-z--held.png",
+    "ICY_ROCK": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/icy-rock.png",
+    "JABOCA_BERRY": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/jaboca-berry.png",
+    "LIFE_ORB": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/life-orb.png",
+    "LIGHT_CLAY": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/light-clay.png",
+    "LUCK_INCENSE": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/luck-incense.png",
+    "LUSTROUS_ORB": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/lustrous-orb.png",
+    "MENTAL_HERB": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/mental-herb.png",
+    "MISTY_SEED": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/misty-seed.png",
+    "NORMALIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/normalium-z--held.png",
+    "POISONIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/poisonium-z--held.png",
+    "PROTECTIVE_PADS": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/protective-pads.png",
+    "PSYCHIC_SEED": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/psychic-seed.png",
+    "PSYCHIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/psychium-z--held.png",
+    "PUNCHING_GLOVE": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/gen9/punching-glove.png",
+    "ROCKIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/rockium-z--held.png",
+    "ROCKY_HELMET": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/rocky-helmet.png",
+    "ROOT_FOSSIL": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/root-fossil.png",
+    "ROSELI_BERRY": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/roseli-berry.png",
+    "ROWAP_BERRY": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/rowap-berry.png",
+    "SAFETY_GOGGLES": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/safety-goggles.png",
+    "SMOOTH_ROCK": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/smooth-rock.png",
+    "STEELIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/steelium-z--held.png",
+    "TERRAIN_EXTENDER": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/terrain-extender.png",
+    "THROAT_SPRAY": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/gen8/throat-spray.png",
+    "UTILITY_UMBRELLA": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/gen8/utility-umbrella.png",
+    "WATERIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/waterium-z--held.png"
+  },
+  "arenas": {
+    "plains": {
+      "bg": "arenas/plains_bg.png",
+      "a": "arenas/plains_a.png",
+      "b": "arenas/plains_b.png"
+    },
+    "forest": {
+      "bg": "arenas/forest_bg.png",
+      "a": "arenas/forest_a.png",
+      "b": "arenas/forest_b.png"
+    },
+    "beach": {
+      "bg": "arenas/beach_bg.png",
+      "a": "arenas/beach_a.png",
+      "b": "arenas/beach_b.png"
+    },
+    "sea": {
+      "bg": "arenas/sea_bg.png",
+      "a": "arenas/sea_a.png",
+      "b": "arenas/sea_b.png"
+    },
+    "cave": {
+      "bg": "arenas/cave_bg.png",
+      "a": "arenas/cave_a.png",
+      "b": "arenas/cave_b.png"
+    },
+    "desert": {
+      "bg": "arenas/desert_bg.png",
+      "a": "arenas/desert_a.png",
+      "b": "arenas/desert_b.png"
+    },
+    "volcano": {
+      "bg": "arenas/volcano_bg.png",
+      "a": "arenas/volcano_a.png",
+      "b": "arenas/volcano_b.png"
+    },
+    "ice_cave": {
+      "bg": "arenas/ice_cave_bg.png",
+      "a": "arenas/ice_cave_a.png",
+      "b": "arenas/ice_cave_b.png"
+    },
+    "mountain": {
+      "bg": "arenas/mountain_bg.png",
+      "a": "arenas/mountain_a.png",
+      "b": "arenas/mountain_b.png"
+    },
+    "graveyard": {
+      "bg": "arenas/graveyard_bg.png",
+      "a": "arenas/graveyard_a.png",
+      "b": "arenas/graveyard_b.png"
+    },
+    "power_plant": {
+      "bg": "arenas/power_plant_bg.png",
+      "a": "arenas/power_plant_a.png",
+      "b": "arenas/power_plant_b.png"
+    },
+    "space": {
+      "bg": "arenas/space_bg.png",
+      "a": "arenas/space_a.png",
+      "b": "arenas/space_b.png"
+    }
+  },
+  "audio": {
+    "manifest": "audio/manifest.json",
+    "loopPointsFrom": "pokerogue@e4e9b5383be7c9e171d32a9daaea2658d475c521:src/audio/audio-manager.ts getBgmLoopPoint",
+    "bytes": {
+      "audio/bgm/battle_champion_alder.mp3": 1801126,
+      "audio/bgm/battle_champion_geeta.mp3": 2821272,
+      "audio/bgm/battle_champion_kukui.mp3": 2849276,
+      "audio/bgm/battle_galar_champion.mp3": 4180280,
+      "audio/bgm/battle_hoenn_champion_g6.mp3": 1600745,
+      "audio/bgm/battle_johto_champion.mp3": 1554201,
+      "audio/bgm/battle_kalos_champion.mp3": 2181356,
+      "audio/bgm/battle_kanto_champion.mp3": 1820737,
+      "audio/bgm/battle_sinnoh_champion.mp3": 1850634,
+      "audio/bgm/bw/victory_champion.mp3": 974448,
+      "audio/bgm/bw/victory_trainer.mp3": 1031565,
+      "audio/bgm/menu.mp3": 1856559,
+      "audio/bgm/mystery_encounter_gen_5_gts.mp3": 1039653,
+      "audio/bgm/mystery_encounter_gen_6_gts.mp3": 1131246,
+      "audio/bgm/title.mp3": 2663077,
+      "audio/se/beam.wav": 126988,
+      "audio/se/buy.wav": 134604,
+      "audio/se/charge.wav": 230268,
+      "audio/se/exp.wav": 289764,
+      "audio/se/faint.wav": 139284,
+      "audio/se/flee.wav": 112036,
+      "audio/se/hit.wav": 126060,
+      "audio/se/hit_strong.wav": 266364,
+      "audio/se/hit_weak.wav": 85892,
+      "audio/se/level_up.wav": 91980,
+      "audio/se/pb_lock.wav": 55684,
+      "audio/se/pb_move.wav": 17772,
+      "audio/se/pb_rel.wav": 106228,
+      "audio/se/pb_throw.wav": 108876,
+      "audio/se/restore.wav": 79900,
+      "audio/se/shine.wav": 434996,
+      "audio/se/sparkle.wav": 135564,
+      "audio/se/stat_down.wav": 233788,
+      "audio/se/stat_up.wav": 232604,
+      "audio/se/upgrade.wav": 206508,
+      "audio/ui/error.wav": 67660,
+      "audio/ui/menu_open.wav": 47364,
+      "audio/ui/select.wav": 40412
+    },
+    "sources": {
+      "files": [
+        {
+          "repoPath": "audio/ui/select.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/ui/menu_open.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/ui/error.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/buy.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/pb_rel.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/pb_move.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/pb_throw.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/pb_lock.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/hit.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/hit_strong.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/hit_weak.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/faint.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/stat_up.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/stat_down.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/restore.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/shine.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/sparkle.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/charge.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/beam.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/level_up.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/upgrade.wav",
+          "license": "CC0-1.0",
+          "copyright": "NONE"
+        },
+        {
+          "repoPath": "audio/se/flee.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/se/exp.wav",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/bgm/title.mp3",
+          "license": "CC-BY-NC-SA-4.0",
+          "copyright": "Firel"
+        },
+        {
+          "repoPath": "audio/bgm/menu.mp3",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/bgm/mystery_encounter_gen_5_gts.mp3",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/bgm/mystery_encounter_gen_6_gts.mp3",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/bgm/battle_kanto_champion.mp3",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/bgm/battle_johto_champion.mp3",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/bgm/battle_hoenn_champion_g6.mp3",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/bgm/battle_sinnoh_champion.mp3",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/bgm/battle_champion_alder.mp3",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/bgm/battle_kalos_champion.mp3",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/bgm/battle_champion_kukui.mp3",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/bgm/battle_galar_champion.mp3",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/bgm/battle_champion_geeta.mp3",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/bgm/bw/victory_trainer.mp3",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        },
+        {
+          "repoPath": "audio/bgm/bw/victory_champion.mp3",
+          "license": "LicenseRef-FAIR-USE",
+          "copyright": "Nintendo, Creatures Inc., GAME FREAK inc."
+        }
+      ],
+      "composers": "- Firel\n- Andr06\n- “Big” bird_obsession\n- MattCello\n- Leavannite\n- Lmz\n- unveiler\n- Vanstesan",
+      "bgmCredits": "- Pokémon Mystery Dungeon: Explorers of Sky\n  - Arata Iiyoshi\n  - Hideki Sakamoto\n  - Keisuke Ito\n  - Ken-ichi Saito\n  - Yoshihiro Maeda\n- Pokémon Black/White\n  - Go Ichinose\n  - Hitomi Sato\n  - Shota Kageyama\n- Pokémon Mystery Dungeon: Rescue Team DX\n  - Keisuke Ito\n  - Arata Iiyoshi\n  - Atsuhiro Ishizuna\n- Pokémon HeartGold/SoulSilver\n- Pokémon Black/White 2\n- Pokémon X/Y\n- Pokémon Omega Ruby/Alpha Sapphire\n- Pokémon Sun/Moon\n- Pokémon Ultra Sun/Ultra Moon\n- Pokémon Sword/Shield\n- Pokémon Legends: Arceus\n- Pokémon Scarlet/Violet\n- Firel (Custom Graveyard, Ice Cave, Laboratory, Metropolis, Plains, Power Plant, Seabed, Space, Volcano, and Desert biome music)\n- Lmz (Custom Ancient Ruins, Jungle, and Lake biome music)\n- Andr06 (Custom Forest, Slum, Sea, and Fairy Cave biome music)\n- Leavannite (Custom Wasteland biome music)\n- “Big” bird_obsession (Custom Snowy Forest biome music)\n- _tresnoir\n- unveiler",
+      "seCredits": "- Pokémon Emerald\n- Pokémon Black/White"
+    },
+    "totalBytes": 32730430
+  },
+  "report": {
+    "missingSpriteKinds": [],
+    "shinyNotes": [
+      "52 frontShiny: PokéRogue recolors the base sprite with variant/52.json (masterlist v0=1); copied shiny/ file instead",
+      "52 backShiny: PokéRogue recolors the base sprite with variant/back/52.json (masterlist v0=1); copied shiny/ file instead",
+      "52-gigantamax frontShiny: PokéRogue recolors the base sprite with variant/52-gigantamax.json (masterlist v0=1); copied shiny/ file instead",
+      "52-gigantamax backShiny: PokéRogue recolors the base sprite with variant/back/52-gigantamax.json (masterlist v0=1); copied shiny/ file instead",
+      "53 frontShiny: PokéRogue recolors the base sprite with variant/53.json (masterlist v0=1); copied shiny/ file instead",
+      "53 backShiny: PokéRogue recolors the base sprite with variant/back/53.json (masterlist v0=1); copied shiny/ file instead",
+      "93 frontShiny: PokéRogue recolors the base sprite with variant/93.json (masterlist v0=1); copied shiny/ file instead",
+      "93 backShiny: PokéRogue recolors the base sprite with variant/back/93.json (masterlist v0=1); copied shiny/ file instead",
+      "94 frontShiny: PokéRogue recolors the base sprite with variant/94.json (masterlist v0=1); copied shiny/ file instead",
+      "94 backShiny: PokéRogue recolors the base sprite with variant/back/94.json (masterlist v0=1); copied shiny/ file instead",
+      "94-mega backShiny: PokéRogue recolors the base sprite with variant/back/94-mega.json (masterlist v0=1); copied shiny/ file instead",
+      "94-gigantamax frontShiny: PokéRogue recolors the base sprite with variant/94-gigantamax.json (masterlist v0=1); copied shiny/ file instead",
+      "94-gigantamax backShiny: PokéRogue recolors the base sprite with variant/back/94-gigantamax.json (masterlist v0=1); copied shiny/ file instead",
+      "123 frontShiny: PokéRogue recolors the base sprite with variant/123.json (masterlist v0=1); copied shiny/ file instead",
+      "123 backShiny: PokéRogue recolors the base sprite with variant/back/123.json (masterlist v0=1); copied shiny/ file instead",
+      "212 frontShiny: PokéRogue recolors the base sprite with variant/212.json (masterlist v0=1); copied shiny/ file instead",
+      "212 backShiny: PokéRogue recolors the base sprite with variant/back/212.json (masterlist v0=1); copied shiny/ file instead",
+      "212-mega frontShiny: PokéRogue recolors the base sprite with variant/212-mega.json (masterlist v0=1); copied shiny/ file instead",
+      "212-mega backShiny: PokéRogue recolors the base sprite with variant/back/212-mega.json (masterlist v0=1); copied shiny/ file instead",
+      "175 frontShiny: PokéRogue recolors the base sprite with variant/175.json (masterlist v0=1); copied shiny/ file instead",
+      "175 backShiny: PokéRogue recolors the base sprite with variant/back/175.json (masterlist v0=1); copied shiny/ file instead",
+      "176 frontShiny: PokéRogue recolors the base sprite with variant/176.json (masterlist v0=1); copied shiny/ file instead",
+      "176 backShiny: PokéRogue recolors the base sprite with variant/back/176.json (masterlist v0=1); copied shiny/ file instead",
+      "468 frontShiny: PokéRogue recolors the base sprite with variant/468.json (masterlist v0=1); copied shiny/ file instead",
+      "468 backShiny: PokéRogue recolors the base sprite with variant/back/468.json (masterlist v0=1); copied shiny/ file instead",
+      "290 frontShiny: PokéRogue recolors the base sprite with variant/290.json (masterlist v0=1); copied shiny/ file instead",
+      "290 backShiny: PokéRogue recolors the base sprite with variant/back/290.json (masterlist v0=1); copied shiny/ file instead",
+      "304 frontShiny: PokéRogue recolors the base sprite with variant/304.json (masterlist v0=1); copied shiny/ file instead",
+      "304 backShiny: PokéRogue recolors the base sprite with variant/back/304.json (masterlist v0=1); copied shiny/ file instead",
+      "305 frontShiny: PokéRogue recolors the base sprite with variant/305.json (masterlist v0=1); copied shiny/ file instead",
+      "305 backShiny: PokéRogue recolors the base sprite with variant/back/305.json (masterlist v0=1); copied shiny/ file instead",
+      "306 frontShiny: PokéRogue recolors the base sprite with variant/306.json (masterlist v0=1); copied shiny/ file instead",
+      "306 backShiny: PokéRogue recolors the base sprite with variant/back/306.json (masterlist v0=1); copied shiny/ file instead",
+      "306-mega frontShiny: PokéRogue recolors the base sprite with variant/306-mega.json (masterlist v0=1); copied shiny/ file instead",
+      "306-mega backShiny: PokéRogue recolors the base sprite with variant/back/306-mega.json (masterlist v0=1); copied shiny/ file instead",
+      "378 frontShiny: PokéRogue recolors the base sprite with variant/378.json (masterlist v0=1); copied shiny/ file instead",
+      "378 backShiny: PokéRogue recolors the base sprite with variant/back/378.json (masterlist v0=1); copied shiny/ file instead",
+      "791 backShiny: PokéRogue recolors the base sprite with variant/exp/back/791.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "1008-ultimate-mode frontShiny: PokéRogue recolors the base sprite with variant/1008-ultimate-mode.json (masterlist v0=1); copied shiny/ file instead",
+      "1008-ultimate-mode backShiny: PokéRogue recolors the base sprite with variant/back/1008-ultimate-mode.json (masterlist v0=1); copied shiny/ file instead",
+      "303 backShiny: PokéRogue recolors the base sprite with variant/back/303.json (masterlist v0=1); copied shiny/ file instead",
+      "303-mega frontShiny: PokéRogue recolors the base sprite with variant/303-mega.json (masterlist v0=1); copied shiny/ file instead",
+      "303-mega backShiny: PokéRogue recolors the base sprite with variant/back/303-mega.json (masterlist v0=1); copied shiny/ file instead",
+      "818 frontShiny: PokéRogue recolors the base sprite with variant/exp/818.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "818-gigantamax frontShiny: PokéRogue recolors the base sprite with variant/818-gigantamax.json (masterlist v0=1); copied shiny/ file instead",
+      "818-gigantamax backShiny: PokéRogue recolors the base sprite with variant/back/818-gigantamax.json (masterlist v0=1); copied shiny/ file instead",
+      "872 frontShiny: PokéRogue recolors the base sprite with variant/exp/872.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "872 backShiny: PokéRogue recolors the base sprite with variant/exp/back/872.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "873 frontShiny: PokéRogue recolors the base sprite with variant/exp/873.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "873 backShiny: PokéRogue recolors the base sprite with variant/exp/back/873.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "957 backShiny: PokéRogue recolors the base sprite with variant/exp/back/957.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "958 backShiny: PokéRogue recolors the base sprite with variant/exp/back/958.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "959 backShiny: PokéRogue recolors the base sprite with variant/exp/back/959.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "999 backShiny: PokéRogue recolors the base sprite with variant/exp/back/999.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "1000 frontShiny: PokéRogue recolors the base sprite with variant/exp/1000.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "1000 backShiny: PokéRogue recolors the base sprite with variant/exp/back/1000.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "422-east frontShiny: PokéRogue recolors the base sprite with variant/422-east.json (masterlist v0=1); copied shiny/ file instead",
+      "422-east backShiny: PokéRogue recolors the base sprite with variant/back/422-east.json (masterlist v0=1); copied shiny/ file instead",
+      "422-west frontShiny: PokéRogue recolors the base sprite with variant/422-west.json (masterlist v0=1); copied shiny/ file instead",
+      "422-west backShiny: PokéRogue recolors the base sprite with variant/back/422-west.json (masterlist v0=1); copied shiny/ file instead",
+      "423-east frontShiny: PokéRogue recolors the base sprite with variant/423-east.json (masterlist v0=1); copied shiny/ file instead",
+      "423-east backShiny: PokéRogue recolors the base sprite with variant/back/423-east.json (masterlist v0=1); copied shiny/ file instead",
+      "423-west frontShiny: PokéRogue recolors the base sprite with variant/423-west.json (masterlist v0=1); copied shiny/ file instead",
+      "423-west backShiny: PokéRogue recolors the base sprite with variant/back/423-west.json (masterlist v0=1); copied shiny/ file instead",
+      "711 frontShiny: PokéRogue recolors the base sprite with variant/exp/711.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "711 backShiny: PokéRogue recolors the base sprite with variant/exp/back/711.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "711 frontShiny: PokéRogue recolors the base sprite with variant/exp/711.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "711 backShiny: PokéRogue recolors the base sprite with variant/exp/back/711.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "711 frontShiny: PokéRogue recolors the base sprite with variant/exp/711.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "711 backShiny: PokéRogue recolors the base sprite with variant/exp/back/711.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "711 frontShiny: PokéRogue recolors the base sprite with variant/exp/711.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "711 backShiny: PokéRogue recolors the base sprite with variant/exp/back/711.json (masterlist v0=1); copied exp/shiny/ file instead",
+      "936 backShiny: PokéRogue recolors the base sprite with variant/back/936.json (masterlist v0=1); copied shiny/ file instead",
+      "937 backShiny: PokéRogue recolors the base sprite with variant/back/937.json (masterlist v0=1); copied shiny/ file instead",
+      "987 frontShiny: PokéRogue recolors the base sprite with variant/987.json (masterlist v0=1); copied shiny/ file instead",
+      "987 backShiny: PokéRogue recolors the base sprite with variant/back/987.json (masterlist v0=1); copied shiny/ file instead"
+    ],
+    "animatedExpSprites": 613,
+    "staticSprites": [
+      "3-mega",
+      "3-gigantamax",
+      "6-mega-x",
+      "6-mega-y",
+      "6-gigantamax",
+      "9-mega",
+      "9-gigantamax",
+      "12-gigantamax",
+      "18-mega",
+      "25-cosplay",
+      "25-cool-cosplay",
+      "25-beauty-cosplay",
+      "25-cute-cosplay",
+      "25-smart-cosplay",
+      "25-tough-cosplay",
+      "25-gigantamax",
+      "26-mega-x",
+      "26-mega-y",
+      "52-gigantamax",
+      "65-mega",
+      "68-gigantamax",
+      "94-mega",
+      "94-gigantamax",
+      "208-mega",
+      "212-mega",
+      "130-mega",
+      "131-gigantamax",
+      "133-gigantamax",
+      "142-mega",
+      "143-gigantamax",
+      "149-mega",
+      "150-mega-x",
+      "150-mega-y",
+      "227-mega",
+      "257-mega",
+      "282-mega",
+      "475-mega",
+      "306-mega",
+      "376-mega",
+      "380-mega",
+      "381-mega",
+      "382-primal",
+      "383-primal",
+      "445-mega-z",
+      "448-mega",
+      "448-mega-z",
+      "701",
+      "701-mega",
+      "969",
+      "970",
+      "970-mega",
+      "1007-apex-build",
+      "1008-ultimate-mode",
+      "160-mega",
+      "229-mega",
+      "260-mega",
+      "254-mega",
+      "359-mega",
+      "359-mega-z",
+      "362-mega",
+      "478-mega",
+      "303-mega",
+      "310-mega",
+      "460-mega",
+      "428-mega",
+      "609-mega",
+      "657",
+      "658",
+      "658-mega",
+      "758",
+      "812-gigantamax",
+      "818-gigantamax",
+      "849-gigantamax",
+      "858-gigantamax",
+      "861-gigantamax",
+      "996",
+      "997",
+      "998",
+      "998-mega",
+      "976",
+      "652",
+      "652-mega",
+      "653",
+      "654",
+      "655",
+      "655-mega",
+      "668-mega",
+      "677",
+      "678",
+      "678-female",
+      "678-mega",
+      "686",
+      "687",
+      "687-mega",
+      "689",
+      "689-mega",
+      "690",
+      "691-mega",
+      "154-mega",
+      "214-mega",
+      "500-mega",
+      "530-mega",
+      "545-mega",
+      "823-gigantamax",
+      "834-gigantamax",
+      "851-gigantamax",
+      "879-gigantamax",
+      "884-gigantamax",
+      "932",
+      "935",
+      "936",
+      "937",
+      "951",
+      "952",
+      "952-mega",
+      "987"
+    ]
+  }
+}

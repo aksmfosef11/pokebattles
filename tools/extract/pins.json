@@ -1,0 +1,28 @@
+{
+  "$comment": "Exact source commits. pokerogue = branch `main` (release). locales/assets = the submodule commits that pokerogue@main itself pins, so code, text and sprites match. Bump deliberately; scripts check out exactly these commits.",
+  "pokerogue": {
+    "url": "https://github.com/pagefaultgames/pokerogue",
+    "ref": "main",
+    "commit": "e4e9b5383be7c9e171d32a9daaea2658d475c521"
+  },
+  "pokerogueLocales": {
+    "url": "https://github.com/pagefaultgames/pokerogue-locales",
+    "ref": "submodule `locales` of pokerogue@main",
+    "commit": "e46279a0a511e5b6f552dfcab522644822b2908a"
+  },
+  "pokerogueAssets": {
+    "url": "https://github.com/pagefaultgames/pokerogue-assets",
+    "ref": "submodule `assets` of pokerogue@main",
+    "commit": "909b43612324622608023b3beb2f24f4ef159c1d"
+  },
+  "pokeapi": {
+    "url": "https://github.com/PokeAPI/pokeapi",
+    "ref": "master",
+    "commit": "ca0a21b3587af20b52c8a00d33812c47b75fe341"
+  },
+  "pokeapiSprites": {
+    "url": "https://github.com/PokeAPI/sprites",
+    "ref": "master",
+    "commit": "a13b1f4ccd77f35fd1370d2db5f0051221e9683f"
+  }
+}

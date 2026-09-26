@@ -1,0 +1,158 @@
+{
+  "bgm": {
+    "title": {
+      "file": "audio/bgm/title.mp3",
+      "loop": 46.5
+    },
+    "menu": {
+      "file": "audio/bgm/menu.mp3",
+      "loop": 0
+    },
+    "mystery_encounter_gen_5_gts": {
+      "file": "audio/bgm/mystery_encounter_gen_5_gts.mp3",
+      "loop": 8.52
+    },
+    "mystery_encounter_gen_6_gts": {
+      "file": "audio/bgm/mystery_encounter_gen_6_gts.mp3",
+      "loop": 9.24
+    },
+    "battle_kanto_champion": {
+      "file": "audio/bgm/battle_kanto_champion.mp3",
+      "loop": 13.95
+    },
+    "battle_johto_champion": {
+      "file": "audio/bgm/battle_johto_champion.mp3",
+      "loop": 23.498
+    },
+    "battle_hoenn_champion_g6": {
+      "file": "audio/bgm/battle_hoenn_champion_g6.mp3",
+      "loop": 11.762
+    },
+    "battle_sinnoh_champion": {
+      "file": "audio/bgm/battle_sinnoh_champion.mp3",
+      "loop": 12.235
+    },
+    "battle_champion_alder": {
+      "file": "audio/bgm/battle_champion_alder.mp3",
+      "loop": 27.653
+    },
+    "battle_kalos_champion": {
+      "file": "audio/bgm/battle_kalos_champion.mp3",
+      "loop": 10.38
+    },
+    "battle_champion_kukui": {
+      "file": "audio/bgm/battle_champion_kukui.mp3",
+      "loop": 15.784
+    },
+    "battle_galar_champion": {
+      "file": "audio/bgm/battle_galar_champion.mp3",
+      "loop": 61.635
+    },
+    "battle_champion_geeta": {
+      "file": "audio/bgm/battle_champion_geeta.mp3",
+      "loop": 37.447
+    },
+    "bw/victory_trainer": {
+      "file": "audio/bgm/bw/victory_trainer.mp3",
+      "loop": null
+    },
+    "bw/victory_champion": {
+      "file": "audio/bgm/bw/victory_champion.mp3",
+      "loop": null
+    }
+  },
+  "se": {
+    "ui/select": {
+      "file": "audio/ui/select.wav",
+      "duration": 0.229
+    },
+    "ui/menu_open": {
+      "file": "audio/ui/menu_open.wav",
+      "duration": 0.268
+    },
+    "ui/error": {
+      "file": "audio/ui/error.wav",
+      "duration": 0.383
+    },
+    "se/buy": {
+      "file": "audio/se/buy.wav",
+      "duration": 0.763
+    },
+    "se/pb_rel": {
+      "file": "audio/se/pb_rel.wav",
+      "duration": 0.602
+    },
+    "se/pb_move": {
+      "file": "audio/se/pb_move.wav",
+      "duration": 0.1
+    },
+    "se/pb_throw": {
+      "file": "audio/se/pb_throw.wav",
+      "duration": 0.617
+    },
+    "se/pb_lock": {
+      "file": "audio/se/pb_lock.wav",
+      "duration": 0.315
+    },
+    "se/hit": {
+      "file": "audio/se/hit.wav",
+      "duration": 0.714
+    },
+    "se/hit_strong": {
+      "file": "audio/se/hit_strong.wav",
+      "duration": 1.51
+    },
+    "se/hit_weak": {
+      "file": "audio/se/hit_weak.wav",
+      "duration": 0.487
+    },
+    "se/faint": {
+      "file": "audio/se/faint.wav",
+      "duration": 0.789
+    },
+    "se/stat_up": {
+      "file": "audio/se/stat_up.wav",
+      "duration": 1.318
+    },
+    "se/stat_down": {
+      "file": "audio/se/stat_down.wav",
+      "duration": 1.325
+    },
+    "se/restore": {
+      "file": "audio/se/restore.wav",
+      "duration": 0.453
+    },
+    "se/shine": {
+      "file": "audio/se/shine.wav",
+      "duration": 2.466
+    },
+    "se/sparkle": {
+      "file": "audio/se/sparkle.wav",
+      "duration": 0.768
+    },
+    "se/charge": {
+      "file": "audio/se/charge.wav",
+      "duration": 1.305
+    },
+    "se/beam": {
+      "file": "audio/se/beam.wav",
+      "duration": 0.72
+    },
+    "se/level_up": {
+      "file": "audio/se/level_up.wav",
+      "duration": 0.521
+    },
+    "se/upgrade": {
+      "file": "audio/se/upgrade.wav",
+      "duration": 1.17
+    },
+    "se/flee": {
+      "file": "audio/se/flee.wav",
+      "duration": 0.635
+    },
+    "se/exp": {
+      "file": "audio/se/exp.wav",
+      "duration": 1.642
+    }
+  }
+}

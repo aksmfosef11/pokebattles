@@ -1,0 +1,18 @@
+{
+  "name": "pokebattles",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @pokebattles/server --filter @pokebattles/client dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "extract": "pnpm --filter @pokebattles/tools extract",
+    "sprites": "pnpm --filter @pokebattles/tools sprites",
+    "content": "pnpm --filter @pokebattles/tools content",
+    "balance": "pnpm --filter @pokebattles/tools balance",
+    "bot-ratings": "pnpm --filter @pokebattles/tools bot-ratings",
+    "stats": "pnpm --filter @pokebattles/server stats"
+  },
+  "packageManager": "pnpm@10.34.5"
+}

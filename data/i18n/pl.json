@@ -1,0 +1,3771 @@
+{
+  "lang": "pl",
+  "_meta": {
+    "pokerogueSupported": true,
+    "fallbackChain": [
+      "en"
+    ],
+    "fallbackNote": "Sections contain only strings that exist for this language (no silent English copies). Resolve missing keys via fallbackChain at runtime. Exception: champion trainer names listed in _fallbacks.",
+    "pokeapiLanguages": []
+  },
+  "species": {
+    "BULBASAUR": "Bulbasaur",
+    "IVYSAUR": "Ivysaur",
+    "VENUSAUR": "Venusaur",
+    "CHARMANDER": "Charmander",
+    "CHARMELEON": "Charmeleon",
+    "CHARIZARD": "Charizard",
+    "SQUIRTLE": "Squirtle",
+    "WARTORTLE": "Wartortle",
+    "BLASTOISE": "Blastoise",
+    "CATERPIE": "Caterpie",
+    "METAPOD": "Metapod",
+    "BUTTERFREE": "Butterfree",
+    "WEEDLE": "Weedle",
+    "KAKUNA": "Kakuna",
+    "BEEDRILL": "Beedrill",
+    "PIDGEY": "Pidgey",
+    "PIDGEOTTO": "Pidgeotto",
+    "PIDGEOT": "Pidgeot",
+    "RATTATA": "Rattata",
+    "RATICATE": "Raticate",
+    "SPEAROW": "Spearow",
+    "FEAROW": "Fearow",
+    "EKANS": "Ekans",
+    "ARBOK": "Arbok",
+    "PIKACHU": "Pikachu",
+    "RAICHU": "Raichu",
+    "SANDSHREW": "Sandshrew",
+    "SANDSLASH": "Sandslash",
+    "NIDORAN_F": "Nidoran♀",
+    "NIDORINA": "Nidorina",
+    "NIDOQUEEN": "Nidoqueen",
+    "NIDORAN_M": "Nidoran♂",
+    "NIDORINO": "Nidorino",
+    "NIDOKING": "Nidoking",
+    "CLEFAIRY": "Clefairy",
+    "CLEFABLE": "Clefable",
+    "VULPIX": "Vulpix",
+    "NINETALES": "Ninetales",
+    "JIGGLYPUFF": "Jigglypuff",
+    "WIGGLYTUFF": "Wigglytuff",
+    "ZUBAT": "Zubat",
+    "GOLBAT": "Golbat",
+    "ODDISH": "Oddish",
+    "GLOOM": "Gloom",
+    "VILEPLUME": "Vileplume",
+    "PARAS": "Paras",
+    "PARASECT": "Parasect",
+    "VENONAT": "Venonat",
+    "VENOMOTH": "Venomoth",
+    "DIGLETT": "Diglett",
+    "DUGTRIO": "Dugtrio",
+    "MEOWTH": "Meowth",
+    "PERSIAN": "Persian",
+    "PSYDUCK": "Psyduck",
+    "GOLDUCK": "Golduck",
+    "MANKEY": "Mankey",
+    "PRIMEAPE": "Primeape",
+    "GROWLITHE": "Growlithe",
+    "ARCANINE": "Arcanine",
+    "POLIWAG": "Poliwag",
+    "POLIWHIRL": "Poliwhirl",
+    "POLIWRATH": "Poliwrath",
+    "ABRA": "Abra",
+    "KADABRA": "Kadabra",
+    "ALAKAZAM": "Alakazam",
+    "MACHOP": "Machop",
+    "MACHOKE": "Machoke",
+    "MACHAMP": "Machamp",
+    "BELLSPROUT": "Bellsprout",
+    "WEEPINBELL": "Weepinbell",
+    "VICTREEBEL": "Victreebel",
+    "TENTACOOL": "Tentacool",
+    "TENTACRUEL": "Tentacruel",
+    "GEODUDE": "Geodude",
+    "GRAVELER": "Graveler",
+    "GOLEM": "Golem",
+    "PONYTA": "Ponyta",
+    "RAPIDASH": "Rapidash",
+    "SLOWPOKE": "Slowpoke",
+    "SLOWBRO": "Slowbro",
+    "MAGNEMITE": "Magnemite",
+    "MAGNETON": "Magneton",
+    "FARFETCHD": "Farfetch’d",
+    "DODUO": "Doduo",
+    "DODRIO": "Dodrio",
+    "SEEL": "Seel",
+    "DEWGONG": "Dewgong",
+    "GRIMER": "Grimer",
+    "MUK": "Muk",
+    "SHELLDER": "Shellder",
+    "CLOYSTER": "Cloyster",
+    "GASTLY": "Gastly",
+    "HAUNTER": "Haunter",
+    "GENGAR": "Gengar",
+    "ONIX": "Onix",
+    "DROWZEE": "Drowzee",
+    "HYPNO": "Hypno",
+    "KRABBY": "Krabby",
+    "KINGLER": "Kingler",
+    "VOLTORB": "Voltorb",
+    "ELECTRODE": "Electrode",
+    "EXEGGCUTE": "Exeggcute",
+    "EXEGGUTOR": "Exeggutor",
+    "CUBONE": "Cubone",
+    "MAROWAK": "Marowak",
+    "HITMONLEE": "Hitmonlee",
+    "HITMONCHAN": "Hitmonchan",
+    "LICKITUNG": "Lickitung",
+    "KOFFING": "Koffing",
+    "WEEZING": "Weezing",
+    "RHYHORN": "Rhyhorn",
+    "RHYDON": "Rhydon",
+    "CHANSEY": "Chansey",
+    "TANGELA": "Tangela",
+    "KANGASKHAN": "Kangaskhan",
+    "HORSEA": "Horsea",
+    "SEADRA": "Seadra",
+    "GOLDEEN": "Goldeen",
+    "SEAKING": "Seaking",
+    "STARYU": "Staryu",
+    "STARMIE": "Starmie",
+    "MR_MIME": "Mr. Mime",
+    "SCYTHER": "Scyther",
+    "JYNX": "Jynx",
+    "ELECTABUZZ": "Electabuzz",
+    "MAGMAR": "Magmar",
+    "PINSIR": "Pinsir",
+    "TAUROS": "Tauros",
+    "MAGIKARP": "Magikarp",
+    "GYARADOS": "Gyarados",
+    "LAPRAS": "Lapras",
+    "DITTO": "Ditto",
+    "EEVEE": "Eevee",
+    "VAPOREON": "Vaporeon",
+    "JOLTEON": "Jolteon",
+    "FLAREON": "Flareon",
+    "PORYGON": "Porygon",
+    "OMANYTE": "Omanyte",
+    "OMASTAR": "Omastar",
+    "KABUTO": "Kabuto",
+    "KABUTOPS": "Kabutops",
+    "AERODACTYL": "Aerodactyl",
+    "SNORLAX": "Snorlax",
+    "ARTICUNO": "Articuno",
+    "ZAPDOS": "Zapdos",
+    "MOLTRES": "Moltres",
+    "DRATINI": "Dratini",
+    "DRAGONAIR": "Dragonair",
+    "DRAGONITE": "Dragonite",
+    "MEWTWO": "Mewtwo",
+    "MEW": "Mew",
+    "CHIKORITA": "Chikorita",
+    "BAYLEEF": "Bayleef",
+    "MEGANIUM": "Meganium",
+    "CYNDAQUIL": "Cyndaquil",
+    "QUILAVA": "Quilava",
+    "TYPHLOSION": "Typhlosion",
+    "TOTODILE": "Totodile",
+    "CROCONAW": "Croconaw",
+    "FERALIGATR": "Feraligatr",
+    "SENTRET": "Sentret",
+    "FURRET": "Furret",
+    "HOOTHOOT": "Hoothoot",
+    "NOCTOWL": "Noctowl",
+    "LEDYBA": "Ledyba",
+    "LEDIAN": "Ledian",
+    "SPINARAK": "Spinarak",
+    "ARIADOS": "Ariados",
+    "CROBAT": "Crobat",
+    "CHINCHOU": "Chinchou",
+    "LANTURN": "Lanturn",
+    "PICHU": "Pichu",
+    "CLEFFA": "Cleffa",
+    "IGGLYBUFF": "Igglybuff",
+    "TOGEPI": "Togepi",
+    "TOGETIC": "Togetic",
+    "NATU": "Natu",
+    "XATU": "Xatu",
+    "MAREEP": "Mareep",
+    "FLAAFFY": "Flaaffy",
+    "AMPHAROS": "Ampharos",
+    "BELLOSSOM": "Bellossom",
+    "MARILL": "Marill",
+    "AZUMARILL": "Azumarill",
+    "SUDOWOODO": "Sudowoodo",
+    "POLITOED": "Politoed",
+    "HOPPIP": "Hoppip",
+    "SKIPLOOM": "Skiploom",
+    "JUMPLUFF": "Jumpluff",
+    "AIPOM": "Aipom",
+    "SUNKERN": "Sunkern",
+    "SUNFLORA": "Sunflora",
+    "YANMA": "Yanma",
+    "WOOPER": "Wooper",
+    "QUAGSIRE": "Quagsire",
+    "ESPEON": "Espeon",
+    "UMBREON": "Umbreon",
+    "MURKROW": "Murkrow",
+    "SLOWKING": "Slowking",
+    "MISDREAVUS": "Misdreavus",
+    "UNOWN": "Unown",
+    "WOBBUFFET": "Wobbuffet",
+    "GIRAFARIG": "Girafarig",
+    "PINECO": "Pineco",
+    "FORRETRESS": "Forretress",
+    "DUNSPARCE": "Dunsparce",
+    "GLIGAR": "Gligar",
+    "STEELIX": "Steelix",
+    "SNUBBULL": "Snubbull",
+    "GRANBULL": "Granbull",
+    "QWILFISH": "Qwilfish",
+    "SCIZOR": "Scizor",
+    "SHUCKLE": "Shuckle",
+    "HERACROSS": "Heracross",
+    "SNEASEL": "Sneasel",
+    "TEDDIURSA": "Teddiursa",
+    "URSARING": "Ursaring",
+    "SLUGMA": "Slugma",
+    "MAGCARGO": "Magcargo",
+    "SWINUB": "Swinub",
+    "PILOSWINE": "Piloswine",
+    "CORSOLA": "Corsola",
+    "REMORAID": "Remoraid",
+    "OCTILLERY": "Octillery",
+    "DELIBIRD": "Delibird",
+    "MANTINE": "Mantine",
+    "SKARMORY": "Skarmory",
+    "HOUNDOUR": "Houndour",
+    "HOUNDOOM": "Houndoom",
+    "KINGDRA": "Kingdra",
+    "PHANPY": "Phanpy",
+    "DONPHAN": "Donphan",
+    "PORYGON2": "Porygon2",
+    "STANTLER": "Stantler",
+    "SMEARGLE": "Smeargle",
+    "TYROGUE": "Tyrogue",
+    "HITMONTOP": "Hitmontop",
+    "SMOOCHUM": "Smoochum",
+    "ELEKID": "Elekid",
+    "MAGBY": "Magby",
+    "MILTANK": "Miltank",
+    "BLISSEY": "Blissey",
+    "RAIKOU": "Raikou",
+    "ENTEI": "Entei",
+    "SUICUNE": "Suicune",
+    "LARVITAR": "Larvitar",
+    "PUPITAR": "Pupitar",
+    "TYRANITAR": "Tyranitar",
+    "LUGIA": "Lugia",
+    "HO_OH": "Ho-Oh",
+    "CELEBI": "Celebi",
+    "TREECKO": "Treecko",
+    "GROVYLE": "Grovyle",
+    "SCEPTILE": "Sceptile",
+    "TORCHIC": "Torchic",
+    "COMBUSKEN": "Combusken",
+    "BLAZIKEN": "Blaziken",
+    "MUDKIP": "Mudkip",
+    "MARSHTOMP": "Marshtomp",
+    "SWAMPERT": "Swampert",
+    "POOCHYENA": "Poochyena",
+    "MIGHTYENA": "Mightyena",
+    "ZIGZAGOON": "Zigzagoon",
+    "LINOONE": "Linoone",
+    "WURMPLE": "Wurmple",
+    "SILCOON": "Silcoon",
+    "BEAUTIFLY": "Beautifly",
+    "CASCOON": "Cascoon",
+    "DUSTOX": "Dustox",
+    "LOTAD": "Lotad",
+    "LOMBRE": "Lombre",
+    "LUDICOLO": "Ludicolo",
+    "SEEDOT": "Seedot",
+    "NUZLEAF": "Nuzleaf",
+    "SHIFTRY": "Shiftry",
+    "TAILLOW": "Taillow",
+    "SWELLOW": "Swellow",
+    "WINGULL": "Wingull",
+    "PELIPPER": "Pelipper",
+    "RALTS": "Ralts",
+    "KIRLIA": "Kirlia",
+    "GARDEVOIR": "Gardevoir",
+    "SURSKIT": "Surskit",
+    "MASQUERAIN": "Masquerain",
+    "SHROOMISH": "Shroomish",
+    "BRELOOM": "Breloom",
+    "SLAKOTH": "Slakoth",
+    "VIGOROTH": "Vigoroth",
+    "SLAKING": "Slaking",
+    "NINCADA": "Nincada",
+    "NINJASK": "Ninjask",
+    "SHEDINJA": "Shedinja",
+    "WHISMUR": "Whismur",
+    "LOUDRED": "Loudred",
+    "EXPLOUD": "Exploud",
+    "MAKUHITA": "Makuhita",
+    "HARIYAMA": "Hariyama",
+    "AZURILL": "Azurill",
+    "NOSEPASS": "Nosepass",
+    "SKITTY": "Skitty",
+    "DELCATTY": "Delcatty",
+    "SABLEYE": "Sableye",
+    "MAWILE": "Mawile",
+    "ARON": "Aron",
+    "LAIRON": "Lairon",
+    "AGGRON": "Aggron",
+    "MEDITITE": "Meditite",
+    "MEDICHAM": "Medicham",
+    "ELECTRIKE": "Electrike",
+    "MANECTRIC": "Manectric",
+    "PLUSLE": "Plusle",
+    "MINUN": "Minun",
+    "VOLBEAT": "Volbeat",
+    "ILLUMISE": "Illumise",
+    "ROSELIA": "Roselia",
+    "GULPIN": "Gulpin",
+    "SWALOT": "Swalot",
+    "CARVANHA": "Carvanha",
+    "SHARPEDO": "Sharpedo",
+    "WAILMER": "Wailmer",
+    "WAILORD": "Wailord",
+    "NUMEL": "Numel",
+    "CAMERUPT": "Camerupt",
+    "TORKOAL": "Torkoal",
+    "SPOINK": "Spoink",
+    "GRUMPIG": "Grumpig",
+    "SPINDA": "Spinda",
+    "TRAPINCH": "Trapinch",
+    "VIBRAVA": "Vibrava",
+    "FLYGON": "Flygon",
+    "CACNEA": "Cacnea",
+    "CACTURNE": "Cacturne",
+    "SWABLU": "Swablu",
+    "ALTARIA": "Altaria",
+    "ZANGOOSE": "Zangoose",
+    "SEVIPER": "Seviper",
+    "LUNATONE": "Lunatone",
+    "SOLROCK": "Solrock",
+    "BARBOACH": "Barboach",
+    "WHISCASH": "Whiscash",
+    "CORPHISH": "Corphish",
+    "CRAWDAUNT": "Crawdaunt",
+    "BALTOY": "Baltoy",
+    "CLAYDOL": "Claydol",
+    "LILEEP": "Lileep",
+    "CRADILY": "Cradily",
+    "ANORITH": "Anorith",
+    "ARMALDO": "Armaldo",
+    "FEEBAS": "Feebas",
+    "MILOTIC": "Milotic",
+    "CASTFORM": "Castform",
+    "KECLEON": "Kecleon",
+    "SHUPPET": "Shuppet",
+    "BANETTE": "Banette",
+    "DUSKULL": "Duskull",
+    "DUSCLOPS": "Dusclops",
+    "TROPIUS": "Tropius",
+    "CHIMECHO": "Chimecho",
+    "ABSOL": "Absol",
+    "WYNAUT": "Wynaut",
+    "SNORUNT": "Snorunt",
+    "GLALIE": "Glalie",
+    "SPHEAL": "Spheal",
+    "SEALEO": "Sealeo",
+    "WALREIN": "Walrein",
+    "CLAMPERL": "Clamperl",
+    "HUNTAIL": "Huntail",
+    "GOREBYSS": "Gorebyss",
+    "RELICANTH": "Relicanth",
+    "LUVDISC": "Luvdisc",
+    "BAGON": "Bagon",
+    "SHELGON": "Shelgon",
+    "SALAMENCE": "Salamence",
+    "BELDUM": "Beldum",
+    "METANG": "Metang",
+    "METAGROSS": "Metagross",
+    "REGIROCK": "Regirock",
+    "REGICE": "Regice",
+    "REGISTEEL": "Registeel",
+    "LATIAS": "Latias",
+    "LATIOS": "Latios",
+    "KYOGRE": "Kyogre",
+    "GROUDON": "Groudon",
+    "RAYQUAZA": "Rayquaza",
+    "JIRACHI": "Jirachi",
+    "DEOXYS": "Deoxys",
+    "TURTWIG": "Turtwig",
+    "GROTLE": "Grotle",
+    "TORTERRA": "Torterra",
+    "CHIMCHAR": "Chimchar",
+    "MONFERNO": "Monferno",
+    "INFERNAPE": "Infernape",
+    "PIPLUP": "Piplup",
+    "PRINPLUP": "Prinplup",
+    "EMPOLEON": "Empoleon",
+    "STARLY": "Starly",
+    "STARAVIA": "Staravia",
+    "STARAPTOR": "Staraptor",
+    "BIDOOF": "Bidoof",
+    "BIBAREL": "Bibarel",
+    "KRICKETOT": "Kricketot",
+    "KRICKETUNE": "Kricketune",
+    "SHINX": "Shinx",
+    "LUXIO": "Luxio",
+    "LUXRAY": "Luxray",
+    "BUDEW": "Budew",
+    "ROSERADE": "Roserade",
+    "CRANIDOS": "Cranidos",
+    "RAMPARDOS": "Rampardos",
+    "SHIELDON": "Shieldon",
+    "BASTIODON": "Bastiodon",
+    "BURMY": "Burmy",
+    "WORMADAM": "Wormadam",
+    "MOTHIM": "Mothim",
+    "COMBEE": "Combee",
+    "VESPIQUEN": "Vespiquen",
+    "PACHIRISU": "Pachirisu",
+    "BUIZEL": "Buizel",
+    "FLOATZEL": "Floatzel",
+    "CHERUBI": "Cherubi",
+    "CHERRIM": "Cherrim",
+    "SHELLOS": "Shellos",
+    "GASTRODON": "Gastrodon",
+    "AMBIPOM": "Ambipom",
+    "DRIFLOON": "Drifloon",
+    "DRIFBLIM": "Drifblim",
+    "BUNEARY": "Buneary",
+    "LOPUNNY": "Lopunny",
+    "MISMAGIUS": "Mismagius",
+    "HONCHKROW": "Honchkrow",
+    "GLAMEOW": "Glameow",
+    "PURUGLY": "Purugly",
+    "CHINGLING": "Chingling",
+    "STUNKY": "Stunky",
+    "SKUNTANK": "Skuntank",
+    "BRONZOR": "Bronzor",
+    "BRONZONG": "Bronzong",
+    "BONSLY": "Bonsly",
+    "MIME_JR": "Mime Jr.",
+    "HAPPINY": "Happiny",
+    "CHATOT": "Chatot",
+    "SPIRITOMB": "Spiritomb",
+    "GIBLE": "Gible",
+    "GABITE": "Gabite",
+    "GARCHOMP": "Garchomp",
+    "MUNCHLAX": "Munchlax",
+    "RIOLU": "Riolu",
+    "LUCARIO": "Lucario",
+    "HIPPOPOTAS": "Hippopotas",
+    "HIPPOWDON": "Hippowdon",
+    "SKORUPI": "Skorupi",
+    "DRAPION": "Drapion",
+    "CROAGUNK": "Croagunk",
+    "TOXICROAK": "Toxicroak",
+    "CARNIVINE": "Carnivine",
+    "FINNEON": "Finneon",
+    "LUMINEON": "Lumineon",
+    "MANTYKE": "Mantyke",
+    "SNOVER": "Snover",
+    "ABOMASNOW": "Abomasnow",
+    "WEAVILE": "Weavile",
+    "MAGNEZONE": "Magnezone",
+    "LICKILICKY": "Lickilicky",
+    "RHYPERIOR": "Rhyperior",
+    "TANGROWTH": "Tangrowth",
+    "ELECTIVIRE": "Electivire",
+    "MAGMORTAR": "Magmortar",
+    "TOGEKISS": "Togekiss",
+    "YANMEGA": "Yanmega",
+    "LEAFEON": "Leafeon",
+    "GLACEON": "Glaceon",
+    "GLISCOR": "Gliscor",
+    "MAMOSWINE": "Mamoswine",
+    "PORYGON_Z": "Porygon-Z",
+    "GALLADE": "Gallade",
+    "PROBOPASS": "Probopass",
+    "DUSKNOIR": "Dusknoir",
+    "FROSLASS": "Froslass",
+    "ROTOM": "Rotom",
+    "UXIE": "Uxie",
+    "MESPRIT": "Mesprit",
+    "AZELF": "Azelf",
+    "DIALGA": "Dialga",
+    "PALKIA": "Palkia",
+    "HEATRAN": "Heatran",
+    "REGIGIGAS": "Regigigas",
+    "GIRATINA": "Giratina",
+    "CRESSELIA": "Cresselia",
+    "PHIONE": "Phione",
+    "MANAPHY": "Manaphy",
+    "DARKRAI": "Darkrai",
+    "SHAYMIN": "Shaymin",
+    "ARCEUS": "Arceus",
+    "VICTINI": "Victini",
+    "SNIVY": "Snivy",
+    "SERVINE": "Servine",
+    "SERPERIOR": "Serperior",
+    "TEPIG": "Tepig",
+    "PIGNITE": "Pignite",
+    "EMBOAR": "Emboar",
+    "OSHAWOTT": "Oshawott",
+    "DEWOTT": "Dewott",
+    "SAMUROTT": "Samurott",
+    "PATRAT": "Patrat",
+    "WATCHOG": "Watchog",
+    "LILLIPUP": "Lillipup",
+    "HERDIER": "Herdier",
+    "STOUTLAND": "Stoutland",
+    "PURRLOIN": "Purrloin",
+    "LIEPARD": "Liepard",
+    "PANSAGE": "Pansage",
+    "SIMISAGE": "Simisage",
+    "PANSEAR": "Pansear",
+    "SIMISEAR": "Simisear",
+    "PANPOUR": "Panpour",
+    "SIMIPOUR": "Simipour",
+    "MUNNA": "Munna",
+    "MUSHARNA": "Musharna",
+    "PIDOVE": "Pidove",
+    "TRANQUILL": "Tranquill",
+    "UNFEZANT": "Unfezant",
+    "BLITZLE": "Blitzle",
+    "ZEBSTRIKA": "Zebstrika",
+    "ROGGENROLA": "Roggenrola",
+    "BOLDORE": "Boldore",
+    "GIGALITH": "Gigalith",
+    "WOOBAT": "Woobat",
+    "SWOOBAT": "Swoobat",
+    "DRILBUR": "Drilbur",
+    "EXCADRILL": "Excadrill",
+    "AUDINO": "Audino",
+    "TIMBURR": "Timburr",
+    "GURDURR": "Gurdurr",
+    "CONKELDURR": "Conkeldurr",
+    "TYMPOLE": "Tympole",
+    "PALPITOAD": "Palpitoad",
+    "SEISMITOAD": "Seismitoad",
+    "THROH": "Throh",
+    "SAWK": "Sawk",
+    "SEWADDLE": "Sewaddle",
+    "SWADLOON": "Swadloon",
+    "LEAVANNY": "Leavanny",
+    "VENIPEDE": "Venipede",
+    "WHIRLIPEDE": "Whirlipede",
+    "SCOLIPEDE": "Scolipede",
+    "COTTONEE": "Cottonee",
+    "WHIMSICOTT": "Whimsicott",
+    "PETILIL": "Petilil",
+    "LILLIGANT": "Lilligant",
+    "BASCULIN": "Basculin",
+    "SANDILE": "Sandile",
+    "KROKOROK": "Krokorok",
+    "KROOKODILE": "Krookodile",
+    "DARUMAKA": "Darumaka",
+    "DARMANITAN": "Darmanitan",
+    "MARACTUS": "Maractus",
+    "DWEBBLE": "Dwebble",
+    "CRUSTLE": "Crustle",
+    "SCRAGGY": "Scraggy",
+    "SCRAFTY": "Scrafty",
+    "SIGILYPH": "Sigilyph",
+    "YAMASK": "Yamask",
+    "COFAGRIGUS": "Cofagrigus",
+    "TIRTOUGA": "Tirtouga",
+    "CARRACOSTA": "Carracosta",
+    "ARCHEN": "Archen",
+    "ARCHEOPS": "Archeops",
+    "TRUBBISH": "Trubbish",
+    "GARBODOR": "Garbodor",
+    "ZORUA": "Zorua",
+    "ZOROARK": "Zoroark",
+    "MINCCINO": "Minccino",
+    "CINCCINO": "Cinccino",
+    "GOTHITA": "Gothita",
+    "GOTHORITA": "Gothorita",
+    "GOTHITELLE": "Gothitelle",
+    "SOLOSIS": "Solosis",
+    "DUOSION": "Duosion",
+    "REUNICLUS": "Reuniclus",
+    "DUCKLETT": "Ducklett",
+    "SWANNA": "Swanna",
+    "VANILLITE": "Vanillite",
+    "VANILLISH": "Vanillish",
+    "VANILLUXE": "Vanilluxe",
+    "DEERLING": "Deerling",
+    "SAWSBUCK": "Sawsbuck",
+    "EMOLGA": "Emolga",
+    "KARRABLAST": "Karrablast",
+    "ESCAVALIER": "Escavalier",
+    "FOONGUS": "Foongus",
+    "AMOONGUSS": "Amoonguss",
+    "FRILLISH": "Frillish",
+    "JELLICENT": "Jellicent",
+    "ALOMOMOLA": "Alomomola",
+    "JOLTIK": "Joltik",
+    "GALVANTULA": "Galvantula",
+    "FERROSEED": "Ferroseed",
+    "FERROTHORN": "Ferrothorn",
+    "KLINK": "Klink",
+    "KLANG": "Klang",
+    "KLINKLANG": "Klinklang",
+    "TYNAMO": "Tynamo",
+    "EELEKTRIK": "Eelektrik",
+    "EELEKTROSS": "Eelektross",
+    "ELGYEM": "Elgyem",
+    "BEHEEYEM": "Beheeyem",
+    "LITWICK": "Litwick",
+    "LAMPENT": "Lampent",
+    "CHANDELURE": "Chandelure",
+    "AXEW": "Axew",
+    "FRAXURE": "Fraxure",
+    "HAXORUS": "Haxorus",
+    "CUBCHOO": "Cubchoo",
+    "BEARTIC": "Beartic",
+    "CRYOGONAL": "Cryogonal",
+    "SHELMET": "Shelmet",
+    "ACCELGOR": "Accelgor",
+    "STUNFISK": "Stunfisk",
+    "MIENFOO": "Mienfoo",
+    "MIENSHAO": "Mienshao",
+    "DRUDDIGON": "Druddigon",
+    "GOLETT": "Golett",
+    "GOLURK": "Golurk",
+    "PAWNIARD": "Pawniard",
+    "BISHARP": "Bisharp",
+    "BOUFFALANT": "Bouffalant",
+    "RUFFLET": "Rufflet",
+    "BRAVIARY": "Braviary",
+    "VULLABY": "Vullaby",
+    "MANDIBUZZ": "Mandibuzz",
+    "HEATMOR": "Heatmor",
+    "DURANT": "Durant",
+    "DEINO": "Deino",
+    "ZWEILOUS": "Zweilous",
+    "HYDREIGON": "Hydreigon",
+    "LARVESTA": "Larvesta",
+    "VOLCARONA": "Volcarona",
+    "COBALION": "Cobalion",
+    "TERRAKION": "Terrakion",
+    "VIRIZION": "Virizion",
+    "TORNADUS": "Tornadus",
+    "THUNDURUS": "Thundurus",
+    "RESHIRAM": "Reshiram",
+    "ZEKROM": "Zekrom",
+    "LANDORUS": "Landorus",
+    "KYUREM": "Kyurem",
+    "KELDEO": "Keldeo",
+    "MELOETTA": "Meloetta",
+    "GENESECT": "Genesect",
+    "CHESPIN": "Chespin",
+    "QUILLADIN": "Quilladin",
+    "CHESNAUGHT": "Chesnaught",
+    "FENNEKIN": "Fennekin",
+    "BRAIXEN": "Braixen",
+    "DELPHOX": "Delphox",
+    "FROAKIE": "Froakie",
+    "FROGADIER": "Frogadier",
+    "GRENINJA": "Greninja",
+    "BUNNELBY": "Bunnelby",
+    "DIGGERSBY": "Diggersby",
+    "FLETCHLING": "Fletchling",
+    "FLETCHINDER": "Fletchinder",
+    "TALONFLAME": "Talonflame",
+    "SCATTERBUG": "Scatterbug",
+    "SPEWPA": "Spewpa",
+    "VIVILLON": "Vivillon",
+    "LITLEO": "Litleo",
+    "PYROAR": "Pyroar",
+    "FLABEBE": "Flabébé",
+    "FLOETTE": "Floette",
+    "FLORGES": "Florges",
+    "SKIDDO": "Skiddo",
+    "GOGOAT": "Gogoat",
+    "PANCHAM": "Pancham",
+    "PANGORO": "Pangoro",
+    "FURFROU": "Furfrou",
+    "ESPURR": "Espurr",
+    "MEOWSTIC": "Meowstic",
+    "HONEDGE": "Honedge",
+    "DOUBLADE": "Doublade",
+    "AEGISLASH": "Aegislash",
+    "SPRITZEE": "Spritzee",
+    "AROMATISSE": "Aromatisse",
+    "SWIRLIX": "Swirlix",
+    "SLURPUFF": "Slurpuff",
+    "INKAY": "Inkay",
+    "MALAMAR": "Malamar",
+    "BINACLE": "Binacle",
+    "BARBARACLE": "Barbaracle",
+    "SKRELP": "Skrelp",
+    "DRAGALGE": "Dragalge",
+    "CLAUNCHER": "Clauncher",
+    "CLAWITZER": "Clawitzer",
+    "HELIOPTILE": "Helioptile",
+    "HELIOLISK": "Heliolisk",
+    "TYRUNT": "Tyrunt",
+    "TYRANTRUM": "Tyrantrum",
+    "AMAURA": "Amaura",
+    "AURORUS": "Aurorus",
+    "SYLVEON": "Sylveon",
+    "HAWLUCHA": "Hawlucha",
+    "DEDENNE": "Dedenne",
+    "CARBINK": "Carbink",
+    "GOOMY": "Goomy",
+    "SLIGGOO": "Sliggoo",
+    "GOODRA": "Goodra",
+    "KLEFKI": "Klefki",
+    "PHANTUMP": "Phantump",
+    "TREVENANT": "Trevenant",
+    "PUMPKABOO": "Pumpkaboo",
+    "GOURGEIST": "Gourgeist",
+    "BERGMITE": "Bergmite",
+    "AVALUGG": "Avalugg",
+    "NOIBAT": "Noibat",
+    "NOIVERN": "Noivern",
+    "XERNEAS": "Xerneas",
+    "YVELTAL": "Yveltal",
+    "ZYGARDE": "Zygarde",
+    "DIANCIE": "Diancie",
+    "HOOPA": "Hoopa",
+    "VOLCANION": "Volcanion",
+    "ROWLET": "Rowlet",
+    "DARTRIX": "Dartrix",
+    "DECIDUEYE": "Decidueye",
+    "LITTEN": "Litten",
+    "TORRACAT": "Torracat",
+    "INCINEROAR": "Incineroar",
+    "POPPLIO": "Popplio",
+    "BRIONNE": "Brionne",
+    "PRIMARINA": "Primarina",
+    "PIKIPEK": "Pikipek",
+    "TRUMBEAK": "Trumbeak",
+    "TOUCANNON": "Toucannon",
+    "YUNGOOS": "Yungoos",
+    "GUMSHOOS": "Gumshoos",
+    "GRUBBIN": "Grubbin",
+    "CHARJABUG": "Charjabug",
+    "VIKAVOLT": "Vikavolt",
+    "CRABRAWLER": "Crabrawler",
+    "CRABOMINABLE": "Crabominable",
+    "ORICORIO": "Oricorio",
+    "CUTIEFLY": "Cutiefly",
+    "RIBOMBEE": "Ribombee",
+    "ROCKRUFF": "Rockruff",
+    "LYCANROC": "Lycanroc",
+    "WISHIWASHI": "Wishiwashi",
+    "MAREANIE": "Mareanie",
+    "TOXAPEX": "Toxapex",
+    "MUDBRAY": "Mudbray",
+    "MUDSDALE": "Mudsdale",
+    "DEWPIDER": "Dewpider",
+    "ARAQUANID": "Araquanid",
+    "FOMANTIS": "Fomantis",
+    "LURANTIS": "Lurantis",
+    "MORELULL": "Morelull",
+    "SHIINOTIC": "Shiinotic",
+    "SALANDIT": "Salandit",
+    "SALAZZLE": "Salazzle",
+    "STUFFUL": "Stufful",
+    "BEWEAR": "Bewear",
+    "BOUNSWEET": "Bounsweet",
+    "STEENEE": "Steenee",
+    "TSAREENA": "Tsareena",
+    "COMFEY": "Comfey",
+    "ORANGURU": "Oranguru",
+    "PASSIMIAN": "Passimian",
+    "WIMPOD": "Wimpod",
+    "GOLISOPOD": "Golisopod",
+    "SANDYGAST": "Sandygast",
+    "PALOSSAND": "Palossand",
+    "PYUKUMUKU": "Pyukumuku",
+    "TYPE_NULL": "Type: Null",
+    "SILVALLY": "Silvally",
+    "MINIOR": "Minior",
+    "KOMALA": "Komala",
+    "TURTONATOR": "Turtonator",
+    "TOGEDEMARU": "Togedemaru",
+    "MIMIKYU": "Mimikyu",
+    "BRUXISH": "Bruxish",
+    "DRAMPA": "Drampa",
+    "DHELMISE": "Dhelmise",
+    "JANGMO_O": "Jangmo-o",
+    "HAKAMO_O": "Hakamo-o",
+    "KOMMO_O": "Kommo-o",
+    "TAPU_KOKO": "Tapu Koko",
+    "TAPU_LELE": "Tapu Lele",
+    "TAPU_BULU": "Tapu Bulu",
+    "TAPU_FINI": "Tapu Fini",
+    "COSMOG": "Cosmog",
+    "COSMOEM": "Cosmoem",
+    "SOLGALEO": "Solgaleo",
+    "LUNALA": "Lunala",
+    "NIHILEGO": "Nihilego",
+    "BUZZWOLE": "Buzzwole",
+    "PHEROMOSA": "Pheromosa",
+    "XURKITREE": "Xurkitree",
+    "CELESTEELA": "Celesteela",
+    "KARTANA": "Kartana",
+    "GUZZLORD": "Guzzlord",
+    "NECROZMA": "Necrozma",
+    "MAGEARNA": "Magearna",
+    "MARSHADOW": "Marshadow",
+    "POIPOLE": "Poipole",
+    "NAGANADEL": "Naganadel",
+    "STAKATAKA": "Stakataka",
+    "BLACEPHALON": "Blacephalon",
+    "ZERAORA": "Zeraora",
+    "MELTAN": "Meltan",
+    "MELMETAL": "Melmetal",
+    "GROOKEY": "Grookey",
+    "THWACKEY": "Thwackey",
+    "RILLABOOM": "Rillaboom",
+    "SCORBUNNY": "Scorbunny",
+    "RABOOT": "Raboot",
+    "CINDERACE": "Cinderace",
+    "SOBBLE": "Sobble",
+    "DRIZZILE": "Drizzile",
+    "INTELEON": "Inteleon",
+    "SKWOVET": "Skwovet",
+    "GREEDENT": "Greedent",
+    "ROOKIDEE": "Rookidee",
+    "CORVISQUIRE": "Corvisquire",
+    "CORVIKNIGHT": "Corviknight",
+    "BLIPBUG": "Blipbug",
+    "DOTTLER": "Dottler",
+    "ORBEETLE": "Orbeetle",
+    "NICKIT": "Nickit",
+    "THIEVUL": "Thievul",
+    "GOSSIFLEUR": "Gossifleur",
+    "ELDEGOSS": "Eldegoss",
+    "WOOLOO": "Wooloo",
+    "DUBWOOL": "Dubwool",
+    "CHEWTLE": "Chewtle",
+    "DREDNAW": "Drednaw",
+    "YAMPER": "Yamper",
+    "BOLTUND": "Boltund",
+    "ROLYCOLY": "Rolycoly",
+    "CARKOL": "Carkol",
+    "COALOSSAL": "Coalossal",
+    "APPLIN": "Applin",
+    "FLAPPLE": "Flapple",
+    "APPLETUN": "Appletun",
+    "SILICOBRA": "Silicobra",
+    "SANDACONDA": "Sandaconda",
+    "CRAMORANT": "Cramorant",
+    "ARROKUDA": "Arrokuda",
+    "BARRASKEWDA": "Barraskewda",
+    "TOXEL": "Toxel",
+    "TOXTRICITY": "Toxtricity",
+    "SIZZLIPEDE": "Sizzlipede",
+    "CENTISKORCH": "Centiskorch",
+    "CLOBBOPUS": "Clobbopus",
+    "GRAPPLOCT": "Grapploct",
+    "SINISTEA": "Sinistea",
+    "POLTEAGEIST": "Polteageist",
+    "HATENNA": "Hatenna",
+    "HATTREM": "Hattrem",
+    "HATTERENE": "Hatterene",
+    "IMPIDIMP": "Impidimp",
+    "MORGREM": "Morgrem",
+    "GRIMMSNARL": "Grimmsnarl",
+    "OBSTAGOON": "Obstagoon",
+    "PERRSERKER": "Perrserker",
+    "CURSOLA": "Cursola",
+    "SIRFETCHD": "Sirfetch’d",
+    "MR_RIME": "Mr. Rime",
+    "RUNERIGUS": "Runerigus",
+    "MILCERY": "Milcery",
+    "ALCREMIE": "Alcremie",
+    "FALINKS": "Falinks",
+    "PINCURCHIN": "Pincurchin",
+    "SNOM": "Snom",
+    "FROSMOTH": "Frosmoth",
+    "STONJOURNER": "Stonjourner",
+    "EISCUE": "Eiscue",
+    "INDEEDEE": "Indeedee",
+    "MORPEKO": "Morpeko",
+    "CUFANT": "Cufant",
+    "COPPERAJAH": "Copperajah",
+    "DRACOZOLT": "Dracozolt",
+    "ARCTOZOLT": "Arctozolt",
+    "DRACOVISH": "Dracovish",
+    "ARCTOVISH": "Arctovish",
+    "DURALUDON": "Duraludon",
+    "DREEPY": "Dreepy",
+    "DRAKLOAK": "Drakloak",
+    "DRAGAPULT": "Dragapult",
+    "ZACIAN": "Zacian",
+    "ZAMAZENTA": "Zamazenta",
+    "ETERNATUS": "Eternatus",
+    "KUBFU": "Kubfu",
+    "URSHIFU": "Urshifu",
+    "ZARUDE": "Zarude",
+    "REGIELEKI": "Regieleki",
+    "REGIDRAGO": "Regidrago",
+    "GLASTRIER": "Glastrier",
+    "SPECTRIER": "Spectrier",
+    "CALYREX": "Calyrex",
+    "WYRDEER": "Wyrdeer",
+    "KLEAVOR": "Kleavor",
+    "URSALUNA": "Ursaluna",
+    "BASCULEGION": "Basculegion",
+    "SNEASLER": "Sneasler",
+    "OVERQWIL": "Overqwil",
+    "ENAMORUS": "Enamorus",
+    "SPRIGATITO": "Sprigatito",
+    "FLORAGATO": "Floragato",
+    "MEOWSCARADA": "Meowscarada",
+    "FUECOCO": "Fuecoco",
+    "CROCALOR": "Crocalor",
+    "SKELEDIRGE": "Skeledirge",
+    "QUAXLY": "Quaxly",
+    "QUAXWELL": "Quaxwell",
+    "QUAQUAVAL": "Quaquaval",
+    "LECHONK": "Lechonk",
+    "OINKOLOGNE": "Oinkologne",
+    "TAROUNTULA": "Tarountula",
+    "SPIDOPS": "Spidops",
+    "NYMBLE": "Nymble",
+    "LOKIX": "Lokix",
+    "PAWMI": "Pawmi",
+    "PAWMO": "Pawmo",
+    "PAWMOT": "Pawmot",
+    "TANDEMAUS": "Tandemaus",
+    "MAUSHOLD": "Maushold",
+    "FIDOUGH": "Fidough",
+    "DACHSBUN": "Dachsbun",
+    "SMOLIV": "Smoliv",
+    "DOLLIV": "Dolliv",
+    "ARBOLIVA": "Arboliva",
+    "SQUAWKABILLY": "Squawkabilly",
+    "NACLI": "Nacli",
+    "NACLSTACK": "Naclstack",
+    "GARGANACL": "Garganacl",
+    "CHARCADET": "Charcadet",
+    "ARMAROUGE": "Armarouge",
+    "CERULEDGE": "Ceruledge",
+    "TADBULB": "Tadbulb",
+    "BELLIBOLT": "Bellibolt",
+    "WATTREL": "Wattrel",
+    "KILOWATTREL": "Kilowattrel",
+    "MASCHIFF": "Maschiff",
+    "MABOSSTIFF": "Mabosstiff",
+    "SHROODLE": "Shroodle",
+    "GRAFAIAI": "Grafaiai",
+    "BRAMBLIN": "Bramblin",
+    "BRAMBLEGHAST": "Brambleghast",
+    "TOEDSCOOL": "Toedscool",
+    "TOEDSCRUEL": "Toedscruel",
+    "KLAWF": "Klawf",
+    "CAPSAKID": "Capsakid",
+    "SCOVILLAIN": "Scovillain",
+    "RELLOR": "Rellor",
+    "RABSCA": "Rabsca",
+    "FLITTLE": "Flittle",
+    "ESPATHRA": "Espathra",
+    "TINKATINK": "Tinkatink",
+    "TINKATUFF": "Tinkatuff",
+    "TINKATON": "Tinkaton",
+    "WIGLETT": "Wiglett",
+    "WUGTRIO": "Wugtrio",
+    "BOMBIRDIER": "Bombirdier",
+    "FINIZEN": "Finizen",
+    "PALAFIN": "Palafin",
+    "VAROOM": "Varoom",
+    "REVAVROOM": "Revavroom",
+    "CYCLIZAR": "Cyclizar",
+    "ORTHWORM": "Orthworm",
+    "GLIMMET": "Glimmet",
+    "GLIMMORA": "Glimmora",
+    "GREAVARD": "Greavard",
+    "HOUNDSTONE": "Houndstone",
+    "FLAMIGO": "Flamigo",
+    "CETODDLE": "Cetoddle",
+    "CETITAN": "Cetitan",
+    "VELUZA": "Veluza",
+    "DONDOZO": "Dondozo",
+    "TATSUGIRI": "Tatsugiri",
+    "ANNIHILAPE": "Annihilape",
+    "CLODSIRE": "Clodsire",
+    "FARIGIRAF": "Farigiraf",
+    "DUDUNSPARCE": "Dudunsparce",
+    "KINGAMBIT": "Kingambit",
+    "FRIGIBAX": "Frigibax",
+    "ARCTIBAX": "Arctibax",
+    "BAXCALIBUR": "Baxcalibur",
+    "GIMMIGHOUL": "Gimmighoul",
+    "GHOLDENGO": "Gholdengo",
+    "WO_CHIEN": "Wo-Chien",
+    "CHIEN_PAO": "Chien-Pao",
+    "TING_LU": "Ting-Lu",
+    "CHI_YU": "Chi-Yu",
+    "KORAIDON": "Koraidon",
+    "MIRAIDON": "Miraidon",
+    "DIPPLIN": "Dipplin",
+    "POLTCHAGEIST": "Poltchageist",
+    "SINISTCHA": "Sinistcha",
+    "OKIDOGI": "Okidogi",
+    "MUNKIDORI": "Munkidori",
+    "FEZANDIPITI": "Fezandipiti",
+    "OGERPON": "Ogerpon",
+    "ARCHALUDON": "Archaludon",
+    "HYDRAPPLE": "Hydrapple",
+    "TERAPAGOS": "Terapagos",
+    "PECHARUNT": "Pecharunt",
+    "ALOLA_RATTATA": "Rattata",
+    "ALOLA_RATICATE": "Raticate",
+    "ALOLA_RAICHU": "Raichu",
+    "ALOLA_SANDSHREW": "Sandshrew",
+    "ALOLA_SANDSLASH": "Sandslash",
+    "ALOLA_VULPIX": "Vulpix",
+    "ALOLA_NINETALES": "Ninetales",
+    "ALOLA_DIGLETT": "Diglett",
+    "ALOLA_DUGTRIO": "Dugtrio",
+    "ALOLA_MEOWTH": "Meowth",
+    "ALOLA_PERSIAN": "Persian",
+    "ALOLA_GEODUDE": "Geodude",
+    "ALOLA_GRAVELER": "Graveler",
+    "ALOLA_GOLEM": "Golem",
+    "ALOLA_GRIMER": "Grimer",
+    "ALOLA_MUK": "Muk",
+    "ALOLA_EXEGGUTOR": "Exeggutor",
+    "ALOLA_MAROWAK": "Marowak",
+    "ETERNAL_FLOETTE": "Floette",
+    "GALAR_MEOWTH": "Meowth",
+    "GALAR_PONYTA": "Ponyta",
+    "GALAR_RAPIDASH": "Rapidash",
+    "GALAR_SLOWPOKE": "Slowpoke",
+    "GALAR_SLOWBRO": "Slowbro",
+    "GALAR_FARFETCHD": "Farfetch’d",
+    "GALAR_WEEZING": "Weezing",
+    "GALAR_MR_MIME": "Mr. Mime",
+    "GALAR_ARTICUNO": "Articuno",
+    "GALAR_ZAPDOS": "Zapdos",
+    "GALAR_MOLTRES": "Moltres",
+    "GALAR_SLOWKING": "Slowking",
+    "GALAR_CORSOLA": "Corsola",
+    "GALAR_ZIGZAGOON": "Zigzagoon",
+    "GALAR_LINOONE": "Linoone",
+    "GALAR_DARUMAKA": "Darumaka",
+    "GALAR_DARMANITAN": "Darmanitan",
+    "GALAR_YAMASK": "Yamask",
+    "GALAR_STUNFISK": "Stunfisk",
+    "HISUI_GROWLITHE": "Growlithe",
+    "HISUI_ARCANINE": "Arcanine",
+    "HISUI_VOLTORB": "Voltorb",
+    "HISUI_ELECTRODE": "Electrode",
+    "HISUI_TYPHLOSION": "Typhlosion",
+    "HISUI_QWILFISH": "Qwilfish",
+    "HISUI_SNEASEL": "Sneasel",
+    "HISUI_SAMUROTT": "Samurott",
+    "HISUI_LILLIGANT": "Lilligant",
+    "HISUI_BASCULIN": "Basculin",
+    "HISUI_ZORUA": "Zorua",
+    "HISUI_ZOROARK": "Zoroark",
+    "HISUI_BRAVIARY": "Braviary",
+    "HISUI_SLIGGOO": "Sliggoo",
+    "HISUI_GOODRA": "Goodra",
+    "HISUI_AVALUGG": "Avalugg",
+    "HISUI_DECIDUEYE": "Decidueye",
+    "PALDEA_TAUROS": "Tauros",
+    "PALDEA_WOOPER": "Wooper",
+    "BLOODMOON_URSALUNA": "Ursaluna"
+  },
+  "forms": {
+    "VENUSAUR:mega": "Mega Venusaur",
+    "VENUSAUR:gigantamax": "G-Max Venusaur",
+    "CHARIZARD:mega-x": "Mega Charizard X",
+    "CHARIZARD:mega-y": "Mega Charizard Y",
+    "CHARIZARD:gigantamax": "G-Max Charizard",
+    "BLASTOISE:mega": "Mega Blastoise",
+    "BLASTOISE:gigantamax": "G-Max Blastoise",
+    "BUTTERFREE:gigantamax": "G-Max Butterfree",
+    "BEEDRILL:mega": "Mega Beedrill",
+    "PIDGEOT:mega": "Mega Pidgeot",
+    "PIKACHU:gigantamax": "G-Max Pikachu",
+    "RAICHU:mega-x": "Mega Raichu X",
+    "RAICHU:mega-y": "Mega Raichu Y",
+    "CLEFABLE:mega": "Mega Clefable",
+    "MEOWTH:gigantamax": "G-Max Meowth",
+    "ALAKAZAM:mega": "Mega Alakazam",
+    "MACHAMP:gigantamax": "G-Max Machamp",
+    "VICTREEBEL:mega": "Mega Victreebel",
+    "SLOWBRO:mega": "Mega Slowbro",
+    "GENGAR:mega": "Mega Gengar",
+    "GENGAR:gigantamax": "G-Max Gengar",
+    "KINGLER:gigantamax": "G-Max Kingler",
+    "KANGASKHAN:mega": "Mega Kangaskhan",
+    "STARMIE:mega": "Mega Starmie",
+    "PINSIR:mega": "Mega Pinsir",
+    "GYARADOS:mega": "Mega Gyarados",
+    "LAPRAS:gigantamax": "G-Max Lapras",
+    "EEVEE:gigantamax": "G-Max Eevee",
+    "AERODACTYL:mega": "Mega Aerodactyl",
+    "SNORLAX:gigantamax": "G-Max Snorlax",
+    "DRAGONITE:mega": "Mega Dragonite",
+    "MEWTWO:mega-x": "Mega Mewtwo X",
+    "MEWTWO:mega-y": "Mega Mewtwo Y",
+    "MEGANIUM:mega": "Mega Meganium",
+    "FERALIGATR:mega": "Mega Feraligatr",
+    "AMPHAROS:mega": "Mega Ampharos",
+    "STEELIX:mega": "Mega Steelix",
+    "SCIZOR:mega": "Mega Scizor",
+    "HERACROSS:mega": "Mega Heracross",
+    "SKARMORY:mega": "Mega Skarmory",
+    "HOUNDOOM:mega": "Mega Houndoom",
+    "TYRANITAR:mega": "Mega Tyranitar",
+    "SCEPTILE:mega": "Mega Sceptile",
+    "BLAZIKEN:mega": "Mega Blaziken",
+    "SWAMPERT:mega": "Mega Swampert",
+    "GARDEVOIR:mega": "Mega Gardevoir",
+    "SABLEYE:mega": "Mega Sableye",
+    "MAWILE:mega": "Mega Mawile",
+    "AGGRON:mega": "Mega Aggron",
+    "MEDICHAM:mega": "Mega Medicham",
+    "MANECTRIC:mega": "Mega Manectric",
+    "SHARPEDO:mega": "Mega Sharpedo",
+    "CAMERUPT:mega": "Mega Camerupt",
+    "ALTARIA:mega": "Mega Altaria",
+    "BANETTE:mega": "Mega Banette",
+    "CHIMECHO:mega": "Mega Chimecho",
+    "ABSOL:mega": "Mega Absol",
+    "ABSOL:mega-z": "Mega Absol Z",
+    "GLALIE:mega": "Mega Glalie",
+    "SALAMENCE:mega": "Mega Salamence",
+    "METAGROSS:mega": "Mega Metagross",
+    "LATIAS:mega": "Mega Latias",
+    "LATIOS:mega": "Mega Latios",
+    "KYOGRE:primal": "Pierwotny Kyogre",
+    "GROUDON:primal": "Pierwotny Groudon",
+    "RAYQUAZA:mega": "Mega Rayquaza",
+    "STARAPTOR:mega": "Mega Staraptor",
+    "LOPUNNY:mega": "Mega Lopunny",
+    "GARCHOMP:mega": "Mega Garchomp",
+    "GARCHOMP:mega-z": "Mega Garchomp Z",
+    "LUCARIO:mega": "Mega Lucario",
+    "LUCARIO:mega-z": "Mega Lucario Z",
+    "ABOMASNOW:mega": "Mega Abomasnow",
+    "GALLADE:mega": "Mega Gallade",
+    "FROSLASS:mega": "Mega Froslass",
+    "HEATRAN:mega": "Mega Heatran",
+    "DARKRAI:mega": "Mega Darkrai",
+    "EMBOAR:mega": "Mega Emboar",
+    "EXCADRILL:mega": "Mega Excadrill",
+    "AUDINO:mega": "Mega Audino",
+    "SCOLIPEDE:mega": "Mega Scolipede",
+    "SCRAFTY:mega": "Mega Scrafty",
+    "GARBODOR:gigantamax": "G-Max Garbodor",
+    "EELEKTROSS:mega": "Mega Eelektross",
+    "CHANDELURE:mega": "Mega Chandelure",
+    "GOLURK:mega": "Mega Golurk",
+    "CHESNAUGHT:mega": "Mega Chesnaught",
+    "DELPHOX:mega": "Mega Delphox",
+    "GRENINJA:mega": "Mega Greninja",
+    "PYROAR:mega": "Mega Pyroar",
+    "MEOWSTIC:mega": "Mega Meowstic",
+    "MALAMAR:mega": "Mega Malamar",
+    "BARBARACLE:mega": "Mega Barbaracle",
+    "DRAGALGE:mega": "Mega Dragalge",
+    "HAWLUCHA:mega": "Mega Hawlucha",
+    "ZYGARDE:mega": "Mega Zygarde",
+    "DIANCIE:mega": "Mega Diancie",
+    "CRABOMINABLE:mega": "Mega Crabominable",
+    "GOLISOPOD:mega": "Mega Golisopod",
+    "DRAMPA:mega": "Mega Drampa",
+    "MAGEARNA:mega": "Mega Magearna",
+    "MAGEARNA:mega-original": "Mega Magearna",
+    "ZERAORA:mega": "Mega Zeraora",
+    "MELMETAL:gigantamax": "G-Max Melmetal",
+    "RILLABOOM:gigantamax": "G-Max Rillaboom",
+    "CINDERACE:gigantamax": "G-Max Cinderace",
+    "INTELEON:gigantamax": "G-Max Inteleon",
+    "CORVIKNIGHT:gigantamax": "G-Max Corviknight",
+    "ORBEETLE:gigantamax": "G-Max Orbeetle",
+    "DREDNAW:gigantamax": "G-Max Drednaw",
+    "COALOSSAL:gigantamax": "G-Max Coalossal",
+    "FLAPPLE:gigantamax": "G-Max Flapple",
+    "APPLETUN:gigantamax": "G-Max Appletun",
+    "SANDACONDA:gigantamax": "G-Max Sandaconda",
+    "TOXTRICITY:gigantamax": "G-Max Toxtricity",
+    "CENTISKORCH:gigantamax": "G-Max Centiskorch",
+    "HATTERENE:gigantamax": "G-Max Hatterene",
+    "GRIMMSNARL:gigantamax": "G-Max Grimmsnarl",
+    "ALCREMIE:gigantamax": "G-Max Alcremie",
+    "FALINKS:mega": "Mega Falinks",
+    "COPPERAJAH:gigantamax": "G-Max Copperajah",
+    "DURALUDON:gigantamax": "G-Max Duraludon",
+    "ETERNATUS:eternamax": "E-Max Eternatus",
+    "SCOVILLAIN:mega": "Mega Scovillain",
+    "GLIMMORA:mega": "Mega Glimmora",
+    "TATSUGIRI:mega-curly": "Mega Tatsugiri",
+    "TATSUGIRI:mega-droopy": "Mega Tatsugiri",
+    "TATSUGIRI:mega-stretchy": "Mega Tatsugiri",
+    "BAXCALIBUR:mega": "Mega Baxcalibur",
+    "ETERNAL_FLOETTE:mega": "Mega Floette"
+  },
+  "formLabels": {
+    "PIKACHU:": "Normalna",
+    "PIKACHU:cosplay": "Przebrania",
+    "PIKACHU:cool-cosplay": "Fajnego Przebrania",
+    "PIKACHU:beauty-cosplay": "Pięknego Przebrania",
+    "PIKACHU:cute-cosplay": "Słodkiego Przebrania",
+    "PIKACHU:smart-cosplay": "Mądrego Przebrania",
+    "UNOWN:a": "A",
+    "UNOWN:b": "B",
+    "UNOWN:c": "C",
+    "UNOWN:d": "D",
+    "UNOWN:e": "E",
+    "UNOWN:f": "F",
+    "UNOWN:g": "G",
+    "UNOWN:h": "H",
+    "UNOWN:i": "I",
+    "UNOWN:j": "J",
+    "UNOWN:k": "K",
+    "UNOWN:l": "L",
+    "UNOWN:m": "M",
+    "UNOWN:n": "N",
+    "UNOWN:o": "O",
+    "UNOWN:p": "P",
+    "UNOWN:q": "Q",
+    "UNOWN:r": "R",
+    "UNOWN:s": "S",
+    "UNOWN:t": "T",
+    "UNOWN:u": "U",
+    "UNOWN:v": "V",
+    "UNOWN:w": "W",
+    "UNOWN:x": "X",
+    "UNOWN:y": "Y",
+    "UNOWN:z": "Z",
+    "UNOWN:exclamation": "!",
+    "UNOWN:question": "?",
+    "ARCEUS:normal": "Normalny",
+    "ARCEUS:fighting": "Walczący",
+    "ARCEUS:flying": "Latający",
+    "ARCEUS:poison": "Trujący",
+    "ARCEUS:ground": "Ziemny",
+    "ARCEUS:rock": "Skalny",
+    "ARCEUS:bug": "Robaczy",
+    "ARCEUS:ghost": "Upiorny",
+    "ARCEUS:steel": "Stalowy",
+    "ARCEUS:fire": "Ognisty",
+    "ARCEUS:water": "Wodny",
+    "ARCEUS:grass": "Trawiasty",
+    "ARCEUS:electric": "Elektryczny",
+    "ARCEUS:psychic": "Umysłowy",
+    "ARCEUS:ice": "Lodowy",
+    "ARCEUS:dragon": "Smoczy",
+    "ARCEUS:dark": "Mroczny",
+    "ARCEUS:fairy": "Baśniowy",
+    "SILVALLY:normal": "Typ: Normalny",
+    "SILVALLY:fighting": "Typ: Walczący",
+    "SILVALLY:flying": "Typ: Latający",
+    "SILVALLY:poison": "Typ: Trujący",
+    "SILVALLY:ground": "Typ: Ziemny",
+    "SILVALLY:rock": "Typ: Skalny",
+    "SILVALLY:bug": "Typ: Robaczy",
+    "SILVALLY:ghost": "Typ: Upiorny",
+    "SILVALLY:steel": "Typ: Stalowy",
+    "SILVALLY:fire": "Typ: Ognisty",
+    "SILVALLY:water": "Typ: Wodny",
+    "SILVALLY:grass": "Typ: Trawiasty",
+    "SILVALLY:electric": "Typ: Elektryczny",
+    "SILVALLY:psychic": "Typ: Umysłowy",
+    "SILVALLY:ice": "Typ: Lodowy",
+    "SILVALLY:dragon": "Typ: Smoczy",
+    "SILVALLY:dark": "Typ: Mroczny",
+    "SILVALLY:fairy": "Typ: Baśniowy"
+  },
+  "moves": {
+    "KARATE_CHOP": {
+      "name": "Cios Karate",
+      "effect": "Cel zostaje trafiony szybkim ciosem. Szansa zadania krytycznych obrażeń jest wyższa o 1 stopień."
+    },
+    "DOUBLE_SLAP": {
+      "name": "Podwójny Klaps",
+      "effect": "Cel jest uderzany 2-5 razy z rzędu."
+    },
+    "COMET_PUNCH": {
+      "name": "Kosmiczna Pięść",
+      "effect": "Cel zostaje uderzony salwą 2-5 uderzeń z pięści."
+    },
+    "MEGA_PUNCH": {
+      "name": "Mega Pięść",
+      "effect": null
+    },
+    "PAY_DAY": {
+      "name": "Wypłata",
+      "effect": "Pokémon zadaje obrażenia rzucając w cel monetami. Jeśli atak został pomyślnie wykonany, po bitwie otrzymasz trochę pieniędzy."
+    },
+    "FIRE_PUNCH": {
+      "name": "Ognista Pięść",
+      "effect": "Przeciwnik zostaje trafiony ognistą pięścią. Atak ma 10% szansy poparzyć cel."
+    },
+    "ICE_PUNCH": {
+      "name": "Lodowa Pięść",
+      "effect": "Przeciwnik zostaje trafiony pięścią zimną jak lód. Atak ma 10% szansy zamrozić cel."
+    },
+    "THUNDER_PUNCH": {
+      "name": "Burzowa Pięść",
+      "effect": "Przeciwnik zostaje trafiony elektryczną pięścią. Atak ma 10% szansy sparaliżować cel."
+    },
+    "SCRATCH": {
+      "name": "Drapnięcie",
+      "effect": "Pokémon wbija w przeciwnika swoje ostre pazury w celu zadania obrażeń."
+    },
+    "VISE_GRIP": {
+      "name": "Pewny Chwyt",
+      "effect": "Cel zostaje zgnieciony i ściśnięty z dwóch stron w celu zadania obrażeń."
+    },
+    "GUILLOTINE": {
+      "name": "Egzekucja",
+      "effect": null
+    },
+    "RAZOR_WIND": {
+      "name": "Ostry Wiatr",
+      "effect": null
+    },
+    "SWORDS_DANCE": {
+      "name": "Taniec Ostrzy",
+      "effect": "Żywiołowy taniec podnoszący ducha walki. Taniec wyraźnie zwiększa Atak użytkownika."
+    },
+    "CUT": {
+      "name": "Cięcie",
+      "effect": "Cel jest cięty przez ostrze, pazur, bądź coś podobnego aby wywołać obrażenia."
+    },
+    "GUST": {
+      "name": "Podmuch",
+      "effect": null
+    },
+    "FLY": {
+      "name": "Lot",
+      "effect": "Użytkownik wzlatuje w powietrze i zlatuje zaatakować cel w następnej turze."
+    },
+    "STOMP": {
+      "name": "Stąpnięcie",
+      "effect": null
+    },
+    "MEGA_KICK": {
+      "name": "Mega Kop",
+      "effect": null
+    },
+    "JUMP_KICK": {
+      "name": "Kop z Wyskoku",
+      "effect": "Pokémon wyskakuje w powietrze i wymierza przeciwnikowi kopnięcie. Jeśli atak nie trafi, użytkownik traci ½ maksymalanego życia."
+    },
+    "SAND_ATTACK": {
+      "name": "Piasek w Oczy",
+      "effect": "Użytkownik rzuca piasek w twarz przeciwnika, co obniża jego celność."
+    },
+    "HORN_ATTACK": {
+      "name": "Atak Rogami",
+      "effect": null
+    },
+    "FURY_ATTACK": {
+      "name": "Napad Furii",
+      "effect": null
+    },
+    "WRAP": {
+      "name": "Owinięcie",
+      "effect": "Pokémon swoim długim ciałem, pnączami lub tym podobne owija swój cel, który przez 4-5 tur otrzymuje obrażenia odpowiadające ⅛ jego maksymalnych PŻ."
+    },
+    "BITE": {
+      "name": "Ugryzienie",
+      "effect": "Przeciwnik zostaje ugryziony ostrymi jak brzytwa zębami. Atak ma 30% szansy spowodować wzdrygnięcie."
+    },
+    "ROAR": {
+      "name": "Ryk",
+      "effect": "Użytkownik atakuje ostatni i wydaje z siebie potężny ryk, który odstrasza cel i wyciąga do walki innego Pokémona. W dziczy, atak kończy walkę z pojedynczym Pokémonem."
+    },
+    "SING": {
+      "name": "Śpiew",
+      "effect": "Użytkownik śpiewa kojącą kołysankę, usypiającą przeciwnika."
+    },
+    "SUPERSONIC": {
+      "name": "Ultradźwięk",
+      "effect": "Pokémon wytwarza dziwne fale dźwiękowe, które mylą przeciwnika."
+    },
+    "SONIC_BOOM": {
+      "name": "Grom Dźwiękowy",
+      "effect": null
+    },
+    "ACID": {
+      "name": "Kwas",
+      "effect": null
+    },
+    "FLAMETHROWER": {
+      "name": "Miotacz Ognia",
+      "effect": null
+    },
+    "MIST": {
+      "name": "Mgła",
+      "effect": "Pokémon otacza siebie i swoich sojuszników gęstą mgłą, która zapobiega obniżaniu ich statystyk przez 5 tur."
+    },
+    "WATER_GUN": {
+      "name": "Pistolet Wodny",
+      "effect": null
+    },
+    "HYDRO_PUMP": {
+      "name": "Pompa Wodna",
+      "effect": "Przeciwnik zostaje trafiony ogromną falą wody, wystrzeloną pod dużym ciśnieniem."
+    },
+    "BLIZZARD": {
+      "name": "Śnieżyca",
+      "effect": null
+    },
+    "PECK": {
+      "name": "Dziobnięcie",
+      "effect": "Przeciwnik zostaje dźgnięty ostrym dziobem lub rogiem w celu zadania obrażeń."
+    },
+    "DRILL_PECK": {
+      "name": "Dziobowkręt",
+      "effect": null
+    },
+    "LOW_KICK": {
+      "name": "Podcinka",
+      "effect": "Pokémon wymierza w przeciwnika potężne kopnięcie, przez które się przewraca. Im cel jest cięższy, tym większa jest moc tego ataku (od 20 do 120)."
+    },
+    "COUNTER": {
+      "name": "Kontra",
+      "effect": null
+    },
+    "SEISMIC_TOSS": {
+      "name": "Rzut Sejsmiczny",
+      "effect": "Pokémon rzuca przeciwnikiem używając siły grawitacji. Zadaje obrażenia równe poziomowi przeciwnika."
+    },
+    "STRENGTH": {
+      "name": "Siła",
+      "effect": null
+    },
+    "GROWTH": {
+      "name": "Wzrost",
+      "effect": null
+    },
+    "RAZOR_LEAF": {
+      "name": "Ostry Liść",
+      "effect": "Ostre liście zostaję wystrzelone aby pocięły wrogiego Pokémon'a. Szansa zadania krytycznych obrażeń jest wyższa o 1 stopień."
+    },
+    "SOLAR_BEAM": {
+      "name": "Słoneczny Promień",
+      "effect": "Użytkownik wchłania światło w pierwszej turze i wystrzeliwuje skupiony promień w następnej turze. W piekącym słońcu, użytkownik atakuję natychmiastowo. Moc tego atak jest mniejsza o połowę w każdą inną pogodę."
+    },
+    "POISON_POWDER": {
+      "name": "Trujący Pył",
+      "effect": "Pokémon rozsypuje chmurę trującego pyłu, by zatruć przeciwnika."
+    },
+    "STUN_SPORE": {
+      "name": "Paraliżujące Zarodniki",
+      "effect": "Użytkownik rozsypuję chmurę odrętwiającego pyłu, który paraliżuję przeciwnika."
+    },
+    "SLEEP_POWDER": {
+      "name": "Pył Nasenny",
+      "effect": "Pokémon rozsypuje chmurę pyłu nasennego, by uśpić przeciwnika."
+    },
+    "DRAGON_RAGE": {
+      "name": "Smocza Furia",
+      "effect": "Cel zostaje trafiony falą czystej złości. Atak zawsze zadaje 40 obrażeń."
+    },
+    "THUNDERBOLT": {
+      "name": "Błyskawica",
+      "effect": null
+    },
+    "THUNDER": {
+      "name": "Burza",
+      "effect": null
+    },
+    "ROCK_THROW": {
+      "name": "Rzut Kamieniem",
+      "effect": "Użytkownik podnosi i rzuca małym kamieniem w celu zadania obrażeń."
+    },
+    "EARTHQUAKE": {
+      "name": "Trzęsienie ziemi",
+      "effect": "Pokémon wywołuje trzęsienie ziemi, które uderza wszystkie Pokémony dookoła. Moc tego ataku jest podwojona, gdy skierowany jest przeciwko Pokémonom używających _ i mniejsza o połowę w Trawiastym Terenie."
+    },
+    "TOXIC": {
+      "name": "Toksyna",
+      "effect": null
+    },
+    "HYPNOSIS": {
+      "name": "Hipnoza",
+      "effect": null
+    },
+    "MEDITATE": {
+      "name": "Medytacja",
+      "effect": "Pokemon medytując budzi ukrytą w głębi swojego ciała moc i zwiększa swój Atak."
+    },
+    "RAGE": {
+      "name": "Wściekłość",
+      "effect": "Tak długo, jak używany jest ten atak, wściekłość napędza użytkownika i zwiększa jego Atak za każdym razem, gdy zostaje trafiony."
+    },
+    "TELEPORT": {
+      "name": "Teleportacja",
+      "effect": null
+    },
+    "SMOKESCREEN": {
+      "name": "Zasłona Dymna",
+      "effect": null
+    },
+    "BARRIER": {
+      "name": "Bariera",
+      "effect": null
+    },
+    "REFLECT": {
+      "name": "Odbicie",
+      "effect": null
+    },
+    "METRONOME": {
+      "name": "Metronom",
+      "effect": "Użytkownik kiwa palcem i pobudza swój mózg do użycia losowego ataku."
+    },
+    "SELF_DESTRUCT": {
+      "name": "Autodestrukcja",
+      "effect": "Pokémon eksploduje, zadając obrażenia wszystkim dookoła. Użytkownik nokautuje się używając tego ataku."
+    },
+    "EGG_BOMB": {
+      "name": "Jajo-Bomba",
+      "effect": null
+    },
+    "LICK": {
+      "name": "Liźnięcie",
+      "effect": "Użytkownik swoim długim językiem liże przeciwnika w celu zadania obrażeń. Atak ma 30% szans sparaliżowania przeciwnika."
+    },
+    "SMOG": {
+      "name": "Smog",
+      "effect": null
+    },
+    "WATERFALL": {
+      "name": "Wodospad",
+      "effect": null
+    },
+    "AMNESIA": {
+      "name": "Amnezja",
+      "effect": null
+    },
+    "SOFT_BOILED": {
+      "name": "Jajko na Miękko",
+      "effect": "Odnawia połowę maksymalnego życia użytkownika."
+    },
+    "DREAM_EATER": {
+      "name": "Pożeranie Snów",
+      "effect": "Użytkownik pożera sny śpiącego przeciwnika. Atak odnawia także PŻ o równowartości ½ zadanych obrażeń."
+    },
+    "POISON_GAS": {
+      "name": "Trujący Gaz",
+      "effect": null
+    },
+    "TRANSFORM": {
+      "name": "Transformacja",
+      "effect": "Pokémon przekształca się w kopię swojego przeciwnika, włącznie z jego atakami i statystykami (oprócz PŻ). Skopiowane ataki mają 5 PM."
+    },
+    "BUBBLE": {
+      "name": "Bąbelki",
+      "effect": null
+    },
+    "FLASH": {
+      "name": "Błysk",
+      "effect": "Użytkownik błyska jasnym światłem, co obniża celność przeciwnika."
+    },
+    "CRABHAMMER": {
+      "name": "Krabi Młot",
+      "effect": null
+    },
+    "EXPLOSION": {
+      "name": "Eksplozja",
+      "effect": "Pokémon wywołuje potężny wybuch i zadaje obrażenia wszystkim dookoła. Użytkownik nokautuje się używając tego ataku."
+    },
+    "BONEMERANG": {
+      "name": "Kościomerang",
+      "effect": null
+    },
+    "REST": {
+      "name": "Odpoczynek",
+      "effect": null
+    },
+    "SKETCH": {
+      "name": "Szkic",
+      "effect": null
+    },
+    "THIEF": {
+      "name": "Kradzież",
+      "effect": "Użytkownik atakuje i jednocześnie próbuje okraść cel. Atak ma 30% szansy ukraść przedmiot trzymany przez przeciwnika."
+    },
+    "SPIDER_WEB": {
+      "name": "Pajęczyna",
+      "effect": null
+    },
+    "NIGHTMARE": {
+      "name": "Koszmary",
+      "effect": null
+    },
+    "CURSE": {
+      "name": "Klątwa",
+      "effect": null
+    },
+    "OCTAZOOKA": {
+      "name": "Ośmiozooka",
+      "effect": null
+    },
+    "ICY_WIND": {
+      "name": "Zawieja",
+      "effect": null
+    },
+    "CHARM": {
+      "name": "Urok",
+      "effect": null
+    },
+    "SPARK": {
+      "name": "Iskra",
+      "effect": "Użytkownik atakuje przeciwnika naelektryzowanym uderzeniem. Atak ma 30% szansy sparaliżować cel."
+    },
+    "PRESENT": {
+      "name": "Prezent",
+      "effect": null
+    },
+    "BATON_PASS": {
+      "name": "Sztafeta",
+      "effect": null
+    },
+    "ENCORE": {
+      "name": "Bis",
+      "effect": null
+    },
+    "PURSUIT": {
+      "name": "Pościg",
+      "effect": null
+    },
+    "HEAT_WAVE": {
+      "name": "Fala Ciepła",
+      "effect": null
+    },
+    "FOLLOW_ME": {
+      "name": "Za mną",
+      "effect": null
+    },
+    "HELPING_HAND": {
+      "name": "Pomocna Dłoń",
+      "effect": null
+    },
+    "TRICK": {
+      "name": "Sztuczka",
+      "effect": null
+    },
+    "SUPERPOWER": {
+      "name": "Supermoc",
+      "effect": null
+    },
+    "RECYCLE": {
+      "name": "Recykling",
+      "effect": null
+    },
+    "REVENGE": {
+      "name": "Zemsta",
+      "effect": null
+    },
+    "ERUPTION": {
+      "name": "Erupcja",
+      "effect": null
+    },
+    "CAMOUFLAGE": {
+      "name": "Kamuflaż",
+      "effect": null
+    },
+    "FAKE_TEARS": {
+      "name": "Krokodylowe Łzy",
+      "effect": null
+    },
+    "OVERHEAT": {
+      "name": "Przegrzanie",
+      "effect": null
+    },
+    "TICKLE": {
+      "name": "Łaskotki",
+      "effect": null
+    },
+    "BLOCK": {
+      "name": "Blok",
+      "effect": null
+    },
+    "ROOST": {
+      "name": "Grzęda",
+      "effect": null
+    },
+    "GRAVITY": {
+      "name": "Grawitacja",
+      "effect": null
+    },
+    "ACUPRESSURE": {
+      "name": "Akupresura",
+      "effect": null
+    },
+    "EMBARGO": {
+      "name": "Embargo",
+      "effect": null
+    },
+    "TRUMP_CARD": {
+      "name": "As w Rękawie",
+      "effect": null
+    },
+    "PUNISHMENT": {
+      "name": "Kara",
+      "effect": null
+    },
+    "TELEKINESIS": {
+      "name": "Telekineza",
+      "effect": null
+    },
+    "INFERNO": {
+      "name": "Inferno",
+      "effect": null
+    },
+    "HURRICANE": {
+      "name": "Huragan",
+      "effect": null
+    },
+    "TRICK_OR_TREAT": {
+      "name": "Cukierek Albo Psikus",
+      "effect": null
+    },
+    "ELECTRIFY": {
+      "name": "Elektryfikacja",
+      "effect": null
+    },
+    "BABY_DOLL_EYES": {
+      "name": "Maślane Oczy",
+      "effect": "Użytkownik robi maślane oczy, co obniża Atak przeciwnika. Ten atak zawsze uderza jako pierwszy."
+    },
+    "NEVER_ENDING_NIGHTMARE__PHYSICAL": {
+      "name": "Niekończący Się Koszmar",
+      "effect": null
+    },
+    "FIRST_IMPRESSION": {
+      "name": "Pierwsze Wrażenie",
+      "effect": null
+    },
+    "OCEANIC_OPERETTA": {
+      "name": "Oceaniczna Operetka",
+      "effect": null
+    }
+  },
+  "abilities": {
+    "STENCH": {
+      "name": "Odór",
+      "description": "Podczas ataku Pokémon wydziela odór, który daje 10% szans na to, że trafione cele się cofną. Efekt nie kumuluje się z ruchami ani przedmiotami dającymi szansę na cofnięcie."
+    },
+    "DRIZZLE": {
+      "name": "Mżawka",
+      "description": "Pokémon wywołuje deszcz na 5 tur, gdy wchodzi do walki."
+    },
+    "SPEED_BOOST": {
+      "name": "Przyspieszenie",
+      "description": "Zwiększa Szybkość Pokémona na końcu każdej tury."
+    },
+    "BATTLE_ARMOR": {
+      "name": "Zbroja Bitewna",
+      "description": "Twardy pancerz chroni pokémona przed trafieniami krytycznymi."
+    },
+    "STURDY": {
+      "name": "Wytrwałość",
+      "description": "Pokémon nie może zostać powalony jednym ciosem, dopóki jego HP jest pełne. Ataki wywołujące Nokaut jednym ciosem również go nie znokautują."
+    },
+    "DAMP": {
+      "name": "Wilgoć",
+      "description": "Pokémon nawilża swoje otoczenie, uniemożliwiając wszystkim Pokémonom używanie wybuchowych ataków, takich jak Samozniszczenie lub zadawanie obrażeń poprzez Pokłosie."
+    },
+    "LIMBER": {
+      "name": "Gibkość",
+      "description": "Zwinne ciało Pokémona zapobiega jego paraliżowi."
+    },
+    "SAND_VEIL": {
+      "name": "Ziemny Schron",
+      "description": "Wzmacnia unikliwość Pokémona o 25% podczas burzy piaskowej. Pokémon nie otrzymuje również obrażeń od burzy piaskowej."
+    },
+    "STATIC": {
+      "name": "Statyczność",
+      "description": "Pokémon jest naładowany elektrycznością statyczną i ma 30% szans na sparaliżowanie atakującego, który wejdzie z nim w bezpośredni kontakt."
+    },
+    "VOLT_ABSORB": {
+      "name": "Prądolubność",
+      "description": "Jeśli Pokémon zostanie trafiony atakiem typu Elektrycznego, jego PŻ zostaną przywrócone zamiast otrzymać obrażenia."
+    },
+    "WATER_ABSORB": {
+      "name": "Wodolubność",
+      "description": "Jeśli Pokémon zostanie trafiony atakiem typu Wodnego, jego PŻ zostaną przywrócone zamiast otrzymać obrażenia."
+    },
+    "OBLIVIOUS": {
+      "name": "Niepamięć",
+      "description": "Pokémon jest niepomny, co chroni go przed zauroczeniem, prowokacją lub wpływem Zastraszenia."
+    },
+    "CLOUD_NINE": {
+      "name": "Siódme Niebo",
+      "description": "Eliminuje wpływ pogody."
+    },
+    "COMPOUND_EYES": {
+      "name": "Złożone Oczy",
+      "description": "Złożone oczy Pokémona wzmacniają jego celność o 30%."
+    },
+    "INSOMNIA": {
+      "name": "Bezsenność",
+      "description": "Bezsenność Pokémona uniemożliwia mu zaśnięcie."
+    },
+    "COLOR_CHANGE": {
+      "name": "Zmiana Koloru",
+      "description": "Typ Pokémona staje się typem ataku, który został na nim użyty."
+    },
+    "IMMUNITY": {
+      "name": "Odporność",
+      "description": "Układ odpornościowy tego Pokémona zapobiega zatruciu."
+    },
+    "FLASH_FIRE": {
+      "name": "Błysk Ognia",
+      "description": "Jeśli zostanie trafiony atakiem typu Ognistego, Pokémon pochłania płomienie i wykorzystuje je do wzmocnienia własnych ataków typu Ognistego o 50%."
+    },
+    "SHIELD_DUST": {
+      "name": "Osłonka Pyłu",
+      "description": "Pył ochronny chroni Pokémona przed dodatkowymi efektami ataków."
+    },
+    "OWN_TEMPO": {
+      "name": "Własne Tempo",
+      "description": "Pokémon trzyma się własnego tempa, zapobiegając oszołomieniu lub wpływowi Zastraszenia."
+    },
+    "SUCTION_CUPS": {
+      "name": "Przyssawki",
+      "description": "Ten Pokémon używa przyssawek do utrzymania się w miejscu. Chroni go to przed atakami i przedmiotami, które zmusiłyby go do zamiany."
+    },
+    "INTIMIDATE": {
+      "name": "Onieśmielenie",
+      "description": "Kiedy Pokémon wchodzi do bitwy, zastrasza przeciwnego Pokémona i sprawia, że ten ​​kuli się, obniżając jego statystyki Ataku."
+    },
+    "SHADOW_TAG": {
+      "name": "Ogon Cienia",
+      "description": "Ten Pokémon stoi na cieniach przeciwnych Pokémonów, aby powstrzymać ich przed ucieczką lub zamianą."
+    },
+    "ROUGH_SKIN": {
+      "name": "Twarda Skóra",
+      "description": "Szorstka skóra Pokémona zadaje obrażenia atakującym, którzy mają z nią bezpośredni kontakt."
+    },
+    "WONDER_GUARD": {
+      "name": "Cudna Straż",
+      "description": "Ta tajemnicza moc pozwala uderzyć Pokémona tylko superefektywnymi ruchami."
+    },
+    "LEVITATE": {
+      "name": "Lewitacja",
+      "description": "Unosząc się w powietrzu, Pokémon otrzymuje pełną niepodatność na wszystkie ruchy typu Ziemnego oraz na Kolce, Toksyczne Kolce i Kleistą Sieć."
+    },
+    "EFFECT_SPORE": {
+      "name": "Efekt Pyłu",
+      "description": "Kontakt z Pokémonem daje 30% szans na wywołanie zatrucia, paraliżu lub uśpienie."
+    },
+    "SYNCHRONIZE": {
+      "name": "Synchronizacja",
+      "description": "Jeśli Pokémon zostanie poparzony, sparaliżowany lub otruty przez innego Pokémona, ten Pokémon zostanie objęty tym samym stanem. Jeżeli ten Pokémon prowadzi drużynę do walki, dzikie przeciwne Pokémony będą dzielić jego naturę."
+    },
+    "CLEAR_BODY": {
+      "name": "Czyste Ciało",
+      "description": "Powstrzymuje ruchy lub Zdolności innych Pokémonów do obniżania statystyk Pokémona."
+    },
+    "NATURAL_CURE": {
+      "name": "Lek z Natury",
+      "description": "Zmiany stanu Pokémona zostają wyleczone, gdy zostaje zamieniony."
+    },
+    "LIGHTNING_ROD": {
+      "name": "Piorunochron",
+      "description": "Pokémon przyciąga wszystkie ruchy typu Elektrycznego. Zamiast przyjmować od nich obrażenia, wzmacnia swoją statystykę Spec. Ataku."
+    },
+    "SERENE_GRACE": {
+      "name": "Lekki Wdzięk",
+      "description": "Wzmacnia prawdopodobieństwo działania dodatkowych efektów, gdy Pokémon używa swoich ruchów. Nie dotyczy to przedmiotów."
+    },
+    "SWIFT_SWIM": {
+      "name": "Chyży Pływak",
+      "description": "Wzmacnia statystykę Szybkości Pokémona podczas deszczu."
+    },
+    "CHLOROPHYLL": {
+      "name": "Chlorofil",
+      "description": "Zwiększa statystkę Szybkości Pokémona przy mocnym nasłonecznieniu."
+    },
+    "ILLUMINATE": {
+      "name": "Iluminacja",
+      "description": "Oświetlając swoje otoczenie, Pokémon zapobiega obniżeniu swojej celności. Jeżeli ten Pokémon prowadzi drużynę do walki, zwiększa on prawdopodobieństwo walk podwójnych."
+    },
+    "TRACE": {
+      "name": "Odtwarzanie",
+      "description": "Kiedy staje do walki, Pokémon kopiuje Zdolność przeciwnego Pokémona."
+    },
+    "HUGE_POWER": {
+      "name": "Wielka Moc",
+      "description": "Podwaja statystykę Ataku Pokémona."
+    },
+    "POISON_POINT": {
+      "name": "Trujący Punkt",
+      "description": "Kontakt z Pokémonem ma 30% szans na otrucie atakującego."
+    },
+    "INNER_FOCUS": {
+      "name": "Skupienie",
+      "description": "Intensywne skupienie Pokémona zapobiega jego zachwianiu lub wpływowi Zastraszenia."
+    },
+    "MAGMA_ARMOR": {
+      "name": "Magmowy Pancerz",
+      "description": "Powłoka gorącej magmy Pokémona zapobiega jego zamarznięciu."
+    },
+    "WATER_VEIL": {
+      "name": "Wodna Kurtyna",
+      "description": "Wodna kurtyna Pokémona zapobiega jego poparzeniu."
+    },
+    "MAGNET_PULL": {
+      "name": "Magnesowanie",
+      "description": "Zapobiega ucieczce Pokémonów typu Stalowego, przyciągając je magnetyzmem."
+    },
+    "SOUNDPROOF": {
+      "name": "Dźwiękoszczelność",
+      "description": "Dźwiękoszczelność uodparnia tego Pokémona na wszystkie ataki dźwiękowe."
+    },
+    "RAIN_DISH": {
+      "name": "Zbierak Wody",
+      "description": "Pokémon stopniowo odzyskuje ¹⁄₁₆ PŻ podczas deszczu."
+    },
+    "SAND_STREAM": {
+      "name": "Potok Piasku",
+      "description": "Pokémon przywołuje burzę piaskową na 5 tur, jak tylko stanie do walki."
+    },
+    "PRESSURE": {
+      "name": "Presja",
+      "description": "Stawia inne Pokémony pod presją, powodując, że wydają więcej PP na użycie swoich ruchów."
+    },
+    "THICK_FAT": {
+      "name": "Otyłość",
+      "description": "Pokémon jest chroniony grubą warstwą tłuszczu, która przepoławia obrażenia otrzymane od ruchów typu Ognistego i Lodowego."
+    },
+    "EARLY_BIRD": {
+      "name": "Ranny Ptaszek",
+      "description": "Ten Pokémon budzi się dwa razy szybciej niż inne Pokémony."
+    },
+    "FLAME_BODY": {
+      "name": "Ciało Płomieni",
+      "description": "Kontakt z Pokémonem ma 30% szans na poparzenie atakującego."
+    },
+    "RUN_AWAY": {
+      "name": "Ucieczka",
+      "description": "Umożliwia pewną ucieczkę od dzikiego Pokémona."
+    },
+    "KEEN_EYE": {
+      "name": "Bystre Oko",
+      "description": "Bystre oczy Pokémona zapobiegają obniżeniu jego celności."
+    },
+    "HYPER_CUTTER": {
+      "name": "Hiperkrajacz",
+      "description": "Cenne, potężne szczypce Pokémona powstrzymują inne Pokémony przed obniżeniem jego Ataku."
+    },
+    "PICKUP": {
+      "name": "Zbieracz",
+      "description": "Pokémon może podnieść przedmiot, którego przeciwny Pokémon użył podczas walki. Może też zbierać przedmioty poza walką."
+    },
+    "TRUANT": {
+      "name": "Lenistwo",
+      "description": "Za każdym razem, gdy Pokémon używa ruchu, następną turę spędza na wagarowaniu."
+    },
+    "HUSTLE": {
+      "name": "Pośpiech",
+      "description": "Wzmacnia Atak Pokémona o 50%, ale obniża jego celność o 20%."
+    },
+    "CUTE_CHARM": {
+      "name": "Słodki Urok",
+      "description": "Pokémon ma 30% na zauroczenie atakujących, którzy nawiążą z nim bezpośredni kontakt i są przeciwnej płci."
+    },
+    "PLUS": {
+      "name": "Plus",
+      "description": "Wzmacnia statystykę Spec. Ataku Pokémona o 50%, jeśli sojusznik ze Zdolnością Plus albo Minus również uczestniczy w bitwie."
+    },
+    "MINUS": {
+      "name": "Minus",
+      "description": "Wzmacnia statystykę Spec. Ataku Pokémona o 50%, jeśli sojusznik ze Zdolnością Plus albo Minus również uczestniczy w bitwie."
+    },
+    "FORECAST": {
+      "name": "Prognoza",
+      "description": "Pokémon wraz z pogodą transformuje się, aby zmienić swój typ na Wodny, Ognisty lub Lodowy."
+    },
+    "STICKY_HOLD": {
+      "name": "Lepki Uścisk",
+      "description": "Przedmioty trzymane przez Pokémona przylegają do jego lepkiego ciała i nie mogą zostać usunięte przez inne Pokémony."
+    },
+    "SHED_SKIN": {
+      "name": "Zmiana Skóry",
+      "description": "Pokémon ma 30% na wykurowanie się ze zmian stanu poprzez zrzucenie skóry."
+    },
+    "GUTS": {
+      "name": "Twardziel",
+      "description": "Staje się tak odważny, że posiadanie zmiany stanu wzmacnia statystykę Ataku Pokémona o 50%. Będąc poparzonym nie zmniejsza o połowe obrażeń zadanych przez fizyczne ataki."
+    },
+    "MARVEL_SCALE": {
+      "name": "Łuska Cudów",
+      "description": "Cudowne łuski Pokémona wzmacniają jego statystykę Obrony o 50%, jeśli jest pod wpływem zmiany stanu."
+    },
+    "LIQUID_OOZE": {
+      "name": "Płynny Szlam",
+      "description": "Silny smród płynu wydzielającego się z Pokémona zadaje obrażenia atakującym, którzy używają ruchów wysysających HP."
+    },
+    "OVERGROW": {
+      "name": "Rozrost",
+      "description": "Zwiększa moc trawiastych ataków o 50%, gdy życie użytkownika spadnie poniżej ⅓ maksymalnego poziomu."
+    },
+    "BLAZE": {
+      "name": "Pożar",
+      "description": "Zwiększa moc ognistych ataków o 50%, gdy życie użytkownika spadnie poniżej ⅓ maksymalnego poziomu."
+    },
+    "TORRENT": {
+      "name": "Strumień",
+      "description": "Zwiększa moc wodnych ataków o 50%, gdy życie użytkownika spadnie poniżej ⅓ maksymalnego poziomu."
+    },
+    "SWARM": {
+      "name": "Rój",
+      "description": "Zwiększa moc robaczych ataków o 50%, gdy życie użytkownika spadnie poniżej ⅓ maksymalnego poziomu."
+    },
+    "ROCK_HEAD": {
+      "name": "Skalna Głowa",
+      "description": "Chroni Pokémona przed obrażeniami zwrotnymi."
+    },
+    "DROUGHT": {
+      "name": "Susza",
+      "description": "Kiedy Pokémon wchodzi do walki, tworzy silne nasłonecznienie na 5 tur."
+    },
+    "ARENA_TRAP": {
+      "name": "Pułapka Areny",
+      "description": "Powstrzymuje przeciwnego Pokémona przed ucieczką z walki. Jeżeli ten Pokemon rozpoczyna walke, zwiększa prawdopodobieństwo podwójnej walki."
+    },
+    "VITAL_SPIRIT": {
+      "name": "Żywiołowość",
+      "description": "Pokémon jest pełen żywiołowości, a to powstrzymuje go przed zaśnięciem."
+    },
+    "WHITE_SMOKE": {
+      "name": "Biały Dym",
+      "description": "Pokémon jest chroniony przez swój biały dym, który powstrzymuje inne Pokémony przed obniżeniem jego statystyk."
+    },
+    "PURE_POWER": {
+      "name": "Czysta Siła",
+      "description": "Używając czystej siły, Pokémon podwaja statystykę Ataku."
+    },
+    "SHELL_ARMOR": {
+      "name": "Skorupa",
+      "description": "Twarda skorupa chroni Pokémona przed ciosami krytycznymi."
+    },
+    "AIR_LOCK": {
+      "name": "Blokada Powietrza",
+      "description": "Eliminuje wpływ pogody."
+    },
+    "TANGLED_FEET": {
+      "name": "Splątane Nogi",
+      "description": "Podnosi unikliwość Pokémona, jeśli jest oszołomiony."
+    },
+    "MOTOR_DRIVE": {
+      "name": "Elektronapęd",
+      "description": "Pokémon nie odnosi obrażeń, gdy zostanie trafiony ruchami typu Elektrycznego. Zamiast tego zwiększa się jego statystyka Szybkości."
+    },
+    "RIVALRY": {
+      "name": "Rywalizacja",
+      "description": "Duch rywalizacji Pokémona sprawia, że ​​zadaje on 25% więcej obrażeń Pokémonom tej samej płci, ale o 25% mniej obrażeń Pokémonom płci przeciwnej. Moc pozostaje taka sama jak zwykle, jeśli płeć któregoś z Pokémonów jest nieznana."
+    },
+    "STEADFAST": {
+      "name": "Niezłomność",
+      "description": "Determinacja Pokémona wzmacnia jego statystykę Szybkości za każdym razem, kiedy Pokémon się zachwieje."
+    },
+    "SNOW_CLOAK": {
+      "name": "Okrywa Śniegu",
+      "description": "Wzmacnia unikliwość Pokémona o 25% podczas opadu śniegu. Pokémon również nie otrzymuje obrażeń od gradu."
+    },
+    "GLUTTONY": {
+      "name": "Pycha",
+      "description": "Jeśli Pokémon trzyma Jagodę do zjedzenia, gdy jego HP jest niskie, zamiast tego zje Jagodę, gdy jego HP spadnie o połowę lub mniej."
+    },
+    "ANGER_POINT": {
+      "name": "Punkt Gniewu",
+      "description": "Pokémon jest wkurzony kiedy obrywa krytycznym uderzeniem, a to maksymalizuje statystykę Ataku."
+    },
+    "UNBURDEN": {
+      "name": "Odciążenie",
+      "description": "Wzmacnia statystykę Szybkości, jeśli trzymany przedmiot Pokémona zostaje użyty lub stracony."
+    },
+    "HEATPROOF": {
+      "name": "Ognioodporność",
+      "description": "Ognioodporne ciało tego Pokémona przepoławia obrażenia od ruchów typu Ognistego, które go uderzają."
+    },
+    "SIMPLE": {
+      "name": "Prostota",
+      "description": "Podwaja efekty zmian statystyk Pokémona."
+    },
+    "DRY_SKIN": {
+      "name": "Sucha Skóra",
+      "description": "Odnawia ¼ HP Pokémona w deszczu lub ⅛ kiedy ten jest uderzony ruchem typu Wodnego. Redukuje ⅛ HP na słońcu i zwiększa obrażenia otrzymane od ruchów typu Ognistego o 25%."
+    },
+    "DOWNLOAD": {
+      "name": "Pobieranie",
+      "description": "Pokémon porównuje statystyki Obrony i Spec. Obrony przeciwnego Pokémona zanim podniesie swoją statystykę Ataku lub Spec. Ataku—którykolwiek z nich będzie bardziej efektywny."
+    },
+    "IRON_FIST": {
+      "name": "Żelazna Pięść",
+      "description": "Wzmacnia ruchy pięści o 20%."
+    },
+    "POISON_HEAL": {
+      "name": "Leczący Jad",
+      "description": "W przypadku otrucia Pokémonowi przywracane jest HP na końcu każdej tury zamiast otrzymywać obrażenia."
+    },
+    "ADAPTABILITY": {
+      "name": "Adaptacja",
+      "description": "Wzmacnia ruchy tego samego typu, co Pokémon o 100% zamiast 50%. Nie kumuluje się z Tera boostem typu Stellar."
+    },
+    "SKILL_LINK": {
+      "name": "Łącze Zdolności",
+      "description": "Maksymalizuje liczbę ciosów wykonanych przez wielo-uderzeniowe ruchy."
+    },
+    "HYDRATION": {
+      "name": "Nawodnienie",
+      "description": "Kuruje zmiany stanu Pokémona podczas deszczu."
+    },
+    "SOLAR_POWER": {
+      "name": "Siła Słońca",
+      "description": "W ostrym nasłonecznieniu statystyka Spec. Ataku zostaje zwiększona o 50%, ale jego HP zmniejsza się o ⅛ z każdą turą."
+    },
+    "QUICK_FEET": {
+      "name": "Szybkie Stopy",
+      "description": "Wzmacnia statystykę Szybkości o 50%, jeśli Pokémon ma zmianę stanu. Będąc sparaliżowanym nie obniża to statystyki Szybkości."
+    },
+    "NORMALIZE": {
+      "name": "Normalizacja",
+      "description": "Wszystkie ruchy Pokémona stają się typu Normalnego oraz moc tych ruchów jest zwiększona o 20%."
+    },
+    "SNIPER": {
+      "name": "Snajper",
+      "description": "Wzmacnia moc krytycznych ciosów Pokémona o 125% zamiast 50%."
+    },
+    "MAGIC_GUARD": {
+      "name": "Straż Magii",
+      "description": "Pokémon otrzymuje tylko obrażenia od ataków."
+    },
+    "NO_GUARD": {
+      "name": "Bez Ochrony",
+      "description": "Pokémon wykonuje bez-defensywne taktyki aby upewnić się, że nadchodzące i wykonane ataki zawsze uderzą. Jeżeli ten Pokémon rozpoczyna walkę, zwiększa prawdopodobieństwo podwójnej walki."
+    },
+    "STALL": {
+      "name": "Zwłoka",
+      "description": "Pokémon jest zawsze ostatnim, który używa swoich ruchów."
+    },
+    "TECHNICIAN": {
+      "name": "Technik",
+      "description": "Wzmacnia moc ruchów Pokémona o 50%, jeżeli ich moc wynosi 60 lub mniej."
+    },
+    "LEAF_GUARD": {
+      "name": "Straż Liści",
+      "description": "Powstrzymuje zmiany stanu przy silnym nasłonecznieniu."
+    },
+    "KLUTZ": {
+      "name": "Niezdara",
+      "description": "Pokémon nie może użyć żadnego trzymanego przedmiotu."
+    },
+    "MOLD_BREAKER": {
+      "name": "Łamacz Kształtu",
+      "description": "Ruchy Pokémona nie są zakłócane przez Zdolność celu, z pewnymi wyjątkami."
+    },
+    "SUPER_LUCK": {
+      "name": "Super Szczęście",
+      "description": "Pokémon ma takie szczęście, że szanse na krytyczne uderzenie ruchów wzrastają o 1 stopień."
+    },
+    "AFTERMATH": {
+      "name": "Porachunek",
+      "description": "Rani atakującego zadając mu ¼ jego maksymalnego PŻ, jeśli znokautuje Pokémona ruchem, który nawiązuje bezpośredni kontakt."
+    },
+    "ANTICIPATION": {
+      "name": "Wyczekiwanie",
+      "description": "Kiedy Pokémon wchodzi do walki, wyczuwa, czy przeciwnicy znają ruchy natycmiast nokautujące lub ruchy wyjątkowo skuteczne przeciwko niemu."
+    },
+    "FOREWARN": {
+      "name": "Ostrzeganie",
+      "description": "Kiedy wchodzi do walki, Pokémon może zdradzić jeden z ruchów, jaki posiada przeciwny Pokémon."
+    },
+    "UNAWARE": {
+      "name": "Nieświadomość",
+      "description": "Podczas ataku Pokémon ignoruje zmiany statystyk celu. Natomiast nie może ignorować zmian statyskyki Szybkości."
+    },
+    "TINTED_LENS": {
+      "name": "Cień Soczewki",
+      "description": "\"Niezbyt efektywne\" ataki Pokémona zadają podwójne obrażenia."
+    },
+    "FILTER": {
+      "name": "Filtr",
+      "description": "Redukuje moc superefektywnych ataków, które trafiają Pokémona o 25%."
+    },
+    "SLOW_START": {
+      "name": "Wolny Start",
+      "description": "Przez pięć tur, statystyki Ataku i Szybkości Pokémona są podzielone."
+    },
+    "SCRAPPY": {
+      "name": "Dziarskość",
+      "description": "Pokémon może zadać cios Pokémonowi typu Duchowego ruchami typu Normalnego i Walczącego. Nie jest też podatny na Zastraszenie."
+    },
+    "STORM_DRAIN": {
+      "name": "Odsączanie",
+      "description": "Pokémon przyciąga wszystkie ruchy typu Wodnego. Zamiast przyjmować od nich obrażenia, statystyka Spec. Ataku jest zwiększana."
+    },
+    "ICE_BODY": {
+      "name": "Lodowe Ciało",
+      "description": "¹⁄₁₆ maksymalnego PŻ Pokémona zostaje przywrócona na końcu każdej tury podczas śniegu lub gradobicia. Pokémon również nie otrzymuje obrażeń od gradu."
+    },
+    "SOLID_ROCK": {
+      "name": "Lita Skała",
+      "description": "Redukuje moc superefektywnych ataków, które trafiają Pokémona o 25%."
+    },
+    "SNOW_WARNING": {
+      "name": "Zaśnieżanie",
+      "description": "Przywołuje śnieżyce na 5 tur, gdy Pokémon wejdzie do bitwy."
+    },
+    "HONEY_GATHER": {
+      "name": "Zbieracz Miodu",
+      "description": "Pokémon zbiera Miód, który zostaje sprzedany po wygranej bitwie, nawet jeśli sam nie brał w niej udziału."
+    },
+    "FRISK": {
+      "name": "Przeszukanie",
+      "description": "Kiedy wchodzi do walki, Pokémon może sprawdzić zdolność przeciwnego Pokémona."
+    },
+    "RECKLESS": {
+      "name": "Lekkomyślność",
+      "description": "Wzmacnia ruchy o 20%, które wywołują obrażenia zwrotne."
+    },
+    "MULTITYPE": {
+      "name": "Multityp",
+      "description": "Zmienia typ Pokémona, aby pasował do trzymanej przez niego Płyty."
+    },
+    "FLOWER_GIFT": {
+      "name": "Kwiecisty Dar",
+      "description": "Wzmacnia statystyki Ataku i Spec. Obrony Pokémona i jego sojuszników o 50% przy silnym nasłonecznieniu."
+    },
+    "BAD_DREAMS": {
+      "name": "Koszmary",
+      "description": "Na końcu każdej tury zadaje wrogim uśpionym Pokemonom ⅛ ich maksymalnego PŻ."
+    },
+    "PICKPOCKET": {
+      "name": "Kieszonkowiec",
+      "description": "Pokémon kradnie trzymany przedmiot atakującym, którzy mieli z nim bezpośredni kontakt."
+    },
+    "SHEER_FORCE": {
+      "name": "Czysta Moc",
+      "description": "Usuwa wszelkie dodatkowe działania z ruchów Pokémona, ale zwiększa moc ruchów o 30%."
+    },
+    "CONTRARY": {
+      "name": "Przekora",
+      "description": "Odwraca wszelkie zmiany statystyk wpływające na Pokémona, tak że próby zwiększenia jego statystyk zamiast tego je obniżają – a próby obniżenia jego statystyk spowodują ich zwiększenie."
+    },
+    "UNNERVE": {
+      "name": "Nerwowość",
+      "description": "Wywołuje nerwowość u przeciwnego Pokémona, przez co ten nie może jeść Jagód."
+    },
+    "DEFIANT": {
+      "name": "Prowokacja",
+      "description": "Jeśli Pokémon ma jakąkolwiek statystykę obniżoną przez przeciwnego Pokémona, jego statystyka Ataku zostanie gwałtownie zwiększona."
+    },
+    "DEFEATIST": {
+      "name": "Defetysta",
+      "description": "Przepoławia statystyki Ataku i Spec. Ataku Pokémona, kiedy jego HP spada do połowy lub mniej."
+    },
+    "CURSED_BODY": {
+      "name": "Przeklęte Ciało",
+      "description": "Kiedy Pokémon otrzyma obrażenia od ruchu, atakujący ma 30% szans by jego ostatni ruch którego użył został zablokowany na 4 tury."
+    },
+    "HEALER": {
+      "name": "Uzdrowiciel",
+      "description": "Pokémon ma 50% szans na wyleczenie zmian statystyk sojuszników na końcu każdej tury."
+    },
+    "FRIEND_GUARD": {
+      "name": "Przyjazna Garda",
+      "description": "Redukuje obrażenia zadane sojusznikom o 25%."
+    },
+    "WEAK_ARMOR": {
+      "name": "Krucha Zbroja",
+      "description": "Gdy Pokémon otrzymuje obrażenia od ataku fizycznego, jego defensywa jest obniżona i znacznie podnosi się jego prędkość."
+    },
+    "HEAVY_METAL": {
+      "name": "Ciężki Metal",
+      "description": "Podwaja wagę Pokémon'a."
+    },
+    "LIGHT_METAL": {
+      "name": "Lekki Metal",
+      "description": "Waga Pokémona jest przepołowiona."
+    },
+    "TOXIC_BOOST": {
+      "name": "Toksyczny Doping",
+      "description": "Kiedy Pokémon jest zatruty bądź bardzo zatruty, moc jego ataków fizycznych jest podniesiona o 50%."
+    },
+    "FLARE_BOOST": {
+      "name": "Ognisty Doping",
+      "description": "Kiedy Pokémon się pali, moc jego ruchów specjalnych kest zwiększona o 50%."
+    },
+    "HARVEST": {
+      "name": "Zbiory",
+      "description": "Jeśli Pokémon użył jagody, ma 50% szans na znalezienie kolejnej pod koniec każdej tury. W piekącym słońcu Pokémon ma zagwarantowane znalezienie jagody."
+    },
+    "TELEPATHY": {
+      "name": "Telepatia",
+      "description": "Pokémon przewiduje i unika ataki swoich sojuszników."
+    },
+    "MOODY": {
+      "name": "Humorzasty",
+      "description": "Pod koniec każdej tury, jedna ze statystyk Pokémon'a zostanie znacznie podniesiona, lecz inna będzie obniżona. Celność i omijanie są wyłączone."
+    },
+    "OVERCOAT": {
+      "name": "Płaszcz",
+      "description": "Pokémon nie otrzymuje obrażeń od burz piaskowych bądź gradów, jest też odporny na ruchy i Zdolności angażujące proszki lub zarodniki."
+    },
+    "POISON_TOUCH": {
+      "name": "Toksyczny Dotyk",
+      "description": "Kiedy Pokémon uderza cel ruchem kontaktowym, cel ma 30% na zostanie zatrutym."
+    },
+    "REGENERATOR": {
+      "name": "Regenerator",
+      "description": "Pokémon odzyskuje ⅓ maksymalnego PŻ kiedy zostaje wymieniony w walce."
+    },
+    "BIG_PECKS": {
+      "name": "Wielkie Dzioby",
+      "description": "Statystyka defensywy Pokémon'a nie może zostać obniżona przez ruchy bądź Zdolności innych Pokémon'ów."
+    },
+    "SAND_RUSH": {
+      "name": "Piaszczysta Gorączka",
+      "description": "Podwaja Prędkość Pokémon'a w burzy piaskowej. Pokémon nie dostaje obrażeń od burz piaskowych."
+    },
+    "WONDER_SKIN": {
+      "name": "Wspaniała Skóra",
+      "description": "Obniża celność ruchów statusu używanych przeciw Pokémon'owi do 50%."
+    },
+    "ANALYTIC": {
+      "name": "Analityk",
+      "description": "Zwiększa moc ruchu Pokémon'a o 30% jeśli jest ostatni który rusza się w tej turze."
+    },
+    "ILLUSION": {
+      "name": "Iluzja",
+      "description": null
+    },
+    "IMPOSTER": {
+      "name": "Zdrajca",
+      "description": "Pokémon przemienia się w Pokémon'a naprzeciwko niego. Kopiuje także wszystkie jego statystyki, oprócz PŻ. Skopiowane ruchy mają po 5 PM."
+    },
+    "MAGICIAN": {
+      "name": "Magik",
+      "description": "Pokémon kradnie trzymany przez przeciwnika przedmiot podczas uderzenia."
+    },
+    "BULLETPROOF": {
+      "name": "Kuloodporność",
+      "description": null
+    },
+    "SYMBIOSIS": {
+      "name": "Symbioza",
+      "description": null
+    },
+    "PARENTAL_BOND": {
+      "name": "Rodzicielska Więź",
+      "description": null
+    },
+    "EMERGENCY_EXIT": {
+      "name": "Ewakuacja",
+      "description": null
+    },
+    "CORROSION": {
+      "name": "Korozja",
+      "description": null
+    },
+    "DANCER": {
+      "name": "Tancerz",
+      "description": null
+    },
+    "HOSPITALITY": {
+      "name": "Gościnność",
+      "description": null
+    }
+  },
+  "types": {
+    "unknown": "Nieznany",
+    "normal": "Normalny",
+    "fighting": "Walczący",
+    "flying": "Latający",
+    "poison": "Trujący",
+    "ground": "Ziemny",
+    "rock": "Skalny",
+    "bug": "Robaczy",
+    "ghost": "Upiorny",
+    "steel": "Stalowy",
+    "fire": "Ognisty",
+    "water": "Wodny",
+    "grass": "Trawiasty",
+    "electric": "Elektryczny",
+    "psychic": "Umysłowy",
+    "ice": "Lodowy",
+    "dragon": "Smoczy",
+    "dark": "Mroczny",
+    "fairy": "Baśniowy",
+    "stellar": "Gwiezdny"
+  },
+  "natures": {
+    "HARDY": "Dzielny",
+    "LONELY": "Samotny",
+    "BRAVE": "Odważny",
+    "ADAMANT": "Nieustępliwy",
+    "NAUGHTY": "Niegrzeczny",
+    "BOLD": "Śmiały",
+    "DOCILE": "Posłuszny",
+    "RELAXED": "Zrelaksowany",
+    "IMPISH": "Psotny",
+    "LAX": "Pobłażliwy",
+    "TIMID": "Nieśmiały",
+    "HASTY": "Pochopny",
+    "SERIOUS": "Poważny",
+    "JOLLY": "Radosny",
+    "NAIVE": "Naiwny",
+    "MODEST": "Skromny",
+    "MILD": "Łagodny",
+    "QUIET": "Cichy",
+    "BASHFUL": "Wstydliwy",
+    "RASH": "Nierozważny",
+    "CALM": "Spokojny",
+    "GENTLE": "Delikatny",
+    "SASSY": "Zadziorny",
+    "CAREFUL": "Ostrożny",
+    "QUIRKY": "Osobliwy"
+  },
+  "stats": {
+    "HP": {
+      "name": "PŻ",
+      "short": "PŻ"
+    },
+    "ATK": {
+      "name": "Atak",
+      "short": "Atk"
+    },
+    "DEF": {
+      "name": "Obrona",
+      "short": "Obr"
+    },
+    "SPATK": {
+      "name": "Atk. Sp.",
+      "short": "AtkSp"
+    },
+    "SPDEF": {
+      "name": "Obr. Sp.",
+      "short": "ObrSp"
+    },
+    "SPD": {
+      "name": "Szybkość",
+      "short": "Szb"
+    },
+    "ACC": {
+      "name": "Celność",
+      "short": null
+    },
+    "EVA": {
+      "name": "Zwinność",
+      "short": null
+    }
+  },
+  "statusEffects": {
+    "NONE": {
+      "name": "Brak"
+    },
+    "POISON": {
+      "name": "Zatrucie",
+      "description": "zatrucie",
+      "obtain": "Pokémon {{pokemonNameWithAffix}} \nzostał otruty!",
+      "obtainSource": "Pokémon {{pokemonNameWithAffix}}\nzostał otruty przez {{sourceText}}!"
+    },
+    "PARALYSIS": {
+      "name": "Paraliż",
+      "description": "paraliż",
+      "obtain": "Pokémon {{pokemonNameWithAffix}} został sparaliżowany.\nMoże nie być w stanie się ruszyć!",
+      "obtainSource": "Pokémon {{pokemonNameWithAffix}} został sparaliżowany przez {{sourceText}}!\nMoże nie być w stanie się ruszyć!",
+      "activation": "Pokémon {{pokemonNameWithAffix}} jest sparaliżowany!\nNie może się ruszyć!",
+      "overlap": "Pokémon {{pokemonNameWithAffix}}\njuż jest sparaliżowany!"
+    },
+    "SLEEP": {
+      "name": "Sen",
+      "description": "sen",
+      "obtain": "Pokémon {{pokemonNameWithAffix}}\nzasnął!",
+      "obtainSource": "Pokémon {{pokemonNameWithAffix}}\nzostał uśpiony przez {{sourceText}}!",
+      "heal": "Pokémon {{pokemonNameWithAffix}} się zbudził!"
+    },
+    "FREEZE": {
+      "name": "Zamrożenie",
+      "description": "zamrożenie"
+    },
+    "BURN": {
+      "name": "Oparzenie",
+      "description": "oparzenie"
+    }
+  },
+  "items": {
+    "ABOMASITE": {
+      "name": "Abomasnonit",
+      "description": null
+    },
+    "ABSOLITE": {
+      "name": "Absolit",
+      "description": null
+    },
+    "ABSOLITE_Z": {
+      "name": "Absolit Z",
+      "description": null
+    },
+    "AERODACTYLITE": {
+      "name": "Aerodactylit",
+      "description": null
+    },
+    "AGGRONITE": {
+      "name": "Aggronit",
+      "description": null
+    },
+    "ALAKAZITE": {
+      "name": "Alakazamyt",
+      "description": null
+    },
+    "AMPHAROSITE": {
+      "name": "Ampharosyt",
+      "description": null
+    },
+    "APICOT_BERRY": {
+      "name": "Jagoda Apicot",
+      "description": "Podnosi Sp. Defensywę, jeśli PŻ jest poniżej 25%."
+    },
+    "BARBARACITE": {
+      "name": "Barbaracyt",
+      "description": null
+    },
+    "BAXCALIBRITE": {
+      "name": "Baxcalibryt",
+      "description": null
+    },
+    "BEEDRILLITE": {
+      "name": "Beedrillyt",
+      "description": null
+    },
+    "BIG_NUGGET": {
+      "name": "Duży Samorodek",
+      "description": null
+    },
+    "BLACK_BELT": {
+      "name": "Czarny Pas",
+      "description": null
+    },
+    "BLASTOISINITE": {
+      "name": "Blastoisyt",
+      "description": null
+    },
+    "BLAZIKENITE": {
+      "name": "Blazikenyt",
+      "description": null
+    },
+    "CHANDELURITE": {
+      "name": "Chandeluryt",
+      "description": null
+    },
+    "CHARCOAL": {
+      "name": "Węgiel Drzewny",
+      "description": null
+    },
+    "CHARIZARDITE_X": {
+      "name": "Charizardyt X",
+      "description": null
+    },
+    "CHARIZARDITE_Y": {
+      "name": "Charizardyt Y",
+      "description": null
+    },
+    "CHESNAUGHTITE": {
+      "name": "Chenaughtyt",
+      "description": null
+    },
+    "DELPHOXITE": {
+      "name": "Delphoxyt",
+      "description": null
+    },
+    "DIANCITE": {
+      "name": "Diancyt",
+      "description": null
+    },
+    "DRAGALGITE": {
+      "name": "Dragalgit",
+      "description": null
+    },
+    "DRAGONINITE": {
+      "name": "Dragonityt",
+      "description": null
+    },
+    "DRAGON_SCALE": {
+      "name": "Smocza Łuska",
+      "description": null
+    },
+    "EMBOARITE": {
+      "name": "Emboaryt",
+      "description": null
+    },
+    "ENIGMA_BERRY": {
+      "name": "Jagoda Enigma",
+      "description": "Przywraca 25% PŻ jeśli został uderzony przez super efektywny ruch."
+    },
+    "EVIOLITE": {
+      "name": "Ewolit",
+      "description": null
+    },
+    "EXCADRITE": {
+      "name": "Excadrilyt",
+      "description": null
+    },
+    "FERALIGITE": {
+      "name": "Feraligatryt",
+      "description": null
+    },
+    "FROSLASSITE": {
+      "name": "Froslassyt",
+      "description": null
+    },
+    "GALLADITE": {
+      "name": "Galladyt",
+      "description": null
+    },
+    "GANLON_BERRY": {
+      "name": "Jagoda Ganlon",
+      "description": "Podnosi Defensywę, jeśli PŻ jest poniżej 25%."
+    },
+    "GARCHOMPITE": {
+      "name": "Garchompyt",
+      "description": null
+    },
+    "GARCHOMPITE_Z": {
+      "name": "Garchompit Z",
+      "description": null
+    },
+    "GARDEVOIRITE": {
+      "name": "Gardevoryt",
+      "description": null
+    },
+    "GENGARITE": {
+      "name": "Gengaryt",
+      "description": null
+    },
+    "GLALITITE": {
+      "name": "Glalityt",
+      "description": null
+    },
+    "GLIMMORANITE": {
+      "name": "Glimmoranit",
+      "description": null
+    },
+    "GRENINJITE": {
+      "name": "Greninjyt",
+      "description": null
+    },
+    "GYARADOSITE": {
+      "name": "Gyaradosyt",
+      "description": null
+    },
+    "HAWLUCHANITE": {
+      "name": "Hawluchanit",
+      "description": null
+    },
+    "HERACRONITE": {
+      "name": "Heracronit",
+      "description": null
+    },
+    "HOUNDOOMINITE": {
+      "name": "Houndoomnit",
+      "description": null
+    },
+    "LANSAT_BERRY": {
+      "name": "Jagoda Lansat",
+      "description": "Podnosi szansę na atak krytyczny, jeśli PŻ jest poniżej 25%."
+    },
+    "LATIASITE": {
+      "name": "Latiasyt",
+      "description": null
+    },
+    "LATIOSITE": {
+      "name": "Latiosyt",
+      "description": null
+    },
+    "LEFTOVERS": {
+      "name": "Resztki",
+      "description": "Co turę odnawia 1/16 całkowitych PŻ Pokémona."
+    },
+    "LEPPA_BERRY": {
+      "name": "Jagoda Leppa",
+      "description": "Przywraca 10 PP do ruchu, jeżeli jego PP osiągnęło 0."
+    },
+    "LIECHI_BERRY": {
+      "name": "Jagoda Liechi",
+      "description": "Podnosi Atak, jeśli PŻ jest poniżej 25%."
+    },
+    "LOPUNNITE": {
+      "name": "Lopunit",
+      "description": null
+    },
+    "LUCARIONITE": {
+      "name": "Lucarionit",
+      "description": null
+    },
+    "LUCARIONITE_Z": {
+      "name": "Lucarionit Z",
+      "description": null
+    },
+    "LUM_BERRY": {
+      "name": "Jagoda Lum",
+      "description": "Leczy jakikolwiek stały stan statusu i zdezorientowanie."
+    },
+    "MAGNET": {
+      "name": "Magnes",
+      "description": null
+    },
+    "MALAMARITE": {
+      "name": "Malamaryt",
+      "description": null
+    },
+    "MANECTITE": {
+      "name": "Manectyt",
+      "description": null
+    },
+    "MAWILITE": {
+      "name": "Mawilyt",
+      "description": null
+    },
+    "MEGANIUMITE": {
+      "name": "Meganiumit",
+      "description": null
+    },
+    "MEOWSTICITE": {
+      "name": "Meowstictyt",
+      "description": null
+    },
+    "METAGROSSITE": {
+      "name": "Metagrossyt",
+      "description": null
+    },
+    "MEWTWONITE_X": {
+      "name": "Mewtwonit X",
+      "description": null
+    },
+    "MEWTWONITE_Y": {
+      "name": "Mewtwonit Y",
+      "description": null
+    },
+    "MIRACLE_SEED": {
+      "name": "Cudowne Nasiono",
+      "description": null
+    },
+    "NUGGET": {
+      "name": "Samorodek",
+      "description": null
+    },
+    "PETAYA_BERRY": {
+      "name": "Jagoda Petaya",
+      "description": "Podnosi Sp. Atak, jeśli PŻ jest poniżej 25%."
+    },
+    "PIDGEOTITE": {
+      "name": "Pidgeotyt",
+      "description": null
+    },
+    "PYROARITE": {
+      "name": "Pyroaryt",
+      "description": null
+    },
+    "RAICHUNITE_X": {
+      "name": "Raichunit X",
+      "description": null
+    },
+    "RAICHUNITE_Y": {
+      "name": "Raichunit Y",
+      "description": null
+    },
+    "RAYQUAZITE": {
+      "name": "Rayquazyt",
+      "description": null
+    },
+    "SALAC_BERRY": {
+      "name": "Jagoda Salac",
+      "description": "Podnosi Prędkość, jeśli PŻ jest poniżej 25%."
+    },
+    "SCEPTILITE": {
+      "name": "Sceptilyt",
+      "description": null
+    },
+    "SCIZORITE": {
+      "name": "Scizoryt",
+      "description": null
+    },
+    "SCOLIPITE": {
+      "name": "Scolipedyt",
+      "description": null
+    },
+    "SCOVILLAINITE": {
+      "name": "Scovillainit",
+      "description": null
+    },
+    "SILK_SCARF": {
+      "name": "Jedwabny Szal",
+      "description": null
+    },
+    "SITRUS_BERRY": {
+      "name": "Jagoda Sitrus",
+      "description": "Przywraca 25% PŻ jeżeli zdrowie jest poniżej 50%."
+    },
+    "SKARMORITE": {
+      "name": "Skarmoryt",
+      "description": null
+    },
+    "STARF_BERRY": {
+      "name": "Jagoda Starf",
+      "description": "Znacznie podnosi losową statystykę, jeśli PŻ jest poniżej 25%."
+    },
+    "STEELIXITE": {
+      "name": "Steelixyt",
+      "description": null
+    },
+    "SWAMPERTITE": {
+      "name": "Swamperyt",
+      "description": null
+    },
+    "TYRANITARITE": {
+      "name": "Tyranitaryt",
+      "description": null
+    },
+    "VENUSAURITE": {
+      "name": "Venusauryt",
+      "description": null
+    },
+    "VOUCHER": {
+      "name": "Kupon na Jajo",
+      "description": null
+    },
+    "WHITE_HERB": {
+      "name": "Białe Ziele",
+      "description": null
+    },
+    "ALTARIANITE": {
+      "name": "Altarianit",
+      "description": null
+    },
+    "AUDINITE": {
+      "name": "Audinyt",
+      "description": null
+    },
+    "BANETTITE": {
+      "name": "Banettyt",
+      "description": null
+    },
+    "BATON": {
+      "name": "Sztafeta",
+      "description": null
+    },
+    "CALCIUM": {
+      "name": "Wapń",
+      "description": null
+    },
+    "CAMERUPTITE": {
+      "name": "Cameruptyt",
+      "description": null
+    },
+    "CHIMECHITE": {
+      "name": "Chimechotyt",
+      "description": null
+    },
+    "CLEFABLITE": {
+      "name": "Clefablit",
+      "description": null
+    },
+    "CRABOMINITE": {
+      "name": "Crabominyt",
+      "description": null
+    },
+    "CRACKED_POT": {
+      "name": "Pęknięty Imbryk",
+      "description": null
+    },
+    "DARKRANITE": {
+      "name": "Darkrainit",
+      "description": null
+    },
+    "DRAMPANITE": {
+      "name": "Drampanit",
+      "description": null
+    },
+    "EELEKTROSSITE": {
+      "name": "Elektrossyt",
+      "description": null
+    },
+    "ELIXIR": {
+      "name": "Eliksir",
+      "description": null
+    },
+    "EVOLUTION_TRACKER_GIMMIGHOUL": {
+      "name": "Skarby",
+      "description": "Ten Pokémon kocha skarby! Zbieraj dalej, a może coś się wydarzy!"
+    },
+    "FALINKSITE": {
+      "name": "Falinksyt",
+      "description": null
+    },
+    "FLOETTITE": {
+      "name": "Floettyt",
+      "description": null
+    },
+    "GOLISOPITE": {
+      "name": "Golisopodyt",
+      "description": null
+    },
+    "GOLURKITE": {
+      "name": "Golurktyt",
+      "description": null
+    },
+    "HEATRANITE": {
+      "name": "Heatranit",
+      "description": null
+    },
+    "HYPER_POTION": {
+      "name": "Hiper Lekarstwo",
+      "description": null
+    },
+    "IRON": {
+      "name": "Żelazo",
+      "description": null
+    },
+    "IV_SCANNER": {
+      "name": "Skaner IV",
+      "description": "Umożliwia skanowanie IV dzikich Pokémonów."
+    },
+    "KANGASKHANITE": {
+      "name": "Kangaskhanit",
+      "description": null
+    },
+    "LEEK": {
+      "name": "Por",
+      "description": null
+    },
+    "MAGEARNITE": {
+      "name": "Magearnit",
+      "description": null
+    },
+    "MAP": {
+      "name": "Mapa",
+      "description": "Pozwala wybrać drogę na rozdrożach."
+    },
+    "MEDICHAMITE": {
+      "name": "Medichamyt",
+      "description": null
+    },
+    "MINI_BLACK_HOLE": {
+      "name": "Mała Czarna Dziura",
+      "description": null
+    },
+    "PINSIRITE": {
+      "name": "Pinsiryt",
+      "description": null
+    },
+    "POTION": {
+      "name": "Lekarstwo",
+      "description": null
+    },
+    "PP_MAX": {
+      "name": "PM Maks",
+      "description": null
+    },
+    "PROTEIN": {
+      "name": "Białko",
+      "description": null
+    },
+    "RUSTED_SHIELD": {
+      "name": "Zardzewiała Tarcza",
+      "description": null
+    },
+    "RUSTED_SWORD": {
+      "name": "Zardzewiały Miecz",
+      "description": null
+    },
+    "SABLENITE": {
+      "name": "Sablenit",
+      "description": null
+    },
+    "SALAMENCITE": {
+      "name": "Salamencyt",
+      "description": null
+    },
+    "SCRAFTINITE": {
+      "name": "Scraftynit",
+      "description": null
+    },
+    "SHARPEDONITE": {
+      "name": "Sharpedonit",
+      "description": null
+    },
+    "SLOWBRONITE": {
+      "name": "Slowbronit",
+      "description": null
+    },
+    "STARAPTITE": {
+      "name": "Staraptyt",
+      "description": null
+    },
+    "STARMINITE": {
+      "name": "Starminit",
+      "description": null
+    },
+    "SUPER_POTION": {
+      "name": "Super Lekarstwo",
+      "description": null
+    },
+    "TATSUGIRINITE": {
+      "name": "Tatsugiryt",
+      "description": null
+    },
+    "UPGRADE": {
+      "name": "Aktualizacja",
+      "description": null
+    },
+    "VICTREEBELITE": {
+      "name": "Victreebelit",
+      "description": null
+    },
+    "VOUCHER_GOLDEN": {
+      "name": "Złoty Kupon na Jajo",
+      "description": null
+    },
+    "VOUCHER_PLUS": {
+      "name": "Kupon na Jajo Plus",
+      "description": null
+    },
+    "VOUCHER_PREMIUM": {
+      "name": "Kupon na Jajo Premium",
+      "description": null
+    },
+    "X_ACCURACY": {
+      "name": "Celność X",
+      "description": null
+    },
+    "X_ATTACK": {
+      "name": "Atak X",
+      "description": "Atak wszystkich twoich Pokémonów wzrasta o 20% na czas 5 bitew."
+    },
+    "X_DEFENSE": {
+      "name": "Obrona X",
+      "description": "Obrona wszystkich twoich Pokémonów wzrasta o 20% na czas 5 bitew."
+    },
+    "X_SPEED": {
+      "name": "Szybkość X",
+      "description": "Szybkość wszystkich twoich Pokémonów wzrasta o 20% na czas 5 bitew."
+    },
+    "X_SP_ATK": {
+      "name": "Atak Sp. X",
+      "description": "Atk. Sp. wszystkich twoich Pokémonów wzrasta o 20% na czas 5 bitew."
+    },
+    "X_SP_DEF": {
+      "name": "Obrona Sp. X",
+      "description": "Obr. Sp. wszystkich twoich Pokémonów wzrasta o 20% na czas 5 bitew."
+    },
+    "ZERAORITE": {
+      "name": "Zeraoratyt",
+      "description": null
+    },
+    "ZINC": {
+      "name": "Cynk",
+      "description": null
+    },
+    "ZYGARDITE": {
+      "name": "Zygardyt",
+      "description": null
+    }
+  },
+  "itemTemplates": {
+    "POKEBALL_BUNDLE": {
+      "name": "×{{modifierCount}} {{pokeballName}}ów",
+      "description": null,
+      "localeKey": "modifierType:ModifierType.AddPokeballModifierType"
+    },
+    "VOUCHER_BUNDLE": {
+      "name": "{{voucherTypeName}} ×{{modifierCount}}",
+      "description": "Otrzymaj: {{voucherTypeName}} ×{{modifierCount}}",
+      "localeKey": "modifierType:ModifierType.AddVoucherModifierType"
+    }
+  },
+  "trainers": {
+    "ltSurge": "Por. Surge",
+    "bugTypeSuperfan": "Super Fan Typu Robaczego",
+    "expertPokemonBreeder": "Ekspercki Rozmnażacz Pokémon",
+    "red": "Red",
+    "lance": "Lance",
+    "steven": "Steven",
+    "cynthia": "Cynthia",
+    "alder": "Alder",
+    "diantha": "Diantha",
+    "kukui": "Kukui",
+    "leon": "Leon",
+    "geeta": "Geeta"
+  },
+  "trainerTitles": {
+    "rival": "Rywal",
+    "professor": "Profesor"
+  },
+  "zCrystals": {},
+  "zMoves": {
+    "NEVER_ENDING_NIGHTMARE": "Niekończący Się Koszmar",
+    "OCEANIC_OPERETTA": "Oceaniczna Operetka"
+  },
+  "maxMoves": {},
+  "_provenance": {
+    "species": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "forms": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "formLabels": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "moves": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "abilities": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "types": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "natures": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "stats": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "statusEffects": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "items": {
+      "ABOMASITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ABOMASITE"
+      },
+      "ABSOLITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ABSOLITE"
+      },
+      "ABSOLITE_Z": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ABSOLITE_Z"
+      },
+      "AERODACTYLITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.AERODACTYLITE"
+      },
+      "AGGRONITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.AGGRONITE"
+      },
+      "ALAKAZITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ALAKAZITE"
+      },
+      "AMPHAROSITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.AMPHAROSITE"
+      },
+      "APICOT_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:apicot"
+      },
+      "BARBARACITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BARBARACITE"
+      },
+      "BAXCALIBRITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BAXCALIBRITE"
+      },
+      "BEEDRILLITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BEEDRILLITE"
+      },
+      "BIG_NUGGET": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.BIG_NUGGET"
+      },
+      "BLACK_BELT": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.black_belt"
+      },
+      "BLASTOISINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BLASTOISINITE"
+      },
+      "BLAZIKENITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BLAZIKENITE"
+      },
+      "CHANDELURITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CHANDELURITE"
+      },
+      "CHARCOAL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.charcoal"
+      },
+      "CHARIZARDITE_X": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CHARIZARDITE_X"
+      },
+      "CHARIZARDITE_Y": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CHARIZARDITE_Y"
+      },
+      "CHESNAUGHTITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CHESNAUGHTITE"
+      },
+      "DELPHOXITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DELPHOXITE"
+      },
+      "DIANCITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DIANCITE"
+      },
+      "DRAGALGITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DRAGALGITE"
+      },
+      "DRAGONINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DRAGONINITE"
+      },
+      "DRAGON_SCALE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.DRAGON_SCALE"
+      },
+      "EMBOARITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.EMBOARITE"
+      },
+      "ENIGMA_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:enigma"
+      },
+      "EVIOLITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.EVIOLITE"
+      },
+      "EXCADRITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.EXCADRITE"
+      },
+      "FERALIGITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.FERALIGITE"
+      },
+      "FROSLASSITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.FROSLASSITE"
+      },
+      "GALLADITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GALLADITE"
+      },
+      "GANLON_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:ganlon"
+      },
+      "GARCHOMPITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GARCHOMPITE"
+      },
+      "GARCHOMPITE_Z": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GARCHOMPITE_Z"
+      },
+      "GARDEVOIRITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GARDEVOIRITE"
+      },
+      "GENGARITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GENGARITE"
+      },
+      "GLALITITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GLALITITE"
+      },
+      "GLIMMORANITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GLIMMORANITE"
+      },
+      "GRENINJITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GRENINJITE"
+      },
+      "GYARADOSITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GYARADOSITE"
+      },
+      "HAWLUCHANITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.HAWLUCHANITE"
+      },
+      "HERACRONITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.HERACRONITE"
+      },
+      "HOUNDOOMINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.HOUNDOOMINITE"
+      },
+      "LANSAT_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:lansat"
+      },
+      "LATIASITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.LATIASITE"
+      },
+      "LATIOSITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.LATIOSITE"
+      },
+      "LEFTOVERS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.LEFTOVERS"
+      },
+      "LEPPA_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:leppa"
+      },
+      "LIECHI_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:liechi"
+      },
+      "LOPUNNITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.LOPUNNITE"
+      },
+      "LUCARIONITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.LUCARIONITE"
+      },
+      "LUCARIONITE_Z": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.LUCARIONITE_Z"
+      },
+      "LUM_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:lum"
+      },
+      "MAGNET": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.magnet"
+      },
+      "MALAMARITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MALAMARITE"
+      },
+      "MANECTITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MANECTITE"
+      },
+      "MAWILITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MAWILITE"
+      },
+      "MEGANIUMITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MEGANIUMITE"
+      },
+      "MEOWSTICITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MEOWSTICITE"
+      },
+      "METAGROSSITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.METAGROSSITE"
+      },
+      "MEWTWONITE_X": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MEWTWONITE_X"
+      },
+      "MEWTWONITE_Y": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MEWTWONITE_Y"
+      },
+      "MIRACLE_SEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.miracle_seed"
+      },
+      "NUGGET": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.NUGGET"
+      },
+      "PETAYA_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:petaya"
+      },
+      "PIDGEOTITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.PIDGEOTITE"
+      },
+      "PYROARITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.PYROARITE"
+      },
+      "RAICHUNITE_X": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.RAICHUNITE_X"
+      },
+      "RAICHUNITE_Y": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.RAICHUNITE_Y"
+      },
+      "RAYQUAZITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.RAYQUAZITE"
+      },
+      "SALAC_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:salac"
+      },
+      "SCEPTILITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SCEPTILITE"
+      },
+      "SCIZORITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SCIZORITE"
+      },
+      "SCOLIPITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SCOLIPITE"
+      },
+      "SCOVILLAINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SCOVILLAINITE"
+      },
+      "SILK_SCARF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.silk_scarf"
+      },
+      "SITRUS_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:sitrus"
+      },
+      "SKARMORITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SKARMORITE"
+      },
+      "STARF_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:starf"
+      },
+      "STEELIXITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.STEELIXITE"
+      },
+      "SWAMPERTITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SWAMPERTITE"
+      },
+      "TYRANITARITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.TYRANITARITE"
+      },
+      "VENUSAURITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.VENUSAURITE"
+      },
+      "VOUCHER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "voucher:eggVoucher"
+      },
+      "WHITE_HERB": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.WHITE_HERB"
+      },
+      "ALTARIANITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ALTARIANITE"
+      },
+      "AUDINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.AUDINITE"
+      },
+      "BANETTITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.BANETTITE"
+      },
+      "BATON": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.BATON"
+      },
+      "CALCIUM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:BaseStatBoosterItem.calcium"
+      },
+      "CAMERUPTITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CAMERUPTITE"
+      },
+      "CHIMECHITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CHIMECHITE"
+      },
+      "CLEFABLITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CLEFABLITE"
+      },
+      "CRABOMINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.CRABOMINITE"
+      },
+      "CRACKED_POT": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.CRACKED_POT"
+      },
+      "DARKRANITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DARKRANITE"
+      },
+      "DRAMPANITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.DRAMPANITE"
+      },
+      "EELEKTROSSITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.EELEKTROSSITE"
+      },
+      "ELIXIR": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.ELIXIR"
+      },
+      "EVOLUTION_TRACKER_GIMMIGHOUL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.EVOLUTION_TRACKER_GIMMIGHOUL"
+      },
+      "FALINKSITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.FALINKSITE"
+      },
+      "FLOETTITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.FLOETTITE"
+      },
+      "GOLISOPITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GOLISOPITE"
+      },
+      "GOLURKITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GOLURKITE"
+      },
+      "HEATRANITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.HEATRANITE"
+      },
+      "HYPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.HYPER_POTION"
+      },
+      "IRON": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:BaseStatBoosterItem.iron"
+      },
+      "IV_SCANNER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.IV_SCANNER"
+      },
+      "KANGASKHANITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.KANGASKHANITE"
+      },
+      "LEEK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.LEEK"
+      },
+      "MAGEARNITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MAGEARNITE"
+      },
+      "MAP": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MAP"
+      },
+      "MEDICHAMITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MEDICHAMITE"
+      },
+      "MINI_BLACK_HOLE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MINI_BLACK_HOLE"
+      },
+      "PINSIRITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.PINSIRITE"
+      },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
+      "PP_MAX": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.PP_MAX"
+      },
+      "PROTEIN": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:BaseStatBoosterItem.protein"
+      },
+      "RUSTED_SHIELD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.RUSTED_SHIELD"
+      },
+      "RUSTED_SWORD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.RUSTED_SWORD"
+      },
+      "SABLENITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SABLENITE"
+      },
+      "SALAMENCITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SALAMENCITE"
+      },
+      "SCRAFTINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SCRAFTINITE"
+      },
+      "SHARPEDONITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SHARPEDONITE"
+      },
+      "SLOWBRONITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.SLOWBRONITE"
+      },
+      "STARAPTITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.STARAPTITE"
+      },
+      "STARMINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.STARMINITE"
+      },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
+      },
+      "TATSUGIRINITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.TATSUGIRINITE"
+      },
+      "UPGRADE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.UPGRADE"
+      },
+      "VICTREEBELITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.VICTREEBELITE"
+      },
+      "VOUCHER_GOLDEN": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "voucher:eggVoucherGold"
+      },
+      "VOUCHER_PLUS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "voucher:eggVoucherPlus"
+      },
+      "VOUCHER_PREMIUM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "voucher:eggVoucherPremium"
+      },
+      "X_ACCURACY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_accuracy"
+      },
+      "X_ATTACK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
+      },
+      "X_DEFENSE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
+      },
+      "X_SPEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
+      },
+      "X_SP_ATK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
+      },
+      "X_SP_DEF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
+      },
+      "ZERAORITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ZERAORITE"
+      },
+      "ZINC": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:BaseStatBoosterItem.zinc"
+      },
+      "ZYGARDITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.ZYGARDITE"
+      }
+    },
+    "itemTemplates": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "trainers": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "trainerTitles": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "zCrystals": {},
+    "zMoves": {
+      "NEVER_ENDING_NIGHTMARE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:neverEndingNightmarePhysical.name"
+      },
+      "OCEANIC_OPERETTA": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:oceanicOperetta.name"
+      }
+    },
+    "maxMoves": {}
+  },
+  "_fallbacks": {
+    "trainers.red": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "red"
+    },
+    "trainers.lance": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "lance"
+    },
+    "trainers.steven": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "steven"
+    },
+    "trainers.cynthia": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "cynthia"
+    },
+    "trainers.alder": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "alder"
+    },
+    "trainers.diantha": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "diantha"
+    },
+    "trainers.kukui": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "kukui"
+    },
+    "trainers.leon": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "leon"
+    },
+    "trainers.geeta": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "geeta"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+**/node_modules
+**/dist
+.git
+.env
+*.log
+vendor
+data
+docs
+apps/server/data
+tools/*
+!tools/package.json

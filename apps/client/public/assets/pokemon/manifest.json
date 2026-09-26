@@ -1,0 +1,5537 @@
+{
+  "BULBASAUR": {
+    "id": 1,
+    "forms": {
+      "": {
+        "front": "pokemon/front/1",
+        "back": "pokemon/back/1",
+        "frontShiny": "pokemon/front-shiny/1",
+        "backShiny": "pokemon/back-shiny/1"
+      }
+    }
+  },
+  "IVYSAUR": {
+    "id": 2,
+    "forms": {
+      "": {
+        "front": "pokemon/front/2",
+        "back": "pokemon/back/2",
+        "frontShiny": "pokemon/front-shiny/2",
+        "backShiny": "pokemon/back-shiny/2"
+      }
+    }
+  },
+  "VENUSAUR": {
+    "id": 3,
+    "forms": {
+      "": {
+        "front": "pokemon/front/3",
+        "back": "pokemon/back/3",
+        "frontShiny": "pokemon/front-shiny/3",
+        "backShiny": "pokemon/back-shiny/3"
+      },
+      "mega": {
+        "front": "pokemon/front/3-mega",
+        "back": "pokemon/back/3-mega",
+        "frontShiny": "pokemon/front-shiny/3-mega",
+        "backShiny": "pokemon/back-shiny/3-mega"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/3-gigantamax",
+        "back": "pokemon/back/3-gigantamax",
+        "frontShiny": "pokemon/front-shiny/3-gigantamax",
+        "backShiny": "pokemon/back-shiny/3-gigantamax"
+      }
+    }
+  },
+  "CHARMANDER": {
+    "id": 4,
+    "forms": {
+      "": {
+        "front": "pokemon/front/4",
+        "back": "pokemon/back/4",
+        "frontShiny": "pokemon/front-shiny/4",
+        "backShiny": "pokemon/back-shiny/4"
+      }
+    }
+  },
+  "CHARMELEON": {
+    "id": 5,
+    "forms": {
+      "": {
+        "front": "pokemon/front/5",
+        "back": "pokemon/back/5",
+        "frontShiny": "pokemon/front-shiny/5",
+        "backShiny": "pokemon/back-shiny/5"
+      }
+    }
+  },
+  "CHARIZARD": {
+    "id": 6,
+    "forms": {
+      "": {
+        "front": "pokemon/front/6",
+        "back": "pokemon/back/6",
+        "frontShiny": "pokemon/front-shiny/6",
+        "backShiny": "pokemon/back-shiny/6"
+      },
+      "mega-x": {
+        "front": "pokemon/front/6-mega-x",
+        "back": "pokemon/back/6-mega-x",
+        "frontShiny": "pokemon/front-shiny/6-mega-x",
+        "backShiny": "pokemon/back-shiny/6-mega-x"
+      },
+      "mega-y": {
+        "front": "pokemon/front/6-mega-y",
+        "back": "pokemon/back/6-mega-y",
+        "frontShiny": "pokemon/front-shiny/6-mega-y",
+        "backShiny": "pokemon/back-shiny/6-mega-y"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/6-gigantamax",
+        "back": "pokemon/back/6-gigantamax",
+        "frontShiny": "pokemon/front-shiny/6-gigantamax",
+        "backShiny": "pokemon/back-shiny/6-gigantamax"
+      }
+    }
+  },
+  "SQUIRTLE": {
+    "id": 7,
+    "forms": {
+      "": {
+        "front": "pokemon/front/7",
+        "back": "pokemon/back/7",
+        "frontShiny": "pokemon/front-shiny/7",
+        "backShiny": "pokemon/back-shiny/7"
+      }
+    }
+  },
+  "WARTORTLE": {
+    "id": 8,
+    "forms": {
+      "": {
+        "front": "pokemon/front/8",
+        "back": "pokemon/back/8",
+        "frontShiny": "pokemon/front-shiny/8",
+        "backShiny": "pokemon/back-shiny/8"
+      }
+    }
+  },
+  "BLASTOISE": {
+    "id": 9,
+    "forms": {
+      "": {
+        "front": "pokemon/front/9",
+        "back": "pokemon/back/9",
+        "frontShiny": "pokemon/front-shiny/9",
+        "backShiny": "pokemon/back-shiny/9"
+      },
+      "mega": {
+        "front": "pokemon/front/9-mega",
+        "back": "pokemon/back/9-mega",
+        "frontShiny": "pokemon/front-shiny/9-mega",
+        "backShiny": "pokemon/back-shiny/9-mega"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/9-gigantamax",
+        "back": "pokemon/back/9-gigantamax",
+        "frontShiny": "pokemon/front-shiny/9-gigantamax",
+        "backShiny": "pokemon/back-shiny/9-gigantamax"
+      }
+    }
+  },
+  "CATERPIE": {
+    "id": 10,
+    "forms": {
+      "": {
+        "front": "pokemon/front/10",
+        "back": "pokemon/back/10",
+        "frontShiny": "pokemon/front-shiny/10",
+        "backShiny": "pokemon/back-shiny/10"
+      }
+    }
+  },
+  "METAPOD": {
+    "id": 11,
+    "forms": {
+      "": {
+        "front": "pokemon/front/11",
+        "back": "pokemon/back/11",
+        "frontShiny": "pokemon/front-shiny/11",
+        "backShiny": "pokemon/back-shiny/11"
+      }
+    }
+  },
+  "BUTTERFREE": {
+    "id": 12,
+    "forms": {
+      "": {
+        "front": "pokemon/front/12",
+        "back": "pokemon/back/12",
+        "frontShiny": "pokemon/front-shiny/12",
+        "backShiny": "pokemon/back-shiny/12"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/12-gigantamax",
+        "back": "pokemon/back/12-gigantamax",
+        "frontShiny": "pokemon/front-shiny/12-gigantamax",
+        "backShiny": "pokemon/back-shiny/12-gigantamax"
+      }
+    }
+  },
+  "WEEDLE": {
+    "id": 13,
+    "forms": {
+      "": {
+        "front": "pokemon/front/13",
+        "back": "pokemon/back/13",
+        "frontShiny": "pokemon/front-shiny/13",
+        "backShiny": "pokemon/back-shiny/13"
+      }
+    }
+  },
+  "KAKUNA": {
+    "id": 14,
+    "forms": {
+      "": {
+        "front": "pokemon/front/14",
+        "back": "pokemon/back/14",
+        "frontShiny": "pokemon/front-shiny/14",
+        "backShiny": "pokemon/back-shiny/14"
+      }
+    }
+  },
+  "BEEDRILL": {
+    "id": 15,
+    "forms": {
+      "": {
+        "front": "pokemon/front/15",
+        "back": "pokemon/back/15",
+        "frontShiny": "pokemon/front-shiny/15",
+        "backShiny": "pokemon/back-shiny/15"
+      },
+      "mega": {
+        "front": "pokemon/front/15-mega",
+        "back": "pokemon/back/15-mega",
+        "frontShiny": "pokemon/front-shiny/15-mega",
+        "backShiny": "pokemon/back-shiny/15-mega"
+      }
+    }
+  },
+  "PIDGEY": {
+    "id": 16,
+    "forms": {
+      "": {
+        "front": "pokemon/front/16",
+        "back": "pokemon/back/16",
+        "frontShiny": "pokemon/front-shiny/16",
+        "backShiny": "pokemon/back-shiny/16"
+      }
+    }
+  },
+  "PIDGEOTTO": {
+    "id": 17,
+    "forms": {
+      "": {
+        "front": "pokemon/front/17",
+        "back": "pokemon/back/17",
+        "frontShiny": "pokemon/front-shiny/17",
+        "backShiny": "pokemon/back-shiny/17"
+      }
+    }
+  },
+  "PIDGEOT": {
+    "id": 18,
+    "forms": {
+      "": {
+        "front": "pokemon/front/18",
+        "back": "pokemon/back/18",
+        "frontShiny": "pokemon/front-shiny/18",
+        "backShiny": "pokemon/back-shiny/18"
+      },
+      "mega": {
+        "front": "pokemon/front/18-mega",
+        "back": "pokemon/back/18-mega",
+        "frontShiny": "pokemon/front-shiny/18-mega",
+        "backShiny": "pokemon/back-shiny/18-mega"
+      }
+    }
+  },
+  "PIKACHU": {
+    "id": 25,
+    "forms": {
+      "": {
+        "front": "pokemon/front/25",
+        "back": "pokemon/back/25",
+        "frontShiny": "pokemon/front-shiny/25",
+        "backShiny": "pokemon/back-shiny/25"
+      },
+      "partner": {
+        "front": "pokemon/front/25-partner",
+        "back": "pokemon/back/25-partner",
+        "frontShiny": "pokemon/front-shiny/25-partner",
+        "backShiny": "pokemon/back-shiny/25-partner"
+      },
+      "cosplay": {
+        "front": "pokemon/front/25-cosplay",
+        "back": "pokemon/back/25-cosplay",
+        "frontShiny": "pokemon/front-shiny/25-cosplay",
+        "backShiny": "pokemon/back-shiny/25-cosplay"
+      },
+      "cool-cosplay": {
+        "front": "pokemon/front/25-cool-cosplay",
+        "back": "pokemon/back/25-cool-cosplay",
+        "frontShiny": "pokemon/front-shiny/25-cool-cosplay",
+        "backShiny": "pokemon/back-shiny/25-cool-cosplay"
+      },
+      "beauty-cosplay": {
+        "front": "pokemon/front/25-beauty-cosplay",
+        "back": "pokemon/back/25-beauty-cosplay",
+        "frontShiny": "pokemon/front-shiny/25-beauty-cosplay",
+        "backShiny": "pokemon/back-shiny/25-beauty-cosplay"
+      },
+      "cute-cosplay": {
+        "front": "pokemon/front/25-cute-cosplay",
+        "back": "pokemon/back/25-cute-cosplay",
+        "frontShiny": "pokemon/front-shiny/25-cute-cosplay",
+        "backShiny": "pokemon/back-shiny/25-cute-cosplay"
+      },
+      "smart-cosplay": {
+        "front": "pokemon/front/25-smart-cosplay",
+        "back": "pokemon/back/25-smart-cosplay",
+        "frontShiny": "pokemon/front-shiny/25-smart-cosplay",
+        "backShiny": "pokemon/back-shiny/25-smart-cosplay"
+      },
+      "tough-cosplay": {
+        "front": "pokemon/front/25-tough-cosplay",
+        "back": "pokemon/back/25-tough-cosplay",
+        "frontShiny": "pokemon/front-shiny/25-tough-cosplay",
+        "backShiny": "pokemon/back-shiny/25-tough-cosplay"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/25-gigantamax",
+        "back": "pokemon/back/25-gigantamax",
+        "frontShiny": "pokemon/front-shiny/25-gigantamax",
+        "backShiny": "pokemon/back-shiny/25-gigantamax"
+      }
+    }
+  },
+  "RAICHU": {
+    "id": 26,
+    "forms": {
+      "": {
+        "front": "pokemon/front/26",
+        "back": "pokemon/back/26",
+        "frontShiny": "pokemon/front-shiny/26",
+        "backShiny": "pokemon/back-shiny/26"
+      },
+      "mega-x": {
+        "front": "pokemon/front/26-mega-x",
+        "back": "pokemon/back/26-mega-x",
+        "frontShiny": "pokemon/front-shiny/26-mega-x",
+        "backShiny": "pokemon/back-shiny/26-mega-x"
+      },
+      "mega-y": {
+        "front": "pokemon/front/26-mega-y",
+        "back": "pokemon/back/26-mega-y",
+        "frontShiny": "pokemon/front-shiny/26-mega-y",
+        "backShiny": "pokemon/back-shiny/26-mega-y"
+      }
+    }
+  },
+  "VULPIX": {
+    "id": 37,
+    "forms": {
+      "": {
+        "front": "pokemon/front/37",
+        "back": "pokemon/back/37",
+        "frontShiny": "pokemon/front-shiny/37",
+        "backShiny": "pokemon/back-shiny/37"
+      }
+    }
+  },
+  "NINETALES": {
+    "id": 38,
+    "forms": {
+      "": {
+        "front": "pokemon/front/38",
+        "back": "pokemon/back/38",
+        "frontShiny": "pokemon/front-shiny/38",
+        "backShiny": "pokemon/back-shiny/38"
+      }
+    }
+  },
+  "ODDISH": {
+    "id": 43,
+    "forms": {
+      "": {
+        "front": "pokemon/front/43",
+        "back": "pokemon/back/43",
+        "frontShiny": "pokemon/front-shiny/43",
+        "backShiny": "pokemon/back-shiny/43"
+      }
+    }
+  },
+  "GLOOM": {
+    "id": 44,
+    "forms": {
+      "": {
+        "front": "pokemon/front/44",
+        "back": "pokemon/back/44",
+        "frontShiny": "pokemon/front-shiny/44",
+        "backShiny": "pokemon/back-shiny/44"
+      }
+    }
+  },
+  "VILEPLUME": {
+    "id": 45,
+    "forms": {
+      "": {
+        "front": "pokemon/front/45",
+        "back": "pokemon/back/45",
+        "frontShiny": "pokemon/front-shiny/45",
+        "backShiny": "pokemon/back-shiny/45"
+      }
+    }
+  },
+  "MEOWTH": {
+    "id": 52,
+    "forms": {
+      "": {
+        "front": "pokemon/front/52",
+        "back": "pokemon/back/52",
+        "frontShiny": "pokemon/front-shiny/52",
+        "backShiny": "pokemon/back-shiny/52"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/52-gigantamax",
+        "back": "pokemon/back/52-gigantamax",
+        "frontShiny": "pokemon/front-shiny/52-gigantamax",
+        "backShiny": "pokemon/back-shiny/52-gigantamax"
+      }
+    }
+  },
+  "PERSIAN": {
+    "id": 53,
+    "forms": {
+      "": {
+        "front": "pokemon/front/53",
+        "back": "pokemon/back/53",
+        "frontShiny": "pokemon/front-shiny/53",
+        "backShiny": "pokemon/back-shiny/53"
+      }
+    }
+  },
+  "GROWLITHE": {
+    "id": 58,
+    "forms": {
+      "": {
+        "front": "pokemon/front/58",
+        "back": "pokemon/back/58",
+        "frontShiny": "pokemon/front-shiny/58",
+        "backShiny": "pokemon/back-shiny/58"
+      }
+    }
+  },
+  "ARCANINE": {
+    "id": 59,
+    "forms": {
+      "": {
+        "front": "pokemon/front/59",
+        "back": "pokemon/back/59",
+        "frontShiny": "pokemon/front-shiny/59",
+        "backShiny": "pokemon/back-shiny/59"
+      }
+    }
+  },
+  "ABRA": {
+    "id": 63,
+    "forms": {
+      "": {
+        "front": "pokemon/front/63",
+        "back": "pokemon/back/63",
+        "frontShiny": "pokemon/front-shiny/63",
+        "backShiny": "pokemon/back-shiny/63"
+      }
+    }
+  },
+  "KADABRA": {
+    "id": 64,
+    "forms": {
+      "": {
+        "front": "pokemon/front/64",
+        "back": "pokemon/back/64",
+        "frontShiny": "pokemon/front-shiny/64",
+        "backShiny": "pokemon/back-shiny/64"
+      }
+    }
+  },
+  "ALAKAZAM": {
+    "id": 65,
+    "forms": {
+      "": {
+        "front": "pokemon/front/65",
+        "back": "pokemon/back/65",
+        "frontShiny": "pokemon/front-shiny/65",
+        "backShiny": "pokemon/back-shiny/65"
+      },
+      "mega": {
+        "front": "pokemon/front/65-mega",
+        "back": "pokemon/back/65-mega",
+        "frontShiny": "pokemon/front-shiny/65-mega",
+        "backShiny": "pokemon/back-shiny/65-mega"
+      }
+    }
+  },
+  "MACHOP": {
+    "id": 66,
+    "forms": {
+      "": {
+        "front": "pokemon/front/66",
+        "back": "pokemon/back/66",
+        "frontShiny": "pokemon/front-shiny/66",
+        "backShiny": "pokemon/back-shiny/66"
+      }
+    }
+  },
+  "MACHOKE": {
+    "id": 67,
+    "forms": {
+      "": {
+        "front": "pokemon/front/67",
+        "back": "pokemon/back/67",
+        "frontShiny": "pokemon/front-shiny/67",
+        "backShiny": "pokemon/back-shiny/67"
+      }
+    }
+  },
+  "MACHAMP": {
+    "id": 68,
+    "forms": {
+      "": {
+        "front": "pokemon/front/68",
+        "back": "pokemon/back/68",
+        "frontShiny": "pokemon/front-shiny/68",
+        "backShiny": "pokemon/back-shiny/68"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/68-gigantamax",
+        "back": "pokemon/back/68-gigantamax",
+        "frontShiny": "pokemon/front-shiny/68-gigantamax",
+        "backShiny": "pokemon/back-shiny/68-gigantamax"
+      }
+    }
+  },
+  "GEODUDE": {
+    "id": 74,
+    "forms": {
+      "": {
+        "front": "pokemon/front/74",
+        "back": "pokemon/back/74",
+        "frontShiny": "pokemon/front-shiny/74",
+        "backShiny": "pokemon/back-shiny/74"
+      }
+    }
+  },
+  "GRAVELER": {
+    "id": 75,
+    "forms": {
+      "": {
+        "front": "pokemon/front/75",
+        "back": "pokemon/back/75",
+        "frontShiny": "pokemon/front-shiny/75",
+        "backShiny": "pokemon/back-shiny/75"
+      }
+    }
+  },
+  "GOLEM": {
+    "id": 76,
+    "forms": {
+      "": {
+        "front": "pokemon/front/76",
+        "back": "pokemon/back/76",
+        "frontShiny": "pokemon/front-shiny/76",
+        "backShiny": "pokemon/back-shiny/76"
+      }
+    }
+  },
+  "MAGNEMITE": {
+    "id": 81,
+    "forms": {
+      "": {
+        "front": "pokemon/front/81",
+        "back": "pokemon/back/81",
+        "frontShiny": "pokemon/front-shiny/81",
+        "backShiny": "pokemon/back-shiny/81"
+      }
+    }
+  },
+  "MAGNETON": {
+    "id": 82,
+    "forms": {
+      "": {
+        "front": "pokemon/front/82",
+        "back": "pokemon/back/82",
+        "frontShiny": "pokemon/front-shiny/82",
+        "backShiny": "pokemon/back-shiny/82"
+      }
+    }
+  },
+  "MAGNEZONE": {
+    "id": 462,
+    "forms": {
+      "": {
+        "front": "pokemon/front/462",
+        "back": "pokemon/back/462",
+        "frontShiny": "pokemon/front-shiny/462",
+        "backShiny": "pokemon/back-shiny/462"
+      }
+    }
+  },
+  "GASTLY": {
+    "id": 92,
+    "forms": {
+      "": {
+        "front": "pokemon/front/92",
+        "back": "pokemon/back/92",
+        "frontShiny": "pokemon/front-shiny/92_1",
+        "backShiny": "pokemon/back-shiny/92_1"
+      }
+    }
+  },
+  "HAUNTER": {
+    "id": 93,
+    "forms": {
+      "": {
+        "front": "pokemon/front/93",
+        "back": "pokemon/back/93",
+        "frontShiny": "pokemon/front-shiny/93",
+        "backShiny": "pokemon/back-shiny/93"
+      }
+    }
+  },
+  "GENGAR": {
+    "id": 94,
+    "forms": {
+      "": {
+        "front": "pokemon/front/94",
+        "back": "pokemon/back/94",
+        "frontShiny": "pokemon/front-shiny/94",
+        "backShiny": "pokemon/back-shiny/94"
+      },
+      "mega": {
+        "front": "pokemon/front/94-mega",
+        "back": "pokemon/back/94-mega",
+        "frontShiny": "pokemon/front-shiny/94-mega_1",
+        "backShiny": "pokemon/back-shiny/94-mega"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/94-gigantamax",
+        "back": "pokemon/back/94-gigantamax",
+        "frontShiny": "pokemon/front-shiny/94-gigantamax",
+        "backShiny": "pokemon/back-shiny/94-gigantamax"
+      }
+    }
+  },
+  "ONIX": {
+    "id": 95,
+    "forms": {
+      "": {
+        "front": "pokemon/front/95",
+        "back": "pokemon/back/95",
+        "frontShiny": "pokemon/front-shiny/95",
+        "backShiny": "pokemon/back-shiny/95"
+      }
+    }
+  },
+  "STEELIX": {
+    "id": 208,
+    "forms": {
+      "": {
+        "front": "pokemon/front/208",
+        "back": "pokemon/back/208",
+        "frontShiny": "pokemon/front-shiny/208",
+        "backShiny": "pokemon/back-shiny/208"
+      },
+      "mega": {
+        "front": "pokemon/front/208-mega",
+        "back": "pokemon/back/208-mega",
+        "frontShiny": "pokemon/front-shiny/208-mega",
+        "backShiny": "pokemon/back-shiny/208-mega"
+      }
+    }
+  },
+  "RHYHORN": {
+    "id": 111,
+    "forms": {
+      "": {
+        "front": "pokemon/front/111",
+        "back": "pokemon/back/111",
+        "frontShiny": "pokemon/front-shiny/111",
+        "backShiny": "pokemon/back-shiny/111"
+      }
+    }
+  },
+  "RHYDON": {
+    "id": 112,
+    "forms": {
+      "": {
+        "front": "pokemon/front/112",
+        "back": "pokemon/back/112",
+        "frontShiny": "pokemon/front-shiny/112",
+        "backShiny": "pokemon/back-shiny/112"
+      }
+    }
+  },
+  "RHYPERIOR": {
+    "id": 464,
+    "forms": {
+      "": {
+        "front": "pokemon/front/464",
+        "back": "pokemon/back/464",
+        "frontShiny": "pokemon/front-shiny/464",
+        "backShiny": "pokemon/back-shiny/464"
+      }
+    }
+  },
+  "CHANSEY": {
+    "id": 113,
+    "forms": {
+      "": {
+        "front": "pokemon/front/113",
+        "back": "pokemon/back/113",
+        "frontShiny": "pokemon/front-shiny/113",
+        "backShiny": "pokemon/back-shiny/113"
+      }
+    }
+  },
+  "BLISSEY": {
+    "id": 242,
+    "forms": {
+      "": {
+        "front": "pokemon/front/242",
+        "back": "pokemon/back/242",
+        "frontShiny": "pokemon/front-shiny/242",
+        "backShiny": "pokemon/back-shiny/242"
+      }
+    }
+  },
+  "HORSEA": {
+    "id": 116,
+    "forms": {
+      "": {
+        "front": "pokemon/front/116",
+        "back": "pokemon/back/116",
+        "frontShiny": "pokemon/front-shiny/116",
+        "backShiny": "pokemon/back-shiny/116"
+      }
+    }
+  },
+  "SEADRA": {
+    "id": 117,
+    "forms": {
+      "": {
+        "front": "pokemon/front/117",
+        "back": "pokemon/back/117",
+        "frontShiny": "pokemon/front-shiny/117",
+        "backShiny": "pokemon/back-shiny/117"
+      }
+    }
+  },
+  "KINGDRA": {
+    "id": 230,
+    "forms": {
+      "": {
+        "front": "pokemon/front/230",
+        "back": "pokemon/back/230",
+        "frontShiny": "pokemon/front-shiny/230",
+        "backShiny": "pokemon/back-shiny/230"
+      }
+    }
+  },
+  "SCYTHER": {
+    "id": 123,
+    "forms": {
+      "": {
+        "front": "pokemon/front/123",
+        "back": "pokemon/back/123",
+        "frontShiny": "pokemon/front-shiny/123",
+        "backShiny": "pokemon/back-shiny/123"
+      }
+    }
+  },
+  "SCIZOR": {
+    "id": 212,
+    "forms": {
+      "": {
+        "front": "pokemon/front/212",
+        "back": "pokemon/back/212",
+        "frontShiny": "pokemon/front-shiny/212",
+        "backShiny": "pokemon/back-shiny/212"
+      },
+      "mega": {
+        "front": "pokemon/front/212-mega",
+        "back": "pokemon/back/212-mega",
+        "frontShiny": "pokemon/front-shiny/212-mega",
+        "backShiny": "pokemon/back-shiny/212-mega"
+      }
+    }
+  },
+  "MAGIKARP": {
+    "id": 129,
+    "forms": {
+      "": {
+        "front": "pokemon/front/129",
+        "back": "pokemon/back/129",
+        "frontShiny": "pokemon/front-shiny/129",
+        "backShiny": "pokemon/back-shiny/129"
+      }
+    }
+  },
+  "GYARADOS": {
+    "id": 130,
+    "forms": {
+      "": {
+        "front": "pokemon/front/130",
+        "back": "pokemon/back/130",
+        "frontShiny": "pokemon/front-shiny/130",
+        "backShiny": "pokemon/back-shiny/130"
+      },
+      "mega": {
+        "front": "pokemon/front/130-mega",
+        "back": "pokemon/back/130-mega",
+        "frontShiny": "pokemon/front-shiny/130-mega",
+        "backShiny": "pokemon/back-shiny/130-mega"
+      }
+    }
+  },
+  "LAPRAS": {
+    "id": 131,
+    "forms": {
+      "": {
+        "front": "pokemon/front/131",
+        "back": "pokemon/back/131",
+        "frontShiny": "pokemon/front-shiny/131",
+        "backShiny": "pokemon/back-shiny/131"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/131-gigantamax",
+        "back": "pokemon/back/131-gigantamax",
+        "frontShiny": "pokemon/front-shiny/131-gigantamax",
+        "backShiny": "pokemon/back-shiny/131-gigantamax"
+      }
+    }
+  },
+  "DITTO": {
+    "id": 132,
+    "forms": {
+      "": {
+        "front": "pokemon/front/132",
+        "back": "pokemon/back/132",
+        "frontShiny": "pokemon/front-shiny/132",
+        "backShiny": "pokemon/back-shiny/132"
+      }
+    }
+  },
+  "EEVEE": {
+    "id": 133,
+    "forms": {
+      "": {
+        "front": "pokemon/front/133",
+        "back": "pokemon/back/133",
+        "frontShiny": "pokemon/front-shiny/133",
+        "backShiny": "pokemon/back-shiny/133"
+      },
+      "partner": {
+        "front": "pokemon/front/133-partner",
+        "back": "pokemon/back/133-partner",
+        "frontShiny": "pokemon/front-shiny/133-partner",
+        "backShiny": "pokemon/back-shiny/133-partner"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/133-gigantamax",
+        "back": "pokemon/back/133-gigantamax",
+        "frontShiny": "pokemon/front-shiny/133-gigantamax",
+        "backShiny": "pokemon/back-shiny/133-gigantamax"
+      }
+    }
+  },
+  "VAPOREON": {
+    "id": 134,
+    "forms": {
+      "": {
+        "front": "pokemon/front/134",
+        "back": "pokemon/back/134",
+        "frontShiny": "pokemon/front-shiny/134",
+        "backShiny": "pokemon/back-shiny/134"
+      }
+    }
+  },
+  "JOLTEON": {
+    "id": 135,
+    "forms": {
+      "": {
+        "front": "pokemon/front/135",
+        "back": "pokemon/back/135",
+        "frontShiny": "pokemon/front-shiny/135",
+        "backShiny": "pokemon/back-shiny/135"
+      }
+    }
+  },
+  "FLAREON": {
+    "id": 136,
+    "forms": {
+      "": {
+        "front": "pokemon/front/136",
+        "back": "pokemon/back/136",
+        "frontShiny": "pokemon/front-shiny/136",
+        "backShiny": "pokemon/back-shiny/136"
+      }
+    }
+  },
+  "ESPEON": {
+    "id": 196,
+    "forms": {
+      "": {
+        "front": "pokemon/front/196",
+        "back": "pokemon/back/196",
+        "frontShiny": "pokemon/front-shiny/196",
+        "backShiny": "pokemon/back-shiny/196"
+      }
+    }
+  },
+  "UMBREON": {
+    "id": 197,
+    "forms": {
+      "": {
+        "front": "pokemon/front/197",
+        "back": "pokemon/back/197",
+        "frontShiny": "pokemon/front-shiny/197",
+        "backShiny": "pokemon/back-shiny/197"
+      }
+    }
+  },
+  "LEAFEON": {
+    "id": 470,
+    "forms": {
+      "": {
+        "front": "pokemon/front/470",
+        "back": "pokemon/back/470",
+        "frontShiny": "pokemon/front-shiny/470",
+        "backShiny": "pokemon/back-shiny/470"
+      }
+    }
+  },
+  "GLACEON": {
+    "id": 471,
+    "forms": {
+      "": {
+        "front": "pokemon/front/471",
+        "back": "pokemon/back/471",
+        "frontShiny": "pokemon/front-shiny/471",
+        "backShiny": "pokemon/back-shiny/471"
+      }
+    }
+  },
+  "SYLVEON": {
+    "id": 700,
+    "forms": {
+      "": {
+        "front": "pokemon/front/700",
+        "back": "pokemon/back/700",
+        "frontShiny": "pokemon/front-shiny/700",
+        "backShiny": "pokemon/back-shiny/700"
+      }
+    }
+  },
+  "AERODACTYL": {
+    "id": 142,
+    "forms": {
+      "": {
+        "front": "pokemon/front/142",
+        "back": "pokemon/back/142",
+        "frontShiny": "pokemon/front-shiny/142",
+        "backShiny": "pokemon/back-shiny/142"
+      },
+      "mega": {
+        "front": "pokemon/front/142-mega",
+        "back": "pokemon/back/142-mega",
+        "frontShiny": "pokemon/front-shiny/142-mega",
+        "backShiny": "pokemon/back-shiny/142-mega"
+      }
+    }
+  },
+  "SNORLAX": {
+    "id": 143,
+    "forms": {
+      "": {
+        "front": "pokemon/front/143",
+        "back": "pokemon/back/143",
+        "frontShiny": "pokemon/front-shiny/143",
+        "backShiny": "pokemon/back-shiny/143"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/143-gigantamax",
+        "back": "pokemon/back/143-gigantamax",
+        "frontShiny": "pokemon/front-shiny/143-gigantamax",
+        "backShiny": "pokemon/back-shiny/143-gigantamax"
+      }
+    }
+  },
+  "ARTICUNO": {
+    "id": 144,
+    "forms": {
+      "": {
+        "front": "pokemon/front/144",
+        "back": "pokemon/back/144",
+        "frontShiny": "pokemon/front-shiny/144",
+        "backShiny": "pokemon/back-shiny/144"
+      }
+    }
+  },
+  "ZAPDOS": {
+    "id": 145,
+    "forms": {
+      "": {
+        "front": "pokemon/front/145",
+        "back": "pokemon/back/145",
+        "frontShiny": "pokemon/front-shiny/145",
+        "backShiny": "pokemon/back-shiny/145"
+      }
+    }
+  },
+  "MOLTRES": {
+    "id": 146,
+    "forms": {
+      "": {
+        "front": "pokemon/front/146",
+        "back": "pokemon/back/146",
+        "frontShiny": "pokemon/front-shiny/146",
+        "backShiny": "pokemon/back-shiny/146"
+      }
+    }
+  },
+  "DRATINI": {
+    "id": 147,
+    "forms": {
+      "": {
+        "front": "pokemon/front/147",
+        "back": "pokemon/back/147",
+        "frontShiny": "pokemon/front-shiny/147",
+        "backShiny": "pokemon/back-shiny/147"
+      }
+    }
+  },
+  "DRAGONAIR": {
+    "id": 148,
+    "forms": {
+      "": {
+        "front": "pokemon/front/148",
+        "back": "pokemon/back/148",
+        "frontShiny": "pokemon/front-shiny/148",
+        "backShiny": "pokemon/back-shiny/148"
+      }
+    }
+  },
+  "DRAGONITE": {
+    "id": 149,
+    "forms": {
+      "": {
+        "front": "pokemon/front/149",
+        "back": "pokemon/back/149",
+        "frontShiny": "pokemon/front-shiny/149",
+        "backShiny": "pokemon/back-shiny/149"
+      },
+      "mega": {
+        "front": "pokemon/front/149-mega",
+        "back": "pokemon/back/149-mega",
+        "frontShiny": "pokemon/front-shiny/149-mega",
+        "backShiny": "pokemon/back-shiny/149-mega"
+      }
+    }
+  },
+  "MEWTWO": {
+    "id": 150,
+    "forms": {
+      "": {
+        "front": "pokemon/front/150",
+        "back": "pokemon/back/150",
+        "frontShiny": "pokemon/front-shiny/150",
+        "backShiny": "pokemon/back-shiny/150"
+      },
+      "mega-x": {
+        "front": "pokemon/front/150-mega-x",
+        "back": "pokemon/back/150-mega-x",
+        "frontShiny": "pokemon/front-shiny/150-mega-x",
+        "backShiny": "pokemon/back-shiny/150-mega-x"
+      },
+      "mega-y": {
+        "front": "pokemon/front/150-mega-y",
+        "back": "pokemon/back/150-mega-y",
+        "frontShiny": "pokemon/front-shiny/150-mega-y",
+        "backShiny": "pokemon/back-shiny/150-mega-y"
+      }
+    }
+  },
+  "MEW": {
+    "id": 151,
+    "forms": {
+      "": {
+        "front": "pokemon/front/151",
+        "back": "pokemon/back/151",
+        "frontShiny": "pokemon/front-shiny/151",
+        "backShiny": "pokemon/back-shiny/151"
+      }
+    }
+  },
+  "TOGEPI": {
+    "id": 175,
+    "forms": {
+      "": {
+        "front": "pokemon/front/175",
+        "back": "pokemon/back/175",
+        "frontShiny": "pokemon/front-shiny/175",
+        "backShiny": "pokemon/back-shiny/175"
+      }
+    }
+  },
+  "TOGETIC": {
+    "id": 176,
+    "forms": {
+      "": {
+        "front": "pokemon/front/176",
+        "back": "pokemon/back/176",
+        "frontShiny": "pokemon/front-shiny/176",
+        "backShiny": "pokemon/back-shiny/176"
+      }
+    }
+  },
+  "TOGEKISS": {
+    "id": 468,
+    "forms": {
+      "": {
+        "front": "pokemon/front/468",
+        "back": "pokemon/back/468",
+        "frontShiny": "pokemon/front-shiny/468",
+        "backShiny": "pokemon/back-shiny/468"
+      }
+    }
+  },
+  "SUNKERN": {
+    "id": 191,
+    "forms": {
+      "": {
+        "front": "pokemon/front/191",
+        "back": "pokemon/back/191",
+        "frontShiny": "pokemon/front-shiny/191",
+        "backShiny": "pokemon/back-shiny/191"
+      }
+    }
+  },
+  "SUNFLORA": {
+    "id": 192,
+    "forms": {
+      "": {
+        "front": "pokemon/front/192",
+        "back": "pokemon/back/192",
+        "frontShiny": "pokemon/front-shiny/192",
+        "backShiny": "pokemon/back-shiny/192"
+      }
+    }
+  },
+  "SHUCKLE": {
+    "id": 213,
+    "forms": {
+      "": {
+        "front": "pokemon/front/213",
+        "back": "pokemon/back/213",
+        "frontShiny": "pokemon/front-shiny/213",
+        "backShiny": "pokemon/back-shiny/213"
+      }
+    }
+  },
+  "SKARMORY": {
+    "id": 227,
+    "forms": {
+      "": {
+        "front": "pokemon/front/227",
+        "back": "pokemon/back/227",
+        "frontShiny": "pokemon/front-shiny/227",
+        "backShiny": "pokemon/back-shiny/227"
+      },
+      "mega": {
+        "front": "pokemon/front/227-mega",
+        "back": "pokemon/back/227-mega",
+        "frontShiny": "pokemon/front-shiny/227-mega",
+        "backShiny": "pokemon/back-shiny/227-mega"
+      }
+    }
+  },
+  "LARVITAR": {
+    "id": 246,
+    "forms": {
+      "": {
+        "front": "pokemon/front/246",
+        "back": "pokemon/back/246",
+        "frontShiny": "pokemon/front-shiny/246",
+        "backShiny": "pokemon/back-shiny/246"
+      }
+    }
+  },
+  "PUPITAR": {
+    "id": 247,
+    "forms": {
+      "": {
+        "front": "pokemon/front/247",
+        "back": "pokemon/back/247",
+        "frontShiny": "pokemon/front-shiny/247",
+        "backShiny": "pokemon/back-shiny/247"
+      }
+    }
+  },
+  "TYRANITAR": {
+    "id": 248,
+    "forms": {
+      "": {
+        "front": "pokemon/front/248",
+        "back": "pokemon/back/248",
+        "frontShiny": "pokemon/front-shiny/248",
+        "backShiny": "pokemon/back-shiny/248"
+      },
+      "mega": {
+        "front": "pokemon/front/248-mega",
+        "back": "pokemon/back/248-mega",
+        "frontShiny": "pokemon/front-shiny/248-mega",
+        "backShiny": "pokemon/back-shiny/248-mega"
+      }
+    }
+  },
+  "LUGIA": {
+    "id": 249,
+    "forms": {
+      "": {
+        "front": "pokemon/front/249",
+        "back": "pokemon/back/249",
+        "frontShiny": "pokemon/front-shiny/249",
+        "backShiny": "pokemon/back-shiny/249"
+      }
+    }
+  },
+  "HO_OH": {
+    "id": 250,
+    "forms": {
+      "": {
+        "front": "pokemon/front/250",
+        "back": "pokemon/back/250",
+        "frontShiny": "pokemon/front-shiny/250",
+        "backShiny": "pokemon/back-shiny/250"
+      }
+    }
+  },
+  "TORCHIC": {
+    "id": 255,
+    "forms": {
+      "": {
+        "front": "pokemon/front/255",
+        "back": "pokemon/back/255",
+        "frontShiny": "pokemon/front-shiny/255",
+        "backShiny": "pokemon/back-shiny/255"
+      }
+    }
+  },
+  "COMBUSKEN": {
+    "id": 256,
+    "forms": {
+      "": {
+        "front": "pokemon/front/256",
+        "back": "pokemon/back/256",
+        "frontShiny": "pokemon/front-shiny/256",
+        "backShiny": "pokemon/back-shiny/256"
+      }
+    }
+  },
+  "BLAZIKEN": {
+    "id": 257,
+    "forms": {
+      "": {
+        "front": "pokemon/front/257",
+        "back": "pokemon/back/257",
+        "frontShiny": "pokemon/front-shiny/257",
+        "backShiny": "pokemon/back-shiny/257"
+      },
+      "mega": {
+        "front": "pokemon/front/257-mega",
+        "back": "pokemon/back/257-mega",
+        "frontShiny": "pokemon/front-shiny/257-mega",
+        "backShiny": "pokemon/back-shiny/257-mega"
+      }
+    }
+  },
+  "RALTS": {
+    "id": 280,
+    "forms": {
+      "": {
+        "front": "pokemon/front/280",
+        "back": "pokemon/back/280",
+        "frontShiny": "pokemon/front-shiny/280",
+        "backShiny": "pokemon/back-shiny/280"
+      }
+    }
+  },
+  "KIRLIA": {
+    "id": 281,
+    "forms": {
+      "": {
+        "front": "pokemon/front/281",
+        "back": "pokemon/back/281",
+        "frontShiny": "pokemon/front-shiny/281",
+        "backShiny": "pokemon/back-shiny/281"
+      }
+    }
+  },
+  "GARDEVOIR": {
+    "id": 282,
+    "forms": {
+      "": {
+        "front": "pokemon/front/282",
+        "back": "pokemon/back/282",
+        "frontShiny": "pokemon/front-shiny/282",
+        "backShiny": "pokemon/back-shiny/282"
+      },
+      "mega": {
+        "front": "pokemon/front/282-mega",
+        "back": "pokemon/back/282-mega",
+        "frontShiny": "pokemon/front-shiny/282-mega",
+        "backShiny": "pokemon/back-shiny/282-mega"
+      }
+    }
+  },
+  "GALLADE": {
+    "id": 475,
+    "forms": {
+      "": {
+        "front": "pokemon/front/475",
+        "back": "pokemon/back/475",
+        "frontShiny": "pokemon/front-shiny/475",
+        "backShiny": "pokemon/back-shiny/475"
+      },
+      "mega": {
+        "front": "pokemon/front/475-mega",
+        "back": "pokemon/back/475-mega",
+        "frontShiny": "pokemon/front-shiny/475-mega",
+        "backShiny": "pokemon/back-shiny/475-mega"
+      }
+    }
+  },
+  "NINCADA": {
+    "id": 290,
+    "forms": {
+      "": {
+        "front": "pokemon/front/290",
+        "back": "pokemon/back/290",
+        "frontShiny": "pokemon/front-shiny/290",
+        "backShiny": "pokemon/back-shiny/290"
+      }
+    }
+  },
+  "NINJASK": {
+    "id": 291,
+    "forms": {
+      "": {
+        "front": "pokemon/front/291",
+        "back": "pokemon/back/291",
+        "frontShiny": "pokemon/front-shiny/291_1",
+        "backShiny": "pokemon/back-shiny/291_1"
+      }
+    }
+  },
+  "SHEDINJA": {
+    "id": 292,
+    "forms": {
+      "": {
+        "front": "pokemon/front/292",
+        "back": "pokemon/back/292",
+        "frontShiny": "pokemon/front-shiny/292_1",
+        "backShiny": "pokemon/back-shiny/292_1"
+      }
+    }
+  },
+  "ARON": {
+    "id": 304,
+    "forms": {
+      "": {
+        "front": "pokemon/front/304",
+        "back": "pokemon/back/304",
+        "frontShiny": "pokemon/front-shiny/304",
+        "backShiny": "pokemon/back-shiny/304"
+      }
+    }
+  },
+  "LAIRON": {
+    "id": 305,
+    "forms": {
+      "": {
+        "front": "pokemon/front/305",
+        "back": "pokemon/back/305",
+        "frontShiny": "pokemon/front-shiny/305",
+        "backShiny": "pokemon/back-shiny/305"
+      }
+    }
+  },
+  "AGGRON": {
+    "id": 306,
+    "forms": {
+      "": {
+        "front": "pokemon/front/306",
+        "back": "pokemon/back/306",
+        "frontShiny": "pokemon/front-shiny/306",
+        "backShiny": "pokemon/back-shiny/306"
+      },
+      "mega": {
+        "front": "pokemon/front/306-mega",
+        "back": "pokemon/back/306-mega",
+        "frontShiny": "pokemon/front-shiny/306-mega",
+        "backShiny": "pokemon/back-shiny/306-mega"
+      }
+    }
+  },
+  "ROSELIA": {
+    "id": 315,
+    "forms": {
+      "": {
+        "front": "pokemon/front/315",
+        "back": "pokemon/back/315",
+        "frontShiny": "pokemon/front-shiny/315",
+        "backShiny": "pokemon/back-shiny/315"
+      }
+    }
+  },
+  "BUDEW": {
+    "id": 406,
+    "forms": {
+      "": {
+        "front": "pokemon/front/406",
+        "back": "pokemon/back/406",
+        "frontShiny": "pokemon/front-shiny/406",
+        "backShiny": "pokemon/back-shiny/406"
+      }
+    }
+  },
+  "ROSERADE": {
+    "id": 407,
+    "forms": {
+      "": {
+        "front": "pokemon/front/407",
+        "back": "pokemon/back/407",
+        "frontShiny": "pokemon/front-shiny/407",
+        "backShiny": "pokemon/back-shiny/407"
+      }
+    }
+  },
+  "TORKOAL": {
+    "id": 324,
+    "forms": {
+      "": {
+        "front": "pokemon/front/324",
+        "back": "pokemon/back/324",
+        "frontShiny": "pokemon/front-shiny/324",
+        "backShiny": "pokemon/back-shiny/324"
+      }
+    }
+  },
+  "LILEEP": {
+    "id": 345,
+    "forms": {
+      "": {
+        "front": "pokemon/front/345",
+        "back": "pokemon/back/345",
+        "frontShiny": "pokemon/front-shiny/345",
+        "backShiny": "pokemon/back-shiny/345"
+      }
+    }
+  },
+  "CRADILY": {
+    "id": 346,
+    "forms": {
+      "": {
+        "front": "pokemon/front/346",
+        "back": "pokemon/back/346",
+        "frontShiny": "pokemon/front-shiny/346",
+        "backShiny": "pokemon/back-shiny/346"
+      }
+    }
+  },
+  "ANORITH": {
+    "id": 347,
+    "forms": {
+      "": {
+        "front": "pokemon/front/347",
+        "back": "pokemon/back/347",
+        "frontShiny": "pokemon/front-shiny/347",
+        "backShiny": "pokemon/back-shiny/347"
+      }
+    }
+  },
+  "ARMALDO": {
+    "id": 348,
+    "forms": {
+      "": {
+        "front": "pokemon/front/348",
+        "back": "pokemon/back/348",
+        "frontShiny": "pokemon/front-shiny/348",
+        "backShiny": "pokemon/back-shiny/348"
+      }
+    }
+  },
+  "FEEBAS": {
+    "id": 349,
+    "forms": {
+      "": {
+        "front": "pokemon/front/349",
+        "back": "pokemon/back/349",
+        "frontShiny": "pokemon/front-shiny/349",
+        "backShiny": "pokemon/back-shiny/349"
+      }
+    }
+  },
+  "MILOTIC": {
+    "id": 350,
+    "forms": {
+      "": {
+        "front": "pokemon/front/350",
+        "back": "pokemon/back/350",
+        "frontShiny": "pokemon/front-shiny/350",
+        "backShiny": "pokemon/back-shiny/350"
+      }
+    }
+  },
+  "BELDUM": {
+    "id": 374,
+    "forms": {
+      "": {
+        "front": "pokemon/front/374",
+        "back": "pokemon/back/374",
+        "frontShiny": "pokemon/front-shiny/374",
+        "backShiny": "pokemon/back-shiny/374"
+      }
+    }
+  },
+  "METANG": {
+    "id": 375,
+    "forms": {
+      "": {
+        "front": "pokemon/front/375",
+        "back": "pokemon/back/375",
+        "frontShiny": "pokemon/front-shiny/375",
+        "backShiny": "pokemon/back-shiny/375"
+      }
+    }
+  },
+  "METAGROSS": {
+    "id": 376,
+    "forms": {
+      "": {
+        "front": "pokemon/front/376",
+        "back": "pokemon/back/376",
+        "frontShiny": "pokemon/front-shiny/376",
+        "backShiny": "pokemon/back-shiny/376"
+      },
+      "mega": {
+        "front": "pokemon/front/376-mega",
+        "back": "pokemon/back/376-mega",
+        "frontShiny": "pokemon/front-shiny/376-mega",
+        "backShiny": "pokemon/back-shiny/376-mega"
+      }
+    }
+  },
+  "REGIROCK": {
+    "id": 377,
+    "forms": {
+      "": {
+        "front": "pokemon/front/377",
+        "back": "pokemon/back/377",
+        "frontShiny": "pokemon/front-shiny/377",
+        "backShiny": "pokemon/back-shiny/377"
+      }
+    }
+  },
+  "REGICE": {
+    "id": 378,
+    "forms": {
+      "": {
+        "front": "pokemon/front/378",
+        "back": "pokemon/back/378",
+        "frontShiny": "pokemon/front-shiny/378",
+        "backShiny": "pokemon/back-shiny/378"
+      }
+    }
+  },
+  "REGISTEEL": {
+    "id": 379,
+    "forms": {
+      "": {
+        "front": "pokemon/front/379",
+        "back": "pokemon/back/379",
+        "frontShiny": "pokemon/front-shiny/379",
+        "backShiny": "pokemon/back-shiny/379"
+      }
+    }
+  },
+  "LATIAS": {
+    "id": 380,
+    "forms": {
+      "": {
+        "front": "pokemon/front/380",
+        "back": "pokemon/back/380",
+        "frontShiny": "pokemon/front-shiny/380",
+        "backShiny": "pokemon/back-shiny/380"
+      },
+      "mega": {
+        "front": "pokemon/front/380-mega",
+        "back": "pokemon/back/380-mega",
+        "frontShiny": "pokemon/front-shiny/380-mega",
+        "backShiny": "pokemon/back-shiny/380-mega"
+      }
+    }
+  },
+  "LATIOS": {
+    "id": 381,
+    "forms": {
+      "": {
+        "front": "pokemon/front/381",
+        "back": "pokemon/back/381",
+        "frontShiny": "pokemon/front-shiny/381",
+        "backShiny": "pokemon/back-shiny/381"
+      },
+      "mega": {
+        "front": "pokemon/front/381-mega",
+        "back": "pokemon/back/381-mega",
+        "frontShiny": "pokemon/front-shiny/381-mega",
+        "backShiny": "pokemon/back-shiny/381-mega"
+      }
+    }
+  },
+  "KYOGRE": {
+    "id": 382,
+    "forms": {
+      "": {
+        "front": "pokemon/front/382",
+        "back": "pokemon/back/382",
+        "frontShiny": "pokemon/front-shiny/382",
+        "backShiny": "pokemon/back-shiny/382"
+      },
+      "primal": {
+        "front": "pokemon/front/382-primal",
+        "back": "pokemon/back/382-primal",
+        "frontShiny": "pokemon/front-shiny/382-primal",
+        "backShiny": "pokemon/back-shiny/382-primal"
+      }
+    }
+  },
+  "GROUDON": {
+    "id": 383,
+    "forms": {
+      "": {
+        "front": "pokemon/front/383",
+        "back": "pokemon/back/383",
+        "frontShiny": "pokemon/front-shiny/383",
+        "backShiny": "pokemon/back-shiny/383"
+      },
+      "primal": {
+        "front": "pokemon/front/383-primal",
+        "back": "pokemon/back/383-primal",
+        "frontShiny": "pokemon/front-shiny/383-primal",
+        "backShiny": "pokemon/back-shiny/383-primal"
+      }
+    }
+  },
+  "RAYQUAZA": {
+    "id": 384,
+    "forms": {
+      "": {
+        "front": "pokemon/front/384",
+        "back": "pokemon/back/384",
+        "frontShiny": "pokemon/front-shiny/384",
+        "backShiny": "pokemon/back-shiny/384"
+      },
+      "mega": {
+        "front": "pokemon/front/384-mega",
+        "back": "pokemon/back/384-mega",
+        "frontShiny": "pokemon/front-shiny/384-mega",
+        "backShiny": "pokemon/back-shiny/384-mega"
+      }
+    }
+  },
+  "SPIRITOMB": {
+    "id": 442,
+    "forms": {
+      "": {
+        "front": "pokemon/front/442",
+        "back": "pokemon/back/442",
+        "frontShiny": "pokemon/front-shiny/442",
+        "backShiny": "pokemon/back-shiny/442"
+      }
+    }
+  },
+  "GIBLE": {
+    "id": 443,
+    "forms": {
+      "": {
+        "front": "pokemon/front/443",
+        "back": "pokemon/back/443",
+        "frontShiny": "pokemon/front-shiny/443",
+        "backShiny": "pokemon/back-shiny/443"
+      }
+    }
+  },
+  "GABITE": {
+    "id": 444,
+    "forms": {
+      "": {
+        "front": "pokemon/front/444",
+        "back": "pokemon/back/444",
+        "frontShiny": "pokemon/front-shiny/444",
+        "backShiny": "pokemon/back-shiny/444"
+      }
+    }
+  },
+  "GARCHOMP": {
+    "id": 445,
+    "forms": {
+      "": {
+        "front": "pokemon/front/445",
+        "back": "pokemon/back/445",
+        "frontShiny": "pokemon/front-shiny/445",
+        "backShiny": "pokemon/back-shiny/445"
+      },
+      "mega": {
+        "front": "pokemon/front/445-mega",
+        "back": "pokemon/back/445-mega",
+        "frontShiny": "pokemon/front-shiny/445-mega",
+        "backShiny": "pokemon/back-shiny/445-mega"
+      },
+      "mega-z": {
+        "front": "pokemon/front/445-mega-z",
+        "back": "pokemon/back/445-mega-z",
+        "frontShiny": "pokemon/front-shiny/445-mega-z",
+        "backShiny": "pokemon/back-shiny/445-mega-z"
+      }
+    }
+  },
+  "RIOLU": {
+    "id": 447,
+    "forms": {
+      "": {
+        "front": "pokemon/front/447",
+        "back": "pokemon/back/447",
+        "frontShiny": "pokemon/front-shiny/447",
+        "backShiny": "pokemon/back-shiny/447"
+      }
+    }
+  },
+  "LUCARIO": {
+    "id": 448,
+    "forms": {
+      "": {
+        "front": "pokemon/front/448",
+        "back": "pokemon/back/448",
+        "frontShiny": "pokemon/front-shiny/448",
+        "backShiny": "pokemon/back-shiny/448"
+      },
+      "mega": {
+        "front": "pokemon/front/448-mega",
+        "back": "pokemon/back/448-mega",
+        "frontShiny": "pokemon/front-shiny/448-mega",
+        "backShiny": "pokemon/back-shiny/448-mega"
+      },
+      "mega-z": {
+        "front": "pokemon/front/448-mega-z",
+        "back": "pokemon/back/448-mega-z",
+        "frontShiny": "pokemon/front-shiny/448-mega-z",
+        "backShiny": "pokemon/back-shiny/448-mega-z"
+      }
+    }
+  },
+  "DIALGA": {
+    "id": 483,
+    "forms": {
+      "": {
+        "front": "pokemon/front/483",
+        "back": "pokemon/back/483",
+        "frontShiny": "pokemon/front-shiny/483",
+        "backShiny": "pokemon/back-shiny/483"
+      },
+      "origin": {
+        "front": "pokemon/front/483-origin",
+        "back": "pokemon/back/483-origin",
+        "frontShiny": "pokemon/front-shiny/483-origin",
+        "backShiny": "pokemon/back-shiny/483-origin"
+      }
+    }
+  },
+  "PALKIA": {
+    "id": 484,
+    "forms": {
+      "": {
+        "front": "pokemon/front/484",
+        "back": "pokemon/back/484",
+        "frontShiny": "pokemon/front-shiny/484",
+        "backShiny": "pokemon/back-shiny/484"
+      },
+      "origin": {
+        "front": "pokemon/front/484-origin",
+        "back": "pokemon/back/484-origin",
+        "frontShiny": "pokemon/front-shiny/484-origin",
+        "backShiny": "pokemon/back-shiny/484-origin"
+      }
+    }
+  },
+  "GIRATINA": {
+    "id": 487,
+    "forms": {
+      "altered": {
+        "front": "pokemon/front/487-altered",
+        "back": "pokemon/back/487-altered",
+        "frontShiny": "pokemon/front-shiny/487-altered",
+        "backShiny": "pokemon/back-shiny/487-altered"
+      },
+      "origin": {
+        "front": "pokemon/front/487-origin",
+        "back": "pokemon/back/487-origin",
+        "frontShiny": "pokemon/front-shiny/487-origin",
+        "backShiny": "pokemon/back-shiny/487-origin"
+      }
+    }
+  },
+  "ARCEUS": {
+    "id": 493,
+    "forms": {
+      "normal": {
+        "front": "pokemon/front/493-normal",
+        "back": "pokemon/back/493-normal",
+        "frontShiny": "pokemon/front-shiny/493-normal",
+        "backShiny": "pokemon/back-shiny/493-normal"
+      },
+      "fighting": {
+        "front": "pokemon/front/493-fighting",
+        "back": "pokemon/back/493-fighting",
+        "frontShiny": "pokemon/front-shiny/493-fighting",
+        "backShiny": "pokemon/back-shiny/493-fighting"
+      },
+      "flying": {
+        "front": "pokemon/front/493-flying",
+        "back": "pokemon/back/493-flying",
+        "frontShiny": "pokemon/front-shiny/493-flying",
+        "backShiny": "pokemon/back-shiny/493-flying"
+      },
+      "poison": {
+        "front": "pokemon/front/493-poison",
+        "back": "pokemon/back/493-poison",
+        "frontShiny": "pokemon/front-shiny/493-poison",
+        "backShiny": "pokemon/back-shiny/493-poison"
+      },
+      "ground": {
+        "front": "pokemon/front/493-ground",
+        "back": "pokemon/back/493-ground",
+        "frontShiny": "pokemon/front-shiny/493-ground",
+        "backShiny": "pokemon/back-shiny/493-ground"
+      },
+      "rock": {
+        "front": "pokemon/front/493-rock",
+        "back": "pokemon/back/493-rock",
+        "frontShiny": "pokemon/front-shiny/493-rock",
+        "backShiny": "pokemon/back-shiny/493-rock"
+      },
+      "bug": {
+        "front": "pokemon/front/493-bug",
+        "back": "pokemon/back/493-bug",
+        "frontShiny": "pokemon/front-shiny/493-bug",
+        "backShiny": "pokemon/back-shiny/493-bug"
+      },
+      "ghost": {
+        "front": "pokemon/front/493-ghost",
+        "back": "pokemon/back/493-ghost",
+        "frontShiny": "pokemon/front-shiny/493-ghost",
+        "backShiny": "pokemon/back-shiny/493-ghost"
+      },
+      "steel": {
+        "front": "pokemon/front/493-steel",
+        "back": "pokemon/back/493-steel",
+        "frontShiny": "pokemon/front-shiny/493-steel",
+        "backShiny": "pokemon/back-shiny/493-steel"
+      },
+      "fire": {
+        "front": "pokemon/front/493-fire",
+        "back": "pokemon/back/493-fire",
+        "frontShiny": "pokemon/front-shiny/493-fire",
+        "backShiny": "pokemon/back-shiny/493-fire"
+      },
+      "water": {
+        "front": "pokemon/front/493-water",
+        "back": "pokemon/back/493-water",
+        "frontShiny": "pokemon/front-shiny/493-water",
+        "backShiny": "pokemon/back-shiny/493-water"
+      },
+      "grass": {
+        "front": "pokemon/front/493-grass",
+        "back": "pokemon/back/493-grass",
+        "frontShiny": "pokemon/front-shiny/493-grass",
+        "backShiny": "pokemon/back-shiny/493-grass"
+      },
+      "electric": {
+        "front": "pokemon/front/493-electric",
+        "back": "pokemon/back/493-electric",
+        "frontShiny": "pokemon/front-shiny/493-electric",
+        "backShiny": "pokemon/back-shiny/493-electric"
+      },
+      "psychic": {
+        "front": "pokemon/front/493-psychic",
+        "back": "pokemon/back/493-psychic",
+        "frontShiny": "pokemon/front-shiny/493-psychic",
+        "backShiny": "pokemon/back-shiny/493-psychic"
+      },
+      "ice": {
+        "front": "pokemon/front/493-ice",
+        "back": "pokemon/back/493-ice",
+        "frontShiny": "pokemon/front-shiny/493-ice",
+        "backShiny": "pokemon/back-shiny/493-ice"
+      },
+      "dragon": {
+        "front": "pokemon/front/493-dragon",
+        "back": "pokemon/back/493-dragon",
+        "frontShiny": "pokemon/front-shiny/493-dragon",
+        "backShiny": "pokemon/back-shiny/493-dragon"
+      },
+      "dark": {
+        "front": "pokemon/front/493-dark",
+        "back": "pokemon/back/493-dark",
+        "frontShiny": "pokemon/front-shiny/493-dark",
+        "backShiny": "pokemon/back-shiny/493-dark"
+      },
+      "fairy": {
+        "front": "pokemon/front/493-fairy",
+        "back": "pokemon/back/493-fairy",
+        "frontShiny": "pokemon/front-shiny/493-fairy",
+        "backShiny": "pokemon/back-shiny/493-fairy"
+      }
+    }
+  },
+  "TIMBURR": {
+    "id": 532,
+    "forms": {
+      "": {
+        "front": "pokemon/front/532",
+        "back": "pokemon/back/532",
+        "frontShiny": "pokemon/front-shiny/532",
+        "backShiny": "pokemon/back-shiny/532"
+      }
+    }
+  },
+  "GURDURR": {
+    "id": 533,
+    "forms": {
+      "": {
+        "front": "pokemon/front/533",
+        "back": "pokemon/back/533",
+        "frontShiny": "pokemon/front-shiny/533",
+        "backShiny": "pokemon/back-shiny/533"
+      }
+    }
+  },
+  "CONKELDURR": {
+    "id": 534,
+    "forms": {
+      "": {
+        "front": "pokemon/front/534",
+        "back": "pokemon/back/534",
+        "frontShiny": "pokemon/front-shiny/534",
+        "backShiny": "pokemon/back-shiny/534"
+      }
+    }
+  },
+  "SEWADDLE": {
+    "id": 540,
+    "forms": {
+      "": {
+        "front": "pokemon/front/540",
+        "back": "pokemon/back/540",
+        "frontShiny": "pokemon/front-shiny/540",
+        "backShiny": "pokemon/back-shiny/540"
+      }
+    }
+  },
+  "SWADLOON": {
+    "id": 541,
+    "forms": {
+      "": {
+        "front": "pokemon/front/541",
+        "back": "pokemon/back/541",
+        "frontShiny": "pokemon/front-shiny/541",
+        "backShiny": "pokemon/back-shiny/541"
+      }
+    }
+  },
+  "LEAVANNY": {
+    "id": 542,
+    "forms": {
+      "": {
+        "front": "pokemon/front/542",
+        "back": "pokemon/back/542",
+        "frontShiny": "pokemon/front-shiny/542",
+        "backShiny": "pokemon/back-shiny/542"
+      }
+    }
+  },
+  "KARRABLAST": {
+    "id": 588,
+    "forms": {
+      "": {
+        "front": "pokemon/front/588",
+        "back": "pokemon/back/588",
+        "frontShiny": "pokemon/front-shiny/588",
+        "backShiny": "pokemon/back-shiny/588"
+      }
+    }
+  },
+  "ESCAVALIER": {
+    "id": 589,
+    "forms": {
+      "": {
+        "front": "pokemon/front/589",
+        "back": "pokemon/back/589",
+        "frontShiny": "pokemon/front-shiny/589",
+        "backShiny": "pokemon/back-shiny/589"
+      }
+    }
+  },
+  "AXEW": {
+    "id": 610,
+    "forms": {
+      "": {
+        "front": "pokemon/front/610",
+        "back": "pokemon/back/610",
+        "frontShiny": "pokemon/front-shiny/610",
+        "backShiny": "pokemon/back-shiny/610"
+      }
+    }
+  },
+  "FRAXURE": {
+    "id": 611,
+    "forms": {
+      "": {
+        "front": "pokemon/front/611",
+        "back": "pokemon/back/611",
+        "frontShiny": "pokemon/front-shiny/611",
+        "backShiny": "pokemon/back-shiny/611"
+      }
+    }
+  },
+  "HAXORUS": {
+    "id": 612,
+    "forms": {
+      "": {
+        "front": "pokemon/front/612",
+        "back": "pokemon/back/612",
+        "frontShiny": "pokemon/front-shiny/612",
+        "backShiny": "pokemon/back-shiny/612"
+      }
+    }
+  },
+  "SHELMET": {
+    "id": 616,
+    "forms": {
+      "": {
+        "front": "pokemon/front/616",
+        "back": "pokemon/back/616",
+        "frontShiny": "pokemon/front-shiny/616",
+        "backShiny": "pokemon/back-shiny/616"
+      }
+    }
+  },
+  "ACCELGOR": {
+    "id": 617,
+    "forms": {
+      "": {
+        "front": "pokemon/front/617",
+        "back": "pokemon/back/617",
+        "frontShiny": "pokemon/front-shiny/617",
+        "backShiny": "pokemon/back-shiny/617"
+      }
+    }
+  },
+  "PAWNIARD": {
+    "id": 624,
+    "forms": {
+      "": {
+        "front": "pokemon/front/624",
+        "back": "pokemon/back/624",
+        "frontShiny": "pokemon/front-shiny/624",
+        "backShiny": "pokemon/back-shiny/624"
+      }
+    }
+  },
+  "BISHARP": {
+    "id": 625,
+    "forms": {
+      "": {
+        "front": "pokemon/front/625",
+        "back": "pokemon/back/625",
+        "frontShiny": "pokemon/front-shiny/625",
+        "backShiny": "pokemon/back-shiny/625"
+      }
+    }
+  },
+  "KINGAMBIT": {
+    "id": 983,
+    "forms": {
+      "": {
+        "front": "pokemon/front/983",
+        "back": "pokemon/back/983",
+        "frontShiny": "pokemon/front-shiny/983",
+        "backShiny": "pokemon/back-shiny/983"
+      }
+    }
+  },
+  "LARVESTA": {
+    "id": 636,
+    "forms": {
+      "": {
+        "front": "pokemon/front/636",
+        "back": "pokemon/back/636",
+        "frontShiny": "pokemon/front-shiny/636",
+        "backShiny": "pokemon/back-shiny/636"
+      }
+    }
+  },
+  "VOLCARONA": {
+    "id": 637,
+    "forms": {
+      "": {
+        "front": "pokemon/front/637",
+        "back": "pokemon/back/637",
+        "frontShiny": "pokemon/front-shiny/637",
+        "backShiny": "pokemon/back-shiny/637"
+      }
+    }
+  },
+  "RESHIRAM": {
+    "id": 643,
+    "forms": {
+      "": {
+        "front": "pokemon/front/643",
+        "back": "pokemon/back/643",
+        "frontShiny": "pokemon/front-shiny/643",
+        "backShiny": "pokemon/back-shiny/643"
+      }
+    }
+  },
+  "ZEKROM": {
+    "id": 644,
+    "forms": {
+      "": {
+        "front": "pokemon/front/644",
+        "back": "pokemon/back/644",
+        "frontShiny": "pokemon/front-shiny/644",
+        "backShiny": "pokemon/back-shiny/644"
+      }
+    }
+  },
+  "HONEDGE": {
+    "id": 679,
+    "forms": {
+      "": {
+        "front": "pokemon/front/679",
+        "back": "pokemon/back/679",
+        "frontShiny": "pokemon/front-shiny/679",
+        "backShiny": "pokemon/back-shiny/679"
+      }
+    }
+  },
+  "DOUBLADE": {
+    "id": 680,
+    "forms": {
+      "": {
+        "front": "pokemon/front/680",
+        "back": "pokemon/back/680",
+        "frontShiny": "pokemon/front-shiny/680",
+        "backShiny": "pokemon/back-shiny/680"
+      }
+    }
+  },
+  "AEGISLASH": {
+    "id": 681,
+    "forms": {
+      "shield": {
+        "front": "pokemon/front/681",
+        "back": "pokemon/back/681",
+        "frontShiny": "pokemon/front-shiny/681",
+        "backShiny": "pokemon/back-shiny/681"
+      },
+      "blade": {
+        "front": "pokemon/front/681-blade",
+        "back": "pokemon/back/681-blade",
+        "frontShiny": "pokemon/front-shiny/681-blade",
+        "backShiny": "pokemon/back-shiny/681-blade"
+      }
+    }
+  },
+  "HAWLUCHA": {
+    "id": 701,
+    "forms": {
+      "": {
+        "front": "pokemon/front/701",
+        "back": "pokemon/back/701",
+        "frontShiny": "pokemon/front-shiny/701",
+        "backShiny": "pokemon/back-shiny/701"
+      },
+      "mega": {
+        "front": "pokemon/front/701-mega",
+        "back": "pokemon/back/701-mega",
+        "frontShiny": "pokemon/front-shiny/701-mega",
+        "backShiny": "pokemon/back-shiny/701-mega"
+      }
+    }
+  },
+  "GOOMY": {
+    "id": 704,
+    "forms": {
+      "": {
+        "front": "pokemon/front/704",
+        "back": "pokemon/back/704",
+        "frontShiny": "pokemon/front-shiny/704",
+        "backShiny": "pokemon/back-shiny/704"
+      }
+    }
+  },
+  "SLIGGOO": {
+    "id": 705,
+    "forms": {
+      "": {
+        "front": "pokemon/front/705",
+        "back": "pokemon/back/705",
+        "frontShiny": "pokemon/front-shiny/705",
+        "backShiny": "pokemon/back-shiny/705"
+      }
+    }
+  },
+  "GOODRA": {
+    "id": 706,
+    "forms": {
+      "": {
+        "front": "pokemon/front/706",
+        "back": "pokemon/back/706",
+        "frontShiny": "pokemon/front-shiny/706",
+        "backShiny": "pokemon/back-shiny/706"
+      }
+    }
+  },
+  "XERNEAS": {
+    "id": 716,
+    "forms": {
+      "neutral": {
+        "front": "pokemon/front/716-neutral",
+        "back": "pokemon/back/716-neutral",
+        "frontShiny": "pokemon/front-shiny/716-neutral",
+        "backShiny": "pokemon/back-shiny/716-neutral"
+      },
+      "active": {
+        "front": "pokemon/front/716-active",
+        "back": "pokemon/back/716-active",
+        "frontShiny": "pokemon/front-shiny/716-active",
+        "backShiny": "pokemon/back-shiny/716-active"
+      }
+    }
+  },
+  "YVELTAL": {
+    "id": 717,
+    "forms": {
+      "": {
+        "front": "pokemon/front/717",
+        "back": "pokemon/back/717",
+        "frontShiny": "pokemon/front-shiny/717",
+        "backShiny": "pokemon/back-shiny/717"
+      }
+    }
+  },
+  "LITTEN": {
+    "id": 725,
+    "forms": {
+      "": {
+        "front": "pokemon/front/725",
+        "back": "pokemon/back/725",
+        "frontShiny": "pokemon/front-shiny/725",
+        "backShiny": "pokemon/back-shiny/725"
+      }
+    }
+  },
+  "TORRACAT": {
+    "id": 726,
+    "forms": {
+      "": {
+        "front": "pokemon/front/726",
+        "back": "pokemon/back/726",
+        "frontShiny": "pokemon/front-shiny/726",
+        "backShiny": "pokemon/back-shiny/726"
+      }
+    }
+  },
+  "INCINEROAR": {
+    "id": 727,
+    "forms": {
+      "": {
+        "front": "pokemon/front/727",
+        "back": "pokemon/back/727",
+        "frontShiny": "pokemon/front-shiny/727",
+        "backShiny": "pokemon/back-shiny/727"
+      }
+    }
+  },
+  "ROCKRUFF": {
+    "id": 744,
+    "forms": {
+      "": {
+        "front": "pokemon/front/744",
+        "back": "pokemon/back/744",
+        "frontShiny": "pokemon/front-shiny/744",
+        "backShiny": "pokemon/back-shiny/744"
+      },
+      "own-tempo": {
+        "front": "pokemon/front/744",
+        "back": "pokemon/back/744",
+        "frontShiny": "pokemon/front-shiny/744",
+        "backShiny": "pokemon/back-shiny/744"
+      }
+    }
+  },
+  "LYCANROC": {
+    "id": 745,
+    "forms": {
+      "midday": {
+        "front": "pokemon/front/745",
+        "back": "pokemon/back/745",
+        "frontShiny": "pokemon/front-shiny/745",
+        "backShiny": "pokemon/back-shiny/745"
+      },
+      "midnight": {
+        "front": "pokemon/front/745-midnight",
+        "back": "pokemon/back/745-midnight",
+        "frontShiny": "pokemon/front-shiny/745-midnight",
+        "backShiny": "pokemon/back-shiny/745-midnight"
+      },
+      "dusk": {
+        "front": "pokemon/front/745-dusk",
+        "back": "pokemon/back/745-dusk",
+        "frontShiny": "pokemon/front-shiny/745-dusk",
+        "backShiny": "pokemon/back-shiny/745-dusk"
+      }
+    }
+  },
+  "SOLGALEO": {
+    "id": 791,
+    "forms": {
+      "": {
+        "front": "pokemon/front/791",
+        "back": "pokemon/back/791",
+        "frontShiny": "pokemon/front-shiny/791_1",
+        "backShiny": "pokemon/back-shiny/791"
+      }
+    }
+  },
+  "LUNALA": {
+    "id": 792,
+    "forms": {
+      "": {
+        "front": "pokemon/front/792",
+        "back": "pokemon/back/792",
+        "frontShiny": "pokemon/front-shiny/792",
+        "backShiny": "pokemon/back-shiny/792"
+      }
+    }
+  },
+  "DREEPY": {
+    "id": 885,
+    "forms": {
+      "": {
+        "front": "pokemon/front/885",
+        "back": "pokemon/back/885",
+        "frontShiny": "pokemon/front-shiny/885",
+        "backShiny": "pokemon/back-shiny/885"
+      }
+    }
+  },
+  "DRAKLOAK": {
+    "id": 886,
+    "forms": {
+      "": {
+        "front": "pokemon/front/886",
+        "back": "pokemon/back/886",
+        "frontShiny": "pokemon/front-shiny/886",
+        "backShiny": "pokemon/back-shiny/886"
+      }
+    }
+  },
+  "DRAGAPULT": {
+    "id": 887,
+    "forms": {
+      "": {
+        "front": "pokemon/front/887",
+        "back": "pokemon/back/887",
+        "frontShiny": "pokemon/front-shiny/887",
+        "backShiny": "pokemon/back-shiny/887"
+      }
+    }
+  },
+  "ZACIAN": {
+    "id": 888,
+    "forms": {
+      "hero-of-many-battles": {
+        "front": "pokemon/front/888",
+        "back": "pokemon/back/888",
+        "frontShiny": "pokemon/front-shiny/888",
+        "backShiny": "pokemon/back-shiny/888"
+      },
+      "crowned": {
+        "front": "pokemon/front/888-crowned",
+        "back": "pokemon/back/888-crowned",
+        "frontShiny": "pokemon/front-shiny/888-crowned",
+        "backShiny": "pokemon/back-shiny/888-crowned"
+      }
+    }
+  },
+  "ZAMAZENTA": {
+    "id": 889,
+    "forms": {
+      "hero-of-many-battles": {
+        "front": "pokemon/front/889",
+        "back": "pokemon/back/889",
+        "frontShiny": "pokemon/front-shiny/889",
+        "backShiny": "pokemon/back-shiny/889"
+      },
+      "crowned": {
+        "front": "pokemon/front/889-crowned",
+        "back": "pokemon/back/889-crowned",
+        "frontShiny": "pokemon/front-shiny/889-crowned",
+        "backShiny": "pokemon/back-shiny/889-crowned"
+      }
+    }
+  },
+  "FLITTLE": {
+    "id": 955,
+    "forms": {
+      "": {
+        "front": "pokemon/front/955",
+        "back": "pokemon/back/955",
+        "frontShiny": "pokemon/front-shiny/955",
+        "backShiny": "pokemon/back-shiny/955"
+      }
+    }
+  },
+  "ESPATHRA": {
+    "id": 956,
+    "forms": {
+      "": {
+        "front": "pokemon/front/956",
+        "back": "pokemon/back/956",
+        "frontShiny": "pokemon/front-shiny/956",
+        "backShiny": "pokemon/back-shiny/956"
+      }
+    }
+  },
+  "GLIMMET": {
+    "id": 969,
+    "forms": {
+      "": {
+        "front": "pokemon/front/969",
+        "back": "pokemon/back/969",
+        "frontShiny": "pokemon/front-shiny/969",
+        "backShiny": "pokemon/back-shiny/969"
+      }
+    }
+  },
+  "GLIMMORA": {
+    "id": 970,
+    "forms": {
+      "": {
+        "front": "pokemon/front/970",
+        "back": "pokemon/back/970",
+        "frontShiny": "pokemon/front-shiny/970",
+        "backShiny": "pokemon/back-shiny/970"
+      },
+      "mega": {
+        "front": "pokemon/front/970-mega",
+        "back": "pokemon/back/970-mega",
+        "frontShiny": "pokemon/front-shiny/970-mega",
+        "backShiny": "pokemon/back-shiny/970-mega"
+      }
+    }
+  },
+  "KORAIDON": {
+    "id": 1007,
+    "forms": {
+      "apex-build": {
+        "front": "pokemon/front/1007-apex-build",
+        "back": "pokemon/back/1007-apex-build",
+        "frontShiny": "pokemon/front-shiny/1007-apex-build",
+        "backShiny": "pokemon/back-shiny/1007-apex-build"
+      }
+    }
+  },
+  "MIRAIDON": {
+    "id": 1008,
+    "forms": {
+      "ultimate-mode": {
+        "front": "pokemon/front/1008-ultimate-mode",
+        "back": "pokemon/back/1008-ultimate-mode",
+        "frontShiny": "pokemon/front-shiny/1008-ultimate-mode",
+        "backShiny": "pokemon/back-shiny/1008-ultimate-mode"
+      }
+    }
+  },
+  "TOTODILE": {
+    "id": 158,
+    "forms": {
+      "": {
+        "front": "pokemon/front/158",
+        "back": "pokemon/back/158",
+        "frontShiny": "pokemon/front-shiny/158",
+        "backShiny": "pokemon/back-shiny/158"
+      }
+    }
+  },
+  "CROCONAW": {
+    "id": 159,
+    "forms": {
+      "": {
+        "front": "pokemon/front/159",
+        "back": "pokemon/back/159",
+        "frontShiny": "pokemon/front-shiny/159",
+        "backShiny": "pokemon/back-shiny/159"
+      }
+    }
+  },
+  "FERALIGATR": {
+    "id": 160,
+    "forms": {
+      "": {
+        "front": "pokemon/front/160",
+        "back": "pokemon/back/160",
+        "frontShiny": "pokemon/front-shiny/160",
+        "backShiny": "pokemon/back-shiny/160"
+      },
+      "mega": {
+        "front": "pokemon/front/160-mega",
+        "back": "pokemon/back/160-mega",
+        "frontShiny": "pokemon/front-shiny/160-mega",
+        "backShiny": "pokemon/back-shiny/160-mega"
+      }
+    }
+  },
+  "MAREEP": {
+    "id": 179,
+    "forms": {
+      "": {
+        "front": "pokemon/front/179",
+        "back": "pokemon/back/179",
+        "frontShiny": "pokemon/front-shiny/179",
+        "backShiny": "pokemon/back-shiny/179"
+      }
+    }
+  },
+  "FLAAFFY": {
+    "id": 180,
+    "forms": {
+      "": {
+        "front": "pokemon/front/180",
+        "back": "pokemon/back/180",
+        "frontShiny": "pokemon/front-shiny/180",
+        "backShiny": "pokemon/back-shiny/180"
+      }
+    }
+  },
+  "AMPHAROS": {
+    "id": 181,
+    "forms": {
+      "": {
+        "front": "pokemon/front/181",
+        "back": "pokemon/back/181",
+        "frontShiny": "pokemon/front-shiny/181",
+        "backShiny": "pokemon/back-shiny/181"
+      },
+      "mega": {
+        "front": "pokemon/front/181-mega",
+        "back": "pokemon/back/181-mega",
+        "frontShiny": "pokemon/front-shiny/181-mega",
+        "backShiny": "pokemon/back-shiny/181-mega"
+      }
+    }
+  },
+  "SNEASEL": {
+    "id": 215,
+    "forms": {
+      "": {
+        "front": "pokemon/front/215",
+        "back": "pokemon/back/215",
+        "frontShiny": "pokemon/front-shiny/215",
+        "backShiny": "pokemon/back-shiny/215"
+      }
+    }
+  },
+  "WEAVILE": {
+    "id": 461,
+    "forms": {
+      "": {
+        "front": "pokemon/front/461",
+        "back": "pokemon/back/461",
+        "frontShiny": "pokemon/front-shiny/461",
+        "backShiny": "pokemon/back-shiny/461"
+      }
+    }
+  },
+  "HOUNDOUR": {
+    "id": 228,
+    "forms": {
+      "": {
+        "front": "pokemon/front/228",
+        "back": "pokemon/back/228",
+        "frontShiny": "pokemon/front-shiny/228",
+        "backShiny": "pokemon/back-shiny/228"
+      }
+    }
+  },
+  "HOUNDOOM": {
+    "id": 229,
+    "forms": {
+      "": {
+        "front": "pokemon/front/229",
+        "back": "pokemon/back/229",
+        "frontShiny": "pokemon/front-shiny/229",
+        "backShiny": "pokemon/back-shiny/229"
+      },
+      "mega": {
+        "front": "pokemon/front/229-mega",
+        "back": "pokemon/back/229-mega",
+        "frontShiny": "pokemon/front-shiny/229-mega",
+        "backShiny": "pokemon/back-shiny/229-mega"
+      }
+    }
+  },
+  "SWINUB": {
+    "id": 220,
+    "forms": {
+      "": {
+        "front": "pokemon/front/220",
+        "back": "pokemon/back/220",
+        "frontShiny": "pokemon/front-shiny/220",
+        "backShiny": "pokemon/back-shiny/220"
+      }
+    }
+  },
+  "PILOSWINE": {
+    "id": 221,
+    "forms": {
+      "": {
+        "front": "pokemon/front/221",
+        "back": "pokemon/back/221",
+        "frontShiny": "pokemon/front-shiny/221",
+        "backShiny": "pokemon/back-shiny/221"
+      }
+    }
+  },
+  "MAMOSWINE": {
+    "id": 473,
+    "forms": {
+      "": {
+        "front": "pokemon/front/473",
+        "back": "pokemon/back/473",
+        "frontShiny": "pokemon/front-shiny/473",
+        "backShiny": "pokemon/back-shiny/473"
+      }
+    }
+  },
+  "MUDKIP": {
+    "id": 258,
+    "forms": {
+      "": {
+        "front": "pokemon/front/258",
+        "back": "pokemon/back/258",
+        "frontShiny": "pokemon/front-shiny/258",
+        "backShiny": "pokemon/back-shiny/258"
+      }
+    }
+  },
+  "MARSHTOMP": {
+    "id": 259,
+    "forms": {
+      "": {
+        "front": "pokemon/front/259",
+        "back": "pokemon/back/259",
+        "frontShiny": "pokemon/front-shiny/259",
+        "backShiny": "pokemon/back-shiny/259"
+      }
+    }
+  },
+  "SWAMPERT": {
+    "id": 260,
+    "forms": {
+      "": {
+        "front": "pokemon/front/260",
+        "back": "pokemon/back/260",
+        "frontShiny": "pokemon/front-shiny/260",
+        "backShiny": "pokemon/back-shiny/260"
+      },
+      "mega": {
+        "front": "pokemon/front/260-mega",
+        "back": "pokemon/back/260-mega",
+        "frontShiny": "pokemon/front-shiny/260-mega",
+        "backShiny": "pokemon/back-shiny/260-mega"
+      }
+    }
+  },
+  "TREECKO": {
+    "id": 252,
+    "forms": {
+      "": {
+        "front": "pokemon/front/252",
+        "back": "pokemon/back/252",
+        "frontShiny": "pokemon/front-shiny/252",
+        "backShiny": "pokemon/back-shiny/252"
+      }
+    }
+  },
+  "GROVYLE": {
+    "id": 253,
+    "forms": {
+      "": {
+        "front": "pokemon/front/253",
+        "back": "pokemon/back/253",
+        "frontShiny": "pokemon/front-shiny/253",
+        "backShiny": "pokemon/back-shiny/253"
+      }
+    }
+  },
+  "SCEPTILE": {
+    "id": 254,
+    "forms": {
+      "": {
+        "front": "pokemon/front/254",
+        "back": "pokemon/back/254",
+        "frontShiny": "pokemon/front-shiny/254",
+        "backShiny": "pokemon/back-shiny/254"
+      },
+      "mega": {
+        "front": "pokemon/front/254-mega",
+        "back": "pokemon/back/254-mega",
+        "frontShiny": "pokemon/front-shiny/254-mega",
+        "backShiny": "pokemon/back-shiny/254-mega"
+      }
+    }
+  },
+  "ABSOL": {
+    "id": 359,
+    "forms": {
+      "": {
+        "front": "pokemon/front/359",
+        "back": "pokemon/back/359",
+        "frontShiny": "pokemon/front-shiny/359",
+        "backShiny": "pokemon/back-shiny/359"
+      },
+      "mega": {
+        "front": "pokemon/front/359-mega",
+        "back": "pokemon/back/359-mega",
+        "frontShiny": "pokemon/front-shiny/359-mega",
+        "backShiny": "pokemon/back-shiny/359-mega"
+      },
+      "mega-z": {
+        "front": "pokemon/front/359-mega-z",
+        "back": "pokemon/back/359-mega-z",
+        "frontShiny": "pokemon/front-shiny/359-mega-z",
+        "backShiny": "pokemon/back-shiny/359-mega-z"
+      }
+    }
+  },
+  "SNORUNT": {
+    "id": 361,
+    "forms": {
+      "": {
+        "front": "pokemon/front/361",
+        "back": "pokemon/back/361",
+        "frontShiny": "pokemon/front-shiny/361",
+        "backShiny": "pokemon/back-shiny/361"
+      }
+    }
+  },
+  "GLALIE": {
+    "id": 362,
+    "forms": {
+      "": {
+        "front": "pokemon/front/362",
+        "back": "pokemon/back/362",
+        "frontShiny": "pokemon/front-shiny/362",
+        "backShiny": "pokemon/back-shiny/362"
+      },
+      "mega": {
+        "front": "pokemon/front/362-mega",
+        "back": "pokemon/back/362-mega",
+        "frontShiny": "pokemon/front-shiny/362-mega",
+        "backShiny": "pokemon/back-shiny/362-mega"
+      }
+    }
+  },
+  "FROSLASS": {
+    "id": 478,
+    "forms": {
+      "": {
+        "front": "pokemon/front/478",
+        "back": "pokemon/back/478",
+        "frontShiny": "pokemon/front-shiny/478",
+        "backShiny": "pokemon/back-shiny/478"
+      },
+      "mega": {
+        "front": "pokemon/front/478-mega",
+        "back": "pokemon/back/478-mega",
+        "frontShiny": "pokemon/front-shiny/478-mega",
+        "backShiny": "pokemon/back-shiny/478-mega"
+      }
+    }
+  },
+  "MAWILE": {
+    "id": 303,
+    "forms": {
+      "": {
+        "front": "pokemon/front/303",
+        "back": "pokemon/back/303",
+        "frontShiny": "pokemon/front-shiny/303",
+        "backShiny": "pokemon/back-shiny/303"
+      },
+      "mega": {
+        "front": "pokemon/front/303-mega",
+        "back": "pokemon/back/303-mega",
+        "frontShiny": "pokemon/front-shiny/303-mega",
+        "backShiny": "pokemon/back-shiny/303-mega"
+      }
+    }
+  },
+  "ELECTRIKE": {
+    "id": 309,
+    "forms": {
+      "": {
+        "front": "pokemon/front/309",
+        "back": "pokemon/back/309",
+        "frontShiny": "pokemon/front-shiny/309",
+        "backShiny": "pokemon/back-shiny/309"
+      }
+    }
+  },
+  "MANECTRIC": {
+    "id": 310,
+    "forms": {
+      "": {
+        "front": "pokemon/front/310",
+        "back": "pokemon/back/310",
+        "frontShiny": "pokemon/front-shiny/310",
+        "backShiny": "pokemon/back-shiny/310"
+      },
+      "mega": {
+        "front": "pokemon/front/310-mega",
+        "back": "pokemon/back/310-mega",
+        "frontShiny": "pokemon/front-shiny/310-mega",
+        "backShiny": "pokemon/back-shiny/310-mega"
+      }
+    }
+  },
+  "PIPLUP": {
+    "id": 393,
+    "forms": {
+      "": {
+        "front": "pokemon/front/393",
+        "back": "pokemon/back/393",
+        "frontShiny": "pokemon/front-shiny/393",
+        "backShiny": "pokemon/back-shiny/393"
+      }
+    }
+  },
+  "PRINPLUP": {
+    "id": 394,
+    "forms": {
+      "": {
+        "front": "pokemon/front/394",
+        "back": "pokemon/back/394",
+        "frontShiny": "pokemon/front-shiny/394",
+        "backShiny": "pokemon/back-shiny/394"
+      }
+    }
+  },
+  "EMPOLEON": {
+    "id": 395,
+    "forms": {
+      "": {
+        "front": "pokemon/front/395",
+        "back": "pokemon/back/395",
+        "frontShiny": "pokemon/front-shiny/395",
+        "backShiny": "pokemon/back-shiny/395"
+      }
+    }
+  },
+  "SHINX": {
+    "id": 403,
+    "forms": {
+      "": {
+        "front": "pokemon/front/403",
+        "back": "pokemon/back/403",
+        "frontShiny": "pokemon/front-shiny/403",
+        "backShiny": "pokemon/back-shiny/403"
+      }
+    }
+  },
+  "LUXIO": {
+    "id": 404,
+    "forms": {
+      "": {
+        "front": "pokemon/front/404",
+        "back": "pokemon/back/404",
+        "frontShiny": "pokemon/front-shiny/404",
+        "backShiny": "pokemon/back-shiny/404"
+      }
+    }
+  },
+  "LUXRAY": {
+    "id": 405,
+    "forms": {
+      "": {
+        "front": "pokemon/front/405",
+        "back": "pokemon/back/405",
+        "frontShiny": "pokemon/front-shiny/405",
+        "backShiny": "pokemon/back-shiny/405"
+      }
+    }
+  },
+  "SNOVER": {
+    "id": 459,
+    "forms": {
+      "": {
+        "front": "pokemon/front/459",
+        "back": "pokemon/back/459",
+        "frontShiny": "pokemon/front-shiny/459",
+        "backShiny": "pokemon/back-shiny/459"
+      }
+    }
+  },
+  "ABOMASNOW": {
+    "id": 460,
+    "forms": {
+      "": {
+        "front": "pokemon/front/460",
+        "back": "pokemon/back/460",
+        "frontShiny": "pokemon/front-shiny/460",
+        "backShiny": "pokemon/back-shiny/460"
+      },
+      "mega": {
+        "front": "pokemon/front/460-mega",
+        "back": "pokemon/back/460-mega",
+        "frontShiny": "pokemon/front-shiny/460-mega",
+        "backShiny": "pokemon/back-shiny/460-mega"
+      }
+    }
+  },
+  "BUNEARY": {
+    "id": 427,
+    "forms": {
+      "": {
+        "front": "pokemon/front/427",
+        "back": "pokemon/back/427",
+        "frontShiny": "pokemon/front-shiny/427",
+        "backShiny": "pokemon/back-shiny/427"
+      }
+    }
+  },
+  "LOPUNNY": {
+    "id": 428,
+    "forms": {
+      "": {
+        "front": "pokemon/front/428",
+        "back": "pokemon/back/428",
+        "frontShiny": "pokemon/front-shiny/428",
+        "backShiny": "pokemon/back-shiny/428"
+      },
+      "mega": {
+        "front": "pokemon/front/428-mega",
+        "back": "pokemon/back/428-mega",
+        "frontShiny": "pokemon/front-shiny/428-mega",
+        "backShiny": "pokemon/back-shiny/428-mega"
+      }
+    }
+  },
+  "JOLTIK": {
+    "id": 595,
+    "forms": {
+      "": {
+        "front": "pokemon/front/595",
+        "back": "pokemon/back/595",
+        "frontShiny": "pokemon/front-shiny/595",
+        "backShiny": "pokemon/back-shiny/595"
+      }
+    }
+  },
+  "GALVANTULA": {
+    "id": 596,
+    "forms": {
+      "": {
+        "front": "pokemon/front/596",
+        "back": "pokemon/back/596",
+        "frontShiny": "pokemon/front-shiny/596",
+        "backShiny": "pokemon/back-shiny/596"
+      }
+    }
+  },
+  "LITWICK": {
+    "id": 607,
+    "forms": {
+      "": {
+        "front": "pokemon/front/607",
+        "back": "pokemon/back/607",
+        "frontShiny": "pokemon/front-shiny/607",
+        "backShiny": "pokemon/back-shiny/607"
+      }
+    }
+  },
+  "LAMPENT": {
+    "id": 608,
+    "forms": {
+      "": {
+        "front": "pokemon/front/608",
+        "back": "pokemon/back/608",
+        "frontShiny": "pokemon/front-shiny/608",
+        "backShiny": "pokemon/back-shiny/608"
+      }
+    }
+  },
+  "CHANDELURE": {
+    "id": 609,
+    "forms": {
+      "": {
+        "front": "pokemon/front/609",
+        "back": "pokemon/back/609",
+        "frontShiny": "pokemon/front-shiny/609",
+        "backShiny": "pokemon/back-shiny/609"
+      },
+      "mega": {
+        "front": "pokemon/front/609-mega",
+        "back": "pokemon/back/609-mega",
+        "frontShiny": "pokemon/front-shiny/609-mega",
+        "backShiny": "pokemon/back-shiny/609-mega"
+      }
+    }
+  },
+  "CUBCHOO": {
+    "id": 613,
+    "forms": {
+      "": {
+        "front": "pokemon/front/613",
+        "back": "pokemon/back/613",
+        "frontShiny": "pokemon/front-shiny/613",
+        "backShiny": "pokemon/back-shiny/613"
+      }
+    }
+  },
+  "BEARTIC": {
+    "id": 614,
+    "forms": {
+      "": {
+        "front": "pokemon/front/614",
+        "back": "pokemon/back/614",
+        "frontShiny": "pokemon/front-shiny/614",
+        "backShiny": "pokemon/back-shiny/614"
+      }
+    }
+  },
+  "DEINO": {
+    "id": 633,
+    "forms": {
+      "": {
+        "front": "pokemon/front/633",
+        "back": "pokemon/back/633",
+        "frontShiny": "pokemon/front-shiny/633",
+        "backShiny": "pokemon/back-shiny/633"
+      }
+    }
+  },
+  "ZWEILOUS": {
+    "id": 634,
+    "forms": {
+      "": {
+        "front": "pokemon/front/634",
+        "back": "pokemon/back/634",
+        "frontShiny": "pokemon/front-shiny/634",
+        "backShiny": "pokemon/back-shiny/634"
+      }
+    }
+  },
+  "HYDREIGON": {
+    "id": 635,
+    "forms": {
+      "": {
+        "front": "pokemon/front/635",
+        "back": "pokemon/back/635",
+        "frontShiny": "pokemon/front-shiny/635",
+        "backShiny": "pokemon/back-shiny/635"
+      }
+    }
+  },
+  "SANDILE": {
+    "id": 551,
+    "forms": {
+      "": {
+        "front": "pokemon/front/551",
+        "back": "pokemon/back/551",
+        "frontShiny": "pokemon/front-shiny/551",
+        "backShiny": "pokemon/back-shiny/551"
+      }
+    }
+  },
+  "KROKOROK": {
+    "id": 552,
+    "forms": {
+      "": {
+        "front": "pokemon/front/552",
+        "back": "pokemon/back/552",
+        "frontShiny": "pokemon/front-shiny/552",
+        "backShiny": "pokemon/back-shiny/552"
+      }
+    }
+  },
+  "KROOKODILE": {
+    "id": 553,
+    "forms": {
+      "": {
+        "front": "pokemon/front/553",
+        "back": "pokemon/back/553",
+        "frontShiny": "pokemon/front-shiny/553",
+        "backShiny": "pokemon/back-shiny/553"
+      }
+    }
+  },
+  "MINCCINO": {
+    "id": 572,
+    "forms": {
+      "": {
+        "front": "pokemon/front/572",
+        "back": "pokemon/back/572",
+        "frontShiny": "pokemon/front-shiny/572",
+        "backShiny": "pokemon/back-shiny/572"
+      }
+    }
+  },
+  "CINCCINO": {
+    "id": 573,
+    "forms": {
+      "": {
+        "front": "pokemon/front/573",
+        "back": "pokemon/back/573",
+        "frontShiny": "pokemon/front-shiny/573",
+        "backShiny": "pokemon/back-shiny/573"
+      }
+    }
+  },
+  "FROAKIE": {
+    "id": 656,
+    "forms": {
+      "": {
+        "front": "pokemon/front/656",
+        "back": "pokemon/back/656",
+        "frontShiny": "pokemon/front-shiny/656",
+        "backShiny": "pokemon/back-shiny/656"
+      }
+    }
+  },
+  "FROGADIER": {
+    "id": 657,
+    "forms": {
+      "": {
+        "front": "pokemon/front/657",
+        "back": "pokemon/back/657",
+        "frontShiny": "pokemon/front-shiny/657",
+        "backShiny": "pokemon/back-shiny/657"
+      }
+    }
+  },
+  "GRENINJA": {
+    "id": 658,
+    "forms": {
+      "": {
+        "front": "pokemon/front/658",
+        "back": "pokemon/back/658",
+        "frontShiny": "pokemon/front-shiny/658",
+        "backShiny": "pokemon/back-shiny/658"
+      },
+      "mega": {
+        "front": "pokemon/front/658-mega",
+        "back": "pokemon/back/658-mega",
+        "frontShiny": "pokemon/front-shiny/658-mega",
+        "backShiny": "pokemon/back-shiny/658-mega"
+      }
+    }
+  },
+  "FLETCHLING": {
+    "id": 661,
+    "forms": {
+      "": {
+        "front": "pokemon/front/661",
+        "back": "pokemon/back/661",
+        "frontShiny": "pokemon/front-shiny/661",
+        "backShiny": "pokemon/back-shiny/661"
+      }
+    }
+  },
+  "FLETCHINDER": {
+    "id": 662,
+    "forms": {
+      "": {
+        "front": "pokemon/front/662",
+        "back": "pokemon/back/662",
+        "frontShiny": "pokemon/front-shiny/662",
+        "backShiny": "pokemon/back-shiny/662"
+      }
+    }
+  },
+  "TALONFLAME": {
+    "id": 663,
+    "forms": {
+      "": {
+        "front": "pokemon/front/663",
+        "back": "pokemon/back/663",
+        "frontShiny": "pokemon/front-shiny/663",
+        "backShiny": "pokemon/back-shiny/663"
+      }
+    }
+  },
+  "HELIOPTILE": {
+    "id": 694,
+    "forms": {
+      "": {
+        "front": "pokemon/front/694",
+        "back": "pokemon/back/694",
+        "frontShiny": "pokemon/front-shiny/694",
+        "backShiny": "pokemon/back-shiny/694"
+      }
+    }
+  },
+  "HELIOLISK": {
+    "id": 695,
+    "forms": {
+      "": {
+        "front": "pokemon/front/695",
+        "back": "pokemon/back/695",
+        "frontShiny": "pokemon/front-shiny/695",
+        "backShiny": "pokemon/back-shiny/695"
+      }
+    }
+  },
+  "SPRITZEE": {
+    "id": 682,
+    "forms": {
+      "": {
+        "front": "pokemon/front/682",
+        "back": "pokemon/back/682",
+        "frontShiny": "pokemon/front-shiny/682",
+        "backShiny": "pokemon/back-shiny/682"
+      }
+    }
+  },
+  "AROMATISSE": {
+    "id": 683,
+    "forms": {
+      "": {
+        "front": "pokemon/front/683",
+        "back": "pokemon/back/683",
+        "frontShiny": "pokemon/front-shiny/683",
+        "backShiny": "pokemon/back-shiny/683"
+      }
+    }
+  },
+  "ROWLET": {
+    "id": 722,
+    "forms": {
+      "": {
+        "front": "pokemon/front/722",
+        "back": "pokemon/back/722",
+        "frontShiny": "pokemon/front-shiny/722",
+        "backShiny": "pokemon/back-shiny/722"
+      }
+    }
+  },
+  "DARTRIX": {
+    "id": 723,
+    "forms": {
+      "": {
+        "front": "pokemon/front/723",
+        "back": "pokemon/back/723",
+        "frontShiny": "pokemon/front-shiny/723",
+        "backShiny": "pokemon/back-shiny/723"
+      }
+    }
+  },
+  "DECIDUEYE": {
+    "id": 724,
+    "forms": {
+      "": {
+        "front": "pokemon/front/724",
+        "back": "pokemon/back/724",
+        "frontShiny": "pokemon/front-shiny/724",
+        "backShiny": "pokemon/back-shiny/724"
+      }
+    }
+  },
+  "POPPLIO": {
+    "id": 728,
+    "forms": {
+      "": {
+        "front": "pokemon/front/728",
+        "back": "pokemon/back/728",
+        "frontShiny": "pokemon/front-shiny/728",
+        "backShiny": "pokemon/back-shiny/728"
+      }
+    }
+  },
+  "BRIONNE": {
+    "id": 729,
+    "forms": {
+      "": {
+        "front": "pokemon/front/729",
+        "back": "pokemon/back/729",
+        "frontShiny": "pokemon/front-shiny/729",
+        "backShiny": "pokemon/back-shiny/729"
+      }
+    }
+  },
+  "PRIMARINA": {
+    "id": 730,
+    "forms": {
+      "": {
+        "front": "pokemon/front/730",
+        "back": "pokemon/back/730",
+        "frontShiny": "pokemon/front-shiny/730",
+        "backShiny": "pokemon/back-shiny/730"
+      }
+    }
+  },
+  "GRUBBIN": {
+    "id": 736,
+    "forms": {
+      "": {
+        "front": "pokemon/front/736",
+        "back": "pokemon/back/736",
+        "frontShiny": "pokemon/front-shiny/736",
+        "backShiny": "pokemon/back-shiny/736"
+      }
+    }
+  },
+  "CHARJABUG": {
+    "id": 737,
+    "forms": {
+      "": {
+        "front": "pokemon/front/737",
+        "back": "pokemon/back/737",
+        "frontShiny": "pokemon/front-shiny/737",
+        "backShiny": "pokemon/back-shiny/737"
+      }
+    }
+  },
+  "VIKAVOLT": {
+    "id": 738,
+    "forms": {
+      "": {
+        "front": "pokemon/front/738",
+        "back": "pokemon/back/738",
+        "frontShiny": "pokemon/front-shiny/738",
+        "backShiny": "pokemon/back-shiny/738"
+      }
+    }
+  },
+  "SALANDIT": {
+    "id": 757,
+    "forms": {
+      "": {
+        "front": "pokemon/front/757",
+        "back": "pokemon/back/757",
+        "frontShiny": "pokemon/front-shiny/757",
+        "backShiny": "pokemon/back-shiny/757"
+      }
+    }
+  },
+  "SALAZZLE": {
+    "id": 758,
+    "forms": {
+      "": {
+        "front": "pokemon/front/758",
+        "back": "pokemon/back/758",
+        "frontShiny": "pokemon/front-shiny/758",
+        "backShiny": "pokemon/back-shiny/758"
+      }
+    }
+  },
+  "MIMIKYU": {
+    "id": 778,
+    "forms": {
+      "disguised": {
+        "front": "pokemon/front/778-disguised",
+        "back": "pokemon/back/778-disguised",
+        "frontShiny": "pokemon/front-shiny/778-disguised",
+        "backShiny": "pokemon/back-shiny/778-disguised"
+      },
+      "busted": {
+        "front": "pokemon/front/778-busted",
+        "back": "pokemon/back/778-busted",
+        "frontShiny": "pokemon/front-shiny/778-busted",
+        "backShiny": "pokemon/back-shiny/778-busted"
+      }
+    }
+  },
+  "TAPU_KOKO": {
+    "id": 785,
+    "forms": {
+      "": {
+        "front": "pokemon/front/785",
+        "back": "pokemon/back/785",
+        "frontShiny": "pokemon/front-shiny/785",
+        "backShiny": "pokemon/back-shiny/785"
+      }
+    }
+  },
+  "TAPU_LELE": {
+    "id": 786,
+    "forms": {
+      "": {
+        "front": "pokemon/front/786",
+        "back": "pokemon/back/786",
+        "frontShiny": "pokemon/front-shiny/786",
+        "backShiny": "pokemon/back-shiny/786"
+      }
+    }
+  },
+  "TAPU_BULU": {
+    "id": 787,
+    "forms": {
+      "": {
+        "front": "pokemon/front/787",
+        "back": "pokemon/back/787",
+        "frontShiny": "pokemon/front-shiny/787",
+        "backShiny": "pokemon/back-shiny/787"
+      }
+    }
+  },
+  "TAPU_FINI": {
+    "id": 788,
+    "forms": {
+      "": {
+        "front": "pokemon/front/788",
+        "back": "pokemon/back/788",
+        "frontShiny": "pokemon/front-shiny/788",
+        "backShiny": "pokemon/back-shiny/788"
+      }
+    }
+  },
+  "GROOKEY": {
+    "id": 810,
+    "forms": {
+      "": {
+        "front": "pokemon/front/810",
+        "back": "pokemon/back/810",
+        "frontShiny": "pokemon/front-shiny/810",
+        "backShiny": "pokemon/back-shiny/810"
+      }
+    }
+  },
+  "THWACKEY": {
+    "id": 811,
+    "forms": {
+      "": {
+        "front": "pokemon/front/811",
+        "back": "pokemon/back/811",
+        "frontShiny": "pokemon/front-shiny/811",
+        "backShiny": "pokemon/back-shiny/811"
+      }
+    }
+  },
+  "RILLABOOM": {
+    "id": 812,
+    "forms": {
+      "": {
+        "front": "pokemon/front/812",
+        "back": "pokemon/back/812",
+        "frontShiny": "pokemon/front-shiny/812",
+        "backShiny": "pokemon/back-shiny/812"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/812-gigantamax",
+        "back": "pokemon/back/812-gigantamax",
+        "frontShiny": "pokemon/front-shiny/812-gigantamax",
+        "backShiny": "pokemon/back-shiny/812-gigantamax"
+      }
+    }
+  },
+  "SCORBUNNY": {
+    "id": 813,
+    "forms": {
+      "": {
+        "front": "pokemon/front/813",
+        "back": "pokemon/back/813",
+        "frontShiny": "pokemon/front-shiny/813",
+        "backShiny": "pokemon/back-shiny/813"
+      }
+    }
+  },
+  "RABOOT": {
+    "id": 814,
+    "forms": {
+      "": {
+        "front": "pokemon/front/814",
+        "back": "pokemon/back/814",
+        "frontShiny": "pokemon/front-shiny/814",
+        "backShiny": "pokemon/back-shiny/814"
+      }
+    }
+  },
+  "CINDERACE": {
+    "id": 815,
+    "forms": {
+      "": {
+        "front": "pokemon/front/815",
+        "back": "pokemon/back/815",
+        "frontShiny": "pokemon/front-shiny/815",
+        "backShiny": "pokemon/back-shiny/815"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/815-gigantamax",
+        "back": "pokemon/back/815-gigantamax",
+        "frontShiny": "pokemon/front-shiny/815-gigantamax",
+        "backShiny": "pokemon/back-shiny/815-gigantamax"
+      }
+    }
+  },
+  "SOBBLE": {
+    "id": 816,
+    "forms": {
+      "": {
+        "front": "pokemon/front/816",
+        "back": "pokemon/back/816",
+        "frontShiny": "pokemon/front-shiny/816",
+        "backShiny": "pokemon/back-shiny/816"
+      }
+    }
+  },
+  "DRIZZILE": {
+    "id": 817,
+    "forms": {
+      "": {
+        "front": "pokemon/front/817",
+        "back": "pokemon/back/817",
+        "frontShiny": "pokemon/front-shiny/817",
+        "backShiny": "pokemon/back-shiny/817"
+      }
+    }
+  },
+  "INTELEON": {
+    "id": 818,
+    "forms": {
+      "": {
+        "front": "pokemon/front/818",
+        "back": "pokemon/back/818",
+        "frontShiny": "pokemon/front-shiny/818",
+        "backShiny": "pokemon/back-shiny/818"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/818-gigantamax",
+        "back": "pokemon/back/818-gigantamax",
+        "frontShiny": "pokemon/front-shiny/818-gigantamax",
+        "backShiny": "pokemon/back-shiny/818-gigantamax"
+      }
+    }
+  },
+  "TOXEL": {
+    "id": 848,
+    "forms": {
+      "": {
+        "front": "pokemon/front/848",
+        "back": "pokemon/back/848",
+        "frontShiny": "pokemon/front-shiny/848",
+        "backShiny": "pokemon/back-shiny/848"
+      }
+    }
+  },
+  "TOXTRICITY": {
+    "id": 849,
+    "forms": {
+      "amped": {
+        "front": "pokemon/front/849",
+        "back": "pokemon/back/849",
+        "frontShiny": "pokemon/front-shiny/849",
+        "backShiny": "pokemon/back-shiny/849"
+      },
+      "lowkey": {
+        "front": "pokemon/front/849-lowkey",
+        "back": "pokemon/back/849-lowkey",
+        "frontShiny": "pokemon/front-shiny/849-lowkey",
+        "backShiny": "pokemon/back-shiny/849-lowkey"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/849-gigantamax",
+        "back": "pokemon/back/849-gigantamax",
+        "frontShiny": "pokemon/front-shiny/849-gigantamax",
+        "backShiny": "pokemon/back-shiny/849-gigantamax"
+      }
+    }
+  },
+  "HATENNA": {
+    "id": 856,
+    "forms": {
+      "": {
+        "front": "pokemon/front/856",
+        "back": "pokemon/back/856",
+        "frontShiny": "pokemon/front-shiny/856",
+        "backShiny": "pokemon/back-shiny/856"
+      }
+    }
+  },
+  "HATTREM": {
+    "id": 857,
+    "forms": {
+      "": {
+        "front": "pokemon/front/857",
+        "back": "pokemon/back/857",
+        "frontShiny": "pokemon/front-shiny/857",
+        "backShiny": "pokemon/back-shiny/857"
+      }
+    }
+  },
+  "HATTERENE": {
+    "id": 858,
+    "forms": {
+      "": {
+        "front": "pokemon/front/858",
+        "back": "pokemon/back/858",
+        "frontShiny": "pokemon/front-shiny/858",
+        "backShiny": "pokemon/back-shiny/858"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/858-gigantamax",
+        "back": "pokemon/back/858-gigantamax",
+        "frontShiny": "pokemon/front-shiny/858-gigantamax",
+        "backShiny": "pokemon/back-shiny/858-gigantamax"
+      }
+    }
+  },
+  "IMPIDIMP": {
+    "id": 859,
+    "forms": {
+      "": {
+        "front": "pokemon/front/859",
+        "back": "pokemon/back/859",
+        "frontShiny": "pokemon/front-shiny/859",
+        "backShiny": "pokemon/back-shiny/859"
+      }
+    }
+  },
+  "MORGREM": {
+    "id": 860,
+    "forms": {
+      "": {
+        "front": "pokemon/front/860",
+        "back": "pokemon/back/860",
+        "frontShiny": "pokemon/front-shiny/860",
+        "backShiny": "pokemon/back-shiny/860"
+      }
+    }
+  },
+  "GRIMMSNARL": {
+    "id": 861,
+    "forms": {
+      "": {
+        "front": "pokemon/front/861",
+        "back": "pokemon/back/861",
+        "frontShiny": "pokemon/front-shiny/861",
+        "backShiny": "pokemon/back-shiny/861"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/861-gigantamax",
+        "back": "pokemon/back/861-gigantamax",
+        "frontShiny": "pokemon/front-shiny/861-gigantamax",
+        "backShiny": "pokemon/back-shiny/861-gigantamax"
+      }
+    }
+  },
+  "SNOM": {
+    "id": 872,
+    "forms": {
+      "": {
+        "front": "pokemon/front/872",
+        "back": "pokemon/back/872",
+        "frontShiny": "pokemon/front-shiny/872",
+        "backShiny": "pokemon/back-shiny/872"
+      }
+    }
+  },
+  "FROSMOTH": {
+    "id": 873,
+    "forms": {
+      "": {
+        "front": "pokemon/front/873",
+        "back": "pokemon/back/873",
+        "frontShiny": "pokemon/front-shiny/873",
+        "backShiny": "pokemon/back-shiny/873"
+      }
+    }
+  },
+  "SPRIGATITO": {
+    "id": 906,
+    "forms": {
+      "": {
+        "front": "pokemon/front/906",
+        "back": "pokemon/back/906",
+        "frontShiny": "pokemon/front-shiny/906",
+        "backShiny": "pokemon/back-shiny/906"
+      }
+    }
+  },
+  "FLORAGATO": {
+    "id": 907,
+    "forms": {
+      "": {
+        "front": "pokemon/front/907",
+        "back": "pokemon/back/907",
+        "frontShiny": "pokemon/front-shiny/907",
+        "backShiny": "pokemon/back-shiny/907"
+      }
+    }
+  },
+  "MEOWSCARADA": {
+    "id": 908,
+    "forms": {
+      "": {
+        "front": "pokemon/front/908",
+        "back": "pokemon/back/908",
+        "frontShiny": "pokemon/front-shiny/908",
+        "backShiny": "pokemon/back-shiny/908"
+      }
+    }
+  },
+  "FUECOCO": {
+    "id": 909,
+    "forms": {
+      "": {
+        "front": "pokemon/front/909",
+        "back": "pokemon/back/909",
+        "frontShiny": "pokemon/front-shiny/909",
+        "backShiny": "pokemon/back-shiny/909"
+      }
+    }
+  },
+  "CROCALOR": {
+    "id": 910,
+    "forms": {
+      "": {
+        "front": "pokemon/front/910",
+        "back": "pokemon/back/910",
+        "frontShiny": "pokemon/front-shiny/910",
+        "backShiny": "pokemon/back-shiny/910"
+      }
+    }
+  },
+  "SKELEDIRGE": {
+    "id": 911,
+    "forms": {
+      "": {
+        "front": "pokemon/front/911",
+        "back": "pokemon/back/911",
+        "frontShiny": "pokemon/front-shiny/911",
+        "backShiny": "pokemon/back-shiny/911"
+      }
+    }
+  },
+  "QUAXLY": {
+    "id": 912,
+    "forms": {
+      "": {
+        "front": "pokemon/front/912",
+        "back": "pokemon/back/912",
+        "frontShiny": "pokemon/front-shiny/912",
+        "backShiny": "pokemon/back-shiny/912"
+      }
+    }
+  },
+  "QUAXWELL": {
+    "id": 913,
+    "forms": {
+      "": {
+        "front": "pokemon/front/913",
+        "back": "pokemon/back/913",
+        "frontShiny": "pokemon/front-shiny/913",
+        "backShiny": "pokemon/back-shiny/913"
+      }
+    }
+  },
+  "QUAQUAVAL": {
+    "id": 914,
+    "forms": {
+      "": {
+        "front": "pokemon/front/914",
+        "back": "pokemon/back/914",
+        "frontShiny": "pokemon/front-shiny/914",
+        "backShiny": "pokemon/back-shiny/914"
+      }
+    }
+  },
+  "PAWMI": {
+    "id": 921,
+    "forms": {
+      "": {
+        "front": "pokemon/front/921",
+        "back": "pokemon/back/921",
+        "frontShiny": "pokemon/front-shiny/921",
+        "backShiny": "pokemon/back-shiny/921"
+      }
+    }
+  },
+  "PAWMO": {
+    "id": 922,
+    "forms": {
+      "": {
+        "front": "pokemon/front/922",
+        "back": "pokemon/back/922",
+        "frontShiny": "pokemon/front-shiny/922",
+        "backShiny": "pokemon/back-shiny/922"
+      }
+    }
+  },
+  "PAWMOT": {
+    "id": 923,
+    "forms": {
+      "": {
+        "front": "pokemon/front/923",
+        "back": "pokemon/back/923",
+        "frontShiny": "pokemon/front-shiny/923",
+        "backShiny": "pokemon/back-shiny/923"
+      }
+    }
+  },
+  "TINKATINK": {
+    "id": 957,
+    "forms": {
+      "": {
+        "front": "pokemon/front/957",
+        "back": "pokemon/back/957",
+        "frontShiny": "pokemon/front-shiny/957_1",
+        "backShiny": "pokemon/back-shiny/957"
+      }
+    }
+  },
+  "TINKATUFF": {
+    "id": 958,
+    "forms": {
+      "": {
+        "front": "pokemon/front/958",
+        "back": "pokemon/back/958",
+        "frontShiny": "pokemon/front-shiny/958_1",
+        "backShiny": "pokemon/back-shiny/958"
+      }
+    }
+  },
+  "TINKATON": {
+    "id": 959,
+    "forms": {
+      "": {
+        "front": "pokemon/front/959",
+        "back": "pokemon/back/959",
+        "frontShiny": "pokemon/front-shiny/959_1",
+        "backShiny": "pokemon/back-shiny/959"
+      }
+    }
+  },
+  "FRIGIBAX": {
+    "id": 996,
+    "forms": {
+      "": {
+        "front": "pokemon/front/996",
+        "back": "pokemon/back/996",
+        "frontShiny": "pokemon/front-shiny/996",
+        "backShiny": "pokemon/back-shiny/996"
+      }
+    }
+  },
+  "ARCTIBAX": {
+    "id": 997,
+    "forms": {
+      "": {
+        "front": "pokemon/front/997",
+        "back": "pokemon/back/997",
+        "frontShiny": "pokemon/front-shiny/997",
+        "backShiny": "pokemon/back-shiny/997"
+      }
+    }
+  },
+  "BAXCALIBUR": {
+    "id": 998,
+    "forms": {
+      "": {
+        "front": "pokemon/front/998",
+        "back": "pokemon/back/998",
+        "frontShiny": "pokemon/front-shiny/998",
+        "backShiny": "pokemon/back-shiny/998"
+      },
+      "mega": {
+        "front": "pokemon/front/998-mega",
+        "back": "pokemon/back/998-mega",
+        "frontShiny": "pokemon/front-shiny/998-mega",
+        "backShiny": "pokemon/back-shiny/998-mega"
+      }
+    }
+  },
+  "GIMMIGHOUL": {
+    "id": 999,
+    "forms": {
+      "chest": {
+        "front": "pokemon/front/999",
+        "back": "pokemon/back/999",
+        "frontShiny": "pokemon/front-shiny/999_1",
+        "backShiny": "pokemon/back-shiny/999"
+      },
+      "roaming": {
+        "front": "pokemon/front/999-roaming",
+        "back": "pokemon/back/999-roaming",
+        "frontShiny": "pokemon/front-shiny/999-roaming",
+        "backShiny": "pokemon/back-shiny/999-roaming"
+      }
+    }
+  },
+  "GHOLDENGO": {
+    "id": 1000,
+    "forms": {
+      "": {
+        "front": "pokemon/front/1000",
+        "back": "pokemon/back/1000",
+        "frontShiny": "pokemon/front-shiny/1000",
+        "backShiny": "pokemon/back-shiny/1000"
+      }
+    }
+  },
+  "CETODDLE": {
+    "id": 974,
+    "forms": {
+      "": {
+        "front": "pokemon/front/974",
+        "back": "pokemon/back/974",
+        "frontShiny": "pokemon/front-shiny/974",
+        "backShiny": "pokemon/back-shiny/974"
+      }
+    }
+  },
+  "CETITAN": {
+    "id": 975,
+    "forms": {
+      "": {
+        "front": "pokemon/front/975",
+        "back": "pokemon/back/975",
+        "frontShiny": "pokemon/front-shiny/975",
+        "backShiny": "pokemon/back-shiny/975"
+      }
+    }
+  },
+  "BALTOY": {
+    "id": 343,
+    "forms": {
+      "": {
+        "front": "pokemon/front/343",
+        "back": "pokemon/back/343",
+        "frontShiny": "pokemon/front-shiny/343",
+        "backShiny": "pokemon/back-shiny/343"
+      }
+    }
+  },
+  "CLAYDOL": {
+    "id": 344,
+    "forms": {
+      "": {
+        "front": "pokemon/front/344",
+        "back": "pokemon/back/344",
+        "frontShiny": "pokemon/front-shiny/344",
+        "backShiny": "pokemon/back-shiny/344"
+      }
+    }
+  },
+  "SHELLOS": {
+    "id": 422,
+    "forms": {
+      "east": {
+        "front": "pokemon/front/422-east",
+        "back": "pokemon/back/422-east",
+        "frontShiny": "pokemon/front-shiny/422-east",
+        "backShiny": "pokemon/back-shiny/422-east"
+      },
+      "west": {
+        "front": "pokemon/front/422-west",
+        "back": "pokemon/back/422-west",
+        "frontShiny": "pokemon/front-shiny/422-west",
+        "backShiny": "pokemon/back-shiny/422-west"
+      }
+    }
+  },
+  "GASTRODON": {
+    "id": 423,
+    "forms": {
+      "east": {
+        "front": "pokemon/front/423-east",
+        "back": "pokemon/back/423-east",
+        "frontShiny": "pokemon/front-shiny/423-east",
+        "backShiny": "pokemon/back-shiny/423-east"
+      },
+      "west": {
+        "front": "pokemon/front/423-west",
+        "back": "pokemon/back/423-west",
+        "frontShiny": "pokemon/front-shiny/423-west",
+        "backShiny": "pokemon/back-shiny/423-west"
+      }
+    }
+  },
+  "VANILLITE": {
+    "id": 582,
+    "forms": {
+      "": {
+        "front": "pokemon/front/582",
+        "back": "pokemon/back/582",
+        "frontShiny": "pokemon/front-shiny/582",
+        "backShiny": "pokemon/back-shiny/582"
+      }
+    }
+  },
+  "VANILLISH": {
+    "id": 583,
+    "forms": {
+      "": {
+        "front": "pokemon/front/583",
+        "back": "pokemon/back/583",
+        "frontShiny": "pokemon/front-shiny/583",
+        "backShiny": "pokemon/back-shiny/583"
+      }
+    }
+  },
+  "VANILLUXE": {
+    "id": 584,
+    "forms": {
+      "": {
+        "front": "pokemon/front/584",
+        "back": "pokemon/back/584",
+        "frontShiny": "pokemon/front-shiny/584",
+        "backShiny": "pokemon/back-shiny/584"
+      }
+    }
+  },
+  "DRUDDIGON": {
+    "id": 621,
+    "forms": {
+      "": {
+        "front": "pokemon/front/621",
+        "back": "pokemon/back/621",
+        "frontShiny": "pokemon/front-shiny/621",
+        "backShiny": "pokemon/back-shiny/621"
+      }
+    }
+  },
+  "BOUFFALANT": {
+    "id": 626,
+    "forms": {
+      "": {
+        "front": "pokemon/front/626",
+        "back": "pokemon/back/626",
+        "frontShiny": "pokemon/front-shiny/626",
+        "backShiny": "pokemon/back-shiny/626"
+      }
+    }
+  },
+  "TYMPOLE": {
+    "id": 535,
+    "forms": {
+      "": {
+        "front": "pokemon/front/535",
+        "back": "pokemon/back/535",
+        "frontShiny": "pokemon/front-shiny/535",
+        "backShiny": "pokemon/back-shiny/535"
+      }
+    }
+  },
+  "PALPITOAD": {
+    "id": 536,
+    "forms": {
+      "": {
+        "front": "pokemon/front/536",
+        "back": "pokemon/back/536",
+        "frontShiny": "pokemon/front-shiny/536",
+        "backShiny": "pokemon/back-shiny/536"
+      }
+    }
+  },
+  "SEISMITOAD": {
+    "id": 537,
+    "forms": {
+      "": {
+        "front": "pokemon/front/537",
+        "back": "pokemon/back/537",
+        "frontShiny": "pokemon/front-shiny/537",
+        "backShiny": "pokemon/back-shiny/537"
+      }
+    }
+  },
+  "RUFFLET": {
+    "id": 627,
+    "forms": {
+      "": {
+        "front": "pokemon/front/627",
+        "back": "pokemon/back/627",
+        "frontShiny": "pokemon/front-shiny/627",
+        "backShiny": "pokemon/back-shiny/627"
+      }
+    }
+  },
+  "BRAVIARY": {
+    "id": 628,
+    "forms": {
+      "": {
+        "front": "pokemon/front/628",
+        "back": "pokemon/back/628",
+        "frontShiny": "pokemon/front-shiny/628",
+        "backShiny": "pokemon/back-shiny/628"
+      }
+    }
+  },
+  "TYRUNT": {
+    "id": 696,
+    "forms": {
+      "": {
+        "front": "pokemon/front/696",
+        "back": "pokemon/back/696",
+        "frontShiny": "pokemon/front-shiny/696",
+        "backShiny": "pokemon/back-shiny/696"
+      }
+    }
+  },
+  "TYRANTRUM": {
+    "id": 697,
+    "forms": {
+      "": {
+        "front": "pokemon/front/697",
+        "back": "pokemon/back/697",
+        "frontShiny": "pokemon/front-shiny/697",
+        "backShiny": "pokemon/back-shiny/697"
+      }
+    }
+  },
+  "AMAURA": {
+    "id": 698,
+    "forms": {
+      "": {
+        "front": "pokemon/front/698",
+        "back": "pokemon/back/698",
+        "frontShiny": "pokemon/front-shiny/698",
+        "backShiny": "pokemon/back-shiny/698"
+      }
+    }
+  },
+  "AURORUS": {
+    "id": 699,
+    "forms": {
+      "": {
+        "front": "pokemon/front/699",
+        "back": "pokemon/back/699",
+        "frontShiny": "pokemon/front-shiny/699",
+        "backShiny": "pokemon/back-shiny/699"
+      }
+    }
+  },
+  "PUMPKABOO": {
+    "id": 710,
+    "forms": {
+      "": {
+        "front": "pokemon/front/710",
+        "back": "pokemon/back/710",
+        "frontShiny": "pokemon/front-shiny/710",
+        "backShiny": "pokemon/back-shiny/710"
+      },
+      "small": {
+        "front": "pokemon/front/710",
+        "back": "pokemon/back/710",
+        "frontShiny": "pokemon/front-shiny/710",
+        "backShiny": "pokemon/back-shiny/710"
+      },
+      "large": {
+        "front": "pokemon/front/710",
+        "back": "pokemon/back/710",
+        "frontShiny": "pokemon/front-shiny/710",
+        "backShiny": "pokemon/back-shiny/710"
+      },
+      "super": {
+        "front": "pokemon/front/710",
+        "back": "pokemon/back/710",
+        "frontShiny": "pokemon/front-shiny/710",
+        "backShiny": "pokemon/back-shiny/710"
+      }
+    }
+  },
+  "GOURGEIST": {
+    "id": 711,
+    "forms": {
+      "": {
+        "front": "pokemon/front/711",
+        "back": "pokemon/back/711",
+        "frontShiny": "pokemon/front-shiny/711",
+        "backShiny": "pokemon/back-shiny/711"
+      },
+      "small": {
+        "front": "pokemon/front/711",
+        "back": "pokemon/back/711",
+        "frontShiny": "pokemon/front-shiny/711",
+        "backShiny": "pokemon/back-shiny/711"
+      },
+      "large": {
+        "front": "pokemon/front/711",
+        "back": "pokemon/back/711",
+        "frontShiny": "pokemon/front-shiny/711",
+        "backShiny": "pokemon/back-shiny/711"
+      },
+      "super": {
+        "front": "pokemon/front/711",
+        "back": "pokemon/back/711",
+        "frontShiny": "pokemon/front-shiny/711",
+        "backShiny": "pokemon/back-shiny/711"
+      }
+    }
+  },
+  "SKIDDO": {
+    "id": 672,
+    "forms": {
+      "": {
+        "front": "pokemon/front/672",
+        "back": "pokemon/back/672",
+        "frontShiny": "pokemon/front-shiny/672",
+        "backShiny": "pokemon/back-shiny/672"
+      }
+    }
+  },
+  "GOGOAT": {
+    "id": 673,
+    "forms": {
+      "": {
+        "front": "pokemon/front/673",
+        "back": "pokemon/back/673",
+        "frontShiny": "pokemon/front-shiny/673",
+        "backShiny": "pokemon/back-shiny/673"
+      }
+    }
+  },
+  "BERGMITE": {
+    "id": 712,
+    "forms": {
+      "": {
+        "front": "pokemon/front/712",
+        "back": "pokemon/back/712",
+        "frontShiny": "pokemon/front-shiny/712",
+        "backShiny": "pokemon/back-shiny/712"
+      }
+    }
+  },
+  "AVALUGG": {
+    "id": 713,
+    "forms": {
+      "": {
+        "front": "pokemon/front/713",
+        "back": "pokemon/back/713",
+        "frontShiny": "pokemon/front-shiny/713",
+        "backShiny": "pokemon/back-shiny/713"
+      }
+    }
+  },
+  "VELUZA": {
+    "id": 976,
+    "forms": {
+      "": {
+        "front": "pokemon/front/976",
+        "back": "pokemon/back/976",
+        "frontShiny": "pokemon/front-shiny/976",
+        "backShiny": "pokemon/back-shiny/976"
+      }
+    }
+  },
+  "MR_RIME": {
+    "id": 866,
+    "forms": {
+      "": {
+        "front": "pokemon/front/866",
+        "back": "pokemon/back/866",
+        "frontShiny": "pokemon/front-shiny/866",
+        "backShiny": "pokemon/back-shiny/866"
+      }
+    }
+  },
+  "GALAR_MR_MIME": {
+    "id": 4122,
+    "forms": {
+      "": {
+        "front": "pokemon/front/4122",
+        "back": "pokemon/back/4122",
+        "frontShiny": "pokemon/front-shiny/4122",
+        "backShiny": "pokemon/back-shiny/4122"
+      }
+    }
+  },
+  "ALOLA_VULPIX": {
+    "id": 2037,
+    "forms": {
+      "": {
+        "front": "pokemon/front/2037",
+        "back": "pokemon/back/2037",
+        "frontShiny": "pokemon/front-shiny/2037",
+        "backShiny": "pokemon/back-shiny/2037"
+      }
+    }
+  },
+  "ALOLA_NINETALES": {
+    "id": 2038,
+    "forms": {
+      "": {
+        "front": "pokemon/front/2038",
+        "back": "pokemon/back/2038",
+        "frontShiny": "pokemon/front-shiny/2038",
+        "backShiny": "pokemon/back-shiny/2038"
+      }
+    }
+  },
+  "CHESPIN": {
+    "id": 650,
+    "forms": {
+      "": {
+        "front": "pokemon/front/650",
+        "back": "pokemon/back/650",
+        "frontShiny": "pokemon/front-shiny/650",
+        "backShiny": "pokemon/back-shiny/650"
+      }
+    }
+  },
+  "QUILLADIN": {
+    "id": 651,
+    "forms": {
+      "": {
+        "front": "pokemon/front/651",
+        "back": "pokemon/back/651",
+        "frontShiny": "pokemon/front-shiny/651",
+        "backShiny": "pokemon/back-shiny/651"
+      }
+    }
+  },
+  "CHESNAUGHT": {
+    "id": 652,
+    "forms": {
+      "": {
+        "front": "pokemon/front/652",
+        "back": "pokemon/back/652",
+        "frontShiny": "pokemon/front-shiny/652",
+        "backShiny": "pokemon/back-shiny/652"
+      },
+      "mega": {
+        "front": "pokemon/front/652-mega",
+        "back": "pokemon/back/652-mega",
+        "frontShiny": "pokemon/front-shiny/652-mega",
+        "backShiny": "pokemon/back-shiny/652-mega"
+      }
+    }
+  },
+  "FENNEKIN": {
+    "id": 653,
+    "forms": {
+      "": {
+        "front": "pokemon/front/653",
+        "back": "pokemon/back/653",
+        "frontShiny": "pokemon/front-shiny/653",
+        "backShiny": "pokemon/back-shiny/653"
+      }
+    }
+  },
+  "BRAIXEN": {
+    "id": 654,
+    "forms": {
+      "": {
+        "front": "pokemon/front/654",
+        "back": "pokemon/back/654",
+        "frontShiny": "pokemon/front-shiny/654",
+        "backShiny": "pokemon/back-shiny/654"
+      }
+    }
+  },
+  "DELPHOX": {
+    "id": 655,
+    "forms": {
+      "": {
+        "front": "pokemon/front/655",
+        "back": "pokemon/back/655",
+        "frontShiny": "pokemon/front-shiny/655",
+        "backShiny": "pokemon/back-shiny/655"
+      },
+      "mega": {
+        "front": "pokemon/front/655-mega",
+        "back": "pokemon/back/655-mega",
+        "frontShiny": "pokemon/front-shiny/655-mega",
+        "backShiny": "pokemon/back-shiny/655-mega"
+      }
+    }
+  },
+  "LITLEO": {
+    "id": 667,
+    "forms": {
+      "": {
+        "front": "pokemon/front/667",
+        "back": "pokemon/back/667",
+        "frontShiny": "pokemon/front-shiny/667",
+        "backShiny": "pokemon/back-shiny/667"
+      }
+    }
+  },
+  "PYROAR": {
+    "id": 668,
+    "forms": {
+      "": {
+        "front": "pokemon/front/668",
+        "back": "pokemon/back/668",
+        "frontShiny": "pokemon/front-shiny/668",
+        "backShiny": "pokemon/back-shiny/668"
+      },
+      "mega": {
+        "front": "pokemon/front/668-mega",
+        "back": "pokemon/back/668-mega",
+        "frontShiny": "pokemon/front-shiny/668-mega",
+        "backShiny": "pokemon/back-shiny/668-mega"
+      }
+    }
+  },
+  "ESPURR": {
+    "id": 677,
+    "forms": {
+      "": {
+        "front": "pokemon/front/677",
+        "back": "pokemon/back/677",
+        "frontShiny": "pokemon/front-shiny/677",
+        "backShiny": "pokemon/back-shiny/677"
+      }
+    }
+  },
+  "MEOWSTIC": {
+    "id": 678,
+    "forms": {
+      "male": {
+        "front": "pokemon/front/678",
+        "back": "pokemon/back/678",
+        "frontShiny": "pokemon/front-shiny/678",
+        "backShiny": "pokemon/back-shiny/678"
+      },
+      "female": {
+        "front": "pokemon/front/678-female",
+        "back": "pokemon/back/678-female",
+        "frontShiny": "pokemon/front-shiny/678-female",
+        "backShiny": "pokemon/back-shiny/678-female"
+      },
+      "mega": {
+        "front": "pokemon/front/678-mega",
+        "back": "pokemon/back/678-mega",
+        "frontShiny": "pokemon/front-shiny/678-mega",
+        "backShiny": "pokemon/back-shiny/678-mega"
+      }
+    }
+  },
+  "INKAY": {
+    "id": 686,
+    "forms": {
+      "": {
+        "front": "pokemon/front/686",
+        "back": "pokemon/back/686",
+        "frontShiny": "pokemon/front-shiny/686",
+        "backShiny": "pokemon/back-shiny/686"
+      }
+    }
+  },
+  "MALAMAR": {
+    "id": 687,
+    "forms": {
+      "": {
+        "front": "pokemon/front/687",
+        "back": "pokemon/back/687",
+        "frontShiny": "pokemon/front-shiny/687",
+        "backShiny": "pokemon/back-shiny/687"
+      },
+      "mega": {
+        "front": "pokemon/front/687-mega",
+        "back": "pokemon/back/687-mega",
+        "frontShiny": "pokemon/front-shiny/687-mega",
+        "backShiny": "pokemon/back-shiny/687-mega"
+      }
+    }
+  },
+  "BINACLE": {
+    "id": 688,
+    "forms": {
+      "": {
+        "front": "pokemon/front/688",
+        "back": "pokemon/back/688",
+        "frontShiny": "pokemon/front-shiny/688",
+        "backShiny": "pokemon/back-shiny/688"
+      }
+    }
+  },
+  "BARBARACLE": {
+    "id": 689,
+    "forms": {
+      "": {
+        "front": "pokemon/front/689",
+        "back": "pokemon/back/689",
+        "frontShiny": "pokemon/front-shiny/689",
+        "backShiny": "pokemon/back-shiny/689"
+      },
+      "mega": {
+        "front": "pokemon/front/689-mega",
+        "back": "pokemon/back/689-mega",
+        "frontShiny": "pokemon/front-shiny/689-mega",
+        "backShiny": "pokemon/back-shiny/689-mega"
+      }
+    }
+  },
+  "SKRELP": {
+    "id": 690,
+    "forms": {
+      "": {
+        "front": "pokemon/front/690",
+        "back": "pokemon/back/690",
+        "frontShiny": "pokemon/front-shiny/690",
+        "backShiny": "pokemon/back-shiny/690"
+      }
+    }
+  },
+  "DRAGALGE": {
+    "id": 691,
+    "forms": {
+      "": {
+        "front": "pokemon/front/691",
+        "back": "pokemon/back/691",
+        "frontShiny": "pokemon/front-shiny/691",
+        "backShiny": "pokemon/back-shiny/691"
+      },
+      "mega": {
+        "front": "pokemon/front/691-mega",
+        "back": "pokemon/back/691-mega",
+        "frontShiny": "pokemon/front-shiny/691-mega",
+        "backShiny": "pokemon/back-shiny/691-mega"
+      }
+    }
+  },
+  "DIANCIE": {
+    "id": 719,
+    "forms": {
+      "": {
+        "front": "pokemon/front/719",
+        "back": "pokemon/back/719",
+        "frontShiny": "pokemon/front-shiny/719",
+        "backShiny": "pokemon/back-shiny/719"
+      },
+      "mega": {
+        "front": "pokemon/front/719-mega",
+        "back": "pokemon/back/719-mega",
+        "frontShiny": "pokemon/front-shiny/719-mega",
+        "backShiny": "pokemon/back-shiny/719-mega"
+      }
+    }
+  },
+  "CHIKORITA": {
+    "id": 152,
+    "forms": {
+      "": {
+        "front": "pokemon/front/152",
+        "back": "pokemon/back/152",
+        "frontShiny": "pokemon/front-shiny/152",
+        "backShiny": "pokemon/back-shiny/152"
+      }
+    }
+  },
+  "BAYLEEF": {
+    "id": 153,
+    "forms": {
+      "": {
+        "front": "pokemon/front/153",
+        "back": "pokemon/back/153",
+        "frontShiny": "pokemon/front-shiny/153",
+        "backShiny": "pokemon/back-shiny/153"
+      }
+    }
+  },
+  "MEGANIUM": {
+    "id": 154,
+    "forms": {
+      "": {
+        "front": "pokemon/front/154",
+        "back": "pokemon/back/154",
+        "frontShiny": "pokemon/front-shiny/154",
+        "backShiny": "pokemon/back-shiny/154"
+      },
+      "mega": {
+        "front": "pokemon/front/154-mega",
+        "back": "pokemon/back/154-mega",
+        "frontShiny": "pokemon/front-shiny/154-mega",
+        "backShiny": "pokemon/back-shiny/154-mega"
+      }
+    }
+  },
+  "CYNDAQUIL": {
+    "id": 155,
+    "forms": {
+      "": {
+        "front": "pokemon/front/155",
+        "back": "pokemon/back/155",
+        "frontShiny": "pokemon/front-shiny/155",
+        "backShiny": "pokemon/back-shiny/155"
+      }
+    }
+  },
+  "QUILAVA": {
+    "id": 156,
+    "forms": {
+      "": {
+        "front": "pokemon/front/156",
+        "back": "pokemon/back/156",
+        "frontShiny": "pokemon/front-shiny/156",
+        "backShiny": "pokemon/back-shiny/156"
+      }
+    }
+  },
+  "TYPHLOSION": {
+    "id": 157,
+    "forms": {
+      "": {
+        "front": "pokemon/front/157",
+        "back": "pokemon/back/157",
+        "frontShiny": "pokemon/front-shiny/157",
+        "backShiny": "pokemon/back-shiny/157"
+      }
+    }
+  },
+  "HERACROSS": {
+    "id": 214,
+    "forms": {
+      "": {
+        "front": "pokemon/front/214",
+        "back": "pokemon/back/214",
+        "frontShiny": "pokemon/front-shiny/214",
+        "backShiny": "pokemon/back-shiny/214"
+      },
+      "mega": {
+        "front": "pokemon/front/214-mega",
+        "back": "pokemon/back/214-mega",
+        "frontShiny": "pokemon/front-shiny/214-mega",
+        "backShiny": "pokemon/back-shiny/214-mega"
+      }
+    }
+  },
+  "PHANPY": {
+    "id": 231,
+    "forms": {
+      "": {
+        "front": "pokemon/front/231",
+        "back": "pokemon/back/231",
+        "frontShiny": "pokemon/front-shiny/231",
+        "backShiny": "pokemon/back-shiny/231"
+      }
+    }
+  },
+  "DONPHAN": {
+    "id": 232,
+    "forms": {
+      "": {
+        "front": "pokemon/front/232",
+        "back": "pokemon/back/232",
+        "frontShiny": "pokemon/front-shiny/232",
+        "backShiny": "pokemon/back-shiny/232"
+      }
+    }
+  },
+  "MURKROW": {
+    "id": 198,
+    "forms": {
+      "": {
+        "front": "pokemon/front/198",
+        "back": "pokemon/back/198",
+        "frontShiny": "pokemon/front-shiny/198",
+        "backShiny": "pokemon/back-shiny/198"
+      }
+    }
+  },
+  "HONCHKROW": {
+    "id": 430,
+    "forms": {
+      "": {
+        "front": "pokemon/front/430",
+        "back": "pokemon/back/430",
+        "frontShiny": "pokemon/front-shiny/430",
+        "backShiny": "pokemon/back-shiny/430"
+      }
+    }
+  },
+  "TURTWIG": {
+    "id": 387,
+    "forms": {
+      "": {
+        "front": "pokemon/front/387",
+        "back": "pokemon/back/387",
+        "frontShiny": "pokemon/front-shiny/387",
+        "backShiny": "pokemon/back-shiny/387"
+      }
+    }
+  },
+  "GROTLE": {
+    "id": 388,
+    "forms": {
+      "": {
+        "front": "pokemon/front/388",
+        "back": "pokemon/back/388",
+        "frontShiny": "pokemon/front-shiny/388",
+        "backShiny": "pokemon/back-shiny/388"
+      }
+    }
+  },
+  "TORTERRA": {
+    "id": 389,
+    "forms": {
+      "": {
+        "front": "pokemon/front/389",
+        "back": "pokemon/back/389",
+        "frontShiny": "pokemon/front-shiny/389",
+        "backShiny": "pokemon/back-shiny/389"
+      }
+    }
+  },
+  "CHIMCHAR": {
+    "id": 390,
+    "forms": {
+      "": {
+        "front": "pokemon/front/390",
+        "back": "pokemon/back/390",
+        "frontShiny": "pokemon/front-shiny/390",
+        "backShiny": "pokemon/back-shiny/390"
+      }
+    }
+  },
+  "MONFERNO": {
+    "id": 391,
+    "forms": {
+      "": {
+        "front": "pokemon/front/391",
+        "back": "pokemon/back/391",
+        "frontShiny": "pokemon/front-shiny/391",
+        "backShiny": "pokemon/back-shiny/391"
+      }
+    }
+  },
+  "INFERNAPE": {
+    "id": 392,
+    "forms": {
+      "": {
+        "front": "pokemon/front/392",
+        "back": "pokemon/back/392",
+        "frontShiny": "pokemon/front-shiny/392",
+        "backShiny": "pokemon/back-shiny/392"
+      }
+    }
+  },
+  "SNIVY": {
+    "id": 495,
+    "forms": {
+      "": {
+        "front": "pokemon/front/495",
+        "back": "pokemon/back/495",
+        "frontShiny": "pokemon/front-shiny/495",
+        "backShiny": "pokemon/back-shiny/495"
+      }
+    }
+  },
+  "SERVINE": {
+    "id": 496,
+    "forms": {
+      "": {
+        "front": "pokemon/front/496",
+        "back": "pokemon/back/496",
+        "frontShiny": "pokemon/front-shiny/496",
+        "backShiny": "pokemon/back-shiny/496"
+      }
+    }
+  },
+  "SERPERIOR": {
+    "id": 497,
+    "forms": {
+      "": {
+        "front": "pokemon/front/497",
+        "back": "pokemon/back/497",
+        "frontShiny": "pokemon/front-shiny/497",
+        "backShiny": "pokemon/back-shiny/497"
+      }
+    }
+  },
+  "TEPIG": {
+    "id": 498,
+    "forms": {
+      "": {
+        "front": "pokemon/front/498",
+        "back": "pokemon/back/498",
+        "frontShiny": "pokemon/front-shiny/498",
+        "backShiny": "pokemon/back-shiny/498"
+      }
+    }
+  },
+  "PIGNITE": {
+    "id": 499,
+    "forms": {
+      "": {
+        "front": "pokemon/front/499",
+        "back": "pokemon/back/499",
+        "frontShiny": "pokemon/front-shiny/499",
+        "backShiny": "pokemon/back-shiny/499"
+      }
+    }
+  },
+  "EMBOAR": {
+    "id": 500,
+    "forms": {
+      "": {
+        "front": "pokemon/front/500",
+        "back": "pokemon/back/500",
+        "frontShiny": "pokemon/front-shiny/500",
+        "backShiny": "pokemon/back-shiny/500"
+      },
+      "mega": {
+        "front": "pokemon/front/500-mega",
+        "back": "pokemon/back/500-mega",
+        "frontShiny": "pokemon/front-shiny/500-mega",
+        "backShiny": "pokemon/back-shiny/500-mega"
+      }
+    }
+  },
+  "OSHAWOTT": {
+    "id": 501,
+    "forms": {
+      "": {
+        "front": "pokemon/front/501",
+        "back": "pokemon/back/501",
+        "frontShiny": "pokemon/front-shiny/501",
+        "backShiny": "pokemon/back-shiny/501"
+      }
+    }
+  },
+  "DEWOTT": {
+    "id": 502,
+    "forms": {
+      "": {
+        "front": "pokemon/front/502",
+        "back": "pokemon/back/502",
+        "frontShiny": "pokemon/front-shiny/502",
+        "backShiny": "pokemon/back-shiny/502"
+      }
+    }
+  },
+  "SAMUROTT": {
+    "id": 503,
+    "forms": {
+      "": {
+        "front": "pokemon/front/503",
+        "back": "pokemon/back/503",
+        "frontShiny": "pokemon/front-shiny/503",
+        "backShiny": "pokemon/back-shiny/503"
+      }
+    }
+  },
+  "DRILBUR": {
+    "id": 529,
+    "forms": {
+      "": {
+        "front": "pokemon/front/529",
+        "back": "pokemon/back/529",
+        "frontShiny": "pokemon/front-shiny/529",
+        "backShiny": "pokemon/back-shiny/529"
+      }
+    }
+  },
+  "EXCADRILL": {
+    "id": 530,
+    "forms": {
+      "": {
+        "front": "pokemon/front/530",
+        "back": "pokemon/back/530",
+        "frontShiny": "pokemon/front-shiny/530",
+        "backShiny": "pokemon/back-shiny/530"
+      },
+      "mega": {
+        "front": "pokemon/front/530-mega",
+        "back": "pokemon/back/530-mega",
+        "frontShiny": "pokemon/front-shiny/530-mega",
+        "backShiny": "pokemon/back-shiny/530-mega"
+      }
+    }
+  },
+  "VENIPEDE": {
+    "id": 543,
+    "forms": {
+      "": {
+        "front": "pokemon/front/543",
+        "back": "pokemon/back/543",
+        "frontShiny": "pokemon/front-shiny/543",
+        "backShiny": "pokemon/back-shiny/543"
+      }
+    }
+  },
+  "WHIRLIPEDE": {
+    "id": 544,
+    "forms": {
+      "": {
+        "front": "pokemon/front/544",
+        "back": "pokemon/back/544",
+        "frontShiny": "pokemon/front-shiny/544",
+        "backShiny": "pokemon/back-shiny/544"
+      }
+    }
+  },
+  "SCOLIPEDE": {
+    "id": 545,
+    "forms": {
+      "": {
+        "front": "pokemon/front/545",
+        "back": "pokemon/back/545",
+        "frontShiny": "pokemon/front-shiny/545",
+        "backShiny": "pokemon/back-shiny/545"
+      },
+      "mega": {
+        "front": "pokemon/front/545-mega",
+        "back": "pokemon/back/545-mega",
+        "frontShiny": "pokemon/front-shiny/545-mega",
+        "backShiny": "pokemon/back-shiny/545-mega"
+      }
+    }
+  },
+  "PIKIPEK": {
+    "id": 731,
+    "forms": {
+      "": {
+        "front": "pokemon/front/731",
+        "back": "pokemon/back/731",
+        "frontShiny": "pokemon/front-shiny/731",
+        "backShiny": "pokemon/back-shiny/731"
+      }
+    }
+  },
+  "TRUMBEAK": {
+    "id": 732,
+    "forms": {
+      "": {
+        "front": "pokemon/front/732",
+        "back": "pokemon/back/732",
+        "frontShiny": "pokemon/front-shiny/732",
+        "backShiny": "pokemon/back-shiny/732"
+      }
+    }
+  },
+  "TOUCANNON": {
+    "id": 733,
+    "forms": {
+      "": {
+        "front": "pokemon/front/733",
+        "back": "pokemon/back/733",
+        "frontShiny": "pokemon/front-shiny/733",
+        "backShiny": "pokemon/back-shiny/733"
+      }
+    }
+  },
+  "MAREANIE": {
+    "id": 747,
+    "forms": {
+      "": {
+        "front": "pokemon/front/747",
+        "back": "pokemon/back/747",
+        "frontShiny": "pokemon/front-shiny/747",
+        "backShiny": "pokemon/back-shiny/747"
+      }
+    }
+  },
+  "TOXAPEX": {
+    "id": 748,
+    "forms": {
+      "": {
+        "front": "pokemon/front/748",
+        "back": "pokemon/back/748",
+        "frontShiny": "pokemon/front-shiny/748",
+        "backShiny": "pokemon/back-shiny/748"
+      }
+    }
+  },
+  "MUDBRAY": {
+    "id": 749,
+    "forms": {
+      "": {
+        "front": "pokemon/front/749",
+        "back": "pokemon/back/749",
+        "frontShiny": "pokemon/front-shiny/749",
+        "backShiny": "pokemon/back-shiny/749"
+      }
+    }
+  },
+  "MUDSDALE": {
+    "id": 750,
+    "forms": {
+      "": {
+        "front": "pokemon/front/750",
+        "back": "pokemon/back/750",
+        "frontShiny": "pokemon/front-shiny/750",
+        "backShiny": "pokemon/back-shiny/750"
+      }
+    }
+  },
+  "DEWPIDER": {
+    "id": 751,
+    "forms": {
+      "": {
+        "front": "pokemon/front/751",
+        "back": "pokemon/back/751",
+        "frontShiny": "pokemon/front-shiny/751",
+        "backShiny": "pokemon/back-shiny/751"
+      }
+    }
+  },
+  "ARAQUANID": {
+    "id": 752,
+    "forms": {
+      "": {
+        "front": "pokemon/front/752",
+        "back": "pokemon/back/752",
+        "frontShiny": "pokemon/front-shiny/752",
+        "backShiny": "pokemon/back-shiny/752"
+      }
+    }
+  },
+  "FOMANTIS": {
+    "id": 753,
+    "forms": {
+      "": {
+        "front": "pokemon/front/753",
+        "back": "pokemon/back/753",
+        "frontShiny": "pokemon/front-shiny/753",
+        "backShiny": "pokemon/back-shiny/753"
+      }
+    }
+  },
+  "LURANTIS": {
+    "id": 754,
+    "forms": {
+      "": {
+        "front": "pokemon/front/754",
+        "back": "pokemon/back/754",
+        "frontShiny": "pokemon/front-shiny/754",
+        "backShiny": "pokemon/back-shiny/754"
+      }
+    }
+  },
+  "STUFFUL": {
+    "id": 759,
+    "forms": {
+      "": {
+        "front": "pokemon/front/759",
+        "back": "pokemon/back/759",
+        "frontShiny": "pokemon/front-shiny/759",
+        "backShiny": "pokemon/back-shiny/759"
+      }
+    }
+  },
+  "BEWEAR": {
+    "id": 760,
+    "forms": {
+      "": {
+        "front": "pokemon/front/760",
+        "back": "pokemon/back/760",
+        "frontShiny": "pokemon/front-shiny/760",
+        "backShiny": "pokemon/back-shiny/760"
+      }
+    }
+  },
+  "DHELMISE": {
+    "id": 781,
+    "forms": {
+      "": {
+        "front": "pokemon/front/781",
+        "back": "pokemon/back/781",
+        "frontShiny": "pokemon/front-shiny/781",
+        "backShiny": "pokemon/back-shiny/781"
+      }
+    }
+  },
+  "JANGMO_O": {
+    "id": 782,
+    "forms": {
+      "": {
+        "front": "pokemon/front/782",
+        "back": "pokemon/back/782",
+        "frontShiny": "pokemon/front-shiny/782",
+        "backShiny": "pokemon/back-shiny/782"
+      }
+    }
+  },
+  "HAKAMO_O": {
+    "id": 783,
+    "forms": {
+      "": {
+        "front": "pokemon/front/783",
+        "back": "pokemon/back/783",
+        "frontShiny": "pokemon/front-shiny/783",
+        "backShiny": "pokemon/back-shiny/783"
+      }
+    }
+  },
+  "KOMMO_O": {
+    "id": 784,
+    "forms": {
+      "": {
+        "front": "pokemon/front/784",
+        "back": "pokemon/back/784",
+        "frontShiny": "pokemon/front-shiny/784",
+        "backShiny": "pokemon/back-shiny/784"
+      }
+    }
+  },
+  "ROOKIDEE": {
+    "id": 821,
+    "forms": {
+      "": {
+        "front": "pokemon/front/821",
+        "back": "pokemon/back/821",
+        "frontShiny": "pokemon/front-shiny/821",
+        "backShiny": "pokemon/back-shiny/821"
+      }
+    }
+  },
+  "CORVISQUIRE": {
+    "id": 822,
+    "forms": {
+      "": {
+        "front": "pokemon/front/822",
+        "back": "pokemon/back/822",
+        "frontShiny": "pokemon/front-shiny/822",
+        "backShiny": "pokemon/back-shiny/822"
+      }
+    }
+  },
+  "CORVIKNIGHT": {
+    "id": 823,
+    "forms": {
+      "": {
+        "front": "pokemon/front/823",
+        "back": "pokemon/back/823",
+        "frontShiny": "pokemon/front-shiny/823",
+        "backShiny": "pokemon/back-shiny/823"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/823-gigantamax",
+        "back": "pokemon/back/823-gigantamax",
+        "frontShiny": "pokemon/front-shiny/823-gigantamax",
+        "backShiny": "pokemon/back-shiny/823-gigantamax"
+      }
+    }
+  },
+  "CHEWTLE": {
+    "id": 833,
+    "forms": {
+      "": {
+        "front": "pokemon/front/833",
+        "back": "pokemon/back/833",
+        "frontShiny": "pokemon/front-shiny/833",
+        "backShiny": "pokemon/back-shiny/833"
+      }
+    }
+  },
+  "DREDNAW": {
+    "id": 834,
+    "forms": {
+      "": {
+        "front": "pokemon/front/834",
+        "back": "pokemon/back/834",
+        "frontShiny": "pokemon/front-shiny/834",
+        "backShiny": "pokemon/back-shiny/834"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/834-gigantamax",
+        "back": "pokemon/back/834-gigantamax",
+        "frontShiny": "pokemon/front-shiny/834-gigantamax",
+        "backShiny": "pokemon/back-shiny/834-gigantamax"
+      }
+    }
+  },
+  "SIZZLIPEDE": {
+    "id": 850,
+    "forms": {
+      "": {
+        "front": "pokemon/front/850",
+        "back": "pokemon/back/850",
+        "frontShiny": "pokemon/front-shiny/850",
+        "backShiny": "pokemon/back-shiny/850"
+      }
+    }
+  },
+  "CENTISKORCH": {
+    "id": 851,
+    "forms": {
+      "": {
+        "front": "pokemon/front/851",
+        "back": "pokemon/back/851",
+        "frontShiny": "pokemon/front-shiny/851",
+        "backShiny": "pokemon/back-shiny/851"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/851-gigantamax",
+        "back": "pokemon/back/851-gigantamax",
+        "frontShiny": "pokemon/front-shiny/851-gigantamax",
+        "backShiny": "pokemon/back-shiny/851-gigantamax"
+      }
+    }
+  },
+  "CLOBBOPUS": {
+    "id": 852,
+    "forms": {
+      "": {
+        "front": "pokemon/front/852",
+        "back": "pokemon/back/852",
+        "frontShiny": "pokemon/front-shiny/852",
+        "backShiny": "pokemon/back-shiny/852"
+      }
+    }
+  },
+  "GRAPPLOCT": {
+    "id": 853,
+    "forms": {
+      "": {
+        "front": "pokemon/front/853",
+        "back": "pokemon/back/853",
+        "frontShiny": "pokemon/front-shiny/853",
+        "backShiny": "pokemon/back-shiny/853"
+      }
+    }
+  },
+  "SINISTEA": {
+    "id": 854,
+    "forms": {
+      "phony": {
+        "front": "pokemon/front/854",
+        "back": "pokemon/back/854",
+        "frontShiny": "pokemon/front-shiny/854",
+        "backShiny": "pokemon/back-shiny/854"
+      },
+      "antique": {
+        "front": "pokemon/front/854",
+        "back": "pokemon/back/854",
+        "frontShiny": "pokemon/front-shiny/854",
+        "backShiny": "pokemon/back-shiny/854"
+      }
+    }
+  },
+  "POLTEAGEIST": {
+    "id": 855,
+    "forms": {
+      "phony": {
+        "front": "pokemon/front/855",
+        "back": "pokemon/back/855",
+        "frontShiny": "pokemon/front-shiny/855",
+        "backShiny": "pokemon/back-shiny/855"
+      },
+      "antique": {
+        "front": "pokemon/front/855",
+        "back": "pokemon/back/855",
+        "frontShiny": "pokemon/front-shiny/855",
+        "backShiny": "pokemon/back-shiny/855"
+      }
+    }
+  },
+  "OBSTAGOON": {
+    "id": 862,
+    "forms": {
+      "": {
+        "front": "pokemon/front/862",
+        "back": "pokemon/back/862",
+        "frontShiny": "pokemon/front-shiny/862",
+        "backShiny": "pokemon/back-shiny/862"
+      }
+    }
+  },
+  "SIRFETCHD": {
+    "id": 865,
+    "forms": {
+      "": {
+        "front": "pokemon/front/865",
+        "back": "pokemon/back/865",
+        "frontShiny": "pokemon/front-shiny/865",
+        "backShiny": "pokemon/back-shiny/865"
+      }
+    }
+  },
+  "CUFANT": {
+    "id": 878,
+    "forms": {
+      "": {
+        "front": "pokemon/front/878",
+        "back": "pokemon/back/878",
+        "frontShiny": "pokemon/front-shiny/878",
+        "backShiny": "pokemon/back-shiny/878"
+      }
+    }
+  },
+  "COPPERAJAH": {
+    "id": 879,
+    "forms": {
+      "": {
+        "front": "pokemon/front/879",
+        "back": "pokemon/back/879",
+        "frontShiny": "pokemon/front-shiny/879",
+        "backShiny": "pokemon/back-shiny/879"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/879-gigantamax",
+        "back": "pokemon/back/879-gigantamax",
+        "frontShiny": "pokemon/front-shiny/879-gigantamax",
+        "backShiny": "pokemon/back-shiny/879-gigantamax"
+      }
+    }
+  },
+  "DURALUDON": {
+    "id": 884,
+    "forms": {
+      "": {
+        "front": "pokemon/front/884",
+        "back": "pokemon/back/884",
+        "frontShiny": "pokemon/front-shiny/884",
+        "backShiny": "pokemon/back-shiny/884"
+      },
+      "gigantamax": {
+        "front": "pokemon/front/884-gigantamax",
+        "back": "pokemon/back/884-gigantamax",
+        "frontShiny": "pokemon/front-shiny/884-gigantamax",
+        "backShiny": "pokemon/back-shiny/884-gigantamax"
+      }
+    }
+  },
+  "GALAR_FARFETCHD": {
+    "id": 4083,
+    "forms": {
+      "": {
+        "front": "pokemon/front/4083",
+        "back": "pokemon/back/4083",
+        "frontShiny": "pokemon/front-shiny/4083",
+        "backShiny": "pokemon/back-shiny/4083"
+      }
+    }
+  },
+  "GALAR_ZIGZAGOON": {
+    "id": 4263,
+    "forms": {
+      "": {
+        "front": "pokemon/front/4263",
+        "back": "pokemon/back/4263",
+        "frontShiny": "pokemon/front-shiny/4263",
+        "backShiny": "pokemon/back-shiny/4263"
+      }
+    }
+  },
+  "GALAR_LINOONE": {
+    "id": 4264,
+    "forms": {
+      "": {
+        "front": "pokemon/front/4264",
+        "back": "pokemon/back/4264",
+        "frontShiny": "pokemon/front-shiny/4264",
+        "backShiny": "pokemon/back-shiny/4264"
+      }
+    }
+  },
+  "NACLI": {
+    "id": 932,
+    "forms": {
+      "": {
+        "front": "pokemon/front/932",
+        "back": "pokemon/back/932",
+        "frontShiny": "pokemon/front-shiny/932",
+        "backShiny": "pokemon/back-shiny/932"
+      }
+    }
+  },
+  "NACLSTACK": {
+    "id": 933,
+    "forms": {
+      "": {
+        "front": "pokemon/front/933",
+        "back": "pokemon/back/933",
+        "frontShiny": "pokemon/front-shiny/933",
+        "backShiny": "pokemon/back-shiny/933"
+      }
+    }
+  },
+  "GARGANACL": {
+    "id": 934,
+    "forms": {
+      "": {
+        "front": "pokemon/front/934",
+        "back": "pokemon/back/934",
+        "frontShiny": "pokemon/front-shiny/934",
+        "backShiny": "pokemon/back-shiny/934"
+      }
+    }
+  },
+  "CHARCADET": {
+    "id": 935,
+    "forms": {
+      "": {
+        "front": "pokemon/front/935",
+        "back": "pokemon/back/935",
+        "frontShiny": "pokemon/front-shiny/935_1",
+        "backShiny": "pokemon/back-shiny/935_1"
+      }
+    }
+  },
+  "ARMAROUGE": {
+    "id": 936,
+    "forms": {
+      "": {
+        "front": "pokemon/front/936",
+        "back": "pokemon/back/936",
+        "frontShiny": "pokemon/front-shiny/936_1",
+        "backShiny": "pokemon/back-shiny/936"
+      }
+    }
+  },
+  "CERULEDGE": {
+    "id": 937,
+    "forms": {
+      "": {
+        "front": "pokemon/front/937",
+        "back": "pokemon/back/937",
+        "frontShiny": "pokemon/front-shiny/937_1",
+        "backShiny": "pokemon/back-shiny/937"
+      }
+    }
+  },
+  "CAPSAKID": {
+    "id": 951,
+    "forms": {
+      "": {
+        "front": "pokemon/front/951",
+        "back": "pokemon/back/951",
+        "frontShiny": "pokemon/front-shiny/951",
+        "backShiny": "pokemon/back-shiny/951"
+      }
+    }
+  },
+  "SCOVILLAIN": {
+    "id": 952,
+    "forms": {
+      "": {
+        "front": "pokemon/front/952",
+        "back": "pokemon/back/952",
+        "frontShiny": "pokemon/front-shiny/952",
+        "backShiny": "pokemon/back-shiny/952"
+      },
+      "mega": {
+        "front": "pokemon/front/952-mega",
+        "back": "pokemon/back/952-mega",
+        "frontShiny": "pokemon/front-shiny/952-mega",
+        "backShiny": "pokemon/back-shiny/952-mega"
+      }
+    }
+  },
+  "CYCLIZAR": {
+    "id": 967,
+    "forms": {
+      "": {
+        "front": "pokemon/front/967",
+        "back": "pokemon/back/967",
+        "frontShiny": "pokemon/front-shiny/967",
+        "backShiny": "pokemon/back-shiny/967"
+      }
+    }
+  },
+  "DONDOZO": {
+    "id": 977,
+    "forms": {
+      "": {
+        "front": "pokemon/front/977",
+        "back": "pokemon/back/977",
+        "frontShiny": "pokemon/front-shiny/977",
+        "backShiny": "pokemon/back-shiny/977"
+      }
+    }
+  },
+  "CLODSIRE": {
+    "id": 980,
+    "forms": {
+      "": {
+        "front": "pokemon/front/980",
+        "back": "pokemon/back/980",
+        "frontShiny": "pokemon/front-shiny/980",
+        "backShiny": "pokemon/back-shiny/980"
+      }
+    }
+  },
+  "PALDEA_WOOPER": {
+    "id": 8194,
+    "forms": {
+      "": {
+        "front": "pokemon/front/8194",
+        "back": "pokemon/back/8194",
+        "frontShiny": "pokemon/front-shiny/8194",
+        "backShiny": "pokemon/back-shiny/8194"
+      }
+    }
+  },
+  "GREAT_TUSK": {
+    "id": 984,
+    "forms": {
+      "": {
+        "front": "pokemon/front/984",
+        "back": "pokemon/back/984",
+        "frontShiny": "pokemon/front-shiny/984",
+        "backShiny": "pokemon/back-shiny/984"
+      }
+    }
+  },
+  "FLUTTER_MANE": {
+    "id": 987,
+    "forms": {
+      "": {
+        "front": "pokemon/front/987",
+        "back": "pokemon/back/987",
+        "frontShiny": "pokemon/front-shiny/987",
+        "backShiny": "pokemon/back-shiny/987"
+      }
+    }
+  },
+  "IRON_BUNDLE": {
+    "id": 991,
+    "forms": {
+      "": {
+        "front": "pokemon/front/991",
+        "back": "pokemon/back/991",
+        "frontShiny": "pokemon/front-shiny/991",
+        "backShiny": "pokemon/back-shiny/991"
+      }
+    }
+  },
+  "IRON_VALIANT": {
+    "id": 1006,
+    "forms": {
+      "": {
+        "front": "pokemon/front/1006",
+        "back": "pokemon/back/1006",
+        "frontShiny": "pokemon/front-shiny/1006",
+        "backShiny": "pokemon/back-shiny/1006"
+      }
+    }
+  }
+}

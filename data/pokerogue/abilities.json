@@ -1,0 +1,8087 @@
+[
+  {
+    "id": 1,
+    "key": "STENCH",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostAttackApplyBattlerTagAbAttr",
+        "args": [
+          false,
+          "(user, target, move) => (!move.hasAttr(\"FlinchAttr\") && !move.hitsSubstitute(user, target) ? 10 : 0)",
+          "FLINCHED"
+        ],
+        "argKinds": [
+          "boolean",
+          "raw",
+          "enum:BattlerTagType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 2,
+    "key": "DRIZZLE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonWeatherChangeAbAttr",
+        "args": [
+          "RAIN"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "PostBiomeChangeWeatherChangeAbAttr",
+        "args": [
+          "RAIN"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "drizzleAiMovegenEffect"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 3,
+    "key": "SPEED_BOOST",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "SpeedBoostAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 4,
+    "key": "BATTLE_ARMOR",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "BlockCritAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 5,
+    "key": "STURDY",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PreDefendFullHpEndureAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "BlockOneHitKOAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 6,
+    "key": "DAMP",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "FieldPreventExplosiveMovesAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "params => { if (params.move.hasCondition(failIfDampCondition)) { params.powerMult.value = 0; } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 7,
+    "key": "LIMBER",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatusEffectImmunityAbAttr",
+        "args": [
+          "PARALYSIS"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      },
+      {
+        "name": "PostSummonHealStatusAbAttr",
+        "args": [
+          "PARALYSIS"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 8,
+    "key": "SAND_VEIL",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "EVA",
+          1.25
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "BlockWeatherDamageAttr",
+        "args": [
+          "SANDSTORM"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable",
+      "condition"
+    ],
+    "conditions": [
+      "getWeatherCondition(WeatherType.SANDSTORM)"
+    ]
+  },
+  {
+    "id": 9,
+    "key": "STATIC",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendApplyStatusEffectAbAttr",
+        "args": [
+          30,
+          true,
+          "PARALYSIS"
+        ],
+        "argKinds": [
+          "number",
+          "boolean",
+          "enum:StatusEffect"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 10,
+    "key": "VOLT_ABSORB",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "TypeImmunityHealAbAttr",
+        "args": [
+          "ELECTRIC"
+        ],
+        "argKinds": [
+          "enum:PokemonType"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 11,
+    "key": "WATER_ABSORB",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "TypeImmunityHealAbAttr",
+        "args": [
+          "WATER"
+        ],
+        "argKinds": [
+          "enum:PokemonType"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 12,
+    "key": "OBLIVIOUS",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "BattlerTagImmunityAbAttr",
+        "args": [
+          [
+            "INFATUATED",
+            "TAUNT"
+          ]
+        ],
+        "argKinds": [
+          "array"
+        ]
+      },
+      {
+        "name": "PostSummonRemoveBattlerTagAbAttr",
+        "args": [
+          "INFATUATED",
+          "TAUNT"
+        ],
+        "argKinds": [
+          "enum:BattlerTagType",
+          "enum:BattlerTagType"
+        ]
+      },
+      {
+        "name": "IntimidateImmunityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 13,
+    "key": "CLOUD_NINE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "SuppressWeatherEffectAbAttr",
+        "args": [
+          true
+        ],
+        "argKinds": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "PostSummonUnnamedMessageAbAttr",
+        "args": [
+          "i18next.t(\"abilityTriggers:weatherEffectDisappeared\")"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "PostSummonWeatherSuppressedFormChangeAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "PostFaintUnsuppressedWeatherFormChangeAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 14,
+    "key": "COMPOUND_EYES",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "ACC",
+          1.3
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ accMult }) => { accMult.value *= 1.3; }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 15,
+    "key": "INSOMNIA",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatusEffectImmunityAbAttr",
+        "args": [
+          "SLEEP"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      },
+      {
+        "name": "PostSummonHealStatusAbAttr",
+        "args": [
+          "SLEEP"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      },
+      {
+        "name": "BattlerTagImmunityAbAttr",
+        "args": [
+          "DROWSY"
+        ],
+        "argKinds": [
+          "enum:BattlerTagType"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 16,
+    "key": "COLOR_CHANGE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendTypeChangeAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "condition"
+    ],
+    "conditions": [
+      "sheerForceHitDisableAbCondition"
+    ]
+  },
+  {
+    "id": 17,
+    "key": "IMMUNITY",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatusEffectImmunityAbAttr",
+        "args": [
+          "POISON",
+          "TOXIC"
+        ],
+        "argKinds": [
+          "enum:StatusEffect",
+          "enum:StatusEffect"
+        ]
+      },
+      {
+        "name": "PostSummonHealStatusAbAttr",
+        "args": [
+          "POISON",
+          "TOXIC"
+        ],
+        "argKinds": [
+          "enum:StatusEffect",
+          "enum:StatusEffect"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 18,
+    "key": "FLASH_FIRE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "TypeImmunityAddBattlerTagAbAttr",
+        "args": [
+          "FIRE",
+          "FIRE_BOOST",
+          1
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "enum:BattlerTagType",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 19,
+    "key": "SHIELD_DUST",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "IgnoreMoveEffectsAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 20,
+    "key": "OWN_TEMPO",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "BattlerTagImmunityAbAttr",
+        "args": [
+          "CONFUSED"
+        ],
+        "argKinds": [
+          "enum:BattlerTagType"
+        ]
+      },
+      {
+        "name": "PostSummonRemoveBattlerTagAbAttr",
+        "args": [
+          "CONFUSED"
+        ],
+        "argKinds": [
+          "enum:BattlerTagType"
+        ]
+      },
+      {
+        "name": "IntimidateImmunityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 21,
+    "key": "SUCTION_CUPS",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ForceSwitchOutImmunityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 22,
+    "key": "INTIMIDATE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonStatStageChangeAbAttr",
+        "args": [
+          [
+            {
+              "stat": "ATK",
+              "stages": -1
+            }
+          ],
+          false,
+          true
+        ],
+        "argKinds": [
+          "array",
+          "boolean",
+          "boolean"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 23,
+    "key": "SHADOW_TAG",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ArenaTrapAbAttr",
+        "args": [
+          "(_user, target) => !target.hasAbility(AbilityId.SHADOW_TAG)"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 24,
+    "key": "ROUGH_SKIN",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendContactDamageAbAttr",
+        "args": [
+          8
+        ],
+        "argKinds": [
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 25,
+    "key": "WONDER_GUARD",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "NonSuperEffectiveImmunityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable",
+      "uncopiable"
+    ]
+  },
+  {
+    "id": 26,
+    "key": "LEVITATE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "AttackTypeImmunityAbAttr",
+        "args": [
+          "GROUND",
+          "(pokemon: Pokemon) => !pokemon.getTag(GroundedTag) && !globalScene.arena.getTag(ArenaTagType.GRAVITY)"
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 27,
+    "key": "EFFECT_SPORE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "EffectSporeAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 28,
+    "key": "SYNCHRONIZE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "SyncEncounterNatureAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "SynchronizeStatusAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 29,
+    "key": "CLEAR_BODY",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ProtectStatAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 30,
+    "key": "NATURAL_CURE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PreSwitchOutResetStatusAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 31,
+    "key": "LIGHTNING_ROD",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "RedirectTypeMoveAbAttr",
+        "args": [
+          "ELECTRIC"
+        ],
+        "argKinds": [
+          "enum:PokemonType"
+        ]
+      },
+      {
+        "name": "TypeImmunityStatStageChangeAbAttr",
+        "args": [
+          "ELECTRIC",
+          "SPATK",
+          1
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 32,
+    "key": "SERENE_GRACE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveEffectChanceMultiplierAbAttr",
+        "args": [
+          2
+        ],
+        "argKinds": [
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 33,
+    "key": "SWIFT_SWIM",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "SPD",
+          2
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "condition"
+    ],
+    "conditions": [
+      "getWeatherCondition(WeatherType.RAIN, WeatherType.HEAVY_RAIN)"
+    ]
+  },
+  {
+    "id": 34,
+    "key": "CHLOROPHYLL",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "SPD",
+          2
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "condition"
+    ],
+    "conditions": [
+      "getWeatherCondition(WeatherType.SUNNY, WeatherType.HARSH_SUN)"
+    ]
+  },
+  {
+    "id": 35,
+    "key": "ILLUMINATE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ProtectStatAbAttr",
+        "args": [
+          "ACC"
+        ],
+        "argKinds": [
+          "enum:Stat"
+        ]
+      },
+      {
+        "name": "DoubleBattleChanceAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "IgnoreOpponentStatStagesAbAttr",
+        "args": [
+          [
+            "EVA"
+          ]
+        ],
+        "argKinds": [
+          "array"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 36,
+    "key": "TRACE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonCopyAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "uncopiable"
+    ]
+  },
+  {
+    "id": 37,
+    "key": "HUGE_POWER",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "ATK",
+          2
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ move, powerMult }) => { if (move.category === MoveCategory.PHYSICAL) { powerMult.value *= 2; } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 38,
+    "key": "POISON_POINT",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendApplyStatusEffectAbAttr",
+        "args": [
+          30,
+          true,
+          "POISON"
+        ],
+        "argKinds": [
+          "number",
+          "boolean",
+          "enum:StatusEffect"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 39,
+    "key": "INNER_FOCUS",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "BattlerTagImmunityAbAttr",
+        "args": [
+          "FLINCHED"
+        ],
+        "argKinds": [
+          "enum:BattlerTagType"
+        ]
+      },
+      {
+        "name": "IntimidateImmunityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 40,
+    "key": "MAGMA_ARMOR",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatusEffectImmunityAbAttr",
+        "args": [
+          "FREEZE"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      },
+      {
+        "name": "PostSummonHealStatusAbAttr",
+        "args": [
+          "FREEZE"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 41,
+    "key": "WATER_VEIL",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatusEffectImmunityAbAttr",
+        "args": [
+          "BURN"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      },
+      {
+        "name": "PostSummonHealStatusAbAttr",
+        "args": [
+          "BURN"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 42,
+    "key": "MAGNET_PULL",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ArenaTrapAbAttr",
+        "args": [
+          "(_user, target) => target.isOfType(PokemonType.STEEL, { returnOriginalTypesIfStellar: true })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 43,
+    "key": "SOUNDPROOF",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveImmunityAbAttr",
+        "args": [
+          "(pokemon, attacker, move) => pokemon !== attacker && move.hasFlag(MoveFlags.SOUND_BASED)"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 44,
+    "key": "RAIN_DISH",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostWeatherLapseHealAbAttr",
+        "args": [
+          1,
+          "RAIN",
+          "HEAVY_RAIN"
+        ],
+        "argKinds": [
+          "number",
+          "enum:WeatherType",
+          "enum:WeatherType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 45,
+    "key": "SAND_STREAM",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonWeatherChangeAbAttr",
+        "args": [
+          "SANDSTORM"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "PostBiomeChangeWeatherChangeAbAttr",
+        "args": [
+          "SANDSTORM"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 46,
+    "key": "PRESSURE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "IncreasePpUsedAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "PostSummonMessageAbAttr",
+        "args": [
+          "(pokemon: Pokemon) => i18next.t(\"abilityTriggers:postSummonPressure\", { pokemonNameWithAffix: getPokemonNameWithAffix(pokemon) })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 47,
+    "key": "THICK_FAT",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ReceivedTypeDamageMultiplierAbAttr",
+        "args": [
+          "FIRE",
+          0.5
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "number"
+        ]
+      },
+      {
+        "name": "ReceivedTypeDamageMultiplierAbAttr",
+        "args": [
+          "ICE",
+          0.5
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 48,
+    "key": "EARLY_BIRD",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ReduceStatusEffectDurationAbAttr",
+        "args": [
+          "SLEEP"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 49,
+    "key": "FLAME_BODY",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendApplyStatusEffectAbAttr",
+        "args": [
+          30,
+          true,
+          "BURN"
+        ],
+        "argKinds": [
+          "number",
+          "boolean",
+          "enum:StatusEffect"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 50,
+    "key": "RUN_AWAY",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "RunSuccessAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 51,
+    "key": "KEEN_EYE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ProtectStatAbAttr",
+        "args": [
+          "ACC"
+        ],
+        "argKinds": [
+          "enum:Stat"
+        ]
+      },
+      {
+        "name": "IgnoreOpponentStatStagesAbAttr",
+        "args": [
+          [
+            "EVA"
+          ]
+        ],
+        "argKinds": [
+          "array"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 52,
+    "key": "HYPER_CUTTER",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ProtectStatAbAttr",
+        "args": [
+          "ATK"
+        ],
+        "argKinds": [
+          "enum:Stat"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 53,
+    "key": "PICKUP",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostBattleLootAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "unsuppressable"
+    ]
+  },
+  {
+    "id": 54,
+    "key": "TRUANT",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonAddBattlerTagAbAttr",
+        "args": [
+          "TRUANT",
+          1,
+          false
+        ],
+        "argKinds": [
+          "enum:BattlerTagType",
+          "number",
+          "boolean"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 55,
+    "key": "HUSTLE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "ATK",
+          1.5
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "ACC",
+          0.8,
+          "(_user, _target, move) => move.category === MoveCategory.PHYSICAL"
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number",
+          "raw"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ move, accMult, powerMult }: AiMovegenMoveStatsAbAttrParams) => { if (move.category === MoveCategory.PHYSICAL) { accMult.value *= 0.8; powerMult.value *= 1.5; } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 56,
+    "key": "CUTE_CHARM",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendContactApplyTagChanceAbAttr",
+        "args": [
+          30,
+          "INFATUATED"
+        ],
+        "argKinds": [
+          "number",
+          "enum:BattlerTagType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 57,
+    "key": "PLUS",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "SPATK",
+          1.5
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ],
+        "condition": "p => globalScene.currentBattle.double && [AbilityId.PLUS, AbilityId.MINUS].some(a => p.getAlly()?.hasAbility(a) ?? false)"
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 58,
+    "key": "MINUS",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "SPATK",
+          1.5
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ],
+        "condition": "p => globalScene.currentBattle.double && [AbilityId.PLUS, AbilityId.MINUS].some(a => p.getAlly()?.hasAbility(a) ?? false)"
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 59,
+    "key": "FORECAST",
+    "generation": 3,
+    "postSummonPriority": -2,
+    "attrs": [
+      {
+        "name": "NoFusionAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "PostSummonFormChangeByWeatherAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "PostWeatherChangeFormChangeAbAttr",
+        "args": [
+          "FORECAST",
+          [
+            "NONE",
+            "SANDSTORM",
+            "STRONG_WINDS",
+            "FOG"
+          ]
+        ],
+        "argKinds": [
+          "enum:AbilityId",
+          "array"
+        ]
+      }
+    ],
+    "flags": [
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 60,
+    "key": "STICKY_HOLD",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "BlockItemTheftAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "bypassFaint",
+      "ignorable"
+    ]
+  },
+  {
+    "id": 61,
+    "key": "SHED_SKIN",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostTurnResetStatusAbAttr",
+        "args": [],
+        "argKinds": [],
+        "condition": "_pokemon => randSeedInt(10) < 3"
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 62,
+    "key": "GUTS",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "BypassBurnDamageReductionAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "ATK",
+          1.5
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ],
+        "condition": "pokemon => !!pokemon.status || pokemon.hasAbility(AbilityId.COMATOSE)"
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 63,
+    "key": "MARVEL_SCALE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "DEF",
+          1.5
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ],
+        "condition": "pokemon => !!pokemon.status || pokemon.hasAbility(AbilityId.COMATOSE)"
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 64,
+    "key": "LIQUID_OOZE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ReverseDrainAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 65,
+    "key": "OVERGROW",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "LowHpMoveTypePowerBoostAbAttr",
+        "args": [
+          "GRASS"
+        ],
+        "argKinds": [
+          "enum:PokemonType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 66,
+    "key": "BLAZE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "LowHpMoveTypePowerBoostAbAttr",
+        "args": [
+          "FIRE"
+        ],
+        "argKinds": [
+          "enum:PokemonType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 67,
+    "key": "TORRENT",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "LowHpMoveTypePowerBoostAbAttr",
+        "args": [
+          "WATER"
+        ],
+        "argKinds": [
+          "enum:PokemonType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 68,
+    "key": "SWARM",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "LowHpMoveTypePowerBoostAbAttr",
+        "args": [
+          "BUG"
+        ],
+        "argKinds": [
+          "enum:PokemonType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 69,
+    "key": "ROCK_HEAD",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "BlockRecoilDamageAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 70,
+    "key": "DROUGHT",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonWeatherChangeAbAttr",
+        "args": [
+          "SUNNY"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "PostBiomeChangeWeatherChangeAbAttr",
+        "args": [
+          "SUNNY"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "droughtAiMovegenEffect"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 71,
+    "key": "ARENA_TRAP",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ArenaTrapAbAttr",
+        "args": [
+          "(_user, target) => target.isGrounded()"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "DoubleBattleChanceAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 72,
+    "key": "VITAL_SPIRIT",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatusEffectImmunityAbAttr",
+        "args": [
+          "SLEEP"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      },
+      {
+        "name": "PostSummonHealStatusAbAttr",
+        "args": [
+          "SLEEP"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      },
+      {
+        "name": "BattlerTagImmunityAbAttr",
+        "args": [
+          "DROWSY"
+        ],
+        "argKinds": [
+          "enum:BattlerTagType"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 73,
+    "key": "WHITE_SMOKE",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ProtectStatAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 74,
+    "key": "PURE_POWER",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "ATK",
+          2
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ move, powerMult }) => { if (move.category === MoveCategory.PHYSICAL) { powerMult.value *= 2; } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 75,
+    "key": "SHELL_ARMOR",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "BlockCritAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 76,
+    "key": "AIR_LOCK",
+    "generation": 3,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "SuppressWeatherEffectAbAttr",
+        "args": [
+          true
+        ],
+        "argKinds": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "PostSummonUnnamedMessageAbAttr",
+        "args": [
+          "i18next.t(\"abilityTriggers:weatherEffectDisappeared\")"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "PostSummonWeatherSuppressedFormChangeAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "PostFaintUnsuppressedWeatherFormChangeAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 77,
+    "key": "TANGLED_FEET",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "EVA",
+          2
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ],
+        "condition": "pokemon => !!pokemon.getTag(BattlerTagType.CONFUSED)"
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 78,
+    "key": "MOTOR_DRIVE",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "TypeImmunityStatStageChangeAbAttr",
+        "args": [
+          "ELECTRIC",
+          "SPD",
+          1
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 79,
+    "key": "RIVALRY",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "(user, target, _move) => user.gender !== Gender.GENDERLESS && target?.gender !== Gender.GENDERLESS && user.gender === target?.gender",
+          1.25
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      },
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "(user, target, _move) => user.gender !== Gender.GENDERLESS && target?.gender !== Gender.GENDERLESS && user.gender !== target?.gender",
+          0.75
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 80,
+    "key": "STEADFAST",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "FlinchStatStageChangeAbAttr",
+        "args": [
+          [
+            {
+              "stat": "SPD",
+              "stages": 1
+            }
+          ]
+        ],
+        "argKinds": [
+          "array"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 81,
+    "key": "SNOW_CLOAK",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "EVA",
+          1.25
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "BlockWeatherDamageAttr",
+        "args": [
+          "HAIL"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable",
+      "condition"
+    ],
+    "conditions": [
+      "getWeatherCondition(WeatherType.HAIL, WeatherType.SNOW)"
+    ]
+  },
+  {
+    "id": 82,
+    "key": "GLUTTONY",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ReduceBerryUseThresholdAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 83,
+    "key": "ANGER_POINT",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostReceiveCritStatStageChangeAbAttr",
+        "args": [
+          "ATK",
+          12
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 84,
+    "key": "UNBURDEN",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostItemLostApplyBattlerTagAbAttr",
+        "args": [
+          "UNBURDEN"
+        ],
+        "argKinds": [
+          "enum:BattlerTagType"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint",
+      "edgeCase"
+    ]
+  },
+  {
+    "id": 85,
+    "key": "HEATPROOF",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ReceivedTypeDamageMultiplierAbAttr",
+        "args": [
+          "FIRE",
+          0.5
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "number"
+        ]
+      },
+      {
+        "name": "ReduceBurnDamageAbAttr",
+        "args": [
+          0.5
+        ],
+        "argKinds": [
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 86,
+    "key": "SIMPLE",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatStageChangeMultiplierAbAttr",
+        "args": [
+          2
+        ],
+        "argKinds": [
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 87,
+    "key": "DRY_SKIN",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostWeatherLapseDamageAbAttr",
+        "args": [
+          2,
+          "SUNNY",
+          "HARSH_SUN"
+        ],
+        "argKinds": [
+          "number",
+          "enum:WeatherType",
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "PostWeatherLapseHealAbAttr",
+        "args": [
+          2,
+          "RAIN",
+          "HEAVY_RAIN"
+        ],
+        "argKinds": [
+          "number",
+          "enum:WeatherType",
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "ReceivedTypeDamageMultiplierAbAttr",
+        "args": [
+          "FIRE",
+          1.25
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "number"
+        ]
+      },
+      {
+        "name": "TypeImmunityHealAbAttr",
+        "args": [
+          "WATER"
+        ],
+        "argKinds": [
+          "enum:PokemonType"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 88,
+    "key": "DOWNLOAD",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "DownloadAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 89,
+    "key": "IRON_FIST",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "(_user, _target, move) => move.hasFlag(MoveFlags.PUNCHING_MOVE)",
+          1.2
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 90,
+    "key": "POISON_HEAL",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostTurnStatusHealAbAttr",
+        "args": [
+          "TOXIC",
+          "POISON"
+        ],
+        "argKinds": [
+          "enum:StatusEffect",
+          "enum:StatusEffect"
+        ]
+      },
+      {
+        "name": "BlockStatusDamageAbAttr",
+        "args": [
+          "TOXIC",
+          "POISON"
+        ],
+        "argKinds": [
+          "enum:StatusEffect",
+          "enum:StatusEffect"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 91,
+    "key": "ADAPTABILITY",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StabBoostAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 92,
+    "key": "SKILL_LINK",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MaxMultiHitAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ maxMultiHit }) => { maxMultiHit.value = true; }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 93,
+    "key": "HYDRATION",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostTurnResetStatusAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "condition"
+    ],
+    "conditions": [
+      "getWeatherCondition(WeatherType.RAIN, WeatherType.HEAVY_RAIN)"
+    ]
+  },
+  {
+    "id": 94,
+    "key": "SOLAR_POWER",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostWeatherLapseDamageAbAttr",
+        "args": [
+          2,
+          "SUNNY",
+          "HARSH_SUN"
+        ],
+        "argKinds": [
+          "number",
+          "enum:WeatherType",
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "SPATK",
+          1.5
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "condition"
+    ],
+    "conditions": [
+      "getWeatherCondition(WeatherType.SUNNY, WeatherType.HARSH_SUN)"
+    ]
+  },
+  {
+    "id": 95,
+    "key": "QUICK_FEET",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "SPD",
+          2
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ],
+        "condition": "pokemon => (pokemon.status ? pokemon.status.effect === StatusEffect.PARALYSIS : false)"
+      },
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "SPD",
+          1.5
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ],
+        "condition": "pokemon => !!pokemon.status || pokemon.hasAbility(AbilityId.COMATOSE)"
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 96,
+    "key": "NORMALIZE",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveTypeChangeAbAttr",
+        "args": [
+          "NORMAL",
+          "anyTypeMoveConversionCondition"
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "raw"
+        ]
+      },
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "anyTypeMoveConversionCondition",
+          1.2
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 97,
+    "key": "SNIPER",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MultCritAbAttr",
+        "args": [
+          1.5
+        ],
+        "argKinds": [
+          "number"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ move, powerMult }) => { if (move.hasAttr(\"CritOnlyAttr\")) { powerMult.value *= 1.5; } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 98,
+    "key": "MAGIC_GUARD",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "BlockNonDirectDamageAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 99,
+    "key": "NO_GUARD",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "AlwaysHitAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "DoubleBattleChanceAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 100,
+    "key": "STALL",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ChangeMovePriorityInBracketAbAttr",
+        "args": [
+          "(_pokemon, _move: Move) => true",
+          "MovePriorityInBracket.LAST"
+        ],
+        "argKinds": [
+          "raw",
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 101,
+    "key": "TECHNICIAN",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "(user, target, move) => { const power = new NumberHolder(move.power); applyMoveAttrs(\"VariablePowerAttr\", user, target, move, power); return power.value <= 60; }",
+          1.5
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 102,
+    "key": "LEAF_GUARD",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatusEffectImmunityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable",
+      "condition"
+    ],
+    "conditions": [
+      "getWeatherCondition(WeatherType.SUNNY, WeatherType.HARSH_SUN)"
+    ]
+  },
+  {
+    "id": 103,
+    "key": "KLUTZ",
+    "generation": 4,
+    "postSummonPriority": 1,
+    "attrs": [],
+    "flags": [
+      "unimplemented"
+    ]
+  },
+  {
+    "id": 104,
+    "key": "MOLD_BREAKER",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonMessageAbAttr",
+        "args": [
+          "(pokemon: Pokemon) => i18next.t(\"abilityTriggers:postSummonMoldBreaker\", { pokemonNameWithAffix: getPokemonNameWithAffix(pokemon) })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "MoveAbilityBypassAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 105,
+    "key": "SUPER_LUCK",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "BonusCritAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 106,
+    "key": "AFTERMATH",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostFaintContactDamageAbAttr",
+        "args": [
+          4
+        ],
+        "argKinds": [
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 107,
+    "key": "ANTICIPATION",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonMessageAbAttr",
+        "args": [
+          "(pokemon: Pokemon) => i18next.t(\"abilityTriggers:postSummonAnticipation\", { pokemonNameWithAffix: getPokemonNameWithAffix(pokemon) })"
+        ],
+        "argKinds": [
+          "raw"
+        ],
+        "condition": "anticipationCondition"
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 108,
+    "key": "FOREWARN",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ForewarnAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 109,
+    "key": "UNAWARE",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "IgnoreOpponentStatStagesAbAttr",
+        "args": [
+          [
+            "ATK",
+            "DEF",
+            "SPATK",
+            "SPDEF",
+            "ACC",
+            "EVA"
+          ]
+        ],
+        "argKinds": [
+          "array"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 110,
+    "key": "TINTED_LENS",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveDamageBoostAbAttr",
+        "args": [
+          2,
+          "(user, target, move) => (target?.getMoveEffectiveness(user!, move) ?? 1) <= 0.5"
+        ],
+        "argKinds": [
+          "number",
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 111,
+    "key": "FILTER",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ReceivedMoveDamageMultiplierAbAttr",
+        "args": [
+          "(target, user, move) => target.getMoveEffectiveness(user, move) >= 2",
+          0.75
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 112,
+    "key": "SLOW_START",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonAddBattlerTagAbAttr",
+        "args": [
+          "SLOW_START",
+          5
+        ],
+        "argKinds": [
+          "enum:BattlerTagType",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 113,
+    "key": "SCRAPPY",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "IgnoreTypeImmunityAbAttr",
+        "args": [
+          "GHOST",
+          [
+            "NORMAL",
+            "FIGHTING"
+          ]
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "array"
+        ]
+      },
+      {
+        "name": "IntimidateImmunityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 114,
+    "key": "STORM_DRAIN",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "RedirectTypeMoveAbAttr",
+        "args": [
+          "WATER"
+        ],
+        "argKinds": [
+          "enum:PokemonType"
+        ]
+      },
+      {
+        "name": "TypeImmunityStatStageChangeAbAttr",
+        "args": [
+          "WATER",
+          "SPATK",
+          1
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 115,
+    "key": "ICE_BODY",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "BlockWeatherDamageAttr",
+        "args": [
+          "HAIL"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "PostWeatherLapseHealAbAttr",
+        "args": [
+          1,
+          "HAIL",
+          "SNOW"
+        ],
+        "argKinds": [
+          "number",
+          "enum:WeatherType",
+          "enum:WeatherType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 116,
+    "key": "SOLID_ROCK",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ReceivedMoveDamageMultiplierAbAttr",
+        "args": [
+          "(target, user, move) => target.getMoveEffectiveness(user, move) >= 2",
+          0.75
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 117,
+    "key": "SNOW_WARNING",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonWeatherChangeAbAttr",
+        "args": [
+          "SNOW"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "PostBiomeChangeWeatherChangeAbAttr",
+        "args": [
+          "SNOW"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ move, powerMult, accMult, instantCharge }) => { if (move.id === MoveId.WEATHER_BALL) { powerMult.value *= 2; return; } if (move.hasAttr(\"BlizzardAccuracyAttr\")) { accMult.value = Number.POSITIVE_INFINITY; } if (move.hasAttr(\"AntiSunlightPowerDecreaseAttr\")) { powerMult.value *= 0.5; } if (move.isChargingMove() && move.getChargeAttrs(\"WeatherInstantChargeAttr\").some(attr => attr.weatherTypes.includes(WeatherType.SNOW))) { instantCharge.value = true; } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 118,
+    "key": "HONEY_GATHER",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoneyAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "unsuppressable"
+    ]
+  },
+  {
+    "id": 119,
+    "key": "FRISK",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "FriskAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 120,
+    "key": "RECKLESS",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "(_user, _target, move) => move.hasFlag(MoveFlags.RECKLESS_MOVE)",
+          1.2
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 121,
+    "key": "MULTITYPE",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "NoFusionAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "unsuppressable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 122,
+    "key": "FLOWER_GIFT",
+    "generation": 4,
+    "postSummonPriority": -2,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "ATK",
+          1.5
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ],
+        "condition": "getWeatherCondition(WeatherType.SUNNY || WeatherType.HARSH_SUN)"
+      },
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "SPDEF",
+          1.5
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ],
+        "condition": "getWeatherCondition(WeatherType.SUNNY || WeatherType.HARSH_SUN)"
+      },
+      {
+        "name": "AllyStatMultiplierAbAttr",
+        "args": [
+          "ATK",
+          1.5
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ],
+        "condition": "getWeatherCondition(WeatherType.SUNNY || WeatherType.HARSH_SUN)"
+      },
+      {
+        "name": "AllyStatMultiplierAbAttr",
+        "args": [
+          "SPDEF",
+          1.5
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ],
+        "condition": "getWeatherCondition(WeatherType.SUNNY || WeatherType.HARSH_SUN)"
+      },
+      {
+        "name": "NoFusionAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "PostSummonFormChangeByWeatherAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "PostWeatherChangeFormChangeAbAttr",
+        "args": [
+          "FLOWER_GIFT",
+          [
+            "NONE",
+            "SANDSTORM",
+            "STRONG_WINDS",
+            "FOG",
+            "HAIL",
+            "HEAVY_RAIN",
+            "SNOW",
+            "RAIN"
+          ]
+        ],
+        "argKinds": [
+          "enum:AbilityId",
+          "array"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 123,
+    "key": "BAD_DREAMS",
+    "generation": 4,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostTurnHurtIfSleepingAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 124,
+    "key": "PICKPOCKET",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendStealHeldItemAbAttr",
+        "args": [
+          "(target, user, move) => move.doesFlagEffectApply({ flag: MoveFlags.MAKES_CONTACT, user, target })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "condition"
+    ],
+    "conditions": [
+      "sheerForceHitDisableAbCondition"
+    ]
+  },
+  {
+    "id": 125,
+    "key": "SHEER_FORCE",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "(_user, _target, move) => move.chance >= 1",
+          1.3
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      },
+      {
+        "name": "MoveEffectChanceMultiplierAbAttr",
+        "args": [
+          0
+        ],
+        "argKinds": [
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 126,
+    "key": "CONTRARY",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatStageChangeMultiplierAbAttr",
+        "args": [
+          -1
+        ],
+        "argKinds": [
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 127,
+    "key": "UNNERVE",
+    "generation": 5,
+    "postSummonPriority": 1,
+    "attrs": [
+      {
+        "name": "PreventBerryUseAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 128,
+    "key": "DEFIANT",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostStatStageChangeStatStageChangeAbAttr",
+        "args": [
+          "(_target, changes) => ({ stat: Stat.ATK, stages: changes[0].stages < 0 ? 2 * changes.length : 0, })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 129,
+    "key": "DEFEATIST",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "ATK",
+          0.5
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "SPATK",
+          0.5
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "condition"
+    ],
+    "conditions": [
+      "pokemon => pokemon.getHpRatio() <= 0.5"
+    ]
+  },
+  {
+    "id": 130,
+    "key": "CURSED_BODY",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendMoveDisableAbAttr",
+        "args": [
+          30
+        ],
+        "argKinds": [
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 131,
+    "key": "HEALER",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostTurnResetStatusAbAttr",
+        "args": [
+          true
+        ],
+        "argKinds": [
+          "boolean"
+        ],
+        "condition": "pokemon => pokemon.getAlly() != null && randSeedInt(2) === 1"
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 132,
+    "key": "FRIEND_GUARD",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "AlliedFieldDamageReductionAbAttr",
+        "args": [
+          0.75
+        ],
+        "argKinds": [
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 133,
+    "key": "WEAK_ARMOR",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendStatStageChangeAbAttr",
+        "args": [
+          "(_target, _user, move) => move.category === MoveCategory.PHYSICAL",
+          "DEF",
+          -1
+        ],
+        "argKinds": [
+          "raw",
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "PostDefendStatStageChangeAbAttr",
+        "args": [
+          "(_target, _user, move) => move.category === MoveCategory.PHYSICAL",
+          "SPD",
+          2
+        ],
+        "argKinds": [
+          "raw",
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 134,
+    "key": "HEAVY_METAL",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "WeightMultiplierAbAttr",
+        "args": [
+          2
+        ],
+        "argKinds": [
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 135,
+    "key": "LIGHT_METAL",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "WeightMultiplierAbAttr",
+        "args": [
+          0.5
+        ],
+        "argKinds": [
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 136,
+    "key": "MULTISCALE",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ReceivedMoveDamageMultiplierAbAttr",
+        "args": [
+          "(target, _user, _move) => target.isFullHp()",
+          0.5
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 137,
+    "key": "TOXIC_BOOST",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "(user, _target, move) => move.category === MoveCategory.PHYSICAL && (user.status?.effect === StatusEffect.POISON || user.status?.effect === StatusEffect.TOXIC)",
+          1.5
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 138,
+    "key": "FLARE_BOOST",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "(user, _target, move) => move.category === MoveCategory.SPECIAL && user.status?.effect === StatusEffect.BURN",
+          1.5
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 139,
+    "key": "HARVEST",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostTurnRestoreBerryAbAttr",
+        "args": [
+          "pokemon => (getWeatherCondition(WeatherType.SUNNY, WeatherType.HARSH_SUN)(pokemon) ? 1 : 0.5)"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "edgeCase"
+    ]
+  },
+  {
+    "id": 140,
+    "key": "TELEPATHY",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveImmunityAbAttr",
+        "args": [
+          "(pokemon, attacker, move) => pokemon.getAlly() === attacker && move.is(\"AttackMove\")"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 141,
+    "key": "MOODY",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoodyAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 142,
+    "key": "OVERCOAT",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "BlockWeatherDamageAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "MoveImmunityAbAttr",
+        "args": [
+          "(pokemon, attacker, move) => pokemon !== attacker && move.hasFlag(MoveFlags.POWDER_MOVE)"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 143,
+    "key": "POISON_TOUCH",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostAttackContactApplyStatusEffectAbAttr",
+        "args": [
+          30,
+          "POISON"
+        ],
+        "argKinds": [
+          "number",
+          "enum:StatusEffect"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 144,
+    "key": "REGENERATOR",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PreSwitchOutHealAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 145,
+    "key": "BIG_PECKS",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ProtectStatAbAttr",
+        "args": [
+          "DEF"
+        ],
+        "argKinds": [
+          "enum:Stat"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 146,
+    "key": "SAND_RUSH",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "SPD",
+          2
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "BlockWeatherDamageAttr",
+        "args": [
+          "SANDSTORM"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      }
+    ],
+    "flags": [
+      "condition"
+    ],
+    "conditions": [
+      "getWeatherCondition(WeatherType.SANDSTORM)"
+    ]
+  },
+  {
+    "id": 147,
+    "key": "WONDER_SKIN",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "WonderSkinAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 148,
+    "key": "ANALYTIC",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "user => !globalScene.phaseManager.hasPhaseOfType(\"MovePhase\", phase => phase.pokemon.id !== user.id)",
+          1.3
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ move, powerMult }) => { if (move.priority < 0) { powerMult.value *= 1.3; } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 149,
+    "key": "ILLUSION",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [],
+    "flags": [
+      "uncopiable",
+      "unimplemented"
+    ]
+  },
+  {
+    "id": 150,
+    "key": "IMPOSTER",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonTransformAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "uncopiable",
+      "edgeCase"
+    ]
+  },
+  {
+    "id": 151,
+    "key": "INFILTRATOR",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "InfiltratorAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 152,
+    "key": "MUMMY",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendAbilityGiveAbAttr",
+        "args": [
+          "MUMMY"
+        ],
+        "argKinds": [
+          "enum:AbilityId"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 153,
+    "key": "MOXIE",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostVictoryStatStageChangeAbAttr",
+        "args": [
+          [
+            {
+              "stat": "ATK",
+              "stages": 1
+            }
+          ]
+        ],
+        "argKinds": [
+          "array"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 154,
+    "key": "JUSTIFIED",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendStatStageChangeAbAttr",
+        "args": [
+          "(_target, user, move) => user.getMoveType(move) === PokemonType.DARK && move.category !== MoveCategory.STATUS",
+          "ATK",
+          1
+        ],
+        "argKinds": [
+          "raw",
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 155,
+    "key": "RATTLED",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendStatStageChangeAbAttr",
+        "args": [
+          "(_target, user, move) => { const moveType = user.getMoveType(move); return (move.category !== MoveCategory.STATUS && (moveType === PokemonType.DARK || moveType === PokemonType.BUG || moveType === PokemonType.GHOST)); }",
+          "SPD",
+          1
+        ],
+        "argKinds": [
+          "raw",
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "PostIntimidateStatStageChangeAbAttr",
+        "args": [
+          [
+            {
+              "stat": "SPD",
+              "stages": 1
+            }
+          ]
+        ],
+        "argKinds": [
+          "array"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 156,
+    "key": "MAGIC_BOUNCE",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ReflectStatusMoveAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 157,
+    "key": "SAP_SIPPER",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "TypeImmunityStatStageChangeAbAttr",
+        "args": [
+          "GRASS",
+          "ATK",
+          1
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 158,
+    "key": "PRANKSTER",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ChangeMovePriorityAbAttr",
+        "args": [
+          "(_pokemon, move: Move) => move.category === MoveCategory.STATUS",
+          1
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 159,
+    "key": "SAND_FORCE",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveTypePowerBoostAbAttr",
+        "args": [
+          "ROCK",
+          1.3,
+          true
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "number",
+          "boolean"
+        ]
+      },
+      {
+        "name": "MoveTypePowerBoostAbAttr",
+        "args": [
+          "GROUND",
+          1.3,
+          true
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "number",
+          "boolean"
+        ]
+      },
+      {
+        "name": "MoveTypePowerBoostAbAttr",
+        "args": [
+          "STEEL",
+          1.3,
+          true
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "number",
+          "boolean"
+        ]
+      },
+      {
+        "name": "BlockWeatherDamageAttr",
+        "args": [
+          "SANDSTORM"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      }
+    ],
+    "flags": [
+      "condition"
+    ],
+    "conditions": [
+      "getWeatherCondition(WeatherType.SANDSTORM)"
+    ]
+  },
+  {
+    "id": 160,
+    "key": "IRON_BARBS",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendContactDamageAbAttr",
+        "args": [
+          8
+        ],
+        "argKinds": [
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 161,
+    "key": "ZEN_MODE",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostBattleInitFormChangeAbAttr",
+        "args": [
+          "() => 0"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "PostSummonFormChangeAbAttr",
+        "args": [
+          "p => (p.getHpRatio() <= 0.5 ? 1 : 0)"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "PostTurnFormChangeAbAttr",
+        "args": [
+          "p => (p.getHpRatio() <= 0.5 ? 1 : 0)"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "NoFusionAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "bypassFaint",
+      "unsuppressable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 162,
+    "key": "VICTORY_STAR",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "ACC",
+          1.1
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "AllyStatMultiplierAbAttr",
+        "args": [
+          "ACC",
+          1.1,
+          false
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number",
+          "boolean"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ accMult }) => { accMult.value *= 1.1; }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 163,
+    "key": "TURBOBLAZE",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonMessageAbAttr",
+        "args": [
+          "(pokemon: Pokemon) => i18next.t(\"abilityTriggers:postSummonTurboblaze\", { pokemonNameWithAffix: getPokemonNameWithAffix(pokemon) })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "MoveAbilityBypassAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 164,
+    "key": "TERAVOLT",
+    "generation": 5,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonMessageAbAttr",
+        "args": [
+          "(pokemon: Pokemon) => i18next.t(\"abilityTriggers:postSummonTeravolt\", { pokemonNameWithAffix: getPokemonNameWithAffix(pokemon) })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "MoveAbilityBypassAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 165,
+    "key": "AROMA_VEIL",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "UserFieldBattlerTagImmunityAbAttr",
+        "args": [
+          [
+            "INFATUATED",
+            "TAUNT",
+            "DISABLED",
+            "TORMENT",
+            "HEAL_BLOCK",
+            "ENCORE"
+          ]
+        ],
+        "argKinds": [
+          "array"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 166,
+    "key": "FLOWER_VEIL",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ConditionalUserFieldStatusEffectImmunityAbAttr",
+        "args": [
+          "(target, source) => !!source && target.id !== source.id && target.isOfType(PokemonType.GRASS, { returnOriginalTypesIfStellar: true })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "ConditionalUserFieldBattlerTagImmunityAbAttr",
+        "args": [
+          "target => target.isOfType(PokemonType.GRASS, { returnOriginalTypesIfStellar: true })",
+          [
+            "DROWSY"
+          ]
+        ],
+        "argKinds": [
+          "raw",
+          "array"
+        ]
+      },
+      {
+        "name": "ConditionalUserFieldProtectStatAbAttr",
+        "args": [
+          "target => target.isOfType(PokemonType.GRASS, { returnOriginalTypesIfStellar: true })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 167,
+    "key": "CHEEK_POUCH",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "HealFromBerryUseAbAttr",
+        "args": [
+          "1 / 3"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 168,
+    "key": "PROTEAN",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PokemonTypeChangeAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "edgeCase"
+    ]
+  },
+  {
+    "id": 169,
+    "key": "FUR_COAT",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ReceivedMoveDamageMultiplierAbAttr",
+        "args": [
+          "(_target, _user, move) => move.category === MoveCategory.PHYSICAL",
+          0.5
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 170,
+    "key": "MAGICIAN",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostAttackStealHeldItemAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 171,
+    "key": "BULLETPROOF",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveImmunityAbAttr",
+        "args": [
+          "(pokemon, attacker, move) => pokemon !== attacker && move.hasFlag(MoveFlags.BALLBOMB_MOVE)"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 172,
+    "key": "COMPETITIVE",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostStatStageChangeStatStageChangeAbAttr",
+        "args": [
+          "(_target, changes) => ({ stat: Stat.SPATK, stages: changes[0].stages < 0 ? 2 * changes.length : 0, })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 173,
+    "key": "STRONG_JAW",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "(_user, _target, move) => move.hasFlag(MoveFlags.BITING_MOVE)",
+          1.5
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 174,
+    "key": "REFRIGERATE",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveTypeChangeAbAttr",
+        "args": [
+          "ICE",
+          "normalTypeMoveConversionCondition"
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "raw"
+        ]
+      },
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "normalTypeMoveConversionCondition",
+          1.2
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 175,
+    "key": "SWEET_VEIL",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "UserFieldStatusEffectImmunityAbAttr",
+        "args": [
+          "SLEEP"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      },
+      {
+        "name": "PostSummonUserFieldRemoveStatusEffectAbAttr",
+        "args": [
+          "SLEEP"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      },
+      {
+        "name": "UserFieldBattlerTagImmunityAbAttr",
+        "args": [
+          "DROWSY"
+        ],
+        "argKinds": [
+          "enum:BattlerTagType"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable",
+      "partial"
+    ]
+  },
+  {
+    "id": 176,
+    "key": "STANCE_CHANGE",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "NoFusionAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "unsuppressable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 177,
+    "key": "GALE_WINGS",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ChangeMovePriorityAbAttr",
+        "args": [
+          "(pokemon, move) => pokemon.isFullHp() && pokemon.getMoveType(move) === PokemonType.FLYING",
+          1
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 178,
+    "key": "MEGA_LAUNCHER",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "(_user, _target, move) => move.hasFlag(MoveFlags.PULSE_MOVE)",
+          1.5
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 179,
+    "key": "GRASS_PELT",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "DEF",
+          1.5
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ],
+        "condition": "getTerrainCondition(TerrainType.GRASSY)"
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 180,
+    "key": "SYMBIOSIS",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [],
+    "flags": [
+      "unimplemented"
+    ]
+  },
+  {
+    "id": 181,
+    "key": "TOUGH_CLAWS",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "(_user, _target, move) => move.hasFlag(MoveFlags.MAKES_CONTACT)",
+          1.3
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 182,
+    "key": "PIXILATE",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveTypeChangeAbAttr",
+        "args": [
+          "FAIRY",
+          "normalTypeMoveConversionCondition"
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "raw"
+        ]
+      },
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "normalTypeMoveConversionCondition",
+          1.2
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 183,
+    "key": "GOOEY",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendStatStageChangeAbAttr",
+        "args": [
+          "(_target, _user, move) => move.hasFlag(MoveFlags.MAKES_CONTACT)",
+          "SPD",
+          -1,
+          false
+        ],
+        "argKinds": [
+          "raw",
+          "enum:Stat",
+          "number",
+          "boolean"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 184,
+    "key": "AERILATE",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveTypeChangeAbAttr",
+        "args": [
+          "FLYING",
+          "normalTypeMoveConversionCondition"
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "raw"
+        ]
+      },
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "normalTypeMoveConversionCondition",
+          1.2
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 185,
+    "key": "PARENTAL_BOND",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "AddSecondStrikeAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "MoveDamageBoostAbAttr",
+        "args": [
+          0.25,
+          "(user, target, move) => user.turnData.hitCount > 1 && user.turnData.hitsLeft === 1 && move.canBeMultiStrikeEnhanced(user, true, target)"
+        ],
+        "argKinds": [
+          "number",
+          "raw"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ pokemon, move, powerMult }) => { if (move.canBeMultiStrikeEnhanced(pokemon, false, null)) { powerMult.value *= 1.25; } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 186,
+    "key": "DARK_AURA",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonMessageAbAttr",
+        "args": [
+          "(pokemon: Pokemon) => i18next.t(\"abilityTriggers:postSummonDarkAura\", { pokemonNameWithAffix: getPokemonNameWithAffix(pokemon) })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "FieldMoveTypePowerBoostAbAttr",
+        "args": [
+          "DARK",
+          "4 / 3"
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 187,
+    "key": "FAIRY_AURA",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonMessageAbAttr",
+        "args": [
+          "(pokemon: Pokemon) => i18next.t(\"abilityTriggers:postSummonFairyAura\", { pokemonNameWithAffix: getPokemonNameWithAffix(pokemon) })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "FieldMoveTypePowerBoostAbAttr",
+        "args": [
+          "FAIRY",
+          "4 / 3"
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 188,
+    "key": "AURA_BREAK",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "FieldMoveTypePowerBoostAbAttr",
+        "args": [
+          "DARK",
+          "9 / 16"
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "raw"
+        ],
+        "condition": "_pokemon => globalScene.getField(true).some(p => p.hasAbility(AbilityId.DARK_AURA))"
+      },
+      {
+        "name": "FieldMoveTypePowerBoostAbAttr",
+        "args": [
+          "FAIRY",
+          "9 / 16"
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "raw"
+        ],
+        "condition": "_pokemon => globalScene.getField(true).some(p => p.hasAbility(AbilityId.FAIRY_AURA))"
+      },
+      {
+        "name": "PostSummonMessageAbAttr",
+        "args": [
+          "(pokemon: Pokemon) => i18next.t(\"abilityTriggers:postSummonAuraBreak\", { pokemonNameWithAffix: getPokemonNameWithAffix(pokemon) })"
+        ],
+        "argKinds": [
+          "raw"
+        ],
+        "condition": "_pokemon => globalScene.getField(true).some(p => p.hasAbility(AbilityId.DARK_AURA) || p.hasAbility(AbilityId.FAIRY_AURA))"
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 189,
+    "key": "PRIMORDIAL_SEA",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonWeatherChangeAbAttr",
+        "args": [
+          "HEAVY_RAIN"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "PostBiomeChangeWeatherChangeAbAttr",
+        "args": [
+          "HEAVY_RAIN"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "PreLeaveFieldClearWeatherAbAttr",
+        "args": [
+          "HEAVY_RAIN"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "params => { if (params.move.type === PokemonType.FIRE) { params.powerMult.value *= 0; } else { drizzleAiMovegenEffect(params); } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 190,
+    "key": "DESOLATE_LAND",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonWeatherChangeAbAttr",
+        "args": [
+          "HARSH_SUN"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "PostBiomeChangeWeatherChangeAbAttr",
+        "args": [
+          "HARSH_SUN"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "PreLeaveFieldClearWeatherAbAttr",
+        "args": [
+          "HARSH_SUN"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "params => { if (params.move.type === PokemonType.WATER) { params.powerMult.value *= 0; } else { droughtAiMovegenEffect(params); } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 191,
+    "key": "DELTA_STREAM",
+    "generation": 6,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonWeatherChangeAbAttr",
+        "args": [
+          "STRONG_WINDS"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "PostBiomeChangeWeatherChangeAbAttr",
+        "args": [
+          "STRONG_WINDS"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "PreLeaveFieldClearWeatherAbAttr",
+        "args": [
+          "STRONG_WINDS"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 192,
+    "key": "STAMINA",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendStatStageChangeAbAttr",
+        "args": [
+          "(_target, _user, move) => move.category !== MoveCategory.STATUS",
+          "DEF",
+          1
+        ],
+        "argKinds": [
+          "raw",
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 193,
+    "key": "WIMP_OUT",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDamageForceSwitchAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "condition",
+      "edgeCase"
+    ],
+    "conditions": [
+      "sheerForceHitDisableAbCondition"
+    ]
+  },
+  {
+    "id": 194,
+    "key": "EMERGENCY_EXIT",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDamageForceSwitchAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "condition",
+      "edgeCase"
+    ],
+    "conditions": [
+      "sheerForceHitDisableAbCondition"
+    ]
+  },
+  {
+    "id": 195,
+    "key": "WATER_COMPACTION",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendStatStageChangeAbAttr",
+        "args": [
+          "(_target, user, move) => user.getMoveType(move) === PokemonType.WATER && move.category !== MoveCategory.STATUS",
+          "DEF",
+          2
+        ],
+        "argKinds": [
+          "raw",
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 196,
+    "key": "MERCILESS",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ConditionalCritAbAttr",
+        "args": [
+          "(_user, target, _move) => target?.status?.effect === StatusEffect.TOXIC || target?.status?.effect === StatusEffect.POISON"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 197,
+    "key": "SHIELDS_DOWN",
+    "generation": 7,
+    "postSummonPriority": -1,
+    "attrs": [
+      {
+        "name": "PostBattleInitFormChangeAbAttr",
+        "args": [
+          "p => p.formIndex % 7"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "PostSummonFormChangeAbAttr",
+        "args": [
+          "p => (p.formIndex % 7) + (p.getHpRatio() <= 0.5 ? 7 : 0)"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "PostTurnFormChangeAbAttr",
+        "args": [
+          "p => (p.formIndex % 7) + (p.getHpRatio() <= 0.5 ? 7 : 0)"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "StatusEffectImmunityAbAttr",
+        "args": [],
+        "argKinds": [],
+        "condition": "p => p.formIndex < 7"
+      },
+      {
+        "name": "BattlerTagImmunityAbAttr",
+        "args": [
+          "DROWSY"
+        ],
+        "argKinds": [
+          "enum:BattlerTagType"
+        ],
+        "condition": "p => p.formIndex < 7"
+      },
+      {
+        "name": "NoFusionAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "NoTransformAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "bypassFaint",
+      "unsuppressable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 198,
+    "key": "STAKEOUT",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "(_user, target, _move) => !!target?.turnData.switchedInThisTurn",
+          2
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 199,
+    "key": "WATER_BUBBLE",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ReceivedTypeDamageMultiplierAbAttr",
+        "args": [
+          "FIRE",
+          0.5
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "number"
+        ]
+      },
+      {
+        "name": "MoveTypePowerBoostAbAttr",
+        "args": [
+          "WATER",
+          2
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "number"
+        ]
+      },
+      {
+        "name": "StatusEffectImmunityAbAttr",
+        "args": [
+          "BURN"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      },
+      {
+        "name": "PostSummonHealStatusAbAttr",
+        "args": [
+          "BURN"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 200,
+    "key": "STEELWORKER",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveTypePowerBoostAbAttr",
+        "args": [
+          "STEEL"
+        ],
+        "argKinds": [
+          "enum:PokemonType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 201,
+    "key": "BERSERK",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendHpGatedStatStageChangeAbAttr",
+        "args": [
+          0.5,
+          [
+            {
+              "stat": "SPATK",
+              "stages": 1
+            }
+          ]
+        ],
+        "argKinds": [
+          "number",
+          "array"
+        ]
+      }
+    ],
+    "flags": [
+      "condition",
+      "edgeCase"
+    ],
+    "conditions": [
+      "sheerForceHitDisableAbCondition"
+    ]
+  },
+  {
+    "id": 202,
+    "key": "SLUSH_RUSH",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "SPD",
+          2
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "condition"
+    ],
+    "conditions": [
+      "getWeatherCondition(WeatherType.HAIL, WeatherType.SNOW)"
+    ]
+  },
+  {
+    "id": 203,
+    "key": "LONG_REACH",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "IgnoreContactAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 204,
+    "key": "LIQUID_VOICE",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveTypeChangeAbAttr",
+        "args": [
+          "WATER",
+          "(user, target, move) => move.hasFlag(MoveFlags.SOUND_BASED) && anyTypeMoveConversionCondition(user, target, move)"
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 205,
+    "key": "TRIAGE",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ChangeMovePriorityAbAttr",
+        "args": [
+          "(_pokemon, move) => move.hasFlag(MoveFlags.TRIAGE_MOVE)",
+          3
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 206,
+    "key": "GALVANIZE",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveTypeChangeAbAttr",
+        "args": [
+          "ELECTRIC",
+          "normalTypeMoveConversionCondition"
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "raw"
+        ]
+      },
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "normalTypeMoveConversionCondition",
+          1.2
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 207,
+    "key": "SURGE_SURFER",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "SPD",
+          2
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ],
+        "condition": "getTerrainCondition(TerrainType.ELECTRIC)"
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 208,
+    "key": "SCHOOLING",
+    "generation": 7,
+    "postSummonPriority": -1,
+    "attrs": [
+      {
+        "name": "PostBattleInitFormChangeAbAttr",
+        "args": [
+          "() => 0"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "PostSummonFormChangeAbAttr",
+        "args": [
+          "p => (p.level < 20 || p.getHpRatio() <= 0.25 ? 0 : 1)"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "PostTurnFormChangeAbAttr",
+        "args": [
+          "p => (p.level < 20 || p.getHpRatio() <= 0.25 ? 0 : 1)"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "NoFusionAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "bypassFaint",
+      "unsuppressable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 209,
+    "key": "DISGUISE",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "NoTransformAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "NoFusionAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "FormBlockDamageAbAttr",
+        "args": [
+          0,
+          "abilityTriggers:disguiseAvoidedDamage",
+          0.125
+        ],
+        "argKinds": [
+          "number",
+          "string",
+          "number"
+        ]
+      },
+      {
+        "name": "PostBattleInitFormChangeAbAttr",
+        "args": [
+          "() => 0"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "PostFaintFormChangeAbAttr",
+        "args": [
+          "() => 0"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint",
+      "ignorable",
+      "unsuppressable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 210,
+    "key": "BATTLE_BOND",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostVictoryFormChangeAbAttr",
+        "args": [
+          "() => 1"
+        ],
+        "argKinds": [
+          "raw"
+        ],
+        "condition": "p => p.species.speciesId === SpeciesId.BATTLE_BOND_GRENINJA && !p.isFusion()"
+      },
+      {
+        "name": "PostBattleInitFormChangeAbAttr",
+        "args": [
+          "() => 0"
+        ],
+        "argKinds": [
+          "raw"
+        ],
+        "condition": "p => p.species.speciesId === SpeciesId.BATTLE_BOND_GRENINJA && !p.isFusion()"
+      },
+      {
+        "name": "PostFaintFormChangeAbAttr",
+        "args": [
+          "() => 0"
+        ],
+        "argKinds": [
+          "raw"
+        ],
+        "condition": "p => p.species.speciesId === SpeciesId.BATTLE_BOND_GRENINJA && !p.isFusion()"
+      },
+      {
+        "name": "PostVictoryStatStageChangeAbAttr",
+        "args": [
+          "groupStatChange([Stat.ATK, Stat.SPATK, Stat.SPD], 1)"
+        ],
+        "argKinds": [
+          "raw"
+        ],
+        "condition": "p => !p.hasSpecies(SpeciesId.BATTLE_BOND_GRENINJA) && !p.summonData.abilitiesApplied.has(AbilityId.BATTLE_BOND)"
+      }
+    ],
+    "flags": [
+      "bypassFaint",
+      "unsuppressable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 211,
+    "key": "POWER_CONSTRUCT",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostBattleInitFormChangeAbAttr",
+        "args": [
+          "p => p.formIndex - 2"
+        ],
+        "argKinds": [
+          "raw"
+        ],
+        "condition": "p => p.formIndex === 4 || p.formIndex === 5"
+      },
+      {
+        "name": "PostSummonFormChangeAbAttr",
+        "args": [
+          "p => p.formIndex + 2"
+        ],
+        "argKinds": [
+          "raw"
+        ],
+        "condition": "p => p.getHpRatio() <= 0.5 && (p.formIndex === 2 || p.formIndex === 3)"
+      },
+      {
+        "name": "PostTurnFormChangeAbAttr",
+        "args": [
+          "p => p.formIndex + 2"
+        ],
+        "argKinds": [
+          "raw"
+        ],
+        "condition": "p => p.getHpRatio() <= 0.5 && (p.formIndex === 2 || p.formIndex === 3)"
+      },
+      {
+        "name": "PostFaintFormChangeAbAttr",
+        "args": [
+          "p => p.formIndex - 2"
+        ],
+        "argKinds": [
+          "raw"
+        ],
+        "condition": "p => p.formIndex === 4 || p.formIndex === 5"
+      },
+      {
+        "name": "NoFusionAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "bypassFaint",
+      "unsuppressable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 212,
+    "key": "CORROSION",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "IgnoreTypeStatusEffectImmunityAbAttr",
+        "args": [
+          [
+            "POISON",
+            "TOXIC"
+          ],
+          [
+            "STEEL",
+            "POISON"
+          ]
+        ],
+        "argKinds": [
+          "array",
+          "array"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 213,
+    "key": "COMATOSE",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatusEffectImmunityAbAttr",
+        "args": [
+          "...getNonVolatileStatusEffects()"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "BattlerTagImmunityAbAttr",
+        "args": [
+          "DROWSY"
+        ],
+        "argKinds": [
+          "enum:BattlerTagType"
+        ]
+      }
+    ],
+    "flags": [
+      "unsuppressable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 214,
+    "key": "QUEENLY_MAJESTY",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "FieldPriorityMoveImmunityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 215,
+    "key": "INNARDS_OUT",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostFaintHPDamageAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 216,
+    "key": "DANCER",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDancingMoveAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "edgeCase"
+    ]
+  },
+  {
+    "id": 217,
+    "key": "BATTERY",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "AllyMoveCategoryPowerBoostAbAttr",
+        "args": [
+          [
+            "SPECIAL"
+          ],
+          1.3
+        ],
+        "argKinds": [
+          "array",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 218,
+    "key": "FLUFFY",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ReceivedMoveDamageMultiplierAbAttr",
+        "args": [
+          "(target, user, move) => move.doesFlagEffectApply({ flag: MoveFlags.MAKES_CONTACT, user, target })",
+          0.5
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      },
+      {
+        "name": "ReceivedMoveDamageMultiplierAbAttr",
+        "args": [
+          "(_target, user, move) => user.getMoveType(move) === PokemonType.FIRE",
+          2
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 219,
+    "key": "DAZZLING",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "FieldPriorityMoveImmunityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 220,
+    "key": "SOUL_HEART",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostKnockOutStatStageChangeAbAttr",
+        "args": [
+          "SPATK",
+          1
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 221,
+    "key": "TANGLING_HAIR",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendStatStageChangeAbAttr",
+        "args": [
+          "(target, user, move) => move.doesFlagEffectApply({ flag: MoveFlags.MAKES_CONTACT, user, target })",
+          "SPD",
+          -1,
+          false
+        ],
+        "argKinds": [
+          "raw",
+          "enum:Stat",
+          "number",
+          "boolean"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 222,
+    "key": "RECEIVER",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "CopyFaintedAllyAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "uncopiable"
+    ]
+  },
+  {
+    "id": 223,
+    "key": "POWER_OF_ALCHEMY",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "CopyFaintedAllyAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "uncopiable"
+    ]
+  },
+  {
+    "id": 224,
+    "key": "BEAST_BOOST",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostVictoryStatStageChangeAbAttr",
+        "args": [
+          "beastBoostHighestStatCalc"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 225,
+    "key": "RKS_SYSTEM",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "NoFusionAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "unsuppressable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 226,
+    "key": "ELECTRIC_SURGE",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonTerrainChangeAbAttr",
+        "args": [
+          "ELECTRIC"
+        ],
+        "argKinds": [
+          "enum:TerrainType"
+        ]
+      },
+      {
+        "name": "PostBiomeChangeTerrainChangeAbAttr",
+        "args": [
+          "ELECTRIC"
+        ],
+        "argKinds": [
+          "enum:TerrainType"
+        ]
+      },
+      {
+        "name": "SummonTerrainAiMovegenMoveStatsAbAttr",
+        "args": [
+          "ELECTRIC",
+          [
+            "RISING_VOLTAGE",
+            2
+          ]
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "array"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 227,
+    "key": "PSYCHIC_SURGE",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonTerrainChangeAbAttr",
+        "args": [
+          "PSYCHIC"
+        ],
+        "argKinds": [
+          "enum:TerrainType"
+        ]
+      },
+      {
+        "name": "PostBiomeChangeTerrainChangeAbAttr",
+        "args": [
+          "PSYCHIC"
+        ],
+        "argKinds": [
+          "enum:TerrainType"
+        ]
+      },
+      {
+        "name": "SummonTerrainAiMovegenMoveStatsAbAttr",
+        "args": [
+          "PSYCHIC",
+          [
+            "EXPANDING_FORCE",
+            1.5
+          ]
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "array"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 228,
+    "key": "MISTY_SURGE",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonTerrainChangeAbAttr",
+        "args": [
+          "MISTY"
+        ],
+        "argKinds": [
+          "enum:TerrainType"
+        ]
+      },
+      {
+        "name": "PostBiomeChangeTerrainChangeAbAttr",
+        "args": [
+          "MISTY"
+        ],
+        "argKinds": [
+          "enum:TerrainType"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ pokemon, move, powerMult }) => { if (move.type === PokemonType.DRAGON) { powerMult.value *= 0.5; } if (pokemon.hasAbility(AbilityId.LEVITATE) || pokemon.hasAbility(AbilityId.EELEVATE) || pokemon.isOfType(PokemonType.FLYING)) { return; } if (move.id === MoveId.MISTY_EXPLOSION) { powerMult.value *= 1.5; } else if (move.id === MoveId.TERRAIN_PULSE) { powerMult.value *= 1.5; } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 229,
+    "key": "GRASSY_SURGE",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonTerrainChangeAbAttr",
+        "args": [
+          "GRASSY"
+        ],
+        "argKinds": [
+          "enum:TerrainType"
+        ]
+      },
+      {
+        "name": "PostBiomeChangeTerrainChangeAbAttr",
+        "args": [
+          "GRASSY"
+        ],
+        "argKinds": [
+          "enum:TerrainType"
+        ]
+      },
+      {
+        "name": "SummonTerrainAiMovegenMoveStatsAbAttr",
+        "args": [
+          "GRASS"
+        ],
+        "argKinds": [
+          "enum:PokemonType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 230,
+    "key": "FULL_METAL_BODY",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ProtectStatAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 231,
+    "key": "SHADOW_SHIELD",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ReceivedMoveDamageMultiplierAbAttr",
+        "args": [
+          "(target, _user, _move) => target.isFullHp()",
+          0.5
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 232,
+    "key": "PRISM_ARMOR",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ReceivedMoveDamageMultiplierAbAttr",
+        "args": [
+          "(target, user, move) => target.getMoveEffectiveness(user, move) >= 2",
+          0.75
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 233,
+    "key": "NEUROFORCE",
+    "generation": 7,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "(user, target, move) => (target?.getMoveEffectiveness(user, move) ?? 1) >= 2",
+          1.25
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 234,
+    "key": "INTREPID_SWORD",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonStatStageChangeAbAttr",
+        "args": [
+          [
+            {
+              "stat": "ATK",
+              "stages": 1
+            }
+          ],
+          true
+        ],
+        "argKinds": [
+          "array",
+          "boolean"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ move, powerMult }) => { if (move.category === MoveCategory.PHYSICAL && !move.hasAttr(\"DefAtkAttr\")) { powerMult.value *= 1.5; } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 235,
+    "key": "DAUNTLESS_SHIELD",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonStatStageChangeAbAttr",
+        "args": [
+          [
+            {
+              "stat": "DEF",
+              "stages": 1
+            }
+          ],
+          true
+        ],
+        "argKinds": [
+          "array",
+          "boolean"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ move, powerMult }) => { if (move.hasAttr(\"DefAtkAttr\")) { powerMult.value *= 1.5; } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 236,
+    "key": "LIBERO",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PokemonTypeChangeAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "edgeCase"
+    ]
+  },
+  {
+    "id": 237,
+    "key": "BALL_FETCH",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "FetchBallAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "condition"
+    ],
+    "conditions": [
+      "getOncePerBattleCondition(AbilityId.BALL_FETCH)"
+    ]
+  },
+  {
+    "id": 238,
+    "key": "COTTON_DOWN",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendStatStageChangeAbAttr",
+        "args": [
+          "(_target, _user, move) => move.category !== MoveCategory.STATUS",
+          "SPD",
+          -1,
+          false,
+          true
+        ],
+        "argKinds": [
+          "raw",
+          "enum:Stat",
+          "number",
+          "boolean",
+          "boolean"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 239,
+    "key": "PROPELLER_TAIL",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "BlockRedirectAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 240,
+    "key": "MIRROR_ARMOR",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ReflectStatStageChangeAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 241,
+    "key": "GULP_MISSILE",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "NoTransformAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "NoFusionAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "bypassFaint",
+      "unsuppressable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 242,
+    "key": "STALWART",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "BlockRedirectAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 243,
+    "key": "STEAM_ENGINE",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendStatStageChangeAbAttr",
+        "args": [
+          "(_target, user, move) => { const moveType = user.getMoveType(move); return (move.category !== MoveCategory.STATUS && (moveType === PokemonType.FIRE || moveType === PokemonType.WATER)); }",
+          "SPD",
+          6
+        ],
+        "argKinds": [
+          "raw",
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 244,
+    "key": "PUNK_ROCK",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "(_user, _target, move) => move.hasFlag(MoveFlags.SOUND_BASED)",
+          1.3
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      },
+      {
+        "name": "ReceivedMoveDamageMultiplierAbAttr",
+        "args": [
+          "(_target, _user, move) => move.hasFlag(MoveFlags.SOUND_BASED)",
+          0.5
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 245,
+    "key": "SAND_SPIT",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendWeatherChangeAbAttr",
+        "args": [
+          "SANDSTORM",
+          "(_target, _user, move) => move.category !== MoveCategory.STATUS"
+        ],
+        "argKinds": [
+          "enum:WeatherType",
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 246,
+    "key": "ICE_SCALES",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ReceivedMoveDamageMultiplierAbAttr",
+        "args": [
+          "(_target, _user, move) => move.category === MoveCategory.SPECIAL",
+          0.5
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 247,
+    "key": "RIPEN",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "DoubleBerryEffectAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 248,
+    "key": "ICE_FACE",
+    "generation": 8,
+    "postSummonPriority": -2,
+    "attrs": [
+      {
+        "name": "NoTransformAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "NoFusionAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "PostSummonFormChangeAbAttr",
+        "args": [
+          "() => 0"
+        ],
+        "argKinds": [
+          "raw"
+        ],
+        "condition": "getWeatherCondition(WeatherType.HAIL, WeatherType.SNOW)"
+      },
+      {
+        "name": "IceFaceFormChangeAbAttr",
+        "args": [
+          1
+        ],
+        "argKinds": [
+          "number"
+        ]
+      },
+      {
+        "name": "FormBlockDamageAbAttr",
+        "args": [
+          0,
+          "abilityTriggers:iceFaceAvoidedDamage",
+          0,
+          "(_target, _user, move) => move.category === MoveCategory.PHYSICAL"
+        ],
+        "argKinds": [
+          "number",
+          "string",
+          "number",
+          "raw"
+        ]
+      },
+      {
+        "name": "PostBattleInitFormChangeAbAttr",
+        "args": [
+          "() => 0"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint",
+      "ignorable",
+      "unsuppressable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 249,
+    "key": "POWER_SPOT",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "AllyMoveCategoryPowerBoostAbAttr",
+        "args": [
+          [
+            "SPECIAL",
+            "PHYSICAL"
+          ],
+          1.3
+        ],
+        "argKinds": [
+          "array",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 250,
+    "key": "MIMICRY",
+    "generation": 8,
+    "postSummonPriority": -1,
+    "attrs": [
+      {
+        "name": "TerrainEventTypeChangeAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 251,
+    "key": "SCREEN_CLEANER",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonRemoveArenaTagAbAttr",
+        "args": [
+          [
+            "AURORA_VEIL",
+            "LIGHT_SCREEN",
+            "REFLECT"
+          ]
+        ],
+        "argKinds": [
+          "array"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 252,
+    "key": "STEELY_SPIRIT",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "UserFieldMoveTypePowerBoostAbAttr",
+        "args": [
+          "STEEL"
+        ],
+        "argKinds": [
+          "enum:PokemonType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 253,
+    "key": "PERISH_BODY",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendPerishSongAbAttr",
+        "args": [
+          4
+        ],
+        "argKinds": [
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 254,
+    "key": "WANDERING_SPIRIT",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendAbilitySwapAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "bypassFaint",
+      "edgeCase"
+    ]
+  },
+  {
+    "id": 255,
+    "key": "GORILLA_TACTICS",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "GorillaTacticsAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ move, powerMult }) => { if (move.category === MoveCategory.PHYSICAL) { powerMult.value *= 1.5; } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "edgeCase"
+    ]
+  },
+  {
+    "id": 256,
+    "key": "NEUTRALIZING_GAS",
+    "generation": 8,
+    "postSummonPriority": 2,
+    "attrs": [
+      {
+        "name": "PostSummonAddArenaTagAbAttr",
+        "args": [
+          true,
+          "NEUTRALIZING_GAS",
+          0
+        ],
+        "argKinds": [
+          "boolean",
+          "enum:ArenaTagType",
+          "number"
+        ]
+      },
+      {
+        "name": "PreLeaveFieldRemoveSuppressAbilitiesSourceAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "NoTransformAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "bypassFaint",
+      "uncopiable"
+    ]
+  },
+  {
+    "id": 257,
+    "key": "PASTEL_VEIL",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonUserFieldRemoveStatusEffectAbAttr",
+        "args": [
+          "POISON",
+          "TOXIC"
+        ],
+        "argKinds": [
+          "enum:StatusEffect",
+          "enum:StatusEffect"
+        ]
+      },
+      {
+        "name": "UserFieldStatusEffectImmunityAbAttr",
+        "args": [
+          "POISON",
+          "TOXIC"
+        ],
+        "argKinds": [
+          "enum:StatusEffect",
+          "enum:StatusEffect"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 258,
+    "key": "HUNGER_SWITCH",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostTurnFormChangeAbAttr",
+        "args": [
+          "p => (p.getFormKey() ? 0 : 1)"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "PostTurnFormChangeAbAttr",
+        "args": [
+          "p => (p.getFormKey() ? 1 : 0)"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "NoTransformAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "NoFusionAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "uncopiable",
+      "unreplaceable",
+      "condition"
+    ],
+    "conditions": [
+      "pokemon => !pokemon.isTerastallized"
+    ]
+  },
+  {
+    "id": 259,
+    "key": "QUICK_DRAW",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "BypassSpeedChanceAbAttr",
+        "args": [
+          30
+        ],
+        "argKinds": [
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 260,
+    "key": "UNSEEN_FIST",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "IgnoreProtectOnContactAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "MoveDamageBoostAbAttr",
+        "args": [
+          0.25,
+          "(user, target, move) => !!target && target.findTags(t => t instanceof ProtectedTag).length > 0 && move.doesFlagEffectApply({ flag: MoveFlags.MAKES_CONTACT, user })"
+        ],
+        "argKinds": [
+          "number",
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 261,
+    "key": "CURIOUS_MEDICINE",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonClearAllyStatStagesAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 262,
+    "key": "TRANSISTOR",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveTypePowerBoostAbAttr",
+        "args": [
+          "ELECTRIC",
+          1.3
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 263,
+    "key": "DRAGONS_MAW",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveTypePowerBoostAbAttr",
+        "args": [
+          "DRAGON"
+        ],
+        "argKinds": [
+          "enum:PokemonType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 264,
+    "key": "CHILLING_NEIGH",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostVictoryStatStageChangeAbAttr",
+        "args": [
+          [
+            {
+              "stat": "ATK",
+              "stages": 1
+            }
+          ]
+        ],
+        "argKinds": [
+          "array"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 265,
+    "key": "GRIM_NEIGH",
+    "generation": 8,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostVictoryStatStageChangeAbAttr",
+        "args": [
+          [
+            {
+              "stat": "SPATK",
+              "stages": 1
+            }
+          ]
+        ],
+        "argKinds": [
+          "array"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 266,
+    "key": "AS_ONE_GLASTRIER",
+    "generation": 8,
+    "postSummonPriority": 1,
+    "attrs": [
+      {
+        "name": "PostSummonMessageAbAttr",
+        "args": [
+          "(pokemon: Pokemon) => i18next.t(\"abilityTriggers:postSummonAsOneGlastrier\", { pokemonNameWithAffix: getPokemonNameWithAffix(pokemon), })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "PreventBerryUseAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "PostVictoryStatStageChangeAbAttr",
+        "args": [
+          [
+            {
+              "stat": "ATK",
+              "stages": 1
+            }
+          ]
+        ],
+        "argKinds": [
+          "array"
+        ]
+      }
+    ],
+    "flags": [
+      "unsuppressable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 267,
+    "key": "AS_ONE_SPECTRIER",
+    "generation": 8,
+    "postSummonPriority": 1,
+    "attrs": [
+      {
+        "name": "PostSummonMessageAbAttr",
+        "args": [
+          "(pokemon: Pokemon) => i18next.t(\"abilityTriggers:postSummonAsOneSpectrier\", { pokemonNameWithAffix: getPokemonNameWithAffix(pokemon), })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "PreventBerryUseAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "PostVictoryStatStageChangeAbAttr",
+        "args": [
+          [
+            {
+              "stat": "SPATK",
+              "stages": 1
+            }
+          ]
+        ],
+        "argKinds": [
+          "array"
+        ]
+      }
+    ],
+    "flags": [
+      "unsuppressable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 268,
+    "key": "LINGERING_AROMA",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendAbilityGiveAbAttr",
+        "args": [
+          "LINGERING_AROMA"
+        ],
+        "argKinds": [
+          "enum:AbilityId"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 269,
+    "key": "SEED_SOWER",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendTerrainChangeAbAttr",
+        "args": [
+          "GRASSY"
+        ],
+        "argKinds": [
+          "enum:TerrainType"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 270,
+    "key": "THERMAL_EXCHANGE",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendStatStageChangeAbAttr",
+        "args": [
+          "(_target, user, move) => user.getMoveType(move) === PokemonType.FIRE && move.category !== MoveCategory.STATUS",
+          "ATK",
+          1
+        ],
+        "argKinds": [
+          "raw",
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "StatusEffectImmunityAbAttr",
+        "args": [
+          "BURN"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      },
+      {
+        "name": "PostSummonHealStatusAbAttr",
+        "args": [
+          "BURN"
+        ],
+        "argKinds": [
+          "enum:StatusEffect"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 271,
+    "key": "ANGER_SHELL",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendHpGatedStatStageChangeAbAttr",
+        "args": [
+          0.5,
+          "groupStatChange([Stat.ATK, Stat.SPATK, Stat.SPD], 1)"
+        ],
+        "argKinds": [
+          "number",
+          "raw"
+        ]
+      },
+      {
+        "name": "PostDefendHpGatedStatStageChangeAbAttr",
+        "args": [
+          0.5,
+          "groupStatChange([Stat.DEF, Stat.SPDEF], -1)"
+        ],
+        "argKinds": [
+          "number",
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "condition",
+      "edgeCase"
+    ],
+    "conditions": [
+      "sheerForceHitDisableAbCondition"
+    ]
+  },
+  {
+    "id": 272,
+    "key": "PURIFYING_SALT",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatusEffectImmunityAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "ReceivedTypeDamageMultiplierAbAttr",
+        "args": [
+          "GHOST",
+          0.5
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 273,
+    "key": "WELL_BAKED_BODY",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "TypeImmunityStatStageChangeAbAttr",
+        "args": [
+          "FIRE",
+          "DEF",
+          2
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "enum:Stat",
+          "number"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 274,
+    "key": "WIND_RIDER",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveImmunityStatStageChangeAbAttr",
+        "args": [
+          "(pokemon, attacker, move) => pokemon !== attacker && move.hasFlag(MoveFlags.WIND_MOVE) && move.category !== MoveCategory.STATUS",
+          "ATK",
+          1
+        ],
+        "argKinds": [
+          "raw",
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "PostSummonStatStageChangeOnArenaAbAttr",
+        "args": [
+          "TAILWIND"
+        ],
+        "argKinds": [
+          "enum:ArenaTagType"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 275,
+    "key": "GUARD_DOG",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostIntimidateStatStageChangeAbAttr",
+        "args": [
+          [
+            {
+              "stat": "ATK",
+              "stages": 1
+            }
+          ],
+          true
+        ],
+        "argKinds": [
+          "array",
+          "boolean"
+        ]
+      },
+      {
+        "name": "ForceSwitchOutImmunityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 276,
+    "key": "ROCKY_PAYLOAD",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveTypePowerBoostAbAttr",
+        "args": [
+          "ROCK"
+        ],
+        "argKinds": [
+          "enum:PokemonType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 277,
+    "key": "WIND_POWER",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendApplyBattlerTagAbAttr",
+        "args": [
+          "(_target, _user, move) => move.hasFlag(MoveFlags.WIND_MOVE)",
+          "CHARGED"
+        ],
+        "argKinds": [
+          "raw",
+          "enum:BattlerTagType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 278,
+    "key": "ZERO_TO_HERO",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "NoTransformAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "NoFusionAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "PostBattleInitFormChangeAbAttr",
+        "args": [
+          "() => 0"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "PreSwitchOutFormChangeAbAttr",
+        "args": [
+          "pokemon => (pokemon.isFainted() ? pokemon.formIndex : 1)"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "PostSummonMessageAbAttr",
+        "args": [
+          "(pokemon: Pokemon) => { zeroToHeroFormChangeMessage.set(pokemon, pokemon.battleData); return i18next.t(\"abilityTriggers:postSummonZeroToHero\", { pokemonNameWithAffix: getPokemonNameWithAffix(pokemon), }); }"
+        ],
+        "argKinds": [
+          "raw"
+        ],
+        "condition": "p => p.formIndex !== 0 && p.isOnField() && zeroToHeroFormChangeMessage.get(p) !== p.battleData"
+      }
+    ],
+    "flags": [
+      "bypassFaint",
+      "unsuppressable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 279,
+    "key": "COMMANDER",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "CommanderAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "DoubleBattleChanceAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "uncopiable",
+      "edgeCase"
+    ]
+  },
+  {
+    "id": 280,
+    "key": "ELECTROMORPHOSIS",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendApplyBattlerTagAbAttr",
+        "args": [
+          "(_target, _user, move) => move.category !== MoveCategory.STATUS",
+          "CHARGED"
+        ],
+        "argKinds": [
+          "raw",
+          "enum:BattlerTagType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 281,
+    "key": "PROTOSYNTHESIS",
+    "generation": 9,
+    "postSummonPriority": -2,
+    "attrs": [
+      {
+        "name": "PostSummonAddBattlerTagAbAttr",
+        "args": [
+          "PROTOSYNTHESIS",
+          0,
+          true
+        ],
+        "argKinds": [
+          "enum:BattlerTagType",
+          "number",
+          "boolean"
+        ],
+        "condition": "getWeatherCondition(WeatherType.SUNNY, WeatherType.HARSH_SUN)"
+      },
+      {
+        "name": "PostWeatherChangeAddBattlerTagAbAttr",
+        "args": [
+          "PROTOSYNTHESIS",
+          0,
+          "SUNNY",
+          "HARSH_SUN"
+        ],
+        "argKinds": [
+          "enum:BattlerTagType",
+          "number",
+          "enum:WeatherType",
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "NoTransformAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "uncopiable"
+    ]
+  },
+  {
+    "id": 282,
+    "key": "QUARK_DRIVE",
+    "generation": 9,
+    "postSummonPriority": -2,
+    "attrs": [
+      {
+        "name": "PostSummonAddBattlerTagAbAttr",
+        "args": [
+          "QUARK_DRIVE",
+          0,
+          true
+        ],
+        "argKinds": [
+          "enum:BattlerTagType",
+          "number",
+          "boolean"
+        ],
+        "condition": "getTerrainCondition(TerrainType.ELECTRIC)"
+      },
+      {
+        "name": "PostTerrainChangeAddBattlerTagAttr",
+        "args": [
+          "QUARK_DRIVE",
+          0,
+          "ELECTRIC"
+        ],
+        "argKinds": [
+          "enum:BattlerTagType",
+          "number",
+          "enum:TerrainType"
+        ]
+      },
+      {
+        "name": "NoTransformAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "uncopiable"
+    ]
+  },
+  {
+    "id": 283,
+    "key": "GOOD_AS_GOLD",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveImmunityAbAttr",
+        "args": [
+          "(pokemon, attacker, move) => pokemon !== attacker && move.category === MoveCategory.STATUS && ![MoveTarget.ENEMY_SIDE, MoveTarget.BOTH_SIDES, MoveTarget.USER_SIDE].includes(move.moveTarget)"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable",
+      "edgeCase"
+    ]
+  },
+  {
+    "id": 284,
+    "key": "VESSEL_OF_RUIN",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "FieldMultiplyStatAbAttr",
+        "args": [
+          "SPATK",
+          0.75
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "PostSummonMessageAbAttr",
+        "args": [
+          "user => i18next.t(\"abilityTriggers:postSummonVesselOfRuin\", { pokemonNameWithAffix: getPokemonNameWithAffix(user), statName: i18next.t(getStatKey(Stat.SPATK)), })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 285,
+    "key": "SWORD_OF_RUIN",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "FieldMultiplyStatAbAttr",
+        "args": [
+          "DEF",
+          0.75
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ move, powerMult }) => { if (move.category === MoveCategory.PHYSICAL) { powerMult.value *= 1.25; } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "PostSummonMessageAbAttr",
+        "args": [
+          "user => i18next.t(\"abilityTriggers:postSummonSwordOfRuin\", { pokemonNameWithAffix: getPokemonNameWithAffix(user), statName: i18next.t(getStatKey(Stat.DEF)), })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 286,
+    "key": "TABLETS_OF_RUIN",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "FieldMultiplyStatAbAttr",
+        "args": [
+          "ATK",
+          0.75
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "PostSummonMessageAbAttr",
+        "args": [
+          "user => i18next.t(\"abilityTriggers:postSummonTabletsOfRuin\", { pokemonNameWithAffix: getPokemonNameWithAffix(user), statName: i18next.t(getStatKey(Stat.ATK)), })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 287,
+    "key": "BEADS_OF_RUIN",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "FieldMultiplyStatAbAttr",
+        "args": [
+          "SPDEF",
+          0.75
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "number"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ move, powerMult }) => { if (move.category === MoveCategory.SPECIAL) { powerMult.value *= 1.25; } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "PostSummonMessageAbAttr",
+        "args": [
+          "user => i18next.t(\"abilityTriggers:postSummonBeadsOfRuin\", { pokemonNameWithAffix: getPokemonNameWithAffix(user), statName: i18next.t(getStatKey(Stat.SPDEF)), })"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 288,
+    "key": "ORICHALCUM_PULSE",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonWeatherChangeAbAttr",
+        "args": [
+          "SUNNY"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "PostBiomeChangeWeatherChangeAbAttr",
+        "args": [
+          "SUNNY"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "ATK",
+          "4 / 3"
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "raw"
+        ],
+        "condition": "getWeatherCondition(WeatherType.SUNNY, WeatherType.HARSH_SUN)"
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "params => { droughtAiMovegenEffect(params); if (params.move.category === MoveCategory.PHYSICAL) { params.powerMult.value *= 4 / 3; } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 289,
+    "key": "HADRON_ENGINE",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonTerrainChangeAbAttr",
+        "args": [
+          "ELECTRIC"
+        ],
+        "argKinds": [
+          "enum:TerrainType"
+        ]
+      },
+      {
+        "name": "PostBiomeChangeTerrainChangeAbAttr",
+        "args": [
+          "ELECTRIC"
+        ],
+        "argKinds": [
+          "enum:TerrainType"
+        ]
+      },
+      {
+        "name": "AiMovegenMoveStatsAbAttr",
+        "args": [
+          "({ move, powerMult }) => { if (move.category === MoveCategory.SPECIAL) { powerMult.value *= 4 / 3; } }"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "StatMultiplierAbAttr",
+        "args": [
+          "SPATK",
+          "4 / 3"
+        ],
+        "argKinds": [
+          "enum:Stat",
+          "raw"
+        ],
+        "condition": "getTerrainCondition(TerrainType.ELECTRIC)"
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 290,
+    "key": "OPPORTUNIST",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "StatStageChangeCopyAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 291,
+    "key": "CUD_CHEW",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "CudChewConsumeBerryAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "CudChewRecordBerryAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 292,
+    "key": "SHARPNESS",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "(_user, _target, move) => move.hasFlag(MoveFlags.SLICING_MOVE)",
+          1.5
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 293,
+    "key": "SUPREME_OVERLORD",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonAddBattlerTagAbAttr",
+        "args": [
+          "SUPREME_OVERLORD",
+          0,
+          true
+        ],
+        "argKinds": [
+          "enum:BattlerTagType",
+          "number",
+          "boolean"
+        ],
+        "condition": "p => (p.isPlayer() ? globalScene.arena.playerFaints : globalScene.currentBattle.enemyFaints) > 0"
+      }
+    ],
+    "flags": [
+      "edgeCase"
+    ]
+  },
+  {
+    "id": 294,
+    "key": "COSTAR",
+    "generation": 9,
+    "postSummonPriority": -2,
+    "attrs": [
+      {
+        "name": "PostSummonCopyAllyStatsAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 295,
+    "key": "TOXIC_DEBRIS",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendApplyArenaTrapTagAbAttr",
+        "args": [
+          "(_target, _user, move) => move.category === MoveCategory.PHYSICAL",
+          "TOXIC_SPIKES"
+        ],
+        "argKinds": [
+          "raw",
+          "enum:ArenaTagType"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  },
+  {
+    "id": 296,
+    "key": "ARMOR_TAIL",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "FieldPriorityMoveImmunityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 297,
+    "key": "EARTH_EATER",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "TypeImmunityHealAbAttr",
+        "args": [
+          "GROUND"
+        ],
+        "argKinds": [
+          "enum:PokemonType"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 298,
+    "key": "MYCELIUM_MIGHT",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ChangeMovePriorityInBracketAbAttr",
+        "args": [
+          "(_pokemon, move) => move.category === MoveCategory.STATUS",
+          "MovePriorityInBracket.LAST"
+        ],
+        "argKinds": [
+          "raw",
+          "raw"
+        ]
+      },
+      {
+        "name": "PreventBypassSpeedChanceAbAttr",
+        "args": [
+          "(_pokemon, move) => move.category === MoveCategory.STATUS"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "MoveAbilityBypassAbAttr",
+        "args": [
+          "(_pokemon, move: Move) => move.category === MoveCategory.STATUS"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 299,
+    "key": "MINDS_EYE",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "IgnoreTypeImmunityAbAttr",
+        "args": [
+          "GHOST",
+          [
+            "NORMAL",
+            "FIGHTING"
+          ]
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "array"
+        ]
+      },
+      {
+        "name": "ProtectStatAbAttr",
+        "args": [
+          "ACC"
+        ],
+        "argKinds": [
+          "enum:Stat"
+        ]
+      },
+      {
+        "name": "IgnoreOpponentStatStagesAbAttr",
+        "args": [
+          [
+            "EVA"
+          ]
+        ],
+        "argKinds": [
+          "array"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 300,
+    "key": "SUPERSWEET_SYRUP",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonStatStageChangeAbAttr",
+        "args": [
+          [
+            {
+              "stat": "EVA",
+              "stages": -1
+            }
+          ]
+        ],
+        "argKinds": [
+          "array"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 301,
+    "key": "HOSPITALITY",
+    "generation": 9,
+    "postSummonPriority": -2,
+    "attrs": [
+      {
+        "name": "PostSummonAllyHealAbAttr",
+        "args": [
+          4,
+          true
+        ],
+        "argKinds": [
+          "number",
+          "boolean"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 302,
+    "key": "TOXIC_CHAIN",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostAttackApplyStatusEffectAbAttr",
+        "args": [
+          false,
+          30,
+          "TOXIC"
+        ],
+        "argKinds": [
+          "boolean",
+          "number",
+          "enum:StatusEffect"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 303,
+    "key": "EMBODY_ASPECT_TEAL",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonStatStageChangeAbAttr",
+        "args": [
+          [
+            {
+              "stat": "SPD",
+              "stages": 1
+            }
+          ],
+          true
+        ],
+        "argKinds": [
+          "array",
+          "boolean"
+        ]
+      },
+      {
+        "name": "NoTransformAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 304,
+    "key": "EMBODY_ASPECT_WELLSPRING",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonStatStageChangeAbAttr",
+        "args": [
+          [
+            {
+              "stat": "SPDEF",
+              "stages": 1
+            }
+          ],
+          true
+        ],
+        "argKinds": [
+          "array",
+          "boolean"
+        ]
+      },
+      {
+        "name": "NoTransformAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 305,
+    "key": "EMBODY_ASPECT_HEARTHFLAME",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonStatStageChangeAbAttr",
+        "args": [
+          [
+            {
+              "stat": "ATK",
+              "stages": 1
+            }
+          ],
+          true
+        ],
+        "argKinds": [
+          "array",
+          "boolean"
+        ]
+      },
+      {
+        "name": "NoTransformAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 306,
+    "key": "EMBODY_ASPECT_CORNERSTONE",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonStatStageChangeAbAttr",
+        "args": [
+          [
+            {
+              "stat": "DEF",
+              "stages": 1
+            }
+          ],
+          true
+        ],
+        "argKinds": [
+          "array",
+          "boolean"
+        ]
+      },
+      {
+        "name": "NoTransformAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 307,
+    "key": "TERA_SHIFT",
+    "generation": 9,
+    "postSummonPriority": 2,
+    "attrs": [
+      {
+        "name": "PostSummonFormChangeAbAttr",
+        "args": [
+          "p => (p.getFormKey() ? 0 : 1)"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      },
+      {
+        "name": "NoTransformAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "NoFusionAbilityAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "unsuppressable",
+      "uncopiable",
+      "unreplaceable"
+    ]
+  },
+  {
+    "id": 308,
+    "key": "TERA_SHELL",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "FullHpResistTypeAbAttr",
+        "args": [],
+        "argKinds": []
+      }
+    ],
+    "flags": [
+      "ignorable",
+      "uncopiable"
+    ]
+  },
+  {
+    "id": 309,
+    "key": "TERAFORM_ZERO",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostSummonWeatherChangeAbAttr",
+        "args": [
+          "NONE"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      },
+      {
+        "name": "PostSummonTerrainChangeAbAttr",
+        "args": [
+          "NONE"
+        ],
+        "argKinds": [
+          "enum:TerrainType"
+        ]
+      }
+    ],
+    "flags": [
+      "uncopiable"
+    ]
+  },
+  {
+    "id": 310,
+    "key": "POISON_PUPPETEER",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "ConfusionOnStatusEffectAbAttr",
+        "args": [
+          "POISON",
+          "TOXIC"
+        ],
+        "argKinds": [
+          "enum:StatusEffect",
+          "enum:StatusEffect"
+        ]
+      }
+    ],
+    "flags": [
+      "uncopiable"
+    ]
+  },
+  {
+    "id": 311,
+    "key": "PIERCING_DRILL",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "IgnoreProtectOnContactAbAttr",
+        "args": [],
+        "argKinds": []
+      },
+      {
+        "name": "MoveDamageBoostAbAttr",
+        "args": [
+          0.25,
+          "(user, target, move) => !!target && target.findTags(t => t instanceof ProtectedTag).length > 0 && move.doesFlagEffectApply({ flag: MoveFlags.MAKES_CONTACT, user })"
+        ],
+        "argKinds": [
+          "number",
+          "raw"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 312,
+    "key": "DRAGONIZE",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveTypeChangeAbAttr",
+        "args": [
+          "DRAGON",
+          "normalTypeMoveConversionCondition"
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "raw"
+        ]
+      },
+      {
+        "name": "MovePowerBoostAbAttr",
+        "args": [
+          "normalTypeMoveConversionCondition",
+          1.2
+        ],
+        "argKinds": [
+          "raw",
+          "number"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 313,
+    "key": "EELEVATE",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "AttackTypeImmunityAbAttr",
+        "args": [
+          "GROUND",
+          "(pokemon: Pokemon) => !pokemon.getTag(GroundedTag) && !globalScene.arena.getTag(ArenaTagType.GRAVITY)"
+        ],
+        "argKinds": [
+          "enum:PokemonType",
+          "raw"
+        ]
+      },
+      {
+        "name": "PostVictoryStatStageChangeAbAttr",
+        "args": [
+          "beastBoostHighestStatCalc"
+        ],
+        "argKinds": [
+          "raw"
+        ]
+      }
+    ],
+    "flags": [
+      "ignorable"
+    ]
+  },
+  {
+    "id": 314,
+    "key": "ABILITY_314",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [],
+    "flags": [
+      "unimplemented"
+    ]
+  },
+  {
+    "id": 315,
+    "key": "MEGA_SOL",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PreAttackWeatherOverrideAbAttr",
+        "args": [
+          "SUNNY"
+        ],
+        "argKinds": [
+          "enum:WeatherType"
+        ]
+      }
+    ],
+    "flags": [
+      "edgeCase"
+    ]
+  },
+  {
+    "id": 316,
+    "key": "FIRE_MANE",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "MoveTypePowerBoostAbAttr",
+        "args": [
+          "FIRE"
+        ],
+        "argKinds": [
+          "enum:PokemonType"
+        ]
+      }
+    ],
+    "flags": []
+  },
+  {
+    "id": 317,
+    "key": "ABILITY_317",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [],
+    "flags": [
+      "unimplemented"
+    ]
+  },
+  {
+    "id": 318,
+    "key": "SPICY_SPRAY",
+    "generation": 9,
+    "postSummonPriority": 0,
+    "attrs": [
+      {
+        "name": "PostDefendApplyStatusEffectAbAttr",
+        "args": [
+          100,
+          false,
+          "BURN"
+        ],
+        "argKinds": [
+          "number",
+          "boolean",
+          "enum:StatusEffect"
+        ]
+      }
+    ],
+    "flags": [
+      "bypassFaint"
+    ]
+  }
+]

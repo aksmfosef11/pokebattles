@@ -1,0 +1,866 @@
+[
+  {
+    "id": null,
+    "key": "G_MAX_WILDFIRE",
+    "class": "AttackMove",
+    "type": "fire",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [
+      {
+        "name": "HealStatusEffectAttr",
+        "args": [
+          false,
+          "FREEZE"
+        ],
+        "argKinds": [
+          "boolean",
+          "enum:StatusEffect"
+        ],
+        "implicit": true
+      }
+    ],
+    "unused": true,
+    "gigantamax": {
+      "species": "CHARIZARD",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxWildfire.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_BEFUDDLE",
+    "class": "AttackMove",
+    "type": "bug",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "BUTTERFREE",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxBefuddle.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_VOLT_CRASH",
+    "class": "AttackMove",
+    "type": "electric",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "PIKACHU",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxVoltCrash.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_GOLD_RUSH",
+    "class": "AttackMove",
+    "type": "normal",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "MEOWTH",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxGoldRush.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_CHI_STRIKE",
+    "class": "AttackMove",
+    "type": "fighting",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "MACHAMP",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxChiStrike.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_TERROR",
+    "class": "AttackMove",
+    "type": "ghost",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "GENGAR",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxTerror.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_RESONANCE",
+    "class": "AttackMove",
+    "type": "ice",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "LAPRAS",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxResonance.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_CUDDLE",
+    "class": "AttackMove",
+    "type": "normal",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "EEVEE",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxCuddle.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_REPLENISH",
+    "class": "AttackMove",
+    "type": "normal",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "SNORLAX",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxReplenish.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_MALODOR",
+    "class": "AttackMove",
+    "type": "poison",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "GARBODOR",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxMalodor.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_STONESURGE",
+    "class": "AttackMove",
+    "type": "water",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "DREDNAW",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxStonesurge.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_WIND_RAGE",
+    "class": "AttackMove",
+    "type": "flying",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "CORVIKNIGHT",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxWindRage.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_STUN_SHOCK",
+    "class": "AttackMove",
+    "type": "electric",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "TOXTRICITY",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxStunShock.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_FINALE",
+    "class": "AttackMove",
+    "type": "fairy",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "ALCREMIE",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxFinale.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_DEPLETION",
+    "class": "AttackMove",
+    "type": "dragon",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "DURALUDON",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxDepletion.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_GRAVITAS",
+    "class": "AttackMove",
+    "type": "psychic",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "ORBEETLE",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxGravitas.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_VOLCALITH",
+    "class": "AttackMove",
+    "type": "rock",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "COALOSSAL",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxVolcalith.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_SANDBLAST",
+    "class": "AttackMove",
+    "type": "ground",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "SANDACONDA",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxSandblast.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_SNOOZE",
+    "class": "AttackMove",
+    "type": "dark",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "GRIMMSNARL",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxSnooze.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_TARTNESS",
+    "class": "AttackMove",
+    "type": "grass",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "FLAPPLE",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxTartness.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_SWEETNESS",
+    "class": "AttackMove",
+    "type": "grass",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "APPLETUN",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxSweetness.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_SMITE",
+    "class": "AttackMove",
+    "type": "fairy",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "HATTERENE",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxSmite.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_STEELSURGE",
+    "class": "AttackMove",
+    "type": "steel",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "COPPERAJAH",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxSteelsurge.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_MELTDOWN",
+    "class": "AttackMove",
+    "type": "steel",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "MELMETAL",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxMeltdown.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_FOAM_BURST",
+    "class": "AttackMove",
+    "type": "water",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "KINGLER",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxFoamBurst.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_CENTIFERNO",
+    "class": "AttackMove",
+    "type": "fire",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [
+      {
+        "name": "HealStatusEffectAttr",
+        "args": [
+          false,
+          "FREEZE"
+        ],
+        "argKinds": [
+          "boolean",
+          "enum:StatusEffect"
+        ],
+        "implicit": true
+      }
+    ],
+    "unused": true,
+    "gigantamax": {
+      "species": "CENTISKORCH",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxCentiferno.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_VINE_LASH",
+    "class": "AttackMove",
+    "type": "grass",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "VENUSAUR",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxVineLash.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_CANNONADE",
+    "class": "AttackMove",
+    "type": "water",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "BLASTOISE",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxCannonade.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_DRUM_SOLO",
+    "class": "AttackMove",
+    "type": "grass",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "RILLABOOM",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxDrumSolo.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_FIREBALL",
+    "class": "AttackMove",
+    "type": "fire",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [
+      {
+        "name": "HealStatusEffectAttr",
+        "args": [
+          false,
+          "FREEZE"
+        ],
+        "argKinds": [
+          "boolean",
+          "enum:StatusEffect"
+        ],
+        "implicit": true
+      }
+    ],
+    "unused": true,
+    "gigantamax": {
+      "species": "CINDERACE",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxFireball.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_HYDROSNIPE",
+    "class": "AttackMove",
+    "type": "water",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "INTELEON",
+      "formKey": "gigantamax",
+      "derivedFrom": "en/move.json gMaxHydrosnipe.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_ONE_BLOW",
+    "class": "AttackMove",
+    "type": "dark",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "URSHIFU",
+      "formKey": "gigantamax-single",
+      "derivedFrom": "en/move.json gMaxOneBlow.effect"
+    }
+  },
+  {
+    "id": null,
+    "key": "G_MAX_RAPID_FLOW",
+    "class": "AttackMove",
+    "type": "water",
+    "category": "physical",
+    "power": 10,
+    "accuracy": null,
+    "pp": 10,
+    "chance": null,
+    "priority": 0,
+    "generation": 8,
+    "target": "ALL_NEAR_ENEMIES",
+    "flags": [
+      "makesContact",
+      "unimplemented"
+    ],
+    "attrs": [],
+    "unused": true,
+    "gigantamax": {
+      "species": "URSHIFU",
+      "formKey": "gigantamax-rapid",
+      "derivedFrom": "en/move.json gMaxRapidFlow.effect"
+    }
+  }
+]

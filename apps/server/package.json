@@ -1,0 +1,29 @@
+{
+  "name": "@pokebattles/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --watch-path=src --watch-path=../../packages/game/src --import tsx src/main.ts",
+    "start": "tsx src/main.ts",
+    "build": "esbuild main=src/main.ts stats=src/stats-cli.ts --bundle --platform=node --target=node20 --format=esm --external:pg --external:@electric-sql/pglite --outdir=dist --out-extension:.js=.mjs --banner:js=\"import { createRequire } from 'node:module'; const require = createRequire(import.meta.url);\"",
+    "stats": "tsx src/stats-cli.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "@hono/node-server": "^2.1.1",
+    "@pokebattles/game": "workspace:*",
+    "hono": "^4.13.9",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "@types/pg": "^8.23.1",
+    "esbuild": "0.28.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.2"
+  }
+}

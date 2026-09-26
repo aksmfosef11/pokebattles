@@ -1,0 +1,4697 @@
+{
+  "lang": "id",
+  "_meta": {
+    "pokerogueSupported": true,
+    "fallbackChain": [
+      "en"
+    ],
+    "fallbackNote": "Sections contain only strings that exist for this language (no silent English copies). Resolve missing keys via fallbackChain at runtime. Exception: champion trainer names listed in _fallbacks.",
+    "pokeapiLanguages": []
+  },
+  "species": {
+    "BULBASAUR": "Bulbasaur",
+    "IVYSAUR": "Ivysaur",
+    "VENUSAUR": "Venusaur",
+    "CHARMANDER": "Charmander",
+    "CHARMELEON": "Charmeleon",
+    "CHARIZARD": "Charizard",
+    "SQUIRTLE": "Squirtle",
+    "WARTORTLE": "Wartortle",
+    "BLASTOISE": "Blastoise",
+    "CATERPIE": "Caterpie",
+    "METAPOD": "Metapod",
+    "BUTTERFREE": "Butterfree",
+    "WEEDLE": "Weedle",
+    "KAKUNA": "Kakuna",
+    "BEEDRILL": "Beedrill",
+    "PIDGEY": "Pidgey",
+    "PIDGEOTTO": "Pidgeotto",
+    "PIDGEOT": "Pidgeot",
+    "RATTATA": "Rattata",
+    "RATICATE": "Raticate",
+    "SPEAROW": "Spearow",
+    "FEAROW": "Fearow",
+    "EKANS": "Ekans",
+    "ARBOK": "Arbok",
+    "PIKACHU": "Pikachu",
+    "RAICHU": "Raichu",
+    "SANDSHREW": "Sandshrew",
+    "SANDSLASH": "Sandslash",
+    "NIDORAN_F": "Nidoran♀",
+    "NIDORINA": "Nidorina",
+    "NIDOQUEEN": "Nidoqueen",
+    "NIDORAN_M": "Nidoran♂",
+    "NIDORINO": "Nidorino",
+    "NIDOKING": "Nidoking",
+    "CLEFAIRY": "Clefairy",
+    "CLEFABLE": "Clefable",
+    "VULPIX": "Vulpix",
+    "NINETALES": "Ninetales",
+    "JIGGLYPUFF": "Jigglypuff",
+    "WIGGLYTUFF": "Wigglytuff",
+    "ZUBAT": "Zubat",
+    "GOLBAT": "Golbat",
+    "ODDISH": "Oddish",
+    "GLOOM": "Gloom",
+    "VILEPLUME": "Vileplume",
+    "PARAS": "Paras",
+    "PARASECT": "Parasect",
+    "VENONAT": "Venonat",
+    "VENOMOTH": "Venomoth",
+    "DIGLETT": "Diglett",
+    "DUGTRIO": "Dugtrio",
+    "MEOWTH": "Meowth",
+    "PERSIAN": "Persian",
+    "PSYDUCK": "Psyduck",
+    "GOLDUCK": "Golduck",
+    "MANKEY": "Mankey",
+    "PRIMEAPE": "Primeape",
+    "GROWLITHE": "Growlithe",
+    "ARCANINE": "Arcanine",
+    "POLIWAG": "Poliwag",
+    "POLIWHIRL": "Poliwhirl",
+    "POLIWRATH": "Poliwrath",
+    "ABRA": "Abra",
+    "KADABRA": "Kadabra",
+    "ALAKAZAM": "Alakazam",
+    "MACHOP": "Machop",
+    "MACHOKE": "Machoke",
+    "MACHAMP": "Machamp",
+    "BELLSPROUT": "Bellsprout",
+    "WEEPINBELL": "Weepinbell",
+    "VICTREEBEL": "Victreebel",
+    "TENTACOOL": "Tentacool",
+    "TENTACRUEL": "Tentacruel",
+    "GEODUDE": "Geodude",
+    "GRAVELER": "Graveler",
+    "GOLEM": "Golem",
+    "PONYTA": "Ponyta",
+    "RAPIDASH": "Rapidash",
+    "SLOWPOKE": "Slowpoke",
+    "SLOWBRO": "Slowbro",
+    "MAGNEMITE": "Magnemite",
+    "MAGNETON": "Magneton",
+    "FARFETCHD": "Farfetch’d",
+    "DODUO": "Doduo",
+    "DODRIO": "Dodrio",
+    "SEEL": "Seel",
+    "DEWGONG": "Dewgong",
+    "GRIMER": "Grimer",
+    "MUK": "Muk",
+    "SHELLDER": "Shellder",
+    "CLOYSTER": "Cloyster",
+    "GASTLY": "Gastly",
+    "HAUNTER": "Haunter",
+    "GENGAR": "Gengar",
+    "ONIX": "Onix",
+    "DROWZEE": "Drowzee",
+    "HYPNO": "Hypno",
+    "KRABBY": "Krabby",
+    "KINGLER": "Kingler",
+    "VOLTORB": "Voltorb",
+    "ELECTRODE": "Electrode",
+    "EXEGGCUTE": "Exeggcute",
+    "EXEGGUTOR": "Exeggutor",
+    "CUBONE": "Cubone",
+    "MAROWAK": "Marowak",
+    "HITMONLEE": "Hitmonlee",
+    "HITMONCHAN": "Hitmonchan",
+    "LICKITUNG": "Lickitung",
+    "KOFFING": "Koffing",
+    "WEEZING": "Weezing",
+    "RHYHORN": "Rhyhorn",
+    "RHYDON": "Rhydon",
+    "CHANSEY": "Chansey",
+    "TANGELA": "Tangela",
+    "KANGASKHAN": "Kangaskhan",
+    "HORSEA": "Horsea",
+    "SEADRA": "Seadra",
+    "GOLDEEN": "Goldeen",
+    "SEAKING": "Seaking",
+    "STARYU": "Staryu",
+    "STARMIE": "Starmie",
+    "MR_MIME": "Mr. Mime",
+    "SCYTHER": "Scyther",
+    "JYNX": "Jynx",
+    "ELECTABUZZ": "Electabuzz",
+    "MAGMAR": "Magmar",
+    "PINSIR": "Pinsir",
+    "TAUROS": "Tauros",
+    "MAGIKARP": "Magikarp",
+    "GYARADOS": "Gyarados",
+    "LAPRAS": "Lapras",
+    "DITTO": "Ditto",
+    "EEVEE": "Eevee",
+    "VAPOREON": "Vaporeon",
+    "JOLTEON": "Jolteon",
+    "FLAREON": "Flareon",
+    "PORYGON": "Porygon",
+    "OMANYTE": "Omanyte",
+    "OMASTAR": "Omastar",
+    "KABUTO": "Kabuto",
+    "KABUTOPS": "Kabutops",
+    "AERODACTYL": "Aerodactyl",
+    "SNORLAX": "Snorlax",
+    "ARTICUNO": "Articuno",
+    "ZAPDOS": "Zapdos",
+    "MOLTRES": "Moltres",
+    "DRATINI": "Dratini",
+    "DRAGONAIR": "Dragonair",
+    "DRAGONITE": "Dragonite",
+    "MEWTWO": "Mewtwo",
+    "MEW": "Mew",
+    "CHIKORITA": "Chikorita",
+    "BAYLEEF": "Bayleef",
+    "MEGANIUM": "Meganium",
+    "CYNDAQUIL": "Cyndaquil",
+    "QUILAVA": "Quilava",
+    "TYPHLOSION": "Typhlosion",
+    "TOTODILE": "Totodile",
+    "CROCONAW": "Croconaw",
+    "FERALIGATR": "Feraligatr",
+    "SENTRET": "Sentret",
+    "FURRET": "Furret",
+    "HOOTHOOT": "Hoothoot",
+    "NOCTOWL": "Noctowl",
+    "LEDYBA": "Ledyba",
+    "LEDIAN": "Ledian",
+    "SPINARAK": "Spinarak",
+    "ARIADOS": "Ariados",
+    "CROBAT": "Crobat",
+    "CHINCHOU": "Chinchou",
+    "LANTURN": "Lanturn",
+    "PICHU": "Pichu",
+    "CLEFFA": "Cleffa",
+    "IGGLYBUFF": "Igglybuff",
+    "TOGEPI": "Togepi",
+    "TOGETIC": "Togetic",
+    "NATU": "Natu",
+    "XATU": "Xatu",
+    "MAREEP": "Mareep",
+    "FLAAFFY": "Flaaffy",
+    "AMPHAROS": "Ampharos",
+    "BELLOSSOM": "Bellossom",
+    "MARILL": "Marill",
+    "AZUMARILL": "Azumarill",
+    "SUDOWOODO": "Sudowoodo",
+    "POLITOED": "Politoed",
+    "HOPPIP": "Hoppip",
+    "SKIPLOOM": "Skiploom",
+    "JUMPLUFF": "Jumpluff",
+    "AIPOM": "Aipom",
+    "SUNKERN": "Sunkern",
+    "SUNFLORA": "Sunflora",
+    "YANMA": "Yanma",
+    "WOOPER": "Wooper",
+    "QUAGSIRE": "Quagsire",
+    "ESPEON": "Espeon",
+    "UMBREON": "Umbreon",
+    "MURKROW": "Murkrow",
+    "SLOWKING": "Slowking",
+    "MISDREAVUS": "Misdreavus",
+    "UNOWN": "Unown",
+    "WOBBUFFET": "Wobbuffet",
+    "GIRAFARIG": "Girafarig",
+    "PINECO": "Pineco",
+    "FORRETRESS": "Forretress",
+    "DUNSPARCE": "Dunsparce",
+    "GLIGAR": "Gligar",
+    "STEELIX": "Steelix",
+    "SNUBBULL": "Snubbull",
+    "GRANBULL": "Granbull",
+    "QWILFISH": "Qwilfish",
+    "SCIZOR": "Scizor",
+    "SHUCKLE": "Shuckle",
+    "HERACROSS": "Heracross",
+    "SNEASEL": "Sneasel",
+    "TEDDIURSA": "Teddiursa",
+    "URSARING": "Ursaring",
+    "SLUGMA": "Slugma",
+    "MAGCARGO": "Magcargo",
+    "SWINUB": "Swinub",
+    "PILOSWINE": "Piloswine",
+    "CORSOLA": "Corsola",
+    "REMORAID": "Remoraid",
+    "OCTILLERY": "Octillery",
+    "DELIBIRD": "Delibird",
+    "MANTINE": "Mantine",
+    "SKARMORY": "Skarmory",
+    "HOUNDOUR": "Houndour",
+    "HOUNDOOM": "Houndoom",
+    "KINGDRA": "Kingdra",
+    "PHANPY": "Phanpy",
+    "DONPHAN": "Donphan",
+    "PORYGON2": "Porygon2",
+    "STANTLER": "Stantler",
+    "SMEARGLE": "Smeargle",
+    "TYROGUE": "Tyrogue",
+    "HITMONTOP": "Hitmontop",
+    "SMOOCHUM": "Smoochum",
+    "ELEKID": "Elekid",
+    "MAGBY": "Magby",
+    "MILTANK": "Miltank",
+    "BLISSEY": "Blissey",
+    "RAIKOU": "Raikou",
+    "ENTEI": "Entei",
+    "SUICUNE": "Suicune",
+    "LARVITAR": "Larvitar",
+    "PUPITAR": "Pupitar",
+    "TYRANITAR": "Tyranitar",
+    "LUGIA": "Lugia",
+    "HO_OH": "Ho-Oh",
+    "CELEBI": "Celebi",
+    "TREECKO": "Treecko",
+    "GROVYLE": "Grovyle",
+    "SCEPTILE": "Sceptile",
+    "TORCHIC": "Torchic",
+    "COMBUSKEN": "Combusken",
+    "BLAZIKEN": "Blaziken",
+    "MUDKIP": "Mudkip",
+    "MARSHTOMP": "Marshtomp",
+    "SWAMPERT": "Swampert",
+    "POOCHYENA": "Poochyena",
+    "MIGHTYENA": "Mightyena",
+    "ZIGZAGOON": "Zigzagoon",
+    "LINOONE": "Linoone",
+    "WURMPLE": "Wurmple",
+    "SILCOON": "Silcoon",
+    "BEAUTIFLY": "Beautifly",
+    "CASCOON": "Cascoon",
+    "DUSTOX": "Dustox",
+    "LOTAD": "Lotad",
+    "LOMBRE": "Lombre",
+    "LUDICOLO": "Ludicolo",
+    "SEEDOT": "Seedot",
+    "NUZLEAF": "Nuzleaf",
+    "SHIFTRY": "Shiftry",
+    "TAILLOW": "Taillow",
+    "SWELLOW": "Swellow",
+    "WINGULL": "Wingull",
+    "PELIPPER": "Pelipper",
+    "RALTS": "Ralts",
+    "KIRLIA": "Kirlia",
+    "GARDEVOIR": "Gardevoir",
+    "SURSKIT": "Surskit",
+    "MASQUERAIN": "Masquerain",
+    "SHROOMISH": "Shroomish",
+    "BRELOOM": "Breloom",
+    "SLAKOTH": "Slakoth",
+    "VIGOROTH": "Vigoroth",
+    "SLAKING": "Slaking",
+    "NINCADA": "Nincada",
+    "NINJASK": "Ninjask",
+    "SHEDINJA": "Shedinja",
+    "WHISMUR": "Whismur",
+    "LOUDRED": "Loudred",
+    "EXPLOUD": "Exploud",
+    "MAKUHITA": "Makuhita",
+    "HARIYAMA": "Hariyama",
+    "AZURILL": "Azurill",
+    "NOSEPASS": "Nosepass",
+    "SKITTY": "Skitty",
+    "DELCATTY": "Delcatty",
+    "SABLEYE": "Sableye",
+    "MAWILE": "Mawile",
+    "ARON": "Aron",
+    "LAIRON": "Lairon",
+    "AGGRON": "Aggron",
+    "MEDITITE": "Meditite",
+    "MEDICHAM": "Medicham",
+    "ELECTRIKE": "Electrike",
+    "MANECTRIC": "Manectric",
+    "PLUSLE": "Plusle",
+    "MINUN": "Minun",
+    "VOLBEAT": "Volbeat",
+    "ILLUMISE": "Illumise",
+    "ROSELIA": "Roselia",
+    "GULPIN": "Gulpin",
+    "SWALOT": "Swalot",
+    "CARVANHA": "Carvanha",
+    "SHARPEDO": "Sharpedo",
+    "WAILMER": "Wailmer",
+    "WAILORD": "Wailord",
+    "NUMEL": "Numel",
+    "CAMERUPT": "Camerupt",
+    "TORKOAL": "Torkoal",
+    "SPOINK": "Spoink",
+    "GRUMPIG": "Grumpig",
+    "SPINDA": "Spinda",
+    "TRAPINCH": "Trapinch",
+    "VIBRAVA": "Vibrava",
+    "FLYGON": "Flygon",
+    "CACNEA": "Cacnea",
+    "CACTURNE": "Cacturne",
+    "SWABLU": "Swablu",
+    "ALTARIA": "Altaria",
+    "ZANGOOSE": "Zangoose",
+    "SEVIPER": "Seviper",
+    "LUNATONE": "Lunatone",
+    "SOLROCK": "Solrock",
+    "BARBOACH": "Barboach",
+    "WHISCASH": "Whiscash",
+    "CORPHISH": "Corphish",
+    "CRAWDAUNT": "Crawdaunt",
+    "BALTOY": "Baltoy",
+    "CLAYDOL": "Claydol",
+    "LILEEP": "Lileep",
+    "CRADILY": "Cradily",
+    "ANORITH": "Anorith",
+    "ARMALDO": "Armaldo",
+    "FEEBAS": "Feebas",
+    "MILOTIC": "Milotic",
+    "CASTFORM": "Castform",
+    "KECLEON": "Kecleon",
+    "SHUPPET": "Shuppet",
+    "BANETTE": "Banette",
+    "DUSKULL": "Duskull",
+    "DUSCLOPS": "Dusclops",
+    "TROPIUS": "Tropius",
+    "CHIMECHO": "Chimecho",
+    "ABSOL": "Absol",
+    "WYNAUT": "Wynaut",
+    "SNORUNT": "Snorunt",
+    "GLALIE": "Glalie",
+    "SPHEAL": "Spheal",
+    "SEALEO": "Sealeo",
+    "WALREIN": "Walrein",
+    "CLAMPERL": "Clamperl",
+    "HUNTAIL": "Huntail",
+    "GOREBYSS": "Gorebyss",
+    "RELICANTH": "Relicanth",
+    "LUVDISC": "Luvdisc",
+    "BAGON": "Bagon",
+    "SHELGON": "Shelgon",
+    "SALAMENCE": "Salamence",
+    "BELDUM": "Beldum",
+    "METANG": "Metang",
+    "METAGROSS": "Metagross",
+    "REGIROCK": "Regirock",
+    "REGICE": "Regice",
+    "REGISTEEL": "Registeel",
+    "LATIAS": "Latias",
+    "LATIOS": "Latios",
+    "KYOGRE": "Kyogre",
+    "GROUDON": "Groudon",
+    "RAYQUAZA": "Rayquaza",
+    "JIRACHI": "Jirachi",
+    "DEOXYS": "Deoxys",
+    "TURTWIG": "Turtwig",
+    "GROTLE": "Grotle",
+    "TORTERRA": "Torterra",
+    "CHIMCHAR": "Chimchar",
+    "MONFERNO": "Monferno",
+    "INFERNAPE": "Infernape",
+    "PIPLUP": "Piplup",
+    "PRINPLUP": "Prinplup",
+    "EMPOLEON": "Empoleon",
+    "STARLY": "Starly",
+    "STARAVIA": "Staravia",
+    "STARAPTOR": "Staraptor",
+    "BIDOOF": "Bidoof",
+    "BIBAREL": "Bibarel",
+    "KRICKETOT": "Kricketot",
+    "KRICKETUNE": "Kricketune",
+    "SHINX": "Shinx",
+    "LUXIO": "Luxio",
+    "LUXRAY": "Luxray",
+    "BUDEW": "Budew",
+    "ROSERADE": "Roserade",
+    "CRANIDOS": "Cranidos",
+    "RAMPARDOS": "Rampardos",
+    "SHIELDON": "Shieldon",
+    "BASTIODON": "Bastiodon",
+    "BURMY": "Burmy",
+    "WORMADAM": "Wormadam",
+    "MOTHIM": "Mothim",
+    "COMBEE": "Combee",
+    "VESPIQUEN": "Vespiquen",
+    "PACHIRISU": "Pachirisu",
+    "BUIZEL": "Buizel",
+    "FLOATZEL": "Floatzel",
+    "CHERUBI": "Cherubi",
+    "CHERRIM": "Cherrim",
+    "SHELLOS": "Shellos",
+    "GASTRODON": "Gastrodon",
+    "AMBIPOM": "Ambipom",
+    "DRIFLOON": "Drifloon",
+    "DRIFBLIM": "Drifblim",
+    "BUNEARY": "Buneary",
+    "LOPUNNY": "Lopunny",
+    "MISMAGIUS": "Mismagius",
+    "HONCHKROW": "Honchkrow",
+    "GLAMEOW": "Glameow",
+    "PURUGLY": "Purugly",
+    "CHINGLING": "Chingling",
+    "STUNKY": "Stunky",
+    "SKUNTANK": "Skuntank",
+    "BRONZOR": "Bronzor",
+    "BRONZONG": "Bronzong",
+    "BONSLY": "Bonsly",
+    "MIME_JR": "Mime Jr.",
+    "HAPPINY": "Happiny",
+    "CHATOT": "Chatot",
+    "SPIRITOMB": "Spiritomb",
+    "GIBLE": "Gible",
+    "GABITE": "Gabite",
+    "GARCHOMP": "Garchomp",
+    "MUNCHLAX": "Munchlax",
+    "RIOLU": "Riolu",
+    "LUCARIO": "Lucario",
+    "HIPPOPOTAS": "Hippopotas",
+    "HIPPOWDON": "Hippowdon",
+    "SKORUPI": "Skorupi",
+    "DRAPION": "Drapion",
+    "CROAGUNK": "Croagunk",
+    "TOXICROAK": "Toxicroak",
+    "CARNIVINE": "Carnivine",
+    "FINNEON": "Finneon",
+    "LUMINEON": "Lumineon",
+    "MANTYKE": "Mantyke",
+    "SNOVER": "Snover",
+    "ABOMASNOW": "Abomasnow",
+    "WEAVILE": "Weavile",
+    "MAGNEZONE": "Magnezone",
+    "LICKILICKY": "Lickilicky",
+    "RHYPERIOR": "Rhyperior",
+    "TANGROWTH": "Tangrowth",
+    "ELECTIVIRE": "Electivire",
+    "MAGMORTAR": "Magmortar",
+    "TOGEKISS": "Togekiss",
+    "YANMEGA": "Yanmega",
+    "LEAFEON": "Leafeon",
+    "GLACEON": "Glaceon",
+    "GLISCOR": "Gliscor",
+    "MAMOSWINE": "Mamoswine",
+    "PORYGON_Z": "Porygon-Z",
+    "GALLADE": "Gallade",
+    "PROBOPASS": "Probopass",
+    "DUSKNOIR": "Dusknoir",
+    "FROSLASS": "Froslass",
+    "ROTOM": "Rotom",
+    "UXIE": "Uxie",
+    "MESPRIT": "Mesprit",
+    "AZELF": "Azelf",
+    "DIALGA": "Dialga",
+    "PALKIA": "Palkia",
+    "HEATRAN": "Heatran",
+    "REGIGIGAS": "Regigigas",
+    "GIRATINA": "Giratina",
+    "CRESSELIA": "Cresselia",
+    "PHIONE": "Phione",
+    "MANAPHY": "Manaphy",
+    "DARKRAI": "Darkrai",
+    "SHAYMIN": "Shaymin",
+    "ARCEUS": "Arceus",
+    "VICTINI": "Victini",
+    "SNIVY": "Snivy",
+    "SERVINE": "Servine",
+    "SERPERIOR": "Serperior",
+    "TEPIG": "Tepig",
+    "PIGNITE": "Pignite",
+    "EMBOAR": "Emboar",
+    "OSHAWOTT": "Oshawott",
+    "DEWOTT": "Dewott",
+    "SAMUROTT": "Samurott",
+    "PATRAT": "Patrat",
+    "WATCHOG": "Watchog",
+    "LILLIPUP": "Lillipup",
+    "HERDIER": "Herdier",
+    "STOUTLAND": "Stoutland",
+    "PURRLOIN": "Purrloin",
+    "LIEPARD": "Liepard",
+    "PANSAGE": "Pansage",
+    "SIMISAGE": "Simisage",
+    "PANSEAR": "Pansear",
+    "SIMISEAR": "Simisear",
+    "PANPOUR": "Panpour",
+    "SIMIPOUR": "Simipour",
+    "MUNNA": "Munna",
+    "MUSHARNA": "Musharna",
+    "PIDOVE": "Pidove",
+    "TRANQUILL": "Tranquill",
+    "UNFEZANT": "Unfezant",
+    "BLITZLE": "Blitzle",
+    "ZEBSTRIKA": "Zebstrika",
+    "ROGGENROLA": "Roggenrola",
+    "BOLDORE": "Boldore",
+    "GIGALITH": "Gigalith",
+    "WOOBAT": "Woobat",
+    "SWOOBAT": "Swoobat",
+    "DRILBUR": "Drilbur",
+    "EXCADRILL": "Excadrill",
+    "AUDINO": "Audino",
+    "TIMBURR": "Timburr",
+    "GURDURR": "Gurdurr",
+    "CONKELDURR": "Conkeldurr",
+    "TYMPOLE": "Tympole",
+    "PALPITOAD": "Palpitoad",
+    "SEISMITOAD": "Seismitoad",
+    "THROH": "Throh",
+    "SAWK": "Sawk",
+    "SEWADDLE": "Sewaddle",
+    "SWADLOON": "Swadloon",
+    "LEAVANNY": "Leavanny",
+    "VENIPEDE": "Venipede",
+    "WHIRLIPEDE": "Whirlipede",
+    "SCOLIPEDE": "Scolipede",
+    "COTTONEE": "Cottonee",
+    "WHIMSICOTT": "Whimsicott",
+    "PETILIL": "Petilil",
+    "LILLIGANT": "Lilligant",
+    "BASCULIN": "Basculin",
+    "SANDILE": "Sandile",
+    "KROKOROK": "Krokorok",
+    "KROOKODILE": "Krookodile",
+    "DARUMAKA": "Darumaka",
+    "DARMANITAN": "Darmanitan",
+    "MARACTUS": "Maractus",
+    "DWEBBLE": "Dwebble",
+    "CRUSTLE": "Crustle",
+    "SCRAGGY": "Scraggy",
+    "SCRAFTY": "Scrafty",
+    "SIGILYPH": "Sigilyph",
+    "YAMASK": "Yamask",
+    "COFAGRIGUS": "Cofagrigus",
+    "TIRTOUGA": "Tirtouga",
+    "CARRACOSTA": "Carracosta",
+    "ARCHEN": "Archen",
+    "ARCHEOPS": "Archeops",
+    "TRUBBISH": "Trubbish",
+    "GARBODOR": "Garbodor",
+    "ZORUA": "Zorua",
+    "ZOROARK": "Zoroark",
+    "MINCCINO": "Minccino",
+    "CINCCINO": "Cinccino",
+    "GOTHITA": "Gothita",
+    "GOTHORITA": "Gothorita",
+    "GOTHITELLE": "Gothitelle",
+    "SOLOSIS": "Solosis",
+    "DUOSION": "Duosion",
+    "REUNICLUS": "Reuniclus",
+    "DUCKLETT": "Ducklett",
+    "SWANNA": "Swanna",
+    "VANILLITE": "Vanillite",
+    "VANILLISH": "Vanillish",
+    "VANILLUXE": "Vanilluxe",
+    "DEERLING": "Deerling",
+    "SAWSBUCK": "Sawsbuck",
+    "EMOLGA": "Emolga",
+    "KARRABLAST": "Karrablast",
+    "ESCAVALIER": "Escavalier",
+    "FOONGUS": "Foongus",
+    "AMOONGUSS": "Amoonguss",
+    "FRILLISH": "Frillish",
+    "JELLICENT": "Jellicent",
+    "ALOMOMOLA": "Alomomola",
+    "JOLTIK": "Joltik",
+    "GALVANTULA": "Galvantula",
+    "FERROSEED": "Ferroseed",
+    "FERROTHORN": "Ferrothorn",
+    "KLINK": "Klink",
+    "KLANG": "Klang",
+    "KLINKLANG": "Klinklang",
+    "TYNAMO": "Tynamo",
+    "EELEKTRIK": "Eelektrik",
+    "EELEKTROSS": "Eelektross",
+    "ELGYEM": "Elgyem",
+    "BEHEEYEM": "Beheeyem",
+    "LITWICK": "Litwick",
+    "LAMPENT": "Lampent",
+    "CHANDELURE": "Chandelure",
+    "AXEW": "Axew",
+    "FRAXURE": "Fraxure",
+    "HAXORUS": "Haxorus",
+    "CUBCHOO": "Cubchoo",
+    "BEARTIC": "Beartic",
+    "CRYOGONAL": "Cryogonal",
+    "SHELMET": "Shelmet",
+    "ACCELGOR": "Accelgor",
+    "STUNFISK": "Stunfisk",
+    "MIENFOO": "Mienfoo",
+    "MIENSHAO": "Mienshao",
+    "DRUDDIGON": "Druddigon",
+    "GOLETT": "Golett",
+    "GOLURK": "Golurk",
+    "PAWNIARD": "Pawniard",
+    "BISHARP": "Bisharp",
+    "BOUFFALANT": "Bouffalant",
+    "RUFFLET": "Rufflet",
+    "BRAVIARY": "Braviary",
+    "VULLABY": "Vullaby",
+    "MANDIBUZZ": "Mandibuzz",
+    "HEATMOR": "Heatmor",
+    "DURANT": "Durant",
+    "DEINO": "Deino",
+    "ZWEILOUS": "Zweilous",
+    "HYDREIGON": "Hydreigon",
+    "LARVESTA": "Larvesta",
+    "VOLCARONA": "Volcarona",
+    "COBALION": "Cobalion",
+    "TERRAKION": "Terrakion",
+    "VIRIZION": "Virizion",
+    "TORNADUS": "Tornadus",
+    "THUNDURUS": "Thundurus",
+    "RESHIRAM": "Reshiram",
+    "ZEKROM": "Zekrom",
+    "LANDORUS": "Landorus",
+    "KYUREM": "Kyurem",
+    "KELDEO": "Keldeo",
+    "MELOETTA": "Meloetta",
+    "GENESECT": "Genesect",
+    "CHESPIN": "Chespin",
+    "QUILLADIN": "Quilladin",
+    "CHESNAUGHT": "Chesnaught",
+    "FENNEKIN": "Fennekin",
+    "BRAIXEN": "Braixen",
+    "DELPHOX": "Delphox",
+    "FROAKIE": "Froakie",
+    "FROGADIER": "Frogadier",
+    "GRENINJA": "Greninja",
+    "BUNNELBY": "Bunnelby",
+    "DIGGERSBY": "Diggersby",
+    "FLETCHLING": "Fletchling",
+    "FLETCHINDER": "Fletchinder",
+    "TALONFLAME": "Talonflame",
+    "SCATTERBUG": "Scatterbug",
+    "SPEWPA": "Spewpa",
+    "VIVILLON": "Vivillon",
+    "LITLEO": "Litleo",
+    "PYROAR": "Pyroar",
+    "FLABEBE": "Flabébé",
+    "FLOETTE": "Floette",
+    "FLORGES": "Florges",
+    "SKIDDO": "Skiddo",
+    "GOGOAT": "Gogoat",
+    "PANCHAM": "Pancham",
+    "PANGORO": "Pangoro",
+    "FURFROU": "Furfrou",
+    "ESPURR": "Espurr",
+    "MEOWSTIC": "Meowstic",
+    "HONEDGE": "Honedge",
+    "DOUBLADE": "Doublade",
+    "AEGISLASH": "Aegislash",
+    "SPRITZEE": "Spritzee",
+    "AROMATISSE": "Aromatisse",
+    "SWIRLIX": "Swirlix",
+    "SLURPUFF": "Slurpuff",
+    "INKAY": "Inkay",
+    "MALAMAR": "Malamar",
+    "BINACLE": "Binacle",
+    "BARBARACLE": "Barbaracle",
+    "SKRELP": "Skrelp",
+    "DRAGALGE": "Dragalge",
+    "CLAUNCHER": "Clauncher",
+    "CLAWITZER": "Clawitzer",
+    "HELIOPTILE": "Helioptile",
+    "HELIOLISK": "Heliolisk",
+    "TYRUNT": "Tyrunt",
+    "TYRANTRUM": "Tyrantrum",
+    "AMAURA": "Amaura",
+    "AURORUS": "Aurorus",
+    "SYLVEON": "Sylveon",
+    "HAWLUCHA": "Hawlucha",
+    "DEDENNE": "Dedenne",
+    "CARBINK": "Carbink",
+    "GOOMY": "Goomy",
+    "SLIGGOO": "Sliggoo",
+    "GOODRA": "Goodra",
+    "KLEFKI": "Klefki",
+    "PHANTUMP": "Phantump",
+    "TREVENANT": "Trevenant",
+    "PUMPKABOO": "Pumpkaboo",
+    "GOURGEIST": "Gourgeist",
+    "BERGMITE": "Bergmite",
+    "AVALUGG": "Avalugg",
+    "NOIBAT": "Noibat",
+    "NOIVERN": "Noivern",
+    "XERNEAS": "Xerneas",
+    "YVELTAL": "Yveltal",
+    "ZYGARDE": "Zygarde",
+    "DIANCIE": "Diancie",
+    "HOOPA": "Hoopa",
+    "VOLCANION": "Volcanion",
+    "ROWLET": "Rowlet",
+    "DARTRIX": "Dartrix",
+    "DECIDUEYE": "Decidueye",
+    "LITTEN": "Litten",
+    "TORRACAT": "Torracat",
+    "INCINEROAR": "Incineroar",
+    "POPPLIO": "Popplio",
+    "BRIONNE": "Brionne",
+    "PRIMARINA": "Primarina",
+    "PIKIPEK": "Pikipek",
+    "TRUMBEAK": "Trumbeak",
+    "TOUCANNON": "Toucannon",
+    "YUNGOOS": "Yungoos",
+    "GUMSHOOS": "Gumshoos",
+    "GRUBBIN": "Grubbin",
+    "CHARJABUG": "Charjabug",
+    "VIKAVOLT": "Vikavolt",
+    "CRABRAWLER": "Crabrawler",
+    "CRABOMINABLE": "Crabominable",
+    "ORICORIO": "Oricorio",
+    "CUTIEFLY": "Cutiefly",
+    "RIBOMBEE": "Ribombee",
+    "ROCKRUFF": "Rockruff",
+    "LYCANROC": "Lycanroc",
+    "WISHIWASHI": "Wishiwashi",
+    "MAREANIE": "Mareanie",
+    "TOXAPEX": "Toxapex",
+    "MUDBRAY": "Mudbray",
+    "MUDSDALE": "Mudsdale",
+    "DEWPIDER": "Dewpider",
+    "ARAQUANID": "Araquanid",
+    "FOMANTIS": "Fomantis",
+    "LURANTIS": "Lurantis",
+    "MORELULL": "Morelull",
+    "SHIINOTIC": "Shiinotic",
+    "SALANDIT": "Salandit",
+    "SALAZZLE": "Salazzle",
+    "STUFFUL": "Stufful",
+    "BEWEAR": "Bewear",
+    "BOUNSWEET": "Bounsweet",
+    "STEENEE": "Steenee",
+    "TSAREENA": "Tsareena",
+    "COMFEY": "Comfey",
+    "ORANGURU": "Oranguru",
+    "PASSIMIAN": "Passimian",
+    "WIMPOD": "Wimpod",
+    "GOLISOPOD": "Golisopod",
+    "SANDYGAST": "Sandygast",
+    "PALOSSAND": "Palossand",
+    "PYUKUMUKU": "Pyukumuku",
+    "TYPE_NULL": "Type: Null",
+    "SILVALLY": "Silvally",
+    "MINIOR": "Minior",
+    "KOMALA": "Komala",
+    "TURTONATOR": "Turtonator",
+    "TOGEDEMARU": "Togedemaru",
+    "MIMIKYU": "Mimikyu",
+    "BRUXISH": "Bruxish",
+    "DRAMPA": "Drampa",
+    "DHELMISE": "Dhelmise",
+    "JANGMO_O": "Jangmo-o",
+    "HAKAMO_O": "Hakamo-o",
+    "KOMMO_O": "Kommo-o",
+    "TAPU_KOKO": "Tapu Koko",
+    "TAPU_LELE": "Tapu Lele",
+    "TAPU_BULU": "Tapu Bulu",
+    "TAPU_FINI": "Tapu Fini",
+    "COSMOG": "Cosmog",
+    "COSMOEM": "Cosmoem",
+    "SOLGALEO": "Solgaleo",
+    "LUNALA": "Lunala",
+    "NIHILEGO": "Nihilego",
+    "BUZZWOLE": "Buzzwole",
+    "PHEROMOSA": "Pheromosa",
+    "XURKITREE": "Xurkitree",
+    "CELESTEELA": "Celesteela",
+    "KARTANA": "Kartana",
+    "GUZZLORD": "Guzzlord",
+    "NECROZMA": "Necrozma",
+    "MAGEARNA": "Magearna",
+    "MARSHADOW": "Marshadow",
+    "POIPOLE": "Poipole",
+    "NAGANADEL": "Naganadel",
+    "STAKATAKA": "Stakataka",
+    "BLACEPHALON": "Blacephalon",
+    "ZERAORA": "Zeraora",
+    "MELTAN": "Meltan",
+    "MELMETAL": "Melmetal",
+    "GROOKEY": "Grookey",
+    "THWACKEY": "Thwackey",
+    "RILLABOOM": "Rillaboom",
+    "SCORBUNNY": "Scorbunny",
+    "RABOOT": "Raboot",
+    "CINDERACE": "Cinderace",
+    "SOBBLE": "Sobble",
+    "DRIZZILE": "Drizzile",
+    "INTELEON": "Inteleon",
+    "SKWOVET": "Skwovet",
+    "GREEDENT": "Greedent",
+    "ROOKIDEE": "Rookidee",
+    "CORVISQUIRE": "Corvisquire",
+    "CORVIKNIGHT": "Corviknight",
+    "BLIPBUG": "Blipbug",
+    "DOTTLER": "Dottler",
+    "ORBEETLE": "Orbeetle",
+    "NICKIT": "Nickit",
+    "THIEVUL": "Thievul",
+    "GOSSIFLEUR": "Gossifleur",
+    "ELDEGOSS": "Eldegoss",
+    "WOOLOO": "Wooloo",
+    "DUBWOOL": "Dubwool",
+    "CHEWTLE": "Chewtle",
+    "DREDNAW": "Drednaw",
+    "YAMPER": "Yamper",
+    "BOLTUND": "Boltund",
+    "ROLYCOLY": "Rolycoly",
+    "CARKOL": "Carkol",
+    "COALOSSAL": "Coalossal",
+    "APPLIN": "Applin",
+    "FLAPPLE": "Flapple",
+    "APPLETUN": "Appletun",
+    "SILICOBRA": "Silicobra",
+    "SANDACONDA": "Sandaconda",
+    "CRAMORANT": "Cramorant",
+    "ARROKUDA": "Arrokuda",
+    "BARRASKEWDA": "Barraskewda",
+    "TOXEL": "Toxel",
+    "TOXTRICITY": "Toxtricity",
+    "SIZZLIPEDE": "Sizzlipede",
+    "CENTISKORCH": "Centiskorch",
+    "CLOBBOPUS": "Clobbopus",
+    "GRAPPLOCT": "Grapploct",
+    "SINISTEA": "Sinistea",
+    "POLTEAGEIST": "Polteageist",
+    "HATENNA": "Hatenna",
+    "HATTREM": "Hattrem",
+    "HATTERENE": "Hatterene",
+    "IMPIDIMP": "Impidimp",
+    "MORGREM": "Morgrem",
+    "GRIMMSNARL": "Grimmsnarl",
+    "OBSTAGOON": "Obstagoon",
+    "PERRSERKER": "Perrserker",
+    "CURSOLA": "Cursola",
+    "SIRFETCHD": "Sirfetch’d",
+    "MR_RIME": "Mr. Rime",
+    "RUNERIGUS": "Runerigus",
+    "MILCERY": "Milcery",
+    "ALCREMIE": "Alcremie",
+    "FALINKS": "Falinks",
+    "PINCURCHIN": "Pincurchin",
+    "SNOM": "Snom",
+    "FROSMOTH": "Frosmoth",
+    "STONJOURNER": "Stonjourner",
+    "EISCUE": "Eiscue",
+    "INDEEDEE": "Indeedee",
+    "MORPEKO": "Morpeko",
+    "CUFANT": "Cufant",
+    "COPPERAJAH": "Copperajah",
+    "DRACOZOLT": "Dracozolt",
+    "ARCTOZOLT": "Arctozolt",
+    "DRACOVISH": "Dracovish",
+    "ARCTOVISH": "Arctovish",
+    "DURALUDON": "Duraludon",
+    "DREEPY": "Dreepy",
+    "DRAKLOAK": "Drakloak",
+    "DRAGAPULT": "Dragapult",
+    "ZACIAN": "Zacian",
+    "ZAMAZENTA": "Zamazenta",
+    "ETERNATUS": "Eternatus",
+    "KUBFU": "Kubfu",
+    "URSHIFU": "Urshifu",
+    "ZARUDE": "Zarude",
+    "REGIELEKI": "Regieleki",
+    "REGIDRAGO": "Regidrago",
+    "GLASTRIER": "Glastrier",
+    "SPECTRIER": "Spectrier",
+    "CALYREX": "Calyrex",
+    "WYRDEER": "Wyrdeer",
+    "KLEAVOR": "Kleavor",
+    "URSALUNA": "Ursaluna",
+    "BASCULEGION": "Basculegion",
+    "SNEASLER": "Sneasler",
+    "OVERQWIL": "Overqwil",
+    "ENAMORUS": "Enamorus",
+    "SPRIGATITO": "Sprigatito",
+    "FLORAGATO": "Floragato",
+    "MEOWSCARADA": "Meowscarada",
+    "FUECOCO": "Fuecoco",
+    "CROCALOR": "Crocalor",
+    "SKELEDIRGE": "Skeledirge",
+    "QUAXLY": "Quaxly",
+    "QUAXWELL": "Quaxwell",
+    "QUAQUAVAL": "Quaquaval",
+    "LECHONK": "Lechonk",
+    "OINKOLOGNE": "Oinkologne",
+    "TAROUNTULA": "Tarountula",
+    "SPIDOPS": "Spidops",
+    "NYMBLE": "Nymble",
+    "LOKIX": "Lokix",
+    "PAWMI": "Pawmi",
+    "PAWMO": "Pawmo",
+    "PAWMOT": "Pawmot",
+    "TANDEMAUS": "Tandemaus",
+    "MAUSHOLD": "Maushold",
+    "FIDOUGH": "Fidough",
+    "DACHSBUN": "Dachsbun",
+    "SMOLIV": "Smoliv",
+    "DOLLIV": "Dolliv",
+    "ARBOLIVA": "Arboliva",
+    "SQUAWKABILLY": "Squawkabilly",
+    "NACLI": "Nacli",
+    "NACLSTACK": "Naclstack",
+    "GARGANACL": "Garganacl",
+    "CHARCADET": "Charcadet",
+    "ARMAROUGE": "Armarouge",
+    "CERULEDGE": "Ceruledge",
+    "TADBULB": "Tadbulb",
+    "BELLIBOLT": "Bellibolt",
+    "WATTREL": "Wattrel",
+    "KILOWATTREL": "Kilowattrel",
+    "MASCHIFF": "Maschiff",
+    "MABOSSTIFF": "Mabosstiff",
+    "SHROODLE": "Shroodle",
+    "GRAFAIAI": "Grafaiai",
+    "BRAMBLIN": "Bramblin",
+    "BRAMBLEGHAST": "Brambleghast",
+    "TOEDSCOOL": "Toedscool",
+    "TOEDSCRUEL": "Toedscruel",
+    "KLAWF": "Klawf",
+    "CAPSAKID": "Capsakid",
+    "SCOVILLAIN": "Scovillain",
+    "RELLOR": "Rellor",
+    "RABSCA": "Rabsca",
+    "FLITTLE": "Flittle",
+    "ESPATHRA": "Espathra",
+    "TINKATINK": "Tinkatink",
+    "TINKATUFF": "Tinkatuff",
+    "TINKATON": "Tinkaton",
+    "WIGLETT": "Wiglett",
+    "WUGTRIO": "Wugtrio",
+    "BOMBIRDIER": "Bombirdier",
+    "FINIZEN": "Finizen",
+    "PALAFIN": "Palafin",
+    "VAROOM": "Varoom",
+    "REVAVROOM": "Revavroom",
+    "CYCLIZAR": "Cyclizar",
+    "ORTHWORM": "Orthworm",
+    "GLIMMET": "Glimmet",
+    "GLIMMORA": "Glimmora",
+    "GREAVARD": "Greavard",
+    "HOUNDSTONE": "Houndstone",
+    "FLAMIGO": "Flamigo",
+    "CETODDLE": "Cetoddle",
+    "CETITAN": "Cetitan",
+    "VELUZA": "Veluza",
+    "DONDOZO": "Dondozo",
+    "TATSUGIRI": "Tatsugiri",
+    "ANNIHILAPE": "Annihilape",
+    "CLODSIRE": "Clodsire",
+    "FARIGIRAF": "Farigiraf",
+    "DUDUNSPARCE": "Dudunsparce",
+    "KINGAMBIT": "Kingambit",
+    "GREAT_TUSK": "Great Tusk",
+    "SCREAM_TAIL": "Scream Tail",
+    "BRUTE_BONNET": "Brute Bonnet",
+    "FLUTTER_MANE": "Flutter Mane",
+    "SLITHER_WING": "Slither Wing",
+    "SANDY_SHOCKS": "Sandy Shocks",
+    "IRON_TREADS": "Iron Treads",
+    "IRON_BUNDLE": "Iron Bundle",
+    "IRON_HANDS": "Iron Hands",
+    "IRON_JUGULIS": "Iron Jugulis",
+    "IRON_MOTH": "Iron Moth",
+    "IRON_THORNS": "Iron Thorns",
+    "FRIGIBAX": "Frigibax",
+    "ARCTIBAX": "Arctibax",
+    "BAXCALIBUR": "Baxcalibur",
+    "GIMMIGHOUL": "Gimmighoul",
+    "GHOLDENGO": "Gholdengo",
+    "WO_CHIEN": "Wo-Chien",
+    "CHIEN_PAO": "Chien-Pao",
+    "TING_LU": "Ting-Lu",
+    "CHI_YU": "Chi-Yu",
+    "ROARING_MOON": "Roaring Moon",
+    "IRON_VALIANT": "Iron Valiant",
+    "KORAIDON": "Koraidon",
+    "MIRAIDON": "Miraidon",
+    "WALKING_WAKE": "Walking Wake",
+    "IRON_LEAVES": "Iron Leaves",
+    "DIPPLIN": "Dipplin",
+    "POLTCHAGEIST": "Poltchageist",
+    "SINISTCHA": "Sinistcha",
+    "OKIDOGI": "Okidogi",
+    "MUNKIDORI": "Munkidori",
+    "FEZANDIPITI": "Fezandipiti",
+    "OGERPON": "Ogerpon",
+    "ARCHALUDON": "Archaludon",
+    "HYDRAPPLE": "Hydrapple",
+    "GOUGING_FIRE": "Gouging Fire",
+    "RAGING_BOLT": "Raging Bolt",
+    "IRON_BOULDER": "Iron Boulder",
+    "IRON_CROWN": "Iron Crown",
+    "TERAPAGOS": "Terapagos",
+    "PECHARUNT": "Pecharunt",
+    "ALOLA_RATTATA": "Rattata",
+    "ALOLA_RATICATE": "Raticate",
+    "ALOLA_RAICHU": "Raichu",
+    "ALOLA_SANDSHREW": "Sandshrew",
+    "ALOLA_SANDSLASH": "Sandslash",
+    "ALOLA_VULPIX": "Vulpix",
+    "ALOLA_NINETALES": "Ninetales",
+    "ALOLA_DIGLETT": "Diglett",
+    "ALOLA_DUGTRIO": "Dugtrio",
+    "ALOLA_MEOWTH": "Meowth",
+    "ALOLA_PERSIAN": "Persian",
+    "ALOLA_GEODUDE": "Geodude",
+    "ALOLA_GRAVELER": "Graveler",
+    "ALOLA_GOLEM": "Golem",
+    "ALOLA_GRIMER": "Grimer",
+    "ALOLA_MUK": "Muk",
+    "ALOLA_EXEGGUTOR": "Exeggutor",
+    "ALOLA_MAROWAK": "Marowak",
+    "BATTLE_BOND_GRENINJA": "Greninja",
+    "ETERNAL_FLOETTE": "Floette",
+    "GALAR_MEOWTH": "Meowth",
+    "GALAR_PONYTA": "Ponyta",
+    "GALAR_RAPIDASH": "Rapidash",
+    "GALAR_SLOWPOKE": "Slowpoke",
+    "GALAR_SLOWBRO": "Slowbro",
+    "GALAR_FARFETCHD": "Farfetch’d",
+    "GALAR_WEEZING": "Weezing",
+    "GALAR_MR_MIME": "Mr. Mime",
+    "GALAR_ARTICUNO": "Articuno",
+    "GALAR_ZAPDOS": "Zapdos",
+    "GALAR_MOLTRES": "Moltres",
+    "GALAR_SLOWKING": "Slowking",
+    "GALAR_CORSOLA": "Corsola",
+    "GALAR_ZIGZAGOON": "Zigzagoon",
+    "GALAR_LINOONE": "Linoone",
+    "GALAR_DARUMAKA": "Darumaka",
+    "GALAR_DARMANITAN": "Darmanitan",
+    "GALAR_YAMASK": "Yamask",
+    "GALAR_STUNFISK": "Stunfisk",
+    "HISUI_GROWLITHE": "Growlithe",
+    "HISUI_ARCANINE": "Arcanine",
+    "HISUI_VOLTORB": "Voltorb",
+    "HISUI_ELECTRODE": "Electrode",
+    "HISUI_TYPHLOSION": "Typhlosion",
+    "HISUI_QWILFISH": "Qwilfish",
+    "HISUI_SNEASEL": "Sneasel",
+    "HISUI_SAMUROTT": "Samurott",
+    "HISUI_LILLIGANT": "Lilligant",
+    "HISUI_BASCULIN": "Basculin",
+    "HISUI_ZORUA": "Zorua",
+    "HISUI_ZOROARK": "Zoroark",
+    "HISUI_BRAVIARY": "Braviary",
+    "HISUI_SLIGGOO": "Sliggoo",
+    "HISUI_GOODRA": "Goodra",
+    "HISUI_AVALUGG": "Avalugg",
+    "HISUI_DECIDUEYE": "Decidueye",
+    "PALDEA_TAUROS": "Tauros",
+    "PALDEA_WOOPER": "Wooper",
+    "BLOODMOON_URSALUNA": "Ursaluna"
+  },
+  "forms": {
+    "VENUSAUR:mega": "Mega Venusaur",
+    "VENUSAUR:gigantamax": "Venusaur Gigantamax",
+    "CHARIZARD:mega-x": "Mega Charizard X",
+    "CHARIZARD:mega-y": "Mega Charizard Y",
+    "CHARIZARD:gigantamax": "Charizard Gigantamax",
+    "BLASTOISE:mega": "Mega Blastoise",
+    "BLASTOISE:gigantamax": "Blastoise Gigantamax",
+    "BUTTERFREE:gigantamax": "Butterfree Gigantamax",
+    "BEEDRILL:mega": "Mega Beedrill",
+    "PIDGEOT:mega": "Mega Pidgeot",
+    "PIKACHU:gigantamax": "Pikachu Gigantamax",
+    "RAICHU:mega-x": "Mega Raichu X",
+    "RAICHU:mega-y": "Mega Raichu Y",
+    "CLEFABLE:mega": "Mega Clefable",
+    "MEOWTH:gigantamax": "Meowth Gigantamax",
+    "ALAKAZAM:mega": "Mega Alakazam",
+    "MACHAMP:gigantamax": "Machamp Gigantamax",
+    "VICTREEBEL:mega": "Mega Victreebel",
+    "SLOWBRO:mega": "Mega Slowbro",
+    "GENGAR:mega": "Mega Gengar",
+    "GENGAR:gigantamax": "Gengar Gigantamax",
+    "KINGLER:gigantamax": "Kingler Gigantamax",
+    "KANGASKHAN:mega": "Mega Kangaskhan",
+    "STARMIE:mega": "Mega Starmie",
+    "PINSIR:mega": "Mega Pinsir",
+    "GYARADOS:mega": "Mega Gyarados",
+    "LAPRAS:gigantamax": "Lapras Gigantamax",
+    "EEVEE:gigantamax": "Eevee Gigantamax",
+    "AERODACTYL:mega": "Mega Aerodactyl",
+    "SNORLAX:gigantamax": "Snorlax Gigantamax",
+    "DRAGONITE:mega": "Mega Dragonite",
+    "MEWTWO:mega-x": "Mega Mewtwo X",
+    "MEWTWO:mega-y": "Mega Mewtwo Y",
+    "MEGANIUM:mega": "Mega Meganium",
+    "FERALIGATR:mega": "Mega Feraligatr",
+    "AMPHAROS:mega": "Mega Ampharos",
+    "STEELIX:mega": "Mega Steelix",
+    "SCIZOR:mega": "Mega Scizor",
+    "HERACROSS:mega": "Mega Heracross",
+    "SKARMORY:mega": "Mega Skarmory",
+    "HOUNDOOM:mega": "Mega Houndoom",
+    "TYRANITAR:mega": "Mega Tyranitar",
+    "SCEPTILE:mega": "Mega Sceptile",
+    "BLAZIKEN:mega": "Mega Blaziken",
+    "SWAMPERT:mega": "Mega Swampert",
+    "GARDEVOIR:mega": "Mega Gardevoir",
+    "SABLEYE:mega": "Mega Sableye",
+    "MAWILE:mega": "Mega Mawile",
+    "AGGRON:mega": "Mega Aggron",
+    "MEDICHAM:mega": "Mega Medicham",
+    "MANECTRIC:mega": "Mega Manectric",
+    "SHARPEDO:mega": "Mega Sharpedo",
+    "CAMERUPT:mega": "Mega Camerupt",
+    "ALTARIA:mega": "Mega Altaria",
+    "BANETTE:mega": "Mega Banette",
+    "CHIMECHO:mega": "Mega Chimecho",
+    "ABSOL:mega": "Mega Absol",
+    "ABSOL:mega-z": "Mega Absol Z",
+    "GLALIE:mega": "Mega Glalie",
+    "SALAMENCE:mega": "Mega Salamence",
+    "METAGROSS:mega": "Mega Metagross",
+    "LATIAS:mega": "Mega Latias",
+    "LATIOS:mega": "Mega Latios",
+    "KYOGRE:primal": "Kyogre Primal",
+    "GROUDON:primal": "Groudon Primal",
+    "RAYQUAZA:mega": "Mega Rayquaza",
+    "STARAPTOR:mega": "Mega Staraptor",
+    "LOPUNNY:mega": "Mega Lopunny",
+    "GARCHOMP:mega": "Mega Garchomp",
+    "GARCHOMP:mega-z": "Mega Garchomp Z",
+    "LUCARIO:mega": "Mega Lucario",
+    "LUCARIO:mega-z": "Mega Lucario Z",
+    "ABOMASNOW:mega": "Mega Abomasnow",
+    "GALLADE:mega": "Mega Gallade",
+    "FROSLASS:mega": "Mega Froslass",
+    "HEATRAN:mega": "Mega Heatran",
+    "DARKRAI:mega": "Mega Darkrai",
+    "EMBOAR:mega": "Mega Emboar",
+    "EXCADRILL:mega": "Mega Excadrill",
+    "AUDINO:mega": "Mega Audino",
+    "SCOLIPEDE:mega": "Mega Scolipede",
+    "SCRAFTY:mega": "Mega Scrafty",
+    "GARBODOR:gigantamax": "Garbodor Gigantamax",
+    "EELEKTROSS:mega": "Mega Eelektross",
+    "CHANDELURE:mega": "Mega Chandelure",
+    "GOLURK:mega": "Mega Golurk",
+    "CHESNAUGHT:mega": "Mega Chesnaught",
+    "DELPHOX:mega": "Mega Delphox",
+    "GRENINJA:mega": "Mega Greninja",
+    "PYROAR:mega": "Mega Pyroar",
+    "MEOWSTIC:mega": "Mega Meowstic",
+    "MALAMAR:mega": "Mega Malamar",
+    "BARBARACLE:mega": "Mega Barbaracle",
+    "DRAGALGE:mega": "Mega Dragalge",
+    "HAWLUCHA:mega": "Mega Hawlucha",
+    "ZYGARDE:mega": "Mega Zygarde",
+    "DIANCIE:mega": "Mega Diancie",
+    "CRABOMINABLE:mega": "Mega Crabominable",
+    "GOLISOPOD:mega": "Mega Golisopod",
+    "DRAMPA:mega": "Mega Drampa",
+    "MAGEARNA:mega": "Mega Magearna",
+    "MAGEARNA:mega-original": "Mega Magearna",
+    "ZERAORA:mega": "Mega Zeraora",
+    "MELMETAL:gigantamax": "Melmetal Gigantamax",
+    "RILLABOOM:gigantamax": "Rillaboom Gigantamax",
+    "CINDERACE:gigantamax": "Cinderace Gigantamax",
+    "INTELEON:gigantamax": "Inteleon Gigantamax",
+    "CORVIKNIGHT:gigantamax": "Corviknight Gigantamax",
+    "ORBEETLE:gigantamax": "Orbeetle Gigantamax",
+    "DREDNAW:gigantamax": "Drednaw Gigantamax",
+    "COALOSSAL:gigantamax": "Coalossal Gigantamax",
+    "FLAPPLE:gigantamax": "Flapple Gigantamax",
+    "APPLETUN:gigantamax": "Appletun Gigantamax",
+    "SANDACONDA:gigantamax": "Sandaconda Gigantamax",
+    "TOXTRICITY:gigantamax": "Toxtricity Gigantamax",
+    "CENTISKORCH:gigantamax": "Centiskorch Gigantamax",
+    "HATTERENE:gigantamax": "Hatterene Gigantamax",
+    "GRIMMSNARL:gigantamax": "Grimmsnarl Gigantamax",
+    "ALCREMIE:gigantamax": "Alcremie Gigantamax",
+    "FALINKS:mega": "Mega Falinks",
+    "COPPERAJAH:gigantamax": "Copperajah Gigantamax",
+    "DURALUDON:gigantamax": "Duraludon Gigantamax",
+    "ETERNATUS:eternamax": "Eternatus Eternamax",
+    "URSHIFU:gigantamax-single": "Urshifu Gigantamax",
+    "URSHIFU:gigantamax-rapid": "Urshifu Gigantamax",
+    "SCOVILLAIN:mega": "Mega Scovillain",
+    "GLIMMORA:mega": "Mega Glimmora",
+    "TATSUGIRI:mega-curly": "Mega Tatsugiri",
+    "TATSUGIRI:mega-droopy": "Mega Tatsugiri",
+    "TATSUGIRI:mega-stretchy": "Mega Tatsugiri",
+    "BAXCALIBUR:mega": "Mega Baxcalibur",
+    "ETERNAL_FLOETTE:mega": "Mega Floette"
+  },
+  "formLabels": {
+    "PIKACHU:": "Normal",
+    "RAICHU:": "Normal",
+    "EEVEE:": "Normal",
+    "PICHU:": "Normal",
+    "UNOWN:a": "A",
+    "UNOWN:b": "B",
+    "UNOWN:c": "C",
+    "UNOWN:d": "D",
+    "UNOWN:e": "E",
+    "UNOWN:f": "F",
+    "UNOWN:g": "G",
+    "UNOWN:h": "H",
+    "UNOWN:i": "I",
+    "UNOWN:j": "J",
+    "UNOWN:k": "K",
+    "UNOWN:l": "L",
+    "UNOWN:m": "M",
+    "UNOWN:n": "N",
+    "UNOWN:o": "O",
+    "UNOWN:p": "P",
+    "UNOWN:q": "Q",
+    "UNOWN:r": "R",
+    "UNOWN:s": "S",
+    "UNOWN:t": "T",
+    "UNOWN:u": "U",
+    "UNOWN:v": "V",
+    "UNOWN:w": "W",
+    "UNOWN:x": "X",
+    "UNOWN:y": "Y",
+    "UNOWN:z": "Z",
+    "UNOWN:exclamation": "!",
+    "UNOWN:question": "?",
+    "ROTOM:": "Normal",
+    "DIALGA:": "Normal",
+    "PALKIA:": "Normal",
+    "ARCEUS:normal": "Normal",
+    "ARCEUS:fighting": "Petarung",
+    "ARCEUS:flying": "Terbang",
+    "ARCEUS:poison": "Racun",
+    "ARCEUS:ground": "Tanah",
+    "ARCEUS:rock": "Bebatuan",
+    "ARCEUS:bug": "Serangga",
+    "ARCEUS:ghost": "Hantu",
+    "ARCEUS:steel": "Logam",
+    "ARCEUS:fire": "Api",
+    "ARCEUS:water": "Air",
+    "ARCEUS:grass": "Daun",
+    "ARCEUS:electric": "Listrik",
+    "ARCEUS:psychic": "Psychic",
+    "ARCEUS:ice": "Es",
+    "ARCEUS:dragon": "Naga",
+    "ARCEUS:dark": "Kegelapan",
+    "ARCEUS:fairy": "Peri",
+    "KYUREM:": "Normal",
+    "GENESECT:": "Normal",
+    "ROCKRUFF:": "Normal",
+    "NECROZMA:": "Normal",
+    "MAGEARNA:": "Normal",
+    "MARSHADOW:": "Normal",
+    "CRAMORANT:": "Normal",
+    "ZARUDE:": "Normal",
+    "CALYREX:": "Normal",
+    "OGERPON:teal-mask": "Topeng Teal"
+  },
+  "moves": {
+    "POUND": {
+      "name": "Tumbuk",
+      "effect": null
+    },
+    "KARATE_CHOP": {
+      "name": "Tebasan Karate",
+      "effect": null
+    },
+    "DOUBLE_SLAP": {
+      "name": "Tamparan Ganda",
+      "effect": null
+    },
+    "PAY_DAY": {
+      "name": "Koin Kucing",
+      "effect": null
+    },
+    "FIRE_PUNCH": {
+      "name": "Pukulan Api",
+      "effect": null
+    },
+    "ICE_PUNCH": {
+      "name": "Pukulan Pembeku",
+      "effect": null
+    },
+    "THUNDER_PUNCH": {
+      "name": "Pukulan Guntur",
+      "effect": null
+    },
+    "SCRATCH": {
+      "name": "Mencakar",
+      "effect": null
+    },
+    "VISE_GRIP": {
+      "name": "Capitan Keras",
+      "effect": null
+    },
+    "CUT": {
+      "name": "Potongan Iai",
+      "effect": null
+    },
+    "GUST": {
+      "name": "Embusan Angin",
+      "effect": null
+    },
+    "WING_ATTACK": {
+      "name": "Hantaman Sayap",
+      "effect": null
+    },
+    "FLY": {
+      "name": "Terbang",
+      "effect": null
+    },
+    "SLAM": {
+      "name": "Membanting",
+      "effect": null
+    },
+    "VINE_WHIP": {
+      "name": "Cambuk Jalar",
+      "effect": null
+    },
+    "STOMP": {
+      "name": "Entakan Kaki",
+      "effect": null
+    },
+    "DOUBLE_KICK": {
+      "name": "Tendangan Ganda",
+      "effect": null
+    },
+    "SAND_ATTACK": {
+      "name": "Semprotan Pasir",
+      "effect": null
+    },
+    "HEADBUTT": {
+      "name": "Tandukan Kepala",
+      "effect": null
+    },
+    "HORN_ATTACK": {
+      "name": "Tusukan Tanduk",
+      "effect": null
+    },
+    "HORN_DRILL": {
+      "name": "Bor Tanduk",
+      "effect": null
+    },
+    "TACKLE": {
+      "name": "Serudukan",
+      "effect": null
+    },
+    "BODY_SLAM": {
+      "name": "Menindih",
+      "effect": null
+    },
+    "WRAP": {
+      "name": "Membelit",
+      "effect": null
+    },
+    "TAKE_DOWN": {
+      "name": "Menerjang",
+      "effect": null
+    },
+    "POISON_STING": {
+      "name": "Jarum Beracun",
+      "effect": null
+    },
+    "TWINEEDLE": {
+      "name": "Double Needle",
+      "effect": null
+    },
+    "BITE": {
+      "name": "Menggigit",
+      "effect": null
+    },
+    "ACID": {
+      "name": "Cairan Pelarut",
+      "effect": null
+    },
+    "EMBER": {
+      "name": "Bara Api",
+      "effect": null
+    },
+    "FLAMETHROWER": {
+      "name": "Semburan Api",
+      "effect": null
+    },
+    "WATER_GUN": {
+      "name": "Pistol Air",
+      "effect": null
+    },
+    "HYDRO_PUMP": {
+      "name": "Pompa Air",
+      "effect": null
+    },
+    "SURF": {
+      "name": "Berselancar",
+      "effect": null
+    },
+    "ICE_BEAM": {
+      "name": "Sinar Pembeku",
+      "effect": null
+    },
+    "BLIZZARD": {
+      "name": "Badai Salju",
+      "effect": null
+    },
+    "PSYBEAM": {
+      "name": "Sinar Psikedelik",
+      "effect": null
+    },
+    "BUBBLE_BEAM": {
+      "name": "Sinar Gelembung",
+      "effect": null
+    },
+    "AURORA_BEAM": {
+      "name": "Aurora Beam",
+      "effect": null
+    },
+    "HYPER_BEAM": {
+      "name": "Sinar Hiper",
+      "effect": null
+    },
+    "PECK": {
+      "name": "Mematuk",
+      "effect": null
+    },
+    "DRILL_PECK": {
+      "name": "Patukan Bor",
+      "effect": null
+    },
+    "SUBMISSION": {
+      "name": "Putaran Menyiksa",
+      "effect": null
+    },
+    "LOW_KICK": {
+      "name": "Tendangan Rendah",
+      "effect": null
+    },
+    "COUNTER": {
+      "name": "Serangan Balik",
+      "effect": null
+    },
+    "ABSORB": {
+      "name": "Menyerap",
+      "effect": null
+    },
+    "MEGA_DRAIN": {
+      "name": "Mega Drain",
+      "effect": null
+    },
+    "RAZOR_LEAF": {
+      "name": "Daun Pemotong",
+      "effect": null
+    },
+    "SOLAR_BEAM": {
+      "name": "Solar Beam",
+      "effect": null
+    },
+    "FIRE_SPIN": {
+      "name": "Pusaran Api",
+      "effect": null
+    },
+    "THUNDER_SHOCK": {
+      "name": "Sengatan Listrik",
+      "effect": null
+    },
+    "THUNDERBOLT": {
+      "name": "Ledakan Listrik",
+      "effect": null
+    },
+    "THUNDER": {
+      "name": "Guntur",
+      "effect": null
+    },
+    "ROCK_THROW": {
+      "name": "Lemparan Batu",
+      "effect": null
+    },
+    "EARTHQUAKE": {
+      "name": "Gempa",
+      "effect": null
+    },
+    "FISSURE": {
+      "name": "Retakan Tanah",
+      "effect": null
+    },
+    "DIG": {
+      "name": "Menggali",
+      "effect": null
+    },
+    "CONFUSION": {
+      "name": "Psikokinesis",
+      "effect": null
+    },
+    "PSYCHIC": {
+      "name": "Psikis",
+      "effect": null
+    },
+    "QUICK_ATTACK": {
+      "name": "Serangan Cepat",
+      "effect": null
+    },
+    "NIGHT_SHADE": {
+      "name": "Bayangan Malam",
+      "effect": null
+    },
+    "LICK": {
+      "name": "Menjilat",
+      "effect": null
+    },
+    "SMOG": {
+      "name": "Smog",
+      "effect": null
+    },
+    "SLUDGE": {
+      "name": "Serangan Limbah",
+      "effect": null
+    },
+    "BONE_CLUB": {
+      "name": "Gada Tulang",
+      "effect": null
+    },
+    "FIRE_BLAST": {
+      "name": "Ledakan Api Besar",
+      "effect": null
+    },
+    "WATERFALL": {
+      "name": "Melawan Arus",
+      "effect": null
+    },
+    "SWIFT": {
+      "name": "Speed Star",
+      "effect": null
+    },
+    "SKULL_BASH": {
+      "name": "Tandukan Kepala Roket",
+      "effect": null
+    },
+    "HIGH_JUMP_KICK": {
+      "name": "Tendangan Lutut Melompat",
+      "effect": null
+    },
+    "LEECH_LIFE": {
+      "name": "Mengisap Darah",
+      "effect": null
+    },
+    "SKY_ATTACK": {
+      "name": "Serangan Langit",
+      "effect": null
+    },
+    "TRANSFORM": {
+      "name": "Transformasi",
+      "effect": null
+    },
+    "BUBBLE": {
+      "name": "Gelembung",
+      "effect": null
+    },
+    "PSYWAVE": {
+      "name": "Gelombang Psikokinesis",
+      "effect": null
+    },
+    "SPLASH": {
+      "name": "Melompat",
+      "effect": null
+    },
+    "CRABHAMMER": {
+      "name": "Crabhammer",
+      "effect": null
+    },
+    "REST": {
+      "name": "Tidur",
+      "effect": null
+    },
+    "ROCK_SLIDE": {
+      "name": "Longsoran Batu",
+      "effect": null
+    },
+    "HYPER_FANG": {
+      "name": "Gigi Mematikan",
+      "effect": null
+    },
+    "TRI_ATTACK": {
+      "name": "Tri Attack",
+      "effect": null
+    },
+    "SLASH": {
+      "name": "Menyayat",
+      "effect": null
+    },
+    "STRUGGLE": {
+      "name": "Meronta",
+      "effect": null
+    },
+    "FLAME_WHEEL": {
+      "name": "Roda Api",
+      "effect": null
+    },
+    "AEROBLAST": {
+      "name": "Aeroblast",
+      "effect": null
+    },
+    "POWDER_SNOW": {
+      "name": "Bubuk Salju",
+      "effect": null
+    },
+    "FEINT_ATTACK": {
+      "name": "Serangan Tipuan",
+      "effect": null
+    },
+    "SLUDGE_BOMB": {
+      "name": "Bom Limbah",
+      "effect": null
+    },
+    "MUD_SLAP": {
+      "name": "Semprotan Lumpur",
+      "effect": null
+    },
+    "OCTAZOOKA": {
+      "name": "Octazooka",
+      "effect": null
+    },
+    "ZAP_CANNON": {
+      "name": "Meriam Elektromagnetik",
+      "effect": null
+    },
+    "ICY_WIND": {
+      "name": "Angin Dingin",
+      "effect": null
+    },
+    "LOCK_ON": {
+      "name": "Lock-On",
+      "effect": null
+    },
+    "OUTRAGE": {
+      "name": "Kemarahan Tak Terkendali",
+      "effect": null
+    },
+    "GIGA_DRAIN": {
+      "name": "Giga Drain",
+      "effect": null
+    },
+    "CHARM": {
+      "name": "Bermanja-manja",
+      "effect": null
+    },
+    "ROLLOUT": {
+      "name": "Menggelinding",
+      "effect": null
+    },
+    "SPARK": {
+      "name": "Spark",
+      "effect": null
+    },
+    "FURY_CUTTER": {
+      "name": "Sabetan Beruntun",
+      "effect": null
+    },
+    "STEEL_WING": {
+      "name": "Sayap Baja",
+      "effect": null
+    },
+    "RETURN": {
+      "name": "Membalas Budi",
+      "effect": null
+    },
+    "PRESENT": {
+      "name": "Hadiah",
+      "effect": null
+    },
+    "FRUSTRATION": {
+      "name": "Frustrasi",
+      "effect": null
+    },
+    "SACRED_FIRE": {
+      "name": "Api Suci",
+      "effect": null
+    },
+    "DYNAMIC_PUNCH": {
+      "name": "Pukulan Peledak",
+      "effect": null
+    },
+    "MEGAHORN": {
+      "name": "Megahorn",
+      "effect": null
+    },
+    "DRAGON_BREATH": {
+      "name": "Napas Naga",
+      "effect": null
+    },
+    "IRON_TAIL": {
+      "name": "Iron Tail",
+      "effect": null
+    },
+    "METAL_CLAW": {
+      "name": "Metal Claw",
+      "effect": null
+    },
+    "HIDDEN_POWER": {
+      "name": "Kekuatan yang Bangkit",
+      "effect": null
+    },
+    "CROSS_CHOP": {
+      "name": "Tebasan Silang",
+      "effect": null
+    },
+    "TWISTER": {
+      "name": "Angin Puyuh",
+      "effect": null
+    },
+    "CRUNCH": {
+      "name": "Mengunyah",
+      "effect": null
+    },
+    "MIRROR_COAT": {
+      "name": "Mirror Coat",
+      "effect": null
+    },
+    "ANCIENT_POWER": {
+      "name": "Kekuatan Primitif",
+      "effect": null
+    },
+    "SHADOW_BALL": {
+      "name": "Shadow Ball",
+      "effect": null
+    },
+    "FUTURE_SIGHT": {
+      "name": "Penglihatan Masa Depan",
+      "effect": null
+    },
+    "ROCK_SMASH": {
+      "name": "Memecah Batu",
+      "effect": null
+    },
+    "HEAT_WAVE": {
+      "name": "Angin Panas",
+      "effect": null
+    },
+    "SUPERPOWER": {
+      "name": "Kekuatan Super",
+      "effect": null
+    },
+    "BRICK_BREAK": {
+      "name": "Memecahkan Bata",
+      "effect": null
+    },
+    "YAWN": {
+      "name": "Menguap",
+      "effect": null
+    },
+    "LUSTER_PURGE": {
+      "name": "Luster Purge",
+      "effect": null
+    },
+    "MIST_BALL": {
+      "name": "Mist Ball",
+      "effect": null
+    },
+    "FEATHER_DANCE": {
+      "name": "Tarian Bulu",
+      "effect": null
+    },
+    "BLAZE_KICK": {
+      "name": "Blaze Kick",
+      "effect": null
+    },
+    "POISON_FANG": {
+      "name": "Taring Toksik",
+      "effect": null
+    },
+    "CRUSH_CLAW": {
+      "name": "Break Claw",
+      "effect": null
+    },
+    "BLAST_BURN": {
+      "name": "Blast Burn",
+      "effect": null
+    },
+    "HYDRO_CANNON": {
+      "name": "Hydro Cannon",
+      "effect": null
+    },
+    "METEOR_MASH": {
+      "name": "Comet Punch",
+      "effect": null
+    },
+    "ASTONISH": {
+      "name": "Mengejutkan",
+      "effect": null
+    },
+    "WEATHER_BALL": {
+      "name": "Weather Ball",
+      "effect": null
+    },
+    "AIR_CUTTER": {
+      "name": "Udara Pemotong",
+      "effect": null
+    },
+    "OVERHEAT": {
+      "name": "Overheat",
+      "effect": null
+    },
+    "ROCK_TOMB": {
+      "name": "Segel Batu",
+      "effect": null
+    },
+    "SILVER_WIND": {
+      "name": "Angin Perak",
+      "effect": null
+    },
+    "METAL_SOUND": {
+      "name": "Suara Logam",
+      "effect": null
+    },
+    "SIGNAL_BEAM": {
+      "name": "Signal Beam",
+      "effect": null
+    },
+    "SHADOW_PUNCH": {
+      "name": "Pukulan Bayangan",
+      "effect": null
+    },
+    "EXTRASENSORY": {
+      "name": "Kekuatan Gaib",
+      "effect": null
+    },
+    "SAND_TOMB": {
+      "name": "Neraka Pasir",
+      "effect": null
+    },
+    "MUDDY_WATER": {
+      "name": "Arus Berlumpur",
+      "effect": null
+    },
+    "BULLET_SEED": {
+      "name": "Peluru Biji",
+      "effect": null
+    },
+    "AERIAL_ACE": {
+      "name": "Jungkiran Walet",
+      "effect": null
+    },
+    "ICICLE_SPEAR": {
+      "name": "Jarum Pilar Es",
+      "effect": null
+    },
+    "DRAGON_CLAW": {
+      "name": "Dragon Claw",
+      "effect": null
+    },
+    "FRENZY_PLANT": {
+      "name": "Hard Plant",
+      "effect": null
+    },
+    "MUD_SHOT": {
+      "name": "Mud Shot",
+      "effect": null
+    },
+    "VOLT_TACKLE": {
+      "name": "Volt Tackle",
+      "effect": null
+    },
+    "MAGICAL_LEAF": {
+      "name": "Magical Leaf",
+      "effect": null
+    },
+    "LEAF_BLADE": {
+      "name": "Leaf Blade",
+      "effect": null
+    },
+    "ROCK_BLAST": {
+      "name": "Rock Blast",
+      "effect": null
+    },
+    "WATER_PULSE": {
+      "name": "Aura Air",
+      "effect": null
+    },
+    "DOOM_DESIRE": {
+      "name": "Harapan Pemusnah",
+      "effect": null
+    },
+    "PSYCHO_BOOST": {
+      "name": "Psycho Boost",
+      "effect": null
+    },
+    "GYRO_BALL": {
+      "name": "Gyro Ball",
+      "effect": null
+    },
+    "BRINE": {
+      "name": "Air Garam",
+      "effect": null
+    },
+    "CLOSE_COMBAT": {
+      "name": "Infight",
+      "effect": null
+    },
+    "PAYBACK": {
+      "name": "Menyerang Balik",
+      "effect": null
+    },
+    "LAST_RESORT": {
+      "name": "Jurus Andalan",
+      "effect": null
+    },
+    "SUCKER_PUNCH": {
+      "name": "Pukulan Mendadak",
+      "effect": null
+    },
+    "FORCE_PALM": {
+      "name": "Telapak Tenaga Dalam",
+      "effect": null
+    },
+    "AURA_SPHERE": {
+      "name": "Bola Aura",
+      "effect": null
+    },
+    "POISON_JAB": {
+      "name": "Tusukan Beracun",
+      "effect": null
+    },
+    "DARK_PULSE": {
+      "name": "Aura Kegelapan",
+      "effect": null
+    },
+    "NIGHT_SLASH": {
+      "name": "Main Tebas",
+      "effect": null
+    },
+    "AQUA_TAIL": {
+      "name": "Aqua Tail",
+      "effect": null
+    },
+    "SEED_BOMB": {
+      "name": "Bom Benih",
+      "effect": null
+    },
+    "AIR_SLASH": {
+      "name": "Sayatan Udara",
+      "effect": null
+    },
+    "X_SCISSOR": {
+      "name": "Gunting-X",
+      "effect": null
+    },
+    "BUG_BUZZ": {
+      "name": "Dengungan Serangga",
+      "effect": null
+    },
+    "DRAGON_PULSE": {
+      "name": "Aura Naga",
+      "effect": null
+    },
+    "POWER_GEM": {
+      "name": "Power Gem",
+      "effect": null
+    },
+    "DRAIN_PUNCH": {
+      "name": "Drain Punch",
+      "effect": null
+    },
+    "FOCUS_BLAST": {
+      "name": "Bola Tenaga Dalam",
+      "effect": null
+    },
+    "ENERGY_BALL": {
+      "name": "Energy Ball",
+      "effect": null
+    },
+    "BRAVE_BIRD": {
+      "name": "Brave Bird",
+      "effect": null
+    },
+    "EARTH_POWER": {
+      "name": "Kekuatan Daratan",
+      "effect": null
+    },
+    "GIGA_IMPACT": {
+      "name": "Giga Impact",
+      "effect": null
+    },
+    "BULLET_PUNCH": {
+      "name": "Pukulan Peluru",
+      "effect": null
+    },
+    "AVALANCHE": {
+      "name": "Longsoran Salju",
+      "effect": null
+    },
+    "ICE_SHARD": {
+      "name": "Beling Es",
+      "effect": null
+    },
+    "SHADOW_CLAW": {
+      "name": "Shadow Claw",
+      "effect": null
+    },
+    "THUNDER_FANG": {
+      "name": "Taring Petir",
+      "effect": null
+    },
+    "ICE_FANG": {
+      "name": "Taring Es",
+      "effect": null
+    },
+    "FIRE_FANG": {
+      "name": "Taring Api",
+      "effect": null
+    },
+    "SHADOW_SNEAK": {
+      "name": "Bayangan Menyelinap",
+      "effect": null
+    },
+    "MUD_BOMB": {
+      "name": "Bom Lumpur",
+      "effect": null
+    },
+    "PSYCHO_CUT": {
+      "name": "Psikokinesis Pemotong",
+      "effect": null
+    },
+    "ZEN_HEADBUTT": {
+      "name": "Sundulan Spiritual",
+      "effect": null
+    },
+    "MIRROR_SHOT": {
+      "name": "Mirror Shot",
+      "effect": null
+    },
+    "FLASH_CANNON": {
+      "name": "Luster Cannon",
+      "effect": null
+    },
+    "DRACO_METEOR": {
+      "name": "Meteor Naga",
+      "effect": null
+    },
+    "DISCHARGE": {
+      "name": "Pelepasan Listrik",
+      "effect": null
+    },
+    "LEAF_STORM": {
+      "name": "Leaf Storm",
+      "effect": null
+    },
+    "POWER_WHIP": {
+      "name": "Power Whip",
+      "effect": null
+    },
+    "ROCK_WRECKER": {
+      "name": "Meriam Batu",
+      "effect": null
+    },
+    "CROSS_POISON": {
+      "name": "Cross Poison",
+      "effect": null
+    },
+    "GUNK_SHOT": {
+      "name": "Tembakan Debu",
+      "effect": null
+    },
+    "IRON_HEAD": {
+      "name": "Iron Head",
+      "effect": null
+    },
+    "MAGNET_BOMB": {
+      "name": "Magnet Bomb",
+      "effect": null
+    },
+    "STONE_EDGE": {
+      "name": "Tepi Batu",
+      "effect": null
+    },
+    "GRASS_KNOT": {
+      "name": "Ikatan Rumput",
+      "effect": null
+    },
+    "BUG_BITE": {
+      "name": "Gigitan Serangga",
+      "effect": null
+    },
+    "CHARGE_BEAM": {
+      "name": "Charge Beam",
+      "effect": null
+    },
+    "AQUA_JET": {
+      "name": "Aqua Jet",
+      "effect": null
+    },
+    "ROAR_OF_TIME": {
+      "name": "Raungan Waktu",
+      "effect": null
+    },
+    "SPACIAL_REND": {
+      "name": "Cabikan Ruang Hiper",
+      "effect": null
+    },
+    "CRUSH_GRIP": {
+      "name": "Cengkeraman Penghancur",
+      "effect": null
+    },
+    "MAGMA_STORM": {
+      "name": "Magma Storm",
+      "effect": null
+    },
+    "SEED_FLARE": {
+      "name": "Seed Flare",
+      "effect": null
+    },
+    "OMINOUS_WIND": {
+      "name": "Angin Mencurigakan",
+      "effect": null
+    },
+    "SHADOW_FORCE": {
+      "name": "Shadow Dive",
+      "effect": null
+    },
+    "PSYSHOCK": {
+      "name": "Psyshock",
+      "effect": null
+    },
+    "SMACK_DOWN": {
+      "name": "Tembak Jatuh",
+      "effect": null
+    },
+    "FLAME_BURST": {
+      "name": "Letusan Api",
+      "effect": null
+    },
+    "SLUDGE_WAVE": {
+      "name": "Gelombang Limbah",
+      "effect": null
+    },
+    "HEAVY_SLAM": {
+      "name": "Heavy Bomber",
+      "effect": null
+    },
+    "SYNCHRONOISE": {
+      "name": "Synchronoise",
+      "effect": null
+    },
+    "FLAME_CHARGE": {
+      "name": "Muatan Api",
+      "effect": null
+    },
+    "LOW_SWEEP": {
+      "name": "Low Kick",
+      "effect": null
+    },
+    "ACID_SPRAY": {
+      "name": "Semprotan Asam",
+      "effect": null
+    },
+    "FOUL_PLAY": {
+      "name": "Main Curang",
+      "effect": null
+    },
+    "SCALD": {
+      "name": "Air Panas",
+      "effect": null
+    },
+    "HEX": {
+      "name": "Mata Kutukan",
+      "effect": null
+    },
+    "INCINERATE": {
+      "name": "Membakar Habis",
+      "effect": null
+    },
+    "ACROBATICS": {
+      "name": "Akrobat",
+      "effect": null
+    },
+    "VOLT_SWITCH": {
+      "name": "Volt Change",
+      "effect": null
+    },
+    "STRUGGLE_BUG": {
+      "name": "Perlawanan Serangga",
+      "effect": null
+    },
+    "BULLDOZE": {
+      "name": "Meratakan",
+      "effect": null
+    },
+    "FROST_BREATH": {
+      "name": "Napas Es",
+      "effect": null
+    },
+    "DRAGON_TAIL": {
+      "name": "Dragon Tail",
+      "effect": null
+    },
+    "WILD_CHARGE": {
+      "name": "Wild Volt",
+      "effect": null
+    },
+    "DRILL_RUN": {
+      "name": "Drill Liner",
+      "effect": null
+    },
+    "HEART_STAMP": {
+      "name": "Heart Stamp",
+      "effect": null
+    },
+    "SACRED_SWORD": {
+      "name": "Pedang Suci",
+      "effect": null
+    },
+    "RAZOR_SHELL": {
+      "name": "Pedang Cangkang",
+      "effect": null
+    },
+    "LEAF_TORNADO": {
+      "name": "Tornado Daun",
+      "effect": null
+    },
+    "PSYSTRIKE": {
+      "name": "Psycho Break",
+      "effect": null
+    },
+    "HURRICANE": {
+      "name": "Badai Angin",
+      "effect": null
+    },
+    "TECHNO_BLAST": {
+      "name": "Techno Buster",
+      "effect": null
+    },
+    "SECRET_SWORD": {
+      "name": "Pedang Mistis",
+      "effect": null
+    },
+    "GLACIATE": {
+      "name": "Dunia Beku",
+      "effect": null
+    },
+    "FREEZE_SHOCK": {
+      "name": "Freeze Bolt",
+      "effect": null
+    },
+    "ICE_BURN": {
+      "name": "Cold Flare",
+      "effect": null
+    },
+    "SNARL": {
+      "name": "Menggeram",
+      "effect": null
+    },
+    "V_CREATE": {
+      "name": "V Generate",
+      "effect": null
+    },
+    "FUSION_FLARE": {
+      "name": "Api Bersilang",
+      "effect": null
+    },
+    "FUSION_BOLT": {
+      "name": "Guntur Bersilang",
+      "effect": null
+    },
+    "FLYING_PRESS": {
+      "name": "Flying Press",
+      "effect": null
+    },
+    "FELL_STINGER": {
+      "name": "Jarum Maut",
+      "effect": null
+    },
+    "PARABOLIC_CHARGE": {
+      "name": "Parabolic Charge",
+      "effect": null
+    },
+    "PETAL_BLIZZARD": {
+      "name": "Badai Bunga",
+      "effect": null
+    },
+    "DISARMING_VOICE": {
+      "name": "Charm Voice",
+      "effect": null
+    },
+    "DRAINING_KISS": {
+      "name": "Ciuman Penyerap",
+      "effect": null
+    },
+    "PLAY_ROUGH": {
+      "name": "Main Kasar",
+      "effect": null
+    },
+    "FAIRY_WIND": {
+      "name": "Angin Peri",
+      "effect": null
+    },
+    "MOONBLAST": {
+      "name": "Moon Force",
+      "effect": null
+    },
+    "BOOMBURST": {
+      "name": "Gelombang Suara Menggelegar",
+      "effect": null
+    },
+    "HYPERSPACE_HOLE": {
+      "name": "Lubang Hiperdimensi",
+      "effect": null
+    },
+    "WATER_SHURIKEN": {
+      "name": "Syuriken Air",
+      "effect": null
+    },
+    "MYSTICAL_FIRE": {
+      "name": "Magical Flame",
+      "effect": null
+    },
+    "GEOMANCY": {
+      "name": "Geocontrol",
+      "effect": null
+    },
+    "DAZZLING_GLEAM": {
+      "name": "Magical Shine",
+      "effect": null
+    },
+    "INFESTATION": {
+      "name": "Membayangi",
+      "effect": null
+    },
+    "POWER_UP_PUNCH": {
+      "name": "Pukulan Penambah Kekuatan",
+      "effect": null
+    },
+    "OBLIVION_WING": {
+      "name": "Oblivion Wing",
+      "effect": null
+    },
+    "ORIGIN_PULSE": {
+      "name": "Aura Asal Mula",
+      "effect": null
+    },
+    "PRECIPICE_BLADES": {
+      "name": "Pedang Jurang",
+      "effect": null
+    },
+    "DRAGON_ASCENT": {
+      "name": "Terpaan Naga Langit",
+      "effect": null
+    },
+    "HYPERSPACE_FURY": {
+      "name": "Terjangan Hiperdimensi",
+      "effect": null
+    },
+    "SPIRIT_SHACKLE": {
+      "name": "Menjahit Bayangan",
+      "effect": null
+    },
+    "DARKEST_LARIAT": {
+      "name": "Lariat Kegelapan",
+      "effect": null
+    },
+    "SPARKLING_ARIA": {
+      "name": "Aria Gemerlap",
+      "effect": null
+    },
+    "HIGH_HORSEPOWER": {
+      "name": "Daya Kuda Besar",
+      "effect": null
+    },
+    "LEAFAGE": {
+      "name": "Dedaunan",
+      "effect": null
+    },
+    "LUNGE": {
+      "name": "Terjangan",
+      "effect": null
+    },
+    "BEAK_BLAST": {
+      "name": "Meriam Paruh",
+      "effect": null
+    },
+    "CLANGING_SCALES": {
+      "name": "Scale Noise",
+      "effect": null
+    },
+    "BRUTAL_SWING": {
+      "name": "Ayunan Brutal",
+      "effect": null
+    },
+    "PSYCHIC_FANGS": {
+      "name": "Psychic Fang",
+      "effect": null
+    },
+    "SHADOW_BONE": {
+      "name": "Shadow Bone",
+      "effect": null
+    },
+    "LIQUIDATION": {
+      "name": "Aqua Break",
+      "effect": null
+    },
+    "SUNSTEEL_STRIKE": {
+      "name": "Meteor Drive",
+      "effect": null
+    },
+    "MOONGEIST_BEAM": {
+      "name": "Shadow Ray",
+      "effect": null
+    },
+    "NATURES_MADNESS": {
+      "name": "Amukan Alam",
+      "effect": null
+    },
+    "MIND_BLOWN": {
+      "name": "Kepala Meletus",
+      "effect": null
+    },
+    "PLASMA_FISTS": {
+      "name": "Plasma Fist",
+      "effect": null
+    },
+    "DOUBLE_IRON_BASH": {
+      "name": "Double Iron Bash",
+      "effect": null
+    },
+    "DYNAMAX_CANNON": {
+      "name": "Dynamax Cannon",
+      "effect": null
+    },
+    "MAX_FLARE": {
+      "name": "Max Flare",
+      "effect": null
+    },
+    "MAX_FLUTTERBY": {
+      "name": "Max Flutterby",
+      "effect": null
+    },
+    "MAX_LIGHTNING": {
+      "name": "Max Lightning",
+      "effect": null
+    },
+    "MAX_STRIKE": {
+      "name": "Max Strike",
+      "effect": null
+    },
+    "MAX_KNUCKLE": {
+      "name": "Max Knuckle",
+      "effect": null
+    },
+    "MAX_PHANTASM": {
+      "name": "Max Phantasm",
+      "effect": null
+    },
+    "MAX_HAILSTORM": {
+      "name": "Max Hailstorm",
+      "effect": null
+    },
+    "MAX_OOZE": {
+      "name": "Max Ooze",
+      "effect": null
+    },
+    "MAX_GEYSER": {
+      "name": "Max Geyser",
+      "effect": null
+    },
+    "MAX_AIRSTREAM": {
+      "name": "Max Airstream",
+      "effect": null
+    },
+    "MAX_STARFALL": {
+      "name": "Max Starfall",
+      "effect": null
+    },
+    "MAX_WYRMWIND": {
+      "name": "Max Wyrmwind",
+      "effect": null
+    },
+    "MAX_MINDSTORM": {
+      "name": "Max Mindstorm",
+      "effect": null
+    },
+    "MAX_ROCKFALL": {
+      "name": "Max Rockfall",
+      "effect": null
+    },
+    "MAX_QUAKE": {
+      "name": "Max Quake",
+      "effect": null
+    },
+    "MAX_DARKNESS": {
+      "name": "Max Darkness",
+      "effect": null
+    },
+    "MAX_OVERGROWTH": {
+      "name": "Max Overgrowth",
+      "effect": null
+    },
+    "MAX_STEELSPIKE": {
+      "name": "Max Steelspike",
+      "effect": null
+    },
+    "DRUM_BEATING": {
+      "name": "Drum Beating",
+      "effect": null
+    },
+    "PYRO_BALL": {
+      "name": "Pyro Ball",
+      "effect": null
+    },
+    "BEHEMOTH_BLADE": {
+      "name": "Tebasan Behemoth",
+      "effect": null
+    },
+    "BEHEMOTH_BASH": {
+      "name": "Hentakan Behemoth",
+      "effect": null
+    },
+    "AURA_WHEEL": {
+      "name": "Roda Aura",
+      "effect": null
+    },
+    "BREAKING_SWIPE": {
+      "name": "Wide Breaker",
+      "effect": null
+    },
+    "OBSTRUCT": {
+      "name": "Blocking",
+      "effect": null
+    },
+    "METEOR_BEAM": {
+      "name": "Meteor Beam",
+      "effect": null
+    },
+    "POLTERGEIST": {
+      "name": "Poltergeist",
+      "effect": null
+    },
+    "TRIPLE_AXEL": {
+      "name": "Triple Axel",
+      "effect": null
+    },
+    "SCORCHING_SANDS": {
+      "name": "Daratan Pasir Membara",
+      "effect": null
+    },
+    "THUNDER_CAGE": {
+      "name": "Thunder Prison",
+      "effect": null
+    },
+    "DRAGON_ENERGY": {
+      "name": "Dragon Energy",
+      "effect": null
+    },
+    "BLEAKWIND_STORM": {
+      "name": "Badai Angin Dingin",
+      "effect": null
+    },
+    "WILDBOLT_STORM": {
+      "name": "Badai Halilintar",
+      "effect": null
+    },
+    "SANDSEAR_STORM": {
+      "name": "Badai Pasir Membara",
+      "effect": null
+    },
+    "FLOWER_TRICK": {
+      "name": "Flower Trick",
+      "effect": null
+    },
+    "TORCH_SONG": {
+      "name": "Flare Song",
+      "effect": null
+    },
+    "AQUA_STEP": {
+      "name": "Aqua Step",
+      "effect": null
+    },
+    "TRAILBLAZE": {
+      "name": "Perintis",
+      "effect": null
+    },
+    "CHILLING_WATER": {
+      "name": "Air Dingin",
+      "effect": null
+    },
+    "RAGE_FIST": {
+      "name": "Tinju Amarah",
+      "effect": null
+    },
+    "GIGATON_HAMMER": {
+      "name": "Palu Besar",
+      "effect": null
+    },
+    "UPPER_HAND": {
+      "name": "Mengonter Cepat",
+      "effect": null
+    }
+  },
+  "abilities": {
+    "STENCH": {
+      "name": "Bau Tidak Enak",
+      "description": "Dengan mengeluarkan bau busuk saat Pokémon memberikan kerusakan dengan Jurusnya, ada kemungkinan 10% target akan tersentak. Efek ini tidak bertambah dengan Jurus atau item yang memiliki peluang untuk membuat lawan tersentak."
+    },
+    "DRIZZLE": {
+      "name": "Menurunkan Hujan",
+      "description": null
+    },
+    "SPEED_BOOST": {
+      "name": "Tancap Gas",
+      "description": "Kecepatan Pokémon ini naik setiap giliran."
+    },
+    "BATTLE_ARMOR": {
+      "name": "Perisai Tempur",
+      "description": "Cangkang yang keras melindungi Pokémon ini dari serangan agar tidak mengenai titik kritis."
+    },
+    "STURDY": {
+      "name": "Kokoh",
+      "description": "Saat HP Pokémon ini penuh, tidak akan langsung KO dengan 1 serangan. Jurus maut tunggal pun tidak akan berpengaruh."
+    },
+    "DAMP": {
+      "name": "Lembab",
+      "description": null
+    },
+    "LIMBER": {
+      "name": "Fleksibel",
+      "description": "Menjadi kebal terhadap kondisi lumpuh karena tubuhnya yang lentur."
+    },
+    "SAND_VEIL": {
+      "name": "Persembunyian Pasir",
+      "description": "Meningkatkan kemampuan menghindar Pokémon sebesar 25% dalam badai pasir. Pokémon tidak menerima kerusakan dari badai pasir jika seharusnya menerima kerusakan."
+    },
+    "STATIC": {
+      "name": "Listrik Statis",
+      "description": "Pokémon ini bermuatan listrik statis, dan ketika Pokémon ini terkena serangan kontak, penyerang memiliki peluang 30% untuk lumpuh."
+    },
+    "VOLT_ABSORB": {
+      "name": "Menyimpan Listrik",
+      "description": "Jurus tipe listrik tidak berpengaruh pada Pokémon ini. Sebaliknya, serangan tersebut memulihkan ¼ dari HP maksimalnya."
+    },
+    "WATER_ABSORB": {
+      "name": "Menyimpan Air",
+      "description": "Jurrs tipe air tidak berpengaruh pada Pokémon ini. Sebaliknya, serangan tersebut memulihkan ¼ dari HP maksimalnya."
+    },
+    "OBLIVIOUS": {
+      "name": "Tidak Sensitif",
+      "description": null
+    },
+    "CLOUD_NINE": {
+      "name": "Bukan Cuaca",
+      "description": "Menghilangkan segala efek cuaca."
+    },
+    "COMPOUND_EYES": {
+      "name": "Mata Majemuk",
+      "description": "Mata majemuk Pokémon tersebut meningkatkan akurasi Jurus sebesar 30%."
+    },
+    "INSOMNIA": {
+      "name": "Imsomnia",
+      "description": null
+    },
+    "COLOR_CHANGE": {
+      "name": "Berubah Warna",
+      "description": "Tipe Pokémon ini berubah menjadi tipe jurus yang diterima dari lawan."
+    },
+    "IMMUNITY": {
+      "name": "Imunitas",
+      "description": "Menjadi kebal terhadap kondisi racun karena memiliki imunitas di dalam tubuh."
+    },
+    "FLASH_FIRE": {
+      "name": "Api Merembet",
+      "description": null
+    },
+    "SHIELD_DUST": {
+      "name": "Sisik Serangga",
+      "description": null
+    },
+    "OWN_TEMPO": {
+      "name": "Buat Gampang",
+      "description": null
+    },
+    "SUCTION_CUPS": {
+      "name": "Pengisap",
+      "description": "Pokémon ini menancapkan pengisap ke permukaan tanah sehingga jurus atau item yang menyebabkan pergantian tidak akan berpengaruh."
+    },
+    "INTIMIDATE": {
+      "name": "Intimidasi",
+      "description": "Pokémon ini mengintimidasi lawan saat memasuki pertarungan sehingga menurunkan Serangan lawan."
+    },
+    "SHADOW_TAG": {
+      "name": "Injak Bayangan",
+      "description": "Pokémon ini menginjak bayangan lawan untuk mencegahnya kabur atau melakukan pergantian."
+    },
+    "ROUGH_SKIN": {
+      "name": "Kulit Kasar",
+      "description": null
+    },
+    "WONDER_GUARD": {
+      "name": "Pelindung Ajaib",
+      "description": "Kekuatan misterius Pokémon ini hanya memungkinkan jurus super efektif untuk mengenai dirinya."
+    },
+    "LEVITATE": {
+      "name": "Mengambang",
+      "description": "Tidak menerima jurus tipe Tanah dikarenakan mengambang di udara."
+    },
+    "EFFECT_SPORE": {
+      "name": "Spora",
+      "description": null
+    },
+    "SYNCHRONIZE": {
+      "name": "Sinkronisasi",
+      "description": null
+    },
+    "CLEAR_BODY": {
+      "name": "Badan Tangguh",
+      "description": "Statistik Pokémon ini tidak dapat diturunkan oleh jurus atau Ability Pokémon lain."
+    },
+    "NATURAL_CURE": {
+      "name": "Penyembuhan Alami",
+      "description": "Menyembuhkan kondisi abnormal saat ditarik kembali dari pertarungan."
+    },
+    "LIGHTNING_ROD": {
+      "name": "Penangkal Petir",
+      "description": "Mengalihkan semua jurus tipe Listrik ke dirinya, Pokémon ini tidak akan menerima kerusakan dan Serangan Khususnya naik."
+    },
+    "SERENE_GRACE": {
+      "name": "Berkah Langit",
+      "description": null
+    },
+    "SWIFT_SWIM": {
+      "name": "Renang Gesit",
+      "description": null
+    },
+    "CHLOROPHYLL": {
+      "name": "Klorofil",
+      "description": "Menggandakan statistik Kecepatan Pokémon di bawah sinar matahari yang terik."
+    },
+    "ILLUMINATE": {
+      "name": "Jamur",
+      "description": null
+    },
+    "TRACE": {
+      "name": "Mengikuti Jejak",
+      "description": "Saat memasuki pertarungan, Pokémon ini menyalin Ability Pokémon lawan."
+    },
+    "HUGE_POWER": {
+      "name": "Tenaga Raksasa",
+      "description": "Menggandakan kekuatan Serangan Pokémon."
+    },
+    "POISON_POINT": {
+      "name": "Jarum Racun",
+      "description": null
+    },
+    "INNER_FOCUS": {
+      "name": "Kekuatan Mental",
+      "description": null
+    },
+    "MAGMA_ARMOR": {
+      "name": "Zirah Magma",
+      "description": "Menjadi kebal terhadap kondisi beku karena melapisi tubuh dengan magma panas."
+    },
+    "WATER_VEIL": {
+      "name": "Kerudung Air",
+      "description": "Menjadi kebal terhadap kondisi terbakar karena melapisi tubuh dengan tudung air."
+    },
+    "MAGNET_PULL": {
+      "name": "Tarikan Magnet",
+      "description": "Menarik Pokémon tipe Logam dengan kekuatan magnet sehingga membuatnya tidak dapat melarikan diri."
+    },
+    "SOUNDPROOF": {
+      "name": "Kedap Suara",
+      "description": "Tidak menerima jurus bunyi dengan memblokir bunyi."
+    },
+    "RAIN_DISH": {
+      "name": "Piring Penampung Hujan",
+      "description": null
+    },
+    "SAND_STREAM": {
+      "name": "Aliran Pasir",
+      "description": null
+    },
+    "PRESSURE": {
+      "name": "Tekanan",
+      "description": null
+    },
+    "THICK_FAT": {
+      "name": "Lemak Tebal",
+      "description": null
+    },
+    "EARLY_BIRD": {
+      "name": "Bangun Pagi",
+      "description": "Dalam kondisi tidur, dapat terbangun dengan kecepatan 2 kali lipat."
+    },
+    "FLAME_BODY": {
+      "name": "Badan Api",
+      "description": null
+    },
+    "RUN_AWAY": {
+      "name": "Kabur",
+      "description": "Selalu dapat melarikan diri dari Pokémon liar."
+    },
+    "KEEN_EYE": {
+      "name": "Mata Tajam",
+      "description": null
+    },
+    "HYPER_CUTTER": {
+      "name": "Gunting Kuat",
+      "description": "Karena memiliki gunting yang kuat dan membanggakan, Serangannya tidak dapat diturunkan oleh Pokémon lain."
+    },
+    "PICKUP": {
+      "name": "Memungut",
+      "description": null
+    },
+    "TRUANT": {
+      "name": "Pemalas",
+      "description": "Jika menggunakan jurus, Pokémon ini akan beristirahat pada giliran berikutnya."
+    },
+    "HUSTLE": {
+      "name": "Bersemangat",
+      "description": null
+    },
+    "CUTE_CHARM": {
+      "name": "Tubuh Mempesona",
+      "description": null
+    },
+    "PLUS": {
+      "name": "Plus",
+      "description": null
+    },
+    "MINUS": {
+      "name": "Minus",
+      "description": null
+    },
+    "FORECAST": {
+      "name": "Prakiraan Cuaca",
+      "description": "Tipe Pokémon ini berubah menjadi tipe Air, Api atau Es menyesuaikan cuaca."
+    },
+    "STICKY_HOLD": {
+      "name": "Lengket",
+      "description": "Karena item menempel di tubuh lengketnya, Pokémon lain tidak dapat merebut item tersebut."
+    },
+    "SHED_SKIN": {
+      "name": "Ganti Kulit",
+      "description": null
+    },
+    "GUTS": {
+      "name": "Nyali",
+      "description": null
+    },
+    "MARVEL_SCALE": {
+      "name": "Sisik Ajaib",
+      "description": null
+    },
+    "LIQUID_OOZE": {
+      "name": "Cairan Limbah",
+      "description": "Pokémon lain yang mengisap limbah cair dengan jurus pengisap HP akan menerima kerusakan akibat bau busuk sehingga HP-nya berkurang."
+    },
+    "OVERGROW": {
+      "name": "Hijau Rindang",
+      "description": null
+    },
+    "BLAZE": {
+      "name": "Kobar Api",
+      "description": null
+    },
+    "TORRENT": {
+      "name": "Arus Deras",
+      "description": null
+    },
+    "SWARM": {
+      "name": "Firasat Buruk",
+      "description": null
+    },
+    "ROCK_HEAD": {
+      "name": "Kepala Batu",
+      "description": "Meskipun menggunakan jurus yang menyebabkan tolak balik, HP Pokémon ini tidak akan berkurang."
+    },
+    "DROUGHT": {
+      "name": "Kemarau",
+      "description": "Pokémon ini membuat cuaca cerah saat memasuki pertarungan."
+    },
+    "ARENA_TRAP": {
+      "name": "Undur-undur",
+      "description": null
+    },
+    "VITAL_SPIRIT": {
+      "name": "Semangat Vital",
+      "description": "Menjadi kebal terhadap kondisi tidur dikarenakan mengeluarkan semangat."
+    },
+    "WHITE_SMOKE": {
+      "name": "Asap Putih",
+      "description": "Pokémon ini dilindungi oleh asap putih sehingga Statistiknya tidak dapat diturunkan oleh Pokémon lain."
+    },
+    "PURE_POWER": {
+      "name": "Kekuatan Yoga",
+      "description": "Dengan menggunakan kekuatan yoga, kekuatan Serangan Pokémon ini menjadi ganda."
+    },
+    "SHELL_ARMOR": {
+      "name": "Zirah Cangkang",
+      "description": "Pokémon ini dilindungi oleh cangkang keras sehingga serangan tidak mengenai titik kritisnya."
+    },
+    "AIR_LOCK": {
+      "name": "Air Lock",
+      "description": "Segala efek cuaca dihilangkan."
+    },
+    "TANGLED_FEET": {
+      "name": "Sempoyongan",
+      "description": "Saat dalam kondisi pusing, Rasio Menghindar Pokémon ini naik."
+    },
+    "MOTOR_DRIVE": {
+      "name": "Mesin Listrik",
+      "description": "Jika menerima jurus tipe Listrik, Pokémon ini tidak akan menerima kerusakan dan Kecepatannya naik."
+    },
+    "RIVALRY": {
+      "name": "Semangat Bersaing",
+      "description": null
+    },
+    "STEADFAST": {
+      "name": "Semangat Pantang Mundur",
+      "description": "Tiap kali tersentak, semangat pantang mundur Pokémon ini membara sehingga Kecepatannya naik."
+    },
+    "SNOW_CLOAK": {
+      "name": "Persembunyian Salju",
+      "description": null
+    },
+    "GLUTTONY": {
+      "name": "Lahap",
+      "description": null
+    },
+    "ANGER_POINT": {
+      "name": "Titik Amarah",
+      "description": "Ketika serangan mengenai titik kritisnya, Pokémon ini akan mengamuk sehingga Serangannya menjadi maksimal."
+    },
+    "UNBURDEN": {
+      "name": "Meringankan Tubuh",
+      "description": null
+    },
+    "HEATPROOF": {
+      "name": "Tahan Panas",
+      "description": "Mengurangi setengah kerusakan yang disebabkan oleh jurus tipe Api dengan tubuh yang tahan panas."
+    },
+    "SIMPLE": {
+      "name": "Sederhana",
+      "description": null
+    },
+    "DRY_SKIN": {
+      "name": "Kulit Kering",
+      "description": null
+    },
+    "DOWNLOAD": {
+      "name": "Unduh",
+      "description": "Meningkatkan Serangan atau Serangan Khusus Pokémon ini disesuaikan dengan Statistik terendah dari Pertahanan atau Pertahanan Khusus Pokémon lawan."
+    },
+    "IRON_FIST": {
+      "name": "Tinju Besi",
+      "description": "Meningkatkan kekuatan serangan pukulan Pokémon sebesar 20%."
+    },
+    "POISON_HEAL": {
+      "name": "Penyembuhan Racun",
+      "description": null
+    },
+    "ADAPTABILITY": {
+      "name": "Kemampuan Adaptasi",
+      "description": null
+    },
+    "SKILL_LINK": {
+      "name": "Hubungan Keahlian",
+      "description": "Memaksimalkan jumlah serangan dari jurus beruntun."
+    },
+    "HYDRATION": {
+      "name": "Tubuh Lembap",
+      "description": "Pulih dari kondisi abnormal pada saat hujan."
+    },
+    "SOLAR_POWER": {
+      "name": "Tenaga Surya",
+      "description": null
+    },
+    "QUICK_FEET": {
+      "name": "Kaki Cepat",
+      "description": null
+    },
+    "NORMALIZE": {
+      "name": "Normalisasi",
+      "description": null
+    },
+    "SNIPER": {
+      "name": "Sniper",
+      "description": null
+    },
+    "MAGIC_GUARD": {
+      "name": "Magic Guard",
+      "description": "Pokémon ini tidak menerima kerusakan selain dari serangan."
+    },
+    "NO_GUARD": {
+      "name": "Tanpa Pelindung",
+      "description": null
+    },
+    "STALL": {
+      "name": "Melangkah Belakangan",
+      "description": "Pokémon ini selalu menjadi yang terakhir saat mengeluarkan jurus."
+    },
+    "TECHNICIAN": {
+      "name": "Teknisi",
+      "description": null
+    },
+    "LEAF_GUARD": {
+      "name": "Pelindung Daun",
+      "description": "Menjadi kebal terhadap kondisi abnormal pada saat cerah."
+    },
+    "KLUTZ": {
+      "name": "Kikuk",
+      "description": "Tidak dapat menggunakan item yang dibawa."
+    },
+    "MOLD_BREAKER": {
+      "name": "Inkonvensional",
+      "description": "Pokémon ini dapat menyarangkan jurusnya tanpa terganggu oleh Ability lawan."
+    },
+    "SUPER_LUCK": {
+      "name": "Super Untung",
+      "description": null
+    },
+    "AFTERMATH": {
+      "name": "Detonasi",
+      "description": null
+    },
+    "ANTICIPATION": {
+      "name": "Antisipasi",
+      "description": "Pokémon ini dapat mendeteksi jurus lawan yang berbahaya."
+    },
+    "FOREWARN": {
+      "name": "Prediksi Mimpi",
+      "description": null
+    },
+    "UNAWARE": {
+      "name": "Bebal",
+      "description": null
+    },
+    "TINTED_LENS": {
+      "name": "Kacamata Berwarna",
+      "description": null
+    },
+    "FILTER": {
+      "name": "Filter",
+      "description": null
+    },
+    "SLOW_START": {
+      "name": "Terlambat Mulai",
+      "description": null
+    },
+    "SCRAPPY": {
+      "name": "Bernyali",
+      "description": null
+    },
+    "STORM_DRAIN": {
+      "name": "Penyedot Air",
+      "description": null
+    },
+    "ICE_BODY": {
+      "name": "Tubuh Es",
+      "description": null
+    },
+    "SOLID_ROCK": {
+      "name": "Batu Keras",
+      "description": null
+    },
+    "SNOW_WARNING": {
+      "name": "Menurunkan Salju",
+      "description": "Memunculkan salju selama 5 giliran saat Pokémon memasuki pertarungan."
+    },
+    "HONEY_GATHER": {
+      "name": "Mengumpulkan Madu",
+      "description": null
+    },
+    "FRISK": {
+      "name": "Serba Tahu",
+      "description": null
+    },
+    "RECKLESS": {
+      "name": "Nekat",
+      "description": null
+    },
+    "MULTITYPE": {
+      "name": "Multitipe",
+      "description": null
+    },
+    "FLOWER_GIFT": {
+      "name": "Hadiah Bunga",
+      "description": null
+    },
+    "BAD_DREAMS": {
+      "name": "Nightmare",
+      "description": null
+    },
+    "PICKPOCKET": {
+      "name": "Kebiasaan Mencuri",
+      "description": null
+    },
+    "SHEER_FORCE": {
+      "name": "Memaksa",
+      "description": null
+    },
+    "CONTRARY": {
+      "name": "Berlawanan",
+      "description": null
+    },
+    "UNNERVE": {
+      "name": "Perasaan Tegang",
+      "description": null
+    },
+    "DEFIANT": {
+      "name": "Tidak Mau Kalah",
+      "description": null
+    },
+    "DEFEATIST": {
+      "name": "Bersikap Mengalah",
+      "description": null
+    },
+    "CURSED_BODY": {
+      "name": "Tubuh Terkutuk",
+      "description": null
+    },
+    "HEALER": {
+      "name": "Semangat Penyembuh",
+      "description": null
+    },
+    "FRIEND_GUARD": {
+      "name": "Friend Guard",
+      "description": null
+    },
+    "WEAK_ARMOR": {
+      "name": "Perisai Lemah",
+      "description": null
+    },
+    "HEAVY_METAL": {
+      "name": "Logam Berat",
+      "description": null
+    },
+    "LIGHT_METAL": {
+      "name": "Logam Ringan",
+      "description": null
+    },
+    "TELEPATHY": {
+      "name": "Telepati",
+      "description": null
+    },
+    "OVERCOAT": {
+      "name": "Tahan Debu",
+      "description": null
+    },
+    "POISON_TOUCH": {
+      "name": "Racun Sentuh",
+      "description": null
+    },
+    "REGENERATOR": {
+      "name": "Regenerator",
+      "description": null
+    },
+    "BIG_PECKS": {
+      "name": "Dada Besar",
+      "description": null
+    },
+    "SAND_RUSH": {
+      "name": "Mencedok Pasir",
+      "description": null
+    },
+    "WONDER_SKIN": {
+      "name": "Kulit Ajaib",
+      "description": null
+    },
+    "ILLUSION": {
+      "name": "Ilusi",
+      "description": null
+    },
+    "INFILTRATOR": {
+      "name": "Tembus",
+      "description": null
+    },
+    "MUMMY": {
+      "name": "Mumi",
+      "description": null
+    },
+    "MOXIE": {
+      "name": "Percaya Diri Berlebihan",
+      "description": null
+    },
+    "JUSTIFIED": {
+      "name": "Semangat  Keadilan",
+      "description": null
+    },
+    "RATTLED": {
+      "name": "Pengecut",
+      "description": null
+    },
+    "MAGIC_BOUNCE": {
+      "name": "Cermin Ajaib",
+      "description": null
+    },
+    "SAP_SIPPER": {
+      "name": "Herbivora",
+      "description": null
+    },
+    "PRANKSTER": {
+      "name": "Semangat Usil",
+      "description": null
+    },
+    "SAND_FORCE": {
+      "name": "Kekuatan Pasir",
+      "description": null
+    },
+    "IRON_BARBS": {
+      "name": "Duri Besi",
+      "description": null
+    },
+    "ZEN_MODE": {
+      "name": "Modus Zen",
+      "description": null
+    },
+    "VICTORY_STAR": {
+      "name": "Bintang Kemenangan",
+      "description": null
+    },
+    "TURBOBLAZE": {
+      "name": "Turboblaze",
+      "description": null
+    },
+    "TERAVOLT": {
+      "name": "Teravolt",
+      "description": null
+    },
+    "AROMA_VEIL": {
+      "name": "Tudung Aroma",
+      "description": null
+    },
+    "FLOWER_VEIL": {
+      "name": "Kerudung Bunga",
+      "description": null
+    },
+    "CHEEK_POUCH": {
+      "name": "Kantong Pipi",
+      "description": null
+    },
+    "FUR_COAT": {
+      "name": "Mantel Bulu",
+      "description": null
+    },
+    "MAGICIAN": {
+      "name": "Penyihir",
+      "description": null
+    },
+    "BULLETPROOF": {
+      "name": "Tahan Peluru",
+      "description": null
+    },
+    "COMPETITIVE": {
+      "name": "Bersaing",
+      "description": null
+    },
+    "STRONG_JAW": {
+      "name": "Rahang Kukuh",
+      "description": null
+    },
+    "REFRIGERATE": {
+      "name": "Pembekuan Kulit",
+      "description": null
+    },
+    "SWEET_VEIL": {
+      "name": "Kerudung Manis",
+      "description": null
+    },
+    "STANCE_CHANGE": {
+      "name": "Pergantian Posisi",
+      "description": null
+    },
+    "MEGA_LAUNCHER": {
+      "name": "Peluncur Mega",
+      "description": null
+    },
+    "TOUGH_CLAWS": {
+      "name": "Cakar Keras",
+      "description": null
+    },
+    "PIXILATE": {
+      "name": "Kulit Peri",
+      "description": null
+    },
+    "GOOEY": {
+      "name": "Berlendir",
+      "description": null
+    },
+    "AERILATE": {
+      "name": "Kulit Langit",
+      "description": null
+    },
+    "PARENTAL_BOND": {
+      "name": "Kasih Sayang Orang Tua",
+      "description": null
+    },
+    "DARK_AURA": {
+      "name": "Aura Kegelapan",
+      "description": null
+    },
+    "FAIRY_AURA": {
+      "name": "Aura Peri",
+      "description": null
+    },
+    "AURA_BREAK": {
+      "name": "Pemutusan Aura",
+      "description": null
+    },
+    "PRIMORDIAL_SEA": {
+      "name": "Lautan Permulaan",
+      "description": null
+    },
+    "DESOLATE_LAND": {
+      "name": "Daratan Penghabisan",
+      "description": null
+    },
+    "DELTA_STREAM": {
+      "name": "Aliran Delta",
+      "description": null
+    },
+    "STAMINA": {
+      "name": "Stamina",
+      "description": null
+    },
+    "WIMP_OUT": {
+      "name": "Terinitimidasi",
+      "description": null
+    },
+    "EMERGENCY_EXIT": {
+      "name": "Pintu Darurat",
+      "description": null
+    },
+    "WATER_COMPACTION": {
+      "name": "Padatan Air",
+      "description": null
+    },
+    "MERCILESS": {
+      "name": "Tanpa Ampun",
+      "description": null
+    },
+    "SHIELDS_DOWN": {
+      "name": "Perisai Ambang Batas",
+      "description": null
+    },
+    "STAKEOUT": {
+      "name": "Mengawasi",
+      "description": null
+    },
+    "WATER_BUBBLE": {
+      "name": "Gelembung Air",
+      "description": null
+    },
+    "STEELWORKER": {
+      "name": "Pekerja Besi",
+      "description": null
+    },
+    "BERSERK": {
+      "name": "Kalut Marut",
+      "description": null
+    },
+    "SLUSH_RUSH": {
+      "name": "Mencedok Salju",
+      "description": null
+    },
+    "TRIAGE": {
+      "name": "Prioritas Penyembuhan",
+      "description": null
+    },
+    "SURGE_SURFER": {
+      "name": "Ekor Selancar",
+      "description": null
+    },
+    "SCHOOLING": {
+      "name": "Gerombolan",
+      "description": null
+    },
+    "DISGUISE": {
+      "name": "Samaran",
+      "description": null
+    },
+    "POWER_CONSTRUCT": {
+      "name": "Susunan Kekuatan",
+      "description": null
+    },
+    "CORROSION": {
+      "name": "Korosi",
+      "description": null
+    },
+    "COMATOSE": {
+      "name": "Kantuk Mutlak",
+      "description": null
+    },
+    "QUEENLY_MAJESTY": {
+      "name": "Kehormatan Ratu",
+      "description": null
+    },
+    "INNARDS_OUT": {
+      "name": "Jeroan Keluar",
+      "description": null
+    },
+    "DANCER": {
+      "name": "Penari",
+      "description": null
+    },
+    "BATTERY": {
+      "name": "Baterai",
+      "description": null
+    },
+    "FLUFFY": {
+      "name": "Berbulu Halus",
+      "description": null
+    },
+    "DAZZLING": {
+      "name": "Tubuh Cemerlang",
+      "description": null
+    },
+    "SOUL_HEART": {
+      "name": "Soul-Heart",
+      "description": "Meningkatkan statistik Serangan Khusus. Pokémon setiap kali Pokémon lain pingsan."
+    },
+    "TANGLING_HAIR": {
+      "name": "Rambut Berombak",
+      "description": null
+    },
+    "RECEIVER": {
+      "name": "Penerima",
+      "description": null
+    },
+    "BEAST_BOOST": {
+      "name": "Beast Boost",
+      "description": null
+    },
+    "RKS_SYSTEM": {
+      "name": "Sistem RKS",
+      "description": null
+    },
+    "ELECTRIC_SURGE": {
+      "name": "Pembuatan Listrik",
+      "description": null
+    },
+    "PSYCHIC_SURGE": {
+      "name": "Pembuatan Psikis",
+      "description": null
+    },
+    "MISTY_SURGE": {
+      "name": "Pembuatan Kabut",
+      "description": null
+    },
+    "GRASSY_SURGE": {
+      "name": "Pembuatan Daun",
+      "description": null
+    },
+    "FULL_METAL_BODY": {
+      "name": "Lindungan Logam",
+      "description": null
+    },
+    "SHADOW_SHIELD": {
+      "name": "Pelindung Bayangan",
+      "description": null
+    },
+    "PRISM_ARMOR": {
+      "name": "Zirah Prisma",
+      "description": null
+    },
+    "NEUROFORCE": {
+      "name": "Daya Syaraf",
+      "description": null
+    },
+    "INTREPID_SWORD": {
+      "name": "Pedang Maju Terus",
+      "description": null
+    },
+    "DAUNTLESS_SHIELD": {
+      "name": "Perisai Pantang Mundur",
+      "description": null
+    },
+    "BALL_FETCH": {
+      "name": "Pemungut Bola",
+      "description": null
+    },
+    "COTTON_DOWN": {
+      "name": "Bulu Kapas",
+      "description": null
+    },
+    "GULP_MISSILE": {
+      "name": "Misil Telan",
+      "description": null
+    },
+    "STEAM_ENGINE": {
+      "name": "Mesin Uap",
+      "description": null
+    },
+    "PUNK_ROCK": {
+      "name": "Punk Rock",
+      "description": null
+    },
+    "SAND_SPIT": {
+      "name": "Tembakan Pasir",
+      "description": null
+    },
+    "RIPEN": {
+      "name": "Matang",
+      "description": null
+    },
+    "ICE_FACE": {
+      "name": "Ice Face",
+      "description": null
+    },
+    "POWER_SPOT": {
+      "name": "Power Spot",
+      "description": null
+    },
+    "MIMICRY": {
+      "name": "Mimikri",
+      "description": null
+    },
+    "SCREEN_CLEANER": {
+      "name": "Bebas Halangan",
+      "description": null
+    },
+    "WANDERING_SPIRIT": {
+      "name": "Arwah Gentayangan",
+      "description": null
+    },
+    "GORILLA_TACTICS": {
+      "name": "Kehilangan Arah",
+      "description": null
+    },
+    "NEUTRALIZING_GAS": {
+      "name": "Gas Hasil Perubahan Kimia",
+      "description": null
+    },
+    "PASTEL_VEIL": {
+      "name": "Tudung Pastel",
+      "description": null
+    },
+    "HUNGER_SWITCH": {
+      "name": "Tombol Lapar",
+      "description": null
+    },
+    "QUICK_DRAW": {
+      "name": "Tembak Cepat",
+      "description": null
+    },
+    "UNSEEN_FIST": {
+      "name": "Tinju Tak Terlihat",
+      "description": null
+    },
+    "CURIOUS_MEDICINE": {
+      "name": "Obat Ganjil",
+      "description": null
+    },
+    "TRANSISTOR": {
+      "name": "Transistor",
+      "description": null
+    },
+    "DRAGONS_MAW": {
+      "name": "Rahang Naga",
+      "description": null
+    },
+    "CHILLING_NEIGH": {
+      "name": "Ringkikan Putih",
+      "description": null
+    },
+    "GRIM_NEIGH": {
+      "name": "Ringkikan Hitam",
+      "description": null
+    },
+    "AS_ONE_GLASTRIER": {
+      "name": "Unifikasi",
+      "description": null
+    },
+    "AS_ONE_SPECTRIER": {
+      "name": "Unifikasi",
+      "description": null
+    },
+    "LINGERING_AROMA": {
+      "name": "Bau Bandel",
+      "description": null
+    },
+    "SEED_SOWER": {
+      "name": "Luapan Benih",
+      "description": null
+    },
+    "THERMAL_EXCHANGE": {
+      "name": "Pertukaran Kalor",
+      "description": null
+    },
+    "ANGER_SHELL": {
+      "name": "Tempurung Amarah",
+      "description": null
+    },
+    "PURIFYING_SALT": {
+      "name": "Garam Pemurni",
+      "description": null
+    },
+    "WELL_BAKED_BODY": {
+      "name": "Tubuh Matang",
+      "description": null
+    },
+    "WIND_RIDER": {
+      "name": "Naik Angin",
+      "description": null
+    },
+    "GUARD_DOG": {
+      "name": "Anjing Penjaga",
+      "description": null
+    },
+    "WIND_POWER": {
+      "name": "Tenaga Angin",
+      "description": null
+    },
+    "ZERO_TO_HERO": {
+      "name": "Menjadi Tangguh",
+      "description": null
+    },
+    "COMMANDER": {
+      "name": "Komandan",
+      "description": null
+    },
+    "ELECTROMORPHOSIS": {
+      "name": "Elektromorfosis",
+      "description": null
+    },
+    "PROTOSYNTHESIS": {
+      "name": "Protosintesis",
+      "description": null
+    },
+    "QUARK_DRIVE": {
+      "name": "Quark Charge",
+      "description": null
+    },
+    "GOOD_AS_GOLD": {
+      "name": "Tubuh Keemasan",
+      "description": null
+    },
+    "VESSEL_OF_RUIN": {
+      "name": "Wadah Petaka",
+      "description": null
+    },
+    "SWORD_OF_RUIN": {
+      "name": "Pedang Petaka",
+      "description": null
+    },
+    "TABLETS_OF_RUIN": {
+      "name": "Jimat Petaka",
+      "description": null
+    },
+    "BEADS_OF_RUIN": {
+      "name": "Bola Petaka",
+      "description": null
+    },
+    "ORICHALCUM_PULSE": {
+      "name": "Debaran Scarlet",
+      "description": null
+    },
+    "HADRON_ENGINE": {
+      "name": "Mesin Hadron",
+      "description": null
+    },
+    "OPPORTUNIST": {
+      "name": "Menebeng",
+      "description": null
+    },
+    "CUD_CHEW": {
+      "name": "Memamah",
+      "description": null
+    },
+    "SHARPNESS": {
+      "name": "Ketajaman",
+      "description": null
+    },
+    "SUPREME_OVERLORD": {
+      "name": "Jenderal",
+      "description": null
+    },
+    "TOXIC_DEBRIS": {
+      "name": "Debris Toksik",
+      "description": null
+    },
+    "ARMOR_TAIL": {
+      "name": "Zirah Ekor",
+      "description": null
+    },
+    "EARTH_EATER": {
+      "name": "Pemakan Tanah",
+      "description": null
+    },
+    "MYCELIUM_MIGHT": {
+      "name": "Tenaga Miselium",
+      "description": null
+    },
+    "MINDS_EYE": {
+      "name": "Mata Hati",
+      "description": null
+    },
+    "SUPERSWEET_SYRUP": {
+      "name": "Nektar Lezat",
+      "description": null
+    },
+    "HOSPITALITY": {
+      "name": "Ramah-tamah",
+      "description": null
+    },
+    "TOXIC_CHAIN": {
+      "name": "Rantai Beracun",
+      "description": null
+    },
+    "TERA_SHIFT": {
+      "name": "Menjadi Terastal",
+      "description": null
+    },
+    "TERA_SHELL": {
+      "name": "Batok Terastal",
+      "description": null
+    },
+    "TERAFORM_ZERO": {
+      "name": "Zeroformasi",
+      "description": null
+    },
+    "POISON_PUPPETEER": {
+      "name": "Racun Dalang",
+      "description": null
+    }
+  },
+  "types": {
+    "unknown": "???",
+    "normal": "Normal",
+    "fighting": "Petarung",
+    "flying": "Terbang",
+    "poison": "Racun",
+    "ground": "Tanah",
+    "rock": "Bebatuan",
+    "bug": "Serangga",
+    "ghost": "Hantu",
+    "steel": "Logam",
+    "fire": "Api",
+    "water": "Air",
+    "grass": "Daun",
+    "electric": "Listrik",
+    "psychic": "Psychic",
+    "ice": "Es",
+    "dragon": "Naga",
+    "dark": "Kegelapan",
+    "fairy": "Peri",
+    "stellar": "Rasi"
+  },
+  "natures": {
+    "HARDY": "Tangguh",
+    "LONELY": "Kesepian",
+    "BRAVE": "Berani",
+    "ADAMANT": "Teguh",
+    "NAUGHTY": "Nakal",
+    "BOLD": "Tegas",
+    "DOCILE": "Jinak",
+    "RELAXED": "Santai",
+    "IMPISH": "Jahil",
+    "LAX": "Lalai",
+    "TIMID": "Pemalu",
+    "HASTY": "Gegabah",
+    "SERIOUS": "Serius",
+    "JOLLY": "Riang",
+    "NAIVE": "Naif",
+    "MODEST": "Sederhana",
+    "MILD": "Ringan",
+    "QUIET": "Pendiam",
+    "BASHFUL": "Malu-Malu",
+    "RASH": "Terburu",
+    "CALM": "Tenang",
+    "GENTLE": "Lembut",
+    "SASSY": "Lancang",
+    "CAREFUL": "Hati-hati",
+    "QUIRKY": "Kikuk"
+  },
+  "stats": {
+    "HP": {
+      "name": "HP",
+      "short": "HP"
+    },
+    "ATK": {
+      "name": "Serangan",
+      "short": "Ser"
+    },
+    "DEF": {
+      "name": "Pertahanan",
+      "short": "Per"
+    },
+    "SPATK": {
+      "name": "Ser. Khu.",
+      "short": "SerKh"
+    },
+    "SPDEF": {
+      "name": "Per. Khu.",
+      "short": "PerKh"
+    },
+    "SPD": {
+      "name": "Kecepatan",
+      "short": "Kec"
+    },
+    "ACC": {
+      "name": "Akurasi",
+      "short": null
+    },
+    "EVA": {
+      "name": "Menghindar",
+      "short": null
+    }
+  },
+  "statusEffects": {},
+  "items": {
+    "APICOT_BERRY": {
+      "name": "Beri Apicot",
+      "description": "Meningkatkan Pertahanan Khusus jika HP di bawah 25%."
+    },
+    "DRAGON_SCALE": {
+      "name": "Sisik Naga",
+      "description": null
+    },
+    "DYNAMAX_BAND": {
+      "name": "Gelang Dynamax",
+      "description": null
+    },
+    "ENIGMA_BERRY": {
+      "name": "Beri Enigma",
+      "description": "Memulihkan 25% HP jika terkena serangan super efektif."
+    },
+    "EXP_SHARE": {
+      "name": "Pembagi Pengalaman",
+      "description": null
+    },
+    "FIRE_STONE": {
+      "name": "Batu Api",
+      "description": null
+    },
+    "GANLON_BERRY": {
+      "name": "Beri Ganlon",
+      "description": "Meningkatkan Pertahanan jika HP di bawah 25%."
+    },
+    "GREAT_BALL": {
+      "name": "Bola Great",
+      "description": null
+    },
+    "ICE_STONE": {
+      "name": "Batu Es",
+      "description": null
+    },
+    "KINGS_ROCK": {
+      "name": "Simbol Penguasa",
+      "description": null
+    },
+    "LANSAT_BERRY": {
+      "name": "Beri Lansat",
+      "description": "Meningkatkan rasio serangan kritis jika HP di bawah 25%."
+    },
+    "LEFTOVERS": {
+      "name": "Sisa Makanan",
+      "description": null
+    },
+    "LEPPA_BERRY": {
+      "name": "Beri Leppa",
+      "description": "Mengembalikan 10 PP ke Jurus jika PP-nya mencapai 0."
+    },
+    "LIECHI_BERRY": {
+      "name": "Beri Liechi",
+      "description": "Meningkatkan Serangan jika HP di bawah 25%."
+    },
+    "LUCKY_EGG": {
+      "name": "Telur Kebahagiaan",
+      "description": null
+    },
+    "LUM_BERRY": {
+      "name": "Beri Lum",
+      "description": "Menyembuhkan kondisi status tak-volatil dan kebingungan apa pun."
+    },
+    "MASTER_BALL": {
+      "name": "Bola Master",
+      "description": null
+    },
+    "MAX_MUSHROOMS": {
+      "name": "Jamur Max",
+      "description": null
+    },
+    "MEGA_BRACELET": {
+      "name": "Mega Bracelet",
+      "description": null
+    },
+    "PETAYA_BERRY": {
+      "name": "Beri Petaya",
+      "description": "Meningkatkan Serangan jika HP di bawah 25%."
+    },
+    "POISON_BARB": {
+      "name": "Duri Beracun",
+      "description": null
+    },
+    "POKE_BALL": {
+      "name": "Bola Pokémon",
+      "description": null
+    },
+    "RARE_CANDY": {
+      "name": "Permen Langka",
+      "description": null
+    },
+    "SALAC_BERRY": {
+      "name": "Beri Salac",
+      "description": "Meningkatkan kecepatan jika HP di bawah 25%."
+    },
+    "SITRUS_BERRY": {
+      "name": "Beri Sitrus",
+      "description": "Memulikan 25% HP jika HP di bawah 50%."
+    },
+    "STARF_BERRY": {
+      "name": "Beri Starf",
+      "description": "Meningkatkan secara signifikan statistik acak jika HP di bawah 25%."
+    },
+    "SUN_STONE": {
+      "name": "Batu Mentari",
+      "description": null
+    },
+    "TERA_ORB": {
+      "name": "Terastal Orb",
+      "description": null
+    },
+    "ULTRA_BALL": {
+      "name": "Bola Ultra",
+      "description": null
+    },
+    "VOUCHER": {
+      "name": "Kupon Telur",
+      "description": null
+    },
+    "WATER_STONE": {
+      "name": "Batu Air",
+      "description": null
+    },
+    "EVOLUTION_TRACKER_PRIMEAPE": {
+      "name": "Tinju Amarah",
+      "description": null
+    },
+    "GOLDEN_EGG": {
+      "name": "Telur Emas",
+      "description": null
+    },
+    "GOLDEN_POKEBALL": {
+      "name": "Bola Pokémon Emas",
+      "description": null
+    },
+    "GRACIDEA": {
+      "name": "Bunga Gracidea",
+      "description": null
+    },
+    "HEARTHFLAME_MASK": {
+      "name": "Topeng Tungku",
+      "description": null
+    },
+    "HYPER_POTION": {
+      "name": "Obat Luka Hiper",
+      "description": null
+    },
+    "IV_SCANNER": {
+      "name": "Pemindai IV",
+      "description": null
+    },
+    "LUXURY_BALL": {
+      "name": "Bola Luxury",
+      "description": null
+    },
+    "MAP": {
+      "name": "Peta",
+      "description": null
+    },
+    "MAX_POTION": {
+      "name": "Obat Luka Maksimum",
+      "description": null
+    },
+    "MAX_REVIVE": {
+      "name": "Bongkahan Pembangkit",
+      "description": null
+    },
+    "POTION": {
+      "name": "Obat Luka",
+      "description": null
+    },
+    "PP_UP": {
+      "name": "PP Up",
+      "description": null
+    },
+    "REVIVE": {
+      "name": "Serpihan Pembangkit",
+      "description": null
+    },
+    "ROGUE_BALL": {
+      "name": "Bola Rogue",
+      "description": null
+    },
+    "RUSTED_SHIELD": {
+      "name": "Perisai Berkarat",
+      "description": null
+    },
+    "RUSTED_SWORD": {
+      "name": "Pedang Berkarat",
+      "description": null
+    },
+    "SACRED_ASH": {
+      "name": "Abu Suci",
+      "description": null
+    },
+    "SUPER_POTION": {
+      "name": "Obat Luka Super",
+      "description": null
+    },
+    "UPGRADE": {
+      "name": "Up-Grade",
+      "description": null
+    },
+    "VOUCHER_GOLDEN": {
+      "name": "Kupon Telur Emas",
+      "description": null
+    },
+    "VOUCHER_PLUS": {
+      "name": "Kupon Telur Plus",
+      "description": null
+    },
+    "VOUCHER_PREMIUM": {
+      "name": "Kupon Telur Premium",
+      "description": null
+    }
+  },
+  "itemTemplates": {
+    "TM": {
+      "name": "MJ{{moveId}} - {{moveName}}",
+      "description": null,
+      "localeKey": "modifierType:ModifierType.TmModifierType"
+    },
+    "TM_WITH_INFO": {
+      "name": "MJ{{moveId}} - {{moveName}}",
+      "description": null,
+      "localeKey": "modifierType:ModifierType.TmModifierTypeWithInfo"
+    }
+  },
+  "trainers": {
+    "brock": "Brock",
+    "misty": "Misty",
+    "ltSurge": "Letnan Surge",
+    "erika": "Erika",
+    "janine": "Janine",
+    "sabrina": "Sabrina",
+    "blaine": "Blain",
+    "giovanni": "Giovanni",
+    "falkner": "Falkner",
+    "whitney": "Whitney",
+    "morty": "Morti",
+    "jasmine": "Jasmine",
+    "roxanne": "Roxanne",
+    "brawly": "Brawly",
+    "flannery": "Flannery",
+    "norman": "Norman",
+    "tate": "Teit",
+    "roark": "Roark",
+    "gardenia": "Gardenia",
+    "crasherWake": "Weik",
+    "candice": "Candice",
+    "volkner": "Volkner",
+    "roxie": "Roksi",
+    "elesa": "Elesa",
+    "clay": "Clay",
+    "grant": "Grant",
+    "clemont": "Clemont",
+    "nessa": "Nessa",
+    "marnie": "Marnie",
+    "katy": "Sera",
+    "brassius": "Brassio",
+    "iono": "Mistika",
+    "kofu": "Algo",
+    "larry": "Dafin",
+    "ryme": "Saura",
+    "tulip": "Tulip",
+    "grusha": "Grusha",
+    "lorelei": "Lorelei",
+    "will": "William",
+    "koga": "Koga",
+    "phoebe": "Phoebe",
+    "lucian": "Lucian",
+    "shauntal": "Shauntal",
+    "grimsley": "Grimsley",
+    "drasna": "Drasna",
+    "olivia": "Olivia",
+    "acerola": "Acerola",
+    "rika": "Muna",
+    "poppy": "Poppy",
+    "hassel": "Haskev",
+    "crispin": "Akamatsu",
+    "amarys": "Nerine",
+    "lacey": "Tara",
+    "drayton": "Levigato",
+    "steven": "Steven",
+    "cynthia": "Cynthia",
+    "iris": "Iris",
+    "diantha": "Diantha",
+    "geeta": "Sagitta",
+    "nemona": "Nemola",
+    "kieran": "Suguri",
+    "leon": "Leon",
+    "archer": "Archer",
+    "ariana": "Ariana",
+    "proton": "Proton",
+    "petrel": "Petrel",
+    "mars": "Mars",
+    "xerosic": "Xerosic",
+    "faba": "Faba",
+    "plumeria": "Plumeria",
+    "giacomo": "Nanio",
+    "mela": "Mela",
+    "atticus": "Rio",
+    "ortega": "Orto",
+    "eri": "Eria",
+    "cyrus": "Sairus",
+    "lysandre": "Lysandra",
+    "lusamine": "Lusamine",
+    "guzma": "Guzma",
+    "cassiopeia": "Pania",
+    "tateLizaDouble": "Teit & Lisa",
+    "lizaTateDouble": "Lisa & Teit",
+    "red": "Red",
+    "lance": "Lance",
+    "alder": "Alder",
+    "kukui": "Kukui"
+  },
+  "trainerTitles": {
+    "eliteFour": "Empat Elite",
+    "eliteFourFemale": "Empat Elite",
+    "gymLeader": "Pemimpin Gym",
+    "gymLeaderFemale": "Pemimpin Gym",
+    "gymLeaderDouble": "Duo Pemimpin Gym",
+    "champion": "Champion",
+    "championFemale": "Champion",
+    "championDouble": "Duo Champion",
+    "professor": "Profesor",
+    "rocketBoss": "Bos Tim Roket",
+    "magmaBoss": "Bos Tim Magma",
+    "aquaBoss": "Bos Tim Aqua",
+    "galacticBoss": "Bos Tim Galaksi",
+    "plasmaBoss": "Bos Tim Plasma",
+    "flareBoss": "Bos Tim Flare",
+    "skullBoss": "Bos Tim Tengkorak"
+  },
+  "zCrystals": {},
+  "zMoves": {},
+  "maxMoves": {
+    "MAX_FLARE": "Max Flare",
+    "MAX_FLUTTERBY": "Max Flutterby",
+    "MAX_LIGHTNING": "Max Lightning",
+    "MAX_STRIKE": "Max Strike",
+    "MAX_KNUCKLE": "Max Knuckle",
+    "MAX_PHANTASM": "Max Phantasm",
+    "MAX_HAILSTORM": "Max Hailstorm",
+    "MAX_OOZE": "Max Ooze",
+    "MAX_GEYSER": "Max Geyser",
+    "MAX_AIRSTREAM": "Max Airstream",
+    "MAX_STARFALL": "Max Starfall",
+    "MAX_WYRMWIND": "Max Wyrmwind",
+    "MAX_MINDSTORM": "Max Mindstorm",
+    "MAX_ROCKFALL": "Max Rockfall",
+    "MAX_QUAKE": "Max Quake",
+    "MAX_DARKNESS": "Max Darkness",
+    "MAX_OVERGROWTH": "Max Overgrowth",
+    "MAX_STEELSPIKE": "Max Steelspike",
+    "G_MAX_WILDFIRE": "G-Max Wildfire",
+    "G_MAX_BEFUDDLE": "G-Max Befuddle",
+    "G_MAX_VOLT_CRASH": "G-Max Volt Crash",
+    "G_MAX_GOLD_RUSH": "G-Max Gold Rush",
+    "G_MAX_CHI_STRIKE": "G-Max Chi Strike",
+    "G_MAX_TERROR": "G-Max Terror",
+    "G_MAX_RESONANCE": "G-Max Resonance",
+    "G_MAX_CUDDLE": "G-Max Cuddle",
+    "G_MAX_REPLENISH": "G-Max Replenish",
+    "G_MAX_MALODOR": "G-Max Malodor",
+    "G_MAX_STONESURGE": "G-Max Stonesurge",
+    "G_MAX_WIND_RAGE": "G-Max Wind Rage",
+    "G_MAX_STUN_SHOCK": "G-Max Stun Shock",
+    "G_MAX_FINALE": "G-Max Finale",
+    "G_MAX_DEPLETION": "G-Max Depletion",
+    "G_MAX_GRAVITAS": "G-Max Gravitas",
+    "G_MAX_VOLCALITH": "G-Max Volcalith",
+    "G_MAX_SANDBLAST": "G-Max Sandblast",
+    "G_MAX_SNOOZE": "G-Max Snooze",
+    "G_MAX_TARTNESS": "G-Max Tartness",
+    "G_MAX_SWEETNESS": "G-Max Sweetness",
+    "G_MAX_SMITE": "G-Max Smite",
+    "G_MAX_STEELSURGE": "G-Max Steelsurge",
+    "G_MAX_MELTDOWN": "G-Max Meltdown",
+    "G_MAX_FOAM_BURST": "G-Max Foam Burst",
+    "G_MAX_CENTIFERNO": "G-Max Centiferno",
+    "G_MAX_VINE_LASH": "G-Max Vine Lash",
+    "G_MAX_CANNONADE": "G-Max Cannonade",
+    "G_MAX_DRUM_SOLO": "G-Max Drum Solo",
+    "G_MAX_FIREBALL": "G-Max Fireball",
+    "G_MAX_HYDROSNIPE": "G-Max Hydrosnipe",
+    "G_MAX_ONE_BLOW": "G-Max One Blow",
+    "G_MAX_RAPID_FLOW": "G-Max Rapid Flow"
+  },
+  "_provenance": {
+    "species": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "forms": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "formLabels": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "moves": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "abilities": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "types": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "natures": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "stats": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "statusEffects": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "items": {
+      "APICOT_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:apicot"
+      },
+      "DRAGON_SCALE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.DRAGON_SCALE"
+      },
+      "DYNAMAX_BAND": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.DYNAMAX_BAND"
+      },
+      "ENIGMA_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:enigma"
+      },
+      "EXP_SHARE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.EXP_SHARE"
+      },
+      "FIRE_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.FIRE_STONE"
+      },
+      "GANLON_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:ganlon"
+      },
+      "GREAT_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "pokeball:greatBall"
+      },
+      "ICE_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.ICE_STONE"
+      },
+      "KINGS_ROCK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.KINGS_ROCK"
+      },
+      "LANSAT_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:lansat"
+      },
+      "LEFTOVERS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.LEFTOVERS"
+      },
+      "LEPPA_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:leppa"
+      },
+      "LIECHI_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:liechi"
+      },
+      "LUCKY_EGG": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.LUCKY_EGG"
+      },
+      "LUM_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:lum"
+      },
+      "MASTER_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "pokeball:masterBall"
+      },
+      "MAX_MUSHROOMS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.MAX_MUSHROOMS"
+      },
+      "MEGA_BRACELET": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MEGA_BRACELET"
+      },
+      "PETAYA_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:petaya"
+      },
+      "POISON_BARB": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:AttackTypeBoosterItem.poison_barb"
+      },
+      "POKE_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "pokeball:pokeBall"
+      },
+      "RARE_CANDY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.RARE_CANDY"
+      },
+      "SALAC_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:salac"
+      },
+      "SITRUS_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:sitrus"
+      },
+      "STARF_BERRY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "berry:starf"
+      },
+      "SUN_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.SUN_STONE"
+      },
+      "TERA_ORB": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.TERA_ORB"
+      },
+      "ULTRA_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "pokeball:ultraBall"
+      },
+      "VOUCHER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "voucher:eggVoucher"
+      },
+      "WATER_STONE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.WATER_STONE"
+      },
+      "EVOLUTION_TRACKER_PRIMEAPE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.EVOLUTION_TRACKER_PRIMEAPE"
+      },
+      "GOLDEN_EGG": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.GOLDEN_EGG"
+      },
+      "GOLDEN_POKEBALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.GOLDEN_POKEBALL"
+      },
+      "GRACIDEA": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.GRACIDEA"
+      },
+      "HEARTHFLAME_MASK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.HEARTHFLAME_MASK"
+      },
+      "HYPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.HYPER_POTION"
+      },
+      "IV_SCANNER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.IV_SCANNER"
+      },
+      "LUXURY_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "pokeball:luxuryBall"
+      },
+      "MAP": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MAP"
+      },
+      "MAX_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MAX_POTION"
+      },
+      "MAX_REVIVE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.MAX_REVIVE"
+      },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
+      "PP_UP": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.PP_UP"
+      },
+      "REVIVE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.REVIVE"
+      },
+      "ROGUE_BALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "pokeball:rogueBall"
+      },
+      "RUSTED_SHIELD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.RUSTED_SHIELD"
+      },
+      "RUSTED_SWORD": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:FormChangeItem.RUSTED_SWORD"
+      },
+      "SACRED_ASH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SACRED_ASH"
+      },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
+      },
+      "UPGRADE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:EvolutionItem.UPGRADE"
+      },
+      "VOUCHER_GOLDEN": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "voucher:eggVoucherGold"
+      },
+      "VOUCHER_PLUS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "voucher:eggVoucherPlus"
+      },
+      "VOUCHER_PREMIUM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "voucher:eggVoucherPremium"
+      }
+    },
+    "itemTemplates": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "trainers": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "trainerTitles": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+    "zCrystals": {},
+    "zMoves": {},
+    "maxMoves": {
+      "MAX_FLARE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxFlare.name"
+      },
+      "MAX_FLUTTERBY": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxFlutterby.name"
+      },
+      "MAX_LIGHTNING": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxLightning.name"
+      },
+      "MAX_STRIKE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxStrike.name"
+      },
+      "MAX_KNUCKLE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxKnuckle.name"
+      },
+      "MAX_PHANTASM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxPhantasm.name"
+      },
+      "MAX_HAILSTORM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxHailstorm.name"
+      },
+      "MAX_OOZE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxOoze.name"
+      },
+      "MAX_GEYSER": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxGeyser.name"
+      },
+      "MAX_AIRSTREAM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxAirstream.name"
+      },
+      "MAX_STARFALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxStarfall.name"
+      },
+      "MAX_WYRMWIND": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxWyrmwind.name"
+      },
+      "MAX_MINDSTORM": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxMindstorm.name"
+      },
+      "MAX_ROCKFALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxRockfall.name"
+      },
+      "MAX_QUAKE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxQuake.name"
+      },
+      "MAX_DARKNESS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxDarkness.name"
+      },
+      "MAX_OVERGROWTH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxOvergrowth.name"
+      },
+      "MAX_STEELSPIKE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:maxSteelspike.name"
+      },
+      "G_MAX_WILDFIRE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxWildfire.name"
+      },
+      "G_MAX_BEFUDDLE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxBefuddle.name"
+      },
+      "G_MAX_VOLT_CRASH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxVoltCrash.name"
+      },
+      "G_MAX_GOLD_RUSH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxGoldRush.name"
+      },
+      "G_MAX_CHI_STRIKE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxChiStrike.name"
+      },
+      "G_MAX_TERROR": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxTerror.name"
+      },
+      "G_MAX_RESONANCE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxResonance.name"
+      },
+      "G_MAX_CUDDLE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxCuddle.name"
+      },
+      "G_MAX_REPLENISH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxReplenish.name"
+      },
+      "G_MAX_MALODOR": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxMalodor.name"
+      },
+      "G_MAX_STONESURGE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxStonesurge.name"
+      },
+      "G_MAX_WIND_RAGE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxWindRage.name"
+      },
+      "G_MAX_STUN_SHOCK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxStunShock.name"
+      },
+      "G_MAX_FINALE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxFinale.name"
+      },
+      "G_MAX_DEPLETION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxDepletion.name"
+      },
+      "G_MAX_GRAVITAS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxGravitas.name"
+      },
+      "G_MAX_VOLCALITH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxVolcalith.name"
+      },
+      "G_MAX_SANDBLAST": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxSandblast.name"
+      },
+      "G_MAX_SNOOZE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxSnooze.name"
+      },
+      "G_MAX_TARTNESS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxTartness.name"
+      },
+      "G_MAX_SWEETNESS": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxSweetness.name"
+      },
+      "G_MAX_SMITE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxSmite.name"
+      },
+      "G_MAX_STEELSURGE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxSteelsurge.name"
+      },
+      "G_MAX_MELTDOWN": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxMeltdown.name"
+      },
+      "G_MAX_FOAM_BURST": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxFoamBurst.name"
+      },
+      "G_MAX_CENTIFERNO": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxCentiferno.name"
+      },
+      "G_MAX_VINE_LASH": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxVineLash.name"
+      },
+      "G_MAX_CANNONADE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxCannonade.name"
+      },
+      "G_MAX_DRUM_SOLO": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxDrumSolo.name"
+      },
+      "G_MAX_FIREBALL": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxFireball.name"
+      },
+      "G_MAX_HYDROSNIPE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxHydrosnipe.name"
+      },
+      "G_MAX_ONE_BLOW": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxOneBlow.name"
+      },
+      "G_MAX_RAPID_FLOW": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "move:gMaxRapidFlow.name"
+      }
+    }
+  },
+  "_fallbacks": {
+    "trainers.red": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "red"
+    },
+    "trainers.lance": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "lance"
+    },
+    "trainers.alder": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "alder"
+    },
+    "trainers.kukui": {
+      "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+      "lang": "en",
+      "file": "trainer-names.json",
+      "key": "kukui"
+    }
+  }
+}

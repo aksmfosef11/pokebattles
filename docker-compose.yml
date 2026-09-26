@@ -1,0 +1,56 @@
+# docker compose up -d --build
+#   game  http://localhost:8080   (client: nginx, forwards /api to the server)
+#   API   http://localhost:8787   (server alone)
+#   db    PostgreSQL, only reachable from the other containers (data in the pokebattles-pg volume)
+# Settings come from the environment or a .env file next to this one (see .env.example).
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-pokebattles}
+      # Change this for any real deployment (set it in .env).
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pokebattles}
+      POSTGRES_DB: ${POSTGRES_DB:-pokebattles}
+    volumes:
+      - pokebattles-pg:/var/lib/postgresql/data
+    # No published port: only the server talks to it. To reach it from the host for debugging, add
+    #   ports: ["127.0.0.1:5432:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  server:
+    build:
+      context: .
+      dockerfile: apps/server/Dockerfile
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-pokebattles}:${POSTGRES_PASSWORD:-pokebattles}@db:5432/${POSTGRES_DB:-pokebattles}
+      PG_POOL_MAX: ${PG_POOL_MAX:-10}
+      ADMIN_TOKEN: ${ADMIN_TOKEN:-}
+      CORS_ORIGIN: ${CORS_ORIGIN:-}
+      REGISTER_PER_HOUR: ${REGISTER_PER_HOUR:-10}
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${SERVER_PORT:-8787}:8787"
+    restart: unless-stopped
+
+  client:
+    build:
+      context: .
+      dockerfile: apps/client/Dockerfile
+      args:
+        VITE_API_URL: ${VITE_API_URL:-}
+    ports:
+      - "${CLIENT_PORT:-8080}:80"
+    depends_on:
+      server:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  pokebattles-pg:
