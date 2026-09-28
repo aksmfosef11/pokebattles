@@ -72,11 +72,13 @@ function EvolutionLines({ state, mon }: { state: RunState; mon: MonView }) {
   if (evos.length === 0) return null;
   const line = (e: EvolutionDef) => {
     const to = tr.species(e.to);
+    // An owned Pokémon shows how far along it is ("3/5"); a shop offer just the count.
+    const battles = e.battles === undefined ? 0 : mon.battles === undefined ? e.battles : `${Math.min(mon.battles, e.battles)}/${e.battles}`;
     if (e.item) return tr.t("ui.evolvesWithItem", { item: tr.itemName(e.item), to });
-    if (e.adjacentType) return tr.t("ui.evolvesNextToType", { type: tr.type(e.adjacentType), to });
-    if (e.onResult === "win") return tr.t("ui.evolvesOnWin", { battles: e.battles ?? 0, to });
-    if (e.onResult === "loss") return tr.t("ui.evolvesOnLoss", { battles: e.battles ?? 0, to });
-    if (e.battles !== undefined) return tr.t("ui.evolvesByBattles", { battles: e.battles, to });
+    if (e.adjacentType) return tr.t("ui.evolvesNextToType", { type: tr.type(e.adjacentType), battles, to });
+    if (e.onResult === "win") return tr.t("ui.evolvesOnWin", { battles, to });
+    if (e.onResult === "loss") return tr.t("ui.evolvesOnLoss", { battles, to });
+    if (e.battles !== undefined) return tr.t("ui.evolvesByBattles", { battles, to });
     const lvl = evolutionLevel(state, { species: mon.species } as PokemonPiece, e);
     return tr.t("ui.evolvesAtLevel", { level: lvl ?? "?", to });
   };

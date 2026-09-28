@@ -136,6 +136,18 @@ describe("board rules", () => {
     expect(species).toContain("SHEDINJA");
   });
 
+  it("friendship evolutions take 5 battles; only a branching one (Eevee) waits for the result", () => {
+    const loss: Parameters<typeof applyRoundResult>[1] = { outcome: "loss", fainted: [], battleGold: 0, opponent: { name: "", champion: "red", ghost: false } };
+    const riolu = mon("RIOLU", 8, 2, 1, { battles: 3 });
+    let s = applyRoundResult(withPieces("cynthia", [riolu]), loss);
+    expect((s.pieces[riolu.uid] as PokemonPiece).species).toBe("RIOLU");
+    s = applyRoundResult(s, loss);
+    expect((s.pieces[riolu.uid] as PokemonPiece).species).toBe("LUCARIO");
+    const eevee = mon("EEVEE", 8, 2, 1, { battles: 4 });
+    const e = applyRoundResult(withPieces("red", [eevee]), loss);
+    expect((e.pieces[eevee.uid] as PokemonPiece).species).toBe("UMBREON");
+  });
+
   it("round 8 asks for a subclass and Steven's mega path grants a Metagrossite", () => {
     let s = createRun({ runId: "r", seed: "s", playerName: "p", champion: "steven" });
     for (let i = 0; i < 7; i++) {

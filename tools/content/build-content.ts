@@ -567,9 +567,13 @@ function convertEvolution(fromKey: string, e: RawEvolution): Record<string, unkn
     return [{ to: e.to, level, ...(BRANCH_BY_RESULT[e.to] ? { onResult: BRANCH_BY_RESULT[e.to] } : {}) }];
   }
   if (friendship) {
-    out.battles = (friendship.value ?? 70) >= 100 ? 8 : 6;
-    if (time?.time?.some((t) => t === "DAWN" || t === "DAY")) out.onResult = "win";
-    if (time?.time?.some((t) => t === "DUSK" || t === "NIGHT")) out.onResult = "loss";
+    // Every friendship evolution takes 5 battles (high-friendship ones took 8: Riolu evolved in 1 of 4 live runs).
+    out.battles = 5;
+    // Day / night becomes the battle result only where it picks a branch (Espeon / Umbreon); on a single
+    // evolution (Riolu, Budew, Snom) it only held the evolution back until a run's next win or loss.
+    const friendshipBranches = rosterEvolutions(fromKey).filter((x) => x.conditionData?.some((c) => c.key === "FRIENDSHIP")).length;
+    if (friendshipBranches > 1 && time?.time?.some((t) => t === "DAWN" || t === "DAY")) out.onResult = "win";
+    if (friendshipBranches > 1 && time?.time?.some((t) => t === "DUSK" || t === "NIGHT")) out.onResult = "loss";
     if (moveType?.pkmnType) out.adjacentType = moveType.pkmnType.toLowerCase();
     return [out];
   }

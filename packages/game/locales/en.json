@@ -52,7 +52,7 @@
     "evolvesByBattles": "{{battles}} battles → {{to}}",
     "evolvesOnWin": "Win after {{battles}} battles → {{to}}",
     "evolvesOnLoss": "Lose after {{battles}} battles → {{to}}",
-    "evolvesNextToType": "Next to a {{type}} type → {{to}}",
+    "evolvesNextToType": "{{battles}} battles + next to a {{type}} type → {{to}}",
     "evolutionPending": "Evolution waiting: not enough room",
     "ace": "Ace",
     "setAce": "Make ace",
@@ -694,6 +694,14 @@
     "new": "NEW",
     "older": "Earlier patches",
     "entries": [
+      {
+        "date": "2026-09-28 (3)",
+        "items": [
+          "Balance: every battle-count evolution (Riolu, Eevee, Chansey, Togepi…) now takes 5 battles. Riolu, Eevee, Chansey and Swadloon, which needed 8, speed up the most",
+          "Riolu, Budew and Snom no longer wait for a win or loss: they evolve right after their 5th battle (Espeon and Umbreon still split by win or loss)",
+          "Pokémon info shows how many battles are left before evolving (e.g. 3/5 battles)"
+        ]
+      },
       {
         "date": "2026-09-28 (2)",
         "items": [
