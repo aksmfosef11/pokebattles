@@ -412,6 +412,22 @@ describe("balance statistics", () => {
   });
 });
 
+describe("opponent preview", () => {
+  it("previews this round's and the next round's champion and keeps to them", async () => {
+    const token = await player("red");
+    let state = (await json("/api/runs", token, { champion: "red" })).state;
+    expect(state.upcoming).toHaveLength(2);
+    expect(state.matchup).toBeUndefined();
+    const shown = state.upcoming;
+    expect((await json(`/api/runs/${state.runId}`, token)).state.upcoming).toEqual(shown);
+    const turn = await json(`/api/runs/${state.runId}/turn`, token, { round: 1, actions: [] });
+    expect(turn.battle.opponent.champion).toBe(shown[0].champion);
+    state = turn.state;
+    expect(state.matchup).toBeUndefined();
+    if (state.phase !== "ended") expect(state.upcoming[0]).toMatchObject({ round: 2, champion: shown[1].champion });
+  });
+});
+
 describe("tampered clients", () => {
   it("never see the seed", async () => {
     const token = await player("red");

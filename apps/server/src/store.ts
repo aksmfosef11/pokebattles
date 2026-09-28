@@ -95,6 +95,21 @@ function runFromRow(row: RunDbRow): RunRecord {
   };
 }
 
+function ghostFromRow(r: GhostDbRow): GhostRecord {
+  return {
+    id: r.id,
+    runId: r.run_id,
+    playerId: r.player_id,
+    round: Number(r.round),
+    wins: Number(r.wins),
+    losses: Number(r.losses),
+    team: r.team,
+    createdAt: Number(r.created_at),
+    ranked: r.ranked,
+    rating: r.rating === null ? null : Number(r.rating),
+  };
+}
+
 function userFromRow(row: UserDbRow): UserRow {
   return { id: row.id, username: row.username, password: row.password, profile: normalizeProfile(row.profile), createdAt: Number(row.created_at) };
 }
@@ -334,6 +349,11 @@ export class PgStore implements GameStore {
     );
   }
 
+  async getGhost(id: string): Promise<GhostRecord | null> {
+    const [r] = await this.db.query<GhostDbRow>("SELECT * FROM ghosts WHERE id = $1", [id]);
+    return r ? ghostFromRow(r) : null;
+  }
+
   async findGhosts(round: number, playerId: string, limit: number, ranked: boolean, ratings?: RatingRange): Promise<GhostRecord[]> {
     // Each player's latest ghost among the round's most recent ones (in the rating range, if any): many
     // runs (or a flood of empty runs) from one account still count as one opponent.
@@ -347,18 +367,7 @@ export class PgStore implements GameStore {
       [round, ranked, playerId, GHOST_SCAN, limit, ratings?.min ?? null, ratings?.max ?? null, META_RULES.startRating],
     );
     // Oldest first so the matchmaker's weighted pick is stable for a given pool.
-    return rows.reverse().map((r) => ({
-      id: r.id,
-      runId: r.run_id,
-      playerId: r.player_id,
-      round: Number(r.round),
-      wins: Number(r.wins),
-      losses: Number(r.losses),
-      team: r.team,
-      createdAt: Number(r.created_at),
-      ranked: r.ranked,
-      rating: r.rating === null ? null : Number(r.rating),
-    }));
+    return rows.reverse().map(ghostFromRow);
   }
 
   async addBattle(b: BattleRecord): Promise<void> {

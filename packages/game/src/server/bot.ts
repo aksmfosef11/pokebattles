@@ -419,8 +419,13 @@ export function luckyBotTeam(seed: string, round: number, luck: BotLuck, champio
   return runs.reduce((a, b) => ((luck.strongest ? roughPower(b) > roughPower(a) : roughPower(b) < roughPower(a)) ? b : a));
 }
 
+/** The ranked bot luck closest to `rating` in strength. */
+export function botLuckForRating(rating: number): BotLuck {
+  return BOT_LUCK.reduce((a, b) => (Math.abs(BOT_RATINGS[b.key]! - rating) < Math.abs(BOT_RATINGS[a.key]! - rating) ? b : a));
+}
+
 /** The ranked bot closest to `rating` in strength, and its rating (the Elo opponent it counts as). */
 export function rankedBot(seed: string, round: number, rating: number): { team: TeamSnapshot; rating: number } {
-  const luck = BOT_LUCK.reduce((a, b) => (Math.abs(BOT_RATINGS[b.key]! - rating) < Math.abs(BOT_RATINGS[a.key]! - rating) ? b : a));
+  const luck = botLuckForRating(rating);
   return { team: luckyBotTeam(seed, round, luck), rating: BOT_RATINGS[luck.key]! };
 }

@@ -25,6 +25,9 @@ import {
   RUN_STATE_VERSION,
   applyActions,
   battleLog,
+  loadRun,
+  PREVIEW_BATTLES,
+  publicState,
   offerKey,
   replayShop,
   slotPrice,
@@ -283,6 +286,45 @@ describe("server logic", () => {
       expect(b.detail?.battlers.length).toBeGreaterThan(0);
       expect(b.shop?.goldStart).toBeGreaterThan(0);
     }
+  });
+});
+
+describe("opponent preview", () => {
+  it("shows the coming opponents and keeps to them", async () => {
+    const store = new MemoryStore();
+    // Ghosts of rounds 1–3 from other players, so matchmaking has real opponents to preview.
+    for (const [i, champion] of (["red", "lance", "cynthia", "alder"] as const).entries()) {
+      for (const round of [1, 2, 3]) {
+        await store.addGhost({ id: `g${i}:${round}`, runId: `g${i}`, playerId: `other${i}`, round, wins: 0, losses: round - 1, team: botTeam(`pv-${i}-${round}`, round, champion), createdAt: i });
+      }
+    }
+    let state = await startRun(store, { playerId: "me", playerName: "me", champion: "steven" });
+    expect(state.upcoming?.map((u) => u.round)).toEqual(Array.from({ length: PREVIEW_BATTLES }, (_, i) => i + 1));
+    // The fixed opponent itself never reaches the player; its champion does.
+    expect(state.matchup?.round).toBe(1);
+    expect(publicState(state).matchup).toBeUndefined();
+    expect(publicState(state).upcoming).toEqual(state.upcoming);
+    for (let round = 1; round <= 3 && state.phase !== "ended"; round++) {
+      const shown = state.upcoming!;
+      // Reloading shows the same preview.
+      expect((await loadRun(store, { playerId: "me", runId: state.runId })).upcoming).toEqual(shown);
+      const turn = await playRound(store, { playerId: "me", runId: state.runId, round, actions: [] });
+      expect(turn.battle.opponent.ghost).toBe(true);
+      expect(turn.battle.opponent.champion).toBe(shown[0]!.champion);
+      state = turn.state;
+      // What was previewed for the next round is who that round brings.
+      if (state.phase !== "ended") expect(state.upcoming![0]).toMatchObject({ round: round + 1, champion: shown[1]!.champion });
+    }
+  });
+
+  it("falls back to a bot of the previewed champion", async () => {
+    const store = new MemoryStore();
+    const state = await startRun(store, { playerId: "solo", playerName: "solo", champion: "red" });
+    const [first, second] = state.upcoming!;
+    expect(state.matchup?.ghostId).toBeNull();
+    const turn = await playRound(store, { playerId: "solo", runId: state.runId, round: 1, actions: [] });
+    expect(turn.battle.opponent).toMatchObject({ ghost: false, champion: first!.champion });
+    expect(turn.state.upcoming![0]!.champion).toBe(second!.champion);
   });
 });
 

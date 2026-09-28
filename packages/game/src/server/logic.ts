@@ -1,17 +1,28 @@
 import { inBoard } from "../board.ts";
 import { battleLog, type BattleLog } from "../battle/log.ts";
 import { simulateBattle } from "../battle/sim.ts";
-import { CHAMPIONS, type ChampionKey } from "../content/champions.ts";
+import { CHAMPIONS, type ChampionKey, type SubclassKey } from "../content/champions.ts";
 import { randomSeed, rngFor } from "../rng.ts";
 import { cellsOf } from "../run/layout.ts";
 import { migrateRun } from "../run/migrate.ts";
 import { applyRoundResult, prepareForBattle, snapshotTeam } from "../run/progression.ts";
 import { applyActions, createRun, type StartItem } from "../run/reducer.ts";
+import { MAX_ROUNDS, SUBCLASS_ROUND } from "../run/shop.ts";
 import { replayShop, type ShopLog } from "../run/shoplog.ts";
 import type { StarterSetup } from "../run/pokemon.ts";
-import { GameError, type Action, type BattleOutcome, type Notice, type RunState, type TeamCosmetics, type TeamSnapshot } from "../run/types.ts";
+import {
+  GameError,
+  type Action,
+  type BattleOutcome,
+  type Matchup,
+  type Notice,
+  type RunState,
+  type TeamCosmetics,
+  type TeamSnapshot,
+  type UpcomingOpponent,
+} from "../run/types.ts";
 import { META_RULES, type RunReward } from "../meta/progress.ts";
-import { botTeam, rankedBot } from "./bot.ts";
+import { BOT_LUCK, BOT_RATINGS, botLuckForRating, botTeam, luckyBotTeam, randomChampion } from "./bot.ts";
 
 export interface RunRecord {
   runId: string;
@@ -76,6 +87,7 @@ export interface GameStore {
    * `ratings`, only ghosts saved at a rating in that range (a missing rating counts as the start rating).
    */
   findGhosts(round: number, playerId: string, limit: number, ranked: boolean, ratings?: RatingRange): Promise<GhostRecord[]>;
+  getGhost(id: string): Promise<GhostRecord | null>;
   addBattle(battle: BattleRecord): Promise<void>;
 }
 
@@ -113,10 +125,12 @@ export const MAX_ACTIONS_PER_TURN = 500;
 
 /**
  * What a player may see of their run: everything but the seed, which decides future rerolls,
- * Poké Ball results and bot opponents. A state without a seed refuses those actions locally.
+ * Poké Ball results and bot opponents, and the opponent fixed for this round (only its champion shows,
+ * in `upcoming`). A state without a seed refuses those actions locally.
  */
 export function publicState(state: RunState): RunState {
-  return { ...state, seed: "" };
+  const { matchup: _hidden, ...shown } = state;
+  return { ...shown, seed: "" };
 }
 
 async function ownRun(store: GameStore, playerId: string, runId: string): Promise<RunRecord> {
@@ -174,6 +188,8 @@ export async function startRun(
     playerName: string;
     champion: ChampionKey;
     seed?: string;
+    /** Ranked runs: the player's rating, for the opponents previewed from round 1. */
+    rating?: number;
     /** Pool lines this player has not unlocked (meta/progress.ts runOptionsFor). */
     lockedLines?: readonly string[];
     ranked?: boolean;
@@ -187,7 +203,7 @@ export async function startRun(
 ): Promise<RunState> {
   if (!CHAMPIONS[params.champion]) throw new GameError("invalid_champion");
   const runId = randomSeed().slice(0, 20);
-  const state = createRun({
+  const created = createRun({
     runId,
     seed: params.seed ?? randomSeed(),
     playerName: sanitizeName(params.playerName),
@@ -198,9 +214,92 @@ export async function startRun(
     ...(params.startItems?.length ? { startItems: params.startItems } : {}),
     ...(params.cosmetics ? { cosmetics: params.cosmetics } : {}),
   });
+  const rating = params.ranked ? (params.rating ?? META_RULES.startRating) : null;
+  const state = await planRound(store, created, params.playerId, rating);
   const now = Date.now();
   await store.putRun({ runId, playerId: params.playerId, state, createdAt: now, updatedAt: now });
   return state;
+}
+
+// ───────────────────────────── opponents, fixed ahead (docs/DESIGN.md §7)
+
+/** Battles whose opponent the player sees before the shop: this round's and the next round's. */
+export const PREVIEW_BATTLES = 2;
+/** Recent players' ghosts looked at when drawing or fixing an opponent. */
+const MATCH_POOL = 100;
+
+/** Ghosts matchmaking may pick for `round`: other players' latest, of the run's mode, near the rating (ranked). */
+async function candidateGhosts(store: GameStore, state: RunState, playerId: string, round: number, rating: number | null): Promise<GhostRecord[]> {
+  const window = rating === null ? undefined : { min: rating - META_RULES.ratingWindow, max: rating + META_RULES.ratingWindow };
+  return (await store.findGhosts(round, playerId, MATCH_POOL, !!state.ranked, window)).filter((g) => snapshotFitsBoard(g.team));
+}
+
+/** The bot a matchup without a ghost stands for, rebuilt the same way whenever it is needed. */
+function botOpponent(state: RunState, m: Matchup): TeamSnapshot {
+  const seed = `${state.seed}:${m.round}`;
+  const luck = m.botLuck ? BOT_LUCK.find((l) => l.key === m.botLuck) : undefined;
+  return luck ? luckyBotTeam(seed, m.round, luck, m.champion) : botTeam(seed, m.round, m.champion);
+}
+
+/**
+ * Fixes this round's opponent: the ghost matchmaking picks (closest in wins, and in rating when ranked)
+ * among those of the champion previewed for this round, or a bot of that champion when there are none.
+ */
+async function fixMatchup(
+  store: GameStore,
+  state: RunState,
+  playerId: string,
+  rating: number | null,
+): Promise<{ matchup: Matchup; subclass: SubclassKey | null }> {
+  const round = state.round;
+  const previewed = state.upcoming?.find((u) => u.round === round)?.champion;
+  const pool = await candidateGhosts(store, state, playerId, round, rating);
+  const eligible = previewed ? pool.filter((g) => g.team.champion === previewed) : pool;
+  if (eligible.length > 0) {
+    const closeness = (g: GhostRecord) =>
+      (1 / (1 + Math.abs(g.wins - state.wins))) * (rating !== null ? 1 / (1 + Math.abs(ghostRating(g) - rating) / 100) : 1);
+    const pick = rngFor(state.seed, "match", round).weighted(eligible.map((g) => [g, closeness(g)] as const));
+    return { matchup: { round, champion: pick.team.champion, ghostId: pick.id }, subclass: pick.team.subclass };
+  }
+  const matchup: Matchup = {
+    round,
+    champion: previewed ?? randomChampion(rngFor(state.seed, "bot-champion", round)),
+    ghostId: null,
+    ...(rating !== null ? { botLuck: botLuckForRating(rating).key } : {}),
+  };
+  // Bots only choose a subclass from round 8, so only then is one built early to show it.
+  return { matchup, subclass: round >= SUBCLASS_ROUND ? botOpponent(state, matchup).subclass : null };
+}
+
+/** A later round's champion, in proportion to the players' ghosts matchmaking would draw from now. */
+async function drawChampion(store: GameStore, state: RunState, playerId: string, round: number, rating: number | null): Promise<ChampionKey> {
+  const rng = rngFor(state.seed, "preview", round);
+  const pool = await candidateGhosts(store, state, playerId, round, rating);
+  return pool.length > 0 ? rng.pick(pool).team.champion : randomChampion(rng);
+}
+
+/**
+ * At the start of a round: fixes its opponent and previews the next round's champion. Entries already
+ * drawn stay as they are, so the preview a player saw is the opponent they meet (reloading changes
+ * nothing). The next round's ghost is only chosen when that round starts, among ghosts of the previewed
+ * champion, so matchmaking still goes by the wins the player has by then.
+ */
+export async function planRound(store: GameStore, state: RunState, playerId: string, rating: number | null): Promise<RunState> {
+  if (state.phase === "ended") {
+    const { upcoming: _upcoming, matchup: _matchup, ...rest } = state;
+    return rest;
+  }
+  let upcoming: UpcomingOpponent[] = (state.upcoming ?? []).filter((u) => u.round >= state.round);
+  let matchup = state.matchup?.round === state.round ? state.matchup : undefined;
+  if (!matchup) {
+    const fixed = await fixMatchup(store, { ...state, upcoming }, playerId, rating);
+    matchup = fixed.matchup;
+    upcoming = [{ round: state.round, champion: matchup.champion, subclass: fixed.subclass }, ...upcoming.filter((u) => u.round !== state.round)];
+  }
+  for (let round = state.round + 1; round < state.round + PREVIEW_BATTLES && round <= MAX_ROUNDS; round++) {
+    if (!upcoming.some((u) => u.round === round)) upcoming.push({ round, champion: await drawChampion(store, state, playerId, round, rating) });
+  }
+  return { ...state, matchup, upcoming: upcoming.sort((a, b) => a.round - b.round) };
 }
 
 function battleOutcome(winner: 0 | 1 | null): BattleOutcome {
@@ -229,29 +328,24 @@ export async function playRound(
   const prepared = prepareForBattle(afterShop);
   const you = snapshotTeam(prepared);
 
-  const matchRng = rngFor(current.seed, "match", current.round);
-  // Ghosts saved before the board shrank may not fit it any more.
   const ranked = !!current.ranked;
   const rating = ranked ? (params.rating ?? META_RULES.startRating) : null;
-  const window = rating === null ? undefined : { min: rating - META_RULES.ratingWindow, max: rating + META_RULES.ratingWindow };
-  const ghosts = (await store.findGhosts(current.round, params.playerId, 30, ranked, window)).filter((g) => snapshotFitsBoard(g.team));
+  // Fixed when the round started (planRound); a run from before previews fixes it now.
+  const matchup = (current.matchup?.round === current.round ? current : await planRound(store, current, params.playerId, rating)).matchup!;
+  const ghost = matchup.ghostId ? await store.getGhost(matchup.ghostId) : null;
   let opponentTeam: TeamSnapshot;
   let ghostId: string | null = null;
   let opponent: OpponentInfo;
-  if (ghosts.length > 0) {
-    const closeness = (g: GhostRecord) =>
-      (1 / (1 + Math.abs(g.wins - current.wins))) * (rating !== null ? 1 / (1 + Math.abs(ghostRating(g) - rating) / 100) : 1);
-    const pick = matchRng.weighted(ghosts.map((g) => [g, closeness(g)] as const));
-    opponentTeam = pick.team;
-    ghostId = pick.id;
-    opponent = { name: pick.team.name, champion: pick.team.champion, ghost: true, ...(rating !== null ? { rating: ghostRating(pick) } : {}) };
-  } else if (rating !== null) {
-    const bot = rankedBot(`${current.seed}:${current.round}`, current.round, rating);
-    opponentTeam = bot.team;
-    opponent = { name: "", champion: bot.team.champion, ghost: false, rating: bot.rating };
+  // Ghosts saved before the board shrank may not fit it any more.
+  if (ghost && snapshotFitsBoard(ghost.team)) {
+    opponentTeam = ghost.team;
+    ghostId = ghost.id;
+    opponent = { name: ghost.team.name, champion: ghost.team.champion, ghost: true, ...(rating !== null ? { rating: ghostRating(ghost) } : {}) };
   } else {
-    opponentTeam = botTeam(`${current.seed}:${current.round}`, current.round);
-    opponent = { name: "", champion: opponentTeam.champion, ghost: false };
+    // A bot, or a ghost gone since it was picked (the offline store keeps the latest 400): a bot of that champion.
+    const bot: Matchup = { ...matchup, ghostId: null, ...(rating !== null && !matchup.botLuck ? { botLuck: botLuckForRating(rating).key } : {}) };
+    opponentTeam = botOpponent(current, bot);
+    opponent = { name: "", champion: opponentTeam.champion, ghost: false, ...(bot.botLuck ? { rating: BOT_RATINGS[bot.botLuck]! } : {}) };
   }
 
   const now = Date.now();
@@ -276,12 +370,12 @@ export async function playRound(
   const teams: [TeamSnapshot, TeamSnapshot] = [you, opponentTeam];
   const result = simulateBattle({ seed, teams });
   const outcome = battleOutcome(result.winner);
-  const next = applyRoundResult(prepared, {
-    outcome,
-    fainted: result.fainted[0],
-    battleGold: result.rewards[0].gold,
-    opponent,
-  });
+  const next = await planRound(
+    store,
+    applyRoundResult(prepared, { outcome, fainted: result.fainted[0], battleGold: result.rewards[0].gold, opponent }),
+    params.playerId,
+    rating,
+  );
   await store.putRun({ ...record, state: next, pending: [], updatedAt: now });
   await store.addBattle({
     id: `${current.runId}:${current.round}`,
@@ -316,6 +410,10 @@ export class MemoryStore implements GameStore {
     this.ghosts = this.ghosts.filter((g) => g.id !== ghost.id);
     this.ghosts.push(structuredClone(ghost));
     if (this.ghosts.length > 400) this.ghosts.splice(0, this.ghosts.length - 400);
+  }
+  async getGhost(id: string) {
+    const g = this.ghosts.find((x) => x.id === id);
+    return g ? structuredClone(g) : null;
   }
   async findGhosts(round: number, playerId: string, limit: number, ranked: boolean, ratings?: RatingRange) {
     const inRange = (g: GhostRecord) => !ratings || (ghostRating(g) >= ratings.min && ghostRating(g) <= ratings.max);

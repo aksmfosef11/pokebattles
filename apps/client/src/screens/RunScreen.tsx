@@ -698,6 +698,13 @@ export function RunScreen({
 
   const hint = coarse ? tr.t("ui.touchHint") : tr.t("ui.controlsHint");
   const nextCap = PARTY_CAP_STEPS.find(([from]) => from > state.round);
+  // Who the coming battles are against (fixed by the server when the round starts).
+  const upcoming = state.upcoming ?? [];
+  const foeName = (u: (typeof upcoming)[number]) => `${tr.trainer(u.champion)}${u.subclass ? ` · ${tr.t(`subclass.${u.subclass}.name`)}` : ""}`;
+  const previewTitle = [
+    ...upcoming.map((u, i) => `${tr.t(i === 0 ? "ui.opponentNow" : "ui.opponentNext")}: ${foeName(u)}`),
+    tr.t("ui.opponentPreview"),
+  ].join("\n");
 
   return (
     <ShinyLines.Provider value={state.cosmetics?.shinyLines}>
@@ -712,6 +719,23 @@ export function RunScreen({
             </span>
           </div>
           <div className="stat-chip">{compact ? tr.t("ui.roundShort", { n: state.round }) : tr.t("ui.roundOf", { n: state.round, max: MAX_ROUNDS })}</div>
+          {upcoming.length > 0 && (
+            // Phones show only the champions' faces; the names are in the title / label.
+            <div className="stat-chip upcoming" title={previewTitle} aria-label={previewTitle}>
+              ⚔
+              {upcoming.map((u, i) => (
+                <span key={u.round} className={`upcoming-foe ${i === 0 ? "now" : "later"}`}>
+                  {i > 0 && <span className="muted">›</span>}
+                  <TrainerSprite champion={u.champion} width={compact ? 16 : 20} height={compact ? 18 : 22} />
+                  {!compact && (
+                    <span>
+                      <span className="muted small">{tr.t(i === 0 ? "ui.opponentNow" : "ui.opponentNext")}</span> {foeName(u)}
+                    </span>
+                  )}
+                </span>
+              ))}
+            </div>
+          )}
           <div className="stat-chip gold" title={tr.t("ui.gold")}>
             ◎ {state.gold}G
           </div>

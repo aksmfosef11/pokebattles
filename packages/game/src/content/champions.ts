@@ -147,12 +147,21 @@ export function earlyBonus(bonus: number, perRound: number, round: number): numb
 export const CHAMPION_RULES = {
   red: {
     aceCritStages: 2,
+    /**
+     * Extra levels for the ace after the battles of every `aceExtraLevelEvery`-th round (2: rounds 2, 4, 6, …).
+     * Every round until 2026-09-28: stacked with half-price Rare Candy and level items it put the ace 7–13 levels
+     * above its team by rounds 5–8 and made Red the strongest champion in live play (Pikachu did 60% of Red's
+     * damage in rounds 1–9). Dropping it entirely cut Red's bot strength at rounds 8/14 from 52/47% to 33/34%.
+     */
     aceExtraLevels: 1,
+    aceExtraLevelEvery: 2,
     aceWinStatBonus: 0.04,
     /** The ace's win bonus stops growing here (5 wins), so one perfect run cannot run away with it. */
-    aceWinStatCap: 0.15,
+    aceWinStatCap: 0.2,
     rareCandyPriceMultiplier: 0.5,
     pikachuElectricMultiplier: 1.5,
+    /** Light Ball: Pikachu's Attack and Sp. Atk. */
+    lightBallMultiplier: 2,
   },
   lance: {
     dragonEvoLevelMultiplier: 0.7,

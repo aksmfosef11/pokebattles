@@ -1,6 +1,6 @@
 import { BERRY_POUCH_SAVE_CHANCE, touches } from "../board.ts";
 import { CHAMPION_RULES, isLanceKin } from "../content/champions.ts";
-import { CONTENT, getMove, getSpecies, RESIST_BERRIES } from "../content/index.ts";
+import { CONTENT, getMove, getSpecies, ITEMS, RESIST_BERRIES } from "../content/index.ts";
 import type { MoveDef, MoveEffect, StageStat, StatusKey, Stats, Terrain, TypeKey, Weather } from "../content/schema.ts";
 import { rngFor, type Rng } from "../rng.ts";
 import { calcStats } from "../stats.ts";
@@ -1616,6 +1616,11 @@ export class BattleSim {
     if (!pouchSaves) b.items.uses.set(item, left - 1);
     b.items.uses.set("__consumed", (b.items.uses.get("__consumed") ?? 0) + 1);
     this.emit({ k: "item", src: b.id, item });
+    // Cheek Pouch: every berry eaten also restores a third of max HP.
+    if (b.ability === "CHEEK_POUCH" && b.alive && ITEMS[item]?.family === "berry") {
+      this.emit({ k: "ability", src: b.id, ability: "CHEEK_POUCH" });
+      this.heal(b, Math.floor(b.maxHp / 3), "ability");
+    }
   }
 
   private onKo(att: Battler, def: Battler): void {

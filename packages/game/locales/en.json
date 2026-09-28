@@ -215,6 +215,9 @@
     "undoSell": "Undo sale",
     "undoSellHint": "{{name}} · {{gold}}G",
     "roundShort": "R{{n}}",
+    "opponentNow": "This round",
+    "opponentNext": "Next",
+    "opponentPreview": "Champions you face in this round's battle and the next. Opponents are fixed when a round starts, and the next battle's champion will not change either.",
     "sound": "Sound",
     "bgmVolume": "Music",
     "seVolume": "Effects",
@@ -226,7 +229,7 @@
     "red": {
       "concept": "Raise an ace",
       "passiveName": "Ace",
-      "passive": "Mark one Pokémon as your ace. It gets +2 crit stages and 1 extra level after each battle, and every win permanently raises all its stats by 4% (up to +15%). Red buys Rare Candy at half price."
+      "passive": "Mark one Pokémon as your ace. It gets +2 crit stages and 1 extra level after the battles of even rounds, and every win permanently raises all its stats by 4% (up to +20%). Red buys Rare Candy at half price."
     },
     "lance": {
       "concept": "Dragons and rage",
@@ -691,6 +694,15 @@
     "new": "NEW",
     "older": "Earlier patches",
     "entries": [
+      {
+        "date": "2026-09-28 (2)",
+        "items": [
+          "Diantha's shop gets Bunnelby and Diggersby (Normal/Ground), her first answer to Red's Electric Pokémon",
+          "Lance's shop now has Phanpy and Skarmory, and Kukui's Mudbray, from the start (no unlocking needed)",
+          "Opponent preview: the top bar shows the champions of this round's battle and the next. Opponents are fixed when a round starts, so you can prepare for them",
+          "Balance: Red's ace gains its extra level every other battle (even rounds) instead of after every battle; its win bonus now goes up to +20% (was +15%)"
+        ]
+      },
       {
         "date": "2026-09-28",
         "items": [

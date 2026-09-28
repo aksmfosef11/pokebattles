@@ -161,8 +161,8 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
     }
     const n = (k: string) => items.counts.get(k) ?? 0;
     if (piece.species === "PIKACHU" && n("LIGHT_BALL") > 0) {
-      stats.atk *= 2;
-      stats.spa *= 2;
+      stats.atk *= CHAMPION_RULES.red.lightBallMultiplier;
+      stats.spa *= CHAMPION_RULES.red.lightBallMultiplier;
     }
     stats.atk *= stackMul(1.5, n("CHOICE_BAND"));
     stats.spa *= stackMul(1.5, n("CHOICE_SPECS"));

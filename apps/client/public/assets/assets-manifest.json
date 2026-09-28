@@ -18,12 +18,12 @@
     "teraShards": "PokéRogue has per-type icons (<type>_tera_shard frames) and a templated name '{{teraType}} Tera Shard' (see i18n itemTemplates.TERA_SHARD); there is no generic TERA_SHARD icon or name."
   },
   "counts": {
-    "rosterSpecies": 429,
-    "formsWithSprites": 565,
-    "files": 4651
+    "rosterSpecies": 431,
+    "formsWithSprites": 567,
+    "files": 4667
   },
   "bytes": {
-    "total": 103531902,
+    "total": 103640109,
     "byDir": {
       "arenas": {
         "files": 36,
@@ -62,24 +62,24 @@
         "bytes": 66390
       },
       "pokemon/back-shiny": {
-        "files": 1112,
-        "bytes": 16691517
+        "files": 1116,
+        "bytes": 16705763
       },
       "pokemon/back": {
-        "files": 1112,
-        "bytes": 16618045
+        "files": 1116,
+        "bytes": 16631970
       },
       "pokemon/front-shiny": {
-        "files": 1112,
-        "bytes": 18371415
+        "files": 1116,
+        "bytes": 18411248
       },
       "pokemon/front": {
-        "files": 1112,
-        "bytes": 18237298
+        "files": 1116,
+        "bytes": 18277008
       },
       "pokemon/manifest.json": {
         "files": 1,
-        "bytes": 135739
+        "bytes": 136232
       },
       "trainers": {
         "files": 19,
@@ -532,7 +532,7 @@
       "987 frontShiny: PokéRogue recolors the base sprite with variant/987.json (masterlist v0=1); copied shiny/ file instead",
       "987 backShiny: PokéRogue recolors the base sprite with variant/back/987.json (masterlist v0=1); copied shiny/ file instead"
     ],
-    "animatedExpSprites": 613,
+    "animatedExpSprites": 621,
     "staticSprites": [
       "3-mega",
       "3-gigantamax",

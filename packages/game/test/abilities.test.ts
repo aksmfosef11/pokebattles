@@ -292,3 +292,21 @@ describe("abilities added with the 420-species roster", () => {
     expect(r.events.some((e) => e.k === "status" && e.target === 1 && e.status === "brn")).toBe(true);
   });
 });
+
+describe("Cheek Pouch", () => {
+  it("heals a third of max HP on top of the berry", () => {
+    const heals = (ability: string) => {
+      const r = simulateBattle({
+        seed: "cheek",
+        teams: [
+          team([mon("DIGGERSBY", 40, 3, 1, { ability, moves: ["TACKLE"] }), item("SITRUS_BERRY", 3, 2)]),
+          team([mon("MACHAMP", 60, 3, 1, { moves: ["CROSS_CHOP"] })]),
+        ],
+      });
+      const holder = r.initial.find((b) => b.side === 0)!.id;
+      return r.events.filter((e) => e.k === "heal" && e.target === holder && e.cause === "ability").length;
+    };
+    expect(heals("CHEEK_POUCH")).toBe(1);
+    expect(heals("PICKUP")).toBe(0);
+  });
+});

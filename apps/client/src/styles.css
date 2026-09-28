@@ -438,6 +438,22 @@ select {
 .stat-chip.streak {
   color: #ffa75a;
 }
+.stat-chip.upcoming {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.upcoming-foe {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.upcoming-foe.later {
+  opacity: 0.75;
+}
+.upcoming-foe canvas {
+  display: block;
+}
 .run-main {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 340px;

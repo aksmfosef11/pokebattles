@@ -193,7 +193,7 @@ export function applyRoundResult(prev: RunState, result: RoundResult): RunState 
     if (fainted.has(mon.uid)) gain -= 1;
     gain += LUCKY_EGG_LEVELS * n("LUCKY_EGG") + EXP_SHARE_LEVELS * n("EXP_SHARE") + MACHO_BRACE_LEVELS * n("MACHO_BRACE");
     if (state.champion === "red" && state.ace === mon.uid) {
-      gain += CHAMPION_RULES.red.aceExtraLevels;
+      if (state.round % CHAMPION_RULES.red.aceExtraLevelEvery === 0) gain += CHAMPION_RULES.red.aceExtraLevels;
       if (outcome === "win") mon.aceBonus = Math.min(CHAMPION_RULES.red.aceWinStatCap, mon.aceBonus + CHAMPION_RULES.red.aceWinStatBonus);
     }
     const before = mon.level;

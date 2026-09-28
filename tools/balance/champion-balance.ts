@@ -283,7 +283,9 @@ function layout(plan: Plan, cands: Map<string, Candidate>, champion: ChampionKey
   plan.mons.forEach((m, i) => {
     const c = cands.get(m.species)!;
     let level = c.level;
-    if (champion === "red" && i === 0) level = Math.min(100, level + CHAMPION_RULES.red.aceExtraLevels * (wins + losses));
+    if (champion === "red" && i === 0) {
+      level = Math.min(100, level + CHAMPION_RULES.red.aceExtraLevels * Math.floor((wins + losses) / CHAMPION_RULES.red.aceExtraLevelEvery));
+    }
     const mon = newPokemon(`m${i}`, m.species, level, traitsFor(m.species, m.ability), 0, moveSlotsFor(plan.subclass));
     if (champion === "red" && i === 0) mon.aceBonus = Math.min(CHAMPION_RULES.red.aceWinStatCap, CHAMPION_RULES.red.aceWinStatBonus * wins);
     monUids.push(mon.uid);

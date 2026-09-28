@@ -127,6 +127,30 @@ export interface RunState {
   ranked?: boolean;
   /** The player's looks when the run started; copied into its ghosts. */
   cosmetics?: TeamCosmetics;
+  /**
+   * Who the coming battles are against, as the player sees them (server/logic.ts planRound): this round's
+   * opponent and the next round's champion. Fixed when drawn, so reloading cannot change them.
+   */
+  upcoming?: UpcomingOpponent[];
+  /** This round's opponent itself, fixed when the round starts. Server only: publicState removes it. */
+  matchup?: Matchup;
+}
+
+/** A coming battle's opponent as the player sees it before the battle. */
+export interface UpcomingOpponent {
+  round: number;
+  champion: ChampionKey;
+  /** Known once that round's opponent is fixed (and it has chosen one, from round 8). */
+  subclass?: SubclassKey | null;
+}
+
+/** The opponent fixed for a round: another player's ghost, or a bot built from the run seed. */
+export interface Matchup {
+  round: number;
+  champion: ChampionKey;
+  ghostId: string | null;
+  /** Ranked bots: the luck (server/bot.ts BOT_LUCK key) matching the player's rating when it was drawn. */
+  botLuck?: string;
 }
 
 /** Looks a player bought with points (meta/cosmetics.ts). Display only: the battle never reads them. */

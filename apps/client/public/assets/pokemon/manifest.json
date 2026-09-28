@@ -5533,5 +5533,27 @@
         "backShiny": "pokemon/back-shiny/1006"
       }
     }
+  },
+  "BUNNELBY": {
+    "id": 659,
+    "forms": {
+      "": {
+        "front": "pokemon/front/659",
+        "back": "pokemon/back/659",
+        "frontShiny": "pokemon/front-shiny/659",
+        "backShiny": "pokemon/back-shiny/659"
+      }
+    }
+  },
+  "DIGGERSBY": {
+    "id": 660,
+    "forms": {
+      "": {
+        "front": "pokemon/front/660",
+        "back": "pokemon/back/660",
+        "frontShiny": "pokemon/front-shiny/660",
+        "backShiny": "pokemon/back-shiny/660"
+      }
+    }
   }
 }

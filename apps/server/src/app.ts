@@ -328,7 +328,17 @@ export function createApp(store: PgStore, opts: AppOptions = {}): Hono {
     const profile = startItems.length > 0 ? await store.updateProfile(user.id, (p) => payStartItems(p, startItems)) : user.profile;
     let state: RunState;
     try {
-      state = await startRun(store, { playerId: user.id, playerName: user.username, champion, lockedLines, ranked, starter, startItems, cosmetics });
+      state = await startRun(store, {
+        playerId: user.id,
+        playerName: user.username,
+        champion,
+        lockedLines,
+        ranked,
+        rating: profile.rating,
+        starter,
+        startItems,
+        cosmetics,
+      });
     } catch (e) {
       if (startItems.length > 0) await store.updateProfile(user.id, (p) => ({ ...p, points: p.points + startItems.length * META_RULES.startItemPrice }));
       throw e;
