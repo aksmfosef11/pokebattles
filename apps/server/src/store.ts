@@ -140,6 +140,25 @@ export class PgStore implements GameStore {
     });
   }
 
+  /**
+   * Changes a user's ID and profile in one transaction (an ID change paid with points). Null when the
+   * ID is taken; nothing changes then.
+   */
+  async renameUser(userId: string, username: string, change: (p: Profile) => Profile): Promise<Profile | null> {
+    try {
+      return await this.db.tx(async (q) => {
+        const user = await this.lockUser(q, userId);
+        if (!user) throw new Error("user vanished");
+        const next = change(user.profile);
+        await q.query("UPDATE users SET username = $1, profile = $2::jsonb WHERE id = $3", [username, json(next), userId]);
+        return next;
+      });
+    } catch (e) {
+      if (isUniqueViolation(e)) return null;
+      throw e;
+    }
+  }
+
   async addSession(tokenHash: string, userId: string): Promise<void> {
     await this.db.query("INSERT INTO sessions (token_hash, user_id, created_at) VALUES ($1, $2, $3)", [tokenHash, userId, Date.now()]);
   }

@@ -1,11 +1,12 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
+  battleArena,
   BOARD_H,
   BOARD_W,
   cellsOf,
   CONTENT,
   ITEMS,
-  rngFor,
+  looksShiny,
   simulateBattle,
   touches,
   type Cell,
@@ -22,7 +23,6 @@ import { ItemIcon, PokemonSprite, TrainerSprite } from "../components/sprites.ts
 import { useI18n } from "../i18n.tsx";
 import { noticeText } from "./RunScreen.tsx";
 
-const ARENAS = ["plains", "forest", "beach", "cave", "desert", "mountain", "volcano", "ice_cave", "graveyard", "power_plant", "sea", "space"];
 const FX_LIFE = 1100;
 const TRAIL_LIFE = 450;
 
@@ -67,16 +67,16 @@ interface Vis {
 }
 
 /** Every sprite the playback will show: both teams (back sprites for our side) and mid-battle form changes. */
-function battleSprites(r: BattleResult): SpriteRef[] {
+function battleSprites(r: BattleResult, shiny: readonly boolean[]): SpriteRef[] {
   const refs: SpriteRef[] = [];
   for (const b of r.initial) {
-    refs.push({ species: b.species, formKey: b.formKey, back: b.side === 0, shiny: b.shiny });
-    refs.push({ species: b.species, formKey: b.formKey, back: false, shiny: b.shiny });
+    refs.push({ species: b.species, formKey: b.formKey, back: b.side === 0, shiny: shiny[b.id]! });
+    refs.push({ species: b.species, formKey: b.formKey, back: false, shiny: shiny[b.id]! });
   }
   for (const e of r.events) {
     if (e.k !== "form") continue;
     const b = r.initial[e.target]!;
-    refs.push({ species: e.species, formKey: e.formKey, back: b.side === 0, shiny: b.shiny });
+    refs.push({ species: e.species, formKey: e.formKey, back: b.side === 0, shiny: shiny[b.id]! });
   }
   return refs;
 }
@@ -131,7 +131,20 @@ export function BattleScreen({ turn, before, onDone }: { turn: TurnResponse; bef
     return m;
   }, [result]);
   const stats = useMemo(() => battleStats(result), [result]);
-  const arena = useMemo(() => ARENAS[rngFor(turn.battle.seed, "arena").int(0, ARENAS.length - 1)]!, [turn]);
+  const arena = useMemo(() => battleArena(turn.battle.seed, turn.battle.teams), [turn]);
+  // Looks each side bought (display only): shiny lines and the trained starter's nickname.
+  const shinyLook = useMemo(
+    () => result.initial.map((b) => looksShiny(turn.battle.teams[b.side].cosmetics?.shinyLines, b.species, b.shiny)),
+    [result, turn],
+  );
+  const nicknames = useMemo(
+    () => result.initial.map((b) => turn.battle.teams[b.side].pieces.find((p) => p.uid === b.uid && p.kind === "pokemon" && p.nickname)),
+    [result, turn],
+  );
+  const nicknameOf = (id: number) => {
+    const p = nicknames[id];
+    return p?.kind === "pokemon" ? p.nickname : undefined;
+  };
 
   const [vis, setVis] = useState<Vis>(() => initialVis(result));
   const [fx, setFx] = useState<Fx[]>([]);
@@ -144,7 +157,7 @@ export function BattleScreen({ turn, before, onDone }: { turn: TurnResponse; bef
   useEffect(() => {
     let alive = true;
     setReady(false);
-    preloadPokemonSprites(battleSprites(result)).then(() => alive && setReady(true));
+    preloadPokemonSprites(battleSprites(result, shinyLook)).then(() => alive && setReady(true));
     return () => {
       alive = false;
     };
@@ -214,7 +227,7 @@ export function BattleScreen({ turn, before, onDone }: { turn: TurnResponse; bef
     let tickF = 0;
     let processed = -1;
     const v = initialVis(result);
-    const name = (id: number) => tr.species(v.species[id] ?? result.initial[id]!.species);
+    const name = (id: number) => nicknameOf(id) ?? tr.species(v.species[id] ?? result.initial[id]!.species);
     const sideCls = (id: number) => (result.initial[id]!.side === 0 ? "ally" : "foe");
     const nextId = () => idRef.current++;
     const addFx = (battler: number, text: string, cls: string, item?: string) => {
@@ -524,7 +537,7 @@ export function BattleScreen({ turn, before, onDone }: { turn: TurnResponse; bef
                   species={vis.species[b.id] ?? b.species}
                   formKey={vis.formKey[b.id] ?? b.formKey}
                   back={b.side === 0}
-                  shiny={b.shiny}
+                  shiny={shinyLook[b.id]}
                   width={box.w}
                   height={box.h - 10}
                   maxScale={2}
@@ -597,7 +610,7 @@ export function BattleScreen({ turn, before, onDone }: { turn: TurnResponse; bef
               <span>🏆 {tr.t("ui.wins", { n: turn.state.wins, max: 10 })}</span>
               <span className="lives">{"♥".repeat(Math.max(0, turn.state.lives))}</span>
             </div>
-            <StatsTable result={result} stats={stats} />
+            <StatsTable result={result} stats={stats} shinyLook={shinyLook} nicknameOf={nicknameOf} />
             <ul className="notice-list">
               {notices.map((n, i) => (
                 <li key={i}>{noticeText(tr, n)}</li>
@@ -613,7 +626,17 @@ export function BattleScreen({ turn, before, onDone }: { turn: TurnResponse; bef
   );
 }
 
-function StatsTable({ result, stats }: { result: BattleResult; stats: ReturnType<typeof battleStats> }) {
+function StatsTable({
+  result,
+  stats,
+  shinyLook,
+  nicknameOf,
+}: {
+  result: BattleResult;
+  stats: ReturnType<typeof battleStats>;
+  shinyLook: readonly boolean[];
+  nicknameOf: (id: number) => string | undefined;
+}) {
   const { tr } = useI18n();
   const maxDealt = Math.max(1, ...stats.map((s) => s.dealt));
   const maxTaken = Math.max(1, ...stats.map((s) => s.taken));
@@ -637,10 +660,10 @@ function StatsTable({ result, stats }: { result: BattleResult; stats: ReturnType
               return (
                 <div key={b.id} className={`stats-row ${fainted ? "fainted" : ""}`}>
                   <span className="who">
-                    <PokemonSprite species={b.species} formKey={b.formKey} shiny={b.shiny} width={32} height={32} animate={false} />
+                    <PokemonSprite species={b.species} formKey={b.formKey} shiny={shinyLook[b.id]} width={32} height={32} animate={false} />
                     <span className="small">
                       {mvp === b.id && s.dealt > 0 && <b className="mvp">MVP </b>}
-                      {tr.species(b.species)}
+                      {nicknameOf(b.id) ?? tr.species(b.species)}
                     </span>
                   </span>
                   <span className="bar dealt" title={String(s.dealt)}>

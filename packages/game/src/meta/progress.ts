@@ -1,18 +1,20 @@
 /**
  * Account progression outside a run (docs/DESIGN.md §8): champion points, buying champions,
  * unlocking each champion's shop Pokémon by playing them (or with points), training their starters,
- * start-of-run items, and the ranked rating.
+ * start-of-run items, looks (meta/cosmetics.ts), and the ranked rating.
  * Pure functions; the server (PostgreSQL) and the offline client (localStorage) store the Profile.
  */
 import { CHAMPION_KEYS, CHAMPIONS, type ChampionKey } from "../content/champions.ts";
+import { CONTENT } from "../content/index.ts";
 import { STAT_KEYS, type Stats } from "../content/schema.ts";
 import type { Rng } from "../rng.ts";
 import { abilityOptions, MAX_IV, type StarterSetup } from "../run/pokemon.ts";
-import { lockedLinesAt, POOL_UNLOCK_RUNS, poolStageFor, speciesOfStage } from "../run/pool.ts";
+import { championPool, lineBase, lockedLinesAt, POOL_UNLOCK_RUNS, poolStageFor, speciesOfStage } from "../run/pool.ts";
 import { START_ITEMS, type StartItem } from "../run/reducer.ts";
 import { WINS_TO_CLEAR } from "../run/shop.ts";
-import { GameError, type RoundLog, type RunState } from "../run/types.ts";
+import { GameError, type RoundLog, type RunState, type TeamCosmetics } from "../run/types.ts";
 import { NATURES, type Nature } from "../stats.ts";
+import { cleanNickname, isArena, type Arena } from "./cosmetics.ts";
 
 /** The latest nature or ability draw for a starter, waiting for the player to keep it or let it go. */
 export type StarterDraw = { kind: "nature"; nature: Nature } | { kind: "ability"; ability: string; hidden: boolean };
@@ -35,6 +37,11 @@ export interface Profile {
   /** Pool stages bought with points per champion; each one keeps that champion's pool a stage ahead of their runs. */
   poolBought: Partial<Record<ChampionKey, number>>;
   starters: Partial<Record<ChampionKey, StarterTraining>>;
+  /** Evolution lines (first stages) with a shiny look, in the order they were drawn. */
+  shinyLines: string[];
+  /** Bought arenas, and the one used as home (null: random every battle). */
+  arenas: Arena[];
+  homeArena: Arena | null;
   rating: number;
   rankedRuns: number;
 }
@@ -52,6 +59,12 @@ export const META_RULES = {
   ivPointPrice: 25,
   /** Each start-of-run item (START_ITEMS), at most one of each per run. */
   startItemPrice: 40,
+  /** Looks (meta/cosmetics.ts): no effect on battles. */
+  shinyDrawPrice: 80,
+  arenaPrice: 100,
+  nicknamePrice: 100,
+  /** Changing the account's ID (= trainer name), online only. */
+  renamePrice: 300,
   pointsPerBattle: 2,
   pointsPerWin: 4,
   clearBonus: 20,
@@ -72,7 +85,18 @@ export const RANK_TIERS: readonly { min: number; item: string }[] = [
 ];
 
 export function newProfile(): Profile {
-  return { points: 0, champions: [], runs: {}, poolBought: {}, starters: {}, rating: META_RULES.startRating, rankedRuns: 0 };
+  return {
+    points: 0,
+    champions: [],
+    runs: {},
+    poolBought: {},
+    starters: {},
+    shinyLines: [],
+    arenas: [],
+    homeArena: null,
+    rating: META_RULES.startRating,
+    rankedRuns: 0,
+  };
 }
 
 function normalizeTraining(input: unknown): StarterTraining | null {
@@ -88,6 +112,8 @@ function normalizeTraining(input: unknown): StarterTraining | null {
     if (typeof v === "number" && v >= 1) bonus[k] = Math.min(MAX_IV, Math.floor(v));
   }
   if (Object.keys(bonus).length > 0) out.ivBonus = bonus;
+  const nickname = cleanNickname(t.nickname);
+  if (nickname) out.nickname = nickname;
   const d = t.draw as Record<string, unknown> | undefined;
   if (d?.kind === "nature" && NATURES.includes(d.nature as Nature)) out.draw = { kind: "nature", nature: d.nature as Nature };
   else if (d?.kind === "ability" && typeof d.ability === "string") out.draw = { kind: "ability", ability: d.ability, hidden: d.hidden === true };
@@ -98,6 +124,7 @@ function normalizeTraining(input: unknown): StarterTraining | null {
 export function normalizeProfile(input: Partial<Profile> | null | undefined): Profile {
   const base = newProfile();
   if (!input || typeof input !== "object") return base;
+  const arenas = Array.isArray(input.arenas) ? [...new Set(input.arenas.filter(isArena))] : [];
   const champions = Array.isArray(input.champions) ? input.champions.filter((c) => CHAMPION_KEYS.includes(c)) : [];
   const runs: Profile["runs"] = {};
   const poolBought: Profile["poolBought"] = {};
@@ -116,6 +143,9 @@ export function normalizeProfile(input: Partial<Profile> | null | undefined): Pr
     runs,
     poolBought,
     starters,
+    shinyLines: Array.isArray(input.shinyLines) ? [...new Set(input.shinyLines.filter((k) => typeof k === "string" && !!CONTENT.species[k]))] : [],
+    arenas,
+    homeArena: isArena(input.homeArena) && arenas.includes(input.homeArena) ? input.homeArena : null,
     rating: typeof input.rating === "number" ? Math.max(0, Math.round(input.rating)) : base.rating,
     rankedRuns: typeof input.rankedRuns === "number" ? Math.max(0, Math.floor(input.rankedRuns)) : 0,
   };
@@ -255,10 +285,71 @@ export function payStartItems(profile: Profile, items: readonly StartItem[]): Pr
   return items.length > 0 ? pay(profile, items.length * META_RULES.startItemPrice) : profile;
 }
 
-/** What a new run with this champion starts with; throws unless the player owns the champion. */
-export function runOptionsFor(profile: Profile, champion: unknown): { champion: ChampionKey; lockedLines: string[]; starter: StarterSetup } {
+// ───────────────────────────── looks (no effect on battles)
+
+/** Evolution lines (first stages) of a champion's full pool: what their shiny draws can give. */
+export function shinyLinesOf(champion: ChampionKey): string[] {
+  return [...new Set([...championPool(champion)].map(lineBase))].sort();
+}
+
+/**
+ * A shiny look for a random line of an owned champion's pool that the player does not have yet,
+ * appended last (the client shows it as the result). The server passes an unseeded rng.
+ */
+export function drawShiny(profile: Profile, champion: unknown, rng: Rng): Profile {
   const key = requireOwned(profile, champion);
-  return { champion: key, lockedLines: lockedLinesAt(key, poolStage(profile, key)), starter: starterSetup(profile, key) };
+  const owned = new Set(profile.shinyLines);
+  const left = shinyLinesOf(key).filter((l) => !owned.has(l));
+  if (left.length === 0) throw new GameError("shiny_complete");
+  const paid = pay(profile, META_RULES.shinyDrawPrice);
+  return { ...paid, shinyLines: [...profile.shinyLines, rng.pick(left)] };
+}
+
+/** Buys an arena; the first one bought becomes the home arena. */
+export function buyArena(profile: Profile, arena: unknown): Profile {
+  if (!isArena(arena)) throw new GameError("bad_action");
+  if (profile.arenas.includes(arena)) throw new GameError("arena_owned");
+  const paid = pay(profile, META_RULES.arenaPrice);
+  return { ...paid, arenas: [...profile.arenas, arena], homeArena: profile.homeArena ?? arena };
+}
+
+/** Picks the home arena among the bought ones, or none (a random arena every battle). Free. */
+export function setHomeArena(profile: Profile, arena: unknown): Profile {
+  if (arena === null) return { ...profile, homeArena: null };
+  if (!isArena(arena) || !profile.arenas.includes(arena)) throw new GameError("arena_locked");
+  return { ...profile, homeArena: arena };
+}
+
+/** Names an owned champion's starter (opponents see it too). Naming costs points; clearing is free. */
+export function nameStarter(profile: Profile, champion: unknown, nickname: unknown): Profile {
+  const key = requireOwned(profile, champion);
+  const name = cleanNickname(nickname);
+  const { nickname: current, ...rest } = starterTraining(profile, key);
+  if (!name) return withTraining(profile, key, rest);
+  if (name === current) throw new GameError("same_name");
+  return withTraining(pay(profile, META_RULES.nicknamePrice), key, { ...rest, nickname: name });
+}
+
+/** The points side of an ID change; the server changes the ID in the same transaction. */
+export function payRename(profile: Profile): Profile {
+  return pay(profile, META_RULES.renamePrice);
+}
+
+/** The looks a new run carries (and copies into its ghosts). */
+export function runCosmetics(profile: Profile): TeamCosmetics {
+  return {
+    ...(profile.shinyLines.length > 0 ? { shinyLines: [...profile.shinyLines] } : {}),
+    ...(profile.homeArena ? { arena: profile.homeArena } : {}),
+  };
+}
+
+/** What a new run with this champion starts with; throws unless the player owns the champion. */
+export function runOptionsFor(
+  profile: Profile,
+  champion: unknown,
+): { champion: ChampionKey; lockedLines: string[]; starter: StarterSetup; cosmetics: TeamCosmetics } {
+  const key = requireOwned(profile, champion);
+  return { champion: key, lockedLines: lockedLinesAt(key, poolStage(profile, key)), starter: starterSetup(profile, key), cosmetics: runCosmetics(profile) };
 }
 
 /** Champion points for a finished run: something for every battle, more for wins, a bonus for the trophy. */

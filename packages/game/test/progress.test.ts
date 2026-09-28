@@ -2,6 +2,9 @@ import { describe, expect, it } from "vitest";
 import {
   abilityOptions,
   applyAction,
+  ARENAS,
+  battleArena,
+  buyArena,
   BOT_RATINGS,
   botShop,
   buyChampion,
@@ -11,12 +14,15 @@ import {
   championPool,
   chooseStarter,
   createRun,
+  drawShiny,
   getSpecies,
   keepStarterDraw,
   lineBase,
   lockedLinesAt,
+  looksShiny,
   MAX_IV,
   META_RULES,
+  nameStarter,
   natureEffect,
   NATURES,
   newProfile,
@@ -32,7 +38,10 @@ import {
   rngFor,
   rollShop,
   runOptionsFor,
+  setHomeArena,
   settleRun,
+  shinyLinesOf,
+  snapshotTeam,
   speciesOfStage,
   START_ITEMS,
   STAT_KEYS,
@@ -316,6 +325,73 @@ describe("profile", () => {
     expect(Object.values(after.pieces).some((x) => x.kind === "item" && (x.item === "MINT" || x.item === "BOTTLE_CAP"))).toBe(false);
   });
 
+  it("draws shiny looks from an owned champion's pool, never one already owned", () => {
+    let p: Profile = { ...chooseStarter(newProfile(), "geeta"), points: 100000 };
+    expect(() => drawShiny(p, "red", rngFor("s"))).toThrow("champion_locked");
+    expect(() => drawShiny({ ...p, points: 0 }, "geeta", rngFor("s"))).toThrow("not_enough_points");
+    const lines = shinyLinesOf("geeta");
+    expect(lines.length).toBeGreaterThan(20);
+    for (const l of lines) expect(lineBase(l)).toBe(l);
+    for (let i = 0; i < lines.length; i++) {
+      const next = drawShiny(p, "geeta", rngFor("s", i));
+      expect(next.points).toBe(p.points - META_RULES.shinyDrawPrice);
+      expect(next.shinyLines.slice(0, -1)).toEqual(p.shinyLines);
+      expect(p.shinyLines).not.toContain(next.shinyLines.at(-1));
+      p = next;
+    }
+    expect([...p.shinyLines].sort()).toEqual(lines);
+    expect(() => drawShiny(p, "geeta", rngFor("s"))).toThrow("shiny_complete");
+    // A line's look covers its evolutions; a rolled shiny is always shiny.
+    const glimmet = CHAMPIONS.geeta.starter.species;
+    const final = getSpecies(glimmet).evolutions[0]!.to;
+    expect(looksShiny([glimmet], final, false)).toBe(true);
+    expect(looksShiny([], final, false)).toBe(false);
+    expect(looksShiny(undefined, final, true)).toBe(true);
+  });
+
+  it("sells arenas and names starters, as looks carried into runs and ghosts", () => {
+    let p: Profile = { ...chooseStarter(newProfile(), "red"), points: 1000 };
+    expect(() => buyArena(p, "moon")).toThrow("bad_action");
+    p = buyArena(p, "sea");
+    expect(p).toMatchObject({ points: 1000 - META_RULES.arenaPrice, arenas: ["sea"], homeArena: "sea" });
+    expect(() => buyArena(p, "sea")).toThrow("arena_owned");
+    p = buyArena(p, "space");
+    expect(p.homeArena).toBe("sea");
+    expect(() => setHomeArena(p, "cave")).toThrow("arena_locked");
+    expect(setHomeArena(p, null).homeArena).toBeNull();
+    p = setHomeArena(p, "space");
+
+    expect(() => nameStarter(p, "lance", "Rex")).toThrow("champion_locked");
+    const named = nameStarter(p, "red", "  Sparky\u0007 the Great Mouse  ");
+    expect(named.points).toBe(p.points - META_RULES.nicknamePrice);
+    expect(named.starters.red!.nickname).toBe("Sparky the G");
+    expect(() => nameStarter(named, "red", "Sparky the G")).toThrow("same_name");
+    expect(nameStarter(named, "red", "   ").starters.red).toEqual({});
+    expect(nameStarter(named, "red", "").points).toBe(named.points);
+
+    p = { ...named, shinyLines: ["PIKACHU", "BULBASAUR"] };
+    const options = runOptionsFor(p, "red");
+    expect(options.cosmetics).toEqual({ shinyLines: ["PIKACHU", "BULBASAUR"], arena: "space" });
+    const run = createRun({ runId: "c", seed: "c", playerName: "t", champion: "red", starter: options.starter, cosmetics: options.cosmetics });
+    const pikachu = Object.values(run.pieces).find((x): x is PokemonPiece => x.kind === "pokemon")!;
+    expect(pikachu.nickname).toBe("Sparky the G");
+    expect(run.cosmetics).toEqual({ shinyLines: ["PIKACHU", "BULBASAUR"], arena: "space" });
+    // The ghost carries only the shiny lines on its board.
+    const snap = snapshotTeam(run);
+    expect(snap.cosmetics).toEqual({ shinyLines: ["PIKACHU"], arena: "space" });
+    expect(snap.pieces.find((x) => x.uid === pikachu.uid)).toMatchObject({ nickname: "Sparky the G" });
+    expect(snapshotTeam(createRun({ runId: "c", seed: "c", playerName: "t", champion: "red" })).cosmetics).toBeUndefined();
+
+    // Home arena on odd rounds, the opponent's on even rounds, random without either.
+    const other = { ...snap, cosmetics: { arena: "cave" } };
+    expect(battleArena("x", [{ ...snap, round: 3 }, other])).toBe("space");
+    expect(battleArena("x", [{ ...snap, round: 4 }, other])).toBe("cave");
+    expect(battleArena("x", [{ ...snap, round: 4 }, { ...other, cosmetics: {} }])).toBe("space");
+    const plain = { ...snap, cosmetics: undefined };
+    expect(ARENAS).toContain(battleArena("x", [plain, plain]));
+    expect(battleArena("x", [plain, plain])).toBe(battleArena("x", [plain, plain]));
+  });
+
   it("repairs stored profiles", () => {
     expect(normalizeProfile(null)).toEqual(newProfile());
     expect(
@@ -328,7 +404,11 @@ describe("profile", () => {
           red: { nature: "ADAMANT", ivBonus: { atk: 40, def: -2, spe: 3.5 }, draw: { kind: "nature", nature: "BOGUS" as never } },
           lance: { nature: "BOGUS" as never },
           leon: { ability: { ability: "BLAZE", hidden: false }, draw: { kind: "ability", ability: "SOLAR_POWER", hidden: true } },
+          geeta: { nickname: " Gem\n " },
         },
+        shinyLines: ["PIKACHU", "PIKACHU", "NOT_A_MON", 5 as never],
+        arenas: ["sea", "moon" as never],
+        homeArena: "cave",
       }),
     ).toMatchObject({
       points: 0,
@@ -338,7 +418,11 @@ describe("profile", () => {
       starters: {
         red: { nature: "ADAMANT", ivBonus: { atk: MAX_IV, spe: 3 } },
         leon: { ability: { ability: "BLAZE", hidden: false }, draw: { kind: "ability", ability: "SOLAR_POWER", hidden: true } },
+        geeta: { nickname: "Gem" },
       },
+      shinyLines: ["PIKACHU"],
+      arenas: ["sea"],
+      homeArena: null,
       rating: META_RULES.startRating,
     });
   });

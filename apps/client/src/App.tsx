@@ -10,11 +10,13 @@ import { Login } from "./screens/Login.tsx";
 import { RunEnd } from "./screens/RunEnd.tsx";
 import { RunScreen } from "./screens/RunScreen.tsx";
 import { Title } from "./screens/Title.tsx";
+import { TrainerCard } from "./screens/TrainerCard.tsx";
 
 export type Screen =
   | { k: "title" }
   | { k: "champion"; ranked: boolean }
   | { k: "leaderboard" }
+  | { k: "trainer" }
   | { k: "run"; state: RunState }
   | { k: "battle"; turn: TurnResponse; before: RunState }
   | { k: "end"; state: RunState; reward?: RunReward };
@@ -26,6 +28,7 @@ function screenBgm(screen: Screen): string {
       return BGM.title;
     case "champion":
     case "leaderboard":
+    case "trainer":
       return BGM.menu;
     case "run":
       return BGM.shop(screen.state.round);
@@ -100,6 +103,7 @@ export function App() {
           account={account}
           onNew={(ranked) => setScreen({ k: "champion", ranked })}
           onLeaderboard={() => setScreen({ k: "leaderboard" })}
+          onTrainerCard={() => setScreen({ k: "trainer" })}
           onLogout={() => api.logout().then(() => setAccount(null))}
           onContinue={(state) => setScreen(state.phase === "ended" ? { k: "end", state } : { k: "run", state })}
         />
@@ -117,6 +121,8 @@ export function App() {
       );
     case "leaderboard":
       return <LeaderboardScreen api={api} onBack={() => setScreen({ k: "title" })} />;
+    case "trainer":
+      return <TrainerCard api={api} account={account} onAccount={setAccount} onBack={() => setScreen({ k: "title" })} />;
     case "run":
       return (
         <RunScreen

@@ -4,9 +4,11 @@ import { Hono, type Context } from "hono";
 import { bodyLimit } from "hono/body-limit";
 import { cors } from "hono/cors";
 import {
+  buyArena,
   buyChampion,
   buyPoolStage,
   chooseStarter,
+  drawShiny,
   commitActions,
   CONTENT,
   GameError,
@@ -14,7 +16,9 @@ import {
   loadRun,
   META_RULES,
   migrateRun,
+  nameStarter,
   newProfile,
+  payRename,
   payStartItems,
   playRound,
   publicState,
@@ -22,6 +26,7 @@ import {
   readStartItems,
   rngFor,
   runOptionsFor,
+  setHomeArena,
   settleRun,
   startRun,
   trainStarter,
@@ -235,6 +240,46 @@ export function createApp(store: PgStore, opts: AppOptions = {}): Hono {
     return c.json({ account: { username: user.username, profile } });
   });
 
+  // ───────────────────────────── looks (no effect on battles)
+
+  app.post("/api/me/nickname", async (c) => {
+    const user = await requireUser(c);
+    const { champion, nickname } = await body<{ champion: string; nickname: string }>(c);
+    const profile = await store.updateProfile(user.id, (p) => nameStarter(p, champion, nickname));
+    return c.json({ account: { username: user.username, profile } });
+  });
+
+  app.post("/api/me/shiny", async (c) => {
+    const user = await requireUser(c);
+    const { champion } = await body<{ champion: string }>(c);
+    const profile = await store.updateProfile(user.id, (p) => drawShiny(p, champion, rngFor(randomSeed(), "shiny")));
+    return c.json({ account: { username: user.username, profile } });
+  });
+
+  app.post("/api/me/arena", async (c) => {
+    const user = await requireUser(c);
+    const { arena } = await body<{ arena: string }>(c);
+    const profile = await store.updateProfile(user.id, (p) => buyArena(p, arena));
+    return c.json({ account: { username: user.username, profile } });
+  });
+
+  app.post("/api/me/home-arena", async (c) => {
+    const user = await requireUser(c);
+    const { arena } = await body<{ arena: string | null }>(c);
+    const profile = await store.updateProfile(user.id, (p) => setHomeArena(p, arena ?? null));
+    return c.json({ account: { username: user.username, profile } });
+  });
+
+  /** A new ID for points. Runs already under way keep the old name in their ghosts until they end. */
+  app.post("/api/me/rename", async (c) => {
+    const user = await requireUser(c);
+    const username = checkUsername((await body<{ username: string }>(c)).username);
+    if (username === user.username) throw new GameError("same_name");
+    const profile = await store.renameUser(user.id, username, payRename);
+    if (!profile) throw new GameError("username_taken");
+    return c.json({ account: { username, profile } });
+  });
+
   app.get("/api/leaderboard", async (c) => {
     const token = bearer(c);
     const user = token ? await store.sessionUser(tokenHash(token)) : null;
@@ -255,7 +300,7 @@ export function createApp(store: PgStore, opts: AppOptions = {}): Hono {
   app.post("/api/runs", async (c) => {
     const user = await requireUser(c);
     const b = await body<{ champion: string; ranked: boolean; startItems?: unknown }>(c);
-    const { champion, lockedLines, starter } = runOptionsFor(user.profile, b.champion);
+    const { champion, lockedLines, starter, cosmetics } = runOptionsFor(user.profile, b.champion);
     const startItems = readStartItems(b.startItems);
     const ranked = b.ranked === true;
     // One ranked run at a time, so a bad start cannot simply be left behind.
@@ -264,7 +309,7 @@ export function createApp(store: PgStore, opts: AppOptions = {}): Hono {
     const profile = startItems.length > 0 ? await store.updateProfile(user.id, (p) => payStartItems(p, startItems)) : user.profile;
     let state: RunState;
     try {
-      state = await startRun(store, { playerId: user.id, playerName: user.username, champion, lockedLines, ranked, starter, startItems });
+      state = await startRun(store, { playerId: user.id, playerName: user.username, champion, lockedLines, ranked, starter, startItems, cosmetics });
     } catch (e) {
       if (startItems.length > 0) await store.updateProfile(user.id, (p) => ({ ...p, points: p.points + startItems.length * META_RULES.startItemPrice }));
       throw e;

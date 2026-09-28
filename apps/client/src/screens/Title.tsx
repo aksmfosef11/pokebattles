@@ -11,6 +11,7 @@ export function Title({
   account,
   onNew,
   onLeaderboard,
+  onTrainerCard,
   onLogout,
   onContinue,
 }: {
@@ -18,6 +19,7 @@ export function Title({
   account: Account;
   onNew: (ranked: boolean) => void;
   onLeaderboard: () => void;
+  onTrainerCard: () => void;
   onLogout: () => void;
   onContinue: (s: RunState) => void;
 }) {
@@ -74,6 +76,9 @@ export function Title({
               )}
             </div>
           )}
+          <button className="btn btn-small" onClick={onTrainerCard}>
+            {tr.t("ui.trainerCard")}
+          </button>
           {online && (
             <button className="btn btn-small" onClick={onLogout}>
               {tr.t("ui.logout")}

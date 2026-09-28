@@ -7,7 +7,7 @@ import { migrateRun } from "../run/migrate.ts";
 import { applyRoundResult, prepareForBattle, snapshotTeam } from "../run/progression.ts";
 import { applyActions, createRun, type StartItem } from "../run/reducer.ts";
 import type { StarterSetup } from "../run/pokemon.ts";
-import { GameError, type Action, type BattleOutcome, type Notice, type RunState, type TeamSnapshot } from "../run/types.ts";
+import { GameError, type Action, type BattleOutcome, type Notice, type RunState, type TeamCosmetics, type TeamSnapshot } from "../run/types.ts";
 import { META_RULES, type RunReward } from "../meta/progress.ts";
 import { botTeam, rankedBot } from "./bot.ts";
 
@@ -175,6 +175,8 @@ export async function startRun(
     starter?: StarterSetup;
     /** Start-of-run items, already paid for with points. */
     startItems?: readonly StartItem[];
+    /** The player's looks (runOptionsFor). */
+    cosmetics?: TeamCosmetics;
   },
 ): Promise<RunState> {
   if (!CHAMPIONS[params.champion]) throw new GameError("invalid_champion");
@@ -188,6 +190,7 @@ export async function startRun(
     ...(params.ranked ? { ranked: true } : {}),
     ...(params.starter ? { starter: params.starter } : {}),
     ...(params.startItems?.length ? { startItems: params.startItems } : {}),
+    ...(params.cosmetics ? { cosmetics: params.cosmetics } : {}),
   });
   const now = Date.now();
   await store.putRun({ runId, playerId: params.playerId, state, createdAt: now, updatedAt: now });

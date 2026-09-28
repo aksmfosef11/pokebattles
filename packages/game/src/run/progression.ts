@@ -5,9 +5,9 @@ import type { EvolutionDef } from "../content/schema.ts";
 import { rngFor } from "../rng.ts";
 import { checkPlacement, claimPlacement, computeAdjacency } from "./layout.ts";
 import { evolveAbility, MAX_LEVEL, moveSlotsFor, newPokemon, refreshMoves, rollTraits } from "./pokemon.ts";
-import { isLanceKinLine } from "./pool.ts";
+import { isLanceKinLine, lineBase } from "./pool.ts";
 import { basePartyCap, bigPartyCount, INCOME, MAX_ROUNDS, partyCap, partyCount, rollShop, STASH_LIMIT, SUBCLASS_ROUND, WINS_TO_CLEAR } from "./shop.ts";
-import type { BattleOutcome, Notice, PokemonPiece, RoundLog, RunState, TeamSnapshot } from "./types.ts";
+import type { BattleOutcome, Notice, PokemonPiece, RoundLog, RunState, TeamCosmetics, TeamSnapshot } from "./types.ts";
 
 export const XP_WIN = 4;
 export const XP_LOSS = 3;
@@ -138,7 +138,8 @@ export function prepareForBattle(prev: RunState): RunState {
 }
 
 export function snapshotTeam(state: RunState): TeamSnapshot {
-  return {
+  const pieces = structuredClone(Object.values(state.pieces).filter((p) => p.place !== null));
+  const snap: TeamSnapshot = {
     name: state.playerName,
     champion: state.champion,
     subclass: state.subclass,
@@ -147,8 +148,17 @@ export function snapshotTeam(state: RunState): TeamSnapshot {
     losses: state.losses,
     streak: state.streak,
     ace: state.ace,
-    pieces: structuredClone(Object.values(state.pieces).filter((p) => p.place !== null)),
+    pieces,
   };
+  // Looks travel with the ghost; shiny lines only for the Pokémon actually on the board.
+  const looks = state.cosmetics;
+  if (looks) {
+    const onBoard = new Set(pieces.flatMap((p) => (p.kind === "pokemon" ? [lineBase(p.species)] : [])));
+    const shinyLines = (looks.shinyLines ?? []).filter((l) => onBoard.has(l));
+    const cosmetics: TeamCosmetics = { ...(shinyLines.length > 0 ? { shinyLines } : {}), ...(looks.arena ? { arena: looks.arena } : {}) };
+    if (Object.keys(cosmetics).length > 0) snap.cosmetics = cosmetics;
+  }
+  return snap;
 }
 
 export interface RoundResult {

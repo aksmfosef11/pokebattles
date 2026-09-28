@@ -149,6 +149,42 @@ describe("champions and unlocks", () => {
     expect(pikachu?.kind === "pokemon" && pikachu.nature).toBe(nature);
   });
 
+  it("sells looks: shinies, arenas and nicknames reach the run and its ghosts", async () => {
+    const token = await player("red");
+    const me = (await json("/api/me", token)).account;
+    const user = (await store.userByName(me.username))!;
+    await store.saveProfile(user.id, { ...user.profile, points: 1000 });
+    const shiny = (await json("/api/me/shiny", token, { champion: "red" })).account.profile as Profile;
+    expect(shiny.shinyLines).toHaveLength(1);
+    expect(await json("/api/me/arena", token, { arena: "moon" })).toEqual({ error: "bad_action" });
+    expect((await json("/api/me/arena", token, { arena: "sea" })).account.profile).toMatchObject({ arenas: ["sea"], homeArena: "sea" });
+    expect(await json("/api/me/home-arena", token, { arena: "cave" })).toEqual({ error: "arena_locked" });
+    const named = (await json("/api/me/nickname", token, { champion: "red", nickname: "Sparky" })).account.profile as Profile;
+    expect(named.points).toBe(1000 - META_RULES.shinyDrawPrice - META_RULES.arenaPrice - META_RULES.nicknamePrice);
+    const { state } = (await json("/api/runs", token, { champion: "red" })) as { state: RunState };
+    expect(state.cosmetics).toEqual({ shinyLines: shiny.shinyLines, arena: "sea" });
+    const pikachu = Object.values(state.pieces).find((p) => p.kind === "pokemon");
+    expect(pikachu?.kind === "pokemon" && pikachu.nickname).toBe("Sparky");
+  });
+
+  it("changes the ID for points, keeping it unique", async () => {
+    const token = await player("red", "renamer1");
+    await player("red", "takenname");
+    expect(await json("/api/me/rename", token, { username: "newname1" })).toEqual({ error: "not_enough_points" });
+    const user = (await store.userByName("renamer1"))!;
+    await store.saveProfile(user.id, { ...user.profile, points: META_RULES.renamePrice + 7 });
+    expect(await json("/api/me/rename", token, { username: "ab" })).toEqual({ error: "bad_username" });
+    expect(await json("/api/me/rename", token, { username: "renamer1" })).toEqual({ error: "same_name" });
+    expect(await json("/api/me/rename", token, { username: "TakenName" })).toEqual({ error: "username_taken" });
+    // A refused rename costs nothing.
+    expect((await json("/api/me", token)).account.profile.points).toBe(META_RULES.renamePrice + 7);
+    const renamed = (await json("/api/me/rename", token, { username: "newname1" })).account;
+    expect(renamed).toMatchObject({ username: "newname1", profile: { points: 7 } });
+    expect((await json("/api/me", token)).account.username).toBe("newname1");
+    expect(await json("/api/auth/login", null, { username: "renamer1", password: "pass1234" })).toEqual({ error: "bad_login" });
+    expect((await json("/api/auth/login", null, { username: "newname1", password: "pass1234" })).account.username).toBe("newname1");
+  });
+
   it("charges start items when a run starts and resolves Bottle Caps on the server", async () => {
     const token = await player("red");
     expect(await json("/api/runs", token, { champion: "red", startItems: ["MINT"] })).toEqual({ error: "not_enough_points" });

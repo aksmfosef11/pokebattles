@@ -1,6 +1,7 @@
 import { BAGS, BOARD_H, BOARD_W, cellKey, placeCell, rotateShape, shapeSize, START_BAG_PLACE, type Cell, type Placement, type Rot } from "../board.ts";
 import { CHAMPIONS, type ChampionKey } from "../content/champions.ts";
 import { getSpecies, ITEMS, type Tier } from "../content/index.ts";
+import { cleanNickname } from "../meta/cosmetics.ts";
 import { rngFor, type Rng } from "../rng.ts";
 import { natureEffect, NATURES, type Nature } from "../stats.ts";
 import { bagContents, bagHasContents, cellsOf, checkPlacement, findFreePlacement, planDrop } from "./layout.ts";
@@ -24,7 +25,7 @@ import {
   TIER_LEVEL,
   TIER_UNLOCK,
 } from "./shop.ts";
-import { GameError, type Action, type BagPiece, type ItemPiece, type Piece, type PokemonPiece, type RunState } from "./types.ts";
+import { GameError, type Action, type BagPiece, type ItemPiece, type Piece, type PokemonPiece, type RunState, type TeamCosmetics } from "./types.ts";
 
 /**
  * Items a player can buy with points as a run starts (one of each): a Mint of a random nature and a
@@ -47,6 +48,8 @@ export interface NewRunParams {
   starter?: StarterSetup;
   /** Start-of-run items bought with points. */
   startItems?: readonly StartItem[];
+  /** The player's looks (meta/progress.ts runCosmetics). */
+  cosmetics?: TeamCosmetics;
 }
 
 function uid(state: RunState): string {
@@ -84,6 +87,7 @@ export function createRun(params: NewRunParams): RunState {
     notices: [],
     ...(params.lockedLines?.length ? { lockedLines: [...params.lockedLines] } : {}),
     ...(params.ranked ? { ranked: true } : {}),
+    ...(params.cosmetics?.shinyLines?.length || params.cosmetics?.arena ? { cosmetics: structuredClone(params.cosmetics) } : {}),
   };
   const bag: BagPiece = { uid: uid(state), kind: "bag", place: { ...START_BAG_PLACE }, paid: 0, bag: "BAG_START" };
   state.pieces[bag.uid] = bag;
@@ -96,6 +100,8 @@ export function createRun(params: NewRunParams): RunState {
     0,
     moveSlotsFor(null),
   );
+  const nickname = cleanNickname(params.starter?.nickname);
+  if (nickname) starter.nickname = nickname;
   state.pieces[starter.uid] = starter;
   starter.place = findFreePlacement(state.pieces, starter, { x: START_BAG_PLACE.x + 1, y: START_BAG_PLACE.y, rot: 0 });
   const item: ItemPiece = {

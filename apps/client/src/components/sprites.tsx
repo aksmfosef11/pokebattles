@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { BAGS, CONTENT, natureEffect, NATURES, type Nature } from "@pokebattles/game";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
+import { BAGS, CONTENT, looksShiny, natureEffect, NATURES, type Nature } from "@pokebattles/game";
 import { getItemManifest, loadAtlas, loadImageCached, pokemonSpritePath, subscribeClock, type Atlas } from "../assets.ts";
 import { useI18n } from "../i18n.tsx";
 
@@ -107,15 +107,22 @@ interface PokemonSpriteProps {
   className?: string;
 }
 
+/**
+ * The player's shiny looks (evolution lines) for every PokemonSprite below it: their run, their
+ * champion screen. The battle, which shows two players, passes each side's `shiny` itself.
+ */
+export const ShinyLines = createContext<readonly string[] | undefined>(undefined);
+
 export function PokemonSprite({ species, formKey = "", back = false, shiny = false, ...rest }: PokemonSpriteProps) {
   const [path, setPath] = useState<string | null>(null);
+  const look = looksShiny(useContext(ShinyLines), species, shiny);
   useEffect(() => {
     let alive = true;
-    pokemonSpritePath(species, formKey, back, shiny).then((p) => alive && setPath(p));
+    pokemonSpritePath(species, formKey, back, look).then((p) => alive && setPath(p));
     return () => {
       alive = false;
     };
-  }, [species, formKey, back, shiny]);
+  }, [species, formKey, back, look]);
   return <AtlasCanvas path={path} {...rest} />;
 }
 

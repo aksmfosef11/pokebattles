@@ -2568,6 +2568,66 @@ html:has(.run-screen.layout-short) {
   opacity: 0.5;
   cursor: default;
 }
+.nickname-input {
+  min-width: 0;
+  flex: 1 1 140px;
+  max-width: 220px;
+  min-height: 32px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: var(--bg-2);
+  color: inherit;
+  font: inherit;
+}
+.shiny-result {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.arena-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+  margin: 6px 0;
+}
+.arena-card {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  image-rendering: pixelated;
+  cursor: pointer;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+}
+.arena-card.locked {
+  filter: grayscale(0.6) brightness(0.8);
+}
+.arena-card.home {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px var(--gold);
+}
+.arena-card:disabled:not(.home) {
+  cursor: default;
+  opacity: 0.6;
+}
+.arena-tag {
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  background: rgba(13, 14, 22, 0.75);
+  color: #e8ebff;
+}
+.arena-card.home .arena-tag {
+  color: var(--gold);
+}
 
 /* run end rewards */
 .reward-box {

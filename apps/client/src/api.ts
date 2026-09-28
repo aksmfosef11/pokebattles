@@ -1,19 +1,23 @@
 import {
+  buyArena,
   buyChampion,
   buyPoolStage,
   chooseStarter,
+  drawShiny,
   commitActions,
   GameError,
   keepStarterDraw,
   loadRun,
   MemoryStore,
   migrateRun,
+  nameStarter,
   normalizeProfile,
   payStartItems,
   playRound,
   randomSeed,
   rngFor,
   runOptionsFor,
+  setHomeArena,
   settleRun,
   startRun,
   trainStarter,
@@ -72,6 +76,12 @@ export interface GameApi {
   /** A nature or ability draw, or +1 IV, for a champion's starter (the draw then waits for keepStarterDraw). */
   trainStarter(champion: ChampionKey, kind: StarterTrainingKind): Promise<Account>;
   keepStarterDraw(champion: ChampionKey, keep: boolean): Promise<Account>;
+  /** Looks: a starter nickname, a shiny line from a champion's pool, arenas, and (online only) a new ID. */
+  nameStarter(champion: ChampionKey, nickname: string): Promise<Account>;
+  drawShiny(champion: ChampionKey): Promise<Account>;
+  buyArena(arena: string): Promise<Account>;
+  setHomeArena(arena: string | null): Promise<Account>;
+  rename(username: string): Promise<Account>;
   leaderboard(): Promise<Leaderboard>;
   listRuns(): Promise<RunSummary[]>;
   /** Starts a run, paying for its start items; the account comes back with the points spent. */
@@ -202,6 +212,21 @@ class RemoteApi implements GameApi {
   async keepStarterDraw(champion: ChampionKey, keep: boolean) {
     return this.accountCall("/api/me/starter-keep", { champion, keep });
   }
+  async nameStarter(champion: ChampionKey, nickname: string) {
+    return this.accountCall("/api/me/nickname", { champion, nickname });
+  }
+  async drawShiny(champion: ChampionKey) {
+    return this.accountCall("/api/me/shiny", { champion });
+  }
+  async buyArena(arena: string) {
+    return this.accountCall("/api/me/arena", { arena });
+  }
+  async setHomeArena(arena: string | null) {
+    return this.accountCall("/api/me/home-arena", { arena });
+  }
+  async rename(username: string) {
+    return this.accountCall("/api/me/rename", { username });
+  }
   async leaderboard() {
     return this.call<Leaderboard>("/api/leaderboard");
   }
@@ -309,6 +334,30 @@ class LocalApi implements GameApi {
     this.save();
     return this.me();
   }
+  async nameStarter(champion: ChampionKey, nickname: string) {
+    this.profile = nameStarter(this.profile, champion, nickname);
+    this.save();
+    return this.me();
+  }
+  async drawShiny(champion: ChampionKey) {
+    this.profile = drawShiny(this.profile, champion, rngFor(randomSeed(), "shiny"));
+    this.save();
+    return this.me();
+  }
+  async buyArena(arena: string) {
+    this.profile = buyArena(this.profile, arena);
+    this.save();
+    return this.me();
+  }
+  async setHomeArena(arena: string | null) {
+    this.profile = setHomeArena(this.profile, arena);
+    this.save();
+    return this.me();
+  }
+  /** Offline there is no ID to change. */
+  async rename(): Promise<Account> {
+    throw new GameError("online_only");
+  }
   async leaderboard(): Promise<Leaderboard> {
     throw new GameError("ranked_offline");
   }
@@ -317,9 +366,9 @@ class LocalApi implements GameApi {
   }
   async startRun(champion: ChampionKey, ranked: boolean, startItems: StartItem[] = []) {
     if (ranked) throw new GameError("ranked_offline");
-    const { lockedLines, starter } = runOptionsFor(this.profile, champion);
+    const { lockedLines, starter, cosmetics } = runOptionsFor(this.profile, champion);
     const paid = payStartItems(this.profile, startItems);
-    const state = await startRun(this.store, { playerId: "offline", playerName: "Trainer", champion, lockedLines, starter, startItems });
+    const state = await startRun(this.store, { playerId: "offline", playerName: "Trainer", champion, lockedLines, starter, startItems, cosmetics });
     this.profile = paid;
     const rec = this.store.runs.get(state.runId)!;
     rec.playerId = `offline-${state.runId}`;

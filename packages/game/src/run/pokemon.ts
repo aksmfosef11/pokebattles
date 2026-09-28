@@ -62,6 +62,8 @@ export interface StarterSetup {
   ability?: { ability: string; hidden: boolean };
   /** Added to each rolled IV (never past MAX_IV). */
   ivBonus?: Partial<Stats>;
+  /** Shown instead of the species name, to the opponent too. */
+  nickname?: string;
 }
 
 export function trainTraits(speciesKey: string, traits: Traits, setup: StarterSetup | undefined): Traits {

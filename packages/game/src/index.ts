@@ -17,4 +17,5 @@ export { simulateBattle, BattleSim, type SimOptions } from "./battle/sim.ts";
 export { IMPLEMENTED_ABILITY_KEYS } from "./battle/abilities.ts";
 export * from "./server/logic.ts";
 export * from "./meta/progress.ts";
+export * from "./meta/cosmetics.ts";
 export { BOT_LUCK, BOT_RATINGS, botShop, botTeam, luckyBotTeam, rankedBot, roughPower, type BotLuck } from "./server/bot.ts";

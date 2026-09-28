@@ -32,6 +32,8 @@ export interface PokemonPiece extends PieceBase {
   aceBonus: number;
   /** Evolution waiting for enough free space. */
   pendingEvolution: string | null;
+  /** The player's name for their trained starter (meta/progress.ts); display only. */
+  nickname?: string;
 }
 
 export interface ItemPiece extends PieceBase {
@@ -123,6 +125,16 @@ export interface RunState {
   lockedLines?: string[];
   /** Ranked run: matched against other ranked runs and settles the player's rating when it ends. */
   ranked?: boolean;
+  /** The player's looks when the run started; copied into its ghosts. */
+  cosmetics?: TeamCosmetics;
+}
+
+/** Looks a player bought with points (meta/cosmetics.ts). Display only: the battle never reads them. */
+export interface TeamCosmetics {
+  /** Evolution lines (first stages) drawn shiny. */
+  shinyLines?: string[];
+  /** Home arena: the background of this side's odd-round battles. */
+  arena?: string;
 }
 
 export interface Notice {
@@ -142,6 +154,8 @@ export interface TeamSnapshot {
   ace: string | null;
   /** Placed pieces only. */
   pieces: Piece[];
+  /** Shiny looks (only lines on this board) and home arena. */
+  cosmetics?: TeamCosmetics;
 }
 
 export type Action =

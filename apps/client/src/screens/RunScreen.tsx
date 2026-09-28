@@ -44,7 +44,7 @@ import { Detail, type DetailTarget } from "../components/Detail.tsx";
 import { RecipeBook } from "../components/RecipeBook.tsx";
 import { Shop } from "../components/Shop.tsx";
 import { SoundButton } from "../components/SoundButton.tsx";
-import { BagIcon, ItemIcon, PokemonSprite, TrainerSprite } from "../components/sprites.tsx";
+import { BagIcon, ItemIcon, PokemonSprite, ShinyLines, TrainerSprite } from "../components/sprites.tsx";
 import { TYPE_COLORS } from "../battle/stats.ts";
 import { useI18n } from "../i18n.tsx";
 
@@ -700,221 +700,223 @@ export function RunScreen({
   const nextCap = PARTY_CAP_STEPS.find(([from]) => from > state.round);
 
   return (
-    <div className={`run-screen layout-${layout} ${tight ? "tight" : ""} ${sheetDetail ? "detail-sheet" : ""}`}>
-      <header className="top-bar panel">
-        <TrainerSprite champion={state.champion} width={48} height={56} />
-        <div className="who">
-          <b>{state.playerName}</b>
-          <span className="muted small">
-            {tr.trainer(state.champion)}
-            {state.subclass ? ` · ${tr.t(`subclass.${state.subclass}.name`)}` : ""}
-          </span>
-        </div>
-        <div className="stat-chip">{compact ? tr.t("ui.roundShort", { n: state.round }) : tr.t("ui.roundOf", { n: state.round, max: MAX_ROUNDS })}</div>
-        <div className="stat-chip gold" title={tr.t("ui.gold")}>
-          ◎ {state.gold}G
-        </div>
-        <div className="stat-chip lives" title={tr.t("ui.lives")}>
-          {compact ? `♥${Math.max(0, state.lives)}` : "♥".repeat(Math.max(0, state.lives))}
-        </div>
-        <div className={`stat-chip ${partyCount(state) >= partyCap(state) ? "full" : ""}`} title={tr.t("ui.partyGrowth")}>
-          {tr.t("ui.party", { n: partyCount(state), max: partyCap(state) })}
-          {nextCap && !compact && (
-            <span className="muted small"> · {tr.t("ui.partyNext", { round: nextCap[0], max: partyCap({ ...state, round: nextCap[0] }) })}</span>
+    <ShinyLines.Provider value={state.cosmetics?.shinyLines}>
+      <div className={`run-screen layout-${layout} ${tight ? "tight" : ""} ${sheetDetail ? "detail-sheet" : ""}`}>
+        <header className="top-bar panel">
+          <TrainerSprite champion={state.champion} width={48} height={56} />
+          <div className="who">
+            <b>{state.playerName}</b>
+            <span className="muted small">
+              {tr.trainer(state.champion)}
+              {state.subclass ? ` · ${tr.t(`subclass.${state.subclass}.name`)}` : ""}
+            </span>
+          </div>
+          <div className="stat-chip">{compact ? tr.t("ui.roundShort", { n: state.round }) : tr.t("ui.roundOf", { n: state.round, max: MAX_ROUNDS })}</div>
+          <div className="stat-chip gold" title={tr.t("ui.gold")}>
+            ◎ {state.gold}G
+          </div>
+          <div className="stat-chip lives" title={tr.t("ui.lives")}>
+            {compact ? `♥${Math.max(0, state.lives)}` : "♥".repeat(Math.max(0, state.lives))}
+          </div>
+          <div className={`stat-chip ${partyCount(state) >= partyCap(state) ? "full" : ""}`} title={tr.t("ui.partyGrowth")}>
+            {tr.t("ui.party", { n: partyCount(state), max: partyCap(state) })}
+            {nextCap && !compact && (
+              <span className="muted small"> · {tr.t("ui.partyNext", { round: nextCap[0], max: partyCap({ ...state, round: nextCap[0] }) })}</span>
+            )}
+          </div>
+          <div className="stat-chip">🏆 {compact ? `${state.wins}/${WINS_TO_CLEAR}` : tr.t("ui.wins", { n: state.wins, max: WINS_TO_CLEAR })}</div>
+          {state.streak > 1 && <div className="stat-chip streak">{tr.t("ui.streak", { n: state.streak })}</div>}
+          <div className="spacer" />
+          {state.ranked ? (
+            <div className="mode-tag ranked">{tr.t("ui.rankedTag")}</div>
+          ) : (
+            <div className={`mode-tag ${api.mode}`}>{api.mode === "online" ? tr.t("ui.online") : tr.t("ui.offline")}</div>
           )}
-        </div>
-        <div className="stat-chip">🏆 {compact ? `${state.wins}/${WINS_TO_CLEAR}` : tr.t("ui.wins", { n: state.wins, max: WINS_TO_CLEAR })}</div>
-        {state.streak > 1 && <div className="stat-chip streak">{tr.t("ui.streak", { n: state.streak })}</div>}
-        <div className="spacer" />
-        {state.ranked ? (
-          <div className="mode-tag ranked">{tr.t("ui.rankedTag")}</div>
-        ) : (
-          <div className={`mode-tag ${api.mode}`}>{api.mode === "online" ? tr.t("ui.online") : tr.t("ui.offline")}</div>
-        )}
-        {compact && (
-          <button
-            className="btn btn-small icon-btn"
-            data-sfx="ui/menu_open"
-            aria-label={tr.t("ui.recipes")}
-            title={tr.t("ui.recipes")}
-            onClick={() => setShowRecipes(true)}
-          >
-            📖
+          {compact && (
+            <button
+              className="btn btn-small icon-btn"
+              data-sfx="ui/menu_open"
+              aria-label={tr.t("ui.recipes")}
+              title={tr.t("ui.recipes")}
+              onClick={() => setShowRecipes(true)}
+            >
+              📖
+            </button>
+          )}
+          <SoundButton />
+          <button className={`btn btn-small ${compact ? "icon-btn" : ""}`} aria-label={tr.t("ui.backToTitle")} title={tr.t("ui.backToTitle")} onClick={onQuit}>
+            {compact ? "⌂" : tr.t("ui.backToTitle")}
           </button>
-        )}
-        <SoundButton />
-        <button className={`btn btn-small ${compact ? "icon-btn" : ""}`} aria-label={tr.t("ui.backToTitle")} title={tr.t("ui.backToTitle")} onClick={onQuit}>
-          {compact ? "⌂" : tr.t("ui.backToTitle")}
-        </button>
-      </header>
+        </header>
 
-      <main className="run-main">
-        <div className="left-col">
-          <Shop
-            state={state}
-            compact={compact}
-            selectedSlot={target?.kind === "offer" ? target.slot : null}
-            targetingShop={targeting?.kind === "masterBall"}
-            onSlotPointerDown={(e, slot) => startDrag(e, { kind: "shop", slot })}
-            onLock={(slot) => act({ t: "lock", slot })}
-            onReroll={() => act({ t: "reroll" })}
-          />
-          <div className="board-wrap">
-            <div ref={areaRef} className="board-area">
-              <Board
-                ref={boardRef}
-                state={state}
-                cell={cell}
-                selected={target?.kind === "piece" ? target.uid : null}
-                highlight={boardHighlight}
-                preview={preview}
-                draggingUid={drag?.started && drag.source.kind === "piece" ? drag.source.uid : null}
-                stars={focus.stars}
-                affected={focus.affected}
-                recipeUid={focus.recipeUid}
-                onHover={(uid) => {
-                  if (!dragRef.current) setHovered(uid);
-                }}
-                onPiecePointerDown={(e, uid) => startDrag(e, { kind: "piece", uid })}
-                onPieceContext={(uid) => {
-                  // A right-click while dragging rotates the dragged piece; it must not sell what lies under it.
-                  if (dragRef.current) return;
-                  const p = state.pieces[uid];
-                  if (p && act({ t: "sell", uid })) setToast(tr.t("ui.sellFor", { gold: sellValue(state, p) }));
-                  setTarget(null);
-                }}
-                onBackgroundClick={() => setTarget(null)}
-              />
-            </div>
-            <div className="board-side">
-              <div ref={stashRef} className={`stash panel ${drag?.started ? "drop" : ""}`}>
-                <div className="panel-title">
-                  <span>
-                    {tr.t("ui.stash")} <span className="muted small">{`${stash.length}/${STASH_LIMIT}`}</span>
-                  </span>
-                  <span className="muted small stash-hint">{tr.t("ui.stashHint")}</span>
-                </div>
-                <div className="stash-items">
-                  {stash.length === 0 && compact && <span className="stash-empty muted small">{hint}</span>}
-                  {stash.map((p) => (
-                    <div
-                      key={p.uid}
-                      className={`stash-item ${target?.kind === "piece" && target.uid === p.uid ? "sel" : ""}`}
-                      onPointerDown={(e) => startDrag(e, { kind: "piece", uid: p.uid })}
-                      onContextMenu={(e) => {
-                        e.preventDefault();
-                        // A long press on a touch screen also opens the context menu; it must not sell.
-                        if (dragRef.current) return;
-                        act({ t: "sell", uid: p.uid });
-                      }}
-                    >
-                      {p.kind === "pokemon" ? (
-                        <PokemonSprite
-                          species={p.species}
-                          formKey={getSpecies(p.species).spriteForm}
-                          shiny={p.shiny}
-                          width={compact ? 38 : 52}
-                          height={compact ? 38 : 52}
-                          animate={false}
-                        />
-                      ) : p.kind === "item" ? (
-                        <ItemIcon item={p.item} param={p.param} size={compact ? 30 : 40} />
-                      ) : (
-                        <>
-                          <BagIcon bag={p.bag} size={compact ? 30 : 40} />
-                          {/* A Berry Pouch in the stash would otherwise look like any held item. */}
-                          <span className="stash-bag-tag" title={tr.t("ui.bagTag")}>
-                            🎒
-                          </span>
-                        </>
-                      )}
-                    </div>
-                  ))}
-                </div>
+        <main className="run-main">
+          <div className="left-col">
+            <Shop
+              state={state}
+              compact={compact}
+              selectedSlot={target?.kind === "offer" ? target.slot : null}
+              targetingShop={targeting?.kind === "masterBall"}
+              onSlotPointerDown={(e, slot) => startDrag(e, { kind: "shop", slot })}
+              onLock={(slot) => act({ t: "lock", slot })}
+              onReroll={() => act({ t: "reroll" })}
+            />
+            <div className="board-wrap">
+              <div ref={areaRef} className="board-area">
+                <Board
+                  ref={boardRef}
+                  state={state}
+                  cell={cell}
+                  selected={target?.kind === "piece" ? target.uid : null}
+                  highlight={boardHighlight}
+                  preview={preview}
+                  draggingUid={drag?.started && drag.source.kind === "piece" ? drag.source.uid : null}
+                  stars={focus.stars}
+                  affected={focus.affected}
+                  recipeUid={focus.recipeUid}
+                  onHover={(uid) => {
+                    if (!dragRef.current) setHovered(uid);
+                  }}
+                  onPiecePointerDown={(e, uid) => startDrag(e, { kind: "piece", uid })}
+                  onPieceContext={(uid) => {
+                    // A right-click while dragging rotates the dragged piece; it must not sell what lies under it.
+                    if (dragRef.current) return;
+                    const p = state.pieces[uid];
+                    if (p && act({ t: "sell", uid })) setToast(tr.t("ui.sellFor", { gold: sellValue(state, p) }));
+                    setTarget(null);
+                  }}
+                  onBackgroundClick={() => setTarget(null)}
+                />
               </div>
-              <div
-                ref={sellRef}
-                className={`sell-zone ${drag?.started && drag.source.kind === "piece" ? "active" : ""} ${undo && !drag?.started ? "has-undo" : ""}`}
-              >
-                {undo && !drag?.started ? (
-                  <button className="undo-btn" onClick={undoSell}>
-                    <span>↶ {tr.t("ui.undoSell")}</span>
-                    <span className="undo-what">{tr.t("ui.undoSellHint", { name: undo.name, gold: undo.gold })}</span>
+              <div className="board-side">
+                <div ref={stashRef} className={`stash panel ${drag?.started ? "drop" : ""}`}>
+                  <div className="panel-title">
+                    <span>
+                      {tr.t("ui.stash")} <span className="muted small">{`${stash.length}/${STASH_LIMIT}`}</span>
+                    </span>
+                    <span className="muted small stash-hint">{tr.t("ui.stashHint")}</span>
+                  </div>
+                  <div className="stash-items">
+                    {stash.length === 0 && compact && <span className="stash-empty muted small">{hint}</span>}
+                    {stash.map((p) => (
+                      <div
+                        key={p.uid}
+                        className={`stash-item ${target?.kind === "piece" && target.uid === p.uid ? "sel" : ""}`}
+                        onPointerDown={(e) => startDrag(e, { kind: "piece", uid: p.uid })}
+                        onContextMenu={(e) => {
+                          e.preventDefault();
+                          // A long press on a touch screen also opens the context menu; it must not sell.
+                          if (dragRef.current) return;
+                          act({ t: "sell", uid: p.uid });
+                        }}
+                      >
+                        {p.kind === "pokemon" ? (
+                          <PokemonSprite
+                            species={p.species}
+                            formKey={getSpecies(p.species).spriteForm}
+                            shiny={p.shiny}
+                            width={compact ? 38 : 52}
+                            height={compact ? 38 : 52}
+                            animate={false}
+                          />
+                        ) : p.kind === "item" ? (
+                          <ItemIcon item={p.item} param={p.param} size={compact ? 30 : 40} />
+                        ) : (
+                          <>
+                            <BagIcon bag={p.bag} size={compact ? 30 : 40} />
+                            {/* A Berry Pouch in the stash would otherwise look like any held item. */}
+                            <span className="stash-bag-tag" title={tr.t("ui.bagTag")}>
+                              🎒
+                            </span>
+                          </>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div
+                  ref={sellRef}
+                  className={`sell-zone ${drag?.started && drag.source.kind === "piece" ? "active" : ""} ${undo && !drag?.started ? "has-undo" : ""}`}
+                >
+                  {undo && !drag?.started ? (
+                    <button className="undo-btn" onClick={undoSell}>
+                      <span>↶ {tr.t("ui.undoSell")}</span>
+                      <span className="undo-what">{tr.t("ui.undoSellHint", { name: undo.name, gold: undo.gold })}</span>
+                    </button>
+                  ) : (
+                    <>🗑 {compact ? tr.t("ui.sellShort") : tr.t("ui.sellZone")}</>
+                  )}
+                </div>
+                <button className="btn btn-primary fight-btn" data-sfx="se/pb_throw" disabled={busy || waiting || state.phase !== "shop"} onClick={fight}>
+                  {busy ? tr.t("ui.matching") : `⚔ ${tr.t("ui.fight")}`}
+                </button>
+                {!compact && (
+                  <button className="btn btn-small" data-sfx="ui/menu_open" onClick={() => setShowRecipes(true)}>
+                    📖 {tr.t("ui.recipes")}
                   </button>
-                ) : (
-                  <>🗑 {compact ? tr.t("ui.sellShort") : tr.t("ui.sellZone")}</>
                 )}
+                {!compact && <div className="muted small hint">{hint}</div>}
               </div>
-              <button className="btn btn-primary fight-btn" data-sfx="se/pb_throw" disabled={busy || waiting || state.phase !== "shop"} onClick={fight}>
-                {busy ? tr.t("ui.matching") : `⚔ ${tr.t("ui.fight")}`}
-              </button>
-              {!compact && (
-                <button className="btn btn-small" data-sfx="ui/menu_open" onClick={() => setShowRecipes(true)}>
-                  📖 {tr.t("ui.recipes")}
-                </button>
-              )}
-              {!compact && <div className="muted small hint">{hint}</div>}
             </div>
           </div>
-        </div>
-        <Detail
-          state={state}
-          target={target}
-          hint={hint}
-          suppressed={!!drag?.started || targeting !== null}
-          onClose={() => setTarget(null)}
-          onSetAce={(uid) => act({ t: "setAce", uid })}
-          onRotate={rotateInPlace}
-          onUse={useItem}
-          onSell={(uid) => {
-            if (act({ t: "sell", uid })) setTarget(null);
-          }}
-        />
-      </main>
+          <Detail
+            state={state}
+            target={target}
+            hint={hint}
+            suppressed={!!drag?.started || targeting !== null}
+            onClose={() => setTarget(null)}
+            onSetAce={(uid) => act({ t: "setAce", uid })}
+            onRotate={rotateInPlace}
+            onUse={useItem}
+            onSell={(uid) => {
+              if (act({ t: "sell", uid })) setTarget(null);
+            }}
+          />
+        </main>
 
-      {showRecipes && <RecipeBook champion={state.champion} onClose={() => setShowRecipes(false)} />}
-      {targeting && (
-        <div className="targeting-bar">
-          {targeting.kind === "pokemon" ? tr.t("ui.pickTarget") : tr.t("ui.pickShopSlot")}
-          <button className="btn btn-small" onClick={() => setTargeting(null)}>
-            {tr.t("ui.cancel")}
-          </button>
-        </div>
-      )}
+        {showRecipes && <RecipeBook champion={state.champion} onClose={() => setShowRecipes(false)} />}
+        {targeting && (
+          <div className="targeting-bar">
+            {targeting.kind === "pokemon" ? tr.t("ui.pickTarget") : tr.t("ui.pickShopSlot")}
+            <button className="btn btn-small" onClick={() => setTargeting(null)}>
+              {tr.t("ui.cancel")}
+            </button>
+          </div>
+        )}
 
-      {state.phase === "subclass" && (
-        <div className="modal-back">
-          <div className="modal panel">
-            <h2>{tr.t("ui.subclassTitle")}</h2>
-            <p className="muted small">{tr.t("ui.subclassHint")}</p>
-            <div className="subclass-options">
-              {champ.subclasses.map((s) => (
-                <button key={s} className="subclass-card" data-sfx="none" onClick={() => act({ t: "chooseSubclass", subclass: s })}>
-                  <b>{tr.t(`subclass.${s}.name`)}</b>
-                  <span>{tr.t(`subclass.${s}.desc`)}</span>
-                </button>
-              ))}
+        {state.phase === "subclass" && (
+          <div className="modal-back">
+            <div className="modal panel">
+              <h2>{tr.t("ui.subclassTitle")}</h2>
+              <p className="muted small">{tr.t("ui.subclassHint")}</p>
+              <div className="subclass-options">
+                {champ.subclasses.map((s) => (
+                  <button key={s} className="subclass-card" data-sfx="none" onClick={() => act({ t: "chooseSubclass", subclass: s })}>
+                    <b>{tr.t(`subclass.${s}.name`)}</b>
+                    <span>{tr.t(`subclass.${s}.desc`)}</span>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {notices.length > 0 && (
-        <div className="notices panel" onClick={() => setNotices([])}>
-          {notices.map((n, i) => (
-            <div key={i}>{noticeText(tr, n)}</div>
-          ))}
-        </div>
-      )}
+        {notices.length > 0 && (
+          <div className="notices panel" onClick={() => setNotices([])}>
+            {notices.map((n, i) => (
+              <div key={i}>{noticeText(tr, n)}</div>
+            ))}
+          </div>
+        )}
 
-      {toast && <div className="toast">{toast}</div>}
-      {drag?.started && drag.touch && <div className="rotate-pill">↻ {tr.t("ui.rotateTap")}</div>}
-      {dragVisual && (
-        <div className="drag-ghost" style={{ left: drag!.x, top: drag!.y, transform: "translate(-50%, -50%)" }}>
-          {dragVisual}
-        </div>
-      )}
-    </div>
+        {toast && <div className="toast">{toast}</div>}
+        {drag?.started && drag.touch && <div className="rotate-pill">↻ {tr.t("ui.rotateTap")}</div>}
+        {dragVisual && (
+          <div className="drag-ghost" style={{ left: drag!.x, top: drag!.y, transform: "translate(-50%, -50%)" }}>
+            {dragVisual}
+          </div>
+        )}
+      </div>
+    </ShinyLines.Provider>
   );
 }
 

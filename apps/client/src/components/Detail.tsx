@@ -63,6 +63,7 @@ interface MonView {
   battles?: number;
   pendingEvolution?: string | null;
   aceBonus?: number;
+  nickname?: string;
 }
 
 function EvolutionLines({ state, mon }: { state: RunState; mon: MonView }) {
@@ -110,7 +111,14 @@ function PokemonDetail({ state, mon, onSetAce, onSell, onRotate, placedUid }: { 
         <PokemonSprite species={mon.species} formKey={species.spriteForm} shiny={mon.shiny} width={112} height={112} maxScale={2.5} />
         <div>
           <h3>
-            {tr.species(mon.species)} {mon.shiny && <span className="shiny" title={tr.t("ui.shiny")}>✦</span>}
+            {mon.nickname ? (
+              <>
+                {mon.nickname} <span className="muted small">{tr.species(mon.species)}</span>
+              </>
+            ) : (
+              tr.species(mon.species)
+            )}{" "}
+            {mon.shiny && <span className="shiny" title={tr.t("ui.shiny")}>✦</span>}
           </h3>
           <div>{tr.t("ui.level", { n: mon.level })}</div>
           <div className="types">
