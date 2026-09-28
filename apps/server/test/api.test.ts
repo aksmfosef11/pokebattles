@@ -367,6 +367,38 @@ describe("balance statistics", () => {
     expect(md).toContain("## Champions");
     expect(md).toContain("| kukui |");
   });
+
+  it("keeps battle detail, shop logs and run context", async () => {
+    const report = await json("/api/admin/stats", "admin-secret");
+    expect(report.performance.battles).toBeGreaterThan(0);
+    expect(report.performance.species.length).toBeGreaterThan(0);
+    expect(report.offers.some((o: { offered: number }) => o.offered > 0)).toBe(true);
+    expect(report.economy.length).toBeGreaterThan(0);
+    expect(report.roundCurve.length).toBeGreaterThan(0);
+    expect(report.players.list.length).toBe(report.totals.players);
+    expect(report.experience.reduce((a: number, g: { runs: number }) => a + g.runs, 0)).toBe(report.totals.runs);
+    // This test store has no build id, so everything sits under "-".
+    expect(report.builds.map((b: { build: string }) => b.build)).toEqual(["-"]);
+    expect((await json("/api/admin/stats?build=-", "admin-secret")).totals.runs).toBe(report.totals.runs);
+    expect((await json("/api/admin/stats?build=nope", "admin-secret")).totals.runs).toBe(0);
+
+    const [row] = await store.db.query<{ context: { poolStage: number; startItems: string[]; finishedRuns: number } | null }>(
+      "SELECT context FROM run_results WHERE context IS NOT NULL LIMIT 1",
+    );
+    expect(row?.context).toMatchObject({ poolStage: expect.any(Number), startItems: expect.any(Array), finishedRuns: expect.any(Number) });
+
+    const md = await (await call("/api/admin/stats?format=md&minSample=1", "admin-secret")).text();
+    for (const heading of ["## Builds", "## Battle win rate by round", "## Economy", "## Players", "## In battle", "## Shop pick rate"]) expect(md).toContain(heading);
+  });
+
+  it("exports raw rows to the admin only", async () => {
+    expect((await call("/api/admin/export", null)).status).toBe(401);
+    const rows = await json("/api/admin/export?limit=5", "admin-secret");
+    expect(rows.runs.length).toBeGreaterThan(0);
+    expect(rows.battles).toHaveLength(5);
+    expect(rows.battles[0].detail.battlers.length).toBeGreaterThan(0);
+    expect(rows.battles[0].shop.offered.length).toBeGreaterThan(0);
+  });
 });
 
 describe("tampered clients", () => {

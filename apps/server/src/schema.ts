@@ -95,6 +95,23 @@ const MIGRATIONS: { version: number; name: string; up: string[] }[] = [
       `CREATE INDEX run_results_ended ON run_results (ended_at)`,
     ],
   },
+  {
+    version: 2,
+    name: "balance detail",
+    up: [
+      // Per-Pokémon battle summary (game battle/log.ts) and the player's shop phase before it (run/shoplog.ts).
+      `ALTER TABLE battles ADD COLUMN detail JSONB`,
+      `ALTER TABLE battles ADD COLUMN shop JSONB`,
+      // The server build that recorded a row: statistics can be split before/after a balance patch.
+      `ALTER TABLE battles ADD COLUMN build TEXT`,
+      `ALTER TABLE run_results ADD COLUMN build TEXT`,
+      // How the run started (pool stage, start items, starter training, the player's experience).
+      `ALTER TABLE runs ADD COLUMN context JSONB`,
+      `ALTER TABLE run_results ADD COLUMN context JSONB`,
+      `CREATE INDEX battles_run ON battles (run_id)`,
+      `CREATE INDEX run_results_user ON run_results (user_id, ended_at)`,
+    ],
+  },
 ];
 
 /** Any constant: server instances starting together take turns migrating. */

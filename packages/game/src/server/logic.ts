@@ -1,4 +1,5 @@
 import { inBoard } from "../board.ts";
+import { battleLog, type BattleLog } from "../battle/log.ts";
 import { simulateBattle } from "../battle/sim.ts";
 import { CHAMPIONS, type ChampionKey } from "../content/champions.ts";
 import { randomSeed, rngFor } from "../rng.ts";
@@ -6,6 +7,7 @@ import { cellsOf } from "../run/layout.ts";
 import { migrateRun } from "../run/migrate.ts";
 import { applyRoundResult, prepareForBattle, snapshotTeam } from "../run/progression.ts";
 import { applyActions, createRun, type StartItem } from "../run/reducer.ts";
+import { replayShop, type ShopLog } from "../run/shoplog.ts";
 import type { StarterSetup } from "../run/pokemon.ts";
 import { GameError, type Action, type BattleOutcome, type Notice, type RunState, type TeamCosmetics, type TeamSnapshot } from "../run/types.ts";
 import { META_RULES, type RunReward } from "../meta/progress.ts";
@@ -52,6 +54,10 @@ export interface BattleRecord {
   ranked: boolean;
   /** [player, opponent] as they fought; kept (in summary) for balance statistics. */
   teams: [TeamSnapshot, TeamSnapshot];
+  /** Per-Pokémon battle summary (balance statistics). */
+  detail?: BattleLog;
+  /** The player's shop phase before this battle (balance statistics). */
+  shop?: ShopLog;
 }
 
 /** Persistence used by the game server (PostgreSQL) and the offline client (localStorage). */
@@ -218,7 +224,7 @@ export async function playRound(
   const actions = [...(record.pending ?? []), ...params.actions];
   if (actions.length > MAX_ACTIONS_PER_TURN) throw new GameError("too_many_actions");
 
-  const afterShop = applyActions(current, actions);
+  const { state: afterShop, log: shop } = replayShop(current, actions);
   if (afterShop.phase !== "shop") throw new GameError("wrong_phase");
   const prepared = prepareForBattle(afterShop);
   const you = snapshotTeam(prepared);
@@ -277,7 +283,20 @@ export async function playRound(
     opponent,
   });
   await store.putRun({ ...record, state: next, pending: [], updatedAt: now });
-  await store.addBattle({ id: `${current.runId}:${current.round}`, runId: current.runId, playerId: params.playerId, round: current.round, seed, ghostId, outcome, createdAt: now, ranked, teams });
+  await store.addBattle({
+    id: `${current.runId}:${current.round}`,
+    runId: current.runId,
+    playerId: params.playerId,
+    round: current.round,
+    seed,
+    ghostId,
+    outcome,
+    createdAt: now,
+    ranked,
+    teams,
+    detail: battleLog(result, teams),
+    shop,
+  });
   return { state: next, preBattleNotices: prepared.notices, battle: { seed, teams, opponent, outcome } };
 }
 

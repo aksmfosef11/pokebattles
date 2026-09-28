@@ -22,6 +22,21 @@ export interface UserRow {
   createdAt: number;
 }
 
+/** How a run started, kept for balance statistics (runs.context, copied to run_results.context). */
+export interface RunContext {
+  /** Pool unlock stage of the champion (meta/progress.ts) and how many evolution lines it still hid. */
+  poolStage: number;
+  lockedLines: number;
+  startItems: string[];
+  /** Starter training the run started with: a kept nature / ability, and the IV bonus summed over the six stats. */
+  starter: { nature: boolean; ability: boolean; ivBonus: number };
+  /** Runs this player had finished before (all champions) and with this champion. */
+  finishedRuns: number;
+  championRuns: number;
+  /** Ranked runs: the rating the run started at. */
+  rating?: number;
+}
+
 export interface LeaderboardEntry {
   username: string;
   rating: number;
@@ -81,12 +96,16 @@ class Rollback extends Error {}
 
 /** PostgreSQL persistence for accounts, runs, ghosts (async-PvP opponents), battle history and run results. */
 export class PgStore implements GameStore {
-  private constructor(readonly db: Db) {}
+  private constructor(
+    readonly db: Db,
+    /** Server build written into battles and run results, so statistics can be split by deploy. */
+    readonly build: string | null,
+  ) {}
 
   /** Opens the store on `db`, bringing its schema up to date first. */
-  static async open(db: Db): Promise<PgStore> {
+  static async open(db: Db, opts: { build?: string } = {}): Promise<PgStore> {
     await migrate(db);
-    return new PgStore(db);
+    return new PgStore(db, opts.build ?? null);
   }
 
   /** Throws when the database cannot be reached (health check). */
@@ -206,8 +225,9 @@ export class PgStore implements GameStore {
         const { profile, reward } = settle(user.profile);
         const team = teamSummary(Object.values(state.pieces).filter((p) => p.place !== null));
         const inserted = await q.query(
-          `INSERT INTO run_results (run_id, user_id, champion, subclass, ranked, wins, losses, rounds, points, rating_before, rating_after, species, items, ended_at)
-           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12::jsonb, $13::jsonb, $14)
+          `INSERT INTO run_results (run_id, user_id, champion, subclass, ranked, wins, losses, rounds, points, rating_before, rating_after, species, items, ended_at,
+             build, context)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12::jsonb, $13::jsonb, $14, $15, (SELECT context FROM runs WHERE run_id = $1))
            ON CONFLICT (run_id) DO NOTHING RETURNING run_id`,
           [
             state.runId,
@@ -224,6 +244,7 @@ export class PgStore implements GameStore {
             json(team.species),
             json(team.items),
             Date.now(),
+            this.build,
           ],
         );
         // Settled by someone who did not hold the owner's lock (cannot happen today): pay nothing.
@@ -250,6 +271,10 @@ export class PgStore implements GameStore {
        ON CONFLICT (run_id) DO UPDATE SET state = excluded.state, updated_at = excluded.updated_at, phase = excluded.phase, pending = excluded.pending`,
       [r.runId, r.playerId, json(r.state), r.createdAt, r.updatedAt, !!r.state.ranked, r.state.phase, r.pending?.length ? json(r.pending) : null],
     );
+  }
+
+  async setRunContext(runId: string, context: RunContext): Promise<void> {
+    await this.db.query("UPDATE runs SET context = $2::jsonb WHERE run_id = $1", [runId, json(context)]);
   }
 
   /** The player's unfinished ranked run, if any (only one at a time). */
@@ -301,13 +326,14 @@ export class PgStore implements GameStore {
     const theirs = teamSummary(opp.pieces);
     await this.db.query(
       `INSERT INTO battles (id, run_id, round, seed, ghost_id, outcome, created_at, player_id, ranked, ghost, champion, subclass, wins, losses,
-         species, items, opp_champion, opp_subclass, opp_species, opp_items)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15::jsonb, $16::jsonb, $17, $18, $19::jsonb, $20::jsonb)
+         species, items, opp_champion, opp_subclass, opp_species, opp_items, detail, shop, build)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15::jsonb, $16::jsonb, $17, $18, $19::jsonb, $20::jsonb,
+         $21::jsonb, $22::jsonb, $23)
        ON CONFLICT (id) DO UPDATE SET run_id = excluded.run_id, round = excluded.round, seed = excluded.seed, ghost_id = excluded.ghost_id,
          outcome = excluded.outcome, created_at = excluded.created_at, player_id = excluded.player_id, ranked = excluded.ranked, ghost = excluded.ghost,
          champion = excluded.champion, subclass = excluded.subclass, wins = excluded.wins, losses = excluded.losses, species = excluded.species,
          items = excluded.items, opp_champion = excluded.opp_champion, opp_subclass = excluded.opp_subclass, opp_species = excluded.opp_species,
-         opp_items = excluded.opp_items`,
+         opp_items = excluded.opp_items, detail = excluded.detail, shop = excluded.shop, build = excluded.build`,
       [
         b.id,
         b.runId,
@@ -329,6 +355,9 @@ export class PgStore implements GameStore {
         opp.subclass ?? null,
         json(theirs.species),
         json(theirs.items),
+        b.detail ? json(b.detail) : null,
+        b.shop ? json(b.shop) : null,
+        this.build,
       ],
     );
   }

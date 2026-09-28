@@ -1,4 +1,5 @@
-import { existsSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { existsSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { serve } from "@hono/node-server";
@@ -13,8 +14,20 @@ const db = await openDb(dbConfigFromEnv(resolve(here, "..", "data", "pglite"))).
   console.error(`db: ${e.message}`);
   process.exit(1);
 });
-const store = await PgStore.open(db);
-console.log(`db: ${db.label}`);
+/**
+ * This build's id, written into every battle and run result so the statistics can be split by deploy.
+ * The Docker image runs one bundle (rules and content inside), so its hash changes with every changed
+ * deploy; running from source (development) is "dev". BUILD_ID overrides it.
+ */
+function buildId(): string {
+  if (process.env.BUILD_ID) return process.env.BUILD_ID;
+  const self = fileURLToPath(import.meta.url);
+  if (!self.endsWith(".mjs")) return "dev";
+  return createHash("sha256").update(readFileSync(self)).digest("hex").slice(0, 10);
+}
+const build = buildId();
+const store = await PgStore.open(db, { build });
+console.log(`db: ${db.label} · build ${build}`);
 if (db.kind === "pglite") console.warn("db: embedded PGlite is for development and single-process use; set DATABASE_URL to a PostgreSQL server for a real deployment");
 
 const app = createApp(store, {

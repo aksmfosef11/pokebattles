@@ -21,6 +21,7 @@ import {
   payRename,
   payStartItems,
   playRound,
+  poolStage,
   publicState,
   randomSeed,
   readStartItems,
@@ -46,7 +47,7 @@ import {
   verifyPassword,
   WindowLimit,
 } from "./auth.ts";
-import { collectStats, statsMarkdown, type StatsFilter } from "./stats.ts";
+import { collectStats, exportRows, statsMarkdown, type StatsFilter } from "./stats.ts";
 import type { PgStore, UserRow } from "./store.ts";
 
 export interface AppOptions {
@@ -106,14 +107,22 @@ function sameSecret(a: string, b: string): boolean {
   return x.length === y.length && timingSafeEqual(x, y);
 }
 
-/** `since` as a date (2026-09-01) or milliseconds. */
+/** A time as a date (2026-09-01, 2026-09-01T12:00) or milliseconds. */
+function parseTime(value: string | undefined): number | undefined {
+  if (!value) return undefined;
+  const t = /^\d+$/.test(value) ? Number(value) : Date.parse(value);
+  return Number.isNaN(t) ? undefined : t;
+}
+
+/** `since` / `until` (parseTime), `ranked`, `build`, `minRound`, `minSample`. */
 function statsFilter(q: (k: string) => string | undefined): StatsFilter {
   const f: StatsFilter = {};
-  const since = q("since");
-  if (since) {
-    const t = /^\d+$/.test(since) ? Number(since) : Date.parse(since);
-    if (!Number.isNaN(t)) f.since = t;
-  }
+  const since = parseTime(q("since"));
+  if (since !== undefined) f.since = since;
+  const until = parseTime(q("until"));
+  if (until !== undefined) f.until = until;
+  const build = q("build");
+  if (build) f.build = build;
   const ranked = q("ranked");
   if (ranked === "true" || ranked === "1") f.ranked = true;
   if (ranked === "false" || ranked === "0") f.ranked = false;
@@ -314,6 +323,19 @@ export function createApp(store: PgStore, opts: AppOptions = {}): Hono {
       if (startItems.length > 0) await store.updateProfile(user.id, (p) => ({ ...p, points: p.points + startItems.length * META_RULES.startItemPrice }));
       throw e;
     }
+    await store.setRunContext(state.runId, {
+      poolStage: poolStage(profile, champion),
+      lockedLines: lockedLines.length,
+      startItems: [...startItems],
+      starter: {
+        nature: !!starter.nature,
+        ability: !!starter.ability,
+        ivBonus: Object.values(starter.ivBonus ?? {}).reduce((a, v) => a + (v ?? 0), 0),
+      },
+      finishedRuns: Object.values(profile.runs).reduce((a, v) => a + (v ?? 0), 0),
+      championRuns: profile.runs[champion] ?? 0,
+      ...(ranked ? { rating: profile.rating } : {}),
+    });
     return c.json({ state: publicState(state), account: { username: user.username, profile } });
   });
 
@@ -351,12 +373,28 @@ export function createApp(store: PgStore, opts: AppOptions = {}): Hono {
 
   // ───────────────────────────── balance statistics
 
-  app.get("/api/admin/stats", async (c) => {
+  /** Null when the admin endpoints may be used, else the response refusing them. */
+  function adminRefusal(c: Context): Response | null {
     if (!opts.adminToken) return c.json({ error: "not_found" }, 404);
     if (!sameSecret(c.req.header("authorization") ?? "", `Bearer ${opts.adminToken}`)) return c.json({ error: "unauthorized" }, 401);
+    return null;
+  }
+
+  app.get("/api/admin/stats", async (c) => {
+    const refused = adminRefusal(c);
+    if (refused) return refused;
     const filter = statsFilter((k) => c.req.query(k));
     const report = await collectStats(store.db, filter);
     return c.req.query("format") === "md" ? c.text(statsMarkdown(report, filter)) : c.json(report);
+  });
+
+  // Raw finished runs and battles (with battle detail and shop logs) for analysis outside the report.
+  app.get("/api/admin/export", async (c) => {
+    const refused = adminRefusal(c);
+    if (refused) return refused;
+    const limit = Number(c.req.query("limit"));
+    const rows = await exportRows(store.db, statsFilter((k) => c.req.query(k)), Number.isFinite(limit) && limit > 0 ? Math.min(limit, 100_000) : 20_000);
+    return c.json({ generatedAt: Date.now(), ...rows });
   });
 
   return app;

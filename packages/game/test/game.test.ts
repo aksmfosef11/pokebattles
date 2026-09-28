@@ -23,6 +23,12 @@ import {
   BOARD_H,
   cellsOf,
   RUN_STATE_VERSION,
+  applyActions,
+  battleLog,
+  offerKey,
+  replayShop,
+  slotPrice,
+  type Action,
   type RunState,
 } from "../src/index.ts";
 
@@ -272,6 +278,65 @@ describe("server logic", () => {
     const expected = replay.winner === 0 ? "win" : replay.winner === 1 ? "loss" : "draw";
     expect(expected).toBe(t2.battle.outcome);
     await expect(playRound(store, { playerId: "p2", runId: s1.runId, round: 2, actions: [] })).rejects.toThrow("run_not_found");
+    // Every battle keeps the balance logs: the per-Pokémon summary and the shop phase before it.
+    for (const b of store.battles) {
+      expect(b.detail?.battlers.length).toBeGreaterThan(0);
+      expect(b.shop?.goldStart).toBeGreaterThan(0);
+    }
+  });
+});
+
+describe("balance logs", () => {
+  it("sums a battle up per Pokémon", () => {
+    for (const round of [3, 8, 14]) {
+      const teams = [botTeam(`log-a-${round}`, round), botTeam(`log-b-${round}`, round)] as const;
+      const result = simulateBattle({ seed: `log-${round}`, teams: [teams[0], teams[1]] });
+      const log = battleLog(result, teams);
+      expect(log.battlers).toHaveLength(result.initial.length);
+      expect(log.winner).toBe(result.winner);
+      expect(log.battlers.map((b) => b.species)).toEqual(result.initial.map((b) => b.species));
+      for (const side of [0, 1] as const) {
+        const mine = log.battlers.filter((b) => b.side === side);
+        const theirs = log.battlers.filter((b) => b.side !== side);
+        // A KO is credited only to a blow that made an enemy faint.
+        expect(mine.reduce((a, b) => a + b.kos, 0)).toBeLessThanOrEqual(theirs.filter((b) => b.fainted).length);
+        expect(mine.reduce((a, b) => a + b.dealt, 0)).toBeLessThanOrEqual(theirs.reduce((a, b) => a + b.taken, 0));
+        expect(log.hpLeft[side]).toBeGreaterThanOrEqual(0);
+        expect(log.hpLeft[side]).toBeLessThanOrEqual(1);
+      }
+      if (result.winner !== null) {
+        const loser = result.winner === 0 ? 1 : 0;
+        expect(log.battlers.filter((b) => b.side === loser).every((b) => b.fainted)).toBe(true);
+        expect(log.hpLeft[result.winner]).toBeGreaterThan(0);
+      }
+      expect(log.battlers.some((b) => b.dealt > 0 && b.moves > 0)).toBe(true);
+    }
+  });
+
+  it("logs the shop phase while replaying it", () => {
+    const start = createRun({ runId: "r", seed: "shop-log", playerName: "", champion: "red" });
+    const slot = start.shop.findIndex((s) => s.offer && slotPrice(s, start) <= start.gold);
+    const bought = start.shop[slot]!.offer!;
+    const actions: Action[] = [{ t: "buy", slot }, { t: "reroll" }];
+    const { state, log } = replayShop(start, actions);
+    expect(state).toEqual(applyActions(start, actions));
+    expect(log.bought).toEqual([offerKey(bought)]);
+    expect(log.rerolls).toBe(1);
+    const shown = (r: RunState) => r.shop.filter((s) => s.offer).length;
+    expect(log.offered).toHaveLength(shown(start) + shown(state));
+    expect(log.goldStart - log.spent - log.rerollGold + log.sellGold).toBe(log.goldEnd);
+    expect(log.goldEnd).toBe(state.gold);
+    // Illegal actions still throw, exactly like applyActions.
+    const bad: Action[] = [{ t: "reroll" }, { t: "sell", uid: "nobody" }];
+    const expected = (() => {
+      try {
+        applyActions(start, bad);
+      } catch (e) {
+        return (e as Error).message;
+      }
+      return "no error";
+    })();
+    expect(() => replayShop(start, bad)).toThrow(expected);
   });
 });
 

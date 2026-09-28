@@ -5,7 +5,8 @@
 # Without DATABASE_URL the server keeps its data in embedded PGlite under /data/pglite (one container only):
 #   docker run -d -p 8787:8787 -v pokebattles-data:/data pokebattles-server
 # Environment: PORT (8787), DATABASE_URL, PG_POOL_MAX (10), POKEBATTLES_PGDATA (/data/pglite), ADMIN_TOKEN (balance stats),
-# CORS_ORIGIN (comma-separated origins, when the client is hosted on another site), REGISTER_PER_HOUR (10).
+# CORS_ORIGIN (comma-separated origins, when the client is hosted on another site), REGISTER_PER_HOUR (10),
+# BUILD_ID (tags recorded battles and runs for the statistics; default: a hash of the server bundle).
 
 FROM node:22-bookworm-slim AS build
 RUN npm install -g pnpm@10.34.5
