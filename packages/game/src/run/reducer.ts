@@ -1,10 +1,10 @@
-import { BAGS, BOARD_H, BOARD_W, cellKey, placeCell, rotateShape, shapeSize, START_BAG_PLACE, type Cell, type Placement, type Rot } from "../board.ts";
+import { BAGS, BOARD_H, BOARD_W, rotateShape, shapeSize, START_BAG_PLACE, type Placement, type Rot } from "../board.ts";
 import { CHAMPIONS, type ChampionKey } from "../content/champions.ts";
 import { getSpecies, ITEMS, type Tier } from "../content/index.ts";
 import { cleanNickname } from "../meta/cosmetics.ts";
 import { rngFor, type Rng } from "../rng.ts";
 import { natureEffect, NATURES, type Nature } from "../stats.ts";
-import { bagContents, bagHasContents, cellsOf, checkPlacement, findFreePlacement, planDrop } from "./layout.ts";
+import { bagGroup, bagHasContents, checkPlacement, findFreePlacement, planBagMove, planDrop } from "./layout.ts";
 import { moveSlotsFor, newPokemon, pieceShape, refreshMoves, rollIvs, rollTraits, trainTraits, type StarterSetup } from "./pokemon.ts";
 import { RUN_STATE_VERSION } from "./migrate.ts";
 import { championSpeciesByTier, championSpeciesOfTier } from "./pool.ts";
@@ -229,28 +229,13 @@ function place(state: RunState, piece: Piece, where: Placement | null | undefine
 }
 
 /**
- * Moves (and rotates) a bag together with every piece lying entirely on it, like Backpack Battles.
- * Pieces that also rest on another bag would be torn apart, so the move is refused.
+ * Moves (and rotates) a bag together with every bag linked to it by a piece resting on both, and
+ * everything lying on them (see `planBagMove`).
  */
 function moveBag(state: RunState, bag: BagPiece, where: Placement): void {
-  const err = checkPlacement(state.pieces, bag, where);
-  if (err) throw new GameError(err);
-  const { inside, straddling } = bagContents(state.pieces, bag);
-  if (straddling.length > 0) throw new GameError("bag_straddled");
-  const shape = BAGS[bag.bag]!.cells;
-  const from = bag.place!;
-  const toLocal = new Map<number, Cell>();
-  for (const local of shape) toLocal.set(cellKey(placeCell(shape, local, from)), local);
-  const turn = (((where.rot - from.rot) % 4) + 4) % 4;
-  for (const p of inside) {
-    const cells = cellsOf(p).map((c) => placeCell(shape, toLocal.get(cellKey(c))!, where));
-    p.place = {
-      x: Math.min(...cells.map((c) => c.x)),
-      y: Math.min(...cells.map((c) => c.y)),
-      rot: ((p.place!.rot + turn) % 4) as Rot,
-    };
-  }
-  bag.place = { x: where.x, y: where.y, rot: where.rot };
+  const { places, error } = planBagMove(state.pieces, bag, where);
+  if (error) throw new GameError(error);
+  for (const [uid, place] of places) state.pieces[uid]!.place = place;
 }
 
 export function isStarterBag(piece: Piece): boolean {
@@ -488,15 +473,18 @@ export function applyAction(prev: RunState, input: Action): RunState {
 export function rotationSpot(state: RunState, uid: string): Placement | null {
   const piece = state.pieces[uid];
   if (!piece?.place) return null;
-  const shape = pieceShape(piece);
-  const rot = ((piece.place.rot + 1) % 4) as Rot;
-  const before = shapeSize(rotateShape(shape, piece.place.rot));
+  // A bag turns with its whole group around the group's centre.
+  const group = piece.kind === "bag" ? bagGroup(state.pieces, piece) : null;
+  const shape = group?.shape ?? pieceShape(piece);
+  const from = group?.place ?? piece.place;
+  const rot = ((from.rot + 1) % 4) as Rot;
+  const before = shapeSize(rotateShape(shape, from.rot));
   const after = shapeSize(rotateShape(shape, rot));
-  const bx = Math.round(piece.place.x + (before.w - after.w) / 2);
-  const by = Math.round(piece.place.y + (before.h - after.h) / 2);
-  const carried = new Set(piece.kind === "bag" ? bagContents(state.pieces, piece).inside.map((p) => p.uid) : []);
+  const bx = Math.round(from.x + (before.w - after.w) / 2);
+  const by = Math.round(from.y + (before.h - after.h) / 2);
+  const carried = new Set([uid, ...(group ? [...group.bags, ...group.carried].map((p) => p.uid) : [])]);
   // Only placed pieces can be pushed aside; pieces waiting in the stash stay there.
-  const bystanders = Object.values(state.pieces).filter((p) => p.uid !== uid && p.place && !carried.has(p.uid));
+  const bystanders = Object.values(state.pieces).filter((p) => p.place && !carried.has(p.uid));
   for (let ring = 0; ring <= 3; ring++) {
     for (let dy = -ring; dy <= ring; dy++) {
       for (let dx = -ring; dx <= ring; dx++) {

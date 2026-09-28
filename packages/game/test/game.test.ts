@@ -31,6 +31,8 @@ import {
   offerKey,
   replayShop,
   slotPrice,
+  layoutIsValid,
+  rotationSpot,
   type Action,
   type RunState,
 } from "../src/index.ts";
@@ -223,7 +225,74 @@ describe("party and board", () => {
     expect(() => applyAction(s, { t: "sell", uid: bag.uid })).toThrow("cannot_sell");
   });
 
-  it("refuses to move a bag when a Pokémon also rests on another bag", () => {
+  it("moves bags linked by a Pokémon resting on both as one, whichever bag is grabbed", () => {
+    const s = run("red");
+    const [start, mon, item] = ["u1", "u2", "u3"];
+    // Snorlax (3×2) spans the starting bag's right column and a 3×2 bag beside it.
+    const big = newPokemon("big", "SNORLAX", 20, rollTraits("SNORLAX", rngFor("snorlax")), 3, 4);
+    big.place = { x: 5, y: 3, rot: 0 };
+    s.pieces = {
+      ...s.pieces,
+      side: { uid: "side", kind: "bag", place: { x: 6, y: 3, rot: 0 }, paid: 5, bag: "BAG_2X3" },
+      far: { uid: "far", kind: "bag", place: { x: 0, y: 5, rot: 0 }, paid: 2, bag: "BAG_1X2" },
+      big,
+    };
+    expect(layoutIsValid(s.pieces)).toBe(true);
+    for (const grab of [start, "side"]) {
+      const after = applyAction(s, { t: "move", uid: grab, place: { x: 0, y: 0, rot: 0 } });
+      expect(after.pieces[start]!.place).toEqual({ x: 0, y: 0, rot: 0 });
+      expect(after.pieces.side!.place).toEqual({ x: 3, y: 1, rot: 0 });
+      expect(after.pieces.big!.place).toEqual({ x: 2, y: 1, rot: 0 });
+      expect(after.pieces[mon]!.place).toEqual({ x: 1, y: 0, rot: 0 });
+      expect(after.pieces[item]!.place).toEqual({ x: 1, y: 1, rot: 0 });
+      expect(after.pieces.far!.place).toEqual({ x: 0, y: 5, rot: 0 });
+      expect(layoutIsValid(after.pieces)).toBe(true);
+    }
+    // The joint footprint may not land on a bag outside the group.
+    expect(() => applyAction(s, { t: "move", uid: start, place: { x: 0, y: 3, rot: 0 } })).toThrow("bag_overlap");
+  });
+
+  it("moves and turns a chain of three linked bags together", () => {
+    let s = run("red");
+    const lapras = (uid: string, x: number) => {
+      const p = newPokemon(uid, "LAPRAS", 20, rollTraits("LAPRAS", rngFor(uid)), 3, 4);
+      p.place = { x, y: 0, rot: 0 };
+      return p;
+    };
+    const bag = (uid: string, x: number, key = "BAG_2X2") => ({ uid, kind: "bag" as const, place: { x, y: 0, rot: 0 as const }, paid: 4, bag: key });
+    // a | b | c: one Lapras spans a–b and another b–c, so a and c are linked only through b.
+    s.pieces = {
+      ...s.pieces,
+      a: bag("a", 0),
+      b: bag("b", 2),
+      c: bag("c", 4),
+      d: bag("d", 7, "BAG_1X2"),
+      l1: lapras("l1", 1),
+      l2: lapras("l2", 3),
+      u3: { ...s.pieces.u3!, place: { x: 0, y: 0, rot: 0 } },
+    };
+    expect(layoutIsValid(s.pieces)).toBe(true);
+    const before = structuredClone(s.pieces);
+    // Turning the 6×2 row clockwise stands it up as a 2×6 column: (x, y) → (1 − y, x).
+    s = applyAction(s, { t: "move", uid: "b", place: { x: 0, y: 0, rot: 1 } });
+    expect(s.pieces.a!.place).toEqual({ x: 0, y: 0, rot: 1 });
+    expect(s.pieces.b!.place).toEqual({ x: 0, y: 2, rot: 1 });
+    expect(s.pieces.c!.place).toEqual({ x: 0, y: 4, rot: 1 });
+    expect(s.pieces.l1!.place).toEqual({ x: 0, y: 1, rot: 1 });
+    expect(s.pieces.l2!.place).toEqual({ x: 0, y: 3, rot: 1 });
+    expect(s.pieces.u3!.place).toEqual({ x: 1, y: 0, rot: 1 });
+    // Bags that nothing links stay where they are, with what lies on them.
+    for (const uid of ["d", "u1", "u2"]) expect(s.pieces[uid]!.place).toEqual(before[uid]!.place);
+    expect(layoutIsValid(s.pieces)).toBe(true);
+    // Turning in place (R) also turns the whole chain.
+    const spot = rotationSpot(s, "a");
+    expect(spot).not.toBeNull();
+    s = applyAction(s, { t: "move", uid: "a", place: spot! });
+    expect(new Set(["a", "b", "c", "l1", "l2", "u3"].map((uid) => s.pieces[uid]!.place!.rot))).toEqual(new Set([2]));
+    expect(layoutIsValid(s.pieces)).toBe(true);
+  });
+
+  it("refuses to move a bag when a piece on it also hangs off the bags", () => {
     let s = run("red");
     const bag = Object.values(s.pieces).find((p) => p.kind === "bag")!;
     s = { ...s, pieces: { ...s.pieces, side: { uid: "side", kind: "bag", place: { x: 6, y: 2, rot: 0 }, paid: 2, bag: "BAG_1X2" } } };

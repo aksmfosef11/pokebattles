@@ -1,7 +1,7 @@
-import { BOARD_H, BOARD_W, cellKey, inBoard, neighbours, placeShape, rotateShape, shapeSize, type Cell, type Placement } from "../board.ts";
+import { BOARD_H, BOARD_W, cellKey, inBoard, neighbours, placeCell, placeShape, rotateShape, shapeSize, type Cell, type Placement } from "../board.ts";
 import { itemReach, itemSize, type Reach } from "../content/items.ts";
 import { pieceShape } from "./pokemon.ts";
-import type { ItemPiece, Piece, PokemonPiece } from "./types.ts";
+import type { BagPiece, ItemPiece, Piece, PokemonPiece } from "./types.ts";
 
 export interface Layout {
   /** Cells covered by a bag. */
@@ -45,7 +45,7 @@ export type PlacementError = "out_of_board" | "no_bag" | "occupied" | "bag_overl
 
 /**
  * Checks whether `piece` can sit at `place`, ignoring its own current position. A bag only needs
- * free board space: whatever sits on it moves with it (see `bagContents`).
+ * free board space: whatever sits on it moves with it (see `planBagMove`).
  */
 export function checkPlacement(pieces: Record<string, Piece>, piece: Piece, place: Placement): PlacementError | null {
   const target = placeShape(pieceShape(piece), place);
@@ -83,6 +83,99 @@ export function bagContents(pieces: Record<string, Piece>, bag: Piece): { inside
   }
   inside.sort((a, b) => (a.uid < b.uid ? -1 : 1));
   return { inside, straddling };
+}
+
+export interface BagGroup {
+  /** Bags that move as one, sorted by uid: the grabbed bag and every bag linked to it. */
+  bags: BagPiece[];
+  /** Pokémon and items lying on those bags; they travel with them. */
+  carried: Piece[];
+  /** A carried piece also hangs off the bags (only on a broken layout): the group cannot move. */
+  torn: boolean;
+  /** The joint footprint in the grabbed bag's unturned frame, like a piece shape. */
+  shape: Cell[];
+  /** Where that footprint sits now: `placeShape(shape, place)` gives the group's cells. */
+  place: Placement;
+}
+
+/**
+ * The bags that move together with `bag`: a Pokémon or item resting on several bags links them,
+ * so any number of bags joined that way are carried as one instead of tearing the piece apart.
+ */
+export function bagGroup(pieces: Record<string, Piece>, bag: BagPiece): BagGroup {
+  const { bagAt } = computeLayout(Object.values(pieces));
+  const links: string[][] = [];
+  for (const p of Object.values(pieces)) {
+    if (p.kind === "bag" || !p.place) continue;
+    const under = new Set<string>();
+    for (const c of cellsOf(p)) {
+      const b = bagAt.get(cellKey(c));
+      if (b) under.add(b);
+    }
+    if (under.size > 1) links.push([...under]);
+  }
+  const uids = new Set([bag.uid]);
+  for (let grew = true; grew; ) {
+    grew = false;
+    for (const link of links) {
+      if (!link.some((b) => uids.has(b)) || link.every((b) => uids.has(b))) continue;
+      for (const b of link) uids.add(b);
+      grew = true;
+    }
+  }
+  const bags = [...uids].sort().map((uid) => pieces[uid] as BagPiece);
+  const cells = bags.flatMap((b) => cellsOf(b));
+  const own = new Set(cells.map(cellKey));
+  const carried: Piece[] = [];
+  let torn = false;
+  for (const p of Object.values(pieces)) {
+    if (p.kind === "bag" || !p.place) continue;
+    const cs = cellsOf(p).map(cellKey);
+    const on = cs.filter((k) => own.has(k)).length;
+    if (on === cs.length) carried.push(p);
+    else if (on > 0) torn = true;
+  }
+  carried.sort((a, b) => (a.uid < b.uid ? -1 : 1));
+  const rot = bag.place!.rot;
+  const shape = rotateShape(cells, ((4 - rot) % 4) as Placement["rot"]);
+  const place: Placement = { x: Math.min(...cells.map((c) => c.x)), y: Math.min(...cells.map((c) => c.y)), rot };
+  return { bags, carried, torn, shape, place };
+}
+
+export interface BagMove {
+  /** New placement of every bag in the group and every piece lying on them. */
+  places: Map<string, Placement>;
+  error: PlacementError | "bag_straddled" | null;
+}
+
+/**
+ * Moving (and turning) a bag carries its whole group (see `bagGroup`) with everything on it, like
+ * Backpack Battles. `where` places the group's joint footprint turned to the grabbed bag's new
+ * `rot`, so for a lone bag it is simply the bag's own placement. `places` is filled even when the
+ * move is not allowed (the client draws the carried pieces in the drag ghost).
+ */
+export function planBagMove(pieces: Record<string, Piece>, bag: BagPiece, where: Placement): BagMove {
+  const group = bagGroup(pieces, bag);
+  const toLocal = new Map<number, Cell>();
+  for (const local of group.shape) toLocal.set(cellKey(placeCell(group.shape, local, group.place)), local);
+  const turn = (((where.rot - group.place.rot) % 4) + 4) % 4;
+  const places = new Map<string, Placement>();
+  for (const p of [...group.bags, ...group.carried]) {
+    const cells = cellsOf(p).map((c) => placeCell(group.shape, toLocal.get(cellKey(c))!, where));
+    places.set(p.uid, {
+      x: Math.min(...cells.map((c) => c.x)),
+      y: Math.min(...cells.map((c) => c.y)),
+      rot: ((p.place!.rot + turn) % 4) as Placement["rot"],
+    });
+  }
+  const target = placeShape(group.shape, where);
+  const moving = new Set(group.bags.map((b) => b.uid));
+  const others = computeLayout(Object.values(pieces).filter((p) => !moving.has(p.uid)));
+  let error: BagMove["error"] = null;
+  if (target.some((c) => !inBoard(c))) error = "out_of_board";
+  else if (target.some((c) => others.bagAt.has(cellKey(c)))) error = "bag_overlap";
+  else if (group.torn) error = "bag_straddled";
+  return { places, error };
 }
 
 export interface Adjacency {

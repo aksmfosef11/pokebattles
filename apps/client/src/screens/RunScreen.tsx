@@ -6,9 +6,11 @@ import {
   CHAMPIONS,
   cellKey,
   cellsOf,
+  bagGroup,
   checkPlacement,
   itemReach,
   itemReachCells,
+  planBagMove,
   planDrop,
   reachCells,
   recipePartner,
@@ -53,6 +55,9 @@ function isRotateKey(e: KeyboardEvent): boolean {
 }
 
 type DragSource = { kind: "piece"; uid: string } | { kind: "shop"; slot: number };
+
+/** What the drag ghost draws in a footprint: a Pokémon (sprite kept upright) or an item. */
+type GhostPiece = { species: string; shiny: boolean } | { item: string; param?: string };
 
 interface DragState {
   source: DragSource;
@@ -325,7 +330,9 @@ export function RunScreen({
   const dragShape = (d: DragState): Cell[] => {
     if (d.source.kind === "piece") {
       const p = state.pieces[d.source.uid];
-      return p ? pieceShape(p) : [];
+      if (!p) return [];
+      // A bag carries every bag linked to it, so the whole group's footprint follows the cursor.
+      return p.kind === "bag" && p.place ? bagGroup(state.pieces, p).shape : pieceShape(p);
     }
     const offer = state.shop[d.source.slot]?.offer;
     return offer ? pieceShape(offerProbe(offer)) : [];
@@ -385,7 +392,10 @@ export function RunScreen({
     if (!place || !probe) return null;
     const pieces = drag.source.kind === "shop" ? { ...state.pieces, __probe: probe } : state.pieces;
     const cells = placeShape(dragShape(drag), place);
-    if (probe.kind === "bag") return { cells, valid: checkPlacement(pieces, probe, place) === null };
+    if (probe.kind === "bag") {
+      const valid = probe.place ? planBagMove(pieces, probe, place).error === null : checkPlacement(pieces, probe, place) === null;
+      return { cells, valid };
+    }
     const stashed = Object.values(state.pieces).filter((p) => p.place === null).length - (drag.source.kind === "piece" && !probe.place ? 1 : 0);
     const plan = planDrop(pieces, probe, place, stashed < STASH_LIMIT);
     return { cells, valid: plan.ok, ...(plan.ok && plan.displaced ? { displacedUid: plan.displaced.uid } : {}) };
@@ -611,8 +621,9 @@ export function RunScreen({
     (uid: string) => {
       const p = state.pieces[uid];
       if (!p?.place) return;
-      // No spot fits: try the plain turn anyway so the toast explains why.
-      act({ t: "move", uid, place: rotationSpot(state, uid) ?? { ...p.place, rot: ((p.place.rot + 1) % 4) as Rot } });
+      // No spot fits: try the plain turn anyway so the toast explains why (a bag's move places its whole group).
+      const from = p.kind === "bag" ? bagGroup(state.pieces, p).place : p.place;
+      act({ t: "move", uid, place: rotationSpot(state, uid) ?? { ...from, rot: ((from.rot + 1) % 4) as Rot } });
     },
     [state, act],
   );
@@ -638,59 +649,72 @@ export function RunScreen({
   };
 
   const stash = Object.values(state.pieces).filter((p) => p.place === null);
+  // Pieces that follow the cursor: a dragged bag takes its linked bags and everything on them.
+  const draggingUids = (() => {
+    if (!drag?.started || drag.source.kind !== "piece") return new Set<string>();
+    const p = state.pieces[drag.source.uid];
+    if (p?.kind !== "bag" || !p.place) return new Set([drag.source.uid]);
+    const group = bagGroup(state.pieces, p);
+    return new Set([...group.bags, ...group.carried].map((q) => q.uid));
+  })();
   const champ = CHAMPIONS[state.champion];
-  // The ghost shows the rotated footprint with the sprite kept upright.
+  // One Pokémon or item in the drag ghost: `w`×`h` cells whose top-left cell is (x, y).
+  const ghostPiece = (key: string, what: GhostPiece, w: number, h: number, x = 0, y = 0) => {
+    const box = { left: x * cell, top: y * cell, width: w * cell, height: h * cell, "--cell": `${cell}px` };
+    if ("species" in what) {
+      return (
+        <div key={key} className="ghost-fp" style={{ ...box, "--tc": TYPE_COLORS[getSpecies(what.species).types[0]!] } as React.CSSProperties}>
+          <PokemonSprite
+            species={what.species}
+            formKey={getSpecies(what.species).spriteForm}
+            shiny={what.shiny}
+            width={w * cell - 6}
+            height={h * cell - 12}
+            maxScale={3}
+            animate={false}
+            valign={h > w ? "middle" : "bottom"}
+          />
+          {w * h > 1 && <span className="size-badge">{`${w}×${h}`}</span>}
+        </div>
+      );
+    }
+    return (
+      <div key={key} className={`ghost-item ${w * h > 1 ? "big" : ""}`} style={box as React.CSSProperties}>
+        <ItemIcon item={what.item} param={what.param} size={Math.min(w, h) * cell - 16} />
+        {w * h > 1 && <span className="size-badge">{`${w}×${h}`}</span>}
+      </div>
+    );
+  };
+
+  // The ghost shows the rotated footprint with the sprite kept upright; a bag also shows what it carries.
   const dragVisual = (() => {
     if (!drag?.started) return null;
     const cells = rotateShape(dragShape(drag), drag.rot);
     const { w, h } = shapeSize(cells);
-    let species: string | null = null;
-    let shiny = false;
-    let item: { item: string; param?: string } | null = null;
+    let what: GhostPiece | null = null;
+    let carried: [Piece, Placement][] = [];
     if (drag.source.kind === "shop") {
       const offer = state.shop[drag.source.slot]?.offer;
       if (!offer) return null;
-      if (offer.kind === "pokemon") {
-        species = offer.species;
-        shiny = offer.shiny;
-      } else if (offer.kind === "item") item = offer;
+      if (offer.kind !== "bag") what = offer;
     } else {
       const p = state.pieces[drag.source.uid];
       if (!p) return null;
-      if (p.kind === "pokemon") {
-        species = p.species;
-        shiny = p.shiny;
-      } else if (p.kind === "item") item = p;
+      if (p.kind !== "bag") what = p;
+      else if (p.place) {
+        const { places } = planBagMove(state.pieces, p, { x: 0, y: 0, rot: drag.rot });
+        carried = [...places].map(([uid, place]) => [state.pieces[uid]!, place] as [Piece, Placement]).filter(([q]) => q.kind !== "bag");
+      }
     }
     return (
       <div className="ghost-box" style={{ width: w * cell, height: h * cell }}>
-        {species === null &&
-          !item &&
+        {!what &&
           cells.map((c) => <div key={`${c.x}-${c.y}`} className="ghost-bag-cell" style={{ left: c.x * cell, top: c.y * cell, width: cell, height: cell }} />)}
-        {species !== null && (
-          <div
-            className="ghost-fp"
-            style={{ "--tc": TYPE_COLORS[getSpecies(species).types[0]!], "--cell": `${cell}px` } as React.CSSProperties}
-          >
-            <PokemonSprite
-              species={species}
-              formKey={getSpecies(species).spriteForm}
-              shiny={shiny}
-              width={w * cell - 6}
-              height={h * cell - 12}
-              maxScale={3}
-              animate={false}
-              valign={h > w ? "middle" : "bottom"}
-            />
-            {w * h > 1 && <span className="size-badge">{`${w}×${h}`}</span>}
-          </div>
-        )}
-        {item && (
-          <div className={`ghost-item ${w * h > 1 ? "big" : ""}`} style={{ "--cell": `${cell}px` } as React.CSSProperties}>
-            <ItemIcon item={item.item} param={item.param} size={Math.min(w, h) * cell - 16} />
-            {w * h > 1 && <span className="size-badge">{`${w}×${h}`}</span>}
-          </div>
-        )}
+        {carried.map(([q, place]) => {
+          const size = shapeSize(rotateShape(pieceShape(q), place.rot));
+          return ghostPiece(q.uid, q as GhostPiece, size.w, size.h, place.x, place.y);
+        })}
+        {what && ghostPiece("piece", what, w, h)}
         {focus.recipeOut && <span className="ghost-recipe">★ {tr.itemName(focus.recipeOut)}</span>}
       </div>
     );
@@ -793,7 +817,7 @@ export function RunScreen({
                   selected={target?.kind === "piece" ? target.uid : null}
                   highlight={boardHighlight}
                   preview={preview}
-                  draggingUid={drag?.started && drag.source.kind === "piece" ? drag.source.uid : null}
+                  dragging={draggingUids}
                   stars={focus.stars}
                   affected={focus.affected}
                   recipeUid={focus.recipeUid}

@@ -33,7 +33,8 @@ interface BoardProps {
   selected: string | null;
   highlight: Set<number>;
   preview: BoardPreview | null;
-  draggingUid: string | null;
+  /** Pieces being dragged (a bag drags its linked bags and what lies on them). */
+  dragging: ReadonlySet<string>;
   /** Cells the focused item reaches (Backpack Battles stars). */
   stars: Set<number>;
   /** Pokémon inside that reach. */
@@ -64,7 +65,7 @@ function box(piece: Piece): { x: number; y: number; w: number; h: number } {
 }
 
 export const Board = forwardRef<HTMLDivElement, BoardProps>(function Board(
-  { state, cell, selected, highlight, preview, draggingUid, stars, affected, recipeUid, onHover, onPiecePointerDown, onPieceContext, onBackgroundClick },
+  { state, cell, selected, highlight, preview, dragging, stars, affected, recipeUid, onHover, onPiecePointerDown, onPieceContext, onBackgroundClick },
   ref,
 ) {
   const { tr } = useI18n();
@@ -145,7 +146,7 @@ export const Board = forwardRef<HTMLDivElement, BoardProps>(function Board(
         return (
           <div
             key={`handle-${b.uid}`}
-            className={`bag-handle ${selected === b.uid ? "sel" : ""} ${draggingUid === b.uid ? "dragging" : ""}`}
+            className={`bag-handle ${selected === b.uid ? "sel" : ""} ${dragging.has(b.uid) ? "dragging" : ""}`}
             title={tr.itemName(b.bag)}
             style={{ left: first.x * cell + 3, top: first.y * cell + 3 }}
             onPointerDown={(e) => {
@@ -170,7 +171,7 @@ export const Board = forwardRef<HTMLDivElement, BoardProps>(function Board(
               `piece-${p.kind}`,
               p.kind === "item" && b.w * b.h > 1 ? "big" : "",
               isSel ? "sel" : "",
-              draggingUid === p.uid ? "dragging" : "",
+              dragging.has(p.uid) ? "dragging" : "",
               preview?.displacedUid === p.uid ? "swap" : "",
               affected.has(p.uid) ? "affected" : "",
               recipeUid === p.uid ? "recipe" : "",
