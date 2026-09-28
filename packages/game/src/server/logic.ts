@@ -5,7 +5,8 @@ import { randomSeed, rngFor } from "../rng.ts";
 import { cellsOf } from "../run/layout.ts";
 import { migrateRun } from "../run/migrate.ts";
 import { applyRoundResult, prepareForBattle, snapshotTeam } from "../run/progression.ts";
-import { applyActions, createRun } from "../run/reducer.ts";
+import { applyActions, createRun, type StartItem } from "../run/reducer.ts";
+import type { StarterSetup } from "../run/pokemon.ts";
 import { GameError, type Action, type BattleOutcome, type Notice, type RunState, type TeamSnapshot } from "../run/types.ts";
 import { META_RULES, type RunReward } from "../meta/progress.ts";
 import { botTeam, rankedBot } from "./bot.ts";
@@ -170,6 +171,10 @@ export async function startRun(
     /** Pool lines this player has not unlocked (meta/progress.ts runOptionsFor). */
     lockedLines?: readonly string[];
     ranked?: boolean;
+    /** The player's trained starter (runOptionsFor). */
+    starter?: StarterSetup;
+    /** Start-of-run items, already paid for with points. */
+    startItems?: readonly StartItem[];
   },
 ): Promise<RunState> {
   if (!CHAMPIONS[params.champion]) throw new GameError("invalid_champion");
@@ -181,6 +186,8 @@ export async function startRun(
     champion: params.champion,
     ...(params.lockedLines ? { lockedLines: params.lockedLines } : {}),
     ...(params.ranked ? { ranked: true } : {}),
+    ...(params.starter ? { starter: params.starter } : {}),
+    ...(params.startItems?.length ? { startItems: params.startItems } : {}),
   });
   const now = Date.now();
   await store.putRun({ runId, playerId: params.playerId, state, createdAt: now, updatedAt: now });

@@ -17,7 +17,8 @@ export type ItemFamily =
   | "tera"
   | "dynamax"
   | "tm"
-  | "plate";
+  | "plate"
+  | "training";
 
 /**
  * Which cells an item affects, relative to its own cells (Backpack Battles-style stars).
@@ -40,8 +41,8 @@ export interface ItemDef {
   champions?: ChampionKey[];
   /** Type for type boosters and Z-crystals. */
   type?: TypeKey;
-  /** Instances carry a parameter: a type (tera shards) or a move key (TMs). */
-  param?: "type" | "move";
+  /** Instances carry a parameter: a type (tera shards), a move key (TMs) or a nature (mints). */
+  param?: "type" | "move" | "nature";
   /** Consumed when its effect resolves. */
   consumable?: boolean;
   /** Counts as a stone for Steven's passive. */
@@ -250,6 +251,9 @@ const BASE_ITEMS: ItemDef[] = [
   { key: "ICY_ROCK", family: "weatherRock", tier: 2, price: 3, stone: true },
   { key: "LINKING_CORD", family: "evolution", tier: 2, price: 4, consumable: true },
   { key: "TM", family: "tm", tier: 2, price: 4, param: "move", consumable: true },
+  // Bought with points when a run starts (reducer.ts START_ITEMS), never in the shop.
+  { key: "MINT", family: "training", tier: 1, price: 0, param: "nature", consumable: true, noShop: true },
+  { key: "BOTTLE_CAP", family: "training", tier: 1, price: 0, consumable: true, noShop: true },
 
   // 레드
   { key: "LIGHT_BALL", family: "held", tier: 1, price: 3, champions: ["red"] },

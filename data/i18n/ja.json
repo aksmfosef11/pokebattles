@@ -7313,6 +7313,10 @@
       "name": "ブーストエナジー",
       "description": null
     },
+    "BOTTLE_CAP": {
+      "name": "ぎんのおうかん",
+      "description": "銀色の　きれいな　王冠。渡すと　よろこぶ　人もいる。"
+    },
     "BRIGHT_POWDER": {
       "name": "ひかりのこな",
       "description": "キラキラ　光る粉。　持たせると光が　相手を　惑わして技が　命中しにくくなる。"
@@ -9859,6 +9863,11 @@
       "BOOSTER_ENERGY": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "booster-energy",
+        "pokeapiLanguage": "ja"
+      },
+      "BOTTLE_CAP": {
+        "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
+        "pokeapiIdentifier": "bottle-cap",
         "pokeapiLanguage": "ja"
       },
       "BRIGHT_POWDER": {

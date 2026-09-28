@@ -107,7 +107,10 @@ interface UndoSell {
   gold: number;
 }
 
-type Targeting = { kind: "tm"; uid: string } | { kind: "masterBall"; uid: string } | null;
+/** An item waiting for the Pokémon it is used on (TM, Mint, Bottle Cap) or the shop slot (Master Ball). */
+type Targeting = { kind: "pokemon"; uid: string } | { kind: "masterBall"; uid: string } | null;
+
+const USED_ON_POKEMON = new Set(["TM", "MINT", "BOTTLE_CAP"]);
 
 function pendingKey(state: RunState) {
   return `pokebattles.pending.${state.runId}.${state.round}`;
@@ -438,7 +441,7 @@ export function RunScreen({
         // A click: select, or resolve a pending target pick.
         if (d.source.kind === "piece") {
           const uid = d.source.uid;
-          if (targeting?.kind === "tm") {
+          if (targeting?.kind === "pokemon") {
             if (act({ t: "use", uid: targeting.uid, target: uid })) setTarget({ kind: "piece", uid });
             setTargeting(null);
             return;
@@ -629,7 +632,7 @@ export function RunScreen({
   const useItem = (uid: string) => {
     const p = state.pieces[uid];
     if (!p || p.kind !== "item") return;
-    if (p.item === "TM") setTargeting({ kind: "tm", uid });
+    if (USED_ON_POKEMON.has(p.item)) setTargeting({ kind: "pokemon", uid });
     else if (p.item === "MASTER_BALL") setTargeting({ kind: "masterBall", uid });
     else if (act({ t: "use", uid })) setTarget(null);
   };
@@ -872,7 +875,7 @@ export function RunScreen({
       {showRecipes && <RecipeBook champion={state.champion} onClose={() => setShowRecipes(false)} />}
       {targeting && (
         <div className="targeting-bar">
-          {targeting.kind === "tm" ? tr.t("ui.pickTarget") : tr.t("ui.pickShopSlot")}
+          {targeting.kind === "pokemon" ? tr.t("ui.pickTarget") : tr.t("ui.pickShopSlot")}
           <button className="btn btn-small" onClick={() => setTargeting(null)}>
             {tr.t("ui.cancel")}
           </button>
@@ -950,6 +953,7 @@ export function noticeText(tr: ReturnType<typeof useI18n>["tr"], n: { key: strin
   for (const k of ["from", "to", "species"]) if (typeof p[k] === "string") p[k] = tr.species(p[k] as string);
   for (const k of ["a", "b", "out"]) if (typeof p[k] === "string") p[k] = tr.itemName(p[k] as string);
   if (typeof p.item === "string") p.item = tr.itemName(p.item, typeof p.param === "string" ? p.param : undefined);
+  if (typeof p.nature === "string") p.nature = tr.nature(p.nature);
   if (n.key === "notice.income") {
     const parts = Object.entries(n.params ?? {})
       .filter(([k]) => k !== "total")

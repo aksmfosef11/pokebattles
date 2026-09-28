@@ -7310,6 +7310,10 @@
       "name": "驅勁能量",
       "description": null
     },
+    "BOTTLE_CAP": {
+      "name": "銀色王冠",
+      "description": "銀色的美麗王冠。有些人收到它會很高興。"
+    },
     "BRIGHT_POWDER": {
       "name": "光粉",
       "description": "閃閃發光的粉末。攜帶後，光芒會迷惑對手，進而使其招式變得不容易命中。"
@@ -9856,6 +9860,11 @@
       "BOOSTER_ENERGY": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "booster-energy",
+        "pokeapiLanguage": "zh-hant"
+      },
+      "BOTTLE_CAP": {
+        "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
+        "pokeapiIdentifier": "bottle-cap",
         "pokeapiLanguage": "zh-hant"
       },
       "BRIGHT_POWDER": {

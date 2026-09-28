@@ -5,18 +5,26 @@ import { bodyLimit } from "hono/body-limit";
 import { cors } from "hono/cors";
 import {
   buyChampion,
+  buyPoolStage,
   chooseStarter,
   commitActions,
   CONTENT,
   GameError,
+  keepStarterDraw,
   loadRun,
+  META_RULES,
   migrateRun,
   newProfile,
+  payStartItems,
   playRound,
   publicState,
+  randomSeed,
+  readStartItems,
+  rngFor,
   runOptionsFor,
   settleRun,
   startRun,
+  trainStarter,
   type Action,
   type Profile,
   type RunState,
@@ -205,6 +213,28 @@ export function createApp(store: PgStore, opts: AppOptions = {}): Hono {
     return c.json({ account: { username: user.username, profile } });
   });
 
+  app.post("/api/me/pool", async (c) => {
+    const user = await requireUser(c);
+    const { champion } = await body<{ champion: string }>(c);
+    const profile = await store.updateProfile(user.id, (p) => buyPoolStage(p, champion));
+    return c.json({ account: { username: user.username, profile } });
+  });
+
+  // Starter training draws with fresh server randomness, so a client cannot see or steer the result.
+  app.post("/api/me/starter-train", async (c) => {
+    const user = await requireUser(c);
+    const { champion, kind } = await body<{ champion: string; kind: string }>(c);
+    const profile = await store.updateProfile(user.id, (p) => trainStarter(p, champion, kind, rngFor(randomSeed(), "train")));
+    return c.json({ account: { username: user.username, profile } });
+  });
+
+  app.post("/api/me/starter-keep", async (c) => {
+    const user = await requireUser(c);
+    const { champion, keep } = await body<{ champion: string; keep: boolean }>(c);
+    const profile = await store.updateProfile(user.id, (p) => keepStarterDraw(p, champion, keep));
+    return c.json({ account: { username: user.username, profile } });
+  });
+
   app.get("/api/leaderboard", async (c) => {
     const token = bearer(c);
     const user = token ? await store.sessionUser(tokenHash(token)) : null;
@@ -224,13 +254,22 @@ export function createApp(store: PgStore, opts: AppOptions = {}): Hono {
 
   app.post("/api/runs", async (c) => {
     const user = await requireUser(c);
-    const b = await body<{ champion: string; ranked: boolean }>(c);
-    const { champion, lockedLines } = runOptionsFor(user.profile, b.champion);
+    const b = await body<{ champion: string; ranked: boolean; startItems?: unknown }>(c);
+    const { champion, lockedLines, starter } = runOptionsFor(user.profile, b.champion);
+    const startItems = readStartItems(b.startItems);
     const ranked = b.ranked === true;
     // One ranked run at a time, so a bad start cannot simply be left behind.
     if (ranked && (await store.activeRankedRun(user.id))) throw new GameError("ranked_in_progress");
-    const state = await startRun(store, { playerId: user.id, playerName: user.username, champion, lockedLines, ranked });
-    return c.json({ state: publicState(state) });
+    // Pay first (the transaction checks the points), and give them back if the run cannot be created.
+    const profile = startItems.length > 0 ? await store.updateProfile(user.id, (p) => payStartItems(p, startItems)) : user.profile;
+    let state: RunState;
+    try {
+      state = await startRun(store, { playerId: user.id, playerName: user.username, champion, lockedLines, ranked, starter, startItems });
+    } catch (e) {
+      if (startItems.length > 0) await store.updateProfile(user.id, (p) => ({ ...p, points: p.points + startItems.length * META_RULES.startItemPrice }));
+      throw e;
+    }
+    return c.json({ state: publicState(state), account: { username: user.username, profile } });
   });
 
   app.get("/api/runs/:runId", async (c) => {

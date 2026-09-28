@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { BAGS, CONTENT } from "@pokebattles/game";
+import { BAGS, CONTENT, natureEffect, NATURES, type Nature } from "@pokebattles/game";
 import { getItemManifest, loadAtlas, loadImageCached, pokemonSpritePath, subscribeClock, type Atlas } from "../assets.ts";
 import { useI18n } from "../i18n.tsx";
 
@@ -123,6 +123,13 @@ export function TrainerSprite({ champion, width, height, className }: { champion
   return <AtlasCanvas path={`trainers/${champion}`} width={width} height={height} maxScale={4} className={className} />;
 }
 
+/** PokéRogue's mint icons are coloured by the stat the nature raises. */
+function mintFrame(nature: string | undefined): string {
+  const up = NATURES.includes(nature as Nature) ? natureEffect(nature as Nature).up : null;
+  const frames = { atk: "mint_atk", def: "mint_def", spa: "mint_spatk", spd: "mint_spdef", spe: "mint_spd" } as const;
+  return up && up !== "hp" ? frames[up] : "mint_neutral";
+}
+
 export function ItemIcon({ item, param, size = 32, className }: { item: string; param?: string; size?: number; className?: string }) {
   const ref = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
@@ -133,6 +140,7 @@ export function ItemIcon({ item, param, size = 32, className }: { item: string; 
       if (item === "TERA_SHARD" && param) key = `${param.toUpperCase()}_TERA_SHARD`;
       let ref2 = manifest[key];
       if (item === "TM") ref2 = { atlas: "items", frame: `tm_${(param && CONTENT.moves[param]?.type) || "normal"}` };
+      if (item === "MINT") ref2 = { atlas: "items", frame: mintFrame(param) };
       const canvas = ref.current;
       if (!alive || !canvas || !ref2) return;
       const dpr = window.devicePixelRatio || 1;

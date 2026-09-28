@@ -1,6 +1,6 @@
 import { BAGS, rectShape, type Cell } from "../board.ts";
 import { CONTENT, getMove, getSpecies, IMPLEMENTED_ABILITIES, itemSize } from "../content/index.ts";
-import type { MoveDef, SpeciesDef, Stats } from "../content/schema.ts";
+import { STAT_KEYS, type MoveDef, type SpeciesDef, type Stats } from "../content/schema.ts";
 import type { Rng } from "../rng.ts";
 import { NATURES, type Nature } from "../stats.ts";
 import type { Piece, PokemonPiece } from "./types.ts";
@@ -8,6 +8,7 @@ import type { Piece, PokemonPiece } from "./types.ts";
 export const SHINY_RATE = 1 / 64;
 export const HIDDEN_ABILITY_RATE = 1 / 16;
 export const MAX_LEVEL = 100;
+export const MAX_IV = 31;
 
 export interface Traits {
   ivs: Stats;
@@ -17,25 +18,64 @@ export interface Traits {
   shiny: boolean;
 }
 
+export function rollIvs(rng: Rng): Stats {
+  return {
+    hp: rng.int(0, MAX_IV),
+    atk: rng.int(0, MAX_IV),
+    def: rng.int(0, MAX_IV),
+    spa: rng.int(0, MAX_IV),
+    spd: rng.int(0, MAX_IV),
+    spe: rng.int(0, MAX_IV),
+  };
+}
+
+/** Regular abilities a species rolls from: the ones that work in battle, if it has any. */
+function regularAbilities(s: SpeciesDef): string[] {
+  const implemented = s.abilities.filter((a) => IMPLEMENTED_ABILITIES.has(a));
+  return implemented.length > 0 ? implemented : s.abilities;
+}
+
 export function rollTraits(speciesKey: string, rng: Rng, shinyMultiplier = 1): Traits {
   const s = getSpecies(speciesKey);
-  const ivs: Stats = {
-    hp: rng.int(0, 31),
-    atk: rng.int(0, 31),
-    def: rng.int(0, 31),
-    spa: rng.int(0, 31),
-    spd: rng.int(0, 31),
-    spe: rng.int(0, 31),
-  };
+  const ivs = rollIvs(rng);
   const nature = rng.pick(NATURES);
   const hiddenRoll = rng.chance(HIDDEN_ABILITY_RATE);
   const shiny = rng.chance(SHINY_RATE * shinyMultiplier);
   if (hiddenRoll && s.hiddenAbility) {
     return { ivs, nature, ability: s.hiddenAbility, hiddenAbility: true, shiny };
   }
-  const implemented = s.abilities.filter((a) => IMPLEMENTED_ABILITIES.has(a));
-  const pool = implemented.length > 0 ? implemented : s.abilities;
-  return { ivs, nature, ability: rng.pick(pool), hiddenAbility: false, shiny };
+  return { ivs, nature, ability: rng.pick(regularAbilities(s)), hiddenAbility: false, shiny };
+}
+
+/** Every ability a species can roll: its regular ones, then its hidden one. */
+export function abilityOptions(speciesKey: string): { ability: string; hidden: boolean }[] {
+  const s = getSpecies(speciesKey);
+  const regular = [...new Set(regularAbilities(s))];
+  const out = regular.map((ability) => ({ ability, hidden: false }));
+  if (s.hiddenAbility && !regular.includes(s.hiddenAbility)) out.push({ ability: s.hiddenAbility, hidden: true });
+  return out;
+}
+
+/** A champion's starter as the player trained it with points (meta/progress.ts), laid over the rolled traits. */
+export interface StarterSetup {
+  nature?: Nature;
+  ability?: { ability: string; hidden: boolean };
+  /** Added to each rolled IV (never past MAX_IV). */
+  ivBonus?: Partial<Stats>;
+}
+
+export function trainTraits(speciesKey: string, traits: Traits, setup: StarterSetup | undefined): Traits {
+  if (!setup) return traits;
+  const out: Traits = { ...traits, ivs: { ...traits.ivs } };
+  if (setup.nature && NATURES.includes(setup.nature)) out.nature = setup.nature;
+  const kept = setup.ability;
+  // A kept ability only counts while the starter can still have it (the roster may change between patches).
+  if (kept && abilityOptions(speciesKey).some((o) => o.ability === kept.ability && o.hidden === kept.hidden)) {
+    out.ability = kept.ability;
+    out.hiddenAbility = kept.hidden;
+  }
+  for (const k of STAT_KEYS) out.ivs[k] = Math.min(MAX_IV, out.ivs[k] + Math.max(0, Math.floor(setup.ivBonus?.[k] ?? 0)));
+  return out;
 }
 
 /** Physical attackers prefer physical moves, special attackers special ones. */

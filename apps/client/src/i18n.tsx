@@ -128,6 +128,8 @@ export class Translator {
       const id = CONTENT.moves[param] ? String((CONTENT.moves[param] as { id?: number | null }).id ?? "") : "";
       return interpolate(tpl, { moveId: id.padStart(3, "0"), moveName: this.move(param) });
     }
+    // PokéRogue names mints "{{natureName}} Mint"; a start-item Mint before its nature is known is just "Mint".
+    if (key === "MINT") return interpolate(this.b.itemTemplates.MINT?.name ?? "{{natureName}} Mint", { natureName: param ? this.nature(param) : "" }).trim();
     // Bags named after real items (Berry Pouch, Candy Jar, Coin Case) only have a description here.
     const bag = (this.b.game.bag as Record<string, { name?: string }> | undefined)?.[key];
     if (bag?.name) return bag.name;
@@ -164,6 +166,7 @@ export class Translator {
       return param === "stellar" ? this.t("itemEffect.TERA_SHARD_STELLAR") : this.t("itemEffect.TERA_SHARD", { type: this.type(param ?? "") });
     }
     if (key === "TM") return this.t("itemEffect.TM", { move: this.move(param ?? "") });
+    if (key === "MINT") return param ? this.t("itemEffect.MINT", { nature: this.nature(param) }) : this.t("itemEffect.MINT_RANDOM");
     return this.t(`itemEffect.${key}`);
   };
 }

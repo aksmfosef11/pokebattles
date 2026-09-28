@@ -118,6 +118,9 @@
     "atlas": "items",
     "frame": "booster_energy"
   },
+  "BOTTLE_CAP": {
+    "file": "items-extra/BOTTLE_CAP.png"
+  },
   "BRIGHT_POWDER": {
     "file": "items-extra/BRIGHT_POWDER.png"
   },

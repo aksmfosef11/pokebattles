@@ -7312,6 +7312,10 @@
       "name": "Énergie Booster",
       "description": null
     },
+    "BOTTLE_CAP": {
+      "name": "Capsule d’Argent",
+      "description": "Une jolie capsule en argent. Certaines personnes adorent en recevoir."
+    },
     "BRIGHT_POWDER": {
       "name": "Poudre Claire",
       "description": "Objet à tenir. Intimide l’ennemi et baisse sa Précision."
@@ -9858,6 +9862,11 @@
       "BOOSTER_ENERGY": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "booster-energy",
+        "pokeapiLanguage": "fr"
+      },
+      "BOTTLE_CAP": {
+        "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
+        "pokeapiIdentifier": "bottle-cap",
         "pokeapiLanguage": "fr"
       },
       "BRIGHT_POWDER": {

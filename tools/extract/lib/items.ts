@@ -66,6 +66,11 @@ export const REQUIRED_ITEMS: { group: string; keys: string[] }[] = [
     keys: ["CANDY_JAR", "COIN_CASE"],
   },
   {
+    // Start-of-run items bought with points (MINT comes from PokéRogue's item templates).
+    group: "training",
+    keys: ["BOTTLE_CAP"],
+  },
+  {
     group: "zCrystal",
     keys: [
       "NORMALIUM_Z", "FIRIUM_Z", "WATERIUM_Z", "ELECTRIUM_Z", "GRASSIUM_Z", "ICIUM_Z", "FIGHTINIUM_Z",

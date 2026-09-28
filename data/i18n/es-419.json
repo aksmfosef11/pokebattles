@@ -6393,6 +6393,10 @@
       "name": "Energía Potenciadora",
       "description": null
     },
+    "BOTTLE_CAP": {
+      "name": "Chapa Plateada",
+      "description": "Una bonita chapa de color plata. Hay gente que las aprecia mucho."
+    },
     "BRIGHT_POWDER": {
       "name": "Polvo Brillo",
       "description": "Lanza un destello que baja la Precisión del enemigo. Debe llevarlo un Pokémon."
@@ -8589,6 +8593,11 @@
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "booster-energy",
         "pokeapiLanguage": "es"
+      },
+      "BOTTLE_CAP": {
+        "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
+        "pokeapiIdentifier": "bottle-cap",
+        "pokeapiLanguage": "es-419"
       },
       "BRIGHT_POWDER": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",

@@ -7312,6 +7312,10 @@
       "name": "Capsula energetica",
       "description": null
     },
+    "BOTTLE_CAP": {
+      "name": "Tappo d’argento",
+      "description": "Un bel tappo a corona color argento, molto apprezzato da alcuni."
+    },
     "BRIGHT_POWDER": {
       "name": "Luminpolvere",
       "description": "Strumento da dare a un Pokémon. Emette un bagliore insidioso che riduce la precisione del nemico."
@@ -9858,6 +9862,11 @@
       "BOOSTER_ENERGY": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "booster-energy",
+        "pokeapiLanguage": "it"
+      },
+      "BOTTLE_CAP": {
+        "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
+        "pokeapiIdentifier": "bottle-cap",
         "pokeapiLanguage": "it"
       },
       "BRIGHT_POWDER": {

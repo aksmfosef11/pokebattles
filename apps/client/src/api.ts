@@ -1,22 +1,30 @@
 import {
   buyChampion,
+  buyPoolStage,
   chooseStarter,
   commitActions,
   GameError,
+  keepStarterDraw,
   loadRun,
   MemoryStore,
   migrateRun,
   normalizeProfile,
+  payStartItems,
   playRound,
+  randomSeed,
+  rngFor,
   runOptionsFor,
   settleRun,
   startRun,
+  trainStarter,
   type Action,
   type ChampionKey,
   type GhostRecord,
   type Profile,
   type RunRecord,
   type RunState,
+  type StartItem,
+  type StarterTrainingKind,
   type TurnResponse,
 } from "@pokebattles/game";
 
@@ -59,9 +67,15 @@ export interface GameApi {
   logout(): Promise<void>;
   chooseStarter(champion: ChampionKey): Promise<Account>;
   buyChampion(champion: ChampionKey): Promise<Account>;
+  /** Opens the next stage of an owned champion's shop pool for points. */
+  buyPoolStage(champion: ChampionKey): Promise<Account>;
+  /** A nature or ability draw, or +1 IV, for a champion's starter (the draw then waits for keepStarterDraw). */
+  trainStarter(champion: ChampionKey, kind: StarterTrainingKind): Promise<Account>;
+  keepStarterDraw(champion: ChampionKey, keep: boolean): Promise<Account>;
   leaderboard(): Promise<Leaderboard>;
   listRuns(): Promise<RunSummary[]>;
-  startRun(champion: ChampionKey, ranked: boolean): Promise<RunState>;
+  /** Starts a run, paying for its start items; the account comes back with the points spent. */
+  startRun(champion: ChampionKey, ranked: boolean, startItems?: StartItem[]): Promise<{ state: RunState; account: Account }>;
   getRun(runId: string): Promise<RunState>;
   /**
    * Commits this round's actions ending in one the client cannot resolve itself (a reroll, opening a
@@ -166,14 +180,23 @@ class RemoteApi implements GameApi {
   async buyChampion(champion: ChampionKey) {
     return (await this.call<{ account: Account }>("/api/me/champions", { champion })).account;
   }
+  async buyPoolStage(champion: ChampionKey) {
+    return (await this.call<{ account: Account }>("/api/me/pool", { champion })).account;
+  }
+  async trainStarter(champion: ChampionKey, kind: StarterTrainingKind) {
+    return (await this.call<{ account: Account }>("/api/me/starter-train", { champion, kind })).account;
+  }
+  async keepStarterDraw(champion: ChampionKey, keep: boolean) {
+    return (await this.call<{ account: Account }>("/api/me/starter-keep", { champion, keep })).account;
+  }
   async leaderboard() {
     return this.call<Leaderboard>("/api/leaderboard");
   }
   async listRuns() {
     return (await this.call<{ runs: RunSummary[] }>("/api/runs")).runs;
   }
-  async startRun(champion: ChampionKey, ranked: boolean) {
-    return (await this.call<{ state: RunState }>("/api/runs", { champion, ranked })).state;
+  async startRun(champion: ChampionKey, ranked: boolean, startItems: StartItem[] = []) {
+    return this.call<{ state: RunState; account: Account }>("/api/runs", { champion, ranked, startItems });
   }
   async getRun(runId: string) {
     return migrateRun((await this.call<{ state: RunState }>(`/api/runs/${runId}`)).state);
@@ -254,20 +277,37 @@ class LocalApi implements GameApi {
     this.save();
     return this.me();
   }
+  async buyPoolStage(champion: ChampionKey) {
+    this.profile = buyPoolStage(this.profile, champion);
+    this.save();
+    return this.me();
+  }
+  async trainStarter(champion: ChampionKey, kind: StarterTrainingKind) {
+    this.profile = trainStarter(this.profile, champion, kind, rngFor(randomSeed(), "train"));
+    this.save();
+    return this.me();
+  }
+  async keepStarterDraw(champion: ChampionKey, keep: boolean) {
+    this.profile = keepStarterDraw(this.profile, champion, keep);
+    this.save();
+    return this.me();
+  }
   async leaderboard(): Promise<Leaderboard> {
     throw new GameError("ranked_offline");
   }
   async listRuns() {
     return [...this.store.runs.values()].sort((a, b) => b.updatedAt - a.updatedAt).map((r) => summary(r.state));
   }
-  async startRun(champion: ChampionKey, ranked: boolean) {
+  async startRun(champion: ChampionKey, ranked: boolean, startItems: StartItem[] = []) {
     if (ranked) throw new GameError("ranked_offline");
-    const { lockedLines } = runOptionsFor(this.profile, champion);
-    const state = await startRun(this.store, { playerId: "offline", playerName: "Trainer", champion, lockedLines });
+    const { lockedLines, starter } = runOptionsFor(this.profile, champion);
+    const paid = payStartItems(this.profile, startItems);
+    const state = await startRun(this.store, { playerId: "offline", playerName: "Trainer", champion, lockedLines, starter, startItems });
+    this.profile = paid;
     const rec = this.store.runs.get(state.runId)!;
     rec.playerId = `offline-${state.runId}`;
     this.save();
-    return state;
+    return { state, account: this.me() };
   }
   async getRun(runId: string) {
     const rec = this.store.runs.get(runId);

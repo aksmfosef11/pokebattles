@@ -5,8 +5,9 @@ import { CONTENT, getSpecies, ITEMS } from "../content/index.ts";
 import { rngFor, type Rng } from "../rng.ts";
 import { checkPlacement, computeAdjacency, computeLayout, findFreePlacement } from "../run/layout.ts";
 import { pieceShape } from "../run/pokemon.ts";
+import { natureEffect, type Nature } from "../stats.ts";
 import { applyRoundResult, prepareForBattle, snapshotTeam } from "../run/progression.ts";
-import { applyAction, createRun } from "../run/reducer.ts";
+import { applyAction, createRun, START_ITEMS } from "../run/reducer.ts";
 import { partyCap, partyCount, rerollCost, slotPrice, WINS_TO_CLEAR } from "../run/shop.ts";
 import { GameError, type Action, type Offer, type Piece, type PokemonPiece, type RunState, type TeamSnapshot } from "../run/types.ts";
 
@@ -51,7 +52,7 @@ function placeMon(state: RunState, uid: string): RunState | null {
  * free spot, over a weaker party member, or after shuffling items aside.
  */
 /** Items in the stash (pushed there by evolutions): back on the board, or sold when there is no room. */
-const KEEP_IN_STASH = new Set(["POKE_BALL", "GREAT_BALL", "ULTRA_BALL", "MASTER_BALL", "VOUCHER", "ROOT_FOSSIL", "CLAW_FOSSIL", "TM"]);
+const KEEP_IN_STASH = new Set(["POKE_BALL", "GREAT_BALL", "ULTRA_BALL", "MASTER_BALL", "VOUCHER", "ROOT_FOSSIL", "CLAW_FOSSIL", "TM", ...START_ITEMS]);
 function restoreItems(start: RunState): RunState {
   let state = start;
   const stashed = Object.values(state.pieces).filter((p) => p.kind === "item" && p.place === null && !KEEP_IN_STASH.has(p.item));
@@ -242,8 +243,41 @@ function placeNewest(state: RunState): RunState {
   return tryAction(state, { t: "move", uid: newest.uid, place }) ?? state;
 }
 
-function useConsumables(state: RunState): RunState {
+/** How well a nature suits a Pokémon: raising its better attacking stat (or Speed) good, lowering it bad. */
+function natureFit(nature: Nature, mon: PokemonPiece): number {
+  const { atk, spa } = getSpecies(mon.species).baseStats;
+  const main = atk >= spa ? "atk" : "spa";
+  const { up, down } = natureEffect(nature);
+  const worth = (k: string | null) => (k === main ? 2 : k === "spe" ? 1 : 0);
+  return worth(up) - worth(down);
+}
+
+const ivTotal = (mon: PokemonPiece) => Object.values(mon.ivs).reduce((a, b) => a + b, 0);
+
+/**
+ * Start-of-run items, used like a player would: once the party has a Pokémon worth it (a final
+ * evolution or a strong one), the Mint goes to the strongest Pokémon it suits better than its nature,
+ * and the Bottle Cap to the strongest one with below-average IVs.
+ */
+function useStartItems(state: RunState): RunState {
   let s = state;
+  const worthy = placedMonsOf(s).filter((m) => getSpecies(m.species).evolutions.length === 0 || getSpecies(m.species).bst >= 480);
+  for (const p of Object.values(s.pieces)) {
+    if (p.kind !== "item" || worthy.length === 0) continue;
+    if (p.item === "MINT" && p.param) {
+      const target = worthy.find((m) => natureFit(p.param as Nature, m) > natureFit(m.nature, m));
+      if (target) s = tryAction(s, { t: "use", uid: p.uid, target: target.uid }) ?? s;
+    }
+    if (p.item === "BOTTLE_CAP") {
+      const target = worthy.find((m) => ivTotal(m) < 93);
+      if (target) s = tryAction(s, { t: "use", uid: p.uid, target: target.uid }) ?? s;
+    }
+  }
+  return s;
+}
+
+function useConsumables(state: RunState): RunState {
+  let s = useStartItems(state);
   for (const p of Object.values(s.pieces)) {
     if (p.kind !== "item") continue;
     if (["POKE_BALL", "VOUCHER", "ROOT_FOSSIL", "CLAW_FOSSIL"].includes(p.item)) {
@@ -313,7 +347,8 @@ export function randomChampion(rng: Rng): ChampionKey {
 /** Builds a ghost for `round` by playing a whole bot run up to that round (random champion unless given). */
 export function botTeam(seed: string, round: number, champion?: ChampionKey): TeamSnapshot {
   const rng = rngFor(seed, "bot");
-  let state = createRun({ runId: `bot-${seed}`, seed: `bot-${seed}`, playerName: "", champion: champion ?? randomChampion(rng) });
+  // Bots buy the start items too: every player who plays a while can afford them, and the bot is the baseline.
+  let state = createRun({ runId: `bot-${seed}`, seed: `bot-${seed}`, playerName: "", champion: champion ?? randomChampion(rng), startItems: START_ITEMS });
   while (state.round < round && state.phase !== "ended") {
     state = prepareForBattle(botShop(state, rng));
     // Coin-flip results, but the run must survive to `round` (it would end at 0 lives or the final win).

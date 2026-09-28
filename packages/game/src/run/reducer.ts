@@ -2,8 +2,9 @@ import { BAGS, BOARD_H, BOARD_W, cellKey, placeCell, rotateShape, shapeSize, STA
 import { CHAMPIONS, type ChampionKey } from "../content/champions.ts";
 import { getSpecies, ITEMS, type Tier } from "../content/index.ts";
 import { rngFor, type Rng } from "../rng.ts";
+import { natureEffect, NATURES, type Nature } from "../stats.ts";
 import { bagContents, bagHasContents, cellsOf, checkPlacement, findFreePlacement, planDrop } from "./layout.ts";
-import { moveSlotsFor, newPokemon, pieceShape, refreshMoves, rollTraits } from "./pokemon.ts";
+import { moveSlotsFor, newPokemon, pieceShape, refreshMoves, rollIvs, rollTraits, trainTraits, type StarterSetup } from "./pokemon.ts";
 import { RUN_STATE_VERSION } from "./migrate.ts";
 import { championSpeciesByTier, championSpeciesOfTier } from "./pool.ts";
 import { resolveRecipes } from "./recipes.ts";
@@ -25,6 +26,16 @@ import {
 } from "./shop.ts";
 import { GameError, type Action, type BagPiece, type ItemPiece, type Piece, type PokemonPiece, type RunState } from "./types.ts";
 
+/**
+ * Items a player can buy with points as a run starts (one of each): a Mint of a random nature and a
+ * Bottle Cap that rerolls one Pokémon's IVs. They wait in the stash until used on a Pokémon.
+ */
+export const START_ITEMS = ["MINT", "BOTTLE_CAP"] as const;
+export type StartItem = (typeof START_ITEMS)[number];
+
+/** Natures a Mint can carry: the ones that raise a stat (a neutral Mint would do nothing). */
+const MINT_NATURES: Nature[] = NATURES.filter((n) => natureEffect(n).up !== null);
+
 export interface NewRunParams {
   runId: string;
   seed: string;
@@ -32,6 +43,10 @@ export interface NewRunParams {
   champion: ChampionKey;
   lockedLines?: readonly string[];
   ranked?: boolean;
+  /** How the player trained this champion's starter (meta/progress.ts starterSetup). */
+  starter?: StarterSetup;
+  /** Start-of-run items bought with points. */
+  startItems?: readonly StartItem[];
 }
 
 function uid(state: RunState): string {
@@ -77,7 +92,7 @@ export function createRun(params: NewRunParams): RunState {
     uid(state),
     champ.starter.species,
     TIER_LEVEL[1],
-    rollTraits(champ.starter.species, rng),
+    trainTraits(champ.starter.species, rollTraits(champ.starter.species, rng), params.starter),
     0,
     moveSlotsFor(null),
   );
@@ -94,6 +109,13 @@ export function createRun(params: NewRunParams): RunState {
   };
   state.pieces[item.uid] = item;
   item.place = findFreePlacement(state.pieces, item, { x: START_BAG_PLACE.x + 1, y: START_BAG_PLACE.y + 1, rot: 0 });
+  const itemRng = rngFor(params.seed, "start-items");
+  for (const key of START_ITEMS) {
+    if (!params.startItems?.includes(key)) continue;
+    const bought: ItemPiece = { uid: uid(state), kind: "item", place: null, paid: 0, item: key, age: 0 };
+    if (key === "MINT") bought.param = itemRng.pick(MINT_NATURES);
+    state.pieces[bought.uid] = bought;
+  }
   if (params.champion === "red") state.ace = starter.uid;
   state.shop = rollShop(state, 0);
   return state;
@@ -110,7 +132,7 @@ function requirePiece(state: RunState, id: string): Piece {
 }
 
 /**
- * Actions drawing on the run's seed (rerolls, opening Poké Balls, the subclass shop). The server keeps
+ * Actions drawing on the run's seed (rerolls, opening Poké Balls, Bottle Caps, the subclass shop). The server keeps
  * the seed from players, so they cannot see those results in advance: the client sends these to the
  * server, which commits them (see commitActions).
  */
@@ -256,6 +278,8 @@ function roundLevel(state: RunState, tier: Tier): number {
   return TIER_LEVEL[tier] + Math.max(0, state.round - TIER_UNLOCK[tier]);
 }
 
+const ivSum = (mon: PokemonPiece) => Object.values(mon.ivs).reduce((a, b) => a + b, 0);
+
 function useItem(state: RunState, item: ItemPiece, action: Extract<Action, { t: "use" }>): void {
   const rng = rngFor(state.seed, "use", item.uid);
   switch (item.item) {
@@ -268,6 +292,23 @@ function useItem(state: RunState, item: ItemPiece, action: Extract<Action, { t: 
       const slots = moveSlotsFor(state.subclass);
       target.taught = [...target.taught.filter((m) => m !== item.param), item.param].slice(-slots);
       refreshMoves(target, slots);
+      break;
+    }
+    case "MINT": {
+      const target = requirePiece(state, action.target ?? "");
+      if (target.kind !== "pokemon" || !NATURES.includes(item.param as Nature)) throw new GameError("invalid_target");
+      if (target.nature === item.param) throw new GameError("same_nature");
+      target.nature = item.param as Nature;
+      state.notices.push({ key: "notice.mint", params: { species: target.species, nature: target.nature } });
+      break;
+    }
+    case "BOTTLE_CAP": {
+      const target = requirePiece(state, action.target ?? "");
+      if (target.kind !== "pokemon") throw new GameError("invalid_target");
+      requireSeed(state);
+      const before = ivSum(target);
+      target.ivs = rollIvs(rng);
+      state.notices.push({ key: "notice.bottleCap", params: { species: target.species, before, after: ivSum(target) } });
       break;
     }
     case "MASTER_BALL": {

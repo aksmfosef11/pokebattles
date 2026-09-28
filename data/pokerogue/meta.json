@@ -1,5 +1,5 @@
 {
-  "extractedAt": "2026-09-26T13:34:37.958Z",
+  "extractedAt": "2026-09-28T02:17:05.027Z",
   "sources": {
     "pokerogue": {
       "url": "https://github.com/pagefaultgames/pokerogue",
@@ -31,7 +31,7 @@
     "evolutions": 544,
     "formChanges": 495,
     "i18nLanguages": 28,
-    "itemCatalog": 536
+    "itemCatalog": 537
   },
   "conventions": {
     "keys": "Species/moves/abilities/items keyed by PokéRogue enum member names (SpeciesId/MoveId/AbilityId/...).",

@@ -1,26 +1,57 @@
 /**
- * Account progression outside a run (docs/DESIGN.md §9): champion points, buying champions,
- * unlocking each champion's shop Pokémon by playing them, and the ranked rating.
+ * Account progression outside a run (docs/DESIGN.md §8): champion points, buying champions,
+ * unlocking each champion's shop Pokémon by playing them (or with points), training their starters,
+ * start-of-run items, and the ranked rating.
  * Pure functions; the server (PostgreSQL) and the offline client (localStorage) store the Profile.
  */
-import { CHAMPION_KEYS, type ChampionKey } from "../content/champions.ts";
+import { CHAMPION_KEYS, CHAMPIONS, type ChampionKey } from "../content/champions.ts";
+import { STAT_KEYS, type Stats } from "../content/schema.ts";
+import type { Rng } from "../rng.ts";
+import { abilityOptions, MAX_IV, type StarterSetup } from "../run/pokemon.ts";
 import { lockedLinesAt, POOL_UNLOCK_RUNS, poolStageFor, speciesOfStage } from "../run/pool.ts";
+import { START_ITEMS, type StartItem } from "../run/reducer.ts";
 import { WINS_TO_CLEAR } from "../run/shop.ts";
 import { GameError, type RoundLog, type RunState } from "../run/types.ts";
+import { NATURES, type Nature } from "../stats.ts";
+
+/** The latest nature or ability draw for a starter, waiting for the player to keep it or let it go. */
+export type StarterDraw = { kind: "nature"; nature: Nature } | { kind: "ability"; ability: string; hidden: boolean };
+
+/**
+ * A champion's starter Pokémon as trained with points. What is not kept is rolled every run, as for
+ * anyone else; the IV bonus is added to each run's rolled IVs.
+ */
+export interface StarterTraining extends StarterSetup {
+  draw?: StarterDraw;
+}
 
 export interface Profile {
-  /** Earned by every finished run, spent on champions. */
+  /** Earned by every finished run, spent on champions, pool stages, starter training and start items. */
   points: number;
   /** Champions this player can start runs with. The first one is free. */
   champions: ChampionKey[];
   /** Finished runs per champion; they open that champion's shop pool in stages (POOL_UNLOCK_RUNS). */
   runs: Partial<Record<ChampionKey, number>>;
+  /** Pool stages bought with points per champion; each one keeps that champion's pool a stage ahead of their runs. */
+  poolBought: Partial<Record<ChampionKey, number>>;
+  starters: Partial<Record<ChampionKey, StarterTraining>>;
   rating: number;
   rankedRuns: number;
 }
 
 export const META_RULES = {
   championPrice: 120,
+  /** One stage of a champion's shop pool (POOL_UNLOCK_RUNS), for players with points but no wish to replay them. */
+  poolStagePrice: 60,
+  /**
+   * Starter training, per champion: a random nature or ability (other than the kept one) that the
+   * player keeps or not, or +1 IV bonus on a random stat below the cap. Small and capped on purpose.
+   */
+  natureDrawPrice: 60,
+  abilityDrawPrice: 80,
+  ivPointPrice: 25,
+  /** Each start-of-run item (START_ITEMS), at most one of each per run. */
+  startItemPrice: 40,
   pointsPerBattle: 2,
   pointsPerWin: 4,
   clearBonus: 20,
@@ -41,7 +72,26 @@ export const RANK_TIERS: readonly { min: number; item: string }[] = [
 ];
 
 export function newProfile(): Profile {
-  return { points: 0, champions: [], runs: {}, rating: META_RULES.startRating, rankedRuns: 0 };
+  return { points: 0, champions: [], runs: {}, poolBought: {}, starters: {}, rating: META_RULES.startRating, rankedRuns: 0 };
+}
+
+function normalizeTraining(input: unknown): StarterTraining | null {
+  if (!input || typeof input !== "object") return null;
+  const t = input as Record<string, unknown>;
+  const out: StarterTraining = {};
+  if (NATURES.includes(t.nature as Nature)) out.nature = t.nature as Nature;
+  const kept = t.ability as Record<string, unknown> | undefined;
+  if (kept && typeof kept.ability === "string") out.ability = { ability: kept.ability, hidden: kept.hidden === true };
+  const bonus: Partial<Stats> = {};
+  for (const k of STAT_KEYS) {
+    const v = (t.ivBonus as Record<string, unknown> | undefined)?.[k];
+    if (typeof v === "number" && v >= 1) bonus[k] = Math.min(MAX_IV, Math.floor(v));
+  }
+  if (Object.keys(bonus).length > 0) out.ivBonus = bonus;
+  const d = t.draw as Record<string, unknown> | undefined;
+  if (d?.kind === "nature" && NATURES.includes(d.nature as Nature)) out.draw = { kind: "nature", nature: d.nature as Nature };
+  else if (d?.kind === "ability" && typeof d.ability === "string") out.draw = { kind: "ability", ability: d.ability, hidden: d.hidden === true };
+  return Object.keys(out).length > 0 ? out : null;
 }
 
 /** Fills in fields missing from a stored profile (older saves, hand-edited rows). */
@@ -50,14 +100,22 @@ export function normalizeProfile(input: Partial<Profile> | null | undefined): Pr
   if (!input || typeof input !== "object") return base;
   const champions = Array.isArray(input.champions) ? input.champions.filter((c) => CHAMPION_KEYS.includes(c)) : [];
   const runs: Profile["runs"] = {};
+  const poolBought: Profile["poolBought"] = {};
+  const starters: Profile["starters"] = {};
   for (const c of CHAMPION_KEYS) {
+    const training = normalizeTraining(input.starters?.[c]);
+    if (training) starters[c] = training;
     const n = input.runs?.[c];
     if (typeof n === "number" && n > 0) runs[c] = Math.floor(n);
+    const b = input.poolBought?.[c];
+    if (typeof b === "number" && b >= 1) poolBought[c] = Math.min(POOL_UNLOCK_RUNS.length - 1, Math.floor(b));
   }
   return {
     points: typeof input.points === "number" ? Math.max(0, Math.floor(input.points)) : base.points,
     champions: [...new Set(champions)],
     runs,
+    poolBought,
+    starters,
     rating: typeof input.rating === "number" ? Math.max(0, Math.round(input.rating)) : base.rating,
     rankedRuns: typeof input.rankedRuns === "number" ? Math.max(0, Math.floor(input.rankedRuns)) : 0,
   };
@@ -87,23 +145,120 @@ export function championRuns(profile: Profile, champion: ChampionKey): number {
   return profile.runs[champion] ?? 0;
 }
 
+const LAST_POOL_STAGE = POOL_UNLOCK_RUNS.length - 1;
+
+/** Stage of a champion's pool: what their finished runs opened, plus the stages bought with points. */
 export function poolStage(profile: Profile, champion: ChampionKey): number {
-  return poolStageFor(championRuns(profile, champion));
+  return Math.min(LAST_POOL_STAGE, poolStageFor(championRuns(profile, champion)) + (profile.poolBought[champion] ?? 0));
 }
 
-/** The next stage of a champion's pool: how many more runs it takes and what it adds. */
+/** The next stage of a champion's pool: how many more runs it takes (or its point price) and what it adds. */
 export function nextPoolUnlock(profile: Profile, champion: ChampionKey): { runsLeft: number; species: string[] } | null {
   const stage = poolStage(profile, champion);
-  const need = POOL_UNLOCK_RUNS[stage + 1];
-  if (need === undefined) return null;
+  if (stage >= LAST_POOL_STAGE) return null;
+  // Bought stages sit on top of the ones runs open, so the next one comes with the runs of an earlier run stage.
+  const need = POOL_UNLOCK_RUNS[stage + 1 - (profile.poolBought[champion] ?? 0)]!;
   return { runsLeft: need - championRuns(profile, champion), species: speciesOfStage(champion, stage + 1) };
 }
 
-/** What a new run with this champion starts with; throws unless the player owns the champion. */
-export function runOptionsFor(profile: Profile, champion: unknown): { champion: ChampionKey; lockedLines: string[] } {
+/** Opens the next stage of an owned champion's pool for points; later runs keep opening stages on top of it. */
+export function buyPoolStage(profile: Profile, champion: unknown): Profile {
+  const key = requireOwned(profile, champion);
+  if (poolStage(profile, key) >= LAST_POOL_STAGE) throw new GameError("pool_full");
+  const paid = pay(profile, META_RULES.poolStagePrice);
+  return { ...paid, poolBought: { ...paid.poolBought, [key]: (paid.poolBought[key] ?? 0) + 1 } };
+}
+
+function requireOwned(profile: Profile, champion: unknown): ChampionKey {
   const key = requireChampion(champion);
   if (!profile.champions.includes(key)) throw new GameError("champion_locked");
-  return { champion: key, lockedLines: lockedLinesAt(key, poolStage(profile, key)) };
+  return key;
+}
+
+function pay(profile: Profile, price: number): Profile {
+  if (profile.points < price) throw new GameError("not_enough_points");
+  return { ...profile, points: profile.points - price };
+}
+
+export function starterTraining(profile: Profile, champion: ChampionKey): StarterTraining {
+  return profile.starters[champion] ?? {};
+}
+
+function withTraining(profile: Profile, champion: ChampionKey, training: StarterTraining): Profile {
+  return { ...profile, starters: { ...profile.starters, [champion]: training } };
+}
+
+/** What a run uses of the training: the kept nature and ability and the IV bonus (not a waiting draw). */
+export function starterSetup(profile: Profile, champion: ChampionKey): StarterSetup {
+  const { draw: _draw, ...setup } = starterTraining(profile, champion);
+  return setup;
+}
+
+export type StarterTrainingKind = "nature" | "ability" | "iv";
+
+/**
+ * Spends points on an owned champion's starter: a nature or ability draw (a random one other than the
+ * kept one, which the player then keeps or lets go with keepStarterDraw; a new draw replaces one still
+ * waiting), or +1 IV bonus on a random stat still below MAX_IV. The server passes an unseeded rng.
+ */
+export function trainStarter(profile: Profile, champion: unknown, kind: unknown, rng: Rng): Profile {
+  const key = requireOwned(profile, champion);
+  const t = starterTraining(profile, key);
+  switch (kind) {
+    case "nature": {
+      const paid = pay(profile, META_RULES.natureDrawPrice);
+      return withTraining(paid, key, { ...t, draw: { kind: "nature", nature: rng.pick(NATURES.filter((n) => n !== t.nature)) } });
+    }
+    case "ability": {
+      const kept = t.ability;
+      const options = abilityOptions(CHAMPIONS[key].starter.species).filter((o) => !(kept && o.ability === kept.ability && o.hidden === kept.hidden));
+      if (options.length === 0) throw new GameError("nothing_to_draw");
+      const paid = pay(profile, META_RULES.abilityDrawPrice);
+      const pick = rng.pick(options);
+      return withTraining(paid, key, { ...t, draw: { kind: "ability", ability: pick.ability, hidden: pick.hidden } });
+    }
+    case "iv": {
+      const open = STAT_KEYS.filter((k) => (t.ivBonus?.[k] ?? 0) < MAX_IV);
+      if (open.length === 0) throw new GameError("iv_maxed");
+      const paid = pay(profile, META_RULES.ivPointPrice);
+      const stat = rng.pick(open);
+      return withTraining(paid, key, { ...t, ivBonus: { ...t.ivBonus, [stat]: (t.ivBonus?.[stat] ?? 0) + 1 } });
+    }
+    default:
+      throw new GameError("bad_action");
+  }
+}
+
+/** Keeps the waiting draw (replacing the kept nature or ability) or lets it go. */
+export function keepStarterDraw(profile: Profile, champion: unknown, keep: unknown): Profile {
+  const key = requireOwned(profile, champion);
+  const { draw, ...rest } = starterTraining(profile, key);
+  if (!draw) throw new GameError("no_draw");
+  if (keep !== true) return withTraining(profile, key, rest);
+  if (draw.kind === "nature") return withTraining(profile, key, { ...rest, nature: draw.nature });
+  return withTraining(profile, key, { ...rest, ability: { ability: draw.ability, hidden: draw.hidden } });
+}
+
+/** A run's start items as sent by a client: distinct START_ITEMS, or nothing. */
+export function readStartItems(input: unknown): StartItem[] {
+  if (input === undefined || input === null) return [];
+  if (!Array.isArray(input)) throw new GameError("bad_action");
+  const out: StartItem[] = [];
+  for (const k of input) {
+    if (!START_ITEMS.includes(k) || out.includes(k)) throw new GameError("bad_action");
+    out.push(k);
+  }
+  return out;
+}
+
+export function payStartItems(profile: Profile, items: readonly StartItem[]): Profile {
+  return items.length > 0 ? pay(profile, items.length * META_RULES.startItemPrice) : profile;
+}
+
+/** What a new run with this champion starts with; throws unless the player owns the champion. */
+export function runOptionsFor(profile: Profile, champion: unknown): { champion: ChampionKey; lockedLines: string[]; starter: StarterSetup } {
+  const key = requireOwned(profile, champion);
+  return { champion: key, lockedLines: lockedLinesAt(key, poolStage(profile, key)), starter: starterSetup(profile, key) };
 }
 
 /** Champion points for a finished run: something for every battle, more for wins, a bonus for the trophy. */

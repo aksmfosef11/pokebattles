@@ -20,10 +20,10 @@
   "counts": {
     "rosterSpecies": 429,
     "formsWithSprites": 565,
-    "files": 4650
+    "files": 4651
   },
   "bytes": {
-    "total": 103531609,
+    "total": 103531902,
     "byDir": {
       "arenas": {
         "files": 36,
@@ -46,12 +46,12 @@
         "bytes": 155436
       },
       "items-extra": {
-        "files": 54,
-        "bytes": 90765
+        "files": 55,
+        "bytes": 90994
       },
       "items-manifest.json": {
         "files": 1,
-        "bytes": 19447
+        "bytes": 19511
       },
       "items.json": {
         "files": 1,
@@ -97,6 +97,7 @@
     "ADRENALINE_ORB": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/adrenaline-orb.png",
     "AIR_BALLOON": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/air-balloon.png",
     "ASSAULT_VEST": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/assault-vest.png",
+    "BOTTLE_CAP": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/bottle-cap.png",
     "BRIGHT_POWDER": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/bright-powder.png",
     "BUGINIUM_Z": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/buginium-z--held.png",
     "CELL_BATTERY": "PokeAPI/sprites@a13b1f4ccd77f35fd1370d2db5f0051221e9683f:sprites/items/cell-battery.png",

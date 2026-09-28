@@ -286,6 +286,14 @@
     "atlasFrame": "booster_energy",
     "required": true
   },
+  "BOTTLE_CAP": {
+    "pokerogueLocaleKey": null,
+    "pokeapiIdentifier": "bottle-cap",
+    "pokeapiCategory": "loot",
+    "group": "training",
+    "atlasFrame": "bottle_cap",
+    "required": true
+  },
   "BRIGHT_POWDER": {
     "pokerogueLocaleKey": null,
     "pokeapiIdentifier": "bright-powder",

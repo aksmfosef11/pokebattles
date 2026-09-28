@@ -1,5 +1,5 @@
 import { afterAll, describe, expect, it } from "vitest";
-import { BOT_RATINGS, championPool, lineBase, META_RULES, rankedDelta, type Profile, type RunState } from "@pokebattles/game";
+import { BOT_RATINGS, championPool, lineBase, lockedLinesAt, META_RULES, rankedDelta, type Profile, type RunState } from "@pokebattles/game";
 import { createApp } from "../src/app.ts";
 import { openDb } from "../src/db.ts";
 import { PgStore } from "../src/store.ts";
@@ -114,6 +114,58 @@ describe("champions and unlocks", () => {
     expect(bought.account.profile).toMatchObject({ points: 5, champions: ["cynthia", "red"] });
     expect(await json("/api/me/champions", token, { champion: "red" })).toEqual({ error: "champion_owned" });
     expect((await json("/api/runs", token, { champion: "red" })).state.champion).toBe("red");
+  });
+
+  it("opens the next stage of an owned champion's pool for points", async () => {
+    const token = await player("red");
+    expect(await json("/api/me/pool", token, { champion: "red" })).toEqual({ error: "not_enough_points" });
+    const me = (await json("/api/me", token)).account;
+    const user = (await store.userByName(me.username))!;
+    await store.saveProfile(user.id, { ...user.profile, points: META_RULES.poolStagePrice + 5 });
+    expect(await json("/api/me/pool", token, { champion: "lance" })).toEqual({ error: "champion_locked" });
+    const bought = await json("/api/me/pool", token, { champion: "red" });
+    expect(bought.account.profile).toMatchObject({ points: 5, poolBought: { red: 1 } });
+    const { state } = (await json("/api/runs", token, { champion: "red" })) as { state: RunState };
+    expect(state.lockedLines).toEqual(lockedLinesAt("red", 1));
+  });
+
+  it("trains a starter with server-drawn results and starts runs with it", async () => {
+    const token = await player("red");
+    expect(await json("/api/me/starter-train", token, { champion: "red", kind: "nature" })).toEqual({ error: "not_enough_points" });
+    const me = (await json("/api/me", token)).account;
+    const user = (await store.userByName(me.username))!;
+    await store.saveProfile(user.id, { ...user.profile, points: 100 });
+    expect(await json("/api/me/starter-train", token, { champion: "lance", kind: "nature" })).toEqual({ error: "champion_locked" });
+    expect(await json("/api/me/starter-keep", token, { champion: "red", keep: true })).toEqual({ error: "no_draw" });
+    const drawn = (await json("/api/me/starter-train", token, { champion: "red", kind: "nature" })).account.profile as Profile;
+    expect(drawn.points).toBe(100 - META_RULES.natureDrawPrice);
+    const nature = drawn.starters.red!.draw!.kind === "nature" ? drawn.starters.red!.draw!.nature : null;
+    const kept = (await json("/api/me/starter-keep", token, { champion: "red", keep: true })).account.profile as Profile;
+    expect(kept.starters.red).toEqual({ nature });
+    const iv = (await json("/api/me/starter-train", token, { champion: "red", kind: "iv" })).account.profile as Profile;
+    expect(Object.values(iv.starters.red!.ivBonus!)).toEqual([1]);
+    const { state } = (await json("/api/runs", token, { champion: "red" })) as { state: RunState };
+    const pikachu = Object.values(state.pieces).find((p) => p.kind === "pokemon");
+    expect(pikachu?.kind === "pokemon" && pikachu.nature).toBe(nature);
+  });
+
+  it("charges start items when a run starts and resolves Bottle Caps on the server", async () => {
+    const token = await player("red");
+    expect(await json("/api/runs", token, { champion: "red", startItems: ["MINT"] })).toEqual({ error: "not_enough_points" });
+    expect(await json("/api/runs", token, { champion: "red", startItems: ["MINT", "MINT"] })).toEqual({ error: "bad_action" });
+    const me = (await json("/api/me", token)).account;
+    const user = (await store.userByName(me.username))!;
+    await store.saveProfile(user.id, { ...user.profile, points: 2 * META_RULES.startItemPrice + 1 });
+    const started = (await json("/api/runs", token, { champion: "red", startItems: ["MINT", "BOTTLE_CAP"] })) as { state: RunState; account: { profile: Profile } };
+    expect(started.account.profile.points).toBe(1);
+    expect((await json("/api/me", token)).account.profile.points).toBe(1);
+    const items = Object.values(started.state.pieces).filter((p) => p.kind === "item" && p.place === null);
+    expect(items.map((p) => p.kind === "item" && p.item).sort()).toEqual(["BOTTLE_CAP", "MINT"]);
+    const cap = items.find((p) => p.kind === "item" && p.item === "BOTTLE_CAP")!;
+    const mon = Object.values(started.state.pieces).find((p) => p.kind === "pokemon")!;
+    const after = (await json(`/api/runs/${started.state.runId}/act`, token, { round: 1, actions: [{ t: "use", uid: cap.uid, target: mon.uid }] })) as { state: RunState };
+    expect(after.state.pieces[cap.uid]).toBeUndefined();
+    expect(after.state.seed).toBe("");
   });
 
   it("gives a new player's run only the starting part of the champion's pool", async () => {

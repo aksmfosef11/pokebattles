@@ -7312,6 +7312,10 @@
       "name": "Energiekapsel",
       "description": null
     },
+    "BOTTLE_CAP": {
+      "name": "Silberkronkorken",
+      "description": "Ein hübscher silberner Kronkorken. Es gibt Leute, die sich sehr darüber freuen würden!"
+    },
     "BRIGHT_POWDER": {
       "name": "Blendpuder",
       "description": "Ein Item, das einem Pokémon zum Tragen gegeben werden kann. Es senkt die Genauigkeit des Gegners."
@@ -9858,6 +9862,11 @@
       "BOOSTER_ENERGY": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "booster-energy",
+        "pokeapiLanguage": "de"
+      },
+      "BOTTLE_CAP": {
+        "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
+        "pokeapiIdentifier": "bottle-cap",
         "pokeapiLanguage": "de"
       },
       "BRIGHT_POWDER": {

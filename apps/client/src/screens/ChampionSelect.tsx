@@ -1,16 +1,25 @@
 import { useState } from "react";
 import {
+  abilityOptions,
   CHAMPION_KEYS,
   CHAMPIONS,
   championPool,
   GameError,
   ITEMS,
   lockedLinesAt,
+  MAX_IV,
   META_RULES,
+  natureEffect,
   nextPoolUnlock,
   poolStage,
+  START_ITEMS,
+  STAT_KEYS,
+  starterTraining,
   type ChampionKey,
+  type Nature,
   type RunState,
+  type StartItem,
+  type StarterTrainingKind,
 } from "@pokebattles/game";
 import type { Account, GameApi } from "../api.ts";
 import { ItemIcon, PokemonSprite, TrainerSprite } from "../components/sprites.tsx";
@@ -49,6 +58,9 @@ export function ChampionSelect({
   const [selected, setSelected] = useState<ChampionKey>(() => (mode === "starter" ? "red" : (profile.champions[0] ?? "red")));
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  /** Which stat the last IV point went to. */
+  const [raised, setRaised] = useState<string | null>(null);
+  const [startItems, setStartItems] = useState<StartItem[]>([]);
 
   const attempt = async (work: () => Promise<void>) => {
     setBusy(true);
@@ -63,24 +75,54 @@ export function ChampionSelect({
 
   const start = () =>
     attempt(async () => {
-      if (mode === "starter") {
-        const picked = await api.chooseStarter(selected);
-        const state = await api.startRun(selected, false);
-        onAccount(picked);
-        onStart(state);
-        return;
-      }
-      onStart(await api.startRun(selected, mode === "ranked"));
+      if (mode === "starter") await api.chooseStarter(selected);
+      const { state, account: after } = await api.startRun(selected, mode === "ranked", mode === "starter" ? [] : startItems);
+      onAccount(after);
+      onStart(state);
     });
 
+  const pick = (key: ChampionKey) => {
+    setSelected(key);
+    setRaised(null);
+  };
+
   const recruit = () => attempt(async () => onAccount(await api.buyChampion(selected)));
+  const buyStage = () => attempt(async () => onAccount(await api.buyPoolStage(selected)));
+  const train = (kind: StarterTrainingKind) =>
+    attempt(async () => {
+      const next = await api.trainStarter(selected, kind);
+      const before = starterTraining(profile, selected).ivBonus ?? {};
+      const after = starterTraining(next.profile, selected).ivBonus ?? {};
+      const stat = kind === "iv" ? STAT_KEYS.find((k) => (after[k] ?? 0) > (before[k] ?? 0)) : undefined;
+      setRaised(stat ? tr.t("ui.ivRaised", { stat: tr.stat(stat) }) : null);
+      onAccount(next);
+    });
+  const keepDraw = (keep: boolean) => attempt(async () => onAccount(await api.keepStarterDraw(selected, keep)));
+  const toggleStartItem = (key: StartItem) =>
+    setStartItems((list) => (list.includes(key) ? list.filter((k) => k !== key) : START_ITEMS.filter((k) => k === key || list.includes(k))));
+
+  const natureLabel = (n: Nature) => {
+    const { up, down } = natureEffect(n);
+    return up && down ? `${tr.nature(n)} (${tr.stat(up)}↑ ${tr.stat(down)}↓)` : tr.nature(n);
+  };
+  const abilityLabel = (a: { ability: string; hidden: boolean }) => `${tr.ability(a.ability)}${a.hidden ? ` (${tr.t("ui.hiddenAbility")})` : ""}`;
 
   const champ = CHAMPIONS[selected];
   const stage = poolStage(profile, selected);
   const unlocked = championPool({ champion: selected, lockedLines: lockedLinesAt(selected, stage) }).size;
   const next = nextPoolUnlock(profile, selected);
   const price = META_RULES.championPrice;
+  const stagePrice = META_RULES.poolStagePrice;
+  const itemPrice = META_RULES.startItemPrice;
   const owned = owns(selected);
+  // Pool stages, starter training and start items are for recruited champions (not while picking the free starter).
+  const canBuyStage = mode !== "starter" && profile.champions.includes(selected);
+  const training = starterTraining(profile, selected);
+  const keptAbility = training.ability;
+  const abilityDraws = abilityOptions(champ.starter.species).filter((o) => !(keptAbility && o.ability === keptAbility.ability && o.hidden === keptAbility.hidden));
+  const ivBonus = STAT_KEYS.filter((k) => (training.ivBonus?.[k] ?? 0) > 0);
+  const ivFull = STAT_KEYS.every((k) => (training.ivBonus?.[k] ?? 0) >= MAX_IV);
+  const itemsCost = startItems.length * itemPrice;
 
   return (
     <div className="champion-screen">
@@ -106,7 +148,7 @@ export function ChampionSelect({
           <button
             key={key}
             className={`champion-card ${key === selected ? "selected" : ""} ${owns(key) ? "" : "unowned"}`}
-            onClick={() => setSelected(key)}
+            onClick={() => pick(key)}
           >
             <TrainerSprite champion={key} width={72} height={88} />
             <div className="champion-name">{tr.trainer(key)}</div>
@@ -165,11 +207,67 @@ export function ChampionSelect({
                 ))}
                 {next.species.length > 12 && <span className="muted small">+{next.species.length - 12}</span>}
               </div>
+              {canBuyStage && (
+                <div className="pool-buy-row">
+                  <button className="btn" data-sfx="se/buy" disabled={busy || profile.points < stagePrice} onClick={buyStage}>
+                    {tr.t("ui.poolBuy", { price: stagePrice })}
+                  </button>
+                  {profile.points < stagePrice && <span className="muted small">{tr.t("ui.poolBuyNeed", { n: stagePrice - profile.points })}</span>}
+                </div>
+              )}
             </>
           ) : (
             <p className="small gold">{tr.t("ui.poolFull")}</p>
           )}
         </div>
+        {canBuyStage && (
+          <div className="detail-block">
+            <div className="label">{tr.t("ui.starterTraining")}</div>
+            <p className="small">{tr.t("ui.starterTrainingDesc", { species: tr.species(champ.starter.species) })}</p>
+            <div className="training-grid">
+              <span className="muted small">{tr.t("ui.nature")}</span>
+              <span>{training.nature ? natureLabel(training.nature) : tr.t("ui.randomEachRun")}</span>
+              <span className="muted small">{tr.t("ui.ability")}</span>
+              <span>{keptAbility ? abilityLabel(keptAbility) : tr.t("ui.randomEachRun")}</span>
+              <span className="muted small">{tr.t("ui.ivBonus")}</span>
+              <span>{ivBonus.length > 0 ? ivBonus.map((k) => `${tr.stat(k)} +${training.ivBonus![k]}`).join(" · ") : "+0"}</span>
+            </div>
+            {training.draw && (
+              <div className="draw-result">
+                <b>
+                  {training.draw.kind === "nature"
+                    ? tr.t("ui.drawNature", { name: natureLabel(training.draw.nature) })
+                    : tr.t("ui.drawAbility", { name: abilityLabel(training.draw) })}
+                </b>
+                <div className="training-actions">
+                  <button className="btn btn-small btn-primary" disabled={busy} onClick={() => keepDraw(true)}>
+                    {tr.t("ui.keepDraw")}
+                  </button>
+                  <button className="btn btn-small" disabled={busy} onClick={() => keepDraw(false)}>
+                    {tr.t("ui.dropDraw")}
+                  </button>
+                </div>
+              </div>
+            )}
+            <div className="training-actions">
+              <button className="btn btn-small" data-sfx="se/buy" disabled={busy || profile.points < META_RULES.natureDrawPrice} onClick={() => train("nature")}>
+                {tr.t("ui.trainNature", { price: META_RULES.natureDrawPrice })}
+              </button>
+              <button
+                className="btn btn-small"
+                data-sfx="se/buy"
+                disabled={busy || abilityDraws.length === 0 || profile.points < META_RULES.abilityDrawPrice}
+                onClick={() => train("ability")}
+              >
+                {tr.t("ui.trainAbility", { price: META_RULES.abilityDrawPrice })}
+              </button>
+              <button className="btn btn-small" data-sfx="se/buy" disabled={busy || ivFull || profile.points < META_RULES.ivPointPrice} onClick={() => train("iv")}>
+                {tr.t("ui.trainIv", { price: META_RULES.ivPointPrice })}
+              </button>
+            </div>
+            {raised && <p className="small gold">{raised}</p>}
+          </div>
+        )}
         <div className="detail-block">
           <div className="label">{tr.t("ui.exclusive")}</div>
           <div className="item-row">
@@ -192,12 +290,36 @@ export function ChampionSelect({
             ))}
           </div>
         </div>
+        {canBuyStage && (
+          <div className="detail-block">
+            <div className="label">{tr.t("ui.startItems")}</div>
+            <p className="small muted">{tr.t("ui.startItemsHint")}</p>
+            <div className="start-items">
+              {START_ITEMS.map((key) => {
+                const on = startItems.includes(key);
+                const affordable = on || profile.points >= itemsCost + itemPrice;
+                return (
+                  <button key={key} className={`item-chip item-toggle ${on ? "on" : ""}`} aria-pressed={on} disabled={busy || !affordable} onClick={() => toggleStartItem(key)}>
+                    <ItemIcon item={key} size={24} />
+                    {tr.t("ui.startItemToggle", { name: tr.itemName(key), price: itemPrice })}
+                  </button>
+                );
+              })}
+            </div>
+            {START_ITEMS.map((key) => (
+              <p key={key} className="small muted">
+                {tr.itemName(key)}: {tr.itemEffect(key)}
+              </p>
+            ))}
+          </div>
+        )}
         <div className="start-row">
           {owned ? (
             <>
               <span className="muted small">{mode === "ranked" ? tr.t("ui.rankedHint") : ""}</span>
-              <button className="btn btn-primary" disabled={busy} onClick={start}>
+              <button className="btn btn-primary" disabled={busy || itemsCost > profile.points} onClick={start}>
                 {mode === "starter" ? tr.t("ui.startWith") : mode === "ranked" ? tr.t("ui.startRanked") : tr.t("ui.start")}
+                {canBuyStage && itemsCost > 0 && ` (−${tr.t("ui.points", { n: itemsCost })})`}
               </button>
             </>
           ) : (

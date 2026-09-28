@@ -7312,6 +7312,10 @@
       "name": "부스트에너지",
       "description": null
     },
+    "BOTTLE_CAP": {
+      "name": "은색병뚜껑",
+      "description": "은색의 아름다운 왕관. 받으면 좋아하는 사람도 있다."
+    },
     "BRIGHT_POWDER": {
       "name": "반짝가루",
       "description": "반짝반짝 빛나는 가루. 지니게 하면 빛이 상대를 혼란시켜 기술이 명중되기 어려워진다."
@@ -9858,6 +9862,11 @@
       "BOOSTER_ENERGY": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "booster-energy",
+        "pokeapiLanguage": "ko"
+      },
+      "BOTTLE_CAP": {
+        "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
+        "pokeapiIdentifier": "bottle-cap",
         "pokeapiLanguage": "ko"
       },
       "BRIGHT_POWDER": {

@@ -248,7 +248,7 @@ export function Detail({ state, target, hint, suppressed, onClose, onSetAce, onU
       />,
     );
   }
-  const usable = piece.kind === "item" && ["TM", "MASTER_BALL", "POKE_BALL", "VOUCHER", "ROOT_FOSSIL", "CLAW_FOSSIL"].includes(piece.item);
+  const usable = piece.kind === "item" && ["TM", "MINT", "BOTTLE_CAP", "MASTER_BALL", "POKE_BALL", "VOUCHER", "ROOT_FOSSIL", "CLAW_FOSSIL"].includes(piece.item);
   const sellable = !isStarterBag(piece);
   const holders = piece.kind === "item" && piece.place ? (computeAdjacency(state.pieces).holdersOf.get(piece.uid) ?? []) : [];
   // Turning matters for bags, long items and items that point somewhere; touch screens have no R key.
