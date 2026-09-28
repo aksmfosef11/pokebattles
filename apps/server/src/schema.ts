@@ -112,6 +112,12 @@ const MIGRATIONS: { version: number; name: string; up: string[] }[] = [
       `CREATE INDEX run_results_user ON run_results (user_id, ended_at)`,
     ],
   },
+  {
+    version: 3,
+    name: "champion wins leaderboard",
+    // Wins per trainer with one champion (store.championWins).
+    up: [`CREATE INDEX run_results_champion ON run_results (champion, user_id)`],
+  },
 ];
 
 /** Any constant: server instances starting together take turns migrating. */

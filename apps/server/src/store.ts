@@ -1,6 +1,7 @@
 import {
   META_RULES,
   normalizeProfile,
+  WINS_TO_CLEAR,
   type BattleRecord,
   type GameStore,
   type GhostRecord,
@@ -41,6 +42,14 @@ export interface LeaderboardEntry {
   username: string;
   rating: number;
   rankedRuns: number;
+}
+
+/** A trainer's finished runs with one champion (normal and ranked): battles won, 10-win trophies, runs. */
+export interface ChampionWinsEntry {
+  username: string;
+  wins: number;
+  trophies: number;
+  runs: number;
 }
 
 // BIGINT columns come back as strings from pg; everything numeric goes through Number().
@@ -208,6 +217,35 @@ export class PgStore implements GameStore {
   async rankedPlayers(): Promise<number> {
     const [row] = await this.db.query<{ n: number }>("SELECT COUNT(*)::int AS n FROM users WHERE ranked_runs > 0");
     return Number(row!.n);
+  }
+
+  /**
+   * Trainers by battles won with `champion` over all their finished runs, for trainers with at least
+   * one win: the top `limit`, the given user's own entry and place (ties share the better place), and
+   * how many trainers are ranked.
+   */
+  async championWins(
+    champion: string,
+    limit: number,
+    userId: string | null,
+  ): Promise<{ top: ChampionWinsEntry[]; me: (ChampionWinsEntry & { rank: number }) | null; players: number }> {
+    const totals = `SELECT user_id, SUM(wins)::int AS wins, COUNT(*) FILTER (WHERE wins >= $2)::int AS trophies, COUNT(*)::int AS runs
+      FROM run_results WHERE champion = $1 GROUP BY user_id HAVING SUM(wins) > 0`;
+    type Row = { username: string; wins: number; trophies: number; runs: number };
+    const entry = (r: Row): ChampionWinsEntry => ({ username: r.username, wins: Number(r.wins), trophies: Number(r.trophies), runs: Number(r.runs) });
+    const rows = await this.db.query<Row>(
+      `SELECT u.username, t.wins, t.trophies, t.runs FROM (${totals}) t JOIN users u ON u.id = t.user_id
+       ORDER BY t.wins DESC, t.trophies DESC, t.runs ASC, u.created_at ASC LIMIT $3`,
+      [champion, WINS_TO_CLEAR, limit],
+    );
+    const [stats] = await this.db.query<Row & { rank: number | null; players: number }>(
+      `WITH t AS (${totals})
+       SELECT u.username, m.wins, m.trophies, m.runs, (SELECT COUNT(*)::int FROM t WHERE t.wins > m.wins) + 1 AS rank, (SELECT COUNT(*)::int FROM t) AS players
+       FROM (SELECT 1) one LEFT JOIN t m ON m.user_id = $3 LEFT JOIN users u ON u.id = m.user_id`,
+      [champion, WINS_TO_CLEAR, userId],
+    );
+    const me = stats?.username ? { ...entry(stats), rank: Number(stats.rank) } : null;
+    return { top: rows.map(entry), me, players: Number(stats?.players ?? 0) };
   }
 
   /**

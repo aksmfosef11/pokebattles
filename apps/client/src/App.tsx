@@ -120,7 +120,7 @@ export function App() {
         />
       );
     case "leaderboard":
-      return <LeaderboardScreen api={api} onBack={() => setScreen({ k: "title" })} />;
+      return <LeaderboardScreen api={api} profile={account.profile} onBack={() => setScreen({ k: "title" })} />;
     case "trainer":
       return <TrainerCard api={api} account={account} onAccount={setAccount} onBack={() => setScreen({ k: "title" })} />;
     case "run":

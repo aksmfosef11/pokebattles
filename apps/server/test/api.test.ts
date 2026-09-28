@@ -483,3 +483,51 @@ describe("tampered clients", () => {
     expect(await register("limitB1", "198.51.100.2")).toHaveProperty("token");
   });
 });
+
+// Last in the file: it writes run results directly, which the statistics tests above would count.
+describe("champion wins leaderboard", () => {
+  it("ranks trainers by battles won with one champion over all their runs", async () => {
+    const tokens = {
+      alderfan: await player("alder", "alderfan"),
+      alderpro: await player("alder", "alderpro"),
+      aldertie: await player("alder", "aldertie"),
+      aldernew: await player("alder", "aldernew"),
+    };
+    let nth = 0;
+    const result = async (name: string, champion: string, wins: number, ranked = false) => {
+      const user = (await store.userByName(name))!;
+      await store.db.query(
+        `INSERT INTO run_results (run_id, user_id, champion, ranked, wins, losses, rounds, points, species, items, ended_at)
+         VALUES ($1, $2, $3, $4, $5, 5, $6, 0, '[]'::jsonb, '[]'::jsonb, $7)`,
+        [`wins-${++nth}`, user.id, champion, ranked, wins, wins + 5, Date.now()],
+      );
+    };
+    // Normal and ranked runs add up; runs with another champion do not count.
+    await result("alderfan", "alder", 6);
+    await result("alderfan", "alder", 4, true);
+    await result("alderpro", "alder", 10);
+    await result("alderpro", "alder", 3);
+    await result("alderpro", "leon", 9);
+    await result("aldertie", "alder", 10);
+    await result("aldernew", "alder", 0);
+
+    const board = await json("/api/leaderboard/champion/alder", tokens.aldertie);
+    expect(board.champion).toBe("alder");
+    // The same wins with more trophies or fewer runs goes first; trainers without a win are left out.
+    expect(board.top).toEqual([
+      { username: "alderpro", wins: 13, trophies: 1, runs: 2 },
+      { username: "aldertie", wins: 10, trophies: 1, runs: 1 },
+      { username: "alderfan", wins: 10, trophies: 0, runs: 2 },
+    ]);
+    expect(board.players).toBe(3);
+    // Ties share the better place.
+    expect(board.me).toEqual({ username: "aldertie", wins: 10, trophies: 1, runs: 1, rank: 2 });
+    expect((await json("/api/leaderboard/champion/alder", tokens.alderfan)).me.rank).toBe(2);
+    expect((await json("/api/leaderboard/champion/alder", tokens.aldernew)).me).toBeNull();
+    expect((await json("/api/leaderboard/champion/alder", null)).me).toBeNull();
+
+    const leon = await json("/api/leaderboard/champion/leon", null);
+    expect(leon.top).toEqual([{ username: "alderpro", wins: 9, trophies: 0, runs: 1 }]);
+    expect(await json("/api/leaderboard/champion/nobody", null)).toEqual({ error: "invalid_champion" });
+  });
+});

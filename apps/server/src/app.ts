@@ -7,6 +7,7 @@ import {
   buyArena,
   buyChampion,
   buyPoolStage,
+  CHAMPION_KEYS,
   chooseStarter,
   drawShiny,
   commitActions,
@@ -297,6 +298,15 @@ export function createApp(store: PgStore, opts: AppOptions = {}): Hono {
         ? { username: user.username, rating: user.profile.rating, rankedRuns: user.profile.rankedRuns, rank: await store.rankOf(user.profile.rating) }
         : null;
     return c.json({ top: await store.leaderboard(50), me, players: await store.rankedPlayers() });
+  });
+
+  /** Trainers by battles won with one champion, over all their finished runs (normal and ranked). */
+  app.get("/api/leaderboard/champion/:champion", async (c) => {
+    const champion = c.req.param("champion");
+    if (!(CHAMPION_KEYS as readonly string[]).includes(champion)) throw new GameError("invalid_champion");
+    const token = bearer(c);
+    const user = token ? await store.sessionUser(tokenHash(token)) : null;
+    return c.json({ champion, ...(await store.championWins(champion, 50, user?.id ?? null)) });
   });
 
   // ───────────────────────────── runs

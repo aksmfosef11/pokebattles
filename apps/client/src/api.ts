@@ -62,6 +62,21 @@ export interface Leaderboard {
   players: number;
 }
 
+/** A trainer's finished runs with one champion (normal and ranked). */
+export interface ChampionWinsEntry {
+  username: string;
+  wins: number;
+  trophies: number;
+  runs: number;
+}
+
+export interface ChampionWinsBoard {
+  champion: ChampionKey;
+  top: ChampionWinsEntry[];
+  me: (ChampionWinsEntry & { rank: number }) | null;
+  players: number;
+}
+
 export interface GameApi {
   mode: "online" | "offline";
   /** The logged-in account, or null when a login is needed (online only). */
@@ -83,6 +98,8 @@ export interface GameApi {
   setHomeArena(arena: string | null): Promise<Account>;
   rename(username: string): Promise<Account>;
   leaderboard(): Promise<Leaderboard>;
+  /** Trainers by battles won with one champion (online only). */
+  championLeaderboard(champion: ChampionKey): Promise<ChampionWinsBoard>;
   listRuns(): Promise<RunSummary[]>;
   /** Starts a run, paying for its start items; the account comes back with the points spent. */
   startRun(champion: ChampionKey, ranked: boolean, startItems?: StartItem[]): Promise<{ state: RunState; account: Account }>;
@@ -230,6 +247,9 @@ class RemoteApi implements GameApi {
   async leaderboard() {
     return this.call<Leaderboard>("/api/leaderboard");
   }
+  async championLeaderboard(champion: ChampionKey) {
+    return this.call<ChampionWinsBoard>(`/api/leaderboard/champion/${champion}`);
+  }
   async listRuns() {
     return (await this.call<{ runs: RunSummary[] }>("/api/runs")).runs;
   }
@@ -359,6 +379,9 @@ class LocalApi implements GameApi {
     throw new GameError("online_only");
   }
   async leaderboard(): Promise<Leaderboard> {
+    throw new GameError("ranked_offline");
+  }
+  async championLeaderboard(): Promise<ChampionWinsBoard> {
     throw new GameError("ranked_offline");
   }
   async listRuns() {
