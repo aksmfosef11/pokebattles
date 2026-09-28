@@ -149,7 +149,6 @@
     "championWinsPlayers": "{{n}} trainers with wins",
     "winsColumn": "Wins",
     "trophiesColumn": "Trophies",
-    "runsColumn": "Runs",
     "chooseStarter": "Choose your first champion",
     "chooseStarterDesc": "Your first champion is free. Recruit the others with points from your runs ({{price}}P each).",
     "startWith": "Start with this champion",

@@ -142,7 +142,6 @@ function ChampionWinsTable({ board }: { board: ChampionWinsBoard }) {
       <td className="rank-name">{e.username}</td>
       <td>{e.wins}</td>
       <td>{e.trophies}</td>
-      <td className="hide-narrow">{e.runs}</td>
     </tr>
   );
   return (
@@ -153,7 +152,6 @@ function ChampionWinsTable({ board }: { board: ChampionWinsBoard }) {
           <th>{tr.t("ui.trainer")}</th>
           <th>{tr.t("ui.winsColumn")}</th>
           <th>{tr.t("ui.trophiesColumn")}</th>
-          <th className="hide-narrow">{tr.t("ui.runsColumn")}</th>
         </tr>
       </thead>
       <tbody>

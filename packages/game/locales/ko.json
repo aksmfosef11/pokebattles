@@ -149,7 +149,6 @@
     "championWinsPlayers": "승리한 트레이너 {{n}}명",
     "winsColumn": "승리",
     "trophiesColumn": "트로피",
-    "runsColumn": "모험",
     "chooseStarter": "첫 챔피언을 고르세요",
     "chooseStarterDesc": "첫 챔피언은 무료입니다. 다른 챔피언은 모험으로 모은 포인트({{price}}P)로 영입합니다.",
     "startWith": "이 챔피언으로 시작",

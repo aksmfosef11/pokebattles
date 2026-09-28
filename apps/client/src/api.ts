@@ -62,12 +62,11 @@ export interface Leaderboard {
   players: number;
 }
 
-/** A trainer's finished runs with one champion (normal and ranked). */
+/** A trainer's finished runs with one champion (normal and ranked); the run count stays private. */
 export interface ChampionWinsEntry {
   username: string;
   wins: number;
   trophies: number;
-  runs: number;
 }
 
 export interface ChampionWinsBoard {

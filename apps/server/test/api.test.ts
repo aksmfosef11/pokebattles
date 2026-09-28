@@ -513,21 +513,22 @@ describe("champion wins leaderboard", () => {
 
     const board = await json("/api/leaderboard/champion/alder", tokens.aldertie);
     expect(board.champion).toBe("alder");
-    // The same wins with more trophies or fewer runs goes first; trainers without a win are left out.
+    // The same wins with more trophies goes first; trainers without a win are left out. The run count
+    // is not shown (it would give the win rate away).
     expect(board.top).toEqual([
-      { username: "alderpro", wins: 13, trophies: 1, runs: 2 },
-      { username: "aldertie", wins: 10, trophies: 1, runs: 1 },
-      { username: "alderfan", wins: 10, trophies: 0, runs: 2 },
+      { username: "alderpro", wins: 13, trophies: 1 },
+      { username: "aldertie", wins: 10, trophies: 1 },
+      { username: "alderfan", wins: 10, trophies: 0 },
     ]);
     expect(board.players).toBe(3);
     // Ties share the better place.
-    expect(board.me).toEqual({ username: "aldertie", wins: 10, trophies: 1, runs: 1, rank: 2 });
+    expect(board.me).toEqual({ username: "aldertie", wins: 10, trophies: 1, rank: 2 });
     expect((await json("/api/leaderboard/champion/alder", tokens.alderfan)).me.rank).toBe(2);
     expect((await json("/api/leaderboard/champion/alder", tokens.aldernew)).me).toBeNull();
     expect((await json("/api/leaderboard/champion/alder", null)).me).toBeNull();
 
     const leon = await json("/api/leaderboard/champion/leon", null);
-    expect(leon.top).toEqual([{ username: "alderpro", wins: 9, trophies: 0, runs: 1 }]);
+    expect(leon.top).toEqual([{ username: "alderpro", wins: 9, trophies: 0 }]);
     expect(await json("/api/leaderboard/champion/nobody", null)).toEqual({ error: "invalid_champion" });
   });
 });
