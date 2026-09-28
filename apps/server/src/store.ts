@@ -403,6 +403,31 @@ export class PgStore implements GameStore {
     );
   }
 
+  /**
+   * Everything about one run for replaying it elsewhere (admin only): the stored state with its seed,
+   * how it started, its result, its battles and the boards of the ghosts it met, and the owner's starter
+   * training now (the run itself only keeps the traits it rolled).
+   */
+  async inspectRun(runId: string): Promise<Record<string, unknown> | null> {
+    const [run] = await this.db.query<RunDbRow & { context: RunContext | null }>("SELECT * FROM runs WHERE run_id = $1", [runId]);
+    if (!run) return null;
+    const [user] = await this.db.query<UserDbRow>("SELECT * FROM users WHERE id = $1", [run.player_id]);
+    const [result] = await this.db.query("SELECT * FROM run_results WHERE run_id = $1", [runId]);
+    const battles = await this.db.query<{ ghost_id: string | null }>("SELECT * FROM battles WHERE run_id = $1 ORDER BY round", [runId]);
+    const ids = battles.flatMap((b) => (b.ghost_id ? [b.ghost_id] : []));
+    const ghosts = ids.length ? await this.db.query<GhostDbRow>(`SELECT * FROM ghosts WHERE id IN (${ids.map((_, i) => `$${i + 1}`).join(", ")})`, ids) : [];
+    const record = runFromRow(run);
+    const owner = user ? userFromRow(user) : null;
+    return {
+      run: { ...record, context: run.context ?? null },
+      username: owner?.username ?? null,
+      starter: owner ? (owner.profile.starters[record.state.champion] ?? {}) : null,
+      result: result ?? null,
+      battles,
+      ghosts: Object.fromEntries(ghosts.map((g) => [g.id, { team: g.team, rating: g.rating === null ? null : Number(g.rating), wins: Number(g.wins), losses: Number(g.losses) }])),
+    };
+  }
+
   /** Unfinished runs first (the title screen continues them), then the latest finished ones. */
   async listRuns(playerId: string): Promise<RunRecord[]> {
     const rows = await this.db.query<RunDbRow>("SELECT * FROM runs WHERE player_id = $1 ORDER BY phase = 'ended', updated_at DESC LIMIT 20", [playerId]);

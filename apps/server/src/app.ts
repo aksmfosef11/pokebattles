@@ -407,5 +407,13 @@ export function createApp(store: PgStore, opts: AppOptions = {}): Hono {
     return c.json({ generatedAt: Date.now(), ...rows });
   });
 
+  // One run with its seed, battles and the ghosts it met, to replay it with other decisions (tools/replay).
+  app.get("/api/admin/runs/:runId", async (c) => {
+    const refused = adminRefusal(c);
+    if (refused) return refused;
+    const run = await store.inspectRun(c.req.param("runId"));
+    return run ? c.json(run) : c.json({ error: "run_not_found" }, 404);
+  });
+
   return app;
 }

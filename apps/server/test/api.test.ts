@@ -399,6 +399,17 @@ describe("balance statistics", () => {
     expect(rows.battles[0].detail.battlers.length).toBeGreaterThan(0);
     expect(rows.battles[0].shop.offered.length).toBeGreaterThan(0);
   });
+
+  it("shows one run with its seed and the ghosts it met to the admin only", async () => {
+    const [ghostBattle] = await store.db.query<{ run_id: string; ghost_id: string }>("SELECT run_id, ghost_id FROM battles WHERE ghost_id IS NOT NULL LIMIT 1");
+    expect((await call(`/api/admin/runs/${ghostBattle!.run_id}`, null)).status).toBe(401);
+    expect((await call("/api/admin/runs/nope", "admin-secret")).status).toBe(404);
+    const run = await json(`/api/admin/runs/${ghostBattle!.run_id}`, "admin-secret");
+    expect(run.run.state.seed).not.toBe("");
+    expect(run.battles.length).toBeGreaterThan(0);
+    expect(run.ghosts[ghostBattle!.ghost_id].team.pieces.length).toBeGreaterThan(0);
+    expect(typeof run.username).toBe("string");
+  });
 });
 
 describe("tampered clients", () => {
