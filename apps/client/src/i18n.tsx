@@ -138,6 +138,12 @@ export class Translator {
 
   itemFlavor = (key: string): string => resolveJosa(this.b.items[key]?.description ?? "");
 
+  /** Patch notes, newest first (game locale `patchNotes.entries`). */
+  patchNotes = (): { date: string; items: string[] }[] => {
+    const notes = this.b.game.patchNotes as { entries?: { date: string; items: string[] }[] } | undefined;
+    return Array.isArray(notes?.entries) ? notes.entries : [];
+  };
+
   /** Rules text for an item in this game (not PokéRogue's flavor text). */
   itemEffect = (key: string, param?: string): string => {
     const def = ITEMS[key];

@@ -7,6 +7,7 @@
     "sprites": "tsx extract/fetch-assets.ts",
     "content": "tsx content/build-content.ts",
     "balance": "tsx balance/champion-balance.ts",
+    "balance:early": "tsx balance/champion-balance.ts --early --fast --seeds ,b",
     "bot-ratings": "tsx balance/bot-ratings.ts",
     "typecheck": "tsc --noEmit -p ."
   },

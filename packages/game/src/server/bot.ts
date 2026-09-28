@@ -7,6 +7,7 @@ import { checkPlacement, computeAdjacency, computeLayout, findFreePlacement } fr
 import { pieceShape } from "../run/pokemon.ts";
 import { natureEffect, type Nature } from "../stats.ts";
 import { applyRoundResult, prepareForBattle, snapshotTeam } from "../run/progression.ts";
+import { lockedLinesAt } from "../run/pool.ts";
 import { applyAction, createRun, START_ITEMS } from "../run/reducer.ts";
 import { partyCap, partyCount, rerollCost, slotPrice, WINS_TO_CLEAR } from "../run/shop.ts";
 import { GameError, type Action, type Offer, type Piece, type PokemonPiece, type RunState, type TeamSnapshot } from "../run/types.ts";
@@ -344,11 +345,23 @@ export function randomChampion(rng: Rng): ChampionKey {
   return rng.pick(CHAMPION_KEYS);
 }
 
-/** Builds a ghost for `round` by playing a whole bot run up to that round (random champion unless given). */
-export function botTeam(seed: string, round: number, champion?: ChampionKey): TeamSnapshot {
+/**
+ * Builds a ghost for `round` by playing a whole bot run up to that round (random champion unless given).
+ * `poolStage` plays with the pool a player has at that unlock stage (balance checks for new players);
+ * the game's bots always have the full pool.
+ */
+export function botTeam(seed: string, round: number, champion?: ChampionKey, poolStage?: number): TeamSnapshot {
   const rng = rngFor(seed, "bot");
+  const pick = champion ?? randomChampion(rng);
   // Bots buy the start items too: every player who plays a while can afford them, and the bot is the baseline.
-  let state = createRun({ runId: `bot-${seed}`, seed: `bot-${seed}`, playerName: "", champion: champion ?? randomChampion(rng), startItems: START_ITEMS });
+  let state = createRun({
+    runId: `bot-${seed}`,
+    seed: `bot-${seed}`,
+    playerName: "",
+    champion: pick,
+    startItems: START_ITEMS,
+    ...(poolStage !== undefined ? { lockedLines: lockedLinesAt(pick, poolStage) } : {}),
+  });
   while (state.round < round && state.phase !== "ended") {
     state = prepareForBattle(botShop(state, rng));
     // Coin-flip results, but the run must survive to `round` (it would end at 0 lives or the final win).

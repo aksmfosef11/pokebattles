@@ -2,6 +2,7 @@ import { useState, type FormEvent } from "react";
 import { GameError } from "@pokebattles/game";
 import type { Account, GameApi } from "../api.ts";
 import { LegalNotice } from "../components/LegalNotice.tsx";
+import { PatchNotes } from "../components/PatchNotes.tsx";
 import { TrainerSprite } from "../components/sprites.tsx";
 import { SoundButton } from "../components/SoundButton.tsx";
 import { useI18n } from "../i18n.tsx";
@@ -75,6 +76,7 @@ export function Login({ api, onLogin }: { api: GameApi; onLogin: (a: Account) =>
           <SoundButton />
         </div>
       </form>
+      <PatchNotes />
       <LegalNotice />
     </div>
   );

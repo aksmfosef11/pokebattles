@@ -2,7 +2,10 @@ import { describe, expect, it } from "vitest";
 import {
   applyAction,
   applyRoundResult,
+  CHAMPION_RULES,
   createRun,
+  EARLY_ROUNDS,
+  earlyBonus,
   newPokemon,
   prepareForBattle,
   rollTraits,
@@ -33,6 +36,26 @@ function team(champion: ChampionKey, pieces: Piece[], subclass: SubclassKey | nu
 const wall = () => team("red", [mon("SNORLAX", 70, 2, 1, { moves: ["TACKLE"] }), mon("BLISSEY", 70, 4, 1, { moves: ["POUND"] })]);
 
 describe("champion gimmicks in battle", () => {
+  it("keeps every early-game adjustment to rounds 1–5, so rounds 8 and 14 stay as tuned", () => {
+    const r = CHAMPION_RULES;
+    for (const [bonus, perRound] of [
+      [r.lance.youngKinStatBonus, r.lance.youngKinPerRound],
+      [r.steven.earlyStatBonus, r.steven.earlyStatPerRound],
+      [r.kukui.earlyMovePowerBonus, r.kukui.earlyMovePowerPerRound],
+    ]) {
+      expect(earlyBonus(bonus!, perRound!, 1)).toBeGreaterThan(0);
+      for (let round = EARLY_ROUNDS + 1; round <= 18; round++) expect(earlyBonus(bonus!, perRound!, round)).toBe(0);
+    }
+    const dratini = mon("DRATINI", 12, 3, 1);
+    const hp = (champion: ChampionKey, round: number) =>
+      simulateBattle({ seed: "early", teams: [team(champion, [dratini], null, round), wall()] }).initial.find((b) => b.side === 0)!.maxHp;
+    // Leon has no early adjustment: the reference.
+    expect(hp("lance", 2)).toBeGreaterThan(hp("leon", 2));
+    expect(hp("lance", 6)).toBe(hp("leon", 6));
+    expect(hp("steven", 2)).toBeGreaterThan(hp("leon", 2));
+    expect(hp("steven", 5)).toBe(hp("leon", 5));
+  });
+
   it("Leon dynamaxes the Pokémon next to the Dynamax Band (Gigantamax form for Charizard)", () => {
     const r = simulateBattle({ seed: "leon", teams: [team("leon", [mon("CHARIZARD", 50, 3, 1), item("DYNAMAX_BAND", 3, 2)]), wall()] });
     const form = r.events.find((e) => e.k === "form" && (e.form === "gmax" || e.form === "dynamax"));

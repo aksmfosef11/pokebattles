@@ -191,6 +191,35 @@ select {
   flex-direction: column;
   gap: 12px;
 }
+/* patch notes under the menu: the newest opens once by itself */
+.patch-notes {
+  width: min(460px, 100%);
+  padding: 10px 14px;
+  font-size: 13px;
+}
+.patch-notes summary {
+  cursor: pointer;
+  min-height: 24px;
+}
+.patch-notes ul {
+  margin: 6px 0 2px;
+  padding-left: 18px;
+  line-height: 1.5;
+}
+.patch-notes li + li {
+  margin-top: 3px;
+}
+.patch-older {
+  margin-top: 6px;
+}
+.new-tag {
+  margin-left: 6px;
+  padding: 0 5px;
+  border-radius: 4px;
+  font-size: 11px;
+  background: var(--gold);
+  color: #0d0e16;
+}
 /* fan-game notice under the menu: one quiet line, the full text when opened */
 .legal {
   width: min(460px, 100%);

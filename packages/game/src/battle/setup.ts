@@ -1,9 +1,10 @@
 import { COIN_CASE_EXTRA_GOLD, poweredByBag } from "../board.ts";
-import { CHAMPION_RULES } from "../content/champions.ts";
+import { CHAMPION_RULES, earlyBonus } from "../content/champions.ts";
 import { getMove, getSpecies, ITEMS } from "../content/index.ts";
 import type { ItemFamily } from "../content/items.ts";
 import { TYPES, type Stats, type TypeKey } from "../content/schema.ts";
 import { computeAdjacency, cellsOf } from "../run/layout.ts";
+import { isLanceKinLine } from "../run/pool.ts";
 import type { Piece, PokemonPiece, TeamSnapshot } from "../run/types.ts";
 import { battleHpMultiplier, calcStats } from "../stats.ts";
 import { stackMul } from "./calc.ts";
@@ -99,6 +100,10 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
     let all = 1;
     if (piece.shiny) all *= 1.1;
     if (team.champion === "red" && team.ace === piece.uid) all *= 1 + piece.aceBonus;
+    if (team.champion === "steven") all *= 1 + earlyBonus(CHAMPION_RULES.steven.earlyStatBonus, CHAMPION_RULES.steven.earlyStatPerRound, team.round);
+    if (team.champion === "lance" && species.evolutions.length > 0 && isLanceKinLine(piece.species)) {
+      all *= 1 + earlyBonus(CHAMPION_RULES.lance.youngKinStatBonus, CHAMPION_RULES.lance.youngKinPerRound, team.round);
+    }
     if (team.champion === "cynthia") {
       const per =
         team.subclass === "cynthia_diversity"
@@ -187,7 +192,8 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
     }
     if (team.subclass === "diantha_beauty") moveTypeMult.set("fairy", CHAMPION_RULES.diantha.beautyFairyMultiplier);
     if (team.champion === "kukui") {
-      const research = 1 + CHAMPION_RULES.kukui.movePowerPerRoundSquared * team.round ** 2;
+      const early = earlyBonus(CHAMPION_RULES.kukui.earlyMovePowerBonus, CHAMPION_RULES.kukui.earlyMovePowerPerRound, team.round);
+      const research = (1 + CHAMPION_RULES.kukui.movePowerPerRoundSquared * team.round ** 2) * (1 + early);
       for (const t of TYPES) moveTypeMult.set(t, (moveTypeMult.get(t) ?? 1) * research);
     }
 

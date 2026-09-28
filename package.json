@@ -11,6 +11,7 @@
     "sprites": "pnpm --filter @pokebattles/tools sprites",
     "content": "pnpm --filter @pokebattles/tools content",
     "balance": "pnpm --filter @pokebattles/tools balance",
+    "balance:early": "pnpm --filter @pokebattles/tools balance:early",
     "bot-ratings": "pnpm --filter @pokebattles/tools bot-ratings",
     "stats": "pnpm --filter @pokebattles/server stats"
   },

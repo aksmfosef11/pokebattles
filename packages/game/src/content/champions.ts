@@ -131,6 +131,18 @@ export function isLanceKin(types: readonly string[]): boolean {
   return types.includes("dragon") || types.includes("flying");
 }
 
+/** Rounds whose balance is checked apart from rounds 8 and 14 (`pnpm balance:early`); early-game adjustments end after them. */
+export const EARLY_ROUNDS = 5;
+
+/**
+ * An early-game bonus: `bonus − perRound × round`, never below 0. Champions are tuned on rounds 8 and 14, so an
+ * early bonus for a weak start has to be 0 by round 6 (`pnpm balance:early`, docs/DESIGN.md §6). Rounded so
+ * floating-point leftovers cannot keep a tiny bonus alive.
+ */
+export function earlyBonus(bonus: number, perRound: number, round: number): number {
+  return Math.max(0, Math.round((bonus - perRound * round) * 1e6) / 1e6);
+}
+
 /** Tunable numbers for champion passives and subclasses. */
 export const CHAMPION_RULES = {
   red: {
@@ -146,6 +158,13 @@ export const CHAMPION_RULES = {
     dragonEvoLevelMultiplier: 0.7,
     dragonShopWeight: 2.2,
     hyperBeamPowerBonus: 0.5,
+    /**
+     * Early game only: Pokémon of his lines that can still evolve (Magikarp, Dratini, Horsea…) get every stat,
+     * HP too, ×(1 + bonus − perRound × round) while that is above 1 (gone from round 6, so the late-game
+     * balance measured at rounds 8 and 14 does not move). His lines start weak and only grow later.
+     */
+    youngKinStatBonus: 0.3,
+    youngKinPerRound: 0.05,
   },
   steven: {
     extraIncome: 1,
@@ -154,6 +173,12 @@ export const CHAMPION_RULES = {
     /** Every Pokémon on Steven's team: Defense and Sp. Def +(base + perRound × round), so it grows with the run. */
     teamDefenseBonus: 0.15,
     teamDefensePerRound: 0.0135,
+    /**
+     * Early game only: every stat of the whole team, HP too, ×(1 + bonus − perRound × round) while above 1
+     * (gone from round 5, where his defense bonus has him strong already).
+     */
+    earlyStatBonus: 0.25,
+    earlyStatPerRound: 0.05,
     regiAdjacentBonus: 0.2,
   },
   cynthia: {
@@ -189,6 +214,9 @@ export const CHAMPION_RULES = {
     zMovesPerBattle: 4,
     /** Kukui's research: every move of his team deals ×(1 + this × round²) — it speeds up as the run goes on. */
     movePowerPerRoundSquared: 0.0024,
+    /** Early game only, before the research builds up: move power ×(1 + bonus − perRound × round) while above 1 (gone from round 6). */
+    earlyMovePowerBonus: 0.36,
+    earlyMovePowerPerRound: 0.06,
     /** An adjacent Z-crystal also powers up its type like a type booster. */
     zCrystalTypeBoost: 0.8,
     tmPriceMultiplier: 0.5,

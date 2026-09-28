@@ -8,66 +8,66 @@ Lucky vs lucky = the champion's top-decile bot runs against the top-decile runs 
 
 | Champion | Round 8 | Round 14 |
 |---|---|---|
-| red | 22% / **51%** / 84%, lucky 45% | 13% / **49%** / 84%, lucky 42% |
-| lance | 13% / **49%** / 87%, lucky 47% | 10% / **45%** / 80%, lucky 41% |
-| steven | 20% / **56%** / 89%, lucky 59% | 21% / **53%** / 84%, lucky 47% |
-| cynthia | 13% / **43%** / 80%, lucky 48% | 18% / **57%** / 87%, lucky 55% |
-| alder | 17% / **57%** / 90%, lucky 53% | 16% / **54%** / 90%, lucky 66% |
-| diantha | 19% / **57%** / 90%, lucky 50% | 22% / **60%** / 90%, lucky 63% |
-| kukui | 21% / **58%** / 85%, lucky 41% | 23% / **58%** / 86%, lucky 42% |
-| leon | 9% / **41%** / 84%, lucky 48% | 14% / **52%** / 84%, lucky 42% |
-| geeta | 17% / **53%** / 89%, lucky 59% | 12% / **54%** / 87%, lucky 55% |
+| red | 21% / **52%** / 84%, lucky 43% | 13% / **47%** / 85%, lucky 45% |
+| lance | 13% / **48%** / 86%, lucky 45% | 11% / **43%** / 79%, lucky 41% |
+| steven | 19% / **55%** / 88%, lucky 58% | 20% / **52%** / 83%, lucky 44% |
+| cynthia | 11% / **44%** / 89%, lucky 60% | 16% / **57%** / 88%, lucky 58% |
+| alder | 17% / **56%** / 88%, lucky 47% | 19% / **54%** / 90%, lucky 64% |
+| diantha | 19% / **57%** / 90%, lucky 49% | 21% / **58%** / 89%, lucky 61% |
+| kukui | 21% / **57%** / 86%, lucky 42% | 22% / **56%** / 85%, lucky 42% |
+| leon | 8% / **41%** / 84%, lucky 49% | 14% / **50%** / 84%, lucky 40% |
+| geeta | 17% / **52%** / 89%, lucky 59% | 12% / **53%** / 87%, lucky 55% |
 
 ## Round 8
 
 | Champion | Worst (bad shops, p10) | Typical (median) | Lucky bot (p90) | Lucky vs lucky |
 |---|---|---|---|---|
-| red | 22% | 51% | 84% | 45% |
-| lance | 13% | 49% | 87% | 47% |
-| steven | 20% | 56% | 89% | 59% |
-| cynthia | 13% | 43% | 80% | 48% |
-| alder | 17% | 57% | 90% | 53% |
-| diantha | 19% | 57% | 90% | 50% |
-| kukui | 21% | 58% | 85% | 41% |
-| leon | 9% | 41% | 84% | 48% |
-| geeta | 17% | 53% | 89% | 59% |
+| red | 21% | 52% | 84% | 43% |
+| lance | 13% | 48% | 86% | 45% |
+| steven | 19% | 55% | 88% | 58% |
+| cynthia | 11% | 44% | 89% | 60% |
+| alder | 17% | 56% | 88% | 47% |
+| diantha | 19% | 57% | 90% | 49% |
+| kukui | 21% | 57% | 86% | 42% |
+| leon | 8% | 41% | 84% | 49% |
+| geeta | 17% | 52% | 89% | 59% |
 
 Per seed (default / b): typical median and lucky vs lucky
 
-- red: typical 50% / 52%, lucky 41% / 48%
-- lance: typical 50% / 49%, lucky 50% / 45%
-- steven: typical 53% / 59%, lucky 58% / 61%
-- cynthia: typical 42% / 44%, lucky 44% / 51%
-- alder: typical 56% / 59%, lucky 46% / 61%
-- diantha: typical 59% / 54%, lucky 64% / 37%
-- kukui: typical 58% / 59%, lucky 39% / 43%
-- leon: typical 41% / 41%, lucky 49% / 48%
-- geeta: typical 52% / 53%, lucky 60% / 59%
+- red: typical 51% / 53%, lucky 39% / 47%
+- lance: typical 47% / 49%, lucky 44% / 46%
+- steven: typical 51% / 59%, lucky 55% / 61%
+- cynthia: typical 44% / 45%, lucky 62% / 59%
+- alder: typical 51% / 61%, lucky 42% / 51%
+- diantha: typical 60% / 55%, lucky 62% / 36%
+- kukui: typical 56% / 58%, lucky 40% / 43%
+- leon: typical 39% / 42%, lucky 47% / 51%
+- geeta: typical 51% / 53%, lucky 59% / 59%
 
 ## Round 14
 
 | Champion | Worst (bad shops, p10) | Typical (median) | Lucky bot (p90) | Lucky vs lucky |
 |---|---|---|---|---|
-| red | 13% | 49% | 84% | 42% |
-| lance | 10% | 45% | 80% | 41% |
-| steven | 21% | 53% | 84% | 47% |
-| cynthia | 18% | 57% | 87% | 55% |
-| alder | 16% | 54% | 90% | 66% |
-| diantha | 22% | 60% | 90% | 63% |
-| kukui | 23% | 58% | 86% | 42% |
-| leon | 14% | 52% | 84% | 42% |
-| geeta | 12% | 54% | 87% | 55% |
+| red | 13% | 47% | 85% | 45% |
+| lance | 11% | 43% | 79% | 41% |
+| steven | 20% | 52% | 83% | 44% |
+| cynthia | 16% | 57% | 88% | 58% |
+| alder | 19% | 54% | 90% | 64% |
+| diantha | 21% | 58% | 89% | 61% |
+| kukui | 22% | 56% | 85% | 42% |
+| leon | 14% | 50% | 84% | 40% |
+| geeta | 12% | 53% | 87% | 55% |
 
 Per seed (default / b): typical median and lucky vs lucky
 
-- red: typical 49% / 50%, lucky 33% / 51%
-- lance: typical 46% / 43%, lucky 47% / 35%
-- steven: typical 54% / 51%, lucky 49% / 46%
-- cynthia: typical 61% / 54%, lucky 57% / 53%
-- alder: typical 56% / 53%, lucky 67% / 66%
-- diantha: typical 61% / 60%, lucky 68% / 59%
-- kukui: typical 59% / 57%, lucky 42% / 42%
-- leon: typical 54% / 49%, lucky 41% / 42%
-- geeta: typical 51% / 56%, lucky 48% / 62%
+- red: typical 47% / 48%, lucky 38% / 52%
+- lance: typical 46% / 40%, lucky 45% / 38%
+- steven: typical 54% / 50%, lucky 44% / 44%
+- cynthia: typical 56% / 58%, lucky 63% / 54%
+- alder: typical 52% / 56%, lucky 66% / 62%
+- diantha: typical 56% / 59%, lucky 68% / 55%
+- kukui: typical 57% / 56%, lucky 40% / 44%
+- leon: typical 51% / 50%, lucky 39% / 41%
+- geeta: typical 50% / 55%, lucky 49% / 60%
 
-_1391s_
+_1432s_

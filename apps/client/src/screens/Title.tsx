@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { rankTier, type RunState } from "@pokebattles/game";
 import type { Account, GameApi, RunSummary } from "../api.ts";
 import { LegalNotice } from "../components/LegalNotice.tsx";
+import { PatchNotes } from "../components/PatchNotes.tsx";
 import { ItemIcon, TrainerSprite } from "../components/sprites.tsx";
 import { SoundButton } from "../components/SoundButton.tsx";
 import { useI18n } from "../i18n.tsx";
@@ -133,6 +134,7 @@ export function Title({
         </div>
         <div className={`mode-tag ${api.mode}`}>{online ? tr.t("ui.online") : tr.t("ui.offline")}</div>
       </div>
+      <PatchNotes />
       <LegalNotice />
     </div>
   );

@@ -21,7 +21,14 @@
  * best-party search (the slowest and noisiest part) and reports worst / typical / best bot runs and lucky vs
  * lucky only. `--report <path>` writes the report elsewhere.
  *
- *   pnpm balance [--quick] [--fast] [--seed <salt> | --seeds <a,b,...>] [--report <path>]
+ * `--rounds 2,4,6` measures other rounds than 8 and 14. `--early` is rounds 1–5 into docs/balance-early-report.md
+ * (`pnpm balance:early`): the champions are tuned on rounds 8 and 14, and early-game help for a weak starter
+ * has to be gone by round 6 so it cannot move those numbers. The early game is not meant to be even (a champion
+ * strong late may start slow); what it must avoid is a champion whose runs routinely open 0–5, so the early
+ * report adds each champion's chance of losing all of rounds 1–5. `--stage 0` gives every bot the pool of that
+ * unlock stage (meta/progress.ts), i.e. a field of new players.
+ *
+ *   pnpm balance [--quick] [--fast] [--seed <salt> | --seeds <a,b,...>] [--early | --rounds <r,...>] [--stage <n>] [--report <path>]
  */
 import { spawn } from "node:child_process";
 import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
@@ -84,7 +91,10 @@ const SALT = argValue("--seed") ?? "";
 const SEEDS = argValue("--seeds")?.split(",") ?? [SALT];
 /** Skip the best-party search: bot runs and lucky vs lucky only. */
 const FAST = process.argv.includes("--fast");
-const ROUNDS = [8, 14];
+const EARLY = process.argv.includes("--early");
+const ROUNDS = argValue("--rounds")?.split(",").map(Number) ?? (EARLY ? [1, 2, 3, 4, 5] : [8, 14]);
+/** Pool unlock stage every bot plays with (undefined: the full pool). */
+const STAGE = argValue("--stage") === undefined ? undefined : Number(argValue("--stage"));
 const RUNS_PER_CHAMPION = QUICK ? 30 : 150;
 /** Opponents per champion in the reference fields (search and report use different teams). */
 const SEARCH_FIELD = QUICK ? 1 : 3;
@@ -95,6 +105,8 @@ const RIVAL_STEPS = QUICK ? 40 : 250;
 const SEARCH_RESTARTS = QUICK ? 1 : 2;
 const MATRIX_SEEDS = QUICK ? 10 : 40;
 const ITEM_CAP: Record<number, number> = { 8: 7, 14: 11 };
+/** Items a best party may hold at a round: the table, or the line through it for other rounds. */
+const itemCap = (round: number) => ITEM_CAP[round] ?? Math.max(1, Math.round(7 + ((round - 8) * 2) / 3));
 
 // ───────────────────────────── scoring
 
@@ -147,9 +159,9 @@ function strength(team: TeamSnapshot, field: TeamSnapshot[], tag: string, margin
  */
 function fieldTeams(champion: ChampionKey, round: number): { report: TeamSnapshot[]; lucky: TeamSnapshot[] } {
   return {
-    report: Array.from({ length: REPORT_FIELD }, (_, i) => botTeam(`${SALT}report-${champion}-${i}`, round, champion)),
+    report: Array.from({ length: REPORT_FIELD }, (_, i) => botTeam(`${SALT}report-${champion}-${i}`, round, champion, STAGE)),
     lucky: Array.from({ length: SEARCH_FIELD }, (_, i) =>
-      [0, 1, 2].map((k) => botTeam(`${SALT}search-${champion}-${i}-${k}`, round, champion)).reduce((a, b) => (roughPower(b) > roughPower(a) ? b : a)),
+      [0, 1, 2].map((k) => botTeam(`${SALT}search-${champion}-${i}-${k}`, round, champion, STAGE)).reduce((a, b) => (roughPower(b) > roughPower(a) ? b : a)),
     ),
   };
 }
@@ -375,7 +387,7 @@ function planCost(plan: Plan, cands: Map<string, Candidate>): { gold: number; ce
 function feasible(plan: Plan, cands: Map<string, Candidate>, champion: ChampionKey, round: number): boolean {
   if (new Set(plan.mons.map((m) => m.species)).size !== plan.mons.length) return false;
   const { gold } = planCost(plan, cands);
-  return gold <= budget(champion, round, plan.subclass) && plan.items.length <= ITEM_CAP[round]! && plan.mons.length <= partyCap({ champion, round });
+  return gold <= budget(champion, round, plan.subclass) && plan.items.length <= itemCap(round) && plan.mons.length <= partyCap({ champion, round });
 }
 
 function mutate(plan: Plan, rng: Rng, pool: Candidate[], items: string[], champion: ChampionKey, round: number): Plan {
@@ -534,6 +546,8 @@ interface JobResult {
   worst: number;
   typical: number;
   bestBot: number;
+  /** Strength of each bot run, in run order (run i is the same run at every round). */
+  byRun: number[];
   /** Top-decile bot runs (pass 1), and their win rate against every champion's (pass 2). */
   lucky: TeamSnapshot[];
   luckyVsLucky: number;
@@ -560,9 +574,11 @@ function runJob(champion: ChampionKey, round: number, fields: Fields, rivals: Jo
     return { ...mine, best: strength(found.team, reportField, "report"), bestTeam: found.team, plan: found.plan, luckyVsLucky };
   }
   const searchField = CHAMPION_KEYS.flatMap((c) => fields.lucky[c]!);
-  const runs = Array.from({ length: RUNS_PER_CHAMPION }, (_, i) => botTeam(`${SALT}run-${champion}-${i}`, round, champion))
-    .map((t) => ({ t, s: strength(t, reportField, "report") }))
-    .sort((a, b) => a.s - b.s);
+  const unsorted = Array.from({ length: RUNS_PER_CHAMPION }, (_, i) => botTeam(`${SALT}run-${champion}-${i}`, round, champion, STAGE)).map(
+    (t) => ({ t, s: strength(t, reportField, "report") }),
+  );
+  const byRun = unsorted.map((r) => r.s);
+  const runs = [...unsorted].sort((a, b) => a.s - b.s);
   const at = (q: number) => runs[Math.min(runs.length - 1, Math.floor(q * runs.length))]!;
   const bot = {
     champion,
@@ -570,6 +586,7 @@ function runJob(champion: ChampionKey, round: number, fields: Fields, rivals: Jo
     worst: at(0.1).s,
     typical: at(0.5).s,
     bestBot: at(0.9).s,
+    byRun,
     lucky: runs.slice(Math.floor(runs.length * 0.9)).map((r) => r.t),
     luckyVsLucky: NaN,
     worstTeam: at(0.1).t,
@@ -586,6 +603,7 @@ function runJob(champion: ChampionKey, round: number, fields: Fields, rivals: Jo
     worst: at(0.1).s,
     typical: at(0.5).s,
     bestBot: at(0.9).s,
+    byRun,
     lucky: runs.slice(Math.floor(runs.length * 0.9)).map((r) => r.t),
     luckyVsLucky: NaN,
     best: strength(found.team, reportField, "report"),
@@ -651,7 +669,7 @@ async function main(): Promise<void> {
   }
   const started = Date.now();
   const dir = mkdtempSync(join(tmpdir(), "pokebattles-balance-"));
-  const flags = [...(QUICK ? ["--quick"] : []), ...(FAST ? ["--fast"] : [])];
+  const flags = [...(QUICK ? ["--quick"] : []), ...(FAST ? ["--fast"] : []), ...(STAGE !== undefined ? ["--stage", String(STAGE)] : [])];
   // Round 14 jobs are the slowest: queue them first so the pool does not end on one long job.
   const jobs = SEEDS.flatMap((seed) => [...ROUNDS].reverse().flatMap((round) => CHAMPION_KEYS.map((champion) => ({ seed, champion, round }))));
   type Job = (typeof jobs)[number];
@@ -693,7 +711,8 @@ async function main(): Promise<void> {
   const seedLabel = (s: string) => (s === "" ? "default" : s);
   log("# Champion balance report");
   log();
-  const command = `pnpm balance${QUICK ? " --quick" : ""}${FAST ? " --fast" : ""}${SEEDS.length > 1 ? ` --seeds ${SEEDS.join(",")}` : SALT ? ` --seed ${SALT}` : ""}`;
+  const roundsFlag = `${EARLY ? " --early" : ROUNDS.join(",") === "8,14" ? "" : ` --rounds ${ROUNDS.join(",")}`}${STAGE !== undefined ? ` --stage ${STAGE}` : ""}`;
+  const command = `pnpm balance${QUICK ? " --quick" : ""}${FAST ? " --fast" : ""}${SEEDS.length > 1 ? ` --seeds ${SEEDS.join(",")}` : SALT ? ` --seed ${SALT}` : ""}${roundsFlag}`;
   log(
     `Generated by \`${command}\`: ${RUNS_PER_CHAMPION} bot runs per champion, report field ${REPORT_FIELD * 9} teams${FAST ? " (best-party search skipped)" : `, search field ${SEARCH_FIELD * 9} lucky bot teams, ${SEARCH_RESTARTS} × ${SEARCH_STEPS} + ${RIVAL_STEPS} (vs rival best parties) search steps`}${SEEDS.length > 1 ? `, averaged over ${SEEDS.length} seeds (${SEEDS.map(seedLabel).join(", ")})` : ""}. Round 14 is the last round a run can reach (9 wins, 4 losses).`,
   );
@@ -715,6 +734,25 @@ async function main(): Promise<void> {
         `${pct(avg(c, round, (r) => r.worst))} / **${pct(avg(c, round, (r) => r.typical))}** / ${pct(avg(c, round, (r) => r.bestBot))}, lucky ${pct(avg(c, round, (r) => r.luckyVsLucky))}${FAST ? "" : `, best ${pct(bvbAvg(c, round))}`}`,
     );
     log(`| ${c} | ${cells.join(" | ")} |`);
+  }
+  // A run opens 0–5 when it loses every battle of rounds 1–5: per run the product of its loss chances, averaged.
+  if ([1, 2, 3, 4, 5].every((r) => ROUNDS.includes(r))) {
+    const zeroFive = (c: ChampionKey, pick: (chances: number[]) => number) =>
+      mean(
+        bySeed.map((rs) => {
+          const perRound = [1, 2, 3, 4, 5].map((round) => rs.find((r) => r.champion === c && r.round === round)!.byRun);
+          const chances = perRound[0]!.map((_, i) => perRound.reduce((p, byRun) => p * (1 - byRun[i]!), 1)).sort((a, b) => a - b);
+          return pick(chances);
+        }),
+      );
+    log();
+    log("## 0–5 start (losing every battle of rounds 1–5)");
+    log();
+    log("Chance a run opens 0–5 against random field opponents: averaged over its bot runs, and for its unluckiest tenth (p90 of the chance).");
+    log();
+    log("| Champion | 0–5 chance | unlucky runs (p90) |");
+    log("|---|---|---|");
+    for (const c of CHAMPION_KEYS) log(`| ${c} | ${pct(zeroFive(c, mean))} | ${pct(zeroFive(c, (xs) => xs[Math.floor(xs.length * 0.9)]!))} |`);
   }
   for (const round of ROUNDS) {
     log();
@@ -762,7 +800,8 @@ async function main(): Promise<void> {
   }
   log();
   log(`_${Math.round((Date.now() - started) / 1000)}s_`);
-  const report = resolve(argValue("--report") ?? resolve(dirname(fileURLToPath(import.meta.url)), "..", "..", "docs", "balance-report.md"));
+  const reportName = `balance${EARLY ? "-early" : ""}${STAGE !== undefined ? `-stage${STAGE}` : ""}-report.md`;
+  const report = resolve(argValue("--report") ?? resolve(dirname(fileURLToPath(import.meta.url)), "..", "..", "docs", reportName));
   writeFileSync(report, lines.join("\n") + "\n");
   console.error(`wrote ${report}`);
 }

@@ -225,12 +225,12 @@
     "lance": {
       "concept": "Dragons and rage",
       "passiveName": "Dragon Blood",
-      "passive": "Dragon and Flying types, and lines that evolve into them (like Lance's own team), evolve at 30% lower levels and show up more in the shop. Your team never recharges after Hyper Beam or Giga Impact. When a Dragon or Flying ally faints, adjacent Dragon and Flying allies get +1 Attack and Sp. Atk."
+      "passive": "Dragon and Flying types, and lines that evolve into them (like Lance's own team), evolve at 30% lower levels and show up more in the shop. Your team never recharges after Hyper Beam or Giga Impact. When a Dragon or Flying ally faints, adjacent Dragon and Flying allies get +1 Attack and Sp. Atk. Early on, Pokémon of those lines that can still evolve get every stat raised (30% − 5% per round: +20% at round 2, gone from round 6)."
     },
     "steven": {
       "concept": "Stones and money",
       "passiveName": "Devon Heir",
-      "passive": "+1G income per round, full refunds when selling, evolution stones and fossils cost 1G less. The whole team's Defense and Sp. Def grow over the run (15% + 1.35% per round: +26% at round 8, +34% at round 14), and Rock and Steel types get another +25% per adjacent stone item."
+      "passive": "+1G income per round, full refunds when selling, evolution stones and fossils cost 1G less. The whole team's Defense and Sp. Def grow over the run (15% + 1.35% per round: +26% at round 8, +34% at round 14), and Rock and Steel types get another +25% per adjacent stone item. Early on, every stat of the whole team, HP too, rises as well (25% − 5% per round: +15% at round 2, gone from round 5)."
     },
     "cynthia": {
       "concept": "Diversity and legendary luck",
@@ -250,7 +250,7 @@
     "kukui": {
       "concept": "Z-Moves",
       "passiveName": "Z-Power",
-      "passive": "Move research: every move of your team hits harder, faster and faster as the run goes on (round² × 0.24%: +15% at round 8, +47% at round 14). A Pokémon next to a Z-Crystal deals ×1.8 with that type, and its first attack of that type becomes a never-missing Z-Move (4 per battle for the team). TMs cost half and appear more often."
+      "passive": "Move research: every move of your team hits harder, faster and faster as the run goes on (round² × 0.24%: +15% at round 8, +47% at round 14). Before the research builds up, moves get an extra early boost (36% − 6% per round: +24% at round 2, gone from round 6). A Pokémon next to a Z-Crystal deals ×1.8 with that type, and its first attack of that type becomes a never-missing Z-Move (4 per battle for the team). TMs cost half and appear more often."
     },
     "leon": {
       "concept": "Dynamax and win streaks",
@@ -679,6 +679,24 @@
     "front": "Straight ahead",
     "line": "3 cells ahead",
     "row": "Whole row"
+  },
+  "patchNotes": {
+    "title": "Patch notes",
+    "new": "NEW",
+    "older": "Earlier patches",
+    "entries": [
+      {
+        "date": "2026-09-28",
+        "items": [
+          "More to spend points on: unlock a champion's shop Pokémon right away on the champion screen (60P per stage)",
+          "Starter training: nature and ability draws, and IV +1. Once changed, it applies to every run with that champion",
+          "Start items: a Mint (random nature) and a Bottle Cap (rerolls IVs), one of each per run",
+          "Looks: shiny draws and starter nicknames (champion screen), home arena and ID change (title → Trainer card). No effect on battles",
+          "Balance: Lance, Steven and Kukui, who used to start weak, get help in rounds 1–5 (gone from round 6)",
+          "Bots use start items too"
+        ]
+      }
+    ]
   },
   "legal": {
     "summary": "Unofficial non-profit fan game · Legal notice",
