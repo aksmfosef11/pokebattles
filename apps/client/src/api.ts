@@ -114,6 +114,14 @@ function storage(): Storage | null {
 const API_BASE = ((import.meta.env.VITE_API_URL as string | undefined) ?? "").replace(/\/+$/, "");
 const TOKEN_KEY = "pokebattles.token";
 
+/**
+ * Profiles from the server go through the same repair as stored ones, so fields a server from an
+ * older release does not send yet (pool stages, starter training) read as empty instead of crashing.
+ */
+function repaired(account: Account): Account {
+  return { ...account, profile: normalizeProfile(account.profile) };
+}
+
 class RemoteApi implements GameApi {
   mode = "online" as const;
   onUnauthorized: (() => void) | null = null;
@@ -151,10 +159,15 @@ class RemoteApi implements GameApi {
     return data;
   }
 
+  /** A request answered with the account (buying, training, picking the starter). */
+  private async accountCall(path: string, body?: unknown): Promise<Account> {
+    return repaired((await this.call<{ account: Account }>(path, body)).account);
+  }
+
   async account() {
     if (!this.token) return null;
     try {
-      return (await this.call<{ account: Account }>("/api/me")).account;
+      return await this.accountCall("/api/me");
     } catch (e) {
       if (e instanceof GameError && e.code === "unauthorized") return null;
       throw e;
@@ -163,31 +176,31 @@ class RemoteApi implements GameApi {
   async register(username: string, password: string) {
     const r = await this.call<{ token: string; account: Account }>("/api/auth/register", { username, password });
     this.setToken(r.token);
-    return r.account;
+    return repaired(r.account);
   }
   async login(username: string, password: string) {
     const r = await this.call<{ token: string; account: Account }>("/api/auth/login", { username, password });
     this.setToken(r.token);
-    return r.account;
+    return repaired(r.account);
   }
   async logout() {
     await this.call("/api/auth/logout", {}).catch(() => undefined);
     this.setToken(null);
   }
   async chooseStarter(champion: ChampionKey) {
-    return (await this.call<{ account: Account }>("/api/me/starter", { champion })).account;
+    return this.accountCall("/api/me/starter", { champion });
   }
   async buyChampion(champion: ChampionKey) {
-    return (await this.call<{ account: Account }>("/api/me/champions", { champion })).account;
+    return this.accountCall("/api/me/champions", { champion });
   }
   async buyPoolStage(champion: ChampionKey) {
-    return (await this.call<{ account: Account }>("/api/me/pool", { champion })).account;
+    return this.accountCall("/api/me/pool", { champion });
   }
   async trainStarter(champion: ChampionKey, kind: StarterTrainingKind) {
-    return (await this.call<{ account: Account }>("/api/me/starter-train", { champion, kind })).account;
+    return this.accountCall("/api/me/starter-train", { champion, kind });
   }
   async keepStarterDraw(champion: ChampionKey, keep: boolean) {
-    return (await this.call<{ account: Account }>("/api/me/starter-keep", { champion, keep })).account;
+    return this.accountCall("/api/me/starter-keep", { champion, keep });
   }
   async leaderboard() {
     return this.call<Leaderboard>("/api/leaderboard");
@@ -196,7 +209,11 @@ class RemoteApi implements GameApi {
     return (await this.call<{ runs: RunSummary[] }>("/api/runs")).runs;
   }
   async startRun(champion: ChampionKey, ranked: boolean, startItems: StartItem[] = []) {
-    return this.call<{ state: RunState; account: Account }>("/api/runs", { champion, ranked, startItems });
+    const r = await this.call<{ state: RunState; account?: Account }>("/api/runs", { champion, ranked, startItems });
+    // A server from before start items answers without the account; ask for it instead.
+    const account = r.account ? repaired(r.account) : await this.account();
+    if (!account) throw new GameError("unauthorized");
+    return { state: r.state, account };
   }
   async getRun(runId: string) {
     return migrateRun((await this.call<{ state: RunState }>(`/api/runs/${runId}`)).state);
