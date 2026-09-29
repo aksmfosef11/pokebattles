@@ -442,6 +442,13 @@ select {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.stat-chip.upcoming:hover,
+.stat-chip.upcoming:focus-visible {
+  border-color: var(--cream);
 }
 .upcoming-foe {
   display: inline-flex;
@@ -469,13 +476,15 @@ select {
 /* shop */
 .shop-slots {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  /* --slots is the shop size this round (5, then 6 from round 9) */
+  grid-template-columns: repeat(var(--slots, 5), minmax(0, 1fr));
   gap: 8px;
 }
 .shop-card {
+  --tier: var(--line);
   position: relative;
   background: var(--bg-2);
-  border: 2px solid var(--line);
+  border: 2px solid var(--tier);
   border-radius: 8px;
   padding: 16px 6px 8px;
   display: flex;
@@ -493,16 +502,16 @@ select {
   cursor: default;
 }
 .shop-card.tier-2 {
-  border-color: #4f86c9;
+  --tier: #4f86c9;
 }
 .shop-card.tier-3 {
-  border-color: #a260d6;
+  --tier: #a260d6;
 }
 .shop-card.tier-4 {
-  border-color: #e0913a;
+  --tier: #e0913a;
 }
 .shop-card.tier-5 {
-  border-color: #f2d04b;
+  --tier: #f2d04b;
   box-shadow: 0 0 10px #f2d04b55;
 }
 .shop-card.sel {
@@ -758,6 +767,11 @@ select {
   padding: 0 3px;
   border-radius: 3px;
 }
+.piece.narrow .size-badge {
+  bottom: 17px;
+  left: 3px;
+  right: auto;
+}
 .ghost-box {
   position: relative;
 }
@@ -902,6 +916,36 @@ select {
   width: min(1040px, 100%);
   max-height: 85vh;
   overflow: auto;
+}
+.modal.opponent-intro {
+  width: min(720px, 100%);
+}
+.opponent-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+  margin: 10px 0;
+  text-align: left;
+}
+.opponent-card {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+}
+.opponent-card.now {
+  border-color: var(--gold);
+}
+.opponent-card > header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.opponent-card .detail-block {
+  margin-top: 8px;
+}
+.opponent-note {
+  margin: 0 0 10px;
 }
 .recipe-list {
   list-style: none;
@@ -2005,19 +2049,56 @@ html:has(.run-screen.layout-short) {
 .layout-phone .top-bar .stat-chip.lives {
   letter-spacing: 0;
 }
+/* One row on a portrait phone: chips keep their size, the spacer takes what is left. */
 .layout-phone .top-bar {
+  flex-wrap: nowrap;
   gap: 3px;
   font-size: 11px;
 }
+.layout-phone .top-bar > * {
+  flex: none;
+}
 .layout-phone .top-bar .stat-chip {
-  padding: 1px 5px;
+  padding: 1px 4px;
+}
+.layout-phone .top-bar .stat-chip.party {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+.layout-phone .top-bar .upcoming-foe {
+  gap: 1px;
 }
 .layout-phone .top-bar .icon-btn {
   min-width: 26px;
   padding: 2px 4px;
 }
 .layout-phone .top-bar .spacer {
-  flex: 1 0 0;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.run-menu {
+  position: relative;
+  display: inline-flex;
+}
+.run-menu-pop {
+  position: fixed;
+  top: 44px;
+  right: max(8px, env(safe-area-inset-right));
+  z-index: 70;
+  width: min(260px, calc(100vw - 16px));
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+.run-menu-sound {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 .layout-phone .run-main,
 .layout-short .run-main {
@@ -2040,59 +2121,185 @@ html:has(.run-screen.layout-short) {
 .layout-phone .shop-slots {
   gap: 4px;
 }
+/* Compact cards (phone and short): tier pips and lock on top, the picture with its corner badges,
+ * a two-line name, and the price as a band along the bottom. One height for every offer. */
 .layout-phone .shop-card,
 .layout-short .shop-card {
   min-height: 0;
-  padding: 13px 2px 4px;
+  padding: 12px 2px 0;
+  gap: 1px;
   border-radius: 6px;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--tier) 24%, transparent), transparent 60%),
+    var(--bg-2);
+}
+.layout-phone .shop-card.bag-offer,
+.layout-short .shop-card.bag-offer {
+  background:
+    repeating-linear-gradient(135deg, #ffffff06 0 6px, transparent 6px 12px),
+    linear-gradient(180deg, #4a3320, var(--bg-2) 75%);
+}
+.layout-phone .shop-card.locked,
+.layout-short .shop-card.locked {
+  box-shadow:
+    inset 0 0 0 1px #8fd8ff,
+    0 0 6px #8fd8ff66;
 }
 .layout-phone .tier-pips,
 .layout-short .tier-pips {
   top: 1px;
   left: 3px;
   font-size: 8px;
+  letter-spacing: -1px;
+  line-height: 10px;
+}
+.layout-phone .offer-visual,
+.layout-short .offer-visual {
+  position: relative;
+  align-self: stretch;
+  height: 40px;
+}
+/* Corner badges on the picture, styled like the level and size marks on the board. */
+.vb {
+  position: absolute;
+  bottom: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  padding: 0 3px;
+  font-size: 10px;
+  line-height: 12px;
+  color: var(--text);
+  background: #0d0e16d9;
+  border-radius: 3px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.vb-left {
+  left: 0;
+}
+.vb-right {
+  right: 0;
+}
+.vb-marks {
+  top: 0;
+  bottom: auto;
+  right: 0;
+  background: none;
+  text-shadow: 0 0 2px #000;
+}
+.vb-bag {
+  background: var(--leather);
+  color: #fff3dc;
+  box-shadow: inset 0 0 0 1px #d8b77a88;
+}
+.vb-evo {
+  padding: 0 3px 0 0;
+  color: var(--muted);
+}
+.vb-evo.owned {
+  box-shadow: inset 0 0 0 1px var(--gold);
+}
+.vb-none {
+  color: #ffb454;
+}
+.layout-phone.roomy .offer-visual {
+  height: 52px;
+}
+.offer-extra {
+  align-self: stretch;
+  height: 12px;
+  font-size: 10px;
+  line-height: 12px;
+  color: var(--muted);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .layout-phone .offer-name,
 .layout-short .offer-name {
   font-size: 11px;
-  line-height: 1.2;
-  overflow-wrap: anywhere;
+  line-height: 13px;
+}
+/* Always two lines tall, so a short name does not make its card shorter than the rest. */
+.layout-phone .offer-name {
+  align-self: stretch;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  margin-top: 1px;
+}
+.layout-phone .offer-name > span,
+.layout-short .offer-name > span {
+  text-wrap: balance;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  overflow-wrap: anywhere;
 }
-.layout-phone .offer-meta,
-.layout-phone .offer-meta .size-chip {
-  font-size: 10px;
-}
-.layout-phone .offer-meta .size-chip.multi {
-  padding: 0 3px;
-}
-.layout-phone .evo-users {
-  min-height: 18px;
-}
-.layout-phone .evo-users canvas {
-  width: 18px !important;
-  height: 18px !important;
-}
-.layout-phone .price,
-.layout-short .price {
+.layout-phone .shop-card .price,
+.layout-short .shop-card .price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 3px;
   font-size: 12px;
+  line-height: 14px;
+  color: var(--gold);
 }
-.layout-phone .sale-tag,
-.layout-short .sale-tag {
+.layout-phone .shop-card .price {
+  align-self: stretch;
+  margin: auto -2px 0;
+  padding: 2px 0 3px;
+  background: #0d0e1699;
+  border-top: 1px solid #ffffff14;
+}
+.layout-phone .shop-card .price s,
+.layout-short .shop-card .price s {
   font-size: 10px;
-  right: -3px;
+  color: var(--muted);
+}
+.layout-phone .shop-card.on-sale .price {
+  background: #c2413a;
+  border-top-color: #ff8f86;
+  color: #fff;
+}
+.layout-phone .shop-card.on-sale .price s {
+  color: #ffd0cc;
+}
+.layout-phone .shop-card.poor .price,
+.layout-short .shop-card.poor .price {
+  opacity: 0.75;
+}
+.layout-phone .shop-card.poor:not(.on-sale) .price b,
+.layout-short .shop-card.poor .price b {
+  color: #ff7a72;
 }
 .layout-phone .lock,
 .layout-short .lock {
   top: 0;
   right: 0;
+  padding: 2px 3px 4px 8px;
+  font-size: 10px;
+  line-height: 1;
 }
-.layout-phone .bag-tag {
-  font-size: 9px;
-  padding: 0 4px;
+/* A bigger invisible target than the small icon, for thumbs. */
+.layout-phone .lock::after,
+.layout-short .lock::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 -8px -6px;
+}
+.layout-phone .shop-card.empty,
+.layout-short .shop-card.empty {
+  justify-content: center;
+  padding: 2px;
+  font-size: 11px;
+  background: none;
+  border-style: dashed;
 }
 .board-area {
   flex: none;
@@ -2258,45 +2465,46 @@ html:has(.run-screen.layout-short) {
   flex: 1;
   min-height: 0;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, minmax(0, 1fr));
+  grid-template-rows: repeat(var(--slots, 5), minmax(0, 1fr));
   gap: 4px;
 }
-/* A card turns sideways: picture on the left, name and price on the right. */
+/* A card turns sideways: picture (with its badges) on the left, name and price on the right. */
 .layout-short .shop-card {
   display: grid;
   grid-template-columns: 44px minmax(0, 1fr);
-  grid-auto-rows: min-content;
+  grid-template-rows: auto auto;
   align-content: center;
   align-items: center;
-  column-gap: 4px;
-  padding: 2px 18px 2px 4px;
+  column-gap: 5px;
+  row-gap: 1px;
+  padding: 1px 20px 1px 2px;
   text-align: left;
-  overflow: hidden;
 }
 .layout-short .shop-card > .offer-visual {
   grid-column: 1;
-  grid-row: 1 / span 3;
+  grid-row: 1 / span 2;
+  height: 34px;
 }
-.layout-short .shop-card > :not(.offer-visual, .tier-pips, .lock, .sale-tag) {
+.layout-short .shop-card > .offer-name,
+.layout-short .shop-card > .price {
   grid-column: 2;
   justify-content: flex-start;
-}
-.layout-short .shop-card .offer-meta,
-.layout-short .shop-card .evo-users {
-  display: none;
 }
 .layout-short .shop-card .offer-name {
   text-align: left;
 }
-.layout-short .shop-card .bag-tag {
-  justify-self: start;
-  font-size: 9px;
+.layout-short .offer-name > span {
+  -webkit-line-clamp: 1;
+}
+.layout-short .shop-card.on-sale .price b {
   padding: 0 4px;
+  border-radius: 3px;
+  background: #c2413a;
+  color: #fff;
 }
 .layout-short .shop-card.empty {
   grid-template-columns: 1fr;
   place-items: center;
-  padding: 2px;
 }
 .layout-short .board-wrap {
   flex-direction: row;

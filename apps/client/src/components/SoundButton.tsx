@@ -2,10 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { sound, useSoundSettings } from "../audio.ts";
 import { useI18n } from "../i18n.tsx";
 
-/** Speaker button with a small panel: music and effect volume, and mute. Settings stay in this browser. */
-export function SoundButton() {
-  const { tr } = useI18n();
-  const settings = useSoundSettings();
+/** A small popover's open state; it closes on a press outside its root or on Escape. */
+export function usePopover() {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -23,7 +21,13 @@ export function SoundButton() {
     };
   }, [open]);
 
-  const silent = settings.muted || (settings.bgm === 0 && settings.se === 0);
+  return { open, setOpen, ref };
+}
+
+/** Music and effect volume, and mute. Settings stay in this browser. */
+export function SoundControls() {
+  const { tr } = useI18n();
+  const settings = useSoundSettings();
   const slider = (kind: "bgm" | "se", label: string) => (
     <label className="sound-row">
       <span>{label}</span>
@@ -43,6 +47,23 @@ export function SoundButton() {
       <span className="sound-val">{Math.round(settings[kind] * 100)}</span>
     </label>
   );
+  return (
+    <>
+      {slider("bgm", tr.t("ui.bgmVolume"))}
+      {slider("se", tr.t("ui.seVolume"))}
+      <button type="button" className="btn btn-small" data-sfx="none" onClick={() => sound.update({ muted: !settings.muted })}>
+        {settings.muted ? `🔊 ${tr.t("ui.soundOn")}` : `🔇 ${tr.t("ui.mute")}`}
+      </button>
+    </>
+  );
+}
+
+/** Speaker button with a small panel of the sound controls. */
+export function SoundButton() {
+  const { tr } = useI18n();
+  const settings = useSoundSettings();
+  const { open, setOpen, ref } = usePopover();
+  const silent = settings.muted || (settings.bgm === 0 && settings.se === 0);
 
   return (
     <div ref={ref} className="sound-ctl">
@@ -59,11 +80,7 @@ export function SoundButton() {
       </button>
       {open && (
         <div className="sound-pop panel" role="dialog" aria-label={tr.t("ui.sound")}>
-          {slider("bgm", tr.t("ui.bgmVolume"))}
-          {slider("se", tr.t("ui.seVolume"))}
-          <button type="button" className="btn btn-small" data-sfx="none" onClick={() => sound.update({ muted: !settings.muted })}>
-            {settings.muted ? `🔊 ${tr.t("ui.soundOn")}` : `🔇 ${tr.t("ui.mute")}`}
-          </button>
+          <SoundControls />
         </div>
       )}
     </div>

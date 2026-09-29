@@ -113,6 +113,8 @@
     "shopPoolDesc": "Generation {{n}} plus the champion's real team and its evolution lines: {{count}} species",
     "partyNext": "{{max}} from R{{round}}",
     "partyGrowth": "The party limit grows by one at rounds 5, 8 and 11",
+    "shopNext": "{{n}} slots from R{{round}}",
+    "shopGrowth": "The shop has {{n}} slots from round {{round}}",
     "evolvesWhich": "Evolves with this item",
     "evolvesNone": "None of the Pokémon this champion can get evolve with this item",
     "evolvesOthers": "{{n}} more never appear in this champion's shop",
@@ -217,8 +219,15 @@
     "roundShort": "R{{n}}",
     "opponentNow": "This round",
     "opponentNext": "Next",
-    "opponentPreview": "Champions you face in this round's battle and the next. Opponents are fixed when a round starts, and the next battle's champion will not change either.",
+    "opponentPreview": "Champions you face in this round's battle and the next. Opponents are fixed when a round starts, and the next battle's champion will not change either. Tap for opponent intel.",
+    "opponentIntro": "Opponent intel",
+    "opponentLater": "Next battle",
+    "mainTypes": "Main types",
+    "mainTypesNote": "Types this champion's teams usually field. The actual opponent's roster may differ.",
+    "subclassLabel": "Specialization",
+    "subclassEither": "{{a}} or {{b}} (revealed when that round starts)",
     "sound": "Sound",
+    "menu": "Menu",
     "bgmVolume": "Music",
     "seVolume": "Effects",
     "mute": "Mute",
@@ -616,6 +625,7 @@
     "spawned": "{{species}} appeared in an empty cell!",
     "candy": "{{species}} +{{levels}} levels",
     "income": "Income +{{total}}G",
+    "shopGrew": "The shop now has {{n}} slots!",
     "itemStashed": "Made room to evolve: {{item}} moved to the stash",
     "evolvedToStash": "{{species}} evolved but had no room in the bags, so it moved to the stash",
     "combined": "Combined! {{a}} + {{b}} → {{out}}",
@@ -694,6 +704,20 @@
     "new": "NEW",
     "older": "Earlier patches",
     "entries": [
+      {
+        "date": "2026-09-29",
+        "items": [
+          "Opponent intel: tap the opponent preview (⚔) in the top bar to see this and the next opponent champion's passive, specialization and main types. Main types are what that champion usually fields, so the actual opponent's roster may differ"
+        ]
+      },
+      {
+        "date": "2026-09-28 (4)",
+        "items": [
+          "The shop grows to 6 slots from round 9. Late in a run, when tier 4 opens and offers spread thin, the Pokémon and items you want get a little easier to find",
+          "Phone layout: smaller, cleaner shop cards so all 6 fit in one row and the board gets bigger. Level, size and bag marks now sit on the picture's corners",
+          "The top bar on phones fits on one line; recipes, sound and back-to-title moved into the ☰ menu"
+        ]
+      },
       {
         "date": "2026-09-28 (3)",
         "items": [

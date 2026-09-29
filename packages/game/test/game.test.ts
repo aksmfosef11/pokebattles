@@ -31,6 +31,13 @@ import {
   offerKey,
   replayShop,
   slotPrice,
+  shopSize,
+  rollShop,
+  applyRoundResult,
+  CHAMPIONS,
+  championPool,
+  getSpecies,
+  TYPES,
   layoutIsValid,
   rotationSpot,
   type Action,
@@ -308,6 +315,30 @@ describe("party and board", () => {
       expect(s.shop.some((slot) => slot.offer?.kind === "bag")).toBe(true);
     }
   });
+
+  it("opens a sixth shop slot from round 9 and keeps a locked slot across it", () => {
+    expect([1, 8, 9, 14, 18].map(shopSize)).toEqual([5, 5, 6, 6, 6]);
+    const s = { ...run(), round: 8 };
+    s.shop = rollShop(s, 0);
+    expect(s.shop).toHaveLength(5);
+    s.shop[4] = { ...s.shop[4]!, locked: true };
+    const next = { ...s, round: 9 };
+    next.shop = rollShop(next, 0);
+    expect(next.shop).toHaveLength(6);
+    expect(next.shop[4]).toEqual(s.shop[4]);
+    expect(() => applyAction(next, { t: "lock", slot: 5 })).not.toThrow();
+    expect(() => applyAction(s, { t: "lock", slot: 5 })).toThrow("invalid_slot");
+    expect(() => applyAction(next, { t: "lock", slot: 6 })).toThrow("bad_action");
+    const grown = applyRoundResult({ ...s, subclass: CHAMPIONS.red.subclasses[0]!, phase: "shop" }, {
+      outcome: "win",
+      fainted: [],
+      battleGold: 0,
+      opponent: { name: "", champion: "leon", ghost: false },
+    });
+    expect(grown.round).toBe(9);
+    expect(grown.shop).toHaveLength(6);
+    expect(grown.notices).toContainEqual({ key: "notice.shopGrew", params: { n: 6 } });
+  });
 });
 
 describe("battle", () => {
@@ -359,6 +390,19 @@ describe("server logic", () => {
 });
 
 describe("opponent preview", () => {
+  it("names 1–3 main types per champion, each one its shop pool has", () => {
+    for (const key of CHAMPION_KEYS) {
+      const { mainTypes } = CHAMPIONS[key];
+      expect(mainTypes.length, key).toBeGreaterThan(0);
+      expect(mainTypes.length, key).toBeLessThanOrEqual(3);
+      const poolTypes = new Set([...championPool(key)].flatMap((s) => getSpecies(s).types));
+      for (const t of mainTypes) {
+        expect(TYPES, key).toContain(t);
+        expect(poolTypes.has(t), `${key} ${t}`).toBe(true);
+      }
+    }
+  });
+
   it("shows the coming opponents and keeps to them", async () => {
     const store = new MemoryStore();
     // Ghosts of rounds 1–3 from other players, so matchmaking has real opponents to preview.

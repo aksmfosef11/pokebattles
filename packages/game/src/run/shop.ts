@@ -7,7 +7,22 @@ import { rollTraits } from "./pokemon.ts";
 import { championPool, championSpeciesOfTier, isLanceKinLine, lineBase } from "./pool.ts";
 import type { Offer, PokemonPiece, RunState, ShopSlot } from "./types.ts";
 
-export const SHOP_SIZE = 5;
+/**
+ * Shop slots grow once, when tier 4 opens and the tiers start to thin each other out: 5 until round 8,
+ * 6 from round 9. Slots are rolled by index, so the first five roll exactly what they did with five.
+ */
+export const SHOP_SIZE_STEPS: readonly (readonly [round: number, slots: number])[] = [
+  [1, 5],
+  [9, 6],
+];
+export const MAX_SHOP_SIZE = SHOP_SIZE_STEPS[SHOP_SIZE_STEPS.length - 1]![1];
+
+export function shopSize(round: number): number {
+  let size = SHOP_SIZE_STEPS[0]![1];
+  for (const [from, n] of SHOP_SIZE_STEPS) if (round >= from) size = n;
+  return size;
+}
+
 export const MAX_ROUNDS = 18;
 export const INCOME = [10, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16];
 export const TIER_UNLOCK: Record<Tier, number> = { 1: 1, 2: 3, 3: 6, 4: 9, 5: 12 };
@@ -253,7 +268,7 @@ export const GUARANTEED_BAG_ROUNDS = 3;
 /** Rolls every unlocked slot. `rerollIndex` 0 is the round's opening shop. */
 export function rollShop(state: RunState, rerollIndex: number): ShopSlot[] {
   const out: ShopSlot[] = [];
-  for (let i = 0; i < SHOP_SIZE; i++) {
+  for (let i = 0; i < shopSize(state.round); i++) {
     const prev = state.shop[i];
     if (prev && prev.locked && prev.offer) {
       out.push(prev);

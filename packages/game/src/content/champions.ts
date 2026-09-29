@@ -4,6 +4,8 @@
  * Rule numbers live here so balance changes stay in one place; the engine reads them.
  */
 
+import type { TypeKey } from "./schema.ts";
+
 export type ChampionKey = "red" | "lance" | "steven" | "cynthia" | "alder" | "diantha" | "kukui" | "leon" | "geeta";
 
 export const CHAMPION_KEYS: readonly ChampionKey[] = [
@@ -48,6 +50,11 @@ export interface ChampionDef {
    * plus these species' evolution lines, even when those come from other generations.
    */
   squad: string[];
+  /**
+   * Types the champion's teams usually field, shown in the opponent preview (the real board may differ).
+   * Measured 2026-09-29 on bot boards of rounds 6/10/14 (share of team strength by type), not a rule.
+   */
+  mainTypes: TypeKey[];
 }
 
 export const CHAMPIONS: Record<ChampionKey, ChampionDef> = {
@@ -58,6 +65,7 @@ export const CHAMPIONS: Record<ChampionKey, ChampionDef> = {
     subclasses: ["red_pikachu", "red_kanto"],
     // HGSS / Sun & Moon
     squad: ["PIKACHU", "ESPEON", "SNORLAX", "LAPRAS", "VENUSAUR", "CHARIZARD", "BLASTOISE"],
+    mainTypes: ["electric", "normal", "water"],
   },
   lance: {
     key: "lance",
@@ -66,6 +74,7 @@ export const CHAMPIONS: Record<ChampionKey, ChampionDef> = {
     subclasses: ["lance_hyperbeam", "lance_dragondance"],
     // Gold / Silver / Crystal, HGSS (Kingdra from Masters)
     squad: ["GYARADOS", "DRAGONITE", "AERODACTYL", "CHARIZARD", "KINGDRA"],
+    mainTypes: ["dragon", "flying"],
   },
   steven: {
     key: "steven",
@@ -74,6 +83,7 @@ export const CHAMPIONS: Record<ChampionKey, ChampionDef> = {
     subclasses: ["steven_mega", "steven_regi"],
     // Ruby / Sapphire / Emerald, ORAS
     squad: ["SKARMORY", "CLAYDOL", "AGGRON", "CRADILY", "ARMALDO", "METAGROSS"],
+    mainTypes: ["steel", "psychic", "rock"],
   },
   cynthia: {
     key: "cynthia",
@@ -82,6 +92,7 @@ export const CHAMPIONS: Record<ChampionKey, ChampionDef> = {
     subclasses: ["cynthia_myth", "cynthia_diversity"],
     // Diamond / Pearl / Platinum
     squad: ["SPIRITOMB", "ROSERADE", "GASTRODON", "LUCARIO", "MILOTIC", "GARCHOMP", "TOGEKISS"],
+    mainTypes: ["ground", "dragon", "water"],
   },
   alder: {
     key: "alder",
@@ -91,6 +102,7 @@ export const CHAMPIONS: Record<ChampionKey, ChampionDef> = {
     subclasses: ["alder_legion", "alder_volcarona"],
     // Black / White
     squad: ["ACCELGOR", "BOUFFALANT", "DRUDDIGON", "VANILLUXE", "ESCAVALIER", "VOLCARONA"],
+    mainTypes: ["bug", "grass"],
   },
   diantha: {
     key: "diantha",
@@ -99,6 +111,7 @@ export const CHAMPIONS: Record<ChampionKey, ChampionDef> = {
     subclasses: ["diantha_dual", "diantha_beauty"],
     // X / Y
     squad: ["HAWLUCHA", "TYRANTRUM", "AURORUS", "GOURGEIST", "GOODRA", "GARDEVOIR"],
+    mainTypes: ["fairy", "psychic"],
   },
   kukui: {
     key: "kukui",
@@ -107,6 +120,7 @@ export const CHAMPIONS: Record<ChampionKey, ChampionDef> = {
     subclasses: ["kukui_zmaster", "kukui_research"],
     // Sun / Moon (his last Pokémon is the starter that beats the player's)
     squad: ["LYCANROC", "ALOLA_NINETALES", "BRAVIARY", "MAGNEZONE", "SNORLAX", "DECIDUEYE", "INCINEROAR", "PRIMARINA"],
+    mainTypes: ["rock"],
   },
   leon: {
     key: "leon",
@@ -115,6 +129,7 @@ export const CHAMPIONS: Record<ChampionKey, ChampionDef> = {
     subclasses: ["leon_gmax", "leon_champtime"],
     // Sword / Shield (his starter is the one strong against the player's)
     squad: ["AEGISLASH", "DRAGAPULT", "HAXORUS", "SEISMITOAD", "MR_RIME", "RHYPERIOR", "CHARIZARD", "RILLABOOM", "CINDERACE", "INTELEON"],
+    mainTypes: ["fire", "flying"],
   },
   geeta: {
     key: "geeta",
@@ -123,6 +138,7 @@ export const CHAMPIONS: Record<ChampionKey, ChampionDef> = {
     subclasses: ["geeta_stellar", "geeta_investor"],
     // Scarlet / Violet
     squad: ["ESPATHRA", "GOGOAT", "VELUZA", "AVALUGG", "KINGAMBIT", "GLIMMORA"],
+    mainTypes: ["rock", "poison", "grass"],
   },
 };
 

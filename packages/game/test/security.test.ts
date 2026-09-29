@@ -59,7 +59,9 @@ describe("actions from an untrusted client", () => {
     }
     expect(() => applyAction(s, { t: "move", uid: mon.uid, place: { ...at, x: -1 } })).toThrow("out_of_board");
     expect(() => applyAction(s, { t: "move", uid: mon.uid, place: { ...at, y: 99 } })).toThrow("out_of_board");
-    for (const slot of [-1, 1.5, 5, "0", null]) expect(() => applyAction(s, { t: "buy", slot } as never), String(slot)).toThrow("bad_action");
+    for (const slot of [-1, 1.5, 6, "0", null]) expect(() => applyAction(s, { t: "buy", slot } as never), String(slot)).toThrow("bad_action");
+    // The sixth slot only exists from round 9.
+    expect(() => applyAction(s, { t: "buy", slot: 5 })).toThrow("invalid_slot");
     expect(() => applyAction(s, { t: "fly" } as never)).toThrow("bad_action");
     expect(() => applyAction(s, null as never)).toThrow("bad_action");
   });

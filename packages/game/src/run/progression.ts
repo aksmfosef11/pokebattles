@@ -6,7 +6,7 @@ import { rngFor } from "../rng.ts";
 import { checkPlacement, claimPlacement, computeAdjacency } from "./layout.ts";
 import { evolveAbility, MAX_LEVEL, moveSlotsFor, newPokemon, refreshMoves, rollTraits } from "./pokemon.ts";
 import { isLanceKinLine, lineBase } from "./pool.ts";
-import { basePartyCap, bigPartyCount, INCOME, MAX_ROUNDS, partyCap, partyCount, rollShop, STASH_LIMIT, SUBCLASS_ROUND, WINS_TO_CLEAR } from "./shop.ts";
+import { basePartyCap, bigPartyCount, INCOME, MAX_ROUNDS, partyCap, partyCount, rollShop, shopSize, STASH_LIMIT, SUBCLASS_ROUND, WINS_TO_CLEAR } from "./shop.ts";
 import type { BattleOutcome, Notice, PokemonPiece, RoundLog, RunState, TeamCosmetics, TeamSnapshot } from "./types.ts";
 
 export const XP_WIN = 4;
@@ -254,6 +254,7 @@ export function applyRoundResult(prev: RunState, result: RoundResult): RunState 
     state.shop = [];
     return state;
   }
+  if (shopSize(state.round) > shopSize(state.round - 1)) notices.push({ key: "notice.shopGrew", params: { n: shopSize(state.round) } });
   if (state.round === SUBCLASS_ROUND && !state.subclass) {
     state.phase = "subclass";
     state.shop = state.shop.map((s) => (s.locked ? s : { offer: null, locked: false, sale: false }));

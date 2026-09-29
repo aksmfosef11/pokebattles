@@ -18,7 +18,7 @@ import {
   partyCount,
   rerollCost,
   rollShop,
-  SHOP_SIZE,
+  MAX_SHOP_SIZE,
   slotPrice,
   STARTING_LIVES,
   STASH_LIMIT,
@@ -173,7 +173,7 @@ export function readAction(input: unknown): Action {
   if (typeof a.t !== "string" || !ACTION_TYPES.has(a.t)) badAction();
   const str = (v: unknown) => (typeof v === "string" ? v : badAction());
   const optStr = (v: unknown) => (v === undefined ? undefined : str(v));
-  const slot = (v: unknown) => (Number.isInteger(v) && (v as number) >= 0 && (v as number) < SHOP_SIZE ? (v as number) : badAction());
+  const slot = (v: unknown) => (Number.isInteger(v) && (v as number) >= 0 && (v as number) < MAX_SHOP_SIZE ? (v as number) : badAction());
   const place = (v: unknown) => (v === undefined || v === null ? null : readPlacement(v));
   switch (a.t) {
     case "buy":

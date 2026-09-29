@@ -170,6 +170,8 @@ export const Board = forwardRef<HTMLDivElement, BoardProps>(function Board(
               "piece",
               `piece-${p.kind}`,
               p.kind === "item" && b.w * b.h > 1 ? "big" : "",
+              // A standing Pokémon on small cells has no room for level and size side by side.
+              p.kind === "pokemon" && b.w === 1 && b.h > 1 && cell < 56 ? "narrow" : "",
               isSel ? "sel" : "",
               dragging.has(p.uid) ? "dragging" : "",
               preview?.displacedUid === p.uid ? "swap" : "",

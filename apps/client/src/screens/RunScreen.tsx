@@ -43,7 +43,9 @@ import type { GameApi } from "../api.ts";
 import { sound } from "../audio.ts";
 import { Board, type BoardPreview } from "../components/Board.tsx";
 import { Detail, type DetailTarget } from "../components/Detail.tsx";
+import { OpponentIntro } from "../components/OpponentIntro.tsx";
 import { RecipeBook } from "../components/RecipeBook.tsx";
+import { RunMenu } from "../components/RunMenu.tsx";
 import { Shop } from "../components/Shop.tsx";
 import { SoundButton } from "../components/SoundButton.tsx";
 import { BagIcon, ItemIcon, PokemonSprite, ShinyLines, TrainerSprite } from "../components/sprites.tsx";
@@ -80,6 +82,8 @@ const COMPACT_WIDTH = 700;
 const SHORT_HEIGHT = 600;
 /** Portrait phones lower than this get a one-row dock. */
 const TIGHT_HEIGHT = 620;
+/** Portrait phones at least this much taller than wide get bigger shop cards. */
+const ROOMY_ASPECT = 1.8;
 
 /**
  * phone: portrait phone, everything stacked with a dock at the bottom. short: wide but low (a phone
@@ -169,6 +173,7 @@ export function RunScreen({
   const [toast, setToast] = useState<string | null>(null);
   const [hovered, setHovered] = useState<string | null>(null);
   const [showRecipes, setShowRecipes] = useState(false);
+  const [showFoes, setShowFoes] = useState(false);
   const [targeting, setTargeting] = useState<Targeting>(null);
   const [busy, setBusy] = useState(false);
   /** A reroll, Poké Ball or subclass choice is being committed by the server; the board waits for it. */
@@ -179,6 +184,10 @@ export function RunScreen({
   const [view, setView] = useState(() => ({ w: window.innerWidth, h: window.innerHeight }));
   const layout = layoutFor(view.w, view.h);
   const compact = layout !== "desktop";
+  /** Portrait phone: the top bar keeps to one row (icons for words, one menu for the buttons). */
+  const phone = layout === "phone";
+  /** A tall portrait phone: the board is limited by the width, so the shop cards take some of the spare height. */
+  const roomy = phone && view.h >= view.w * ROOMY_ASPECT;
   /** A short phone (SE-size, or with the browser bars showing): the dock folds into one row to leave the board room. */
   const tight = layout === "phone" && view.h < TIGHT_HEIGHT;
   const [area, setArea] = useState<{ w: number; h: number } | null>(null);
@@ -732,7 +741,7 @@ export function RunScreen({
 
   return (
     <ShinyLines.Provider value={state.cosmetics?.shinyLines}>
-      <div className={`run-screen layout-${layout} ${tight ? "tight" : ""} ${sheetDetail ? "detail-sheet" : ""}`}>
+      <div className={`run-screen layout-${layout} ${tight ? "tight" : ""} ${roomy ? "roomy" : ""} ${sheetDetail ? "detail-sheet" : ""}`}>
         <header className="top-bar panel">
           <TrainerSprite champion={state.champion} width={48} height={56} />
           <div className="who">
@@ -744,8 +753,16 @@ export function RunScreen({
           </div>
           <div className="stat-chip">{compact ? tr.t("ui.roundShort", { n: state.round }) : tr.t("ui.roundOf", { n: state.round, max: MAX_ROUNDS })}</div>
           {upcoming.length > 0 && (
-            // Phones show only the champions' faces; the names are in the title / label.
-            <div className="stat-chip upcoming" title={previewTitle} aria-label={previewTitle}>
+            // Phones show only the champions' faces; the names are in the title / label. Tapping opens the opponent intro.
+            <button
+              type="button"
+              className="stat-chip upcoming"
+              data-sfx="ui/menu_open"
+              title={previewTitle}
+              aria-label={previewTitle}
+              aria-haspopup="dialog"
+              onClick={() => setShowFoes(true)}
+            >
               ⚔
               {upcoming.map((u, i) => (
                 <span key={u.round} className={`upcoming-foe ${i === 0 ? "now" : "later"}`}>
@@ -758,43 +775,60 @@ export function RunScreen({
                   )}
                 </span>
               ))}
-            </div>
+            </button>
           )}
           <div className="stat-chip gold" title={tr.t("ui.gold")}>
-            ◎ {state.gold}G
+            {phone ? `${state.gold}G` : `◎ ${state.gold}G`}
           </div>
           <div className="stat-chip lives" title={tr.t("ui.lives")}>
             {compact ? `♥${Math.max(0, state.lives)}` : "♥".repeat(Math.max(0, state.lives))}
           </div>
-          <div className={`stat-chip ${partyCount(state) >= partyCap(state) ? "full" : ""}`} title={tr.t("ui.partyGrowth")}>
-            {tr.t("ui.party", { n: partyCount(state), max: partyCap(state) })}
+          <div className={`stat-chip party ${partyCount(state) >= partyCap(state) ? "full" : ""}`} title={tr.t("ui.partyGrowth")}>
+            {phone ? (
+              <>
+                <ItemIcon item="POKE_BALL" size={14} />
+                {`${partyCount(state)}/${partyCap(state)}`}
+              </>
+            ) : (
+              tr.t("ui.party", { n: partyCount(state), max: partyCap(state) })
+            )}
             {nextCap && !compact && (
               <span className="muted small"> · {tr.t("ui.partyNext", { round: nextCap[0], max: partyCap({ ...state, round: nextCap[0] }) })}</span>
             )}
           </div>
           <div className="stat-chip">🏆 {compact ? `${state.wins}/${WINS_TO_CLEAR}` : tr.t("ui.wins", { n: state.wins, max: WINS_TO_CLEAR })}</div>
-          {state.streak > 1 && <div className="stat-chip streak">{tr.t("ui.streak", { n: state.streak })}</div>}
+          {state.streak > 1 && (
+            <div className="stat-chip streak" title={tr.t("ui.streak", { n: state.streak })}>
+              {phone ? `🔥${state.streak}` : tr.t("ui.streak", { n: state.streak })}
+            </div>
+          )}
           <div className="spacer" />
           {state.ranked ? (
             <div className="mode-tag ranked">{tr.t("ui.rankedTag")}</div>
           ) : (
             <div className={`mode-tag ${api.mode}`}>{api.mode === "online" ? tr.t("ui.online") : tr.t("ui.offline")}</div>
           )}
-          {compact && (
-            <button
-              className="btn btn-small icon-btn"
-              data-sfx="ui/menu_open"
-              aria-label={tr.t("ui.recipes")}
-              title={tr.t("ui.recipes")}
-              onClick={() => setShowRecipes(true)}
-            >
-              📖
-            </button>
+          {phone ? (
+            <RunMenu onRecipes={() => setShowRecipes(true)} onQuit={onQuit} />
+          ) : (
+            <>
+              {compact && (
+                <button
+                  className="btn btn-small icon-btn"
+                  data-sfx="ui/menu_open"
+                  aria-label={tr.t("ui.recipes")}
+                  title={tr.t("ui.recipes")}
+                  onClick={() => setShowRecipes(true)}
+                >
+                  📖
+                </button>
+              )}
+              <SoundButton />
+              <button className={`btn btn-small ${compact ? "icon-btn" : ""}`} aria-label={tr.t("ui.backToTitle")} title={tr.t("ui.backToTitle")} onClick={onQuit}>
+                {compact ? "⌂" : tr.t("ui.backToTitle")}
+              </button>
+            </>
           )}
-          <SoundButton />
-          <button className={`btn btn-small ${compact ? "icon-btn" : ""}`} aria-label={tr.t("ui.backToTitle")} title={tr.t("ui.backToTitle")} onClick={onQuit}>
-            {compact ? "⌂" : tr.t("ui.backToTitle")}
-          </button>
         </header>
 
         <main className="run-main">
@@ -802,6 +836,7 @@ export function RunScreen({
             <Shop
               state={state}
               compact={compact}
+              roomy={roomy}
               selectedSlot={target?.kind === "offer" ? target.slot : null}
               targetingShop={targeting?.kind === "masterBall"}
               onSlotPointerDown={(e, slot) => startDrag(e, { kind: "shop", slot })}
@@ -922,6 +957,7 @@ export function RunScreen({
         </main>
 
         {showRecipes && <RecipeBook champion={state.champion} onClose={() => setShowRecipes(false)} />}
+        {showFoes && upcoming.length > 0 && <OpponentIntro upcoming={upcoming} onClose={() => setShowFoes(false)} />}
         {targeting && (
           <div className="targeting-bar">
             {targeting.kind === "pokemon" ? tr.t("ui.pickTarget") : tr.t("ui.pickShopSlot")}
