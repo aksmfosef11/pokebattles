@@ -28,11 +28,13 @@
  * report adds each champion's chance of losing all of rounds 1–5. `--stage 0` gives every bot the pool of that
  * unlock stage (meta/progress.ts), i.e. a field of new players.
  *
- *   pnpm balance [--quick] [--fast] [--seed <salt> | --seeds <a,b,...>] [--early | --rounds <r,...>] [--stage <n>] [--report <path>]
+ * `--workers <n>` limits the worker processes (default: one per core; they always run below normal priority).
+ *
+ *   pnpm balance [--quick] [--fast] [--workers <n>] [--seed <salt> | --seeds <a,b,...>] [--early | --rounds <r,...>] [--stage <n>] [--report <path>]
  */
 import { spawn } from "node:child_process";
 import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
-import { cpus, tmpdir } from "node:os";
+import { constants, cpus, setPriority, tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
@@ -48,9 +50,11 @@ import {
   getSpecies,
   INCOME,
   isLanceKinLine,
+  legendUnlockRound,
   ITEMS,
   moveSlotsFor,
   newPokemon,
+  offerLevel,
   partyCap,
   pieceShape,
   placeShape,
@@ -59,7 +63,6 @@ import {
   rollTraits,
   roughPower,
   simulateBattle,
-  TIER_LEVEL,
   TIER_UNLOCK,
   tierOdds,
   TYPES,
@@ -84,7 +87,12 @@ function argValue(flag: string): string | undefined {
   return i >= 0 ? process.argv[i + 1] : undefined;
 }
 
+// A long balance run must not make the machine unusable: every process (workers too) runs below normal priority.
+setPriority(0, constants.priority.PRIORITY_BELOW_NORMAL);
+
 const QUICK = process.argv.includes("--quick");
+/** Worker processes at once (default: every core); `--workers 2` keeps the rest of the machine free. */
+const WORKERS = Math.max(1, Number(argValue("--workers") ?? cpus().length));
 /** Prefix of every seed: another salt samples other bot runs, fields and searches. */
 const SALT = argValue("--seed") ?? "";
 /** Seeds run by the main process (workers get one `--seed` each). */
@@ -195,14 +203,14 @@ function candidates(champion: ChampionKey, round: number): Candidate[] {
     if (!prev || c.level > prev.level || (c.level === prev.level && c.cost < prev.cost)) best.set(c.species, c);
   };
   for (const tier of [1, 2, 3, 4, 5] as Tier[]) {
-    const unlock = tier === 5 && champion === "cynthia" ? CHAMPION_RULES.cynthia.legendaryUnlockRound : TIER_UNLOCK[tier];
+    const unlock = tier === 5 ? legendUnlockRound(champion) : TIER_UNLOCK[tier];
     if (round < unlock) continue;
     const bought = Math.max(1, unlock);
     // Rounds since purchase split between the run's losses (early) and wins (late).
     const { losses } = bestRecord(round);
     const since = round - bought;
     const lostSince = Math.max(0, losses - (bought - 1));
-    const level = TIER_LEVEL[tier] + XP_LOSS * Math.min(since, lostSince) + XP_WIN * Math.max(0, since - lostSince);
+    const level = offerLevel(tier, bought) + XP_LOSS * Math.min(since, lostSince) + XP_WIN * Math.max(0, since - lostSince);
     const battles = since;
     for (const buy of byTier[tier]) {
       const walk = (species: string, cost: number) => {
@@ -678,7 +686,7 @@ async function main(): Promise<void> {
   const runPass = async (kind: "--field" | "--job", extra: (j: Job) => string[], label: string) => {
     const queue = [...jobs];
     const file = (j: Job) => join(dir, `${kind.slice(2)}-${j.seed || "base"}-${j.champion}-${j.round}.json`);
-    const workers = Array.from({ length: Math.max(1, Math.min(jobs.length, cpus().length)) }, async () => {
+    const workers = Array.from({ length: Math.min(jobs.length, WORKERS) }, async () => {
       for (let job = queue.shift(); job; job = queue.shift()) {
         await runWorker([kind, job.champion, String(job.round), ...extra(job), ...flags, ...(job.seed ? ["--seed", job.seed] : [])], file(job));
         console.error(`  ${label}: ${job.seed ? `[${job.seed}] ` : ""}${job.champion} round ${job.round} done (${Math.round((Date.now() - started) / 1000)}s)`);

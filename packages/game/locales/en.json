@@ -57,6 +57,7 @@
     "ace": "Ace",
     "setAce": "Make ace",
     "aceBonus": "Win bonus +{{pct}}%",
+    "legendAura": "Legendary aura: each knockout raises its higher attacking stat a stage (up to {{n}} per battle)",
     "use": "Use",
     "teach": "Teach",
     "pickTarget": "Click the Pokémon to teach",
@@ -253,7 +254,7 @@
     "cynthia": {
       "concept": "Diversity and legendary luck",
       "passiveName": "Myth Researcher",
-      "passive": "+0.5% to all stats for each distinct type on your team (up to 6 types). Legendary and Mythical Pokémon appear from round 11, earlier than for other champions."
+      "passive": "+0.5% to all stats for each distinct type on your team (up to 6 types). Legendary and Mythical Pokémon appear from round 9, earlier than for other champions (round 10). This champion's stat bonuses (subclasses included) shrink by 20 points per round from round 10, down to a quarter from round 13."
     },
     "alder": {
       "concept": "Bug swarm",
@@ -268,7 +269,7 @@
     "kukui": {
       "concept": "Z-Moves",
       "passiveName": "Z-Power",
-      "passive": "Move research: every move of your team hits harder, faster and faster as the run goes on (round² × 0.24%: +15% at round 8, +47% at round 14). Before the research builds up, moves get an extra early boost (36% − 6% per round: +24% at round 2, gone from round 6). A Pokémon next to a Z-Crystal deals ×1.8 with that type, and its first attack of that type becomes a never-missing Z-Move (4 per battle for the team). TMs cost half and appear more often."
+      "passive": "Move research: every move of your team hits harder, faster and faster as the run goes on (round² × 0.16%: +10% at round 8, +31% at round 14). Before the research builds up, moves get an extra early boost (36% − 6% per round: +24% at round 2, gone from round 6). A Pokémon next to a Z-Crystal deals ×1.8 with that type, and its first attack of that type becomes a never-missing Z-Move (4 per battle for the team). TMs cost half and appear more often."
     },
     "leon": {
       "concept": "Dynamax and win streaks",
@@ -617,7 +618,8 @@
     "super": "Super effective",
     "notVery": "Not very effective",
     "charge": "is charging",
-    "faint": "fainted"
+    "faint": "fainted",
+    "legendAura": "Legendary aura!"
   },
   "notice": {
     "evolved": "Evolved! {{from}} → {{to}}",
@@ -631,7 +633,8 @@
     "combined": "Combined! {{a}} + {{b}} → {{out}}",
     "berryPouchRefund": "{{item}} is now a bag: its {{gold}}G price was refunded",
     "mint": "{{species}}'s nature is now {{nature}}",
-    "bottleCap": "{{species}}'s IVs were rerolled (total {{before}} → {{after}})"
+    "bottleCap": "{{species}}'s IVs were rerolled (total {{before}} → {{after}})",
+    "legendAppeared": "A legendary Pokémon appeared in the shop: {{species}}!"
   },
   "incomePart": {
     "base": "Base",
@@ -704,6 +707,15 @@
     "new": "NEW",
     "older": "Earlier patches",
     "entries": [
+      {
+        "date": "2026-09-29 (2)",
+        "items": [
+          "Legendary Pokémon show up more often and hit harder. Tier 5 (Legendary and Mythical) opens at round 10 instead of 12 (round 9 for Cynthia), and the opening shop of round 10 always has one legendary",
+          "Every champion's shop pool now starts with one legendary line (Red Mewtwo, Lance Lugia, Steven Rayquaza, Cynthia Giratina, Alder Reshiram, Diantha Xerneas, Kukui Solgaleo, Leon Zacian, Geeta Koraidon). The other legendaries still unlock as before",
+          "Legendary aura: each time a Legendary or Mythical Pokémon (tier 5) knocks an enemy out, its higher attacking stat rises a stage (twice per battle). Legendaries bought in the shop also gain 2 levels per round",
+          "Balance: with legendaries for everyone, Cynthia's stat bonuses (type diversity, Gate of Myth) got too strong, so they shrink from round 10 (a quarter from round 13). Kukui's move research grows a little slower (round² × 0.24% → 0.16%)"
+        ]
+      },
       {
         "date": "2026-09-29",
         "items": [

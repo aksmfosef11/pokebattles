@@ -14,7 +14,7 @@ export * from "./run/recipes.ts";
 export * from "./run/shoplog.ts";
 export * from "./battle/types.ts";
 export * from "./battle/calc.ts";
-export { simulateBattle, BattleSim, type SimOptions } from "./battle/sim.ts";
+export { simulateBattle, BattleSim, LEGEND_AURA, LEGEND_KO_BOOSTS, type SimOptions } from "./battle/sim.ts";
 export * from "./battle/log.ts";
 export { IMPLEMENTED_ABILITY_KEYS } from "./battle/abilities.ts";
 export * from "./server/logic.ts";

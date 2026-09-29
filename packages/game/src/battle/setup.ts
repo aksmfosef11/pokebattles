@@ -1,5 +1,5 @@
 import { COIN_CASE_EXTRA_GOLD, poweredByBag } from "../board.ts";
-import { CHAMPION_RULES, earlyBonus } from "../content/champions.ts";
+import { CHAMPION_RULES, cynthiaBonusScale, earlyBonus } from "../content/champions.ts";
 import { getMove, getSpecies, ITEMS } from "../content/index.ts";
 import type { ItemFamily } from "../content/items.ts";
 import { TYPES, type Stats, type TypeKey } from "../content/schema.ts";
@@ -109,11 +109,12 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
         team.subclass === "cynthia_diversity"
           ? CHAMPION_RULES.cynthia.diversityBonusUpgraded
           : CHAMPION_RULES.cynthia.typeDiversityBonus;
-      all *= 1 + per * Math.min(distinctTypes.size, CHAMPION_RULES.cynthia.typeDiversityCap);
+      const fade = cynthiaBonusScale(team.round);
+      all *= 1 + fade * per * Math.min(distinctTypes.size, CHAMPION_RULES.cynthia.typeDiversityCap);
       if (team.subclass === "cynthia_diversity" && [...typeUseCount.values()].every((n) => n < 2)) {
-        all *= 1 + CHAMPION_RULES.cynthia.noDuplicateTypeBonus;
+        all *= 1 + fade * CHAMPION_RULES.cynthia.noDuplicateTypeBonus;
       }
-      if (team.subclass === "cynthia_myth") all *= 1 + CHAMPION_RULES.cynthia.mythTeamBonusPerLegend * legendCount;
+      if (team.subclass === "cynthia_myth") all *= 1 + fade * CHAMPION_RULES.cynthia.mythTeamBonusPerLegend * legendCount;
     }
     if (team.champion === "leon") {
       const per =
@@ -260,6 +261,7 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
       bagHeal,
       disabledMove: null,
       spent: new Set(),
+      legendBoosts: 0,
     });
   });
 

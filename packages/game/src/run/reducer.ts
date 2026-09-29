@@ -22,8 +22,9 @@ import {
   slotPrice,
   STARTING_LIVES,
   STASH_LIMIT,
+  legendNotice,
+  offerLevel,
   TIER_LEVEL,
-  TIER_UNLOCK,
 } from "./shop.ts";
 import { GameError, type Action, type BagPiece, type ItemPiece, type Piece, type PokemonPiece, type RunState, type TeamCosmetics } from "./types.ts";
 
@@ -266,7 +267,7 @@ function addPokemonToStash(state: RunState, species: string, level: number, rng:
 }
 
 function roundLevel(state: RunState, tier: Tier): number {
-  return TIER_LEVEL[tier] + Math.max(0, state.round - TIER_UNLOCK[tier]);
+  return offerLevel(tier, state.round);
 }
 
 const ivSum = (mon: PokemonPiece) => Object.values(mon.ivs).reduce((a, b) => a + b, 0);
@@ -368,6 +369,8 @@ export function applyAction(prev: RunState, input: Action): RunState {
       state.phase = "shop";
       grantSubclass(state);
       state.shop = rollShop(state, 0);
+      const legend = legendNotice(state);
+      if (legend) state.notices.push(legend);
       return state;
     }
     case "buy": {

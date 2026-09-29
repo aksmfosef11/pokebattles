@@ -19,6 +19,7 @@ import {
   reachCells,
   RECIPES,
   type Cell,
+  LEGEND_KO_BOOSTS,
   moveSlotsFor,
   natureEffect,
   sellValue,
@@ -131,6 +132,7 @@ function PokemonDetail({ state, mon, onSetAce, onSell, onRotate, placedUid }: { 
           <div className="muted small">
             {tr.t("ui.tier", { n: species.tier })} · {tr.t("ui.size", { w: species.footprint.w, h: species.footprint.h })}
           </div>
+          {species.tier === 5 && <div className="ace-tag">★ {tr.t("ui.legendAura", { n: LEGEND_KO_BOOSTS })}</div>}
           {state.ace === mon.uid && (
             <div className="ace-tag">
               ♛ {tr.t("ui.ace")} · {tr.t("ui.aceBonus", { pct: Math.round((mon.aceBonus ?? 0) * 100) })}

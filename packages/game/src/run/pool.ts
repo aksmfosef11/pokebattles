@@ -117,8 +117,8 @@ export function championSpeciesByTier(key: PoolKey): Readonly<Record<Tier, strin
 
 /**
  * Finished runs with a champion that open each stage of their shop pool. Stage 0 (a new player)
- * is the champion's real squad and starter lines, its counter lines (COUNTER_LINES) and a quarter of the rest;
- * after 6 runs the pool is full.
+ * is the champion's real squad and starter lines, its counter lines (COUNTER_LINES), one legendary line
+ * (STARTER_LEGENDS) and a quarter of the rest; after 6 runs the pool is full.
  */
 export const POOL_UNLOCK_RUNS: readonly number[] = [0, 2, 4, 6];
 
@@ -136,6 +136,25 @@ export const COUNTER_LINES: Partial<Record<ChampionKey, readonly string[]>> = {
 };
 
 /**
+ * The one legendary line each champion's starting pool (stage 0) has, so a new player meets a legendary at round 10 like
+ * everyone (the guaranteed offer draws from the run's own pool). All tier 5, picked for the champion's story: Mewtwo for
+ * Red, Lugia for Lance's Johto, Rayquaza for Steven's Delta Episode, Giratina for Cynthia's Sinnoh, Reshiram for Alder's
+ * fire Volcarona, Xerneas for Diantha's Fairy, Solgaleo for Kukui's Alola, Zacian for Leon's Galar, Koraidon for Geeta's
+ * Paldea. Like the counter lines they move to stage 0 from wherever the dealing put them, so the other lines keep their stage.
+ */
+export const STARTER_LEGENDS: Record<ChampionKey, string> = {
+  red: "MEWTWO",
+  lance: "LUGIA",
+  steven: "RAYQUAZA",
+  cynthia: "GIRATINA",
+  alder: "RESHIRAM",
+  diantha: "XERNEAS",
+  kukui: "SOLGALEO",
+  leon: "ZACIAN",
+  geeta: "KORAIDON",
+};
+
+/**
  * Lines added to the roster after the stages were first dealt. They take no turn in the dealing, so adding them
  * moves no other line to another stage (a player's unlocked lines stay the same).
  */
@@ -144,7 +163,8 @@ const LINES_ADDED_LATER: ReadonlySet<string> = new Set(["BUNNELBY"]);
 /**
  * Evolution lines (by first stage) that each unlock stage adds to a champion's pool. The lines that
  * are not the squad's are sorted by their highest shop tier and dealt out in turn, so every stage
- * brings a mix of early and late Pokémon; legendaries (and sub-legendaries) are dealt from the last stage back.
+ * brings a mix of early and late Pokémon; legendaries (and sub-legendaries) are dealt from the last stage back,
+ * except each champion's starter legendary (stage 0).
  */
 export function poolUnlockStages(champion: ChampionKey): readonly (readonly string[])[] {
   let stages = stageCache.get(champion);
@@ -166,15 +186,17 @@ export function poolUnlockStages(champion: ChampionKey): readonly (readonly stri
     stages = POOL_UNLOCK_RUNS.map(() => [] as string[]);
     const n = stages.length;
     stages[0]!.push(...[...core].sort((a, b) => lines.get(a)!.id - lines.get(b)!.id));
-    // Legendary lines are never in the starting pool; the last stage gets the first one.
+    // Legendary lines are dealt from the last stage back (the starter legendary is moved to stage 0 below).
     const dealt = rest.filter((k) => !LINES_ADDED_LATER.has(k));
     const legends = dealt.filter((k) => lines.get(k)!.legend);
     dealt.filter((k) => !lines.get(k)!.legend).forEach((k, i) => stages![i % n]!.push(k));
     legends.forEach((k, i) => stages![n > 1 ? n - 1 - (i % (n - 1)) : 0]!.push(k));
-    // Counter lines move to stage 0 from wherever the dealing put them, so the other lines keep their stage.
+    // Counter lines and the starter legendary move to stage 0 from wherever the dealing put them, so the other lines keep their stage.
     const counters = new Set((COUNTER_LINES[champion] ?? []).filter((k) => lines.has(k)));
-    for (const stage of stages) for (let i = stage.length - 1; i >= 0; i--) if (counters.has(stage[i]!)) stage.splice(i, 1);
-    stages[0]!.push(...[...counters].sort((a, b) => lines.get(a)!.id - lines.get(b)!.id));
+    const starterLegend = lines.has(STARTER_LEGENDS[champion]) ? STARTER_LEGENDS[champion] : null;
+    const moved = new Set([...counters, ...(starterLegend ? [starterLegend] : [])]);
+    for (const stage of stages) for (let i = stage.length - 1; i >= 0; i--) if (moved.has(stage[i]!)) stage.splice(i, 1);
+    stages[0]!.push(...[...counters].sort((a, b) => lines.get(a)!.id - lines.get(b)!.id), ...(starterLegend ? [starterLegend] : []));
     // A later line that counters nothing goes to the last stage (the reward end).
     stages[n - 1]!.push(...rest.filter((k) => LINES_ADDED_LATER.has(k) && !counters.has(k)));
     stageCache.set(champion, stages);

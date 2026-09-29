@@ -208,6 +208,8 @@ export interface Battler {
   disabledMove: { key: string; until: number } | null;
   /** Once-per-battle ability triggers that already fired (Run Away, Pickpocket, Disguise). */
   spent: Set<string>;
+  /** Knockouts that raised a legendary's attack this battle (LEGEND_KO_BOOSTS). */
+  legendBoosts: number;
 }
 
 export interface SideState {

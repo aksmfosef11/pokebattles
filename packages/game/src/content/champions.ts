@@ -159,6 +159,16 @@ export function earlyBonus(bonus: number, perRound: number, round: number): numb
   return Math.max(0, Math.round((bonus - perRound * round) * 1e6) / 1e6);
 }
 
+/**
+ * Cynthia's stat bonuses (type diversity, no shared type, Gate of Myth) as a share of their full size at a round: 1 up to
+ * `bonusFadeAfter`, then `bonusFadePerRound` less per round, never below `bonusFadeFloor`. They make up for her thin
+ * mid-game (Garchomp is her only tier 4); once every champion meets a legendary (round 10) they are too much.
+ */
+export function cynthiaBonusScale(round: number): number {
+  const r = CHAMPION_RULES.cynthia;
+  return Math.max(r.bonusFadeFloor, Math.round((1 - r.bonusFadePerRound * Math.max(0, round - r.bonusFadeAfter)) * 1e6) / 1e6);
+}
+
 /** Tunable numbers for champion passives and subclasses. */
 export const CHAMPION_RULES = {
   red: {
@@ -213,9 +223,17 @@ export const CHAMPION_RULES = {
     diversityBonusUpgraded: 0.01,
     noDuplicateTypeBonus: 0.02,
     legendaryWeightMultiplier: 1,
-    legendaryUnlockRound: 11,
+    /**
+     * Legendaries can roll in her shop from this round instead of round 10 (the guaranteed one still comes at round 10:
+     * a guaranteed legendary at round 8 took her typical run from 47% to 84% there).
+     */
+    legendaryUnlockRound: 9,
     mythPriceDiscount: 2,
     mythTeamBonusPerLegend: 0.03,
+    /** Her stat bonuses fade from round 10 (see cynthiaBonusScale): ×0.8 at round 10, ×0.6 at 11, ×0.4 at 12, ×0.25 from 13. */
+    bonusFadeAfter: 9,
+    bonusFadePerRound: 0.2,
+    bonusFadeFloor: 0.25,
   },
   alder: {
     smallPokemonAttackBonus: 0.035,
@@ -238,7 +256,7 @@ export const CHAMPION_RULES = {
   kukui: {
     zMovesPerBattle: 4,
     /** Kukui's research: every move of his team deals ×(1 + this × round²) — it speeds up as the run goes on. */
-    movePowerPerRoundSquared: 0.0024,
+    movePowerPerRoundSquared: 0.0016,
     /** Early game only, before the research builds up: move power ×(1 + bonus − perRound × round) while above 1 (gone from round 6). */
     earlyMovePowerBonus: 0.36,
     earlyMovePowerPerRound: 0.06,

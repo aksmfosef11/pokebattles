@@ -4,8 +4,8 @@ import { CONTENT, getSpecies, itemEvolutions, ITEMS, TYPES, type Tier, type Type
 import { rngFor, type Rng } from "../rng.ts";
 import { stackMul } from "../battle/calc.ts";
 import { rollTraits } from "./pokemon.ts";
-import { championPool, championSpeciesOfTier, isLanceKinLine, lineBase } from "./pool.ts";
-import type { Offer, PokemonPiece, RunState, ShopSlot } from "./types.ts";
+import { championPool, championSpeciesByTier, championSpeciesOfTier, isLanceKinLine, lineBase } from "./pool.ts";
+import type { Notice, Offer, PokemonPiece, RunState, ShopSlot } from "./types.ts";
 
 /**
  * Shop slots grow once, when tier 4 opens and the tiers start to thin each other out: 5 until round 8,
@@ -25,9 +25,22 @@ export function shopSize(round: number): number {
 
 export const MAX_ROUNDS = 18;
 export const INCOME = [10, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16];
-export const TIER_UNLOCK: Record<Tier, number> = { 1: 1, 2: 3, 3: 6, 4: 9, 5: 12 };
+/** Tier 5 (the box legendaries) opens at round 10, so runs that go well still meet one before they clear (10 wins). */
+export const TIER_UNLOCK: Record<Tier, number> = { 1: 1, 2: 3, 3: 6, 4: 9, 5: 10 };
 export const POKEMON_PRICE: Record<Tier, number> = { 1: 3, 2: 5, 3: 7, 4: 10, 5: 14 };
 export const TIER_LEVEL: Record<Tier, number> = { 1: 8, 2: 16, 3: 26, 4: 36, 5: 45 };
+/**
+ * Shop Pokémon gain a level per round after their tier opens; legendaries gain this many instead, so one bought
+ * at round 12–14 is not left far behind the party (live boards: best Pokémon Lv49 at round 10, Lv60 at 12).
+ * Counted from round 10 for everyone, so Cynthia's early legendaries join lower (Lv43 at round 9).
+ */
+export const LEGEND_LEVEL_PER_ROUND = 2;
+
+/** Level of a shop (or Poké Ball) Pokémon of a tier at a round. */
+export function offerLevel(tier: Tier, round: number): number {
+  if (tier === 5) return TIER_LEVEL[5] + LEGEND_LEVEL_PER_ROUND * (round - TIER_UNLOCK[5]);
+  return TIER_LEVEL[tier] + Math.max(0, round - TIER_UNLOCK[tier]);
+}
 export const SALE_CHANCE = 0.1;
 export const SUBCLASS_ROUND = 8;
 export const WINS_TO_CLEAR = 10;
@@ -70,23 +83,30 @@ export function bigPartyCount(state: Pick<RunState, "pieces">): number {
 
 const TIERS: Tier[] = [1, 2, 3, 4, 5];
 
-/** Tier weights per round band; tier 5 in the 9–11 band only exists for Cynthia's early unlock. */
+/** Tier 1–4 weights per round band; tier 5 comes from LEGEND_WEIGHTS. */
 const ODDS: [number, number[]][] = [
-  [2, [100, 0, 0, 0, 0]],
-  [5, [70, 30, 0, 0, 0]],
-  [8, [45, 40, 15, 0, 0]],
-  [11, [30, 35, 25, 10, 2]],
-  [14, [20, 30, 30, 15, 5]],
-  [99, [15, 25, 30, 20, 10]],
+  [2, [100, 0, 0, 0]],
+  [5, [70, 30, 0, 0]],
+  [8, [45, 40, 15, 0]],
+  [11, [30, 35, 25, 10]],
+  [14, [20, 30, 30, 15]],
+  [99, [15, 25, 30, 20]],
 ];
 
-export function tierOdds(state: RunState): number[] {
+/** Tier 5 weight by rounds since legendaries opened for the champion; the last value holds from then on. */
+export const LEGEND_WEIGHTS: readonly number[] = [4, 4, 7];
+
+/** Round a champion's shop starts offering legendaries (tier 5): Cynthia's comes earlier. */
+export function legendUnlockRound(champion: RunState["champion"]): number {
+  return champion === "cynthia" ? CHAMPION_RULES.cynthia.legendaryUnlockRound : TIER_UNLOCK[5];
+}
+
+export function tierOdds(state: Pick<RunState, "champion" | "round">): number[] {
   const odds = [...ODDS.find(([maxRound]) => state.round <= maxRound)![1]];
-  const legendaryUnlock =
-    state.champion === "cynthia" ? CHAMPION_RULES.cynthia.legendaryUnlockRound : TIER_UNLOCK[5];
-  if (state.round < legendaryUnlock) odds[4] = 0;
-  if (state.champion === "cynthia") odds[4]! *= CHAMPION_RULES.cynthia.legendaryWeightMultiplier;
-  return odds;
+  const since = state.round - legendUnlockRound(state.champion);
+  let legend = since < 0 ? 0 : LEGEND_WEIGHTS[Math.min(since, LEGEND_WEIGHTS.length - 1)]!;
+  if (state.champion === "cynthia") legend *= CHAMPION_RULES.cynthia.legendaryWeightMultiplier;
+  return [...odds, legend];
 }
 
 function rollTier(state: RunState, rng: Rng): Tier {
@@ -159,8 +179,7 @@ function rollPokemon(state: RunState, rng: Rng, rolled: Tier = rollTier(state, r
   const keptWeight = entries.reduce((sum, [, w]) => sum + w, 0);
   if (!rng.chance(keptWeight / fullWeight)) return tier > 1 ? rollPokemon(state, rng, (tier - 1) as Tier) : rollItem(state, rng);
   const species = rng.weighted(entries);
-  const level = TIER_LEVEL[tier] + Math.max(0, state.round - TIER_UNLOCK[tier]);
-  return { kind: "pokemon", tier, species, level, ...rollTraits(species, rng) };
+  return { kind: "pokemon", tier, species, level: offerLevel(tier, state.round), ...rollTraits(species, rng) };
 }
 
 function rollItem(state: RunState, rng: Rng): Offer {
@@ -262,6 +281,26 @@ export function slotPrice(slot: ShopSlot, state: RunState): number {
   return slot.sale ? Math.max(price === 0 ? 0 : 1, Math.floor(price / 2)) : price;
 }
 
+/** A legendary from the run's pool (tier 5, locked lines left out), or null when the pool has none yet. */
+function legendOffer(state: RunState, rng: Rng): Offer | null {
+  const legends = championSpeciesByTier(state)[5];
+  if (legends.length === 0) return null;
+  const species = rng.pick(legends);
+  return { kind: "pokemon", tier: 5, species, level: offerLevel(5, state.round), ...rollTraits(species, rng) };
+}
+
+/** True when this shop is the one that always shows a legendary: the opening shop of round 10, for every champion. */
+export function isLegendShop(state: Pick<RunState, "round">, rerollIndex: number): boolean {
+  return rerollIndex === 0 && state.round === TIER_UNLOCK[5];
+}
+
+/** "A legendary appeared" for the shop that always shows one (after rollShop(state, 0)). */
+export function legendNotice(state: RunState): Notice | null {
+  if (!isLegendShop(state, 0)) return null;
+  const offer = state.shop.find((s) => s.offer?.kind === "pokemon" && s.offer.tier === 5)?.offer;
+  return offer?.kind === "pokemon" ? { key: "notice.legendAppeared", params: { species: offer.species } } : null;
+}
+
 /** Opening shops of the first rounds always include a bag. */
 export const GUARANTEED_BAG_ROUNDS = 3;
 
@@ -280,6 +319,12 @@ export function rollShop(state: RunState, rerollIndex: number): ShopSlot[] {
   if (rerollIndex === 0 && state.round <= GUARANTEED_BAG_ROUNDS && !out.some((s) => s.offer?.kind === "bag")) {
     const last = out.findLastIndex((s) => !s.locked);
     if (last >= 0) out[last] = { offer: rollBag(state, rngFor(state.seed, "shop-bag", state.round)), locked: false, sale: false };
+  }
+  // Legendaries open with one in the first slot that is not locked, unless the shop already shows one.
+  if (isLegendShop(state, rerollIndex) && !out.some((s) => s.offer?.kind === "pokemon" && s.offer.tier === 5)) {
+    const first = out.findIndex((s) => !s.locked);
+    const offer = legendOffer(state, rngFor(state.seed, "shop-legend", state.round));
+    if (first >= 0 && offer) out[first] = { offer, locked: false, sale: false };
   }
   return out;
 }

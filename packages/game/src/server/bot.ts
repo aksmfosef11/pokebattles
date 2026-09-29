@@ -65,6 +65,32 @@ function restoreItems(start: RunState): RunState {
   return state;
 }
 
+/** Benches `bench`, then lifts items off the board one by one until `uid` fits; the items go back where they help most. */
+function fitAfterClearing(state: RunState, uid: string, bench: readonly PokemonPiece[]): RunState | null {
+  // Cheap check first: does it fit even with the bench and every item off the board?
+  const cleared: Record<string, Piece> = { ...state.pieces };
+  for (const p of [...bench, ...Object.values(state.pieces).filter((p) => p.kind === "item" && p.place)]) cleared[p.uid] = { ...p, place: null };
+  if (!findFreePlacement(cleared, state.pieces[uid]!, { x: 4, y: 2, rot: 0 })) return null;
+  let trial: RunState | null = state;
+  for (const m of bench) trial = trial && tryAction(trial, { t: "move", uid: m.uid, place: null });
+  if (!trial) return null;
+  const lifted: string[] = [];
+  let placed = placeMon(trial, uid);
+  for (const item of Object.values(trial.pieces).filter((p) => p.kind === "item" && p.place)) {
+    if (placed) break;
+    trial = tryAction(trial, { t: "move", uid: item.uid, place: null });
+    if (!trial) return null;
+    lifted.push(item.uid);
+    placed = placeMon(trial, uid);
+  }
+  if (!placed) return null;
+  for (const l of lifted) {
+    const place = bestItemPlacement(placed, placed.pieces[l]!);
+    if (place) placed = tryAction(placed, { t: "move", uid: l, place }) ?? placed;
+  }
+  return placed;
+}
+
 function restoreStash(start: RunState): RunState {
   let state = start;
   for (const mon of stashedMons(state)) {
@@ -82,24 +108,19 @@ function restoreStash(start: RunState): RunState {
         continue;
       }
     }
-    if (partyCount(state) >= partyCap(state)) continue;
-    // Lift items off the board one by one until the Pokémon fits, then put them back where they help most.
-    let trial: RunState | null = state;
-    const lifted: string[] = [];
-    let placed: RunState | null = null;
-    for (const item of Object.values(state.pieces).filter((p) => p.kind === "item" && p.place)) {
-      trial = trial && tryAction(trial, { t: "move", uid: item.uid, place: null });
-      if (!trial) break;
-      lifted.push(item.uid);
-      placed = placeMon(trial, mon.uid);
-      if (placed) break;
+    // Otherwise make room like a player would: items aside first, then a weaker member benched (weakest first),
+    // and at last the two weakest together (a big legendary needs a 3×2 spot on a packed board).
+    const weaker = placedMonsOf(state).filter((m) => power(m) < power(mon)).reverse();
+    const plans: PokemonPiece[][] = partyCount(state) < partyCap(state) ? [[]] : [];
+    for (const m of weaker) plans.push([m]);
+    if (weaker.length >= 2) plans.push(weaker.slice(0, 2));
+    for (const bench of plans) {
+      const placed = fitAfterClearing(state, mon.uid, bench);
+      if (placed) {
+        state = placed;
+        break;
+      }
     }
-    if (!placed) continue;
-    for (const uid of lifted) {
-      const place = bestItemPlacement(placed, placed.pieces[uid]!);
-      if (place) placed = tryAction(placed, { t: "move", uid, place }) ?? placed;
-    }
-    state = placed;
   }
   return restoreItems(state);
 }
@@ -302,6 +323,11 @@ export function botShop(start: RunState, rng: Rng): RunState {
     state = applyAction(state, { t: "chooseSubclass", subclass: rng.pick(CHAMPIONS[state.champion].subclasses) });
   }
   state = restoreStash(state);
+  // A legendary it cannot afford yet: lock it and save this round's gold for it, as a player would.
+  const legend = state.shop.findIndex((s) => s.offer?.kind === "pokemon" && s.offer.tier === 5 && offerValue(state, s.offer) > 0);
+  if (legend >= 0 && slotPrice(state.shop[legend]!, state) > state.gold) {
+    return state.shop[legend]!.locked ? state : (tryAction(state, { t: "lock", slot: legend }) ?? state);
+  }
   for (let rerolls = 0; rerolls < 3; rerolls++) {
     for (let guard = 0; guard < 8; guard++) {
       const options = state.shop
@@ -337,8 +363,8 @@ export function botShop(start: RunState, rng: Rng): RunState {
     if (state.gold < rerollCost(state) + 3) break;
     state = tryAction(state, { t: "reroll" }) ?? state;
   }
-  // Sell anything left in the stash so the snapshot is not wasteful.
-  return state;
+  // A Pokémon bought this round that found no free spot (a big legendary) gets the stash treatment before the battle.
+  return stashedMons(state).length > 0 ? restoreStash(state) : state;
 }
 
 export function randomChampion(rng: Rng): ChampionKey {

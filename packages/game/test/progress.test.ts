@@ -12,6 +12,7 @@ import {
   CHAMPION_KEYS,
   CHAMPIONS,
   championPool,
+  championSpeciesByTier,
   chooseStarter,
   createRun,
   drawShiny,
@@ -38,6 +39,7 @@ import {
   rngFor,
   rollShop,
   runOptionsFor,
+  STARTER_LEGENDS,
   setHomeArena,
   settleRun,
   shinyLinesOf,
@@ -70,15 +72,18 @@ describe("champion pool unlock stages", () => {
     }
   });
 
-  it("start with the champion's real squad and starter, and no legendaries", () => {
+  it("start with the champion's real squad and starter, and exactly one legendary line (tier 5)", () => {
     for (const c of CHAMPION_KEYS) {
       const first = new Set(poolUnlockStages(c)[0]);
       const def = CHAMPIONS[c];
       for (const key of [def.starter.species, ...def.squad]) expect(first.has(lineBase(key)), `${c} ${key}`).toBe(true);
-      for (const key of championPool({ champion: c, lockedLines: lockedLinesAt(c, 0) })) {
+      const legends = [...championPool({ champion: c, lockedLines: lockedLinesAt(c, 0) })].filter((key) => {
         const s = getSpecies(key);
-        expect(s.legendary || s.mythical || s.subLegendary, `${c} ${key}`).toBe(false);
-      }
+        return s.legendary || s.mythical || s.subLegendary;
+      });
+      expect(legends, c).toEqual([STARTER_LEGENDS[c]]);
+      expect(getSpecies(STARTER_LEGENDS[c]).tier, c).toBe(5);
+      expect(championSpeciesByTier({ champion: c, lockedLines: lockedLinesAt(c, 0) })[5], c).toEqual([STARTER_LEGENDS[c]]);
       expect(championPool({ champion: c, lockedLines: lockedLinesAt(c, 0) }).size, c).toBeGreaterThanOrEqual(15);
     }
   });

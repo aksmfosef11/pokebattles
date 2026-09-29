@@ -6,6 +6,7 @@ import {
   cellsOf,
   CONTENT,
   ITEMS,
+  LEGEND_AURA,
   looksShiny,
   simulateBattle,
   touches,
@@ -333,7 +334,8 @@ export function BattleScreen({ turn, before, onDone }: { turn: TurnResponse; bef
           if (e.terrain) addLog("sys", `▦ ${tr.t(`terrain.${e.terrain}`)}`);
           break;
         case "ability":
-          if (!quiet) addFx(e.src, tr.ability(e.ability), "fx-ability");
+          if (!quiet && e.ability === LEGEND_AURA) addFx(e.src, tr.t("battleText.legendAura"), "fx-form");
+          else if (!quiet) addFx(e.src, tr.ability(e.ability), "fx-ability");
           break;
         case "item": {
           addLog(`${sideCls(e.src)} sub`, `${name(e.src)}: ${tr.itemName(e.item)}`);

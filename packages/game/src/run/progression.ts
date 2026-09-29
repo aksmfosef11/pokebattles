@@ -6,7 +6,7 @@ import { rngFor } from "../rng.ts";
 import { checkPlacement, claimPlacement, computeAdjacency } from "./layout.ts";
 import { evolveAbility, MAX_LEVEL, moveSlotsFor, newPokemon, refreshMoves, rollTraits } from "./pokemon.ts";
 import { isLanceKinLine, lineBase } from "./pool.ts";
-import { basePartyCap, bigPartyCount, INCOME, MAX_ROUNDS, partyCap, partyCount, rollShop, shopSize, STASH_LIMIT, SUBCLASS_ROUND, WINS_TO_CLEAR } from "./shop.ts";
+import { basePartyCap, bigPartyCount, INCOME, legendNotice, MAX_ROUNDS, partyCap, partyCount, rollShop, shopSize, STASH_LIMIT, SUBCLASS_ROUND, WINS_TO_CLEAR } from "./shop.ts";
 import type { BattleOutcome, Notice, PokemonPiece, RoundLog, RunState, TeamCosmetics, TeamSnapshot } from "./types.ts";
 
 export const XP_WIN = 4;
@@ -261,6 +261,8 @@ export function applyRoundResult(prev: RunState, result: RoundResult): RunState 
   } else {
     state.phase = "shop";
     state.shop = rollShop(state, 0);
+    const legend = legendNotice(state);
+    if (legend) notices.push(legend);
   }
   return state;
 }

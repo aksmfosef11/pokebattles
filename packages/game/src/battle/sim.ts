@@ -85,6 +85,10 @@ const MOLD_BREAKERS = new Set(["MOLD_BREAKER", "TURBOBLAZE", "TERAVOLT"]);
  * Pokémon acts here, so the main-series +1 per turn up to +6 snowballed (Ninjask carried Steven's early game).
  */
 const SPEED_BOOST_EVERY = 2;
+/** Knockouts per battle that raise a legendary's (tier 5) better attacking stat a stage. */
+export const LEGEND_KO_BOOSTS = 2;
+/** `ability` event key of that boost; the client shows it as "legendary aura", not as an ability name. */
+export const LEGEND_AURA = "LEGEND_AURA";
 const SPEED_BOOST_MAX = 6;
 /** Paradox abilities and the field condition that powers them (Booster Energy stands in for it). */
 const PARADOX_FIELD: Record<string, { weather?: Weather; terrain?: Terrain }> = {
@@ -1625,6 +1629,12 @@ export class BattleSim {
 
   private onKo(att: Battler, def: Battler): void {
     if (!att.alive || att === def || att.side === def.side) return;
+    // Legendaries snowball: each knockout raises their better attacking stat a stage, a few times per battle.
+    if (att.legendBoosts < LEGEND_KO_BOOSTS && getSpecies(att.piece.species).tier === 5) {
+      att.legendBoosts++;
+      this.emit({ k: "ability", src: att.id, ability: LEGEND_AURA });
+      this.changeStages(att, [att.stats.atk >= att.stats.spa ? "atk" : "spa"], 1);
+    }
     if (att.ability === "MOXIE" || att.ability === "CHILLING_NEIGH") {
       this.emit({ k: "ability", src: att.id, ability: att.ability });
       this.changeStages(att, ["atk"], 1);
