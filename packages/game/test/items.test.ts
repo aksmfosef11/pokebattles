@@ -291,14 +291,18 @@ describe("bags that work on the items lying on them", () => {
     expect(level(true)).toBe(20 + RARE_CANDY_LEVELS + CANDY_JAR_EXTRA_LEVELS);
   });
 
-  it("a Coin Case raises the win gold of an Amulet Coin on it", async () => {
+  it("a Coin Case pays gold per win by itself and more for an Amulet Coin on it", async () => {
     const { buildSide } = await import("../src/battle/setup.ts");
-    const coins = (bag: string) => {
-      const pieces = [legacyBag, bagAt(bag, 2), mon("PIKACHU", 20, 2, 3), item("AMULET_COIN", 2, 4)];
+    const { COIN_CASE_WIN_GOLD, COIN_CASE_EXTRA_GOLD } = await import("../src/index.ts");
+    const coins = (bag: string, withCoin = true) => {
+      const pieces = [legacyBag, bagAt(bag, 2), mon("PIKACHU", 20, 2, 3)];
+      if (withCoin) pieces.push(item("AMULET_COIN", 2, 4));
       return buildSide(team(pieces), 0, 0).state.amuletCoins;
     };
+    expect(coins("BAG_1X2", false)).toBe(0);
+    expect(coins("COIN_CASE", false)).toBe(COIN_CASE_WIN_GOLD);
     expect(coins("BAG_1X2")).toBe(1);
-    expect(coins("COIN_CASE")).toBe(2);
+    expect(coins("COIN_CASE")).toBe(1 + COIN_CASE_WIN_GOLD + COIN_CASE_EXTRA_GOLD);
   });
 
   it("a nugget on a Coin Case gains extra sell value each round", async () => {

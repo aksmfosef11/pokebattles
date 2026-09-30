@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
-import { BERRY_POUCH_SAVE_CHANCE, CANDY_JAR_EXTRA_LEVELS, COIN_CASE_EXTRA_GOLD, CONTENT, ITEMS } from "@pokebattles/game";
+import { BERRY_POUCH_SAVE_CHANCE, CANDY_JAR_EXTRA_LEVELS, COIN_CASE_EXTRA_GOLD, COIN_CASE_WIN_GOLD, CONTENT, ITEMS } from "@pokebattles/game";
 
 type Dict = Record<string, unknown>;
 
@@ -157,6 +157,7 @@ export class Translator {
         pct: Math.round(BERRY_POUCH_SAVE_CHANCE * 100),
         levels: CANDY_JAR_EXTRA_LEVELS,
         gold: COIN_CASE_EXTRA_GOLD,
+        winGold: COIN_CASE_WIN_GOLD,
       });
     }
     if (!def) return "";

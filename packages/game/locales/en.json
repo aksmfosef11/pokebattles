@@ -57,6 +57,7 @@
     "ace": "Ace",
     "setAce": "Make ace",
     "aceBonus": "Win bonus +{{pct}}%",
+    "bond": "Bond +{{pct}}% (+2% per battle, up to +18%)",
     "legendAura": "Legendary aura: each knockout raises its higher attacking stat a stage (up to {{n}} per battle)",
     "use": "Use",
     "teach": "Teach",
@@ -466,7 +467,7 @@
     "BOOSTER_ENERGY": "Adjacent Protosynthesis / Quark Drive Pokémon activate their ability without sun or Electric Terrain (once per battle, lasts until the end)",
     "EXP_SHARE": "Adjacent Pokémon gain 1 extra level after each battle",
     "MACHO_BRACE": "Adjacent Pokémon have half Speed in battle but gain 2 extra levels after each battle",
-    "PLATE": "{{type}} moves of Pokémon in reach deal ×1.35 (stacks additively)",
+    "PLATE": "{{type}} moves of Pokémon in reach deal ×1.6 (stacks additively)",
     "RARER_CANDY": "Right before the next battle, Pokémon in reach gain 6 levels (consumed)",
     "LUCK_INCENSE": "+2G on a win while it touches a Pokémon",
     "BIG_NUGGET": "Sells for 2G more for every round you keep it",
@@ -529,7 +530,7 @@
       "desc": "2 cells. {{RARE_CANDY}} and {{RARER_CANDY}} lying on it give {{levels}} more levels"
     },
     "COIN_CASE": {
-      "desc": "2 cells. {{AMULET_COIN}} and {{LUCK_INCENSE}} lying on it earn {{gold}}G more per win; {{NUGGET}} and {{BIG_NUGGET}} gain {{gold}}G more sell value each round"
+      "desc": "2 cells. Earns {{winGold}}G per win just by being on the board; {{AMULET_COIN}} and {{LUCK_INCENSE}} lying on it earn {{gold}}G more per win; {{NUGGET}} and {{BIG_NUGGET}} gain {{gold}}G more sell value each round"
     }
   },
   "abilityNote": {
@@ -707,6 +708,15 @@
     "new": "NEW",
     "older": "Earlier patches",
     "entries": [
+      {
+        "date": "2026-09-30",
+        "items": [
+          "The Coin Case is useful on its own now. Just having it on the board earns 1G per win; Amulet Coins and Luck Incense on it still earn 1G more, and Nuggets and Big Nuggets (Steven) still gain 1G more sell value each round",
+          "Plates are stronger: their type moves deal ×1.6 instead of ×1.35, clearly better than the two boosters (×1.4) that make one",
+          "Bond is new. Every battle a Pokémon fights on the board adds +2% to all its stats (up to +18%), so a Pokémon you have raised is not simply outclassed by one fresh from the shop. Soothe Bell doubles the bond it builds. Red's ace gets it too, on top of its win bonus",
+          "Eviolite now works on Pokémon touching it up and down and left and right instead of all 8 surrounding cells, so the whole early team is no longer that tanky"
+        ]
+      },
       {
         "date": "2026-09-29 (2)",
         "items": [

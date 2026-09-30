@@ -50,6 +50,18 @@ export function battleHpMultiplier(round: number): number {
   return BATTLE_HP_MULTIPLIER + BATTLE_HP_PER_ROUND * Math.max(0, round - 1);
 }
 
+/**
+ * Bond: every battle a Pokémon has fought on the board adds this much to all its stats, up to the cap. Raised
+ * Pokémon otherwise fall behind fresh shop buys (a Lv40 line of ~500 base stats against a Lv36 one of 580), so
+ * time spent on the board has to be worth something. Red's ace gets it too, on top of its own win bonus.
+ */
+export const BOND_PER_BATTLE = 0.02;
+export const BOND_CAP = 0.18;
+
+export function bondBonus(battles: number): number {
+  return Math.min(BOND_CAP, Math.max(0, battles) * BOND_PER_BATTLE);
+}
+
 export function calcStats(base: Stats, ivs: Stats, level: number, nature: Nature): Stats {
   const { up, down } = natureEffect(nature);
   const other = (k: StatKey) => {

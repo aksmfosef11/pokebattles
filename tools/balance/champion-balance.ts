@@ -30,7 +30,9 @@
  *
  * `--workers <n>` limits the worker processes (default: one per core; they always run below normal priority).
  *
- *   pnpm balance [--quick] [--fast] [--workers <n>] [--seed <salt> | --seeds <a,b,...>] [--early | --rounds <r,...>] [--stage <n>] [--report <path>]
+ * `--only <champion>` builds the fields for everyone but measures just that champion (a quick check after a change that targets one).
+ *
+ *   pnpm balance [--quick] [--fast] [--only <champion>] [--workers <n>] [--seed <salt> | --seeds <a,b,...>] [--early | --rounds <r,...>] [--stage <n>] [--report <path>]
  */
 import { spawn } from "node:child_process";
 import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
@@ -99,6 +101,9 @@ const SALT = argValue("--seed") ?? "";
 const SEEDS = argValue("--seeds")?.split(",") ?? [SALT];
 /** Skip the best-party search: bot runs and lucky vs lucky only. */
 const FAST = process.argv.includes("--fast");
+/** `--only <champion>`: the fields are still built for everyone (lucky vs lucky needs them), but only this champion is measured. */
+const ONLY = argValue("--only") as ChampionKey | undefined;
+const REPORTED = ONLY ? [ONLY] : CHAMPION_KEYS;
 const EARLY = process.argv.includes("--early");
 const ROUNDS = argValue("--rounds")?.split(",").map(Number) ?? (EARLY ? [1, 2, 3, 4, 5] : [8, 14]);
 /** Pool unlock stage every bot plays with (undefined: the full pool). */
@@ -683,17 +688,19 @@ async function main(): Promise<void> {
   // Round 14 jobs are the slowest: queue them first so the pool does not end on one long job.
   const jobs = SEEDS.flatMap((seed) => [...ROUNDS].reverse().flatMap((round) => CHAMPION_KEYS.map((champion) => ({ seed, champion, round }))));
   type Job = (typeof jobs)[number];
+  const measured = ONLY ? jobs.filter((j) => j.champion === ONLY) : jobs;
   const runPass = async (kind: "--field" | "--job", extra: (j: Job) => string[], label: string) => {
-    const queue = [...jobs];
+    const list = kind === "--job" ? measured : jobs;
+    const queue = [...list];
     const file = (j: Job) => join(dir, `${kind.slice(2)}-${j.seed || "base"}-${j.champion}-${j.round}.json`);
-    const workers = Array.from({ length: Math.min(jobs.length, WORKERS) }, async () => {
+    const workers = Array.from({ length: Math.min(list.length, WORKERS) }, async () => {
       for (let job = queue.shift(); job; job = queue.shift()) {
         await runWorker([kind, job.champion, String(job.round), ...extra(job), ...flags, ...(job.seed ? ["--seed", job.seed] : [])], file(job));
         console.error(`  ${label}: ${job.seed ? `[${job.seed}] ` : ""}${job.champion} round ${job.round} done (${Math.round((Date.now() - started) / 1000)}s)`);
       }
     });
     await Promise.all(workers);
-    return jobs.map((j) => ({ ...j, data: JSON.parse(readFileSync(file(j), "utf8")) }));
+    return list.map((j) => ({ ...j, data: JSON.parse(readFileSync(file(j), "utf8")) }));
   };
   const seedFile = (seed: string, name: string) => join(dir, `${name}-${seed || "base"}.json`);
   const fieldParts = await runPass("--field", () => [], "fields");
@@ -738,7 +745,7 @@ async function main(): Promise<void> {
   log();
   log(`| Champion | ${ROUNDS.map((r) => `Round ${r}`).join(" | ")} |`);
   log(`|---|${ROUNDS.map(() => "---").join("|")}|`);
-  for (const c of CHAMPION_KEYS) {
+  for (const c of REPORTED) {
     const cells = ROUNDS.map(
       (round) =>
         `${pct(avg(c, round, (r) => r.worst))} / **${pct(avg(c, round, (r) => r.typical))}** / ${pct(avg(c, round, (r) => r.bestBot))}, lucky ${pct(avg(c, round, (r) => r.luckyVsLucky))}${FAST ? "" : `, best ${pct(bvbAvg(c, round))}`}`,
@@ -762,7 +769,7 @@ async function main(): Promise<void> {
     log();
     log("| Champion | 0–5 chance | unlucky runs (p90) |");
     log("|---|---|---|");
-    for (const c of CHAMPION_KEYS) log(`| ${c} | ${pct(zeroFive(c, mean))} | ${pct(zeroFive(c, (xs) => xs[Math.floor(xs.length * 0.9)]!))} |`);
+    for (const c of REPORTED) log(`| ${c} | ${pct(zeroFive(c, mean))} | ${pct(zeroFive(c, (xs) => xs[Math.floor(xs.length * 0.9)]!))} |`);
   }
   for (const round of ROUNDS) {
     log();
@@ -770,7 +777,7 @@ async function main(): Promise<void> {
     log();
     log(`| Champion | Worst (bad shops, p10) | Typical (median) | Lucky bot (p90) | Lucky vs lucky |${FAST ? "" : " Best party |"}`);
     log(`|---|---|---|---|---|${FAST ? "" : "---|"}`);
-    for (const c of CHAMPION_KEYS) {
+    for (const c of REPORTED) {
       const cells = [(r: JobResult) => r.worst, (r: JobResult) => r.typical, (r: JobResult) => r.bestBot, (r: JobResult) => r.luckyVsLucky];
       if (!FAST) cells.push((r) => r.best);
       log(`| ${c} | ${cells.map((f) => pct(avg(c, round, f))).join(" | ")} |`);
@@ -779,7 +786,7 @@ async function main(): Promise<void> {
       log();
       log(`Per seed (${SEEDS.map(seedLabel).join(" / ")}): typical median and lucky vs lucky`);
       log();
-      for (const c of CHAMPION_KEYS) {
+      for (const c of REPORTED) {
         const per = bySeed.map((rs) => rs.find((r) => r.champion === c && r.round === round)!);
         log(`- ${c}: typical ${per.map((r) => pct(r.typical)).join(" / ")}, lucky ${per.map((r) => pct(r.luckyVsLucky)).join(" / ")}`);
       }

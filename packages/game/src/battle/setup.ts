@@ -1,12 +1,12 @@
-import { COIN_CASE_EXTRA_GOLD, poweredByBag } from "../board.ts";
+import { BAGS, COIN_CASE_EXTRA_GOLD, COIN_CASE_WIN_GOLD, poweredByBag } from "../board.ts";
 import { CHAMPION_RULES, cynthiaBonusScale, earlyBonus } from "../content/champions.ts";
 import { getMove, getSpecies, ITEMS } from "../content/index.ts";
-import type { ItemFamily } from "../content/items.ts";
+import { type ItemFamily, PLATE_TYPE_BOOST } from "../content/items.ts";
 import { TYPES, type Stats, type TypeKey } from "../content/schema.ts";
 import { computeAdjacency, cellsOf } from "../run/layout.ts";
 import { isLanceKinLine } from "../run/pool.ts";
 import type { Piece, PokemonPiece, TeamSnapshot } from "../run/types.ts";
-import { battleHpMultiplier, calcStats } from "../stats.ts";
+import { battleHpMultiplier, bondBonus, calcStats } from "../stats.ts";
 import { stackMul } from "./calc.ts";
 import type { Battler, BattleStats, ItemBundle, Side, SideState } from "./types.ts";
 
@@ -76,7 +76,7 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
         items.pouched.set(it.item, (items.pouched.get(it.item) ?? 0) + 1);
       }
       if (def.family === "typeBoost" && def.type) items.typeBoost.set(def.type, (items.typeBoost.get(def.type) ?? 1) + 0.2);
-      if (def.family === "plate" && def.type) items.typeBoost.set(def.type, (items.typeBoost.get(def.type) ?? 1) + 0.35);
+      if (def.family === "plate" && def.type) items.typeBoost.set(def.type, (items.typeBoost.get(def.type) ?? 1) + PLATE_TYPE_BOOST);
       if (def.family === "zCrystal" && def.type) {
         items.zTypes.add(def.type);
         items.typeBoost.set(def.type, (items.typeBoost.get(def.type) ?? 1) + CHAMPION_RULES.kukui.zCrystalTypeBoost);
@@ -99,6 +99,7 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
     // Multiplier on every stat including HP.
     let all = 1;
     if (piece.shiny) all *= 1.1;
+    all *= 1 + bondBonus(piece.battles ?? 0);
     if (team.champion === "red" && team.ace === piece.uid) all *= 1 + piece.aceBonus;
     if (team.champion === "steven") all *= 1 + earlyBonus(CHAMPION_RULES.steven.earlyStatBonus, CHAMPION_RULES.steven.earlyStatPerRound, team.round);
     if (team.champion === "lance" && species.evolutions.length > 0 && isLanceKinLine(piece.species)) {
@@ -289,6 +290,7 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
     gmaxResidual: null,
     gold: 0,
     amuletCoins: team.pieces.reduce((gold, p) => {
+      if (p.place && p.kind === "bag" && BAGS[p.bag]?.effect === "coin") return gold + COIN_CASE_WIN_GOLD;
       if (!p.place || p.kind !== "item" || (adj.holdersOf.get(p.uid)?.length ?? 0) === 0) return gold;
       const base = p.item === "AMULET_COIN" ? 1 : p.item === "LUCK_INCENSE" ? 2 : 0;
       if (base === 0) return gold;

@@ -228,7 +228,7 @@ export interface SideState {
   /** G-Max residual damage: pulses left and the type spared. */
   gmaxResidual: { pulses: number; spare: TypeKey } | null;
   gold: number;
-  /** Amulet Coins touching at least one Pokémon (paid out on a win). */
+  /** Win gold from gold items touching at least one Pokémon, plus Coin Cases on the board. */
   amuletCoins: number;
 }
 

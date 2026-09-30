@@ -107,7 +107,11 @@ export const RESIST_BERRIES: [string, TypeKey][] = [
   ["CHILAN_BERRY", "normal"],
 ];
 
-/** Plates: two matching type boosters combine into the type's plate. */
+/**
+ * Plates: two matching type boosters combine into the type's plate. A plate's bonus (additive, like boosters')
+ * must beat the two boosters it costs (+0.2 each), or crafting one only trades power for reach.
+ */
+export const PLATE_TYPE_BOOST = 0.6;
 export const PLATES: [string, TypeKey][] = [
   ["BLANK_PLATE", "normal"],
   ["FIST_PLATE", "fighting"],
@@ -332,7 +336,6 @@ const SHAPES: Record<string, Pick<ItemDef, "size" | "reach">> = {
   BIG_ROOT: { size: { w: 1, h: 3 } },
   BIG_NUGGET: { size: { w: 2, h: 2 } },
   LIFE_ORB: { reach: "around" },
-  EVIOLITE: { reach: "around" },
   LUCKY_EGG: { reach: "around" },
   SOOTHE_BELL: { reach: "around" },
   BLACK_SLUDGE: { reach: "around" },

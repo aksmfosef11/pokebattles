@@ -24,6 +24,7 @@ import {
   natureEffect,
   sellValue,
   STAT_KEYS,
+  bondBonus,
   type EvolutionDef,
   type Nature,
   type PokemonPiece,
@@ -133,6 +134,9 @@ function PokemonDetail({ state, mon, onSetAce, onSell, onRotate, placedUid }: { 
             {tr.t("ui.tier", { n: species.tier })} · {tr.t("ui.size", { w: species.footprint.w, h: species.footprint.h })}
           </div>
           {species.tier === 5 && <div className="ace-tag">★ {tr.t("ui.legendAura", { n: LEGEND_KO_BOOSTS })}</div>}
+          {bondBonus(mon.battles ?? 0) > 0 && (
+            <div className="ace-tag">♥ {tr.t("ui.bond", { pct: Math.round(bondBonus(mon.battles ?? 0) * 100) })}</div>
+          )}
           {state.ace === mon.uid && (
             <div className="ace-tag">
               ♛ {tr.t("ui.ace")} · {tr.t("ui.aceBonus", { pct: Math.round((mon.aceBonus ?? 0) * 100) })}

@@ -126,6 +126,8 @@ export type BagEffect = "medic" | "lucky" | "berry" | "candy" | "coin";
 export const BERRY_POUCH_SAVE_CHANCE = 0.5;
 /** Rare Candy and Rarer Candy on a Candy Jar give this many extra levels. */
 export const CANDY_JAR_EXTRA_LEVELS = 2;
+/** A Coin Case on the board pays this much per win by itself, so it is never a dead bag without gold items. */
+export const COIN_CASE_WIN_GOLD = 1;
 /** Amulet Coin and Luck Incense on a Coin Case pay this much more per win; nuggets gain this much more sell value per round. */
 export const COIN_CASE_EXTRA_GOLD = 1;
 
