@@ -21,6 +21,8 @@ export const MACHO_BRACE_LEVELS = 1;
  * Catch-up: a placed Pokémon below its team's average level gets one extra level after the battle for every
  * `CATCH_UP_PER` levels it trails, up to `CATCH_UP_CAP`, so one bought mid-run is not left behind by later shop
  * offers. The bonus closes at most a third of the gap, and Pokémon within 3 levels of the average get nothing.
+ * Each Macho Brace touching the Pokémon adds the same bonus again: that is its niche next to the Lucky Egg
+ * (same +1 level for everyone, but smaller and with no Speed cost), so it matters for late buys, not round 1.
  */
 export const CATCH_UP_PER = 3;
 export const CATCH_UP_CAP = 5;
@@ -47,8 +49,8 @@ export function teamAverageLevel(state: Pick<RunState, "pieces">): number {
   return mons.length ? mons.reduce((sum, m) => sum + m.level, 0) / mons.length : 0;
 }
 
-export function catchUpLevels(level: number, teamAverage: number): number {
-  return Math.min(CATCH_UP_CAP, Math.max(0, Math.floor((teamAverage - level) / CATCH_UP_PER)));
+export function catchUpLevels(level: number, teamAverage: number, machoBraces = 0): number {
+  return Math.min(CATCH_UP_CAP, Math.max(0, Math.floor((teamAverage - level) / CATCH_UP_PER))) * (1 + machoBraces);
 }
 
 /**
@@ -211,7 +213,7 @@ export function applyRoundResult(prev: RunState, result: RoundResult): RunState 
     let gain = outcome === "win" ? XP_WIN : XP_LOSS;
     if (fainted.has(mon.uid)) gain -= 1;
     gain += LUCKY_EGG_LEVELS * n("LUCKY_EGG") + EXP_SHARE_LEVELS * n("EXP_SHARE") + MACHO_BRACE_LEVELS * n("MACHO_BRACE");
-    gain += catchUpLevels(mon.level, average);
+    gain += catchUpLevels(mon.level, average, n("MACHO_BRACE"));
     if (state.champion === "red" && state.ace === mon.uid) {
       if (state.round % CHAMPION_RULES.red.aceExtraLevelEvery === 0) gain += CHAMPION_RULES.red.aceExtraLevels;
       if (outcome === "win") mon.aceBonus = Math.min(CHAMPION_RULES.red.aceWinStatCap, mon.aceBonus + CHAMPION_RULES.red.aceWinStatBonus);

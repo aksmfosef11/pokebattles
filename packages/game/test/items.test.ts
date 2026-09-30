@@ -216,6 +216,15 @@ describe("levels after a battle", () => {
     const t = applyRoundResult(withPieces([mon("PIKACHU", 40, 1, 1), mon("PIKACHU", 40, 2, 1), near]), win);
     expect(level(t, near)).toBe(37);
   });
+
+  it("doubles catch-up next to a Macho Brace, on top of its own extra level", async () => {
+    const { applyRoundResult } = await import("../src/index.ts");
+    const high = [mon("PIKACHU", 40, 1, 1), mon("PIKACHU", 40, 2, 1)];
+    const low = mon("PIKACHU", 10, 5, 3);
+    const s = applyRoundResult(withPieces([...high, low, item("MACHO_BRACE", 3, 3)]), win); // brace covers (3,3)-(4,3)
+    expect(high.map((p) => level(s, p))).toEqual([44, 44]);
+    expect(level(s, low)).toBe(10 + 4 + 1 + 10);
+  });
 });
 
 describe("evolution with no room at all", () => {

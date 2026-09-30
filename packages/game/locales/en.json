@@ -58,7 +58,7 @@
     "setAce": "Make ace",
     "aceBonus": "Win bonus +{{pct}}%",
     "bond": "Bond +{{pct}}% (+2% per battle, up to +18%)",
-    "catchUp": "Catch-up: below the team's average level, so +{{n}} extra levels after the battle (+1 per 3 levels behind, up to +{{cap}})",
+    "catchUp": "Catch-up: below the team's average level, so +{{n}} extra levels after the battle (+{{per}} per 3 levels behind, up to +{{cap}})",
     "legendAura": "Legendary aura: each knockout raises its higher attacking stat a stage (up to {{n}} per battle)",
     "use": "Use",
     "teach": "Teach",
@@ -467,7 +467,7 @@
     "QUICK_POWDER": "An adjacent Ditto has double Speed (kept after transforming)",
     "BOOSTER_ENERGY": "Adjacent Protosynthesis / Quark Drive Pokémon activate their ability without sun or Electric Terrain (once per battle, lasts until the end)",
     "EXP_SHARE": "Adjacent Pokémon gain 1 extra level after each battle",
-    "MACHO_BRACE": "Adjacent Pokémon have ×0.75 Speed in battle but gain 1 extra level after each battle",
+    "MACHO_BRACE": "Adjacent Pokémon have ×0.75 Speed in battle but gain 1 extra level after each battle, and double catch-up levels while below the team's average level",
     "PLATE": "{{type}} moves of Pokémon in reach deal ×1.6 (stacks additively)",
     "RARER_CANDY": "Right before the next battle, Pokémon in reach gain 6 levels (consumed)",
     "LUCK_INCENSE": "+2G on a win while it touches a Pokémon",
@@ -712,7 +712,8 @@
       {
         "date": "2026-09-30 (2)",
         "items": [
-          "Lucky Egg and Macho Brace are weaker. Their extra levels after each battle drop from +2 to +1 (same as Exp. Share), and Macho Brace's Speed cut eases from half to ×0.75. On the live server, runs that found either early were far ahead of every other item",
+          "Lucky Egg and Macho Brace are weaker: their extra levels after each battle drop from +2 to +1 (same as Exp. Share). On the live server, runs that found either early were far ahead of every other item",
+          "Macho Brace becomes the item for raising late buys. Its Speed cut eases from half to ×0.75, and a Pokémon it touches gets double catch-up levels while below the team's average level (up to +10)",
           "Catch-up experience is new. A Pokémon on the board below the team's average level gains 1 extra level after each battle for every 3 levels it trails (up to +5), so one bought mid-run does not fall behind the Pokémon the shop offers later"
         ]
       },
