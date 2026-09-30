@@ -174,7 +174,7 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
       stats.def *= stackMul(1.5, n("EVIOLITE"));
       stats.spd *= stackMul(1.5, n("EVIOLITE"));
     }
-    let speedMult = stackMul(0.5, n("MACHO_BRACE"));
+    let speedMult = stackMul(0.75, n("MACHO_BRACE"));
     let damageTakenMult = 1;
     if (piece.species === "DITTO") {
       speedMult *= stackMul(2, n("QUICK_POWDER"));

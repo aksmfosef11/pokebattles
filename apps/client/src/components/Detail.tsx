@@ -25,6 +25,9 @@ import {
   sellValue,
   STAT_KEYS,
   bondBonus,
+  CATCH_UP_CAP,
+  catchUpLevels,
+  teamAverageLevel,
   type EvolutionDef,
   type Nature,
   type PokemonPiece,
@@ -107,6 +110,7 @@ function PokemonDetail({ state, mon, onSetAce, onSell, onRotate, placedUid }: { 
   const ivSum = STAT_KEYS.reduce((s, k) => s + mon.ivs[k], 0);
   const implemented = IMPLEMENTED_ABILITIES.has(mon.ability);
   const adjacentItems = placedUid ? (computeAdjacency(state.pieces).itemsOf.get(placedUid) ?? []) : [];
+  const catchUp = placedUid ? catchUpLevels(mon.level, teamAverageLevel(state)) : 0;
   const piece = mon.uid ? (state.pieces[mon.uid] as PokemonPiece | undefined) : undefined;
 
   return (
@@ -137,6 +141,7 @@ function PokemonDetail({ state, mon, onSetAce, onSell, onRotate, placedUid }: { 
           {bondBonus(mon.battles ?? 0) > 0 && (
             <div className="ace-tag">♥ {tr.t("ui.bond", { pct: Math.round(bondBonus(mon.battles ?? 0) * 100) })}</div>
           )}
+          {catchUp > 0 && <div className="ace-tag">▲ {tr.t("ui.catchUp", { n: catchUp, cap: CATCH_UP_CAP })}</div>}
           {state.ace === mon.uid && (
             <div className="ace-tag">
               ♛ {tr.t("ui.ace")} · {tr.t("ui.aceBonus", { pct: Math.round((mon.aceBonus ?? 0) * 100) })}

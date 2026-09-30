@@ -13,9 +13,17 @@ export const XP_WIN = 4;
 export const XP_LOSS = 3;
 export const RARE_CANDY_LEVELS = 3;
 export const RARER_CANDY_LEVELS = 6;
-export const LUCKY_EGG_LEVELS = 2;
+/** Per Pokémon the item touches. Lucky Egg and Macho Brace gave 2 until 2026-09-30: an early one was worth +3 wins on live runs. */
+export const LUCKY_EGG_LEVELS = 1;
 export const EXP_SHARE_LEVELS = 1;
-export const MACHO_BRACE_LEVELS = 2;
+export const MACHO_BRACE_LEVELS = 1;
+/**
+ * Catch-up: a placed Pokémon below its team's average level gets one extra level after the battle for every
+ * `CATCH_UP_PER` levels it trails, up to `CATCH_UP_CAP`, so one bought mid-run is not left behind by later shop
+ * offers. The bonus closes at most a third of the gap, and Pokémon within 3 levels of the average get nothing.
+ */
+export const CATCH_UP_PER = 3;
+export const CATCH_UP_CAP = 5;
 export const TRADE_FALLBACK_LEVEL = 40;
 
 export function evolutionLevel(state: RunState, mon: PokemonPiece, evo: EvolutionDef): number | null {
@@ -27,10 +35,20 @@ export function evolutionLevel(state: RunState, mon: PokemonPiece, evo: Evolutio
   return Math.max(1, level);
 }
 
-function placedMons(state: RunState): PokemonPiece[] {
+function placedMons(state: Pick<RunState, "pieces">): PokemonPiece[] {
   return Object.values(state.pieces)
     .filter((p): p is PokemonPiece => p.kind === "pokemon" && p.place !== null)
     .sort((a, b) => (a.uid < b.uid ? -1 : 1));
+}
+
+/** Average level of the Pokémon on the board (0 with none): the bar catch-up levels measure against. */
+export function teamAverageLevel(state: Pick<RunState, "pieces">): number {
+  const mons = placedMons(state);
+  return mons.length ? mons.reduce((sum, m) => sum + m.level, 0) / mons.length : 0;
+}
+
+export function catchUpLevels(level: number, teamAverage: number): number {
+  return Math.min(CATCH_UP_CAP, Math.max(0, Math.floor((teamAverage - level) / CATCH_UP_PER)));
 }
 
 /**
@@ -185,6 +203,7 @@ export function applyRoundResult(prev: RunState, result: RoundResult): RunState 
 
   const adj = computeAdjacency(state.pieces);
   const fainted = new Set(result.fainted);
+  const average = teamAverageLevel(state);
   for (const mon of placedMons(state)) {
     const items = adj.itemsOf.get(mon.uid) ?? [];
     const n = (k: string) => items.filter((i) => i.item === k).length;
@@ -192,6 +211,7 @@ export function applyRoundResult(prev: RunState, result: RoundResult): RunState 
     let gain = outcome === "win" ? XP_WIN : XP_LOSS;
     if (fainted.has(mon.uid)) gain -= 1;
     gain += LUCKY_EGG_LEVELS * n("LUCKY_EGG") + EXP_SHARE_LEVELS * n("EXP_SHARE") + MACHO_BRACE_LEVELS * n("MACHO_BRACE");
+    gain += catchUpLevels(mon.level, average);
     if (state.champion === "red" && state.ace === mon.uid) {
       if (state.round % CHAMPION_RULES.red.aceExtraLevelEvery === 0) gain += CHAMPION_RULES.red.aceExtraLevels;
       if (outcome === "win") mon.aceBonus = Math.min(CHAMPION_RULES.red.aceWinStatCap, mon.aceBonus + CHAMPION_RULES.red.aceWinStatBonus);

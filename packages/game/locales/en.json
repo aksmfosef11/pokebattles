@@ -58,6 +58,7 @@
     "setAce": "Make ace",
     "aceBonus": "Win bonus +{{pct}}%",
     "bond": "Bond +{{pct}}% (+2% per battle, up to +18%)",
+    "catchUp": "Catch-up: below the team's average level, so +{{n}} extra levels after the battle (+1 per 3 levels behind, up to +{{cap}})",
     "legendAura": "Legendary aura: each knockout raises its higher attacking stat a stage (up to {{n}} per battle)",
     "use": "Use",
     "teach": "Teach",
@@ -382,7 +383,7 @@
     "TOXIC_ORB": "Badly poisons adjacent Pokémon as the battle starts",
     "MULTI_LENS": "Adjacent Pokémon's single-target attacks hit once more at 25% power",
     "SOOTHE_BELL": "Adjacent Pokémon build friendship (battle count) twice as fast",
-    "LUCKY_EGG": "Adjacent Pokémon gain 2 extra levels after each battle",
+    "LUCKY_EGG": "Adjacent Pokémon gain 1 extra level after each battle",
     "RARE_CANDY": "Right before the next battle, adjacent Pokémon gain 3 levels (consumed)",
     "AMULET_COIN": "+1G on a win while it touches a Pokémon",
     "GOLDEN_PUNCH": "Gold after battle based on damage dealt by adjacent Pokémon (up to 3G)",
@@ -466,7 +467,7 @@
     "QUICK_POWDER": "An adjacent Ditto has double Speed (kept after transforming)",
     "BOOSTER_ENERGY": "Adjacent Protosynthesis / Quark Drive Pokémon activate their ability without sun or Electric Terrain (once per battle, lasts until the end)",
     "EXP_SHARE": "Adjacent Pokémon gain 1 extra level after each battle",
-    "MACHO_BRACE": "Adjacent Pokémon have half Speed in battle but gain 2 extra levels after each battle",
+    "MACHO_BRACE": "Adjacent Pokémon have ×0.75 Speed in battle but gain 1 extra level after each battle",
     "PLATE": "{{type}} moves of Pokémon in reach deal ×1.6 (stacks additively)",
     "RARER_CANDY": "Right before the next battle, Pokémon in reach gain 6 levels (consumed)",
     "LUCK_INCENSE": "+2G on a win while it touches a Pokémon",
@@ -708,6 +709,13 @@
     "new": "NEW",
     "older": "Earlier patches",
     "entries": [
+      {
+        "date": "2026-09-30 (2)",
+        "items": [
+          "Lucky Egg and Macho Brace are weaker. Their extra levels after each battle drop from +2 to +1 (same as Exp. Share), and Macho Brace's Speed cut eases from half to ×0.75. On the live server, runs that found either early were far ahead of every other item",
+          "Catch-up experience is new. A Pokémon on the board below the team's average level gains 1 extra level after each battle for every 3 levels it trails (up to +5), so one bought mid-run does not fall behind the Pokémon the shop offers later"
+        ]
+      },
       {
         "date": "2026-09-30",
         "items": [

@@ -193,6 +193,31 @@ describe("evolution comes first", () => {
   });
 });
 
+describe("levels after a battle", () => {
+  const win = { outcome: "win" as const, fainted: [], battleGold: 0, opponent: { name: "", champion: "red" as const, ghost: false } };
+  const level = (s: RunState, p: Piece) => (s.pieces[p.uid] as PokemonPiece).level;
+
+  it("gives a Lucky Egg's neighbours one extra level", async () => {
+    const { applyRoundResult } = await import("../src/index.ts");
+    const fed = mon("PIKACHU", 20, 1, 1);
+    const far = mon("PIKACHU", 20, 5, 3);
+    const s = applyRoundResult(withPieces([fed, far, item("LUCKY_EGG", 2, 1)]), win);
+    expect([level(s, fed), level(s, far)]).toEqual([25, 24]);
+  });
+
+  it("lets a Pokémon below the team average catch up, a third of the gap and at most 5", async () => {
+    const { applyRoundResult } = await import("../src/index.ts");
+    const high = [mon("PIKACHU", 40, 1, 1), mon("PIKACHU", 40, 2, 1)];
+    const low = mon("PIKACHU", 10, 5, 3); // 20 below the average of 30: +6, capped at +5
+    const s = applyRoundResult(withPieces([...high, low]), win);
+    expect(high.map((p) => level(s, p))).toEqual([44, 44]);
+    expect(level(s, low)).toBe(19);
+    const near = mon("PIKACHU", 31, 5, 3); // average 37, 6 below: +2
+    const t = applyRoundResult(withPieces([mon("PIKACHU", 40, 1, 1), mon("PIKACHU", 40, 2, 1), near]), win);
+    expect(level(t, near)).toBe(37);
+  });
+});
+
 describe("evolution with no room at all", () => {
   it("still evolves and moves the Pokémon to the stash", async () => {
     const { applyRoundResult, layoutIsValid } = await import("../src/index.ts");
