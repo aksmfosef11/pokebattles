@@ -14,6 +14,7 @@ import {
   lineBase,
   rollShop,
   type ItemPiece,
+  type PokemonPiece,
   type RunState,
 } from "../src/index.ts";
 
@@ -93,6 +94,39 @@ describe("champion shop pools", () => {
     };
     expect(boosterOffers("red", ["PIKACHU"])).toBe(0);
     expect(boosterOffers("geeta", ["GREAT_TUSK"])).toBeGreaterThan(5);
+  });
+
+  it("offers weather rocks only to runs with a Pokémon that brings the weather (Steven keeps them as stones)", () => {
+    const rockOffers = (champion: "red" | "steven", extra: Partial<PokemonPiece>) => {
+      const base = createRun({ runId: "rock", seed: "rock", playerName: "t", champion });
+      const starter = Object.values(base.pieces).find((p) => p.kind === "pokemon")!;
+      const state: RunState = { ...base, round: 6, pieces: { p0: { ...starter, uid: "p0", species: "TORKOAL", ...extra } } as RunState["pieces"] };
+      let n = 0;
+      for (let i = 0; i < 300; i++) for (const slot of rollShop(state, i)) if (slot.offer?.kind === "item" && slot.offer.item === "HEAT_ROCK") n++;
+      return n;
+    };
+    const drought = rockOffers("red", { ability: "DROUGHT" });
+    expect(drought).toBeGreaterThan(20);
+    expect(rockOffers("red", { ability: "WHITE_SMOKE", moves: ["EMBER"] })).toBeLessThan(drought / 10);
+    expect(rockOffers("red", { ability: "WHITE_SMOKE", moves: ["EMBER", "SUNNY_DAY"] })).toBeGreaterThan(20);
+    expect(rockOffers("steven", { ability: "WHITE_SMOKE", moves: ["EMBER"] })).toBeGreaterThan(0);
+  });
+
+  it("offers Flame and Toxic Orbs by the ability an owned Pokémon really has", () => {
+    const orbOffers = (ability: string) => {
+      const base = createRun({ runId: "orb", seed: "orb", playerName: "t", champion: "red" });
+      const starter = Object.values(base.pieces).find((p) => p.kind === "pokemon")!;
+      // Flareon has Guts only as its hidden ability.
+      const state: RunState = { ...base, round: 6, pieces: { p0: { ...starter, uid: "p0", species: "FLAREON", ability } } as RunState["pieces"] };
+      let n = 0;
+      for (let i = 0; i < 300; i++) {
+        for (const slot of rollShop(state, i)) if (slot.offer?.kind === "item" && (slot.offer.item === "FLAME_ORB" || slot.offer.item === "TOXIC_ORB")) n++;
+      }
+      return n;
+    };
+    const withGuts = orbOffers("GUTS");
+    expect(withGuts).toBeGreaterThan(20);
+    expect(orbOffers("FLASH_FIRE")).toBeLessThan(withGuts / 10);
   });
 
   it("offers owned lines less often even in a tier with a single species", () => {

@@ -10,13 +10,15 @@ import type { Battler, ResolvedMove } from "./types.ts";
  */
 export function chooseMove(sim: BattleSim, b: Battler): string {
   const vest = count(b, "ASSAULT_VEST") > 0;
-  const usable = b.moves.filter((m) => {
+  const open = b.moves.filter((m) => {
     if (!m.enabled || m.pp <= 0 || !CONTENT.moves[m.key]) return false;
-    if (b.choiceLock && !b.dynamax && m.key !== b.choiceLock) return false;
     if (b.disabledMove && b.disabledMove.key === m.key && sim.tick < b.disabledMove.until) return false;
     if (vest && CONTENT.moves[m.key]!.category === "status") return false;
     return true;
   });
+  // A Choice lock holds while its move can be used (out of PP or sealed, the Pokémon falls back on the rest).
+  const locked = b.choiceLock && !b.dynamax ? open.filter((m) => m.key === b.choiceLock) : [];
+  const usable = locked.length > 0 ? locked : open;
   if (usable.length === 0) return "STRUGGLE";
   const scored = usable
     .map((m, i) => ({ key: m.key, i, score: scoreMove(sim, b, m.key) }))

@@ -1337,6 +1337,49 @@ select {
 .move.off {
   opacity: 0.4;
 }
+.choice-tag {
+  position: absolute;
+  right: 6px;
+  top: -6px;
+  font-size: 10px;
+  color: #0d0e16;
+  background: var(--gold);
+  padding: 0 4px;
+  border-radius: 3px;
+}
+.choice-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+}
+.choice-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-2);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 2px 6px 4px 2px;
+}
+.choice-list li.on {
+  border-color: var(--gold);
+}
+.choice-mon {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  min-width: 7em;
+}
+.choice-moves {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
 .off-tag {
   position: absolute;
   right: 6px;

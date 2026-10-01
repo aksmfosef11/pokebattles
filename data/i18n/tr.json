@@ -3275,6 +3275,10 @@
       "name": "Poké Top",
       "description": null
     },
+    "POTION": {
+      "name": "İksir",
+      "description": null
+    },
     "PYROARITE": {
       "name": "Pyroarit",
       "description": "Belli Pokémonların form değişmesini sağlar."
@@ -3407,6 +3411,10 @@
       "name": "Güneş Taşı",
       "description": "Belli Pokémonların evrilmesini sağlar."
     },
+    "SUPER_POTION": {
+      "name": "Süper İksir",
+      "description": null
+    },
     "SWAMPERTITE": {
       "name": "Swampertit",
       "description": "Belli Pokémonların form değişmesini sağlar."
@@ -3458,6 +3466,26 @@
     "WIDE_LENS": {
       "name": "Geniş Mercek",
       "description": null
+    },
+    "X_ATTACK": {
+      "name": "X Saldırı",
+      "description": "Tüm ekip üyelerinin Saldırı değerini 5 maç boyunca %20 artırır."
+    },
+    "X_DEFENSE": {
+      "name": "X Savunma",
+      "description": "Tüm ekip üyelerinin Savunma değerini 5 maç boyunca %20 artırır."
+    },
+    "X_SPEED": {
+      "name": "X Hız",
+      "description": "Tüm ekip üyelerinin Hız değerini 5 maç boyunca %20 artırır."
+    },
+    "X_SP_ATK": {
+      "name": "X Öz. Sal.",
+      "description": "Tüm ekip üyelerinin Öz. Sal. değerini 5 maç boyunca %20 artırır."
+    },
+    "X_SP_DEF": {
+      "name": "X Öz. Sav.",
+      "description": "Tüm ekip üyelerinin Öz. Sav. değerini 5 maç boyunca %20 artırır."
     },
     "ZAP_PLATE": {
       "name": "Çarpma Plakası",
@@ -3999,10 +4027,6 @@
       "name": "Zehir Tera Parçası",
       "description": "Pokémon’un Tera türünü Zehir ile değiştirir."
     },
-    "POTION": {
-      "name": "İksir",
-      "description": null
-    },
     "PP_MAX": {
       "name": "Maks. GP",
       "description": null
@@ -4175,10 +4199,6 @@
       "name": "Süper Yem",
       "description": null
     },
-    "SUPER_POTION": {
-      "name": "Süper İksir",
-      "description": null
-    },
     "SWEET_APPLE": {
       "name": "Tatlı Elma",
       "description": "Belli Pokémonların evrilmesini sağlar."
@@ -4246,26 +4266,6 @@
     "X_ACCURACY": {
       "name": "X İsabet",
       "description": "Tüm ekip üyelerinin İsabet değerini 5 maç boyunca 1 aşama artırır."
-    },
-    "X_ATTACK": {
-      "name": "X Saldırı",
-      "description": "Tüm ekip üyelerinin Saldırı değerini 5 maç boyunca %20 artırır."
-    },
-    "X_DEFENSE": {
-      "name": "X Savunma",
-      "description": "Tüm ekip üyelerinin Savunma değerini 5 maç boyunca %20 artırır."
-    },
-    "X_SPEED": {
-      "name": "X Hız",
-      "description": "Tüm ekip üyelerinin Hız değerini 5 maç boyunca %20 artırır."
-    },
-    "X_SP_ATK": {
-      "name": "X Öz. Sal.",
-      "description": "Tüm ekip üyelerinin Öz. Sal. değerini 5 maç boyunca %20 artırır."
-    },
-    "X_SP_DEF": {
-      "name": "X Öz. Sav.",
-      "description": "Tüm ekip üyelerinin Öz. Sav. değerini 5 maç boyunca %20 artırır."
     },
     "ZERAORITE": {
       "name": "Zeraorit",
@@ -4860,6 +4860,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "pokeball:pokeBall"
       },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
       "PYROARITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.PYROARITE"
@@ -4992,6 +4996,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SUN_STONE"
       },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
+      },
       "SWAMPERTITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.SWAMPERTITE"
@@ -5043,6 +5051,26 @@
       "WIDE_LENS": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.WIDE_LENS"
+      },
+      "X_ATTACK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
+      },
+      "X_DEFENSE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
+      },
+      "X_SPEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
+      },
+      "X_SP_ATK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
+      },
+      "X_SP_DEF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "ZAP_PLATE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
@@ -5584,10 +5612,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.poison"
       },
-      "POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.POTION"
-      },
       "PP_MAX": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.PP_MAX"
@@ -5760,10 +5784,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.SUPER_LURE"
       },
-      "SUPER_POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.SUPER_POTION"
-      },
       "SWEET_APPLE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SWEET_APPLE"
@@ -5831,26 +5851,6 @@
       "X_ACCURACY": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:TempStatStageBoosterItem.x_accuracy"
-      },
-      "X_ATTACK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
-      },
-      "X_DEFENSE": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
-      },
-      "X_SPEED": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
-      },
-      "X_SP_ATK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
-      },
-      "X_SP_DEF": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "ZERAORITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",

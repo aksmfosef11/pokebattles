@@ -3926,6 +3926,10 @@
       "name": "Bola Pokémon",
       "description": null
     },
+    "POTION": {
+      "name": "Obat Luka",
+      "description": null
+    },
     "RARE_CANDY": {
       "name": "Permen Langka",
       "description": null
@@ -3944,6 +3948,10 @@
     },
     "SUN_STONE": {
       "name": "Batu Mentari",
+      "description": null
+    },
+    "SUPER_POTION": {
+      "name": "Obat Luka Super",
       "description": null
     },
     "TERA_ORB": {
@@ -4006,10 +4014,6 @@
       "name": "Bongkahan Pembangkit",
       "description": null
     },
-    "POTION": {
-      "name": "Obat Luka",
-      "description": null
-    },
     "PP_UP": {
       "name": "PP Up",
       "description": null
@@ -4032,10 +4036,6 @@
     },
     "SACRED_ASH": {
       "name": "Abu Suci",
-      "description": null
-    },
-    "SUPER_POTION": {
-      "name": "Obat Luka Super",
       "description": null
     },
     "UPGRADE": {
@@ -4327,6 +4327,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "pokeball:pokeBall"
       },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
       "RARE_CANDY": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.RARE_CANDY"
@@ -4346,6 +4350,10 @@
       "SUN_STONE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SUN_STONE"
+      },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
       },
       "TERA_ORB": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
@@ -4407,10 +4415,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.MAX_REVIVE"
       },
-      "POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.POTION"
-      },
       "PP_UP": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.PP_UP"
@@ -4434,10 +4438,6 @@
       "SACRED_ASH": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.SACRED_ASH"
-      },
-      "SUPER_POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.SUPER_POTION"
       },
       "UPGRADE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",

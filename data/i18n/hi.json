@@ -3059,6 +3059,10 @@
       "name": "पोके बॉल",
       "description": null
     },
+    "POTION": {
+      "name": "दवा",
+      "description": null
+    },
     "RARE_CANDY": {
       "name": "रेयर कैंडी",
       "description": null
@@ -3067,8 +3071,24 @@
       "name": "सन स्टोन",
       "description": null
     },
+    "SUPER_POTION": {
+      "name": "हाइपर दवा",
+      "description": null
+    },
     "ULTRA_BALL": {
       "name": "अल्ट्रा बॉल",
+      "description": null
+    },
+    "X_ATTACK": {
+      "name": "X अटैक",
+      "description": null
+    },
+    "X_DEFENSE": {
+      "name": "X डिफ़ेंस",
+      "description": null
+    },
+    "X_SPEED": {
+      "name": "X स्पीड",
       "description": null
     },
     "BURN_DRIVE": {
@@ -3099,20 +3119,12 @@
       "name": "मैक्स रिवाइव",
       "description": null
     },
-    "POTION": {
-      "name": "दवा",
-      "description": null
-    },
     "REVIVE": {
       "name": "रिवाइव",
       "description": null
     },
     "SHOCK_DRIVE": {
       "name": "शॉक कैसेट",
-      "description": null
-    },
-    "SUPER_POTION": {
-      "name": "हाइपर दवा",
       "description": null
     },
     "SWEET_APPLE": {
@@ -3129,18 +3141,6 @@
     },
     "UPGRADE": {
       "name": "अपग्रेड",
-      "description": null
-    },
-    "X_ATTACK": {
-      "name": "X अटैक",
-      "description": null
-    },
-    "X_DEFENSE": {
-      "name": "X डिफ़ेंस",
-      "description": null
-    },
-    "X_SPEED": {
-      "name": "X स्पीड",
       "description": null
     }
   },
@@ -3269,6 +3269,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "pokeball:pokeBall"
       },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
       "RARE_CANDY": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.RARE_CANDY"
@@ -3277,9 +3281,25 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SUN_STONE"
       },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
+      },
       "ULTRA_BALL": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "pokeball:ultraBall"
+      },
+      "X_ATTACK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
+      },
+      "X_DEFENSE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
+      },
+      "X_SPEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
       },
       "BURN_DRIVE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
@@ -3309,10 +3329,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.MAX_REVIVE"
       },
-      "POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.POTION"
-      },
       "REVIVE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.REVIVE"
@@ -3320,10 +3336,6 @@
       "SHOCK_DRIVE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.SHOCK_DRIVE"
-      },
-      "SUPER_POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.SUPER_POTION"
       },
       "SWEET_APPLE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
@@ -3340,18 +3352,6 @@
       "UPGRADE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.UPGRADE"
-      },
-      "X_ATTACK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
-      },
-      "X_DEFENSE": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
-      },
-      "X_SPEED": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
       }
     },
     "itemTemplates": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",

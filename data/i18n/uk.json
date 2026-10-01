@@ -3457,6 +3457,10 @@
       "name": "Покебол",
       "description": null
     },
+    "POTION": {
+      "name": "Зілля",
+      "description": null
+    },
     "QUICK_CLAW": {
       "name": "Швидкий Кіготь",
       "description": "Додає 10% шанс рухатися першим незалежно від швидкості (після пріоритету)."
@@ -3549,6 +3553,10 @@
       "name": "Сонячний Камінь",
       "description": "Змушує певних Покéмонів еволюціонувати."
     },
+    "SUPER_POTION": {
+      "name": "Супер Зілля",
+      "description": null
+    },
     "SWAMPERTITE": {
       "name": "Свампертит",
       "description": "Змушує певних Покéмонів змінювати форму."
@@ -3596,6 +3604,26 @@
     "WIDE_LENS": {
       "name": "Ширші Лінзи",
       "description": null
+    },
+    "X_ATTACK": {
+      "name": "X Атака",
+      "description": "Збільшує Атак для всієї комнади на 20% протягом 5 боїв."
+    },
+    "X_DEFENSE": {
+      "name": "Х Захист",
+      "description": "Збільшує Захист для всієї комнади на 20% протягом 5 боїв."
+    },
+    "X_SPEED": {
+      "name": "Х Швидкість",
+      "description": "Збільшує Швидкість для всієї комнади на 20% протягом 5 боїв."
+    },
+    "X_SP_ATK": {
+      "name": "Х Спец. Атк",
+      "description": "Збільшує Сп. Атк для всієї комнади на 20% протягом 5 боїв."
+    },
+    "X_SP_DEF": {
+      "name": "Х Спец, Зах",
+      "description": "Збільшує Сп. Зах для всієї комнади на 20% протягом 5 боїв."
     },
     "ABILITY_CHARM": {
       "name": "Амулет Здібностей",
@@ -3969,10 +3997,6 @@
       "name": "Отруїний Тера-осколок",
       "description": "Змінює Тера-тип Покéмона на Отруїний."
     },
-    "POTION": {
-      "name": "Зілля",
-      "description": null
-    },
     "PP_MAX": {
       "name": "ОС Макс",
       "description": null
@@ -4093,10 +4117,6 @@
       "name": "Чудова Приманка",
       "description": null
     },
-    "SUPER_POTION": {
-      "name": "Супер Зілля",
-      "description": null
-    },
     "SWEET_APPLE": {
       "name": "Солотке Яблуко",
       "description": "Змушує певних Покéмонів еволюціонувати."
@@ -4148,26 +4168,6 @@
     "X_ACCURACY": {
       "name": "Х Точність",
       "description": "Збільшує Точність для всієї комнади на 1 рівень протягом 5 боїв."
-    },
-    "X_ATTACK": {
-      "name": "X Атака",
-      "description": "Збільшує Атак для всієї комнади на 20% протягом 5 боїв."
-    },
-    "X_DEFENSE": {
-      "name": "Х Захист",
-      "description": "Збільшує Захист для всієї комнади на 20% протягом 5 боїв."
-    },
-    "X_SPEED": {
-      "name": "Х Швидкість",
-      "description": "Збільшує Швидкість для всієї комнади на 20% протягом 5 боїв."
-    },
-    "X_SP_ATK": {
-      "name": "Х Спец. Атк",
-      "description": "Збільшує Сп. Атк для всієї комнади на 20% протягом 5 боїв."
-    },
-    "X_SP_DEF": {
-      "name": "Х Спец, Зах",
-      "description": "Збільшує Сп. Зах для всієї комнади на 20% протягом 5 боїв."
     },
     "ZINC": {
       "name": "Цинк",
@@ -4580,6 +4580,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "pokeball:pokeBall"
       },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
       "QUICK_CLAW": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.QUICK_CLAW"
@@ -4672,6 +4676,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SUN_STONE"
       },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
+      },
       "SWAMPERTITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.SWAMPERTITE"
@@ -4719,6 +4727,26 @@
       "WIDE_LENS": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.WIDE_LENS"
+      },
+      "X_ATTACK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
+      },
+      "X_DEFENSE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
+      },
+      "X_SPEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
+      },
+      "X_SP_ATK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
+      },
+      "X_SP_DEF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "ABILITY_CHARM": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
@@ -5092,10 +5120,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.poison"
       },
-      "POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.POTION"
-      },
       "PP_MAX": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.PP_MAX"
@@ -5216,10 +5240,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.SUPER_LURE"
       },
-      "SUPER_POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.SUPER_POTION"
-      },
       "SWEET_APPLE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SWEET_APPLE"
@@ -5271,26 +5291,6 @@
       "X_ACCURACY": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:TempStatStageBoosterItem.x_accuracy"
-      },
-      "X_ATTACK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
-      },
-      "X_DEFENSE": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
-      },
-      "X_SPEED": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
-      },
-      "X_SP_ATK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
-      },
-      "X_SP_DEF": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "ZINC": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",

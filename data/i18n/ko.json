@@ -7912,6 +7912,10 @@
       "name": "몬스터볼",
       "description": null
     },
+    "POTION": {
+      "name": "상처약",
+      "description": null
+    },
     "POWER_HERB": {
       "name": "파워풀허브",
       "description": "지니게 한 포켓몬은 한 번만 1턴째에 힘을 모으는 기술을 바로 사용할 수가 있다."
@@ -8100,6 +8104,10 @@
       "name": "태양의돌",
       "description": "어느 특정 포켓몬을 진화시킨다."
     },
+    "SUPER_POTION": {
+      "name": "좋은상처약",
+      "description": null
+    },
     "SWAMPERTITE": {
       "name": "대짱이나이트",
       "description": "어느 특정 포켓몬을 폼 체인지시킨다."
@@ -8183,6 +8191,26 @@
     "WISE_GLASSES": {
       "name": "박식안경",
       "description": "두꺼운 렌즈를 붙인 안경. 지니게 하면 특수 기술의 위력이 조금 올라간다."
+    },
+    "X_ATTACK": {
+      "name": "플러스파워",
+      "description": "자신의 모든 포켓몬이 5번의 배틀 동안 공격[[가]] 20% 증가한다."
+    },
+    "X_DEFENSE": {
+      "name": "디펜드업",
+      "description": "자신의 모든 포켓몬이 5번의 배틀 동안 방어[[가]] 20% 증가한다."
+    },
+    "X_SPEED": {
+      "name": "스피드업",
+      "description": "자신의 모든 포켓몬이 5번의 배틀 동안 스피드[[가]] 20% 증가한다."
+    },
+    "X_SP_ATK": {
+      "name": "스페셜업",
+      "description": "자신의 모든 포켓몬이 5번의 배틀 동안 특수공격[[가]] 20% 증가한다."
+    },
+    "X_SP_DEF": {
+      "name": "스페셜가드",
+      "description": "자신의 모든 포켓몬이 5번의 배틀 동안 특수방어[[가]] 20% 증가한다."
     },
     "YACHE_BERRY": {
       "name": "플카열매",
@@ -8940,10 +8968,6 @@
       "name": "테라피스 독",
       "description": "테라스탈타입을 독 타입으로 한다."
     },
-    "POTION": {
-      "name": "상처약",
-      "description": null
-    },
     "PP_MAX": {
       "name": "포인트맥스",
       "description": null
@@ -9200,10 +9224,6 @@
       "name": "실버코롱",
       "description": null
     },
-    "SUPER_POTION": {
-      "name": "좋은상처약",
-      "description": null
-    },
     "SWEET_APPLE": {
       "name": "달콤한사과",
       "description": "어느 특정 포켓몬을 진화시킨다."
@@ -9291,26 +9311,6 @@
     "X_ACCURACY": {
       "name": "잘-맞히기",
       "description": "자신의 모든 포켓몬이 5번의 배틀 동안 명중률[[가]] 1단계 증가한다."
-    },
-    "X_ATTACK": {
-      "name": "플러스파워",
-      "description": "자신의 모든 포켓몬이 5번의 배틀 동안 공격[[가]] 20% 증가한다."
-    },
-    "X_DEFENSE": {
-      "name": "디펜드업",
-      "description": "자신의 모든 포켓몬이 5번의 배틀 동안 방어[[가]] 20% 증가한다."
-    },
-    "X_SPEED": {
-      "name": "스피드업",
-      "description": "자신의 모든 포켓몬이 5번의 배틀 동안 스피드[[가]] 20% 증가한다."
-    },
-    "X_SP_ATK": {
-      "name": "스페셜업",
-      "description": "자신의 모든 포켓몬이 5번의 배틀 동안 특수공격[[가]] 20% 증가한다."
-    },
-    "X_SP_DEF": {
-      "name": "스페셜가드",
-      "description": "자신의 모든 포켓몬이 5번의 배틀 동안 특수방어[[가]] 20% 증가한다."
     },
     "YELLOW_NECTAR": {
       "name": "진노랑꿀",
@@ -10519,6 +10519,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "pokeball:pokeBall"
       },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
       "POWER_HERB": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "power-herb",
@@ -10721,6 +10725,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SUN_STONE"
       },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
+      },
       "SWAMPERTITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.SWAMPERTITE"
@@ -10812,6 +10820,26 @@
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "wise-glasses",
         "pokeapiLanguage": "ko"
+      },
+      "X_ATTACK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
+      },
+      "X_DEFENSE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
+      },
+      "X_SPEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
+      },
+      "X_SP_ATK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
+      },
+      "X_SP_DEF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "YACHE_BERRY": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
@@ -11623,10 +11651,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.poison"
       },
-      "POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.POTION"
-      },
       "PP_MAX": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.PP_MAX"
@@ -11904,10 +11928,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.SUPER_LURE"
       },
-      "SUPER_POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.SUPER_POTION"
-      },
       "SWEET_APPLE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SWEET_APPLE"
@@ -12000,26 +12020,6 @@
       "X_ACCURACY": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:TempStatStageBoosterItem.x_accuracy"
-      },
-      "X_ATTACK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
-      },
-      "X_DEFENSE": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
-      },
-      "X_SPEED": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
-      },
-      "X_SP_ATK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
-      },
-      "X_SP_DEF": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "YELLOW_NECTAR": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",

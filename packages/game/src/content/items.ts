@@ -1,5 +1,5 @@
 import type { ChampionKey } from "./champions.ts";
-import type { TypeKey } from "./schema.ts";
+import type { StageStat, TypeKey } from "./schema.ts";
 
 export type ItemFamily =
   | "held"
@@ -57,8 +57,10 @@ export interface ItemDef {
   weight?: number;
   /** Only worth offering when the player owns this species. */
   forSpecies?: string;
-  /** Only worth offering when the player owns a Pokémon with one of these abilities. */
+  /** Only worth offering when the player owns a Pokémon with one of these abilities (see makesItemWork). */
   forAbilities?: string[];
+  /** ...or one that knows one of these moves right now. */
+  forMoves?: string[];
   /** Footprint in cells (default 1×1). */
   size?: { w: number; h: number };
   /** Affected cells (default adjacent). */
@@ -154,6 +156,43 @@ export const Z_CRYSTALS: [string, TypeKey][] = [
   ["FAIRIUM_Z", "fairy"],
 ];
 
+/**
+ * Battle items a trainer uses mid-fight (Backpack Battles-style cooldowns). Each copy counts its own time
+ * from the start of the battle and acts on the Pokémon it touches every `every` seconds, `uses` times.
+ * X items raise a stat a stage for every Pokémon they touch (none for Contrary, which would turn it into a drop);
+ * potions heal the touched Pokémon with the lowest HP share, waiting for one to be hurt.
+ * Tuned on bot boards against Leftovers in the same spot (2026-10-01, rounds 5/9/13): defence has to come
+ * early to matter, so X Defense / X Sp. Def act sooner and more often than the attacking ones.
+ */
+export type TimedItem = { every: number; uses: number } & ({ stage: StageStat } | { heal: number });
+export const TIMED_ITEMS: Record<string, TimedItem> = {
+  X_ATTACK: { every: 5, uses: 2, stage: "atk" },
+  X_SP_ATK: { every: 5, uses: 2, stage: "spa" },
+  X_SPEED: { every: 6, uses: 2, stage: "spe" },
+  X_DEFENSE: { every: 3, uses: 3, stage: "def" },
+  X_SP_DEF: { every: 3, uses: 3, stage: "spd" },
+  POTION: { every: 4, uses: 3, heal: 0.3 },
+  SUPER_POTION: { every: 4, uses: 3, heal: 0.5 },
+};
+
+/**
+ * Abilities that turn a Flame / Toxic Orb's status into a gain. The orbs only affect Pokémon with one of these
+ * (anything else next to an orb is left alone), and only show up in the shop for a run that can use them.
+ */
+export const STATUS_ORB_ABILITIES = ["GUTS", "MARVEL_SCALE", "QUICK_FEET", "MAGIC_GUARD"];
+
+/**
+ * Weather rocks, terrain seeds and the Terrain Extender only do something once their weather or terrain comes up, so
+ * they wait for a run that owns a Pokémon setting it (ability or a move it knows); live, they sold 0–1.5% of the times
+ * they were shown. Leon's Max Moves also set weather and terrain but are not counted. Steven gets the rocks anyway (stones).
+ */
+const TERRAIN_SETTERS = { abilities: ["ELECTRIC_SURGE", "HADRON_ENGINE", "GRASSY_SURGE", "MISTY_SURGE", "PSYCHIC_SURGE"], moves: ["ELECTRIC_TERRAIN", "GRASSY_TERRAIN", "MISTY_TERRAIN", "PSYCHIC_TERRAIN"] };
+
+/** Does this Pokémon (its real ability, the moves it knows now) make an ability- or move-bound item worth having? */
+export function makesItemWork(def: ItemDef, mon: { ability: string; moves: readonly string[] }): boolean {
+  return (def.forAbilities?.includes(mon.ability) ?? false) || (def.forMoves?.some((m) => mon.moves.includes(m)) ?? false);
+}
+
 const EVOLUTION_STONES: [string, Tier][] = [
   ["FIRE_STONE", 1],
   ["WATER_STONE", 1],
@@ -202,7 +241,7 @@ const BASE_ITEMS: ItemDef[] = [
   { key: "GRIP_CLAW", family: "held", tier: 1, price: 3, weight: 0.6 },
   { key: "BINDING_BAND", family: "held", tier: 1, price: 3, weight: 0.6 },
   { key: "LIGHT_CLAY", family: "held", tier: 2, price: 3, weight: 0.6 },
-  { key: "TERRAIN_EXTENDER", family: "held", tier: 2, price: 3, weight: 0.6 },
+  { key: "TERRAIN_EXTENDER", family: "held", tier: 2, price: 3, weight: 0.6, forAbilities: TERRAIN_SETTERS.abilities, forMoves: TERRAIN_SETTERS.moves },
   { key: "MENTAL_HERB", family: "held", tier: 1, price: 2, oneShot: true },
   { key: "WHITE_HERB", family: "held", tier: 1, price: 2, oneShot: true },
   { key: "POWER_HERB", family: "held", tier: 1, price: 3, oneShot: true },
@@ -213,10 +252,10 @@ const BASE_ITEMS: ItemDef[] = [
   { key: "BLUNDER_POLICY", family: "held", tier: 1, price: 2, oneShot: true },
   { key: "THROAT_SPRAY", family: "held", tier: 1, price: 2, oneShot: true },
   { key: "ADRENALINE_ORB", family: "held", tier: 1, price: 2, oneShot: true },
-  { key: "ELECTRIC_SEED", family: "held", tier: 1, price: 2, oneShot: true, weight: 0.5 },
-  { key: "GRASSY_SEED", family: "held", tier: 1, price: 2, oneShot: true, weight: 0.5 },
-  { key: "MISTY_SEED", family: "held", tier: 1, price: 2, oneShot: true, weight: 0.5 },
-  { key: "PSYCHIC_SEED", family: "held", tier: 1, price: 2, oneShot: true, weight: 0.5 },
+  { key: "ELECTRIC_SEED", family: "held", tier: 1, price: 2, oneShot: true, weight: 0.5, forAbilities: ["ELECTRIC_SURGE", "HADRON_ENGINE"], forMoves: ["ELECTRIC_TERRAIN"] },
+  { key: "GRASSY_SEED", family: "held", tier: 1, price: 2, oneShot: true, weight: 0.5, forAbilities: ["GRASSY_SURGE"], forMoves: ["GRASSY_TERRAIN"] },
+  { key: "MISTY_SEED", family: "held", tier: 1, price: 2, oneShot: true, weight: 0.5, forAbilities: ["MISTY_SURGE"], forMoves: ["MISTY_TERRAIN"] },
+  { key: "PSYCHIC_SEED", family: "held", tier: 1, price: 2, oneShot: true, weight: 0.5, forAbilities: ["PSYCHIC_SURGE"], forMoves: ["PSYCHIC_TERRAIN"] },
   { key: "METAL_POWDER", family: "held", tier: 1, price: 2, forSpecies: "DITTO" },
   { key: "QUICK_POWDER", family: "held", tier: 1, price: 2, forSpecies: "DITTO" },
   { key: "BOOSTER_ENERGY", family: "held", tier: 2, price: 3, oneShot: true, forAbilities: ["PROTOSYNTHESIS", "QUARK_DRIVE"] },
@@ -241,18 +280,25 @@ const BASE_ITEMS: ItemDef[] = [
   { key: "ASSAULT_VEST", family: "held", tier: 3, price: 6 },
   { key: "EVIOLITE", family: "held", tier: 2, price: 5 },
   { key: "ROCKY_HELMET", family: "held", tier: 2, price: 5 },
-  { key: "FLAME_ORB", family: "held", tier: 2, price: 3 },
-  { key: "TOXIC_ORB", family: "held", tier: 2, price: 3 },
+  { key: "FLAME_ORB", family: "held", tier: 2, price: 3, forAbilities: STATUS_ORB_ABILITIES },
+  { key: "TOXIC_ORB", family: "held", tier: 2, price: 3, forAbilities: STATUS_ORB_ABILITIES },
+  { key: "X_ATTACK", family: "held", tier: 2, price: 4, weight: 0.6 },
+  { key: "X_DEFENSE", family: "held", tier: 2, price: 4, weight: 0.6 },
+  { key: "X_SP_ATK", family: "held", tier: 2, price: 4, weight: 0.6 },
+  { key: "X_SP_DEF", family: "held", tier: 2, price: 4, weight: 0.6 },
+  { key: "X_SPEED", family: "held", tier: 2, price: 4, weight: 0.6 },
+  { key: "POTION", family: "held", tier: 1, price: 3 },
+  { key: "SUPER_POTION", family: "held", tier: 2, price: 6, noShop: true },
   { key: "MULTI_LENS", family: "held", tier: 4, price: 8 },
   { key: "SOOTHE_BELL", family: "growth", tier: 1, price: 3 },
   { key: "LUCKY_EGG", family: "growth", tier: 2, price: 4 },
   { key: "RARE_CANDY", family: "growth", tier: 1, price: 3, consumable: true },
   { key: "AMULET_COIN", family: "economy", tier: 2, price: 5 },
   { key: "GOLDEN_PUNCH", family: "economy", tier: 2, price: 4 },
-  { key: "HEAT_ROCK", family: "weatherRock", tier: 2, price: 3, stone: true },
-  { key: "DAMP_ROCK", family: "weatherRock", tier: 2, price: 3, stone: true },
-  { key: "SMOOTH_ROCK", family: "weatherRock", tier: 2, price: 3, stone: true },
-  { key: "ICY_ROCK", family: "weatherRock", tier: 2, price: 3, stone: true },
+  { key: "HEAT_ROCK", family: "weatherRock", tier: 2, price: 3, stone: true, forAbilities: ["DROUGHT", "ORICHALCUM_PULSE"], forMoves: ["SUNNY_DAY"] },
+  { key: "DAMP_ROCK", family: "weatherRock", tier: 2, price: 3, stone: true, forAbilities: ["DRIZZLE"], forMoves: ["RAIN_DANCE"] },
+  { key: "SMOOTH_ROCK", family: "weatherRock", tier: 2, price: 3, stone: true, forAbilities: ["SAND_STREAM"], forMoves: ["SANDSTORM"] },
+  { key: "ICY_ROCK", family: "weatherRock", tier: 2, price: 3, stone: true, forAbilities: ["SNOW_WARNING"], forMoves: ["HAIL", "SNOWSCAPE"] },
   { key: "LINKING_CORD", family: "evolution", tier: 2, price: 4, consumable: true },
   { key: "TM", family: "tm", tier: 2, price: 4, param: "move", consumable: true },
   // Bought with points when a run starts (reducer.ts START_ITEMS), never in the shop.
@@ -374,6 +420,7 @@ export const RECIPES: Recipe[] = [
     return { inputs: [booster, booster], output: plate };
   }),
   { inputs: ["ORAN_BERRY", "ORAN_BERRY"], output: "SITRUS_BERRY" },
+  { inputs: ["POTION", "POTION"], output: "SUPER_POTION" },
   { inputs: ["MUSCLE_BAND", "MUSCLE_BAND"], output: "CHOICE_BAND" },
   { inputs: ["WISE_GLASSES", "WISE_GLASSES"], output: "CHOICE_SPECS" },
   { inputs: ["MUSCLE_BAND", "WISE_GLASSES"], output: "EXPERT_BELT" },

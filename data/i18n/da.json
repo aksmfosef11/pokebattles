@@ -2611,6 +2611,10 @@
       "name": "Poké Ball",
       "description": null
     },
+    "POTION": {
+      "name": "Medicin",
+      "description": null
+    },
     "QUICK_CLAW": {
       "name": "Hurtigklo",
       "description": null
@@ -2645,6 +2649,26 @@
     },
     "VOUCHER": {
       "name": "Æggekupon",
+      "description": null
+    },
+    "X_ATTACK": {
+      "name": "X-Angreb",
+      "description": null
+    },
+    "X_DEFENSE": {
+      "name": "X-Forsvar",
+      "description": null
+    },
+    "X_SPEED": {
+      "name": "X-Hastighed",
+      "description": null
+    },
+    "X_SP_ATK": {
+      "name": "X-Sp.-Angreb",
+      "description": null
+    },
+    "X_SP_DEF": {
+      "name": "X-Sp.-Forsvar",
       "description": null
     },
     "CALCIUM": {
@@ -2687,10 +2711,6 @@
       "name": "Max Genoplivning",
       "description": null
     },
-    "POTION": {
-      "name": "Medicin",
-      "description": null
-    },
     "PROTEIN": {
       "name": "Protein",
       "description": null
@@ -2717,26 +2737,6 @@
     },
     "X_ACCURACY": {
       "name": "X-Præcision",
-      "description": null
-    },
-    "X_ATTACK": {
-      "name": "X-Angreb",
-      "description": null
-    },
-    "X_DEFENSE": {
-      "name": "X-Forsvar",
-      "description": null
-    },
-    "X_SPEED": {
-      "name": "X-Hastighed",
-      "description": null
-    },
-    "X_SP_ATK": {
-      "name": "X-Sp.-Angreb",
-      "description": null
-    },
-    "X_SP_DEF": {
-      "name": "X-Sp.-Forsvar",
       "description": null
     },
     "ZINC": {
@@ -2997,6 +2997,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "pokeball:pokeBall"
       },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
       "QUICK_CLAW": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.QUICK_CLAW"
@@ -3032,6 +3036,26 @@
       "VOUCHER": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "voucher:eggVoucher"
+      },
+      "X_ATTACK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
+      },
+      "X_DEFENSE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
+      },
+      "X_SPEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
+      },
+      "X_SP_ATK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
+      },
+      "X_SP_DEF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "CALCIUM": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
@@ -3073,10 +3097,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.MAX_REVIVE"
       },
-      "POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.POTION"
-      },
       "PROTEIN": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:BaseStatBoosterItem.protein"
@@ -3104,26 +3124,6 @@
       "X_ACCURACY": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:TempStatStageBoosterItem.x_accuracy"
-      },
-      "X_ATTACK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
-      },
-      "X_DEFENSE": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
-      },
-      "X_SPEED": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
-      },
-      "X_SP_ATK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
-      },
-      "X_SP_DEF": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "ZINC": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",

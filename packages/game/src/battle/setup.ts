@@ -1,14 +1,15 @@
 import { BAGS, COIN_CASE_EXTRA_GOLD, COIN_CASE_WIN_GOLD, poweredByBag } from "../board.ts";
 import { CHAMPION_RULES, cynthiaBonusScale, earlyBonus } from "../content/champions.ts";
 import { getMove, getSpecies, ITEMS } from "../content/index.ts";
-import { type ItemFamily, PLATE_TYPE_BOOST } from "../content/items.ts";
+import { type ItemFamily, PLATE_TYPE_BOOST, TIMED_ITEMS } from "../content/items.ts";
 import { TYPES, type Stats, type TypeKey } from "../content/schema.ts";
+import { CHOICE_BOOST, CHOICE_ITEMS, choicePicks } from "../run/choice.ts";
 import { computeAdjacency, cellsOf } from "../run/layout.ts";
 import { isLanceKinLine } from "../run/pool.ts";
 import type { Piece, PokemonPiece, TeamSnapshot } from "../run/types.ts";
 import { battleHpMultiplier, bondBonus, calcStats } from "../stats.ts";
 import { stackMul } from "./calc.ts";
-import type { Battler, BattleStats, ItemBundle, Side, SideState } from "./types.ts";
+import { TICKS_PER_SECOND, type Battler, type BattleStats, type ItemBundle, type Side, type SideState, type TimedItemState } from "./types.ts";
 
 const REGIS = new Set(["REGIROCK", "REGICE", "REGISTEEL"]);
 const LEGEND_ORBS: Record<string, { species: string; types: TypeKey[] }> = {
@@ -45,6 +46,7 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
   const pieces: Record<string, Piece> = {};
   for (const p of team.pieces) if (p.place) pieces[p.uid] = p;
   const adj = computeAdjacency(pieces);
+  const choice = choicePicks(pieces, adj);
   const mons = Object.values(pieces)
     .filter((p): p is PokemonPiece => p.kind === "pokemon")
     .sort((a, b) => a.place!.y - b.place!.y || a.place!.x - b.place!.x || (a.uid < b.uid ? -1 : 1));
@@ -69,6 +71,8 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
     for (const it of adj.itemsOf.get(piece.uid) ?? []) {
       const def = ITEMS[it.item];
       if (klutz && (!def || !KLUTZ_KEEPS.has(def.family))) continue;
+      // A Choice item powers one of the Pokémon it touches.
+      if (it.item in CHOICE_ITEMS && choice.holder.get(it.uid) !== piece.uid) continue;
       items.counts.set(it.item, (items.counts.get(it.item) ?? 0) + 1);
       if (!def) continue;
       if (def.family === "berry" || def.oneShot) items.uses.set(it.item, (items.uses.get(it.item) ?? 0) + 1);
@@ -166,9 +170,9 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
       stats.atk *= CHAMPION_RULES.red.lightBallMultiplier;
       stats.spa *= CHAMPION_RULES.red.lightBallMultiplier;
     }
-    stats.atk *= stackMul(1.5, n("CHOICE_BAND"));
-    stats.spa *= stackMul(1.5, n("CHOICE_SPECS"));
-    stats.spe *= stackMul(1.5, n("CHOICE_SCARF"));
+    stats.atk *= stackMul(CHOICE_BOOST, n("CHOICE_BAND"));
+    stats.spa *= stackMul(CHOICE_BOOST, n("CHOICE_SPECS"));
+    stats.spe *= stackMul(CHOICE_BOOST, n("CHOICE_SCARF"));
     stats.spd *= stackMul(1.5, n("ASSAULT_VEST"));
     if (species.evolutions.length > 0) {
       stats.def *= stackMul(1.5, n("EVIOLITE"));
@@ -233,7 +237,6 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
       confusion: 0,
       gauge: 0,
       moves,
-      choiceLock: null,
       charging: null,
       invulnerable: false,
       recharge: false,
@@ -243,6 +246,7 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
       bind: null,
       actions: 0,
       cells: cellsOf(piece),
+      choiceLock: choice.lock.get(piece.uid) ?? null,
       items,
       moveTypeMult,
       damageTakenMult,
@@ -265,6 +269,20 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
       legendBoosts: 0,
     });
   });
+
+  const idOf = new Map(battlers.map((b) => [b.uid, b.id]));
+  const timed: TimedItemState[] = [];
+  for (const p of Object.values(pieces)) {
+    const def = p.kind === "item" ? TIMED_ITEMS[p.item] : undefined;
+    if (p.kind !== "item" || !def) continue;
+    const holders = (adj.holdersOf.get(p.uid) ?? [])
+      .filter((u) => (pieces[u] as PokemonPiece).ability !== "KLUTZ")
+      .map((u) => idOf.get(u)!)
+      .sort((a, b) => a - b);
+    if (holders.length > 0) timed.push({ item: p.item, holders, readyAt: def.every * TICKS_PER_SECOND, usesLeft: def.uses });
+  }
+  // Copies ready on the same tick act in board order of the first Pokémon they touch.
+  timed.sort((a, b) => a.holders[0]! - b.holders[0]! || (a.item < b.item ? -1 : a.item > b.item ? 1 : 0));
 
   const rules = CHAMPION_RULES;
   const state: SideState = {
@@ -296,6 +314,7 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
       if (base === 0) return gold;
       return gold + base + (poweredByBag(p.item, adj.bagUnder.get(p.uid)) ? COIN_CASE_EXTRA_GOLD : 0);
     }, 0),
+    timed,
   };
   return { battlers, state };
 }

@@ -1,6 +1,6 @@
 import { BERRY_POUCH_SAVE_CHANCE, touches } from "../board.ts";
 import { CHAMPION_RULES, isLanceKin } from "../content/champions.ts";
-import { CONTENT, getMove, getSpecies, ITEMS, RESIST_BERRIES } from "../content/index.ts";
+import { CONTENT, getMove, getSpecies, ITEMS, RESIST_BERRIES, STATUS_ORB_ABILITIES, TIMED_ITEMS } from "../content/index.ts";
 import type { MoveDef, MoveEffect, StageStat, StatusKey, Stats, Terrain, TypeKey, Weather } from "../content/schema.ts";
 import { rngFor, type Rng } from "../rng.ts";
 import { calcStats } from "../stats.ts";
@@ -22,6 +22,7 @@ import {
   MAX_TICKS,
   PULSE_TICKS,
   SUDDEN_DEATH_TICK,
+  TICKS_PER_SECOND,
   type BattleEvent,
   type BattleInput,
   type BattleResult,
@@ -34,6 +35,7 @@ import {
   type ResolvedMove,
   type Side,
   type SideState,
+  type TimedItemState,
 } from "./types.ts";
 
 type EventBody = BattleEvent extends infer E ? (E extends { t: number } ? Omit<E, "t"> : never) : never;
@@ -459,12 +461,14 @@ export class BattleSim {
     this.checkBoosterEnergy();
     this.started = true;
     for (const b of this.battlers) {
-      if (count(b, "FLAME_ORB") > 0) {
-        this.emit({ k: "item", src: b.id, item: "FLAME_ORB" });
-        this.applyStatus(b, "brn");
-      } else if (count(b, "TOXIC_ORB") > 0) {
-        this.emit({ k: "item", src: b.id, item: "TOXIC_ORB" });
-        this.applyStatus(b, "tox");
+      // Orbs only work on Pokémon that gain from a status. Toxic Orb gives plain poison: badly poisoned
+      // stacks every pulse here and would knock out even a Guts Pokémon in about ten seconds.
+      if (STATUS_ORB_ABILITIES.includes(b.ability)) {
+        for (const [orb, status] of [["FLAME_ORB", "brn"], ["TOXIC_ORB", "psn"]] as const) {
+          if (b.status || count(b, orb) === 0 || !this.canHaveStatus(b, status)) continue;
+          this.emit({ k: "item", src: b.id, item: orb });
+          this.applyStatus(b, status);
+        }
       }
       const side = this.sides[b.side];
       if (side.subclass === "lance_dragondance" && isLanceKin(b.types)) this.changeStages(b, ["atk", "spe"], 1);
@@ -617,6 +621,30 @@ export class BattleSim {
       const target = candidates[0];
       if (target) this.dynamax(target);
     }
+    for (const side of this.sides) for (const t of side.timed) this.useTimedItem(t);
+  }
+
+  /** A battle item whose cooldown is up: X items boost every Pokémon they touch, potions heal the most hurt one. */
+  private useTimedItem(t: TimedItemState): void {
+    if (t.usesLeft <= 0 || this.tick < t.readyAt) return;
+    const def = TIMED_ITEMS[t.item]!;
+    const holders = t.holders.map((id) => this.battlers[id]!).filter((b) => b.alive);
+    if ("stage" in def) {
+      const boosted = holders.filter((b) => b.ability !== "CONTRARY");
+      if (boosted.length === 0) return;
+      for (const b of boosted) {
+        this.emit({ k: "item", src: b.id, item: t.item });
+        this.changeStages(b, [def.stage], 1);
+      }
+    } else {
+      // Waits for someone to be hurt; the cooldown starts again once it is used.
+      const hurt = holders.filter((b) => b.hp < b.maxHp).sort((x, y) => x.hp / x.maxHp - y.hp / y.maxHp || x.id - y.id)[0];
+      if (!hurt) return;
+      this.emit({ k: "item", src: hurt.id, item: t.item });
+      this.heal(hurt, Math.max(1, Math.floor(hurt.maxHp * def.heal)), "item");
+    }
+    t.usesLeft--;
+    t.readyAt = this.tick + def.every * TICKS_PER_SECOND;
   }
 
   // ───────────────────────────── pulse (end-of-turn effects every 2 s)
@@ -892,8 +920,6 @@ export class BattleSim {
       b.lastMove = move.baseKey;
       b.streak = 1;
     }
-    const choice = count(b, "CHOICE_BAND") + count(b, "CHOICE_SPECS") + count(b, "CHOICE_SCARF");
-    if (choice > 0 && !b.choiceLock && slot) b.choiceLock = move.baseKey;
     if (move.variant === "z") {
       b.zUsed = true;
       this.sides[b.side].zLeft--;
@@ -1561,7 +1587,6 @@ export class BattleSim {
         if (att.alive && att !== def && !sealed && !this.aromaVeiled(att) && this.rng.chance(0.3)) {
           this.emit({ k: "ability", src: def.id, ability: def.ability });
           att.disabledMove = { key, until: this.tick + CURSED_BODY_TICKS };
-          if (att.choiceLock === key) att.choiceLock = null;
         }
         break;
       }
@@ -1854,18 +1879,10 @@ export class BattleSim {
     }
   }
 
-  applyStatus(b: Battler, status: StatusKey, src?: Battler): boolean {
-    if (!b.alive) return false;
+  /** Type, ability and field immunities to a new status (not whether one is already there). */
+  private canHaveStatus(b: Battler, status: StatusKey, src?: Battler): boolean {
     const fromFoe = src && src.side !== b.side ? src : undefined;
     const corrosion = src?.ability === "CORROSION";
-    const isPoison = status === "psn" || status === "tox";
-    if (isPoison && (b.status === "psn" || b.status === "tox")) {
-      b.poisonStacks = Math.min(8, b.poisonStacks + (status === "tox" ? 2 : 1));
-      if (status === "tox") b.status = "tox";
-      this.emit({ k: "status", target: b.id, status: b.status, stacks: b.poisonStacks });
-      return true;
-    }
-    if (b.status) return false;
     const ab = (k: string) => this.has(b, k, fromFoe);
     const w = this.weather();
     const t = this.field.terrain;
@@ -1874,22 +1891,31 @@ export class BattleSim {
     if (t === "misty" && isGrounded(b)) return false;
     switch (status) {
       case "brn":
-        if (b.types.includes("fire") || ab("WATER_VEIL") || ab("WATER_BUBBLE") || ab("THERMAL_EXCHANGE")) return false;
-        break;
+        return !(b.types.includes("fire") || ab("WATER_VEIL") || ab("WATER_BUBBLE") || ab("THERMAL_EXCHANGE"));
       case "par":
-        if (b.types.includes("electric") || ab("LIMBER")) return false;
-        break;
+        return !(b.types.includes("electric") || ab("LIMBER"));
       case "psn":
       case "tox":
-        if ((!corrosion && (b.types.includes("poison") || b.types.includes("steel"))) || ab("IMMUNITY") || ab("PASTEL_VEIL")) return false;
-        break;
+        return !((!corrosion && (b.types.includes("poison") || b.types.includes("steel"))) || ab("IMMUNITY") || ab("PASTEL_VEIL"));
       case "slp":
-        if (ab("INSOMNIA") || ab("VITAL_SPIRIT") || ab("SWEET_VEIL") || (t === "electric" && isGrounded(b))) return false;
-        break;
+        return !(ab("INSOMNIA") || ab("VITAL_SPIRIT") || ab("SWEET_VEIL") || (t === "electric" && isGrounded(b)));
       case "frz":
-        if (b.types.includes("ice") || ab("MAGMA_ARMOR") || w === "sun") return false;
-        break;
+        return !(b.types.includes("ice") || ab("MAGMA_ARMOR") || w === "sun");
     }
+    return true;
+  }
+
+  applyStatus(b: Battler, status: StatusKey, src?: Battler): boolean {
+    if (!b.alive) return false;
+    const fromFoe = src && src.side !== b.side ? src : undefined;
+    const isPoison = status === "psn" || status === "tox";
+    if (isPoison && (b.status === "psn" || b.status === "tox")) {
+      b.poisonStacks = Math.min(8, b.poisonStacks + (status === "tox" ? 2 : 1));
+      if (status === "tox") b.status = "tox";
+      this.emit({ k: "status", target: b.id, status: b.status, stacks: b.poisonStacks });
+      return true;
+    }
+    if (b.status || !this.canHaveStatus(b, status, src)) return false;
     b.status = status;
     if (status === "slp") b.sleepTurns = this.rng.int(1, 3) + 1;
     if (isPoison) b.poisonStacks = status === "tox" ? 2 : 1;
@@ -2080,7 +2106,6 @@ export class BattleSim {
     };
     b.maxHp = Math.floor(b.maxHp * mult);
     b.hp = Math.floor(b.hp * mult);
-    b.choiceLock = null;
     if (gmax && b.species.gmax) b.formKey = b.species.gmax.formKey;
     this.emitForm(b, gmax ? "gmax" : "dynamax");
     if (count(b, "MAX_MUSHROOMS") > 0) {
@@ -2167,7 +2192,6 @@ export class BattleSim {
     b.stages = { ...target.stages };
     b.ability = target.ability;
     b.moves = target.moves.map((m) => ({ key: m.key, pp: 5, enabled: true }));
-    b.choiceLock = null;
     this.emitForm(b, "transform");
   }
 }

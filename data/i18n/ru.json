@@ -4785,6 +4785,10 @@
       "name": "Поке-Болл",
       "description": null
     },
+    "POTION": {
+      "name": "Эликсир",
+      "description": null
+    },
     "PYROARITE": {
       "name": "Пироарит",
       "description": "Заставляет некоторых Покемонов менять форму."
@@ -4917,6 +4921,10 @@
       "name": "Солнечный Камень",
       "description": "Заставляет некоторых Покемонов эволюционировать."
     },
+    "SUPER_POTION": {
+      "name": "Суперэликсир",
+      "description": null
+    },
     "SWAMPERTITE": {
       "name": "Свампертит",
       "description": "Заставляет некоторых Покемонов менять форму."
@@ -4968,6 +4976,26 @@
     "WIDE_LENS": {
       "name": "Широкие Линзы",
       "description": null
+    },
+    "X_ATTACK": {
+      "name": "Х Атака",
+      "description": "Увеличивает Атака всех членов команды на 20% на 5 сражений"
+    },
+    "X_DEFENSE": {
+      "name": "Х Защита",
+      "description": "Увеличивает Защита всех членов команды на 20% на 5 сражений"
+    },
+    "X_SPEED": {
+      "name": "Х Скорость",
+      "description": "Увеличивает Скорость всех членов команды на 20% на 5 сражений"
+    },
+    "X_SP_ATK": {
+      "name": "Х Сп. Атк",
+      "description": "Увеличивает Сп. Атк всех членов команды на 20% на 5 сражений"
+    },
+    "X_SP_DEF": {
+      "name": "Х Сп. Защ",
+      "description": "Увеличивает Сп. Зщт всех членов команды на 20% на 5 сражений"
     },
     "ZAP_PLATE": {
       "name": "Плита Разряд",
@@ -5509,10 +5537,6 @@
       "name": "Яд Тера-осколок",
       "description": "Изменяет Тера-тип Покемона на Яд."
     },
-    "POTION": {
-      "name": "Эликсир",
-      "description": null
-    },
     "PP_MAX": {
       "name": "ОД Макс",
       "description": null
@@ -5685,10 +5709,6 @@
       "name": "Супер-Приманка",
       "description": null
     },
-    "SUPER_POTION": {
-      "name": "Суперэликсир",
-      "description": null
-    },
     "SWEET_APPLE": {
       "name": "Сладкое Яблоко",
       "description": "Заставляет некоторых Покемонов эволюционировать."
@@ -5756,26 +5776,6 @@
     "X_ACCURACY": {
       "name": "Х Точность",
       "description": "Увеличивает Точность всех членов команды на 1 стадия на 5 сражений"
-    },
-    "X_ATTACK": {
-      "name": "Х Атака",
-      "description": "Увеличивает Атака всех членов команды на 20% на 5 сражений"
-    },
-    "X_DEFENSE": {
-      "name": "Х Защита",
-      "description": "Увеличивает Защита всех членов команды на 20% на 5 сражений"
-    },
-    "X_SPEED": {
-      "name": "Х Скорость",
-      "description": "Увеличивает Скорость всех членов команды на 20% на 5 сражений"
-    },
-    "X_SP_ATK": {
-      "name": "Х Сп. Атк",
-      "description": "Увеличивает Сп. Атк всех членов команды на 20% на 5 сражений"
-    },
-    "X_SP_DEF": {
-      "name": "Х Сп. Защ",
-      "description": "Увеличивает Сп. Зщт всех членов команды на 20% на 5 сражений"
     },
     "ZERAORITE": {
       "name": "Зераорит",
@@ -6409,6 +6409,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "pokeball:pokeBall"
       },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
       "PYROARITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.PYROARITE"
@@ -6541,6 +6545,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SUN_STONE"
       },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
+      },
       "SWAMPERTITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.SWAMPERTITE"
@@ -6592,6 +6600,26 @@
       "WIDE_LENS": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.WIDE_LENS"
+      },
+      "X_ATTACK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
+      },
+      "X_DEFENSE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
+      },
+      "X_SPEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
+      },
+      "X_SP_ATK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
+      },
+      "X_SP_DEF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "ZAP_PLATE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
@@ -7133,10 +7161,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.poison"
       },
-      "POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.POTION"
-      },
       "PP_MAX": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.PP_MAX"
@@ -7309,10 +7333,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.SUPER_LURE"
       },
-      "SUPER_POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.SUPER_POTION"
-      },
       "SWEET_APPLE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SWEET_APPLE"
@@ -7380,26 +7400,6 @@
       "X_ACCURACY": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:TempStatStageBoosterItem.x_accuracy"
-      },
-      "X_ATTACK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
-      },
-      "X_DEFENSE": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
-      },
-      "X_SPEED": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
-      },
-      "X_SP_ATK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
-      },
-      "X_SP_DEF": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "ZERAORITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",

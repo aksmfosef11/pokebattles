@@ -173,5 +173,10 @@ describe("board rules", () => {
     const l2 = applyRoundResult(l, { outcome: "win", fainted: [], battleGold: 0, opponent: { name: "", champion: "red", ghost: false } });
     expect(l2.streak).toBe(3);
     expect(l2.gold).toBe(8 + 3);
+    // A loss ends the streak but pays the rematch bonus on top of everyone's consolation gold.
+    const l3 = applyRoundResult({ ...l2, gold: 0 }, { outcome: "loss", fainted: [], battleGold: 0, opponent: { name: "", champion: "red", ghost: false } });
+    expect(l3.streak).toBe(0);
+    expect(l3.gold).toBe(9 + 1 + CHAMPION_RULES.leon.lossIncome);
+    expect(l3.notices).toContainEqual(expect.objectContaining({ key: "notice.income", params: expect.objectContaining({ rematch: CHAMPION_RULES.leon.lossIncome }) }));
   });
 });

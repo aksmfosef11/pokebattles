@@ -120,6 +120,12 @@
     "shopGrowth": "The shop has {{n}} slots from round {{round}}",
     "evolvesWhich": "Evolves with this item",
     "evolvesNone": "None of the Pokémon this champion can get evolve with this item",
+    "itemUsers": "Needs",
+    "itemUsersNone": "None of your Pokémon right now. Needs: {{needs}}",
+    "choicePick": "Choice: who it powers and the move",
+    "choiceNone": "Nothing it touches has a move it can lock (physical for the Band, special for the Specs), so it does nothing",
+    "choiceHint": "Tap a move: only that Pokémon gets the boost, and it uses only that move all battle (another one if it runs out of PP or is sealed). Without a pick it goes to the strongest Pokémon and its strongest STAB attack",
+    "choiceTag": "Choice",
     "evolvesOthers": "{{n}} more never appear in this champion's shop",
     "owned": "Owned",
     "touchHint": "Tap for details · drag to place · tap with a second finger while dragging to rotate · move bags by their handle",
@@ -276,7 +282,7 @@
     "leon": {
       "concept": "Dynamax and win streaks",
       "passiveName": "Undefeated Champion",
-      "passive": "Each win in a streak adds +1G income (up to +5) and +1.2% to all stats (counting up to 5 wins); a loss resets it. The Pokémon next to the Dynamax Band Dynamaxes 8 seconds in: double HP and Max Moves for 3 actions."
+      "passive": "Each win in a streak adds +1G income (up to +5) and +1.2% to all stats (counting up to 5 wins); a loss resets it but pays +3G next round (rematch). The Pokémon next to the Dynamax Band Dynamaxes 8 seconds in: double HP and Max Moves for 3 actions."
     },
     "geeta": {
       "concept": "Terastallization and business",
@@ -366,9 +372,9 @@
     "LIECHI_BERRY": "+1 Attack at 1/4 HP (once per battle)",
     "SALAC_BERRY": "+1 Speed at 1/4 HP (once per battle)",
     "PETAYA_BERRY": "+1 Sp. Atk at 1/4 HP (once per battle)",
-    "CHOICE_BAND": "Adjacent Pokémon: Attack ×1.5, locked into the first move used",
-    "CHOICE_SPECS": "Adjacent Pokémon: Sp. Atk ×1.5, locked into the first move used",
-    "CHOICE_SCARF": "Adjacent Pokémon: Speed ×1.5, locked into the first move used",
+    "CHOICE_BAND": "One adjacent Pokémon: Attack ×{{mult}}, uses only the physical move you pick",
+    "CHOICE_SPECS": "One adjacent Pokémon: Sp. Atk ×{{mult}}, uses only the special move you pick",
+    "CHOICE_SCARF": "One adjacent Pokémon: Speed ×{{mult}}, uses only the attack you pick",
     "LIFE_ORB": "Adjacent Pokémon deal ×1.3 damage and lose 1/10 HP per attack",
     "EXPERT_BELT": "Adjacent Pokémon's super-effective moves deal ×1.2",
     "SCOPE_LENS": "Adjacent Pokémon: +1 crit stage",
@@ -379,8 +385,15 @@
     "ASSAULT_VEST": "Adjacent Pokémon: Sp. Def ×1.5, cannot use status moves",
     "EVIOLITE": "Adjacent Pokémon that can still evolve: Defense and Sp. Def ×1.5",
     "ROCKY_HELMET": "Attackers making contact with an adjacent Pokémon lose 1/6 HP",
-    "FLAME_ORB": "Burns adjacent Pokémon as the battle starts (for Guts and Facade)",
-    "TOXIC_ORB": "Badly poisons adjacent Pokémon as the battle starts",
+    "FLAME_ORB": "Burns adjacent {{abilities}} Pokémon as the battle starts. Does nothing to other Pokémon",
+    "TOXIC_ORB": "Poisons (not badly) adjacent {{abilities}} Pokémon as the battle starts. Does nothing to other Pokémon",
+    "X_ATTACK": "Every {{sec}} seconds, adjacent Pokémon gain +1 Attack stage (up to {{uses}} times)",
+    "X_DEFENSE": "Every {{sec}} seconds, adjacent Pokémon gain +1 Defense stage (up to {{uses}} times)",
+    "X_SP_ATK": "Every {{sec}} seconds, adjacent Pokémon gain +1 Sp. Atk stage (up to {{uses}} times)",
+    "X_SP_DEF": "Every {{sec}} seconds, adjacent Pokémon gain +1 Sp. Def stage (up to {{uses}} times)",
+    "X_SPEED": "Every {{sec}} seconds, adjacent Pokémon gain +1 Speed stage (up to {{uses}} times)",
+    "POTION": "Every {{sec}} seconds, heals the adjacent Pokémon with the lowest HP share by {{pct}}% of its max HP (up to {{uses}} times; waits until one is hurt)",
+    "SUPER_POTION": "Every {{sec}} seconds, heals the adjacent Pokémon with the lowest HP share by {{pct}}% of its max HP (up to {{uses}} times; waits until one is hurt)",
     "MULTI_LENS": "Adjacent Pokémon's single-target attacks hit once more at 25% power",
     "SOOTHE_BELL": "Adjacent Pokémon build friendship (battle count) twice as fast",
     "LUCKY_EGG": "Adjacent Pokémon gain 1 extra level after each battle",
@@ -636,13 +649,15 @@
     "berryPouchRefund": "{{item}} is now a bag: its {{gold}}G price was refunded",
     "mint": "{{species}}'s nature is now {{nature}}",
     "bottleCap": "{{species}}'s IVs were rerolled (total {{before}} → {{after}})",
-    "legendAppeared": "A legendary Pokémon appeared in the shop: {{species}}!"
+    "legendAppeared": "A legendary Pokémon appeared in the shop: {{species}}!",
+    "bigBagAppeared": "Your party can now field {{n}} Pokémon: a big bag appeared in the shop!"
   },
   "incomePart": {
     "base": "Base",
     "consolation": "Consolation",
     "devon": "Devon",
     "streak": "Streak",
+    "rematch": "Rematch",
     "interest": "Interest",
     "battle": "Battle rewards"
   },
@@ -776,6 +791,17 @@
     "new": "NEW",
     "older": "Earlier patches",
     "entries": [
+      {
+        "date": "2026-10-01 (2)",
+        "items": [
+          "More bags late in a run: the opening shop of round 11, when the party grows to 9, always has a big bag (3×2 or 3×3). Live data showed boards running out of room most at rounds 11–12, with Pokémon stuck in the stash",
+          "New battle items that trigger on a timer. X Attack and X Sp. Atk raise the stat of the Pokémon they touch by one stage every 5 seconds and X Speed every 6 (up to twice); X Defense and X Sp. Def every 3 seconds (up to 3 times). A Potion heals the most hurt Pokémon it touches by 30% every 4 seconds (up to 3 times); two touching Potions make a Super Potion (50%). Back-row Pokémon that last longer get the most out of them",
+          "Flame Orb and Toxic Orb are no longer traps. They only affect Guts, Marvel Scale, Quick Feet and Magic Guard Pokémon, leave every other neighbour alone, and only show up when you own such a Pokémon. Toxic Orb now poisons instead of badly poisoning (bad poison keeps growing here and wore down even Guts Pokémon)",
+          "Choice Band, Choice Specs and Choice Scarf changed: they power one of the Pokémon they touch (×1.5 → ×2), and you pick the move it uses all battle (physical for the Band, special for the Specs, any attack for the Scarf) (tap the item). Without a pick it is the strongest Pokémon and its strongest STAB attack. They used to lock the first move used; with moves picked automatically, that left about 1 in 5 holders stuck on a status move, and bot boards did better without them",
+          "Weather rocks (Heat Rock etc.), terrain seeds (Electric Seed etc.) and the Terrain Extender are sorted out like the Flame Orb: they only show up when you own a Pokémon that brings that weather or terrain (by ability or a move it knows). Steven still gets the weather rocks, since he uses them as stones",
+          "Leon now gets +3G income after a loss (rematch, on top of everyone's 1G consolation). A loss ended the streak's gold and stats together, so runs that started badly never recovered: in bot measurements his round-8 median was 35% and his unlucky runs (p10) 5%, the lowest. They are now 41% and 10%"
+        ]
+      },
       {
         "date": "2026-10-01",
         "items": [

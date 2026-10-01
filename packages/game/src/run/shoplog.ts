@@ -83,6 +83,7 @@ export function replayShop(start: RunState, actions: readonly Action[]): { state
         break;
       }
       case "move":
+      case "choice":
         log.arranged++;
         break;
     }

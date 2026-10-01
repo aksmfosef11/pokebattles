@@ -7646,6 +7646,10 @@
       "name": "Pokéboll",
       "description": null
     },
+    "POTION": {
+      "name": "Hälsomedicin",
+      "description": null
+    },
     "PYROARITE": {
       "name": "Pyroarit",
       "description": "Orsakar formändring hos vissa specifika pokémon."
@@ -7778,6 +7782,10 @@
       "name": "Solsten",
       "description": "Orsakar utveckling hos vissa specifika pokémon."
     },
+    "SUPER_POTION": {
+      "name": "Supermedicin",
+      "description": null
+    },
     "SWAMPERTITE": {
       "name": "Swampertit",
       "description": "Orsakar formändring hos vissa specifika pokémon."
@@ -7829,6 +7837,26 @@
     "WIDE_LENS": {
       "name": "Vidvinkelobjektiv",
       "description": null
+    },
+    "X_ATTACK": {
+      "name": "Attackerin",
+      "description": "Ökar Attack för alla för lagmedlemmar med 20% i högst 5 strider."
+    },
+    "X_DEFENSE": {
+      "name": "Försvararin",
+      "description": "Ökar Försvar för alla för lagmedlemmar med 20% i högst 5 strider."
+    },
+    "X_SPEED": {
+      "name": "Snabbarin",
+      "description": "Ökar Snabbhet för alla för lagmedlemmar med 20% i högst 5 strider."
+    },
+    "X_SP_ATK": {
+      "name": "SP Attackerin",
+      "description": "Ökar Sp. atk för alla för lagmedlemmar med 20% i högst 5 strider."
+    },
+    "X_SP_DEF": {
+      "name": "SP Försvararin",
+      "description": "Ökar Sp. fsv för alla för lagmedlemmar med 20% i högst 5 strider."
     },
     "ZAP_PLATE": {
       "name": "Tordönplatta",
@@ -8370,10 +8398,6 @@
       "name": "Teraskärva: Gift",
       "description": "Ändrar en pokémons teratyp till Gift"
     },
-    "POTION": {
-      "name": "Hälsomedicin",
-      "description": null
-    },
     "PP_MAX": {
       "name": "Kraftökarin Max",
       "description": null
@@ -8546,10 +8570,6 @@
       "name": "Lockparfym d’Argent",
       "description": null
     },
-    "SUPER_POTION": {
-      "name": "Supermedicin",
-      "description": null
-    },
     "SWEET_APPLE": {
       "name": "Sötäpple",
       "description": "Orsakar utveckling hos vissa specifika pokémon."
@@ -8617,26 +8637,6 @@
     "X_ACCURACY": {
       "name": "Träffsäkerin",
       "description": "Ökar Träffsäkerhet för alla för lagmedlemmar med 1 steg i högst 5 strider."
-    },
-    "X_ATTACK": {
-      "name": "Attackerin",
-      "description": "Ökar Attack för alla för lagmedlemmar med 20% i högst 5 strider."
-    },
-    "X_DEFENSE": {
-      "name": "Försvararin",
-      "description": "Ökar Försvar för alla för lagmedlemmar med 20% i högst 5 strider."
-    },
-    "X_SPEED": {
-      "name": "Snabbarin",
-      "description": "Ökar Snabbhet för alla för lagmedlemmar med 20% i högst 5 strider."
-    },
-    "X_SP_ATK": {
-      "name": "SP Attackerin",
-      "description": "Ökar Sp. atk för alla för lagmedlemmar med 20% i högst 5 strider."
-    },
-    "X_SP_DEF": {
-      "name": "SP Försvararin",
-      "description": "Ökar Sp. fsv för alla för lagmedlemmar med 20% i högst 5 strider."
     },
     "ZERAORITE": {
       "name": "Zeraorit",
@@ -9477,6 +9477,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "pokeball:pokeBall"
       },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
       "PYROARITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.PYROARITE"
@@ -9609,6 +9613,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SUN_STONE"
       },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
+      },
       "SWAMPERTITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.SWAMPERTITE"
@@ -9660,6 +9668,26 @@
       "WIDE_LENS": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.WIDE_LENS"
+      },
+      "X_ATTACK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
+      },
+      "X_DEFENSE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
+      },
+      "X_SPEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
+      },
+      "X_SP_ATK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
+      },
+      "X_SP_DEF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "ZAP_PLATE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
@@ -10201,10 +10229,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.poison"
       },
-      "POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.POTION"
-      },
       "PP_MAX": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.PP_MAX"
@@ -10377,10 +10401,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.SUPER_LURE"
       },
-      "SUPER_POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.SUPER_POTION"
-      },
       "SWEET_APPLE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SWEET_APPLE"
@@ -10448,26 +10468,6 @@
       "X_ACCURACY": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:TempStatStageBoosterItem.x_accuracy"
-      },
-      "X_ATTACK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
-      },
-      "X_DEFENSE": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
-      },
-      "X_SPEED": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
-      },
-      "X_SP_ATK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
-      },
-      "X_SP_DEF": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "ZERAORITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",

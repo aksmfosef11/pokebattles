@@ -7910,6 +7910,10 @@
       "name": "Poké Ball",
       "description": null
     },
+    "POTION": {
+      "name": "Potion",
+      "description": null
+    },
     "POWER_HERB": {
       "name": "Power Herb",
       "description": "A single-use item to be held by a Pokémon. It allows the holder to immediately use a move that normally requires a turn to charge."
@@ -8098,6 +8102,10 @@
       "name": "Sun Stone",
       "description": "Causes certain Pokémon to evolve."
     },
+    "SUPER_POTION": {
+      "name": "Super Potion",
+      "description": null
+    },
     "SWAMPERTITE": {
       "name": "Swampertite",
       "description": "Causes certain Pokémon to change form."
@@ -8181,6 +8189,26 @@
     "WISE_GLASSES": {
       "name": "Wise Glasses",
       "description": "An item to be held by a Pokémon. This thick pair of glasses slightly boosts the power of special moves."
+    },
+    "X_ATTACK": {
+      "name": "X Attack",
+      "description": "Increases the Attack of all party members by 20% for up to 5 battles."
+    },
+    "X_DEFENSE": {
+      "name": "X Defense",
+      "description": "Increases the Defense of all party members by 20% for up to 5 battles."
+    },
+    "X_SPEED": {
+      "name": "X Speed",
+      "description": "Increases the Speed of all party members by 20% for up to 5 battles."
+    },
+    "X_SP_ATK": {
+      "name": "X Sp. Atk",
+      "description": "Increases the Sp. Atk of all party members by 20% for up to 5 battles."
+    },
+    "X_SP_DEF": {
+      "name": "X Sp. Def",
+      "description": "Increases the Sp. Def of all party members by 20% for up to 5 battles."
     },
     "YACHE_BERRY": {
       "name": "Yache Berry",
@@ -8938,10 +8966,6 @@
       "name": "Poison Tera Shard",
       "description": "Changes the Pokémon’s Tera type to Poison."
     },
-    "POTION": {
-      "name": "Potion",
-      "description": null
-    },
     "PP_MAX": {
       "name": "PP Max",
       "description": null
@@ -9198,10 +9222,6 @@
       "name": "Super Lure",
       "description": null
     },
-    "SUPER_POTION": {
-      "name": "Super Potion",
-      "description": null
-    },
     "SWEET_APPLE": {
       "name": "Sweet Apple",
       "description": "Causes certain Pokémon to evolve."
@@ -9289,26 +9309,6 @@
     "X_ACCURACY": {
       "name": "X Accuracy",
       "description": "Increases the Accuracy of all party members by 1 stage for up to 5 battles."
-    },
-    "X_ATTACK": {
-      "name": "X Attack",
-      "description": "Increases the Attack of all party members by 20% for up to 5 battles."
-    },
-    "X_DEFENSE": {
-      "name": "X Defense",
-      "description": "Increases the Defense of all party members by 20% for up to 5 battles."
-    },
-    "X_SPEED": {
-      "name": "X Speed",
-      "description": "Increases the Speed of all party members by 20% for up to 5 battles."
-    },
-    "X_SP_ATK": {
-      "name": "X Sp. Atk",
-      "description": "Increases the Sp. Atk of all party members by 20% for up to 5 battles."
-    },
-    "X_SP_DEF": {
-      "name": "X Sp. Def",
-      "description": "Increases the Sp. Def of all party members by 20% for up to 5 battles."
     },
     "YELLOW_NECTAR": {
       "name": "Yellow Nectar",
@@ -10517,6 +10517,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "pokeball:pokeBall"
       },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
       "POWER_HERB": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "power-herb",
@@ -10719,6 +10723,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SUN_STONE"
       },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
+      },
       "SWAMPERTITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.SWAMPERTITE"
@@ -10810,6 +10818,26 @@
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "wise-glasses",
         "pokeapiLanguage": "en"
+      },
+      "X_ATTACK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
+      },
+      "X_DEFENSE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
+      },
+      "X_SPEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
+      },
+      "X_SP_ATK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
+      },
+      "X_SP_DEF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "YACHE_BERRY": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
@@ -11621,10 +11649,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.poison"
       },
-      "POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.POTION"
-      },
       "PP_MAX": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.PP_MAX"
@@ -11902,10 +11926,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.SUPER_LURE"
       },
-      "SUPER_POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.SUPER_POTION"
-      },
       "SWEET_APPLE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SWEET_APPLE"
@@ -11998,26 +12018,6 @@
       "X_ACCURACY": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:TempStatStageBoosterItem.x_accuracy"
-      },
-      "X_ATTACK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
-      },
-      "X_DEFENSE": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
-      },
-      "X_SPEED": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
-      },
-      "X_SP_ATK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
-      },
-      "X_SP_DEF": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "YELLOW_NECTAR": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",

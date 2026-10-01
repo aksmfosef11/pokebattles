@@ -1600,6 +1600,14 @@
     "atlasFrame": "pb",
     "required": true
   },
+  "POTION": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.POTION",
+    "pokeapiIdentifier": "potion",
+    "pokeapiCategory": "healing",
+    "group": "modifier",
+    "atlasFrame": "potion",
+    "required": true
+  },
   "POWER_HERB": {
     "pokerogueLocaleKey": null,
     "pokeapiIdentifier": "power-herb",
@@ -2017,6 +2025,14 @@
     "atlasFrame": "sun_stone",
     "required": true
   },
+  "SUPER_POTION": {
+    "pokerogueLocaleKey": "modifierType:ModifierType.SUPER_POTION",
+    "pokeapiIdentifier": "super-potion",
+    "pokeapiCategory": "healing",
+    "group": "modifier",
+    "atlasFrame": "super_potion",
+    "required": true
+  },
   "SWAMPERTITE": {
     "pokerogueLocaleKey": "modifierType:FormChangeItem.SWAMPERTITE",
     "pokeapiIdentifier": "swampertite",
@@ -2200,6 +2216,46 @@
     "pokeapiCategory": "held-items",
     "group": "held2",
     "atlasFrame": "wise_glasses",
+    "required": true
+  },
+  "X_ATTACK": {
+    "pokerogueLocaleKey": "modifierType:TempStatStageBoosterItem.x_attack",
+    "pokeapiIdentifier": "x-attack",
+    "pokeapiCategory": "stat-boosts",
+    "group": "xItem",
+    "atlasFrame": "x_attack",
+    "required": true
+  },
+  "X_DEFENSE": {
+    "pokerogueLocaleKey": "modifierType:TempStatStageBoosterItem.x_defense",
+    "pokeapiIdentifier": "x-defense",
+    "pokeapiCategory": "stat-boosts",
+    "group": "xItem",
+    "atlasFrame": "x_defense",
+    "required": true
+  },
+  "X_SPEED": {
+    "pokerogueLocaleKey": "modifierType:TempStatStageBoosterItem.x_speed",
+    "pokeapiIdentifier": "x-speed",
+    "pokeapiCategory": "stat-boosts",
+    "group": "xItem",
+    "atlasFrame": "x_speed",
+    "required": true
+  },
+  "X_SP_ATK": {
+    "pokerogueLocaleKey": "modifierType:TempStatStageBoosterItem.x_sp_atk",
+    "pokeapiIdentifier": "x-sp-atk",
+    "pokeapiCategory": "stat-boosts",
+    "group": "xItem",
+    "atlasFrame": "x_sp_atk",
+    "required": true
+  },
+  "X_SP_DEF": {
+    "pokerogueLocaleKey": "modifierType:TempStatStageBoosterItem.x_sp_def",
+    "pokeapiIdentifier": "x-sp-def",
+    "pokeapiCategory": "stat-boosts",
+    "group": "xItem",
+    "atlasFrame": "x_sp_def",
     "required": true
   },
   "YACHE_BERRY": {
@@ -3714,14 +3770,6 @@
     "atlasFrame": "poison_tera_shard",
     "required": false
   },
-  "POTION": {
-    "pokerogueLocaleKey": "modifierType:ModifierType.POTION",
-    "pokeapiIdentifier": "potion",
-    "pokeapiCategory": "healing",
-    "group": "modifier",
-    "atlasFrame": "potion",
-    "required": false
-  },
   "PP_MAX": {
     "pokerogueLocaleKey": "modifierType:ModifierType.PP_MAX",
     "pokeapiIdentifier": "pp-max",
@@ -4234,14 +4282,6 @@
     "atlasFrame": "super_lure",
     "required": false
   },
-  "SUPER_POTION": {
-    "pokerogueLocaleKey": "modifierType:ModifierType.SUPER_POTION",
-    "pokeapiIdentifier": "super-potion",
-    "pokeapiCategory": "healing",
-    "group": "modifier",
-    "atlasFrame": "super_potion",
-    "required": false
-  },
   "SWEET_APPLE": {
     "pokerogueLocaleKey": "modifierType:EvolutionItem.SWEET_APPLE",
     "pokeapiIdentifier": "sweet-apple",
@@ -4416,46 +4456,6 @@
     "pokeapiCategory": "stat-boosts",
     "group": "xItem",
     "atlasFrame": "x_accuracy",
-    "required": false
-  },
-  "X_ATTACK": {
-    "pokerogueLocaleKey": "modifierType:TempStatStageBoosterItem.x_attack",
-    "pokeapiIdentifier": "x-attack",
-    "pokeapiCategory": "stat-boosts",
-    "group": "xItem",
-    "atlasFrame": "x_attack",
-    "required": false
-  },
-  "X_DEFENSE": {
-    "pokerogueLocaleKey": "modifierType:TempStatStageBoosterItem.x_defense",
-    "pokeapiIdentifier": "x-defense",
-    "pokeapiCategory": "stat-boosts",
-    "group": "xItem",
-    "atlasFrame": "x_defense",
-    "required": false
-  },
-  "X_SPEED": {
-    "pokerogueLocaleKey": "modifierType:TempStatStageBoosterItem.x_speed",
-    "pokeapiIdentifier": "x-speed",
-    "pokeapiCategory": "stat-boosts",
-    "group": "xItem",
-    "atlasFrame": "x_speed",
-    "required": false
-  },
-  "X_SP_ATK": {
-    "pokerogueLocaleKey": "modifierType:TempStatStageBoosterItem.x_sp_atk",
-    "pokeapiIdentifier": "x-sp-atk",
-    "pokeapiCategory": "stat-boosts",
-    "group": "xItem",
-    "atlasFrame": "x_sp_atk",
-    "required": false
-  },
-  "X_SP_DEF": {
-    "pokerogueLocaleKey": "modifierType:TempStatStageBoosterItem.x_sp_def",
-    "pokeapiIdentifier": "x-sp-def",
-    "pokeapiCategory": "stat-boosts",
-    "group": "xItem",
-    "atlasFrame": "x_sp_def",
     "required": false
   },
   "YELLOW_NECTAR": {

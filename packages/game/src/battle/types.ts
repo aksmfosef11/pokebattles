@@ -172,6 +172,7 @@ export interface Battler {
   confusion: number;
   gauge: number;
   moves: { key: string; pp: number; enabled: boolean }[];
+  /** The only move a Choice item lets it use (run/choice.ts); ignored while dynamaxed or when that move cannot be used. */
   choiceLock: string | null;
   charging: string | null;
   invulnerable: boolean;
@@ -230,6 +231,17 @@ export interface SideState {
   gold: number;
   /** Win gold from gold items touching at least one Pokémon, plus Coin Cases on the board. */
   amuletCoins: number;
+  /** Battle items on cooldowns (TIMED_ITEMS), one entry per copy on the board. */
+  timed: TimedItemState[];
+}
+
+export interface TimedItemState {
+  item: string;
+  /** Battler ids of the Pokémon it touches (Klutz left out). */
+  holders: number[];
+  /** Tick it is ready again. */
+  readyAt: number;
+  usesLeft: number;
 }
 
 export interface FieldState {

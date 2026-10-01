@@ -32,6 +32,9 @@ import {
   replayShop,
   slotPrice,
   shopSize,
+  BIG_BAG_ROUND,
+  BIG_BAGS,
+  basePartyCap,
   rollShop,
   applyRoundResult,
   CHAMPIONS,
@@ -338,6 +341,25 @@ describe("party and board", () => {
     expect(grown.round).toBe(9);
     expect(grown.shop).toHaveLength(6);
     expect(grown.notices).toContainEqual({ key: "notice.shopGrew", params: { n: 6 } });
+  });
+
+  it("opens the round the party reaches 9 with a big bag, and says so", () => {
+    expect(BIG_BAG_ROUND).toBe(11);
+    expect(basePartyCap(BIG_BAG_ROUND)).toBe(9);
+    const isBig = (slot: RunState["shop"][number]) => slot.offer?.kind === "bag" && BIG_BAGS.includes(slot.offer.bag);
+    let rerollsWithout = 0;
+    for (let i = 0; i < 20; i++) {
+      const s = { ...run("red", `big-${i}`), round: BIG_BAG_ROUND };
+      expect(rollShop(s, 0).some(isBig), `seed ${i}`).toBe(true);
+      if (!rollShop(s, 1).some(isBig)) rerollsWithout++;
+    }
+    // Only the opening shop is guaranteed.
+    expect(rerollsWithout).toBeGreaterThan(10);
+    const before = { ...run("red", "big-notice"), round: BIG_BAG_ROUND - 1, subclass: CHAMPIONS.red.subclasses[0]!, phase: "shop" as const };
+    const after = applyRoundResult(before, { outcome: "win", fainted: [], battleGold: 0, opponent: { name: "", champion: "leon", ghost: false } });
+    expect(after.round).toBe(BIG_BAG_ROUND);
+    expect(after.shop.some(isBig)).toBe(true);
+    expect(after.notices).toContainEqual({ key: "notice.bigBagAppeared", params: { n: 9 } });
   });
 });
 

@@ -92,7 +92,7 @@ function isSelfKo(move: MoveDef): boolean {
 }
 
 /** Rough value of a move for automatic moveset selection (attacks and status moves on one scale). */
-function moveScore(move: MoveDef, species: SpeciesDef): number {
+export function moveScore(move: MoveDef, species: SpeciesDef): number {
   const acc = move.accuracy === null ? 1.05 : move.accuracy / 100;
   if (move.category !== "status") {
     let power = move.power;

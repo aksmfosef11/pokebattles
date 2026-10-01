@@ -34,6 +34,8 @@ export interface PokemonPiece extends PieceBase {
   pendingEvolution: string | null;
   /** The player's name for their trained starter (meta/progress.ts); display only. */
   nickname?: string;
+  /** The one move this Pokémon uses while a Choice item powers it (run/choice.ts); unset = its strongest STAB attack. */
+  choiceMove?: string;
 }
 
 export interface ItemPiece extends PieceBase {
@@ -45,6 +47,8 @@ export interface ItemPiece extends PieceBase {
   age: number;
   /** Extra sell value a nugget earned while lying on a Coin Case. */
   caseGold?: number;
+  /** Choice items: the Pokémon it powers, picked by the player (run/choice.ts); unset = the strongest one it touches. */
+  choiceFor?: string;
 }
 
 export interface BagPiece extends PieceBase {
@@ -189,6 +193,8 @@ export type Action =
   | { t: "reroll" }
   | { t: "lock"; slot: number }
   | { t: "setAce"; uid: string }
+  /** Choice item `uid` powers the touching Pokémon `target`, which then only uses `move`. */
+  | { t: "choice"; uid: string; target: string; move: string }
   | { t: "chooseSubclass"; subclass: SubclassKey }
   /**
    * Consumables used in the shop: TM (target + replace), Master Ball (slot),

@@ -4,6 +4,9 @@ import {
   BAGS,
   calcStats,
   CHAMPION_RULES,
+  CHOICE_ITEMS,
+  choiceMoves,
+  choicePicks,
   championReach,
   chooseMoves,
   computeAdjacency,
@@ -16,6 +19,7 @@ import {
   itemReach,
   ITEMS,
   itemSize,
+  makesItemWork,
   reachCells,
   RECIPES,
   type Cell,
@@ -28,7 +32,9 @@ import {
   CATCH_UP_CAP,
   catchUpLevels,
   teamAverageLevel,
+  TIMED_ITEMS,
   type EvolutionDef,
+  type ItemPiece,
   type Nature,
   type PokemonPiece,
   type RunState,
@@ -52,6 +58,8 @@ interface DetailProps {
   onRotate: (uid: string) => void;
   onUse: (uid: string) => void;
   onSell: (uid: string) => void;
+  /** Choice item `item` powers `target`, which only uses `move`. */
+  onChoice: (item: string, target: string, move: string) => void;
 }
 
 interface MonView {
@@ -103,6 +111,7 @@ function EvolutionLines({ state, mon }: { state: RunState; mon: MonView }) {
 function PokemonDetail({ state, mon, onSetAce, onSell, onRotate, placedUid }: { state: RunState; mon: MonView; placedUid?: string } & Pick<DetailProps, "onSetAce" | "onSell" | "onRotate">) {
   const { tr } = useI18n();
   const [openMove, setOpenMove] = useState<string | null>(null);
+  const choiceLock = placedUid ? choicePicks(state.pieces).lock.get(placedUid) : undefined;
   const species = getSpecies(mon.species);
   const stats = calcStats(species.baseStats, mon.ivs, mon.level, mon.nature);
   const hpMult = battleHpMultiplier(state.round);
@@ -185,6 +194,7 @@ function PokemonDetail({ state, mon, onSetAce, onSell, onRotate, placedUid }: { 
             if (!m) return null;
             return (
               <li key={key} className="move clickable" title={tr.moveEffect(key)} onClick={() => setOpenMove(openMove === key ? null : key)}>
+                {choiceLock === key && <span className="choice-tag">{tr.t("ui.choiceTag")}</span>}
                 <TypeBadge type={m.type} scale={1.5} />
                 <span className="move-name">{tr.move(key)}</span>
                 <span className="muted small">{tr.t(`ui.category.${m.category}`)}</span>
@@ -230,7 +240,7 @@ function PokemonDetail({ state, mon, onSetAce, onSell, onRotate, placedUid }: { 
   );
 }
 
-export function Detail({ state, target, hint, suppressed, onClose, onSetAce, onUse, onSell, onRotate }: DetailProps) {
+export function Detail({ state, target, hint, suppressed, onClose, onSetAce, onUse, onSell, onRotate, onChoice }: DetailProps) {
   const { tr } = useI18n();
   const empty = <aside className="detail panel empty-detail">{hint}</aside>;
   const sheet = (children: ReactNode) => (
@@ -280,7 +290,9 @@ export function Detail({ state, target, hint, suppressed, onClose, onSetAce, onU
   return sheet(
     <>
       <ItemDetail state={state} item={piece.kind === "item" ? piece.item : piece.bag} param={piece.kind === "item" ? piece.param : undefined} />
-      {holders.length > 0 && (
+      {piece.kind === "item" && piece.item in CHOICE_ITEMS && piece.place ? (
+        <ChoicePicker state={state} item={piece} onChoice={onChoice} />
+      ) : holders.length > 0 && (
         <div className="item-row">
           {holders.map((u) => {
             const h = state.pieces[u] as PokemonPiece;
@@ -310,6 +322,46 @@ export function Detail({ state, target, hint, suppressed, onClose, onSetAce, onU
         )}
       </div>
     </>,
+  );
+}
+
+/** Choice items: which touching Pokémon it powers and its one attack. Tapping a move picks both. */
+function ChoicePicker({ state, item, onChoice }: { state: RunState; item: ItemPiece; onChoice: DetailProps["onChoice"] }) {
+  const { tr } = useI18n();
+  const picks = choicePicks(state.pieces);
+  const current = picks.holder.get(item.uid);
+  const mons = (computeAdjacency(state.pieces).holdersOf.get(item.uid) ?? [])
+    .map((u) => state.pieces[u] as PokemonPiece)
+    .filter((m) => m.ability !== "KLUTZ" && choiceMoves(m, item.item).length > 0);
+  return (
+    <div className="detail-block">
+      <div className="label">{tr.t("ui.choicePick")}</div>
+      {mons.length === 0 ? (
+        <p className="small warn">{tr.t("ui.choiceNone")}</p>
+      ) : (
+        <ul className="choice-list">
+          {mons.map((m) => (
+            <li key={m.uid} className={m.uid === current ? "on" : ""}>
+              <span className="choice-mon">
+                <PokemonSprite species={m.species} formKey={getSpecies(m.species).spriteForm} width={28} height={28} animate={false} />
+                {m.nickname ?? tr.species(m.species)}
+              </span>
+              <span className="choice-moves">
+                {choiceMoves(m, item.item).map((k) => {
+                  const on = m.uid === current && picks.lock.get(m.uid) === k;
+                  return (
+                    <button key={k} className={`btn btn-small ${on ? "btn-primary" : ""}`} aria-pressed={on} onClick={() => onChoice(item.uid, m.uid, k)}>
+                      <TypeBadge type={CONTENT.moves[k]!.type} scale={1.5} /> {tr.move(k)}
+                    </button>
+                  );
+                })}
+              </span>
+            </li>
+          ))}
+        </ul>
+      )}
+      <p className="small muted">{tr.t("ui.choiceHint")}</p>
+    </div>
   );
 }
 
@@ -369,6 +421,38 @@ function EvolutionTargets({ state, item }: { state: RunState; item: string }) {
   );
 }
 
+/** The player's Pokémon an ability- or move-bound item needs (orbs, Booster Energy, weather rocks, seeds), or what it needs. */
+function ItemUsers({ state, item }: { state: RunState; item: string }) {
+  const { tr } = useI18n();
+  const def = ITEMS[item];
+  if (!def || !(def.forAbilities || def.forMoves)) return null;
+  const mine = Object.values(state.pieces).filter((p): p is PokemonPiece => p.kind === "pokemon" && makesItemWork(def, p));
+  const reason = (m: PokemonPiece) =>
+    def.forAbilities?.includes(m.ability) ? tr.ability(m.ability) : tr.move(m.moves.find((k) => def.forMoves?.includes(k)) ?? "");
+  const needs = [...(def.forAbilities ?? []).map(tr.ability), ...(def.forMoves ?? []).map(tr.move)].join("·");
+  return (
+    <div className="detail-block">
+      <div className="label">{tr.t("ui.itemUsers")}</div>
+      {mine.length === 0 ? (
+        <p className="small warn">{tr.t("ui.itemUsersNone", { needs })}</p>
+      ) : (
+        <ul className="evo-targets">
+          {mine.map((m) => (
+            <li key={m.uid} className="owned">
+              <PokemonSprite species={m.species} formKey={getSpecies(m.species).spriteForm} width={32} height={32} animate={false} />
+              <span>{m.nickname ?? tr.species(m.species)}</span>
+              <span className="muted">{reason(m)}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+      {state.champion === "steven" && def.stone && (
+        <p className="small note">※ {tr.t("ui.stevenStoneNote", { pct: Math.round(CHAMPION_RULES.steven.stoneDefenseBonus * 100) })}</p>
+      )}
+    </div>
+  );
+}
+
 function ItemDetail({ state, item, param }: { state: RunState; item: string; param?: string }) {
   const { tr } = useI18n();
   const isBag = !!BAGS[item];
@@ -393,10 +477,12 @@ function ItemDetail({ state, item, param }: { state: RunState; item: string; par
       <div className="detail-block">
         <p>{tr.itemEffect(item, param)}</p>
         {isBag && <p className="small muted">{tr.t("ui.bagKindHint")}</p>}
-        {!isBag && item !== "TM" && item !== "TERA_SHARD" && tr.itemFlavor(item) && <p className="small muted">{tr.itemFlavor(item)}</p>}
+        {/* PokéRogue's text for battle items describes its own rules, not this game's. */}
+        {!isBag && item !== "TM" && item !== "TERA_SHARD" && !TIMED_ITEMS[item] && tr.itemFlavor(item) && <p className="small muted">{tr.itemFlavor(item)}</p>}
         {item === "TM" && param && <p className="small muted">{tr.moveEffect(param)}</p>}
       </div>
       <EvolutionTargets state={state} item={item} />
+      <ItemUsers state={state} item={item} />
       {!isBag && (
         <div className="detail-block reach-block">
           <ReachDiagram item={item} />

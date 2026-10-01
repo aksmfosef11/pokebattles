@@ -1,7 +1,7 @@
 import botRatings from "../generated/bot-ratings.json";
 import { BAGS, BOARD_H, BOARD_W, cellKey, neighbours, placeShape, poweredByBag, type Placement } from "../board.ts";
 import { CHAMPION_KEYS, CHAMPIONS, type ChampionKey } from "../content/champions.ts";
-import { CONTENT, getSpecies, ITEMS } from "../content/index.ts";
+import { CONTENT, getSpecies, ITEMS, makesItemWork } from "../content/index.ts";
 import { rngFor, type Rng } from "../rng.ts";
 import { checkPlacement, computeAdjacency, computeLayout, findFreePlacement } from "../run/layout.ts";
 import { pieceShape } from "../run/pokemon.ts";
@@ -142,7 +142,11 @@ function itemTarget(state: RunState, key: string, param?: string): PokemonPiece 
   const mons = placedMonsOf(state);
   if (def.mega) return mons.find((m) => m.species === def.mega!.species) ?? null;
   if (def.forSpecies) return mons.find((m) => m.species === def.forSpecies) ?? null;
-  if (def.forAbilities) return mons.find((m) => def.forAbilities!.includes(m.ability)) ?? null;
+  if (def.forAbilities || def.forMoves) {
+    const user = mons.find((m) => makesItemWork(def, m));
+    // Without a weather setter, Steven still wants a weather rock as a stone (below).
+    if (user || !(state.champion === "steven" && def.stone)) return user ?? null;
+  }
   if (def.family === "evolution") return mons.find((m) => getSpecies(m.species).evolutions.some((e) => e.item === key)) ?? null;
   if (def.family === "zCrystal" && def.type) {
     return mons.find((m) => m.moves.some((mv) => CONTENT.moves[mv]?.type === def.type && CONTENT.moves[mv]?.category !== "status")) ?? null;
@@ -181,7 +185,7 @@ function offerValue(state: RunState, offer: Offer): number {
       if (def.family === "evolution") return itemTarget(state, offer.item) ? 18 : 1;
       if (def.family === "tm" || def.family === "fossil") return 3;
       if (def.family === "mega") return itemTarget(state, offer.item) ? 20 : 0;
-      if (def.forAbilities) return itemTarget(state, offer.item) ? 16 : 0;
+      if (def.forAbilities || def.forMoves) return itemTarget(state, offer.item) ? 16 : 0;
       if (def.family === "zCrystal") return itemTarget(state, offer.item) ? 14 : 2;
       if (offer.item === "TERA_SHARD") return offer.param && placedMonsOf(state).some((m) => getSpecies(m.species).types.includes(offer.param as never)) ? 14 : 5;
       return 8 + def.tier * 2;

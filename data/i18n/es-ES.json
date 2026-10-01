@@ -7912,6 +7912,10 @@
       "name": "Poké Ball",
       "description": null
     },
+    "POTION": {
+      "name": "Poción",
+      "description": null
+    },
     "POWER_HERB": {
       "name": "Hierba Única",
       "description": "Permite el uso inmediato de cualquier movimiento en el primer turno. Es de un solo uso y debe llevarla un Pokémon."
@@ -8100,6 +8104,10 @@
       "name": "Piedra Solar",
       "description": "Hace que ciertos Pokémon evolucionen."
     },
+    "SUPER_POTION": {
+      "name": "Superpoción",
+      "description": null
+    },
     "SWAMPERTITE": {
       "name": "Swampertita",
       "description": "Hace que ciertos Pokémon cambien de forma."
@@ -8183,6 +8191,26 @@
     "WISE_GLASSES": {
       "name": "Gafas Especiales",
       "description": "Potencian ligeramente los ataques especiales. Debe llevarlas un Pokémon."
+    },
+    "X_ATTACK": {
+      "name": "Ataque X",
+      "description": "Aumenta la est. Ataque de todos los miembros del equipo en 20% durante 5 combates."
+    },
+    "X_DEFENSE": {
+      "name": "Defensa X",
+      "description": "Aumenta la est. Defensa de todos los miembros del equipo en 20% durante 5 combates."
+    },
+    "X_SPEED": {
+      "name": "Velocidad X",
+      "description": "Aumenta la est. Velocidad de todos los miembros del equipo en 20% durante 5 combates."
+    },
+    "X_SP_ATK": {
+      "name": "At. Especial X",
+      "description": "Aumenta la est. At. Esp. de todos los miembros del equipo en 20% durante 5 combates."
+    },
+    "X_SP_DEF": {
+      "name": "Def. Especial X",
+      "description": "Aumenta la est. Def. Esp. de todos los miembros del equipo en 20% durante 5 combates."
     },
     "YACHE_BERRY": {
       "name": "Baya Rimoya",
@@ -8940,10 +8968,6 @@
       "name": "Teralito Veneno",
       "description": "Cambia el teratipo del portador a Veneno."
     },
-    "POTION": {
-      "name": "Poción",
-      "description": null
-    },
     "PP_MAX": {
       "name": "PP Máximos",
       "description": null
@@ -9200,10 +9224,6 @@
       "name": "Supercolonia",
       "description": null
     },
-    "SUPER_POTION": {
-      "name": "Superpoción",
-      "description": null
-    },
     "SWEET_APPLE": {
       "name": "Manzana Dulce",
       "description": "Hace que ciertos Pokémon evolucionen."
@@ -9291,26 +9311,6 @@
     "X_ACCURACY": {
       "name": "Precisión X",
       "description": "Aumenta la est. Precisión de todos los miembros del equipo en 1 nivel durante 5 combates."
-    },
-    "X_ATTACK": {
-      "name": "Ataque X",
-      "description": "Aumenta la est. Ataque de todos los miembros del equipo en 20% durante 5 combates."
-    },
-    "X_DEFENSE": {
-      "name": "Defensa X",
-      "description": "Aumenta la est. Defensa de todos los miembros del equipo en 20% durante 5 combates."
-    },
-    "X_SPEED": {
-      "name": "Velocidad X",
-      "description": "Aumenta la est. Velocidad de todos los miembros del equipo en 20% durante 5 combates."
-    },
-    "X_SP_ATK": {
-      "name": "At. Especial X",
-      "description": "Aumenta la est. At. Esp. de todos los miembros del equipo en 20% durante 5 combates."
-    },
-    "X_SP_DEF": {
-      "name": "Def. Especial X",
-      "description": "Aumenta la est. Def. Esp. de todos los miembros del equipo en 20% durante 5 combates."
     },
     "YELLOW_NECTAR": {
       "name": "Néctar Amarillo",
@@ -10519,6 +10519,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "pokeball:pokeBall"
       },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
       "POWER_HERB": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "power-herb",
@@ -10721,6 +10725,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SUN_STONE"
       },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
+      },
       "SWAMPERTITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.SWAMPERTITE"
@@ -10812,6 +10820,26 @@
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "wise-glasses",
         "pokeapiLanguage": "es"
+      },
+      "X_ATTACK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
+      },
+      "X_DEFENSE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
+      },
+      "X_SPEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
+      },
+      "X_SP_ATK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
+      },
+      "X_SP_DEF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "YACHE_BERRY": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
@@ -11623,10 +11651,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.poison"
       },
-      "POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.POTION"
-      },
       "PP_MAX": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.PP_MAX"
@@ -11904,10 +11928,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.SUPER_LURE"
       },
-      "SUPER_POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.SUPER_POTION"
-      },
       "SWEET_APPLE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SWEET_APPLE"
@@ -12000,26 +12020,6 @@
       "X_ACCURACY": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:TempStatStageBoosterItem.x_accuracy"
-      },
-      "X_ATTACK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
-      },
-      "X_DEFENSE": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
-      },
-      "X_SPEED": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
-      },
-      "X_SP_ATK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
-      },
-      "X_SP_DEF": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "YELLOW_NECTAR": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",

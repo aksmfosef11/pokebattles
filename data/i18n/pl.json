@@ -2763,6 +2763,10 @@
       "name": "Pidgeotyt",
       "description": null
     },
+    "POTION": {
+      "name": "Lekarstwo",
+      "description": null
+    },
     "PYROARITE": {
       "name": "Pyroaryt",
       "description": null
@@ -2819,6 +2823,10 @@
       "name": "Steelixyt",
       "description": null
     },
+    "SUPER_POTION": {
+      "name": "Super Lekarstwo",
+      "description": null
+    },
     "SWAMPERTITE": {
       "name": "Swamperyt",
       "description": null
@@ -2838,6 +2846,26 @@
     "WHITE_HERB": {
       "name": "Białe Ziele",
       "description": null
+    },
+    "X_ATTACK": {
+      "name": "Atak X",
+      "description": "Atak wszystkich twoich Pokémonów wzrasta o 20% na czas 5 bitew."
+    },
+    "X_DEFENSE": {
+      "name": "Obrona X",
+      "description": "Obrona wszystkich twoich Pokémonów wzrasta o 20% na czas 5 bitew."
+    },
+    "X_SPEED": {
+      "name": "Szybkość X",
+      "description": "Szybkość wszystkich twoich Pokémonów wzrasta o 20% na czas 5 bitew."
+    },
+    "X_SP_ATK": {
+      "name": "Atak Sp. X",
+      "description": "Atk. Sp. wszystkich twoich Pokémonów wzrasta o 20% na czas 5 bitew."
+    },
+    "X_SP_DEF": {
+      "name": "Obrona Sp. X",
+      "description": "Obr. Sp. wszystkich twoich Pokémonów wzrasta o 20% na czas 5 bitew."
     },
     "ALTARIANITE": {
       "name": "Altarianit",
@@ -2959,10 +2987,6 @@
       "name": "Pinsiryt",
       "description": null
     },
-    "POTION": {
-      "name": "Lekarstwo",
-      "description": null
-    },
     "PP_MAX": {
       "name": "PM Maks",
       "description": null
@@ -3007,10 +3031,6 @@
       "name": "Starminit",
       "description": null
     },
-    "SUPER_POTION": {
-      "name": "Super Lekarstwo",
-      "description": null
-    },
     "TATSUGIRINITE": {
       "name": "Tatsugiryt",
       "description": null
@@ -3038,26 +3058,6 @@
     "X_ACCURACY": {
       "name": "Celność X",
       "description": null
-    },
-    "X_ATTACK": {
-      "name": "Atak X",
-      "description": "Atak wszystkich twoich Pokémonów wzrasta o 20% na czas 5 bitew."
-    },
-    "X_DEFENSE": {
-      "name": "Obrona X",
-      "description": "Obrona wszystkich twoich Pokémonów wzrasta o 20% na czas 5 bitew."
-    },
-    "X_SPEED": {
-      "name": "Szybkość X",
-      "description": "Szybkość wszystkich twoich Pokémonów wzrasta o 20% na czas 5 bitew."
-    },
-    "X_SP_ATK": {
-      "name": "Atak Sp. X",
-      "description": "Atk. Sp. wszystkich twoich Pokémonów wzrasta o 20% na czas 5 bitew."
-    },
-    "X_SP_DEF": {
-      "name": "Obrona Sp. X",
-      "description": "Obr. Sp. wszystkich twoich Pokémonów wzrasta o 20% na czas 5 bitew."
     },
     "ZERAORITE": {
       "name": "Zeraoratyt",
@@ -3387,6 +3387,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.PIDGEOTITE"
       },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
       "PYROARITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.PYROARITE"
@@ -3443,6 +3447,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.STEELIXITE"
       },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
+      },
       "SWAMPERTITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.SWAMPERTITE"
@@ -3462,6 +3470,26 @@
       "WHITE_HERB": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.WHITE_HERB"
+      },
+      "X_ATTACK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
+      },
+      "X_DEFENSE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
+      },
+      "X_SPEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
+      },
+      "X_SP_ATK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
+      },
+      "X_SP_DEF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "ALTARIANITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
@@ -3583,10 +3611,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.PINSIRITE"
       },
-      "POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.POTION"
-      },
       "PP_MAX": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.PP_MAX"
@@ -3631,10 +3655,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.STARMINITE"
       },
-      "SUPER_POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.SUPER_POTION"
-      },
       "TATSUGIRINITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.TATSUGIRINITE"
@@ -3662,26 +3682,6 @@
       "X_ACCURACY": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:TempStatStageBoosterItem.x_accuracy"
-      },
-      "X_ATTACK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
-      },
-      "X_DEFENSE": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
-      },
-      "X_SPEED": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
-      },
-      "X_SP_ATK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
-      },
-      "X_SP_DEF": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "ZERAORITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",

@@ -23,7 +23,7 @@
     "files": 4667
   },
   "bytes": {
-    "total": 103640109,
+    "total": 103640582,
     "byDir": {
       "arenas": {
         "files": 36,
@@ -51,7 +51,7 @@
       },
       "items-manifest.json": {
         "files": 1,
-        "bytes": 19511
+        "bytes": 19984
       },
       "items.json": {
         "files": 1,

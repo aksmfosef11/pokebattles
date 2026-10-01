@@ -951,6 +951,7 @@ export function RunScreen({
             suppressed={!!drag?.started || targeting !== null}
             onClose={() => setTarget(null)}
             onSetAce={(uid) => act({ t: "setAce", uid })}
+            onChoice={(uid, target, move) => act({ t: "choice", uid, target, move })}
             onRotate={rotateInPlace}
             onUse={useItem}
             onSell={(uid) => {

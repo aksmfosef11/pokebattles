@@ -61,6 +61,11 @@ export const REQUIRED_ITEMS: { group: string; keys: string[] }[] = [
     ],
   },
   {
+    // Battle items on cooldowns (TIMED_ITEMS); Super Potion is the Potion recipe.
+    group: "battleItem",
+    keys: ["X_ATTACK", "X_DEFENSE", "X_SP_ATK", "X_SP_DEF", "X_SPEED", "POTION", "SUPER_POTION"],
+  },
+  {
     // Bags named after real items (BERRY_POUCH is listed under held2 for old runs).
     group: "bag",
     keys: ["CANDY_JAR", "COIN_CASE"],

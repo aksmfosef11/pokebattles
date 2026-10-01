@@ -2700,6 +2700,10 @@
       "name": "Poké Ball",
       "description": null
     },
+    "POTION": {
+      "name": "Thuốc Hồi Phục",
+      "description": null
+    },
     "PYROARITE": {
       "name": "Pyroarite",
       "description": "Khiến Pokémon nào đó thay đổi hình thái."
@@ -2832,6 +2836,10 @@
       "name": "Thái Dương Thạch",
       "description": "Khiến Pokémon nào đó tiến hóa."
     },
+    "SUPER_POTION": {
+      "name": "Siêu Thuốc Hồi Phục",
+      "description": null
+    },
     "SWAMPERTITE": {
       "name": "Swampertite",
       "description": "Khiến Pokémon nào đó thay đổi hình thái."
@@ -2883,6 +2891,26 @@
     "WIDE_LENS": {
       "name": "Ống Kính Góc Rộng",
       "description": null
+    },
+    "X_ATTACK": {
+      "name": "X Tấn Công",
+      "description": "Tăng chỉ số Tấn công của tất cả thành viên trong tổ đội lên 20% trong tối đa 5 trận chiến."
+    },
+    "X_DEFENSE": {
+      "name": "X Phòng Thủ",
+      "description": "Tăng chỉ số Phòng thủ của tất cả thành viên trong tổ đội lên 20% trong tối đa 5 trận chiến."
+    },
+    "X_SPEED": {
+      "name": "X Tốc Độ",
+      "description": "Tăng chỉ số Tốc độ của tất cả thành viên trong tổ đội lên 20% trong tối đa 5 trận chiến."
+    },
+    "X_SP_ATK": {
+      "name": "X T.Công Đ.B",
+      "description": "Tăng chỉ số T.công Đ.b. của tất cả thành viên trong tổ đội lên 20% trong tối đa 5 trận chiến."
+    },
+    "X_SP_DEF": {
+      "name": "X P.Thủ Đ.B",
+      "description": "Tăng chỉ số P.thủ Đ.b. của tất cả thành viên trong tổ đội lên 20% trong tối đa 5 trận chiến."
     },
     "ZAP_PLATE": {
       "name": "Bản Tê Liệt",
@@ -3416,10 +3444,6 @@
       "name": "Mảnh Tera Độc",
       "description": "Thay đổi hệ Tera của Pokémon thành Độc."
     },
-    "POTION": {
-      "name": "Thuốc Hồi Phục",
-      "description": null
-    },
     "PP_MAX": {
       "name": "Nước Tăng Lực Max",
       "description": null
@@ -3592,10 +3616,6 @@
       "name": "Bình Mồi Lớn",
       "description": null
     },
-    "SUPER_POTION": {
-      "name": "Siêu Thuốc Hồi Phục",
-      "description": null
-    },
     "SWEET_APPLE": {
       "name": "Táo Ngọt",
       "description": "Khiến Pokémon nào đó tiến hóa."
@@ -3663,26 +3683,6 @@
     "X_ACCURACY": {
       "name": "X Chuẩn Xác",
       "description": "Tăng chỉ số Độ Chuẩn của tất cả thành viên trong tổ đội lên 1 bậc trong tối đa 5 trận chiến."
-    },
-    "X_ATTACK": {
-      "name": "X Tấn Công",
-      "description": "Tăng chỉ số Tấn công của tất cả thành viên trong tổ đội lên 20% trong tối đa 5 trận chiến."
-    },
-    "X_DEFENSE": {
-      "name": "X Phòng Thủ",
-      "description": "Tăng chỉ số Phòng thủ của tất cả thành viên trong tổ đội lên 20% trong tối đa 5 trận chiến."
-    },
-    "X_SPEED": {
-      "name": "X Tốc Độ",
-      "description": "Tăng chỉ số Tốc độ của tất cả thành viên trong tổ đội lên 20% trong tối đa 5 trận chiến."
-    },
-    "X_SP_ATK": {
-      "name": "X T.Công Đ.B",
-      "description": "Tăng chỉ số T.công Đ.b. của tất cả thành viên trong tổ đội lên 20% trong tối đa 5 trận chiến."
-    },
-    "X_SP_DEF": {
-      "name": "X P.Thủ Đ.B",
-      "description": "Tăng chỉ số P.thủ Đ.b. của tất cả thành viên trong tổ đội lên 20% trong tối đa 5 trận chiến."
     },
     "ZERAORITE": {
       "name": "Zeraorite",
@@ -4260,6 +4260,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "pokeball:pokeBall"
       },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
       "PYROARITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.PYROARITE"
@@ -4392,6 +4396,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SUN_STONE"
       },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
+      },
       "SWAMPERTITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.SWAMPERTITE"
@@ -4443,6 +4451,26 @@
       "WIDE_LENS": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.WIDE_LENS"
+      },
+      "X_ATTACK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
+      },
+      "X_DEFENSE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
+      },
+      "X_SPEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
+      },
+      "X_SP_ATK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
+      },
+      "X_SP_DEF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "ZAP_PLATE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
@@ -4976,10 +5004,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.poison"
       },
-      "POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.POTION"
-      },
       "PP_MAX": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.PP_MAX"
@@ -5152,10 +5176,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.SUPER_LURE"
       },
-      "SUPER_POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.SUPER_POTION"
-      },
       "SWEET_APPLE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SWEET_APPLE"
@@ -5223,26 +5243,6 @@
       "X_ACCURACY": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:TempStatStageBoosterItem.x_accuracy"
-      },
-      "X_ATTACK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
-      },
-      "X_DEFENSE": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
-      },
-      "X_SPEED": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
-      },
-      "X_SP_ATK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
-      },
-      "X_SP_DEF": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "ZERAORITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",

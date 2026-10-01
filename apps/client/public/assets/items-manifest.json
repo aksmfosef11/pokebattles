@@ -681,6 +681,10 @@
     "atlas": "items",
     "frame": "pb"
   },
+  "POTION": {
+    "atlas": "items",
+    "frame": "potion"
+  },
   "POWER_HERB": {
     "atlas": "items",
     "frame": "power_herb"
@@ -861,6 +865,10 @@
     "atlas": "items",
     "frame": "sun_stone"
   },
+  "SUPER_POTION": {
+    "atlas": "items",
+    "frame": "super_potion"
+  },
   "SWAMPERTITE": {
     "atlas": "items",
     "frame": "swampertite"
@@ -941,6 +949,26 @@
   "WISE_GLASSES": {
     "atlas": "items",
     "frame": "wise_glasses"
+  },
+  "X_ATTACK": {
+    "atlas": "items",
+    "frame": "x_attack"
+  },
+  "X_DEFENSE": {
+    "atlas": "items",
+    "frame": "x_defense"
+  },
+  "X_SPEED": {
+    "atlas": "items",
+    "frame": "x_speed"
+  },
+  "X_SP_ATK": {
+    "atlas": "items",
+    "frame": "x_sp_atk"
+  },
+  "X_SP_DEF": {
+    "atlas": "items",
+    "frame": "x_sp_def"
   },
   "YACHE_BERRY": {
     "atlas": "items",

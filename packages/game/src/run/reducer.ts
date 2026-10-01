@@ -4,7 +4,8 @@ import { getSpecies, ITEMS, type Tier } from "../content/index.ts";
 import { cleanNickname } from "../meta/cosmetics.ts";
 import { rngFor, type Rng } from "../rng.ts";
 import { natureEffect, NATURES, type Nature } from "../stats.ts";
-import { bagGroup, bagHasContents, checkPlacement, findFreePlacement, planBagMove, planDrop } from "./layout.ts";
+import { CHOICE_ITEMS, choiceMoves } from "./choice.ts";
+import { bagGroup, bagHasContents, checkPlacement, computeAdjacency, findFreePlacement, planBagMove, planDrop } from "./layout.ts";
 import { moveSlotsFor, newPokemon, pieceShape, refreshMoves, rollIvs, rollTraits, trainTraits, type StarterSetup } from "./pokemon.ts";
 import { RUN_STATE_VERSION } from "./migrate.ts";
 import { championSpeciesByTier, championSpeciesOfTier } from "./pool.ts";
@@ -147,7 +148,7 @@ function requireSeed(state: RunState): void {
   if (!state.seed) throw new GameError("needs_server");
 }
 
-const ACTION_TYPES = new Set(["buy", "sell", "move", "reroll", "lock", "setAce", "chooseSubclass", "use"]);
+const ACTION_TYPES = new Set(["buy", "sell", "move", "reroll", "lock", "setAce", "choice", "chooseSubclass", "use"]);
 
 function badAction(): never {
   throw new GameError("bad_action");
@@ -189,6 +190,8 @@ export function readAction(input: unknown): Action {
       return { t: "lock", slot: slot(a.slot) };
     case "setAce":
       return { t: "setAce", uid: str(a.uid) };
+    case "choice":
+      return { t: "choice", uid: str(a.uid), target: str(a.target), move: str(a.move) };
     case "chooseSubclass":
       return { t: "chooseSubclass", subclass: str(a.subclass) as Extract<Action, { t: "chooseSubclass" }>["subclass"] };
     default: {
@@ -454,6 +457,17 @@ export function applyAction(prev: RunState, input: Action): RunState {
       const piece = requirePiece(state, action.uid);
       if (piece.kind !== "pokemon") throw new GameError("invalid_target");
       state.ace = piece.uid;
+      return state;
+    }
+    case "choice": {
+      requirePhase(state, "shop");
+      const item = requirePiece(state, action.uid);
+      const mon = requirePiece(state, action.target);
+      if (item.kind !== "item" || !(item.item in CHOICE_ITEMS) || !item.place) throw new GameError("not_choice");
+      if (mon.kind !== "pokemon" || !(computeAdjacency(state.pieces).holdersOf.get(item.uid) ?? []).includes(mon.uid)) throw new GameError("invalid_target");
+      if (mon.ability === "KLUTZ" || !choiceMoves(mon, item.item).includes(action.move)) throw new GameError("invalid_move");
+      item.choiceFor = mon.uid;
+      mon.choiceMove = action.move;
       return state;
     }
     case "use": {

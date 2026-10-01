@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
-import { BERRY_POUCH_SAVE_CHANCE, CANDY_JAR_EXTRA_LEVELS, COIN_CASE_EXTRA_GOLD, COIN_CASE_WIN_GOLD, CONTENT, ITEMS } from "@pokebattles/game";
+import { BERRY_POUCH_SAVE_CHANCE, CANDY_JAR_EXTRA_LEVELS, COIN_CASE_EXTRA_GOLD, COIN_CASE_WIN_GOLD, CHOICE_BOOST, CHOICE_ITEMS, CONTENT, ITEMS, TIMED_ITEMS } from "@pokebattles/game";
 
 type Dict = Record<string, unknown>;
 
@@ -174,6 +174,10 @@ export class Translator {
     }
     if (key === "TM") return this.t("itemEffect.TM", { move: this.move(param ?? "") });
     if (key === "MINT") return param ? this.t("itemEffect.MINT", { nature: this.nature(param) }) : this.t("itemEffect.MINT_RANDOM");
+    if (key in CHOICE_ITEMS) return this.t(`itemEffect.${key}`, { mult: CHOICE_BOOST });
+    const timed = TIMED_ITEMS[key];
+    if (timed) return this.t(`itemEffect.${key}`, { sec: timed.every, uses: timed.uses, ...("heal" in timed ? { pct: Math.round(timed.heal * 100) } : {}) });
+    if (def.forAbilities) return this.t(`itemEffect.${key}`, { abilities: def.forAbilities.map(this.ability).join("·") });
     return this.t(`itemEffect.${key}`);
   };
 }

@@ -7913,6 +7913,10 @@
       "name": "モンスターボール",
       "description": null
     },
+    "POTION": {
+      "name": "キズぐすり",
+      "description": null
+    },
     "POWER_HERB": {
       "name": "パワフルハーブ",
       "description": "持たせた　ポケモンは　１度だけ１ターン目に　ちからを　ためる技をすぐに　使うことが　できる。"
@@ -8101,6 +8105,10 @@
       "name": "たいようのいし",
       "description": "ある特定の ポケモンを 進化させる"
     },
+    "SUPER_POTION": {
+      "name": "いいキズぐすり",
+      "description": null
+    },
     "SWAMPERTITE": {
       "name": "ラグラージナイト",
       "description": "ある特定の ポケモンを フォームチェンジさせる"
@@ -8184,6 +8192,26 @@
     "WISE_GLASSES": {
       "name": "ものしりメガネ",
       "description": "ぶあつい　レンズの　ついた　メガネ。持たせると　特殊技の威力が　少し　あがる。"
+    },
+    "X_ATTACK": {
+      "name": "プラスパワー",
+      "description": "全員の 手持ちポケモンの 攻撃を 最大５回の バトルの間に ２０% 上げる"
+    },
+    "X_DEFENSE": {
+      "name": "ディフェンダー",
+      "description": "全員の 手持ちポケモンの 防御を 最大５回の バトルの間に ２０% 上げる"
+    },
+    "X_SPEED": {
+      "name": "スピーダー",
+      "description": "全員の 手持ちポケモンの 素早さを 最大５回の バトルの間に ２０% 上げる"
+    },
+    "X_SP_ATK": {
+      "name": "スペシャルアップ",
+      "description": "全員の 手持ちポケモンの 特攻を 最大５回の バトルの間に ２０% 上げる"
+    },
+    "X_SP_DEF": {
+      "name": "スペシャルガード",
+      "description": "全員の 手持ちポケモンの 特防を 最大５回の バトルの間に ２０% 上げる"
     },
     "YACHE_BERRY": {
       "name": "ヤチェのみ",
@@ -8941,10 +8969,6 @@
       "name": "テラピースどく",
       "description": "テラスタイプを どくに する"
     },
-    "POTION": {
-      "name": "キズぐすり",
-      "description": null
-    },
     "PP_MAX": {
       "name": "ポイントマックス",
       "description": null
@@ -9201,10 +9225,6 @@
       "name": "シルバーコロン",
       "description": null
     },
-    "SUPER_POTION": {
-      "name": "いいキズぐすり",
-      "description": null
-    },
     "SWEET_APPLE": {
       "name": "あまーいりんご",
       "description": "ある特定の ポケモンを 進化させる"
@@ -9292,26 +9312,6 @@
     "X_ACCURACY": {
       "name": "ヨクアタール",
       "description": "全員の 手持ちポケモンの 命中を 最大５回の バトルの間に １段階 上げる"
-    },
-    "X_ATTACK": {
-      "name": "プラスパワー",
-      "description": "全員の 手持ちポケモンの 攻撃を 最大５回の バトルの間に ２０% 上げる"
-    },
-    "X_DEFENSE": {
-      "name": "ディフェンダー",
-      "description": "全員の 手持ちポケモンの 防御を 最大５回の バトルの間に ２０% 上げる"
-    },
-    "X_SPEED": {
-      "name": "スピーダー",
-      "description": "全員の 手持ちポケモンの 素早さを 最大５回の バトルの間に ２０% 上げる"
-    },
-    "X_SP_ATK": {
-      "name": "スペシャルアップ",
-      "description": "全員の 手持ちポケモンの 特攻を 最大５回の バトルの間に ２０% 上げる"
-    },
-    "X_SP_DEF": {
-      "name": "スペシャルガード",
-      "description": "全員の 手持ちポケモンの 特防を 最大５回の バトルの間に ２０% 上げる"
     },
     "YELLOW_NECTAR": {
       "name": "やまぶきのミツ",
@@ -10520,6 +10520,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "pokeball:pokeBall"
       },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
       "POWER_HERB": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "power-herb",
@@ -10722,6 +10726,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SUN_STONE"
       },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
+      },
       "SWAMPERTITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.SWAMPERTITE"
@@ -10813,6 +10821,26 @@
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "wise-glasses",
         "pokeapiLanguage": "ja"
+      },
+      "X_ATTACK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
+      },
+      "X_DEFENSE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
+      },
+      "X_SPEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
+      },
+      "X_SP_ATK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
+      },
+      "X_SP_DEF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "YACHE_BERRY": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
@@ -11624,10 +11652,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.poison"
       },
-      "POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.POTION"
-      },
       "PP_MAX": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.PP_MAX"
@@ -11905,10 +11929,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.SUPER_LURE"
       },
-      "SUPER_POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.SUPER_POTION"
-      },
       "SWEET_APPLE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SWEET_APPLE"
@@ -12001,26 +12021,6 @@
       "X_ACCURACY": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:TempStatStageBoosterItem.x_accuracy"
-      },
-      "X_ATTACK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
-      },
-      "X_DEFENSE": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
-      },
-      "X_SPEED": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
-      },
-      "X_SP_ATK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
-      },
-      "X_SP_DEF": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "YELLOW_NECTAR": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",

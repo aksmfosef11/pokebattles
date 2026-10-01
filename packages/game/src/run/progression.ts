@@ -6,7 +6,7 @@ import { rngFor } from "../rng.ts";
 import { checkPlacement, claimPlacement, computeAdjacency } from "./layout.ts";
 import { evolveAbility, MAX_LEVEL, moveSlotsFor, newPokemon, refreshMoves, rollTraits } from "./pokemon.ts";
 import { isLanceKinLine, lineBase } from "./pool.ts";
-import { basePartyCap, bigPartyCount, INCOME, legendNotice, MAX_ROUNDS, partyCap, partyCount, rollShop, shopSize, STASH_LIMIT, SUBCLASS_ROUND, WINS_TO_CLEAR } from "./shop.ts";
+import { basePartyCap, bigBagNotice, bigPartyCount, INCOME, legendNotice, MAX_ROUNDS, partyCap, partyCount, rollShop, shopSize, STASH_LIMIT, SUBCLASS_ROUND, WINS_TO_CLEAR } from "./shop.ts";
 import type { BattleOutcome, Notice, PokemonPiece, RoundLog, RunState, TeamCosmetics, TeamSnapshot } from "./types.ts";
 
 export const XP_WIN = 4;
@@ -254,6 +254,7 @@ export function applyRoundResult(prev: RunState, result: RoundResult): RunState 
   if (outcome === "loss") income.consolation = 1;
   if (state.champion === "steven") income.devon = CHAMPION_RULES.steven.extraIncome;
   if (state.champion === "leon" && state.streak > 0) income.streak = Math.min(state.streak, CHAMPION_RULES.leon.streakIncomeCap);
+  if (state.champion === "leon" && outcome === "loss") income.rematch = CHAMPION_RULES.leon.lossIncome;
   if (state.champion === "geeta") {
     const cap = state.subclass === "geeta_investor" ? CHAMPION_RULES.geeta.investorInterestCap : CHAMPION_RULES.geeta.interestCap;
     const interest = Math.min(cap, Math.floor(state.gold / CHAMPION_RULES.geeta.interestPer));
@@ -285,6 +286,8 @@ export function applyRoundResult(prev: RunState, result: RoundResult): RunState 
     state.shop = rollShop(state, 0);
     const legend = legendNotice(state);
     if (legend) notices.push(legend);
+    const bigBag = bigBagNotice(state);
+    if (bigBag) notices.push(bigBag);
   }
   return state;
 }

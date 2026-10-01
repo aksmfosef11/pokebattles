@@ -7910,6 +7910,10 @@
       "name": "精灵球",
       "description": null
     },
+    "POTION": {
+      "name": "伤药",
+      "description": null
+    },
     "POWER_HERB": {
       "name": "强力香草",
       "description": "携带它的宝可梦仅有１次机会可以在第１回合使出需要蓄力的招式。"
@@ -8098,6 +8102,10 @@
       "name": "日之石",
       "description": "使某些宝可梦进化。"
     },
+    "SUPER_POTION": {
+      "name": "好伤药",
+      "description": null
+    },
     "SWAMPERTITE": {
       "name": "巨沼怪进化石",
       "description": "使某些宝可梦更改形态。"
@@ -8181,6 +8189,26 @@
     "WISE_GLASSES": {
       "name": "博识眼镜",
       "description": "装着很厚镜片的眼镜。携带后，特殊招式的威力就会少量提高。"
+    },
+    "X_ATTACK": {
+      "name": "力量强化",
+      "description": "提升全队的攻击２０%，持续５场战斗。"
+    },
+    "X_DEFENSE": {
+      "name": "防御强化",
+      "description": "提升全队的防御２０%，持续５场战斗。"
+    },
+    "X_SPEED": {
+      "name": "速度强化",
+      "description": "提升全队的速度２０%，持续５场战斗。"
+    },
+    "X_SP_ATK": {
+      "name": "特攻强化",
+      "description": "提升全队的特攻２０%，持续５场战斗。"
+    },
+    "X_SP_DEF": {
+      "name": "特防强化",
+      "description": "提升全队的特防２０%，持续５场战斗。"
     },
     "YACHE_BERRY": {
       "name": "番荔果",
@@ -8938,10 +8966,6 @@
       "name": "毒太晶碎块",
       "description": "将宝可梦的太晶属性变为毒。"
     },
-    "POTION": {
-      "name": "伤药",
-      "description": null
-    },
     "PP_MAX": {
       "name": "ＰＰ极限提升剂",
       "description": null
@@ -9198,10 +9222,6 @@
       "name": "白银香水",
       "description": null
     },
-    "SUPER_POTION": {
-      "name": "好伤药",
-      "description": null
-    },
     "SWEET_APPLE": {
       "name": "甜甜苹果",
       "description": "使某些宝可梦进化。"
@@ -9289,26 +9309,6 @@
     "X_ACCURACY": {
       "name": "命中强化",
       "description": "提升全队的命中率１阶，持续５场战斗。"
-    },
-    "X_ATTACK": {
-      "name": "力量强化",
-      "description": "提升全队的攻击２０%，持续５场战斗。"
-    },
-    "X_DEFENSE": {
-      "name": "防御强化",
-      "description": "提升全队的防御２０%，持续５场战斗。"
-    },
-    "X_SPEED": {
-      "name": "速度强化",
-      "description": "提升全队的速度２０%，持续５场战斗。"
-    },
-    "X_SP_ATK": {
-      "name": "特攻强化",
-      "description": "提升全队的特攻２０%，持续５场战斗。"
-    },
-    "X_SP_DEF": {
-      "name": "特防强化",
-      "description": "提升全队的特防２０%，持续５场战斗。"
     },
     "YELLOW_NECTAR": {
       "name": "金黄色花蜜",
@@ -10517,6 +10517,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "pokeball:pokeBall"
       },
+      "POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.POTION"
+      },
       "POWER_HERB": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "power-herb",
@@ -10719,6 +10723,10 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SUN_STONE"
       },
+      "SUPER_POTION": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:ModifierType.SUPER_POTION"
+      },
       "SWAMPERTITE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:FormChangeItem.SWAMPERTITE"
@@ -10810,6 +10818,26 @@
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
         "pokeapiIdentifier": "wise-glasses",
         "pokeapiLanguage": "zh-hans"
+      },
+      "X_ATTACK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
+      },
+      "X_DEFENSE": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
+      },
+      "X_SPEED": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
+      },
+      "X_SP_ATK": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
+      },
+      "X_SP_DEF": {
+        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
+        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "YACHE_BERRY": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",
@@ -11621,10 +11649,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.TerastallizeModifierType (template) + pokemonInfo:type.poison"
       },
-      "POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.POTION"
-      },
       "PP_MAX": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.PP_MAX"
@@ -11902,10 +11926,6 @@
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:ModifierType.SUPER_LURE"
       },
-      "SUPER_POTION": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:ModifierType.SUPER_POTION"
-      },
       "SWEET_APPLE": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:EvolutionItem.SWEET_APPLE"
@@ -11998,26 +12018,6 @@
       "X_ACCURACY": {
         "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
         "localeKey": "modifierType:TempStatStageBoosterItem.x_accuracy"
-      },
-      "X_ATTACK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_attack"
-      },
-      "X_DEFENSE": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_defense"
-      },
-      "X_SPEED": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_speed"
-      },
-      "X_SP_ATK": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_atk"
-      },
-      "X_SP_DEF": {
-        "source": "pokerogue-locales@e46279a0a511e5b6f552dfcab522644822b2908a",
-        "localeKey": "modifierType:TempStatStageBoosterItem.x_sp_def"
       },
       "YELLOW_NECTAR": {
         "source": "pokeapi@ca0a21b3587af20b52c8a00d33812c47b75fe341",

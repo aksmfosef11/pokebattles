@@ -1,6 +1,6 @@
 import { BAGS } from "../board.ts";
 import { CHAMPION_RULES } from "../content/champions.ts";
-import { CONTENT, getSpecies, itemEvolutions, ITEMS, TYPES, type Tier, type TypeKey } from "../content/index.ts";
+import { CONTENT, getSpecies, itemEvolutions, ITEMS, makesItemWork, TYPES, type Tier, type TypeKey } from "../content/index.ts";
 import { rngFor, type Rng } from "../rng.ts";
 import { stackMul } from "../battle/calc.ts";
 import { rollTraits } from "./pokemon.ts";
@@ -197,9 +197,12 @@ function rollItem(state: RunState, rng: Rng): Offer {
       let weight = (def.champions ? 2.5 : 1) * (def.weight ?? 1);
       // Species items only show up for Pokémon this champion can actually get.
       if (def.forSpecies) weight *= owned.includes(def.forSpecies) ? 6 : relevant.has(def.forSpecies) ? 0.1 : 0;
-      if (def.forAbilities) {
-        const fits = (key: string) => speciesAbilities(key).some((a) => def.forAbilities!.includes(a));
-        weight *= owned.some(fits) ? 6 : [...relevant].some(fits) ? 0.1 : 0;
+      // Steven's passive uses weather rocks as stones, so he gets them without a weather setter.
+      if ((def.forAbilities || def.forMoves) && !(state.champion === "steven" && def.stone)) {
+        // An owned Pokémon counts by the ability it really has (a hidden ability is rolled at 1/16) and the moves it knows.
+        const fits = (key: string) => speciesAbilities(key).some((a) => def.forAbilities?.includes(a));
+        const ownedFit = Object.values(state.pieces).some((p) => p.kind === "pokemon" && makesItemWork(def, p));
+        weight *= ownedFit ? 6 : [...relevant].some(fits) ? 0.1 : 0;
       }
       if (def.key === "TM" && state.champion === "kukui") weight *= CHAMPION_RULES.kukui.tmShopWeight;
       if (def.mega) weight *= owned.includes(def.mega.species) ? 4 : relevant.has(def.mega.species) ? 0.5 : 0;
@@ -304,6 +307,19 @@ export function legendNotice(state: RunState): Notice | null {
 /** Opening shops of the first rounds always include a bag. */
 export const GUARANTEED_BAG_ROUNDS = 3;
 
+/**
+ * The round the party grows to its last size (9) opens with a big bag. Live boards were tightest there:
+ * evolved and legendary Pokémon waited in the stash while bags got rarer in the shop.
+ */
+export const BIG_BAG_ROUND = PARTY_CAP_STEPS[PARTY_CAP_STEPS.length - 1]![0];
+export const BIG_BAGS: readonly string[] = ["BAG_2X3", "BAG_3X3"];
+
+/** "The party grew, here is a big bag" for the opening shop of BIG_BAG_ROUND (after rollShop(state, 0)). */
+export function bigBagNotice(state: RunState): Notice | null {
+  if (state.round !== BIG_BAG_ROUND || !state.shop.some((s) => s.offer?.kind === "bag" && BIG_BAGS.includes(s.offer.bag))) return null;
+  return { key: "notice.bigBagAppeared", params: { n: basePartyCap(state.round) } };
+}
+
 /** Rolls every unlocked slot. `rerollIndex` 0 is the round's opening shop. */
 export function rollShop(state: RunState, rerollIndex: number): ShopSlot[] {
   const out: ShopSlot[] = [];
@@ -319,6 +335,11 @@ export function rollShop(state: RunState, rerollIndex: number): ShopSlot[] {
   if (rerollIndex === 0 && state.round <= GUARANTEED_BAG_ROUNDS && !out.some((s) => s.offer?.kind === "bag")) {
     const last = out.findLastIndex((s) => !s.locked);
     if (last >= 0) out[last] = { offer: rollBag(state, rngFor(state.seed, "shop-bag", state.round)), locked: false, sale: false };
+  }
+  if (rerollIndex === 0 && state.round === BIG_BAG_ROUND && !out.some((s) => s.offer?.kind === "bag" && BIG_BAGS.includes(s.offer.bag))) {
+    const last = out.findLastIndex((s) => !s.locked);
+    const bag = rngFor(state.seed, "shop-big-bag", state.round).pick(BIG_BAGS);
+    if (last >= 0) out[last] = { offer: { kind: "bag", tier: BAGS[bag]!.tier, bag }, locked: false, sale: false };
   }
   // Legendaries open with one in the first slot that is not locked, unless the shop already shows one.
   if (isLegendShop(state, rerollIndex) && !out.some((s) => s.offer?.kind === "pokemon" && s.offer.tier === 5)) {

@@ -240,7 +240,8 @@ describe("abilities added with the 420-species roster", () => {
       seed: "merciless",
       teams: [
         team([mon("TOXAPEX", 50, 3, 1, { ability: "MERCILESS", moves: ["POUND"] })]),
-        team([dummy(3, { ability: "SERENE_GRACE", moves: ["GROWL"] }), item("TOXIC_ORB", 3, 2)]),
+        // Toxic Orb only poisons a Pokémon that gains from it, such as Guts.
+        team([dummy(3, { ability: "GUTS", moves: ["GROWL"] }), item("TOXIC_ORB", 3, 2)]),
       ],
     });
     const hits = r.events.filter((e) => e.k === "damage" && e.cause === "move" && e.src === 0);
