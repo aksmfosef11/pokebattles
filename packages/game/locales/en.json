@@ -704,11 +704,84 @@
     "line": "3 cells ahead",
     "row": "Whole row"
   },
+  "targets": {
+    "button": "Targeting",
+    "title": "Targets & placement",
+    "intro": "A Pokémon attacks the same from any row. Placement decides who hits whom.",
+    "rulesTitle": "How an attacker picks its target",
+    "examplesTitle": "Placement examples",
+    "legend": {
+      "ally": "Your Pokémon",
+      "foe": "Opponent",
+      "target": "Targeted",
+      "splash": "Spread damage",
+      "skip": "Skipped (immune)",
+      "front": "Front row"
+    },
+    "rule": {
+      "front": {
+        "name": "Front row first",
+        "desc": "Attacks aim at the opponent's frontmost row (the one closest to you). When that row is knocked out, the next row becomes the front. A Pokémon taking several cells counts from its frontmost cell."
+      },
+      "lane": {
+        "name": "Nearest column",
+        "desc": "With several Pokémon in that row, the attacker picks the one closest to it horizontally. Wide Pokémon are measured from their middle. The attacker's own row does not matter."
+      },
+      "immune": {
+        "name": "Immune foes are skipped",
+        "desc": "Foes the move cannot touch (Normal or Fighting moves against a Ghost, {{levitate}} or {{balloon}} against Ground, absorbing abilities like {{waterAbsorb}} or {{voltAbsorb}}) are passed over, and the attacker picks the frontmost, nearest foe it can hit. If none can be hit, it attacks the front row anyway."
+      },
+      "spread": {
+        "name": "Spread moves",
+        "desc": "Moves like {{rockSlide}} or {{heatWave}} also hit foes orthogonally touching the target. {{earthquake}} and {{surf}} also hit allies touching the user."
+      },
+      "special": {
+        "name": "Exceptions",
+        "desc": "Moves like {{outrage}} or {{thrash}} pick a random foe. Pokémon with {{infiltrator}} or {{stalwart}} aim at the foe with the lowest HP percentage."
+      },
+      "frontOnly": {
+        "name": "Front-row-only effects",
+        "desc": "{{intimidate}} only reaches the opponent's front row. A foe with {{shadowTag}} slows the gauge of your front row."
+      }
+    },
+    "example": {
+      "wall": {
+        "name": "One wall draws every hit",
+        "desc": "Put a single sturdy Pokémon in the front row and every enemy attack goes to it, while your attackers hit safely from behind. When the wall falls, the row behind becomes the front."
+      },
+      "split": {
+        "name": "A wide front row splits damage",
+        "desc": "With one Pokémon at each end of the front row, each foe hits the closer one, so the damage is shared and nobody gets focused down early."
+      },
+      "focus": {
+        "name": "Group attackers to focus fire",
+        "desc": "Attackers on the same side all hit the same foe and knock it out fast. Spread them out and their damage is split across foes."
+      },
+      "immune": {
+        "name": "An immune wall gets walked past",
+        "desc": "A Ghost in front does not shield against Normal attacks: the foe skips it and hits the Pokémon behind. Give the wall role to something the enemy's moves can hit."
+      },
+      "spread": {
+        "name": "Leave a gap against spread moves",
+        "desc": "Touching Pokémon take a spread move together; one a cell apart is safe. You lose touching bonuses from items and abilities, so weigh it."
+      },
+      "quake": {
+        "name": "Keep {{earthquake}} users apart",
+        "desc": "{{earthquake}} and {{surf}} also hit allies touching the user. Keep it apart, or put a Flying type or a {{levitate}} Pokémon next to it, which {{earthquake}} cannot touch."
+      }
+    }
+  },
   "patchNotes": {
     "title": "Patch notes",
     "new": "NEW",
     "older": "Earlier patches",
     "entries": [
+      {
+        "date": "2026-10-01",
+        "items": [
+          "A \"? Targeting\" button now sits beside the board's front-row label. It explains how attackers pick their targets, with placement examples"
+        ]
+      },
       {
         "date": "2026-09-30 (2)",
         "items": [

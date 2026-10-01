@@ -45,6 +45,8 @@ interface BoardProps {
   onPiecePointerDown: (e: ReactPointerEvent, uid: string) => void;
   onPieceContext: (uid: string) => void;
   onBackgroundClick: () => void;
+  /** Opens the targeting guide (the ? beside the front-row label). */
+  onTargetHelp: () => void;
 }
 
 /** Arrow showing where a directional item points after rotation. */
@@ -65,7 +67,7 @@ function box(piece: Piece): { x: number; y: number; w: number; h: number } {
 }
 
 export const Board = forwardRef<HTMLDivElement, BoardProps>(function Board(
-  { state, cell, selected, highlight, preview, dragging, stars, affected, recipeUid, onHover, onPiecePointerDown, onPieceContext, onBackgroundClick },
+  { state, cell, selected, highlight, preview, dragging, stars, affected, recipeUid, onHover, onPiecePointerDown, onPieceContext, onBackgroundClick, onTargetHelp },
   ref,
 ) {
   const { tr } = useI18n();
@@ -129,7 +131,12 @@ export const Board = forwardRef<HTMLDivElement, BoardProps>(function Board(
       }}
     >
       {grid}
-      <div className="front-label">{tr.t("ui.front")} ↑</div>
+      <div className="front-label">
+        <span>{tr.t("ui.front")} ↑</span>
+        <button className="target-help" data-sfx="ui/menu_open" title={tr.t("targets.title")} onClick={onTargetHelp}>
+          ? {tr.t("targets.button")}
+        </button>
+      </div>
       {bags.map((b) => {
         if (!BAGS[b.bag]?.realItem) return null;
         // The item's icon on the bag's last cell tells a Berry Pouch from a Candy Jar at a glance.

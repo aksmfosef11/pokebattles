@@ -45,6 +45,7 @@ import { Board, type BoardPreview } from "../components/Board.tsx";
 import { Detail, type DetailTarget } from "../components/Detail.tsx";
 import { OpponentIntro } from "../components/OpponentIntro.tsx";
 import { RecipeBook } from "../components/RecipeBook.tsx";
+import { TargetGuide } from "../components/TargetGuide.tsx";
 import { RunMenu } from "../components/RunMenu.tsx";
 import { Shop } from "../components/Shop.tsx";
 import { SoundButton } from "../components/SoundButton.tsx";
@@ -174,6 +175,7 @@ export function RunScreen({
   const [hovered, setHovered] = useState<string | null>(null);
   const [showRecipes, setShowRecipes] = useState(false);
   const [showFoes, setShowFoes] = useState(false);
+  const [showTargets, setShowTargets] = useState(false);
   const [targeting, setTargeting] = useState<Targeting>(null);
   const [busy, setBusy] = useState(false);
   /** A reroll, Poké Ball or subclass choice is being committed by the server; the board waits for it. */
@@ -868,6 +870,7 @@ export function RunScreen({
                     setTarget(null);
                   }}
                   onBackgroundClick={() => setTarget(null)}
+                  onTargetHelp={() => setShowTargets(true)}
                 />
               </div>
               <div className="board-side">
@@ -958,6 +961,7 @@ export function RunScreen({
 
         {showRecipes && <RecipeBook champion={state.champion} onClose={() => setShowRecipes(false)} />}
         {showFoes && upcoming.length > 0 && <OpponentIntro upcoming={upcoming} onClose={() => setShowFoes(false)} />}
+        {showTargets && <TargetGuide onClose={() => setShowTargets(false)} />}
         {targeting && (
           <div className="targeting-bar">
             {targeting.kind === "pokemon" ? tr.t("ui.pickTarget") : tr.t("ui.pickShopSlot")}

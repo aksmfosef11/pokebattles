@@ -716,8 +716,25 @@ select {
   position: absolute;
   top: -20px;
   left: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: 11px;
   color: var(--muted);
+}
+.target-help {
+  font: inherit;
+  font-size: 11px;
+  line-height: 14px;
+  padding: 0 6px;
+  color: var(--gold);
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.target-help:hover {
+  background: #3b4166;
 }
 .piece {
   position: absolute;
@@ -919,6 +936,148 @@ select {
 }
 .modal.opponent-intro {
   width: min(720px, 100%);
+}
+.modal.target-guide {
+  width: min(820px, 100%);
+  text-align: left;
+  /* Korean wraps between words, not inside them. */
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.modal.target-guide h2,
+.modal.target-guide > .btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.modal.target-guide h3 {
+  margin: 14px 0 6px;
+  font-size: 14px;
+  color: var(--gold);
+}
+.target-rules {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+}
+.target-rules li b {
+  margin-right: 6px;
+}
+.mf-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-bottom: 8px;
+}
+.mf-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.mf-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.mf-dot.ally {
+  background: var(--blue);
+}
+.mf-dot.foe {
+  background: var(--red);
+}
+.mf-dot.target {
+  box-shadow: inset 0 0 0 2px var(--gold);
+}
+.mf-dot.splash {
+  box-shadow: inset 0 0 0 2px #ff9f43;
+}
+.mf-dot.front {
+  border-radius: 2px;
+  background: #f7c94833;
+  box-shadow: inset 0 0 0 1px #f7c94888;
+}
+.target-examples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.target-example {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.target-example > b {
+  align-self: stretch;
+}
+.target-example p {
+  margin: 0;
+  align-self: stretch;
+}
+.mini-field {
+  overflow: visible;
+}
+.mf-cell {
+  fill: var(--cell-empty);
+  stroke: var(--line);
+  stroke-width: 0.5;
+}
+.mf-cell.front {
+  fill: #f7c94822;
+  stroke: #f7c94866;
+}
+.mf-mon circle {
+  stroke-width: 2;
+  stroke: transparent;
+}
+.mf-mon.ally circle {
+  fill: var(--blue);
+}
+.mf-mon.foe circle {
+  fill: var(--red);
+}
+.mf-mon.target circle {
+  stroke: var(--gold);
+}
+.mf-mon.splash circle {
+  stroke: #ff9f43;
+  stroke-dasharray: 3 2;
+}
+.mf-mon.skip circle {
+  opacity: 0.55;
+}
+.mf-mon text {
+  font-size: 11px;
+}
+.mf-mon text.mf-skip {
+  font-size: 10px;
+  font-weight: bold;
+  fill: var(--text);
+}
+.mf-line {
+  stroke-width: 1.6;
+}
+.mf-line.ally,
+.mf-arrow-ally {
+  stroke: var(--blue);
+  fill: var(--blue);
+}
+.mf-line.foe,
+.mf-arrow-foe {
+  stroke: #ff7a72;
+  fill: #ff7a72;
+}
+.mf-arrow-ally,
+.mf-arrow-foe {
+  stroke: none;
 }
 .opponent-cards {
   display: grid;
