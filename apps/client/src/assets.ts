@@ -104,7 +104,8 @@ export function getPokemonManifest(): Promise<PokemonManifest> {
 }
 
 export function getItemManifest(): Promise<Record<string, ItemIconRef>> {
-  itemManifest ??= fetch("/assets/items-manifest.json").then((r) => r.json() as Promise<Record<string, ItemIconRef>>);
+  // "no-cache" = always revalidate: the manifest gains entries with new items, and a copy cached for a day leaves them iconless.
+  itemManifest ??= fetch("/assets/items-manifest.json", { cache: "no-cache" }).then((r) => r.json() as Promise<Record<string, ItemIconRef>>);
   return itemManifest;
 }
 

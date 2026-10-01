@@ -148,6 +148,9 @@ export function ItemIcon({ item, param, size = 32, className }: { item: string; 
       let ref2 = manifest[key];
       if (item === "TM") ref2 = { atlas: "items", frame: `tm_${(param && CONTENT.moves[param]?.type) || "normal"}` };
       if (item === "MINT") ref2 = { atlas: "items", frame: mintFrame(param) };
+      // PokéRogue has no Dynamax Candy sprite: its Rare Candy turned Dynamax red.
+      const tint = item === "DYNAMAX_CANDY";
+      if (tint) ref2 = { atlas: "items", frame: "rare_candy" };
       const canvas = ref.current;
       if (!alive || !canvas || !ref2) return;
       const dpr = window.devicePixelRatio || 1;
@@ -156,6 +159,7 @@ export function ItemIcon({ item, param, size = 32, className }: { item: string; 
       const ctx = canvas.getContext("2d")!;
       ctx.imageSmoothingEnabled = false;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      if (tint) ctx.filter = "hue-rotate(110deg) saturate(1.2)";
       if ("file" in ref2) {
         const img = await loadImageCached(ref2.file);
         if (!alive) return;
