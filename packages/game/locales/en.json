@@ -794,12 +794,13 @@
       {
         "date": "2026-10-01 (2)",
         "items": [
-          "More bags late in a run: the opening shop of round 11, when the party grows to 9, always has a big bag (3×2 or 3×3). Live data showed boards running out of room most at rounds 11–12, with Pokémon stuck in the stash",
-          "New battle items that trigger on a timer. X Attack and X Sp. Atk raise the stat of the Pokémon they touch by one stage every 5 seconds and X Speed every 6 (up to twice); X Defense and X Sp. Def every 3 seconds (up to 3 times). A Potion heals the most hurt Pokémon it touches by 30% every 4 seconds (up to 3 times); two touching Potions make a Super Potion (50%). Back-row Pokémon that last longer get the most out of them",
-          "Flame Orb and Toxic Orb are no longer traps. They only affect Guts, Marvel Scale, Quick Feet and Magic Guard Pokémon, leave every other neighbour alone, and only show up when you own such a Pokémon. Toxic Orb now poisons instead of badly poisoning (bad poison keeps growing here and wore down even Guts Pokémon)",
-          "Choice Band, Choice Specs and Choice Scarf changed: they power one of the Pokémon they touch (×1.5 → ×2), and you pick the move it uses all battle (physical for the Band, special for the Specs, any attack for the Scarf) (tap the item). Without a pick it is the strongest Pokémon and its strongest STAB attack. They used to lock the first move used; with moves picked automatically, that left about 1 in 5 holders stuck on a status move, and bot boards did better without them",
-          "Weather rocks (Heat Rock etc.), terrain seeds (Electric Seed etc.) and the Terrain Extender are sorted out like the Flame Orb: they only show up when you own a Pokémon that brings that weather or terrain (by ability or a move it knows). Steven still gets the weather rocks, since he uses them as stones",
-          "Leon now gets +3G income after a loss (rematch, on top of everyone's 1G consolation). A loss ended the streak's gold and stats together, so runs that started badly never recovered: in bot measurements his round-8 median was 35% and his unlucky runs (p10) 5%, the lowest. They are now 41% and 10%"
+          "New items X Attack, X Sp. Atk, X Speed, X Defense and X Sp. Def: every few seconds of battle, they raise a stat of the Pokémon they touch by one stage. Best on back-row Pokémon that last long",
+          "New item Potion: every few seconds of battle, it heals the most hurt Pokémon it touches. Two touching Potions make a Super Potion",
+          "Choice Band, Choice Specs and Choice Scarf: now only one of the Pokémon they touch gets double the stat, and you pick the move it uses. Tap the placed item to choose (physical moves for the Band, special for the Specs). Without a pick, its strongest move is used",
+          "Flame Orb and Toxic Orb: they only affect Pokémon whose ability gains from the status, such as Guts; Pokémon next to them are no longer burned or poisoned. Toxic Orb now poisons instead of badly poisoning",
+          "The orbs, weather rocks, seeds and Terrain Extender only show up in the shop when you have a Pokémon that can use them. Steven can still buy weather rocks as before",
+          "The opening shop of round 11, when your party grows to 9, always has a big bag",
+          "Leon: after a loss, you get 3 more gold next round (Rematch)"
         ]
       },
       {
