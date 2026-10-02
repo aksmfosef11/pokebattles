@@ -178,22 +178,23 @@ export function moveScore(move: MoveDef, species: SpeciesDef): number {
 }
 
 /** Moves a species knows at a level: level-up moves, level-gated TM/egg moves and TM-taught moves. */
-export function knownMoves(speciesKey: string, level: number, taught: readonly string[]): string[] {
+export function knownMoves(speciesKey: string, level: number, taught: readonly string[], forgot: readonly string[] = []): string[] {
   const s = getSpecies(speciesKey);
   const known = new Set<string>(taught);
   for (const [lvl, move] of s.learnset) if (lvl <= level) known.add(move);
   for (const [lvl, move] of s.extraMoves ?? []) if (lvl <= level) known.add(move);
-  return [...known].filter((k) => CONTENT.moves[k] && k !== "STRUGGLE");
+  return [...known].filter((k) => CONTENT.moves[k] && k !== "STRUGGLE" && !forgot.includes(k));
 }
 
 /**
  * Picks the moveset for a Pokémon at a level. TM-taught moves stay; then the best attack of each
  * of its own types (STAB); then the best remaining moves, spreading attack types and allowing at
- * most one status move. Self-KO moves are only a last resort.
+ * most one status move. Self-KO moves are only a last resort. `forgot` moves (given up for a TM) are never picked;
+ * `keep` moves (the rest of the set when a TM replaced a chosen move) come right after the TM-taught ones.
  */
-export function chooseMoves(speciesKey: string, level: number, taught: readonly string[], slots = 4): string[] {
+export function chooseMoves(speciesKey: string, level: number, taught: readonly string[], slots = 4, forgot: readonly string[] = [], keep: readonly string[] = []): string[] {
   const s = getSpecies(speciesKey);
-  const candidates = knownMoves(speciesKey, level, taught).map((k) => getMove(k));
+  const candidates = knownMoves(speciesKey, level, taught, forgot).map((k) => getMove(k));
   const safeAttacks = candidates.filter((m) => m.category !== "status" && !isSelfKo(m));
   const attacks = safeAttacks.length > 0 ? safeAttacks : candidates.filter((m) => m.category !== "status");
   const statuses = candidates.filter((m) => m.category === "status");
@@ -224,6 +225,10 @@ export function chooseMoves(speciesKey: string, level: number, taught: readonly 
   for (const key of taught.slice(-slots)) {
     const m = CONTENT.moves[key];
     if (m && !picked.includes(m)) add(m);
+  }
+  for (const key of keep) {
+    const m = candidates.find((c) => c.key === key);
+    if (m && picked.length < slots && !picked.includes(m)) add(m);
   }
   // One STAB attack per own type, strongest first.
   const stabPicks = s.types
@@ -278,8 +283,8 @@ export function newPokemon(
 }
 
 /** Re-picks moves after a level-up, evolution or TM; keeps what the player disabled. */
-export function refreshMoves(p: PokemonPiece, moveSlots: number): void {
-  p.moves = chooseMoves(p.species, p.level, p.taught, moveSlots);
+export function refreshMoves(p: PokemonPiece, moveSlots: number, keep: readonly string[] = []): void {
+  p.moves = chooseMoves(p.species, p.level, p.taught, moveSlots, p.forgot ?? [], keep);
   p.disabled = p.disabled.filter((m) => p.moves.includes(m));
 }
 

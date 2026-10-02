@@ -4,9 +4,12 @@ import {
   BOARD_H,
   BOARD_W,
   CHAMPIONS,
+  CONTENT,
   cellKey,
   cellsOf,
   bagGroup,
+  CHOICE_ITEMS,
+  choicePicks,
   checkPlacement,
   itemReach,
   itemReachCells,
@@ -20,6 +23,7 @@ import {
   GameError,
   getSpecies,
   MAX_ROUNDS,
+  moveSlotsFor,
   PARTY_CAP_STEPS,
   partyCap,
   partyCount,
@@ -32,6 +36,7 @@ import {
   WINS_TO_CLEAR,
   type Action,
   type Cell,
+  type ItemPiece,
   type Offer,
   type Piece,
   type Placement,
@@ -49,7 +54,7 @@ import { TargetGuide } from "../components/TargetGuide.tsx";
 import { RunMenu } from "../components/RunMenu.tsx";
 import { Shop } from "../components/Shop.tsx";
 import { SoundButton } from "../components/SoundButton.tsx";
-import { BagIcon, ItemIcon, PokemonSprite, ShinyLines, TrainerSprite } from "../components/sprites.tsx";
+import { BagIcon, ItemIcon, PokemonSprite, ShinyLines, TrainerSprite, TypeBadge } from "../components/sprites.tsx";
 import { TYPE_COLORS } from "../battle/stats.ts";
 import { useI18n } from "../i18n.tsx";
 
@@ -177,6 +182,8 @@ export function RunScreen({
   const [showFoes, setShowFoes] = useState(false);
   const [showTargets, setShowTargets] = useState(false);
   const [targeting, setTargeting] = useState<Targeting>(null);
+  /** A TM about to be used on a Pokémon whose moveset is full: the player picks the move to give up. */
+  const [tmPick, setTmPick] = useState<{ uid: string; target: string } | null>(null);
   const [busy, setBusy] = useState(false);
   /** A reroll, Poké Ball or subclass choice is being committed by the server; the board waits for it. */
   const [waiting, setWaiting] = useState(false);
@@ -419,10 +426,14 @@ export function RunScreen({
    */
   const focus = useMemo(() => {
     const out = { stars: new Set<number>(), affected: new Set<string>(), recipeUid: null as string | null, recipeOut: null as string | null, itemCells: new Set<number>() };
-    const markAffected = (skip: string | null) => {
+    // A Choice item powers one Pokémon of those it touches, so only that one is marked.
+    const markAffected = (skip: string | null, choice?: ItemPiece) => {
       for (const p of Object.values(state.pieces)) {
         if (p.kind === "pokemon" && p.place && p.uid !== skip && cellsOf(p).some((c) => out.stars.has(cellKey(c)))) out.affected.add(p.uid);
       }
+      if (!choice) return;
+      const powered = choicePicks({ ...state.pieces, [choice.uid]: choice }).holder.get(choice.uid);
+      for (const uid of [...out.affected]) if (uid !== powered) out.affected.delete(uid);
     };
     if (drag?.started) {
       const place = hoverPlacement(drag);
@@ -431,8 +442,8 @@ export function RunScreen({
       const own = placeShape(pieceShape(probe), place);
       if (probe.kind === "item") {
         for (const c of reachCells(own, itemReach(probe.item), place.rot)) out.stars.add(cellKey(c));
-        markAffected(null);
         const moved = { ...probe, place };
+        markAffected(null, probe.item in CHOICE_ITEMS ? moved : undefined);
         const found = preview?.valid ? recipePartner({ ...state.pieces, [moved.uid]: moved }, moved) : null;
         if (found) {
           out.recipeUid = found.partner.uid;
@@ -450,7 +461,7 @@ export function RunScreen({
     const p = uid ? state.pieces[uid] : undefined;
     if (p?.kind === "item" && p.place) {
       for (const c of itemReachCells(p)) out.stars.add(cellKey(c));
-      markAffected(null);
+      markAffected(null, p.item in CHOICE_ITEMS ? p : undefined);
     }
     return out;
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -463,6 +474,14 @@ export function RunScreen({
         if (d.source.kind === "piece") {
           const uid = d.source.uid;
           if (targeting?.kind === "pokemon") {
+            const tm = state.pieces[targeting.uid];
+            const mon = state.pieces[uid];
+            // A TM on a full moveset asks which move to give up (the server re-picks the set if none is named).
+            if (tm?.kind === "item" && tm.item === "TM" && tm.param && mon?.kind === "pokemon" && mon.moves.length >= moveSlotsFor(state.subclass) && !mon.moves.includes(tm.param) && getSpecies(mon.species).tmMoves.includes(tm.param)) {
+              setTmPick({ uid: targeting.uid, target: uid });
+              setTargeting(null);
+              return;
+            }
             if (act({ t: "use", uid: targeting.uid, target: uid })) setTarget({ kind: "piece", uid });
             setTargeting(null);
             return;
@@ -971,6 +990,56 @@ export function RunScreen({
             </button>
           </div>
         )}
+
+        {tmPick &&
+          (() => {
+            const tm = state.pieces[tmPick.uid];
+            const mon = state.pieces[tmPick.target];
+            if (tm?.kind !== "item" || !tm.param || mon?.kind !== "pokemon") return null;
+            const learn = CONTENT.moves[tm.param];
+            return (
+              <div className="modal-back" onClick={() => setTmPick(null)}>
+                <div className="modal panel" onClick={(e) => e.stopPropagation()}>
+                  <h2>{tr.t("ui.tmPickTitle", { species: tr.species(mon.species), move: tr.move(tm.param) })}</h2>
+                  <p className="muted small">{tr.t("ui.tmPickHint")}</p>
+                  {learn && (
+                    <div className="tm-pick-new">
+                      <TypeBadge type={learn.type} scale={1.5} /> <b>{tr.move(tm.param)}</b>{" "}
+                      <span className="muted small">
+                        {tr.t(`ui.category.${learn.category}`)} · {learn.power > 0 ? learn.power : "—"} · {learn.accuracy ?? "—"} · PP {learn.pp}
+                      </span>
+                    </div>
+                  )}
+                  <div className="tm-pick-list">
+                    {mon.moves.map((key) => {
+                      const m = CONTENT.moves[key];
+                      if (!m) return null;
+                      return (
+                        <button
+                          key={key}
+                          className="tm-pick-move"
+                          onClick={() => {
+                            if (act({ t: "use", uid: tmPick.uid, target: tmPick.target, replace: key })) setTarget({ kind: "piece", uid: tmPick.target });
+                            setTmPick(null);
+                          }}
+                        >
+                          <TypeBadge type={m.type} scale={1.5} />
+                          <span className="move-name">{tr.move(key)}</span>
+                          <span className="muted small">{tr.t(`ui.category.${m.category}`)}</span>
+                          <span className="small">{m.power > 0 ? m.power : "—"}</span>
+                          <span className="small">{m.accuracy ?? "—"}</span>
+                          <span className="small muted">{m.pp}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <button className="btn btn-small" onClick={() => setTmPick(null)}>
+                    {tr.t("ui.cancel")}
+                  </button>
+                </div>
+              </div>
+            );
+          })()}
 
         {state.phase === "subclass" && (
           <div className="modal-back">

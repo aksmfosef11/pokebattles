@@ -63,6 +63,8 @@
     "use": "Use",
     "teach": "Teach",
     "pickTarget": "Click the Pokémon to teach",
+    "tmPickTitle": "Pick a move for {{species}} to forget to learn {{move}}",
+    "tmPickHint": "The move you pick is replaced by the new one. Its other moves stay as they are.",
     "pickShopSlot": "Click a Pokémon in the shop",
     "cancel": "Cancel",
     "front": "Front row · facing the enemy",
@@ -914,6 +916,7 @@
         "date": "2026-10-02",
         "items": [
           "Kukui: the TMs in his shop now only teach strong attacks one of your Pokémon can learn (power 80+, or 60+ when the move hits several targets). No status or weak moves",
+          "TMs: when you use one on a Pokémon with a full moveset, you now pick the move it forgets. Only that move is replaced and the rest stay. A forgotten move does not come back by itself on level-ups",
           "Removed the \"playing now\" count from the main screen"
         ]
       },

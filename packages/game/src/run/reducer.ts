@@ -285,8 +285,14 @@ function useItem(state: RunState, item: ItemPiece, action: Extract<Action, { t: 
       if (!species.tmMoves.includes(item.param)) throw new GameError("tm_incompatible");
       if (target.moves.includes(item.param)) throw new GameError("tm_known");
       const slots = moveSlotsFor(state.subclass);
-      target.taught = [...target.taught.filter((m) => m !== item.param), item.param].slice(-slots);
-      refreshMoves(target, slots);
+      // With a full moveset the player picks the move to give up (`replace`); without a pick the set is simply re-chosen.
+      const full = target.moves.length >= slots;
+      if (action.replace !== undefined && full && !target.moves.includes(action.replace)) throw new GameError("invalid_target");
+      const swap = full && action.replace !== undefined ? action.replace : null;
+      const keep = swap ? target.moves.filter((m) => m !== swap) : [];
+      target.forgot = [...(target.forgot ?? []).filter((m) => m !== item.param && m !== swap), ...(swap ? [swap] : [])].slice(-24);
+      target.taught = [...target.taught.filter((m) => m !== item.param && m !== swap), item.param].slice(-slots);
+      refreshMoves(target, slots, keep);
       break;
     }
     case "MINT": {

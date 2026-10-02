@@ -26,6 +26,8 @@ export interface PokemonPiece extends PieceBase {
   disabled: string[];
   /** Moves taught by TM; kept when the moveset is recomputed after level-ups and evolutions. */
   taught: string[];
+  /** Moves the player gave up for a TM (picked in the TM's move chooser); never chosen again when the moveset is recomputed. */
+  forgot?: string[];
   /** Battles participated in (friendship evolutions). */
   battles: number;
   /** Red's ace: accumulated permanent stat bonus (0.03 per win). */

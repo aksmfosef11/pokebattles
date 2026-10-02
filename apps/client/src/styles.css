@@ -1509,6 +1509,34 @@ select {
 }
 
 /* overlays */
+/* TM move chooser: the new move on top, the Pokémon's current moves as big tap targets */
+.tm-pick-new {
+  margin: 8px 0;
+}
+.tm-pick-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 10px 0 12px;
+}
+.tm-pick-move {
+  display: grid;
+  grid-template-columns: auto 1fr auto 30px 30px 24px;
+  gap: 6px;
+  align-items: center;
+  text-align: left;
+  min-height: 44px;
+  padding: 6px 10px;
+  background: var(--bg-2);
+  border: 1px solid var(--line, #2a2d4a);
+  border-radius: 6px;
+  color: inherit;
+  cursor: pointer;
+}
+.tm-pick-move:hover,
+.tm-pick-move:focus-visible {
+  border-color: var(--gold);
+}
 .modal-back {
   position: fixed;
   inset: 0;
