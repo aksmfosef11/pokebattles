@@ -138,7 +138,8 @@ export function moveScore(move: MoveDef, species: SpeciesDef): number {
         value += 30;
         break;
       case "heal":
-        value += 55;
+        // A team heal (Life Dew) is worth a little more than the same move on the user alone.
+        value += move.target === "allySide" ? 65 : 55;
         break;
       case "rest":
         // Full heal, but asleep for a while in a fight that keeps going.
@@ -186,13 +187,33 @@ export function knownMoves(speciesKey: string, level: number, taught: readonly s
   return [...known].filter((k) => CONTENT.moves[k] && k !== "STRUGGLE" && !forgot.includes(k));
 }
 
+/** Most status moves an auto-picked set may hold: support Pokémon (see isSupport) get two. */
+export const SUPPORT_STATUS_MOVES = 2;
+/** A Pokémon is support when its best attacking stat is at most this share of its best bulk stat (Chansey, Blissey, Shuckle…). */
+const SUPPORT_ATTACK_SHARE = 0.35;
+
+/** Bulky Pokémon with weak attacks: their sets lean on status moves (healing) instead of one weak extra attack. */
+export function isSupport(species: SpeciesDef): boolean {
+  const { hp, atk, def, spa, spd } = species.baseStats;
+  return Math.max(atk, spa) <= SUPPORT_ATTACK_SHARE * Math.max(hp, def, spd);
+}
+
 /**
- * Picks the moveset for a Pokémon at a level. TM-taught moves stay; then the best attack of each
- * of its own types (STAB); then the best remaining moves, spreading attack types and allowing at
- * most one status move. Self-KO moves are only a last resort. `forgot` moves (given up for a TM) are never picked;
+ * Picks the moveset for a Pokémon at a level. Moves the player locked stay first, then TM-taught moves; then the best
+ * attack of each of its own types (STAB); then the best remaining moves, spreading attack types and allowing at
+ * most one status move (two for support Pokémon). Self-KO moves are only a last resort. `forgot` moves (given up for a TM) are never picked;
  * `keep` moves (the rest of the set when a TM replaced a chosen move) come right after the TM-taught ones.
+ * A locked move the Pokémon no longer knows (a new species after evolving) is skipped.
  */
-export function chooseMoves(speciesKey: string, level: number, taught: readonly string[], slots = 4, forgot: readonly string[] = [], keep: readonly string[] = []): string[] {
+export function chooseMoves(
+  speciesKey: string,
+  level: number,
+  taught: readonly string[],
+  slots = 4,
+  forgot: readonly string[] = [],
+  keep: readonly string[] = [],
+  locked: readonly string[] = [],
+): string[] {
   const s = getSpecies(speciesKey);
   const candidates = knownMoves(speciesKey, level, taught, forgot).map((k) => getMove(k));
   const safeAttacks = candidates.filter((m) => m.category !== "status" && !isSelfKo(m));
@@ -221,14 +242,29 @@ export function chooseMoves(speciesKey: string, level: number, taught: readonly 
     return top;
   };
 
-  // TM-taught moves are always kept (newest last, so the oldest drop first when over the limit).
+  // Locked moves are the player's choice and come first.
+  for (const key of locked) {
+    const m = candidates.find((c) => c.key === key);
+    if (m && picked.length < slots && !picked.includes(m)) add(m);
+  }
+  // TM-taught moves are kept next (newest last, so the oldest drop first when over the limit).
   for (const key of taught.slice(-slots)) {
     const m = CONTENT.moves[key];
-    if (m && !picked.includes(m)) add(m);
+    if (m && picked.length < slots && !picked.includes(m)) add(m);
   }
   for (const key of keep) {
     const m = candidates.find((c) => c.key === key);
     if (m && picked.length < slots && !picked.includes(m)) add(m);
+  }
+  // Support Pokémon (Chansey, Blissey…) hold their healing moves first: their attacks score far above a heal,
+  // so left to the usual fill they would never keep one.
+  if (isSupport(s)) {
+    const heals = statuses.filter((m) => m.effects.some((e) => e.kind === "heal"));
+    while (picked.filter((m) => m.category === "status").length < SUPPORT_STATUS_MOVES && picked.length < slots) {
+      const next = best(heals, false);
+      if (!next) break;
+      add(next);
+    }
   }
   // One STAB attack per own type, strongest first.
   const stabPicks = s.types
@@ -236,11 +272,12 @@ export function chooseMoves(speciesKey: string, level: number, taught: readonly 
     .filter((m): m is MoveDef => m !== null)
     .sort((a, b) => score.get(b.key)! - score.get(a.key)!);
   for (const m of stabPicks) if (picked.length < slots && !picked.includes(m)) add(m);
-  // Fill the rest: at least two attacks when there are, at most one status move unless nothing else is left.
+  // Fill the rest: at least two attacks when there are, at most one status move (two for support) unless nothing else is left.
+  const maxStatus = isSupport(s) ? SUPPORT_STATUS_MOVES : 1;
   while (picked.length < slots) {
     const attackCount = picked.filter((m) => m.category !== "status").length;
     const statusCount = picked.length - attackCount;
-    const pool = attackCount < 2 || statusCount >= 1 ? attacks : [...attacks, ...statuses];
+    const pool = attackCount < 2 || statusCount >= maxStatus ? attacks : [...attacks, ...statuses];
     const next = best(pool, true) ?? best(statuses, false);
     if (!next) break;
     add(next);
@@ -282,10 +319,12 @@ export function newPokemon(
   };
 }
 
-/** Re-picks moves after a level-up, evolution or TM; keeps what the player disabled. */
+/** Re-picks moves after a level-up, evolution or TM; locked moves stay. */
 export function refreshMoves(p: PokemonPiece, moveSlots: number, keep: readonly string[] = []): void {
-  p.moves = chooseMoves(p.species, p.level, p.taught, moveSlots, p.forgot ?? [], keep);
+  p.moves = chooseMoves(p.species, p.level, p.taught, moveSlots, p.forgot ?? [], keep, p.locked ?? []);
   p.disabled = p.disabled.filter((m) => p.moves.includes(m));
+  // A lock on a move that did not make it into the set (it left the species' list) is dropped.
+  if (p.locked) p.locked = p.locked.filter((m) => p.moves.includes(m));
 }
 
 /** Keeps the same ability slot across evolution (first, second or hidden). */

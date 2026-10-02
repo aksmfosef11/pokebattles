@@ -28,6 +28,8 @@ export interface PokemonPiece extends PieceBase {
   taught: string[];
   /** Moves the player gave up for a TM (picked in the TM's move chooser); never chosen again when the moveset is recomputed. */
   forgot?: string[];
+  /** Moves the player locked in the move list; they stay in the set when it is recomputed. Unset/empty = nothing locked. */
+  locked?: string[];
   /** Battles participated in (friendship evolutions). */
   battles: number;
   /** Red's ace: accumulated permanent stat bonus (0.03 per win). */
@@ -195,6 +197,8 @@ export type Action =
   | { t: "reroll" }
   | { t: "lock"; slot: number }
   | { t: "setAce"; uid: string }
+  /** Locks `move` in the Pokémon's set (or unlocks it when it is locked). */
+  | { t: "lockMove"; uid: string; move: string }
   /** Choice item `uid` powers the touching Pokémon `target`, which then only uses `move`. */
   | { t: "choice"; uid: string; target: string; move: string }
   | { t: "chooseSubclass"; subclass: SubclassKey }

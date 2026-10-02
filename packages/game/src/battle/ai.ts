@@ -105,7 +105,12 @@ function scoreStatus(sim: BattleSim, b: Battler, move: MoveDef, targets: Battler
         break;
       }
       case "heal":
-        if (hpRatio < 0.5) score += (1 - hpRatio) * 1.2;
+        if (move.target === "allySide") {
+          // Team heal (Life Dew): worth using when the allies on its side are hurt, not only the user.
+          let team = 0;
+          for (const a of targets) if (a.hp / a.maxHp < 0.5) team += (1 - a.hp / a.maxHp) * 1.2;
+          score += Math.min(1.5, team);
+        } else if (hpRatio < 0.5) score += (1 - hpRatio) * 1.2;
         break;
       case "rest":
         if (hpRatio < 0.35) score += 0.9;

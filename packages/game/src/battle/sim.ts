@@ -1707,8 +1707,9 @@ export class BattleSim {
             const w = this.moveWeather(att);
             ratio = w === "sun" ? 2 / 3 : w ? 1 / 4 : 1 / 2;
           }
-          const who = move.target === "ally" ? targets[0] ?? att : att;
-          this.heal(who, Math.floor(who.maxHp * ratio), "move");
+          // Life Dew heals the user and every ally on its side.
+          const who = move.target === "ally" ? [targets[0] ?? att] : move.target === "allySide" ? this.alliesOf(att, true) : [att];
+          for (const w of who) this.heal(w, Math.floor(w.maxHp * ratio), "move");
           break;
         }
         case "rest":

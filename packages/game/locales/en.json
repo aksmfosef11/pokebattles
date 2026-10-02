@@ -35,6 +35,9 @@
     "ivs": "IVs",
     "stats": "Stats",
     "moves": "Moves",
+    "movesAuto": "Moves are re-picked on every level-up and evolution (own-type attacks first, then the strongest; one status move, two for healer types). A move you lock with the padlock stays",
+    "moveLock": "Lock move: it stays through level-ups and evolutions",
+    "moveUnlock": "Unlock: it can be re-picked automatically again",
     "shiny": "Shiny",
     "tier": "Tier {{n}}",
     "size": "Size {{w}}×{{h}}",
@@ -912,6 +915,16 @@
     "new": "NEW",
     "older": "Earlier patches",
     "entries": [
+      {
+        "date": "2026-10-03",
+        "items": [
+          "Move locks: open a Pokémon in the shop and every move in its list has a padlock. A locked move stays through level-ups and evolutions, and only the other slots are re-picked. Everything starts unlocked; press the padlock again to unlock",
+          "Choosing a locked move to give up for a TM unlocks it too. With all four moves locked, you must pick the move to forget before you can use a TM",
+          "The move list now explains how moves are picked automatically: on every level-up and evolution, own-type attacks first, then the strongest ones, with at most one status move",
+          "Bulky Pokémon with weak attacks such as Chansey, Blissey and Onix now pick up to two healing moves first, so Soft-Boiled and Life Dew are no longer pushed out by the strong attacks they learn as they level",
+          "Life Dew: now heals the user and every ally on its side for ¼ of max HP, as its description says. In battle it is used when allies are badly hurt"
+        ]
+      },
       {
         "date": "2026-10-02",
         "items": [

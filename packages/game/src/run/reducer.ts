@@ -148,7 +148,7 @@ function requireSeed(state: RunState): void {
   if (!state.seed) throw new GameError("needs_server");
 }
 
-const ACTION_TYPES = new Set(["buy", "sell", "move", "reroll", "lock", "setAce", "choice", "chooseSubclass", "use"]);
+const ACTION_TYPES = new Set(["buy", "sell", "move", "reroll", "lock", "setAce", "lockMove", "choice", "chooseSubclass", "use"]);
 
 function badAction(): never {
   throw new GameError("bad_action");
@@ -190,6 +190,8 @@ export function readAction(input: unknown): Action {
       return { t: "lock", slot: slot(a.slot) };
     case "setAce":
       return { t: "setAce", uid: str(a.uid) };
+    case "lockMove":
+      return { t: "lockMove", uid: str(a.uid), move: str(a.move) };
     case "choice":
       return { t: "choice", uid: str(a.uid), target: str(a.target), move: str(a.move) };
     case "chooseSubclass":
@@ -289,6 +291,9 @@ function useItem(state: RunState, item: ItemPiece, action: Extract<Action, { t: 
       const full = target.moves.length >= slots;
       if (action.replace !== undefined && full && !target.moves.includes(action.replace)) throw new GameError("invalid_target");
       const swap = full && action.replace !== undefined ? action.replace : null;
+      // Without a pick the set is re-chosen around the locked moves: with every slot locked the TM would have no room.
+      if (full && swap === null && (target.locked ?? []).length >= slots) throw new GameError("moves_locked");
+      if (swap && target.locked) target.locked = target.locked.filter((m) => m !== swap);
       const keep = swap ? target.moves.filter((m) => m !== swap) : [];
       target.forgot = [...(target.forgot ?? []).filter((m) => m !== item.param && m !== swap), ...(swap ? [swap] : [])].slice(-24);
       target.taught = [...target.taught.filter((m) => m !== item.param && m !== swap), item.param].slice(-slots);
@@ -463,6 +468,14 @@ export function applyAction(prev: RunState, input: Action): RunState {
       const piece = requirePiece(state, action.uid);
       if (piece.kind !== "pokemon") throw new GameError("invalid_target");
       state.ace = piece.uid;
+      return state;
+    }
+    case "lockMove": {
+      requirePhase(state, "shop");
+      const mon = requirePiece(state, action.uid);
+      if (mon.kind !== "pokemon" || !mon.moves.includes(action.move)) throw new GameError("invalid_move");
+      const locked = mon.locked ?? [];
+      mon.locked = locked.includes(action.move) ? locked.filter((m) => m !== action.move) : [...locked, action.move];
       return state;
     }
     case "choice": {

@@ -1370,6 +1370,24 @@ select {
 .move.clickable {
   cursor: pointer;
 }
+.move.lockable {
+  grid-template-columns: auto 1fr auto 30px 30px 24px 28px;
+}
+.move-lock {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.45;
+}
+.move-lock.on {
+  opacity: 1;
+}
+.move-lock:hover {
+  opacity: 1;
+}
 .move.off {
   opacity: 0.4;
 }

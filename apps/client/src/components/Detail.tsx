@@ -60,6 +60,8 @@ interface DetailProps {
   onSell: (uid: string) => void;
   /** Choice item `item` powers `target`, which only uses `move`. */
   onChoice: (item: string, target: string, move: string) => void;
+  /** Locks `move` on Pokémon `uid` (or unlocks it). */
+  onLockMove: (uid: string, move: string) => void;
 }
 
 interface MonView {
@@ -72,6 +74,7 @@ interface MonView {
   shiny: boolean;
   moves: string[];
   disabled: string[];
+  locked?: string[];
   uid?: string;
   battles?: number;
   pendingEvolution?: string | null;
@@ -108,8 +111,18 @@ function EvolutionLines({ state, mon }: { state: RunState; mon: MonView }) {
   );
 }
 
-function PokemonDetail({ state, mon, onSetAce, onSell, onRotate, placedUid }: { state: RunState; mon: MonView; placedUid?: string } & Pick<DetailProps, "onSetAce" | "onSell" | "onRotate">) {
+function PokemonDetail({
+  state,
+  mon,
+  onSetAce,
+  onSell,
+  onRotate,
+  onLockMove,
+  placedUid,
+}: { state: RunState; mon: MonView; placedUid?: string } & Pick<DetailProps, "onSetAce" | "onSell" | "onRotate"> & Partial<Pick<DetailProps, "onLockMove">>) {
   const { tr } = useI18n();
+  // Locks can be changed on a Pokémon you own, while shopping.
+  const canLock = !!onLockMove && !!mon.uid && state.phase === "shop";
   const [openMove, setOpenMove] = useState<string | null>(null);
   const choiceLock = placedUid ? choicePicks(state.pieces).lock.get(placedUid) : undefined;
   const species = getSpecies(mon.species);
@@ -188,12 +201,14 @@ function PokemonDetail({ state, mon, onSetAce, onSell, onRotate, placedUid }: { 
       </div>
       <div className="detail-block">
         <div className="label">{tr.t("ui.moves")}</div>
+        {canLock && <p className="small muted">{tr.t("ui.movesAuto")}</p>}
         <ul className="move-list">
           {mon.moves.map((key) => {
             const m = CONTENT.moves[key];
             if (!m) return null;
+            const locked = mon.locked?.includes(key) ?? false;
             return (
-              <li key={key} className="move clickable" title={tr.moveEffect(key)} onClick={() => setOpenMove(openMove === key ? null : key)}>
+              <li key={key} className={`move clickable${canLock ? " lockable" : ""}`} title={tr.moveEffect(key)} onClick={() => setOpenMove(openMove === key ? null : key)}>
                 {choiceLock === key && <span className="choice-tag">{tr.t("ui.choiceTag")}</span>}
                 <TypeBadge type={m.type} scale={1.5} />
                 <span className="move-name">{tr.move(key)}</span>
@@ -201,6 +216,20 @@ function PokemonDetail({ state, mon, onSetAce, onSell, onRotate, placedUid }: { 
                 <span className="small">{m.power > 0 ? m.power : "—"}</span>
                 <span className="small">{m.accuracy ?? "—"}</span>
                 <span className="small muted">{m.pp}</span>
+                {canLock && (
+                  <button
+                    className={`move-lock${locked ? " on" : ""}`}
+                    aria-pressed={locked}
+                    aria-label={tr.t(locked ? "ui.moveUnlock" : "ui.moveLock")}
+                    title={tr.t(locked ? "ui.moveUnlock" : "ui.moveLock")}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onLockMove!(mon.uid!, key);
+                    }}
+                  >
+                    {locked ? "🔒" : "🔓"}
+                  </button>
+                )}
                 {openMove === key && tr.moveEffect(key) && <span className="move-effect small muted">{tr.moveEffect(key)}</span>}
               </li>
             );
@@ -240,7 +269,7 @@ function PokemonDetail({ state, mon, onSetAce, onSell, onRotate, placedUid }: { 
   );
 }
 
-export function Detail({ state, target, hint, suppressed, onClose, onSetAce, onUse, onSell, onRotate, onChoice }: DetailProps) {
+export function Detail({ state, target, hint, suppressed, onClose, onSetAce, onUse, onSell, onRotate, onChoice, onLockMove }: DetailProps) {
   const { tr } = useI18n();
   const empty = <aside className="detail panel empty-detail">{hint}</aside>;
   const sheet = (children: ReactNode) => (
@@ -277,6 +306,7 @@ export function Detail({ state, target, hint, suppressed, onClose, onSetAce, onU
         onSetAce={onSetAce}
         onRotate={onRotate}
         onSell={onSell}
+        onLockMove={onLockMove}
       />,
     );
   }
