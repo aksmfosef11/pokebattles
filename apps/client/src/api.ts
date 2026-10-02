@@ -76,9 +76,8 @@ export interface ChampionWinsBoard {
   players: number;
 }
 
-/** Live numbers on the title screen: trainers playing now, battles today and in total. */
+/** Live numbers on the title screen: battles today and in total. */
 export interface PublicStats {
-  playing: number;
   today: number;
   total: number;
 }

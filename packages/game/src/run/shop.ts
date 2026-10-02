@@ -1,6 +1,6 @@
 import { BAGS } from "../board.ts";
 import { CHAMPION_RULES } from "../content/champions.ts";
-import { CONTENT, getSpecies, itemEvolutions, ITEMS, makesItemWork, TYPES, type Tier, type TypeKey } from "../content/index.ts";
+import { CONTENT, getMove, getSpecies, itemEvolutions, ITEMS, makesItemWork, TYPES, type Tier, type TypeKey } from "../content/index.ts";
 import { rngFor, type Rng } from "../rng.ts";
 import { stackMul } from "../battle/calc.ts";
 import { rollTraits } from "./pokemon.ts";
@@ -132,6 +132,15 @@ function allTmMoves(): string[] {
   return tmMovePool;
 }
 
+/** Kukui's TMs only teach strong attacks: power 80+, or 60+ when the move hits several targets. */
+const KUKUI_TM_POWER = 80;
+const KUKUI_TM_SPREAD_POWER = 60;
+function isStrongTmMove(key: string): boolean {
+  const m = getMove(key);
+  if (m.category === "status") return false;
+  return m.power >= KUKUI_TM_POWER || ((m.target === "enemySpread" || m.target === "allAround") && m.power >= KUKUI_TM_SPREAD_POWER);
+}
+
 /** Species the player could still use: their champion's pool, what they own and what that evolves into. */
 function relevantSpecies(state: RunState): Set<string> {
   const out = new Set<string>();
@@ -219,7 +228,11 @@ function rollItem(state: RunState, rng: Rng): Offer {
       param = preferred.length > 0 && rng.chance(0.6) ? rng.pick(preferred) : rng.pick(TYPES);
     } else if (def.param === "move") {
       const compatible = [...new Set(owned.flatMap((s) => getSpecies(s).tmMoves))].sort();
-      param = compatible.length > 0 && rng.chance(0.7) ? rng.pick(compatible) : rng.pick(allTmMoves());
+      if (state.champion === "kukui") {
+        // Always a strong attack one of his Pokémon can learn (any strong TM when none of them can).
+        const strong = compatible.filter(isStrongTmMove);
+        param = rng.pick(strong.length > 0 ? strong : allTmMoves().filter(isStrongTmMove));
+      } else param = compatible.length > 0 && rng.chance(0.7) ? rng.pick(compatible) : rng.pick(allTmMoves());
     }
     return { kind: "item", tier: tier as Tier, item, ...(param ? { param } : {}) };
   }

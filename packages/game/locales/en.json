@@ -94,7 +94,6 @@
     "suddenDeath": "Sudden death!",
     "noRuns": "No run in progress",
     "liveStats": "Live stats",
-    "livePlaying": "{{n}} playing now",
     "liveToday": "{{n}} battles today",
     "liveTotal": "{{n}} battles in total",
     "serverDown": "Cannot reach the server, playing offline",
@@ -370,8 +369,8 @@
           "desc": "A Pokémon next to a Z-Crystal deals ×1.8 with that type, and its first attack of that type becomes a never-missing Z-Move (4 per battle for the team)."
         },
         {
-          "name": "TM Discount",
-          "desc": "TMs cost half and appear more often."
+          "name": "TM Support",
+          "desc": "TMs cost half and appear more often. The shop only offers strong attacks one of your Pokémon can learn (power 80+, or 60+ when the move hits several targets)."
         }
       ]
     },
@@ -911,6 +910,13 @@
     "new": "NEW",
     "older": "Earlier patches",
     "entries": [
+      {
+        "date": "2026-10-02",
+        "items": [
+          "Kukui: the TMs in his shop now only teach strong attacks one of your Pokémon can learn (power 80+, or 60+ when the move hits several targets). No status or weak moves",
+          "Removed the \"playing now\" count from the main screen"
+        ]
+      },
       {
         "date": "2026-10-01 (2)",
         "items": [

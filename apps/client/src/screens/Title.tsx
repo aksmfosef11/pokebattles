@@ -9,7 +9,7 @@ import { useI18n } from "../i18n.tsx";
 
 const STATS_REFRESH_MS = 60_000;
 
-/** Trainers playing now, battles today and in total; stays out of the way when the numbers cannot be had. */
+/** Battles today and in total; stays out of the way when the numbers cannot be had. */
 function LiveStats({ api }: { api: GameApi }) {
   const { tr } = useI18n();
   const [stats, setStats] = useState<PublicStats | null>(null);
@@ -33,10 +33,6 @@ function LiveStats({ api }: { api: GameApi }) {
   const n = (v: number) => v.toLocaleString();
   return (
     <div className="live-stats" aria-label={tr.t("ui.liveStats")}>
-      <span className="live-stat">
-        <span className="live-dot" aria-hidden="true" />
-        {tr.t("ui.livePlaying", { n: n(stats.playing) })}
-      </span>
       <span className="live-stat">{tr.t("ui.liveToday", { n: n(stats.today) })}</span>
       <span className="live-stat">{tr.t("ui.liveTotal", { n: n(stats.total) })}</span>
     </div>

@@ -206,7 +206,7 @@ select {
   color: var(--gold);
 }
 
-/* live numbers under the subtitle: playing now · battles today · battles in total */
+/* live numbers under the subtitle: battles today · battles in total */
 .live-stats {
   display: flex;
   flex-wrap: wrap;
@@ -220,13 +220,6 @@ select {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-}
-.live-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #8ff0a4;
-  box-shadow: 0 0 6px #8ff0a4;
 }
 .title-menu {
   width: min(460px, 100%);

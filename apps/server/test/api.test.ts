@@ -559,20 +559,15 @@ describe("champion wins leaderboard", () => {
     expect(await json("/api/leaderboard/champion/nobody", null)).toEqual({ error: "invalid_champion" });
   });
 
-  it("shows public live numbers: trainers playing, battles today and in total", async () => {
+  it("shows public live numbers: battles today and in total", async () => {
     const live = createApp(store, { publicStatsCacheMs: 0 });
-    const stats = async () => (await live.request("/api/public-stats")).json() as Promise<{ playing: number; today: number; total: number }>;
+    const stats = async () => (await live.request("/api/public-stats")).json() as Promise<{ today: number; total: number }>;
     const total = (await store.db.query<{ n: number }>("SELECT COUNT(*)::int AS n FROM battles"))[0]!.n;
     const before = await stats();
     expect(before.total).toBe(total);
     expect(before.today).toBeLessThanOrEqual(before.total);
 
-    // A new trainer with a fresh run counts as playing; an old, untouched run does not.
     const token = await player("red");
-    const { state } = (await json("/api/runs", token, { champion: "red" })) as { state: RunState };
-    expect((await stats()).playing).toBe(before.playing + 1);
-    await store.db.query("UPDATE runs SET updated_at = 0 WHERE run_id = $1", [state.runId]);
-    expect((await stats()).playing).toBe(before.playing);
 
     // Playing a round adds one battle to both counts.
     const again = (await json("/api/runs", token, { champion: "red" })) as { state: RunState };
