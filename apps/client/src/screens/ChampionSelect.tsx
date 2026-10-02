@@ -202,10 +202,15 @@ export function ChampionSelect({
             </div>
           </div>
           <div className="detail-block">
-            <div className="label">
-              {tr.t("ui.passive")} · {tr.t(`champion.${selected}.passiveName`)}
-            </div>
-            <p>{tr.t(`champion.${selected}.passive`)}</p>
+            <div className="label">{tr.t("ui.passive")}</div>
+            <ul className="ability-list">
+              {tr.passives(selected).map((p) => (
+                <li key={p.name}>
+                  <b className="ability-name">{p.name}</b>
+                  <span>{p.desc}</span>
+                </li>
+              ))}
+            </ul>
           </div>
           <div className="detail-block">
             <div className="label">

@@ -34,10 +34,15 @@ export function OpponentIntro({ upcoming, onClose }: { upcoming: readonly Upcomi
                   </div>
                 </div>
                 <div className="detail-block">
-                  <div className="label">
-                    {tr.t("ui.passive")} · {tr.t(`champion.${u.champion}.passiveName`)}
-                  </div>
-                  <p className="small">{tr.t(`champion.${u.champion}.passive`)}</p>
+                  <div className="label">{tr.t("ui.passive")}</div>
+                  <ul className="ability-list small">
+                    {tr.passives(u.champion).map((p) => (
+                      <li key={p.name}>
+                        <b className="ability-name">{p.name}</b>
+                        <span>{p.desc}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
                 {u.subclass ? (
                   <div className="detail-block">

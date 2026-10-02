@@ -93,6 +93,10 @@
     "generation": "Gen {{n}}",
     "suddenDeath": "Sudden death!",
     "noRuns": "No run in progress",
+    "liveStats": "Live stats",
+    "livePlaying": "{{n}} playing now",
+    "liveToday": "{{n}} battles today",
+    "liveTotal": "{{n}} battles in total",
     "serverDown": "Cannot reach the server, playing offline",
     "weather": "Weather",
     "terrain": "Terrain",
@@ -246,48 +250,164 @@
   "champion": {
     "red": {
       "concept": "Raise an ace",
-      "passiveName": "Ace",
-      "passive": "Mark one Pokémon as your ace. It gets +2 crit stages and 1 extra level after the battles of even rounds, and every win permanently raises all its stats by 4% (up to +20%). Red buys Rare Candy at half price."
+      "passives": [
+        {
+          "name": "Ace",
+          "desc": "Mark one Pokémon as your ace. It gets +2 crit stages."
+        },
+        {
+          "name": "Ace Growth",
+          "desc": "The ace gets 1 extra level after the battles of even rounds, and every win permanently raises all its stats by 4% (up to +20%)."
+        },
+        {
+          "name": "Candy Discount",
+          "desc": "Rare Candy costs half."
+        }
+      ]
     },
     "lance": {
       "concept": "Dragons and rage",
-      "passiveName": "Dragon Blood",
-      "passive": "Dragon and Flying types, and lines that evolve into them (like Lance's own team), evolve at 30% lower levels and show up more in the shop. Your team never recharges after Hyper Beam or Giga Impact. When a Dragon or Flying ally faints, adjacent Dragon and Flying allies get +1 Attack and Sp. Atk. Early on, Pokémon of those lines that can still evolve get every stat raised (30% − 5% per round: +20% at round 2, gone from round 6)."
+      "passives": [
+        {
+          "name": "Dragon Blood",
+          "desc": "Dragon and Flying types, and lines that evolve into them (like Lance's own team), evolve at 30% lower levels and show up more in the shop."
+        },
+        {
+          "name": "No Recharge",
+          "desc": "Your team never recharges after Hyper Beam or Giga Impact."
+        },
+        {
+          "name": "Dragon's Wrath",
+          "desc": "When a Dragon or Flying ally faints, adjacent Dragon and Flying allies get +1 Attack and Sp. Atk."
+        },
+        {
+          "name": "Young Dragons",
+          "desc": "Pokémon of those lines that can still evolve get +30% to every stat, −5 points per round (+20% at round 2, gone from round 6)."
+        }
+      ]
     },
     "steven": {
       "concept": "Stones and money",
-      "passiveName": "Devon Heir",
-      "passive": "+1G income per round, full refunds when selling, evolution stones and fossils cost 1G less. The whole team's Defense and Sp. Def grow over the run (15% + 1.35% per round: +26% at round 8, +34% at round 14), and Rock and Steel types get another +25% per adjacent stone item. Early on, every stat of the whole team, HP too, rises as well (25% − 5% per round: +15% at round 2, gone from round 5)."
+      "passives": [
+        {
+          "name": "Devon Profits",
+          "desc": "+1G income per round, full refunds when selling, evolution stones and fossils cost 1G less."
+        },
+        {
+          "name": "Solid Foundation",
+          "desc": "The whole team's Defense and Sp. Def get +15% plus 1.35 points per round (+26% at round 8, +34% at round 14)."
+        },
+        {
+          "name": "Stone Collector",
+          "desc": "Rock and Steel types get another +25% Defense and Sp. Def per adjacent stone item."
+        },
+        {
+          "name": "Early Support",
+          "desc": "Every stat of the whole team, HP too, gets +25%, −5 points per round (+15% at round 2, gone from round 5)."
+        }
+      ]
     },
     "cynthia": {
       "concept": "Diversity and legendary luck",
-      "passiveName": "Myth Researcher",
-      "passive": "+0.5% to all stats for each distinct type on your team (up to 6 types). Legendary and Mythical Pokémon appear from round 9, earlier than for other champions (round 10). This champion's stat bonuses (subclasses included) shrink by 20 points per round from round 10, down to a quarter from round 13."
+      "passives": [
+        {
+          "name": "Varied Team",
+          "desc": "+0.5% to all stats for each distinct type on your team (up to 6 types)."
+        },
+        {
+          "name": "Legendary Bond",
+          "desc": "Legendary and Mythical Pokémon appear in the shop from round 9 (round 10 for other champions)."
+        },
+        {
+          "name": "Price of Power",
+          "desc": "This champion's stat bonuses (subclasses included) shrink by 20 points per round from round 10, down to a quarter from round 13."
+        }
+      ]
     },
     "alder": {
       "concept": "Bug swarm",
-      "passiveName": "Big Heart",
-      "passive": "+3.5% team Attack and Sp. Atk per 1-cell Pokémon. Bug types evolve at 30% lower levels. Bags cost 1G less."
+      "passives": [
+        {
+          "name": "Big Heart",
+          "desc": "+3.5% team Attack and Sp. Atk per 1-cell Pokémon."
+        },
+        {
+          "name": "Bug Evolution",
+          "desc": "Bug types evolve at 30% lower levels."
+        },
+        {
+          "name": "Bag Discount",
+          "desc": "Bags cost 1G less."
+        }
+      ]
     },
     "diantha": {
       "concept": "Mega Evolution",
-      "passiveName": "Mega Evolution",
-      "passive": "A Pokémon next to its Mega Stone Mega Evolves when its HP drops to 60% and restores 50% HP (twice per battle). A Pokémon next to the Key Stone gets +25% to every stat but HP, and Mega Evolves as the battle starts if its Mega Stone is there too."
+      "passives": [
+        {
+          "name": "Mega Evolution",
+          "desc": "A Pokémon next to its Mega Stone Mega Evolves when its HP drops to 60% and restores 50% HP (twice per battle)."
+        },
+        {
+          "name": "Key Stone Resonance",
+          "desc": "A Pokémon next to the Key Stone gets +25% to every stat but HP, and Mega Evolves as the battle starts if its Mega Stone is there too."
+        }
+      ]
     },
     "kukui": {
       "concept": "Z-Moves",
-      "passiveName": "Z-Power",
-      "passive": "Move research: every move of your team hits harder, faster and faster as the run goes on (round² × 0.16%: +10% at round 8, +31% at round 14). Before the research builds up, moves get an extra early boost (36% − 6% per round: +24% at round 2, gone from round 6). A Pokémon next to a Z-Crystal deals ×1.8 with that type, and its first attack of that type becomes a never-missing Z-Move (4 per battle for the team). TMs cost half and appear more often."
+      "passives": [
+        {
+          "name": "Move Research",
+          "desc": "Every move of your team hits harder, faster and faster as the run goes on (round² × 0.16%: +10% at round 8, +31% at round 14)."
+        },
+        {
+          "name": "Early Research Boost",
+          "desc": "Before the research builds up, moves get an extra boost (36%, −6 points per round: +24% at round 2, gone from round 6)."
+        },
+        {
+          "name": "Z-Power",
+          "desc": "A Pokémon next to a Z-Crystal deals ×1.8 with that type, and its first attack of that type becomes a never-missing Z-Move (4 per battle for the team)."
+        },
+        {
+          "name": "TM Discount",
+          "desc": "TMs cost half and appear more often."
+        }
+      ]
     },
     "leon": {
       "concept": "Dynamax and win streaks",
-      "passiveName": "Undefeated Champion",
-      "passive": "Each win in a streak adds +1G income (up to +5) and +1.2% to all stats (counting up to 5 wins); a loss resets it but pays +3G next round (rematch). The Pokémon next to the Dynamax Band Dynamaxes 8 seconds in: double HP and Max Moves for 3 actions."
+      "passives": [
+        {
+          "name": "Win Streak Bonus",
+          "desc": "Each win in a streak adds +1G income (up to +5) and +1.2% to all stats (counting up to 5 wins)."
+        },
+        {
+          "name": "Rematch",
+          "desc": "A loss resets the streak but pays +3G next round."
+        },
+        {
+          "name": "Dynamax",
+          "desc": "The Pokémon next to the Dynamax Band Dynamaxes 8 seconds in: double HP and Max Moves for 3 actions."
+        }
+      ]
     },
     "geeta": {
       "concept": "Terastallization and business",
-      "passiveName": "League Chairwoman",
-      "passive": "At the end of each round, earn 1G interest per 5G held (up to 4G). A Pokémon next to a Tera Shard Terastallizes into that type as the battle starts and gets a boost to every stat but HP that grows over the run (×(1.3 + 0.015 × round): ×1.42 at round 8, ×1.51 at round 14; 3 per battle)."
+      "passives": [
+        {
+          "name": "Interest",
+          "desc": "At the end of each round, earn 1G interest per 5G held (up to 4G)."
+        },
+        {
+          "name": "Terastallization",
+          "desc": "A Pokémon next to a Tera Shard Terastallizes into that type as the battle starts (3 per battle)."
+        },
+        {
+          "name": "Tera Power",
+          "desc": "Terastallized Pokémon get ×(1.3 + 0.015 × round) to every stat but HP: ×1.42 at round 8, ×1.51 at round 14."
+        }
+      ]
     }
   },
   "subclass": {

@@ -119,6 +119,12 @@ export class Translator {
 
   trainer = (key: string): string => this.b.trainers[key] ?? key;
 
+  /** A champion's passive split into named abilities (game locale `champion.<key>.passives`). */
+  passives = (champion: string): { name: string; desc: string }[] => {
+    const list = (this.b.game.champion as Record<string, { passives?: { name: string; desc: string }[] }> | undefined)?.[champion]?.passives;
+    return Array.isArray(list) ? list.map((p) => ({ name: interpolate(p.name), desc: interpolate(p.desc) })) : [];
+  };
+
   championTitle = (): string => this.b.trainerTitles.champion ?? this.t("ui.champion");
 
   itemName = (key: string, param?: string): string => {

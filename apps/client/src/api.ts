@@ -76,6 +76,13 @@ export interface ChampionWinsBoard {
   players: number;
 }
 
+/** Live numbers on the title screen: trainers playing now, battles today and in total. */
+export interface PublicStats {
+  playing: number;
+  today: number;
+  total: number;
+}
+
 export interface GameApi {
   mode: "online" | "offline";
   /** The logged-in account, or null when a login is needed (online only). */
@@ -97,6 +104,8 @@ export interface GameApi {
   setHomeArena(arena: string | null): Promise<Account>;
   rename(username: string): Promise<Account>;
   leaderboard(): Promise<Leaderboard>;
+  /** Live numbers for the title screen; null offline. */
+  publicStats(): Promise<PublicStats | null>;
   /** Trainers by battles won with one champion (online only). */
   championLeaderboard(champion: ChampionKey): Promise<ChampionWinsBoard>;
   listRuns(): Promise<RunSummary[]>;
@@ -246,6 +255,10 @@ class RemoteApi implements GameApi {
   async leaderboard() {
     return this.call<Leaderboard>("/api/leaderboard");
   }
+  async publicStats() {
+    // "Today" is the day on the player's own clock: send the zone as minutes east of UTC.
+    return this.call<PublicStats>(`/api/public-stats?tz=${-new Date().getTimezoneOffset()}`);
+  }
   async championLeaderboard(champion: ChampionKey) {
     return this.call<ChampionWinsBoard>(`/api/leaderboard/champion/${champion}`);
   }
@@ -379,6 +392,9 @@ class LocalApi implements GameApi {
   }
   async leaderboard(): Promise<Leaderboard> {
     throw new GameError("ranked_offline");
+  }
+  async publicStats(): Promise<null> {
+    return null;
   }
   async championLeaderboard(): Promise<ChampionWinsBoard> {
     throw new GameError("ranked_offline");

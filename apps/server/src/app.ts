@@ -58,6 +58,19 @@ export interface AppOptions {
   corsOrigins?: string[];
   /** New accounts per client address per hour (alt accounts feeding weak ghosts). 0 or absent: no limit. */
   registerPerHour?: number;
+  /** How long GET /api/public-stats reuses its numbers (ms, default 30 s; 0 = always fresh). */
+  publicStatsCacheMs?: number;
+}
+
+/** A trainer counts as playing while their unfinished run was touched this recently. */
+const PLAYING_WINDOW_MS = 5 * 60 * 1000;
+/** "Today" is the day in the viewer's own time zone, given as minutes east of UTC (Korea: 540). */
+const DAY_MS = 24 * 60 * 60 * 1000;
+const startOfDay = (now: number, offsetMin: number) => Math.floor((now + offsetMin * 60_000) / DAY_MS) * DAY_MS - offsetMin * 60_000;
+/** A valid zone offset: a multiple of 15 minutes within UTC−14…+14 (so only ~115 zones are ever cached); anything else counts as UTC. */
+function zoneOffset(value: string | undefined): number {
+  const n = Number(value);
+  return Number.isInteger(n) && n % 15 === 0 && Math.abs(n) <= 14 * 60 ? n : 0;
 }
 
 /**
@@ -178,6 +191,22 @@ export function createApp(store: PgStore, opts: AppOptions = {}): Hono {
       return c.json({ ok: false, error: "db_unavailable" }, 503);
     }
     return c.json({ ok: true, content: CONTENT.version });
+  });
+
+  /** Live numbers for the title screen; public, so cached for a short while instead of counting per visit. */
+  const statsCacheMs = opts.publicStatsCacheMs ?? 30_000;
+  // "Today" depends on the viewer's time zone (`?tz=` minutes east of UTC), so each zone has its own cached numbers.
+  const statsCache = new Map<number, { at: number; value: { playing: number; today: number; total: number } }>();
+  app.get("/api/public-stats", async (c) => {
+    const now = Date.now();
+    const tz = zoneOffset(c.req.query("tz"));
+    let hit = statsCache.get(tz);
+    if (!hit || now - hit.at >= statsCacheMs) {
+      hit = { at: now, value: await store.publicStats(now - PLAYING_WINDOW_MS, startOfDay(now, tz)) };
+      statsCache.set(tz, hit);
+    }
+    c.header("Cache-Control", `public, max-age=${Math.floor(statsCacheMs / 1000)}`);
+    return c.json(hit.value);
   });
 
   // ───────────────────────────── accounts

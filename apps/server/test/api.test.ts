@@ -558,4 +558,42 @@ describe("champion wins leaderboard", () => {
     expect(leon.top).toEqual([{ username: "alderpro", wins: 9, trophies: 0 }]);
     expect(await json("/api/leaderboard/champion/nobody", null)).toEqual({ error: "invalid_champion" });
   });
+
+  it("shows public live numbers: trainers playing, battles today and in total", async () => {
+    const live = createApp(store, { publicStatsCacheMs: 0 });
+    const stats = async () => (await live.request("/api/public-stats")).json() as Promise<{ playing: number; today: number; total: number }>;
+    const total = (await store.db.query<{ n: number }>("SELECT COUNT(*)::int AS n FROM battles"))[0]!.n;
+    const before = await stats();
+    expect(before.total).toBe(total);
+    expect(before.today).toBeLessThanOrEqual(before.total);
+
+    // A new trainer with a fresh run counts as playing; an old, untouched run does not.
+    const token = await player("red");
+    const { state } = (await json("/api/runs", token, { champion: "red" })) as { state: RunState };
+    expect((await stats()).playing).toBe(before.playing + 1);
+    await store.db.query("UPDATE runs SET updated_at = 0 WHERE run_id = $1", [state.runId]);
+    expect((await stats()).playing).toBe(before.playing);
+
+    // Playing a round adds one battle to both counts.
+    const again = (await json("/api/runs", token, { champion: "red" })) as { state: RunState };
+    await json(`/api/runs/${again.state.runId}/turn`, token, { round: 1, actions: [] });
+    const after = await stats();
+    expect(after.total).toBe(before.total + 1);
+    expect(after.today).toBe(before.today + 1);
+    // "Today" follows the viewer's zone (?tz= minutes east of UTC): a battle just fought counts in every zone,
+    // and a made-up zone falls back to UTC instead of failing.
+    for (const tz of ["-720", "0", "330", "540", "840", "999", "abc"]) {
+      const res = await live.request(`/api/public-stats?tz=${tz}`);
+      expect(res.status).toBe(200);
+      const s = (await res.json()) as { today: number; total: number };
+      expect(s.today).toBeGreaterThanOrEqual(1);
+      expect(s.today).toBeLessThanOrEqual(s.total);
+    }
+
+    // The default app reuses its numbers for a while.
+    const cached = createApp(store);
+    const first = await (await cached.request("/api/public-stats")).json();
+    await json(`/api/runs/${again.state.runId}/turn`, token, { round: 2, actions: [] });
+    expect(await (await cached.request("/api/public-stats")).json()).toEqual(first);
+  });
 });

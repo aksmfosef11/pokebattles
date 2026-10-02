@@ -1,11 +1,47 @@
 import { useEffect, useState } from "react";
 import { rankTier, type RunState } from "@pokebattles/game";
-import type { Account, GameApi, RunSummary } from "../api.ts";
+import type { Account, GameApi, PublicStats, RunSummary } from "../api.ts";
 import { LegalNotice } from "../components/LegalNotice.tsx";
 import { PatchNotes } from "../components/PatchNotes.tsx";
 import { ItemIcon, TrainerSprite } from "../components/sprites.tsx";
 import { SoundButton } from "../components/SoundButton.tsx";
 import { useI18n } from "../i18n.tsx";
+
+const STATS_REFRESH_MS = 60_000;
+
+/** Trainers playing now, battles today and in total; stays out of the way when the numbers cannot be had. */
+function LiveStats({ api }: { api: GameApi }) {
+  const { tr } = useI18n();
+  const [stats, setStats] = useState<PublicStats | null>(null);
+
+  useEffect(() => {
+    let alive = true;
+    const load = () =>
+      api
+        .publicStats()
+        .then((s) => alive && setStats(s))
+        .catch(() => {});
+    load();
+    const timer = setInterval(load, STATS_REFRESH_MS);
+    return () => {
+      alive = false;
+      clearInterval(timer);
+    };
+  }, [api]);
+
+  if (!stats) return null;
+  const n = (v: number) => v.toLocaleString();
+  return (
+    <div className="live-stats" aria-label={tr.t("ui.liveStats")}>
+      <span className="live-stat">
+        <span className="live-dot" aria-hidden="true" />
+        {tr.t("ui.livePlaying", { n: n(stats.playing) })}
+      </span>
+      <span className="live-stat">{tr.t("ui.liveToday", { n: n(stats.today) })}</span>
+      <span className="live-stat">{tr.t("ui.liveTotal", { n: n(stats.total) })}</span>
+    </div>
+  );
+}
 
 export function Title({
   api,
@@ -54,6 +90,7 @@ export function Title({
       </div>
       <h1 className="logo">{tr.t("title")}</h1>
       <p className="subtitle">{tr.t("subtitle")}</p>
+      <LiveStats api={api} />
       <div className="title-menu panel">
         <div className="account-box">
           <div className="account-name">

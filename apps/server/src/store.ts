@@ -231,6 +231,21 @@ export class PgStore implements GameStore {
     return Number(row!.n) + 1;
   }
 
+  /**
+   * Numbers for the title screen: trainers with an unfinished run touched since `activeSince`, battles
+   * fought since `todaySince`, and all battles ever.
+   */
+  async publicStats(activeSince: number, todaySince: number): Promise<{ playing: number; today: number; total: number }> {
+    const [row] = await this.db.query<{ playing: number; today: number; total: number }>(
+      `SELECT
+         (SELECT COUNT(DISTINCT player_id)::int FROM runs WHERE phase <> 'ended' AND updated_at >= $1) AS playing,
+         (SELECT COUNT(*)::int FROM battles WHERE created_at >= $2) AS today,
+         (SELECT COUNT(*)::int FROM battles) AS total`,
+      [activeSince, todaySince],
+    );
+    return { playing: Number(row!.playing), today: Number(row!.today), total: Number(row!.total) };
+  }
+
   async rankedPlayers(): Promise<number> {
     const [row] = await this.db.query<{ n: number }>("SELECT COUNT(*)::int AS n FROM users WHERE ranked_runs > 0");
     return Number(row!.n);

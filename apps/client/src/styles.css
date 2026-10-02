@@ -185,6 +185,49 @@ select {
   margin: 0 0 12px;
   color: var(--cream);
 }
+/* a champion's passive as named abilities: name on top, its rules below */
+.ability-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ability-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: 8px;
+  border-left: 3px solid var(--gold);
+  line-height: 1.45;
+}
+.ability-name {
+  color: var(--gold);
+}
+
+/* live numbers under the subtitle: playing now · battles today · battles in total */
+.live-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 14px;
+  margin: -4px 0 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.live-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8ff0a4;
+  box-shadow: 0 0 6px #8ff0a4;
+}
 .title-menu {
   width: min(460px, 100%);
   display: flex;
