@@ -483,6 +483,33 @@ function ItemUsers({ state, item }: { state: RunState; item: string }) {
   );
 }
 
+/** Who can learn a TM: every Pokémon in the bag and the stash whose TM list has the move. */
+function TmLearners({ state, move }: { state: RunState; move: string }) {
+  const { tr } = useI18n();
+  const mons = Object.values(state.pieces)
+    .filter((p): p is PokemonPiece => p.kind === "pokemon" && getSpecies(p.species).tmMoves.includes(move))
+    .sort((a, b) => Number(a.moves.includes(move)) - Number(b.moves.includes(move)) || Number(b.place !== null) - Number(a.place !== null));
+  return (
+    <div className="detail-block">
+      <div className="label">{tr.t("ui.tmLearners")}</div>
+      {mons.length === 0 ? (
+        <p className="small warn">{tr.t("ui.tmLearnersNone")}</p>
+      ) : (
+        <ul className="evo-targets">
+          {mons.map((m) => (
+            <li key={m.uid} className={m.moves.includes(move) ? "" : "owned"}>
+              <PokemonSprite species={m.species} formKey={getSpecies(m.species).spriteForm} width={32} height={32} animate={false} />
+              <span>{m.nickname ?? tr.species(m.species)}</span>
+              <span className="muted">{m.place ? tr.t("ui.inBag") : tr.t("ui.stash")}</span>
+              {m.moves.includes(move) && <span className="owned-tag">{tr.t("ui.tmKnown")}</span>}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 function ItemDetail({ state, item, param }: { state: RunState; item: string; param?: string }) {
   const { tr } = useI18n();
   const isBag = !!BAGS[item];

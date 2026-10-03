@@ -135,6 +135,10 @@
     "choiceHint": "Tap a move: only that Pokémon gets the boost, and it uses only that move all battle (another one if it runs out of PP or is sealed). Without a pick it goes to the strongest Pokémon and its strongest STAB attack",
     "choiceTag": "Choice",
     "evolvesOthers": "{{n}} more never appear in this champion's shop",
+    "tmLearners": "Can learn it",
+    "tmLearnersNone": "None of the Pokémon in your bag or stash can learn this move",
+    "tmKnown": "Knows it",
+    "inBag": "Bag",
     "owned": "Owned",
     "touchHint": "Tap for details · drag to place · tap with a second finger while dragging to rotate · move bags by their handle",
     "rotateTap": "Tap with another finger to rotate",
@@ -918,6 +922,7 @@
       {
         "date": "2026-10-03",
         "items": [
+          "TM info (also in the shop, before you buy) now lists which Pokémon in your bag and stash can learn the move, and marks the ones that already know it",
           "Move locks: open a Pokémon in the shop and every move in its list has a padlock. A locked move stays through level-ups and evolutions, and only the other slots are re-picked. Everything starts unlocked; press the padlock again to unlock",
           "Choosing a locked move to give up for a TM unlocks it too. With all four moves locked, you must pick the move to forget before you can use a TM",
           "The move list now explains how moves are picked automatically: on every level-up and evolution, own-type attacks first, then the strongest ones, with at most one status move",
