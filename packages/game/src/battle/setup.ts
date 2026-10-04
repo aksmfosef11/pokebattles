@@ -83,7 +83,8 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
       if (def.family === "plate" && def.type) items.typeBoost.set(def.type, (items.typeBoost.get(def.type) ?? 1) + PLATE_TYPE_BOOST);
       if (def.family === "zCrystal" && def.type) {
         items.zTypes.add(def.type);
-        items.typeBoost.set(def.type, (items.typeBoost.get(def.type) ?? 1) + CHAMPION_RULES.kukui.zCrystalTypeBoost);
+        const zBoost = team.subclass === "kukui_zmaster" ? CHAMPION_RULES.kukui.zMasterCrystalBoost : CHAMPION_RULES.kukui.zCrystalTypeBoost;
+        items.typeBoost.set(def.type, (items.typeBoost.get(def.type) ?? 1) + zBoost);
       }
       if (it.item === "TERA_SHARD" && it.param && !items.teraType) items.teraType = it.param as TypeKey | "stellar";
       if (def.mega && def.mega.species === piece.species && !items.megaForm) items.megaForm = def.mega.formKey;
@@ -109,6 +110,9 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
     if (team.champion === "lance" && species.evolutions.length > 0 && isLanceKinLine(piece.species)) {
       all *= 1 + earlyBonus(CHAMPION_RULES.lance.youngKinStatBonus, CHAMPION_RULES.lance.youngKinPerRound, team.round);
     }
+    if (team.champion === "alder" && species.evolutions.length > 0 && species.types.includes("bug")) {
+      all *= 1 + earlyBonus(CHAMPION_RULES.alder.youngBugStatBonus, CHAMPION_RULES.alder.youngBugPerRound, team.round);
+    }
     if (team.champion === "cynthia") {
       const per =
         team.subclass === "cynthia_diversity"
@@ -124,7 +128,7 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
     if (team.champion === "leon") {
       const per =
         team.subclass === "leon_champtime" ? CHAMPION_RULES.leon.champTimeStreakStatBonus : CHAMPION_RULES.leon.streakStatBonus;
-      all *= 1 + per * Math.min(team.streak, CHAMPION_RULES.leon.streakStatCap);
+      all *= 1 + per * Math.min(team.streak, CHAMPION_RULES.leon.streakStatCap) + CHAMPION_RULES.leon.flatStatBonus;
     }
     for (const [orbKey, orb] of Object.entries(LEGEND_ORBS)) {
       if (orb.species === piece.species && items.counts.has(orbKey)) all *= 1.1;
@@ -259,6 +263,7 @@ export function buildSide(team: TeamSnapshot, side: Side, firstId: number): { ba
       dynamax: null,
       tera: null,
       stellarUsed: new Set(),
+      researched: new Set(),
       zUsed: false,
       damageDealt: 0,
       transformedFrom: null,

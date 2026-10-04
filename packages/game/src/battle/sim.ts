@@ -1440,6 +1440,11 @@ export class BattleSim {
     }
     if (t === "misty" && type === "dragon" && isGrounded(def)) m *= 0.5;
     m *= def.damageTakenMult;
+    if (this.sides[def.side].subclass === "kukui_royal" && def.side !== att.side) {
+      // Royal Mask: hit once by a type, researched; the rest of the battle that type hurts less.
+      if (def.researched.has(type)) m *= 1 - CHAMPION_RULES.kukui.royalResearchReduction;
+      else if (!opts.estimate) def.researched.add(type);
+    }
     if (move.variant === "gmax" && this.sides[att.side].subclass === "leon_gmax") m *= 1 + CHAMPION_RULES.leon.gmaxPowerBonus;
     if (move.baseKey === "HYPER_BEAM" && this.sides[att.side].subclass === "lance_hyperbeam") m *= 1 + CHAMPION_RULES.lance.hyperBeamPowerBonus;
     if (att.tera === "stellar" && !att.stellarUsed.has(type)) {

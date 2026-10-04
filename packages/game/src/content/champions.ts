@@ -34,6 +34,8 @@ export type SubclassKey =
   | "diantha_dual"
   | "diantha_beauty"
   | "kukui_zmaster"
+  | "kukui_royal"
+  /** No longer offered (2026-10-04); runs and ghosts that picked it keep working. */
   | "kukui_research"
   | "leon_gmax"
   | "leon_champtime"
@@ -117,7 +119,7 @@ export const CHAMPIONS: Record<ChampionKey, ChampionDef> = {
     key: "kukui",
     generation: 7,
     starter: { species: "ROCKRUFF", item: "ROCKIUM_Z" },
-    subclasses: ["kukui_zmaster", "kukui_research"],
+    subclasses: ["kukui_zmaster", "kukui_royal"],
     // Sun / Moon (his last Pokémon is the starter that beats the player's)
     squad: ["LYCANROC", "ALOLA_NINETALES", "BRAVIARY", "MAGNEZONE", "SNORLAX", "DECIDUEYE", "INCINEROAR", "PRIMARINA"],
     mainTypes: ["rock"],
@@ -239,6 +241,13 @@ export const CHAMPION_RULES = {
     smallPokemonAttackBonus: 0.035,
     legionAttackBonus: 0.045,
     bugEvoLevelMultiplier: 0.7,
+    /**
+     * Early game only: bug Pokémon that can still evolve get every stat, HP too, ×(1 + bonus − perRound × round) while that is
+     * above 1 (gone from round 6). Live (engaged runs, 2026-10-04) Alder won 42% of rounds 1–3 and 48% of 4–6 against 55% / 52%
+     * for everyone; replaying the recorded battles with +25% / −4.5 points per round turned that into 58% / 51%.
+     */
+    youngBugStatBonus: 0.25,
+    youngBugPerRound: 0.045,
     bagPriceDiscount: 1,
     /** Extra party slots, for 1×1 Pokémon only (0: an extra body outweighed every other passive). */
     partyCapBonus: 0,
@@ -256,12 +265,24 @@ export const CHAMPION_RULES = {
   kukui: {
     zMovesPerBattle: 4,
     /** Kukui's research: every move of his team deals ×(1 + this × round²) — it speeds up as the run goes on. */
-    movePowerPerRoundSquared: 0.0016,
-    /** Early game only, before the research builds up: move power ×(1 + bonus − perRound × round) while above 1 (gone from round 6). */
-    earlyMovePowerBonus: 0.36,
-    earlyMovePowerPerRound: 0.06,
+    movePowerPerRoundSquared: 0.0022,
+    /**
+     * Early game, before the research builds up: move power ×(1 + bonus − perRound × round) while above 1 (gone from round 10).
+     * Live (engaged runs, 2026-10-04) Kukui won 45% of rounds 4–6 and 41% of 7–9 against 52% / 55% for everyone: the old bonus (gone from
+     * round 6) and the research (+4% at round 5) both left that stretch empty. Replaying the recorded battles with
+     * 0.50 / 0.05, research 0.0022 and 6 Z-Moves took his win rate from 44.9% to 51.2%.
+     */
+    earlyMovePowerBonus: 0.5,
+    earlyMovePowerPerRound: 0.05,
     /** An adjacent Z-crystal also powers up its type like a type booster. */
-    zCrystalTypeBoost: 0.8,
+    zCrystalTypeBoost: 1,
+    /** Z Master: the same, but stronger (×2.5 instead of ×2.0). Z Master boards won 36.5% against 58% for the other pick (2026-10-04). */
+    zMasterCrystalBoost: 1.5,
+    /**
+     * Royal Mask ("he studies moves by being hit"): the first time a Pokémon is hit by a type it researches that type,
+     * and every later move of that type does this much less damage to it.
+     */
+    royalResearchReduction: 0.25,
     tmPriceMultiplier: 0.5,
     tmShopWeight: 3,
     researchMoveSlots: 5,
@@ -278,7 +299,10 @@ export const CHAMPION_RULES = {
     champTimeStreakStatBonus: 0.015,
     /** The streak stat bonus counts at most this many wins in a row. */
     streakStatCap: 5,
-    dynamaxTick: 80,
+    /** The Dynamax comes at this tick (10 per second): 6 s since 2026-10-04, 8 s before (a lost Dynamax Pokémon decided the fight). */
+    dynamaxTick: 60,
+    /** Every stat of the whole team, whatever the streak (a loss resets the streak, and with it every other bonus Leon has). */
+    flatStatBonus: 0.02,
     dynamaxActions: 3,
     gmaxActions: 5,
     dynamaxHpMultiplier: 2,

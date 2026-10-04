@@ -12,6 +12,7 @@ export * from "./run/progression.ts";
 export * from "./run/migrate.ts";
 export * from "./run/recipes.ts";
 export * from "./run/choice.ts";
+export * from "./run/bonuses.ts";
 export * from "./run/shoplog.ts";
 export * from "./battle/types.ts";
 export * from "./battle/calc.ts";

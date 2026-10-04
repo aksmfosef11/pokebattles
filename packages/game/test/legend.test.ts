@@ -109,13 +109,13 @@ describe("legendaries", () => {
     expect(cynthiaBonusScale(10)).toBeLessThan(1);
     expect(cynthiaBonusScale(11)).toBeLessThan(cynthiaBonusScale(10));
     expect(cynthiaBonusScale(14)).toBe(r.bonusFadeFloor);
-    // In battle: HP against Leon (no bonus at streak 0) shows the bonus of six different types shrinking.
+    // In battle: HP against Red (no bonus on a team without an ace) shows the bonus of six different types shrinking.
     const types = ["PIKACHU", "GEODUDE", "BULBASAUR", "SQUIRTLE", "CHARMANDER", "GASTLY"];
     const hp = (champion: ChampionKey, round: number) => {
       const t = { ...team(champion, types.map((s, i) => mon(s, 50, i, 0))), round };
       return simulateBattle({ seed: "fade", teams: [t, team("red", [mon("SNORLAX", 50, 2, 1)])] }).initial.filter((b) => b.side === 0).reduce((a, b) => a + b.maxHp, 0);
     };
-    const at = (round: number) => hp("cynthia", round) / hp("leon", round);
+    const at = (round: number) => hp("cynthia", round) / hp("red", round);
     expect(at(9)).toBeGreaterThan(1.02);
     expect(at(14)).toBeGreaterThan(1);
     expect(at(14)).toBeLessThan(at(9));

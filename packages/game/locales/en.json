@@ -242,6 +242,77 @@
     "opponentNext": "Next",
     "opponentPreview": "Champions you face in this round's battle and the next. Opponents are fixed when a round starts, and the next battle's champion will not change either. Tap for opponent intel.",
     "opponentIntro": "Opponent intel",
+    "teamBonus": {
+      "title": "Champion bonuses",
+      "chip": "Bonuses",
+      "chipShort": "Bonuses",
+      "hint": "What your champion's passives give the board right now. The next battle uses these values as they are, and they change as soon as you rearrange the board.",
+      "empty": "No bonus with a number to show on the board right now. This champion's passives mostly trigger during the battle (see the passives in champion select or the opponent intel).",
+      "note": "Items, bags and individual Pokémon abilities are left out: this only lists what the champion's passives (specializations included) give.",
+      "scope": {
+        "team": "Whole team",
+        "group": "Named Pokémon",
+        "one": "One Pokémon"
+      },
+      "entries": {
+        "red_ace": {
+          "name": "Ace bonus",
+          "desc": "+{{pct}}% to every stat of your ace (grows with each win, up to +{{cap}}%), crit stage +{{crit}}."
+        },
+        "lance_youngKin": {
+          "name": "Young Dragons",
+          "desc": "+{{pct}}% to every stat of the {{n}} Dragon/Flying-line Pokémon that can still evolve (shrinks each round, gone from round 6)."
+        },
+        "steven_defense": {
+          "name": "Solid Foundation",
+          "desc": "+{{pct}}% Defense and Sp. Def for the whole team (grows with the rounds)."
+        },
+        "steven_early": {
+          "name": "Early Support",
+          "desc": "+{{pct}}% to every stat (HP too) of the whole team (shrinks each round, gone from round 5)."
+        },
+        "cynthia_types": {
+          "name": "Varied Team",
+          "desc": "{{n}} types among the Pokémon on your board (up to 6 count) × {{per}}% = +{{pct}}% to every stat of the whole team. Price of Power applies at {{fade}}%."
+        },
+        "cynthia_unique": {
+          "name": "Mastery of Diversity · no overlap",
+          "desc": "No type appears on more than one Pokémon, so the whole team gets another +{{pct}}% to every stat."
+        },
+        "cynthia_uniqueOff": {
+          "name": "Mastery of Diversity · no overlap",
+          "desc": "A type appears on more than one Pokémon. With no overlap the whole team would get another +{{pct}}% to every stat."
+        },
+        "cynthia_myth": {
+          "name": "Gate of Myth",
+          "desc": "{{n}} legendary/mythical Pokémon × {{per}}% = +{{pct}}% to every stat of the whole team."
+        },
+        "alder_small": {
+          "name": "Big Heart",
+          "desc": "{{n}} 1-cell Pokémon × {{per}}% = +{{pct}}% Attack and Sp. Atk for the whole team."
+        },
+        "alder_youngBug": {
+          "name": "Early Support",
+          "desc": "+{{pct}}% to every stat of the {{n}} bug Pokémon that can still evolve (shrinks each round, gone from round 6)."
+        },
+        "diantha_keyStone": {
+          "name": "Key Stone Resonance",
+          "desc": "+{{pct}}% to every stat but HP of the {{n}} Pokémon next to the Key Stone (only Pokémon placed next to it)."
+        },
+        "kukui_research": {
+          "name": "Move Research",
+          "desc": "+{{pct}}% move power for the whole team (research +{{research}}%, early research support +{{early}}%)."
+        },
+        "leon_streak": {
+          "name": "Champion's Basics · streak",
+          "desc": "+{{pct}}% to every stat of the whole team (base +{{flat}}%, current streak of {{streak}} → +{{streakPct}}%, counted up to {{cap}} wins)."
+        },
+        "geeta_tera": {
+          "name": "Tera Power",
+          "desc": "Terastallized Pokémon get ×{{mult}} to every stat but HP (+{{pct}}%)."
+        }
+      }
+    },
     "opponentLater": "Next battle",
     "mainTypes": "Main types",
     "mainTypesNote": "Types this champion's teams usually field. The actual opponent's roster may differ.",
@@ -320,7 +391,7 @@
       "passives": [
         {
           "name": "Varied Team",
-          "desc": "+0.5% to all stats for each distinct type on your team (up to 6 types)."
+          "desc": "Every stat of the whole team (HP too) goes up for each different type among the Pokémon on your board: +0.5% per type, up to 6 types for +3%. Dual types count as both (a Fire/Flying Pokémon is 2 types). It shrinks from round 10 (see Price of Power)."
         },
         {
           "name": "Legendary Bond",
@@ -342,6 +413,10 @@
         {
           "name": "Bug Evolution",
           "desc": "Bug types evolve at 30% lower levels."
+        },
+        {
+          "name": "Early Support",
+          "desc": "Bug Pokémon that can still evolve get +25% to every stat (HP too), −4.5 points per round (+20.5% at round 1, gone from round 6)."
         },
         {
           "name": "Bag Discount",
@@ -367,15 +442,15 @@
       "passives": [
         {
           "name": "Move Research",
-          "desc": "Every move of your team hits harder, faster and faster as the run goes on (round² × 0.16%: +10% at round 8, +31% at round 14)."
+          "desc": "Every move of your team hits harder, faster and faster as the run goes on (round² × 0.22%: +14% at round 8, +43% at round 14)."
         },
         {
           "name": "Early Research Boost",
-          "desc": "Before the research builds up, moves get an extra boost (36%, −6 points per round: +24% at round 2, gone from round 6)."
+          "desc": "Before the research builds up, moves get an extra boost (50%, −5 points per round: +40% at round 2, gone from round 10)."
         },
         {
           "name": "Z-Power",
-          "desc": "A Pokémon next to a Z-Crystal deals ×1.8 with that type, and its first attack of that type becomes a never-missing Z-Move (4 per battle for the team)."
+          "desc": "A Pokémon next to a Z-Crystal deals ×2.0 with that type, and its first attack of that type becomes a never-missing Z-Move (4 per battle for the team)."
         },
         {
           "name": "TM Support",
@@ -396,7 +471,7 @@
         },
         {
           "name": "Dynamax",
-          "desc": "The Pokémon next to the Dynamax Band Dynamaxes 8 seconds in: double HP and Max Moves for 3 actions."
+          "desc": "The Pokémon next to the Dynamax Band Dynamaxes 6 seconds in: double HP and Max Moves for 3 actions."
         }
       ]
     },
@@ -449,7 +524,7 @@
     },
     "cynthia_diversity": {
       "name": "Mastery of Diversity",
-      "desc": "The type bonus rises from 0.5% to 1% (up to 6 types), plus 2% more if no type is shared."
+      "desc": "The bonus per type rises from +0.5% to +1% (up to 6 types for +6%), plus 2% more if no type appears on more than one Pokémon."
     },
     "alder_legion": {
       "name": "Legion",
@@ -469,11 +544,15 @@
     },
     "kukui_zmaster": {
       "name": "Z Master",
-      "desc": "No team limit: every Pokémon can use one Z-Move."
+      "desc": "No team limit: every Pokémon can use one Z-Move, and a Pokémon next to a Z-Crystal deals ×2.5 with that type (other Kukui boards: ×2.0)."
+    },
+    "kukui_royal": {
+      "name": "Royal Mask",
+      "desc": "He studies moves by being hit. The first time a Pokémon is hit by a type, the rest of that battle moves of that type do 25% less damage to it (per Pokémon, per type)."
     },
     "kukui_research": {
-      "name": "Move Research",
-      "desc": "Every Pokémon knows up to 5 moves."
+      "name": "Move Research (retired)",
+      "desc": "No longer offered. In runs that already picked it, every Pokémon knows up to 5 moves."
     },
     "leon_gmax": {
       "name": "Gigantamax",
@@ -551,7 +630,7 @@
     "POKE_BALL": "Use it for a random tier 1 Pokémon",
     "MEGA_BRACELET": "Adjacent Pokémon Mega Evolve as the battle starts",
     "MEGA_STONE": "Lets an adjacent {{species}} Mega Evolve",
-    "DYNAMAX_BAND": "The highest-level adjacent Pokémon Dynamaxes 8 seconds into battle",
+    "DYNAMAX_BAND": "The highest-level adjacent Pokémon Dynamaxes 6 seconds into battle",
     "MAX_MUSHROOMS": "+1 to all stats when an adjacent Pokémon Dynamaxes",
     "DYNAMAX_CANDY": "Adjacent Pokémon Dynamax to 2.5× HP instead of 2×",
     "TERA_SHARD": "Adjacent Pokémon Terastallize into the {{type}} type as the battle starts",
@@ -919,6 +998,23 @@
     "new": "NEW",
     "older": "Earlier patches",
     "entries": [
+      {
+        "date": "2026-10-04",
+        "items": [
+          "Balance: Kukui, Leon and Alder were winning less than the other champions in real play, so they got stronger. Broken records (runs where nothing was bought, for example) were left out, and real battles were replayed under the same conditions to check. The goal is a win rate close to the other champions'",
+          "Kukui: the early research boost is stronger and lasts longer. Move power starts at +50% and drops 5 points per round until it is gone at round 10 (before: +36%, gone from round 6). It covers rounds 4–9, where he ran out of steam",
+          "Kukui: move research builds up faster (round² × 0.16% → 0.22%: round 8 +10% → +14%, round 14 +31% → +43%)",
+          "Kukui: a Pokémon next to a Z-Crystal now deals ×2.0 with that type instead of ×1.8",
+          "Kukui's Z Master is stronger: a Pokémon next to a Z-Crystal deals ×2.5 with that type. Until now it won about as often as a Kukui without any specialization, so there was no reason to pick it",
+          "Kukui's new specialization Royal Mask, from Professor Kukui entering Battle Royals as 'Royal Mask' and letting moves hit him to study them: the first time a Pokémon is hit by a type, the rest of that battle moves of that type do 25% less damage to it (per Pokémon, per type)",
+          "Kukui's Move Research (5 move slots) hardly changed win rates, so new runs can no longer pick it. Runs that already did keep it",
+          "Cynthia: Varied Team and Mastery of Diversity are explained more clearly. They count the types among the Pokémon on your board, and a dual type counts as both",
+          "New: the ✦ button in the top bar shows what your champion's passives give the board right now (Cynthia's type bonus, Leon's streak bonus, Alder's 1-cell bonus, Kukui's move research and more). The values change as soon as you rearrange the board and apply to the next battle as shown",
+          "Leon: every stat is +2% whatever the streak. The streak bonus is added on top. It props up runs that fell apart after a loss wiped every other bonus",
+          "Leon: Dynamax now happens 6 seconds into the battle instead of 8, so it is less often lost because the Dynamax Pokémon fainted early",
+          "Alder: new passive Early Support. Bug Pokémon that can still evolve get +25% to every stat, dropping 4.5 points per round until it is gone at round 6 (+20.5% at round 1). It props up his weak start"
+        ]
+      },
       {
         "date": "2026-10-03",
         "items": [

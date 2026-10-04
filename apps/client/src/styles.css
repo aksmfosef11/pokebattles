@@ -1142,6 +1142,85 @@ select {
 .opponent-note {
   margin: 0 0 10px;
 }
+/* the champion's bonuses on the field right now (top bar ✦) */
+.stat-chip.team-bonus-chip {
+  font: inherit;
+  color: var(--gold);
+  cursor: pointer;
+}
+.stat-chip.team-bonus-chip:hover,
+.stat-chip.team-bonus-chip:focus-visible {
+  border-color: var(--gold);
+}
+.modal.team-bonuses {
+  width: min(560px, 100%);
+  text-align: left;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.team-bonus-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.team-bonus-head h2 {
+  margin: 0;
+}
+.team-bonus-list {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.team-bonus-row {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  border-radius: 8px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.team-bonus-row.scope-group,
+.team-bonus-row.scope-one {
+  border-left-color: var(--cream);
+}
+.team-bonus-row.off {
+  opacity: 0.7;
+}
+.team-bonus-main {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.team-bonus-scope {
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0 8px;
+  white-space: nowrap;
+}
+.team-bonus-value {
+  margin-left: auto;
+  font-weight: bold;
+  font-size: 1.15em;
+  color: var(--gold);
+  white-space: nowrap;
+}
+.team-bonus-desc {
+  line-height: 1.45;
+}
+.team-bonus-empty,
+.team-bonus-note {
+  margin: 8px 0;
+}
+.modal.team-bonuses > .btn {
+  display: block;
+  margin: 10px auto 0;
+}
 .recipe-list {
   list-style: none;
   padding: 0;

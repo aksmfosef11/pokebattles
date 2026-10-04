@@ -51,6 +51,7 @@ import { Detail, type DetailTarget } from "../components/Detail.tsx";
 import { OpponentIntro } from "../components/OpponentIntro.tsx";
 import { RecipeBook } from "../components/RecipeBook.tsx";
 import { TargetGuide } from "../components/TargetGuide.tsx";
+import { TeamBonuses, useTeamBonuses } from "../components/TeamBonuses.tsx";
 import { RunMenu } from "../components/RunMenu.tsx";
 import { Shop } from "../components/Shop.tsx";
 import { SoundButton } from "../components/SoundButton.tsx";
@@ -181,6 +182,7 @@ export function RunScreen({
   const [showRecipes, setShowRecipes] = useState(false);
   const [showFoes, setShowFoes] = useState(false);
   const [showTargets, setShowTargets] = useState(false);
+  const [showBonuses, setShowBonuses] = useState(false);
   const [targeting, setTargeting] = useState<Targeting>(null);
   /** A TM about to be used on a Pokémon whose moveset is full: the player picks the move to give up. */
   const [tmPick, setTmPick] = useState<{ uid: string; target: string } | null>(null);
@@ -754,6 +756,7 @@ export function RunScreen({
   const nextCap = PARTY_CAP_STEPS.find(([from]) => from > state.round);
   // Who the coming battles are against (fixed by the server when the round starts).
   const upcoming = state.upcoming ?? [];
+  const teamBonusList = useTeamBonuses(state);
   const foeName = (u: (typeof upcoming)[number]) => `${tr.trainer(u.champion)}${u.subclass ? ` · ${tr.t(`subclass.${u.subclass}.name`)}` : ""}`;
   const previewTitle = [
     ...upcoming.map((u, i) => `${tr.t(i === 0 ? "ui.opponentNow" : "ui.opponentNext")}: ${foeName(u)}`),
@@ -823,6 +826,17 @@ export function RunScreen({
               {phone ? `🔥${state.streak}` : tr.t("ui.streak", { n: state.streak })}
             </div>
           )}
+          <button
+            type="button"
+            className="stat-chip team-bonus-chip"
+            data-sfx="ui/menu_open"
+            title={tr.t("ui.teamBonus.title")}
+            aria-label={tr.t("ui.teamBonus.title")}
+            aria-haspopup="dialog"
+            onClick={() => setShowBonuses(true)}
+          >
+            ✦{!phone && ` ${tr.t(compact ? "ui.teamBonus.chipShort" : "ui.teamBonus.chip")}`}
+          </button>
           <div className="spacer" />
           {state.ranked ? (
             <div className="mode-tag ranked">{tr.t("ui.rankedTag")}</div>
@@ -983,6 +997,7 @@ export function RunScreen({
         {showRecipes && <RecipeBook champion={state.champion} onClose={() => setShowRecipes(false)} />}
         {showFoes && upcoming.length > 0 && <OpponentIntro upcoming={upcoming} onClose={() => setShowFoes(false)} />}
         {showTargets && <TargetGuide onClose={() => setShowTargets(false)} />}
+        {showBonuses && <TeamBonuses state={state} bonuses={teamBonusList} onClose={() => setShowBonuses(false)} />}
         {targeting && (
           <div className="targeting-bar">
             {targeting.kind === "pokemon" ? tr.t("ui.pickTarget") : tr.t("ui.pickShopSlot")}

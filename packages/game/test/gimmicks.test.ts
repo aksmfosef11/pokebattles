@@ -41,7 +41,7 @@ describe("champion gimmicks in battle", () => {
     for (const [bonus, perRound] of [
       [r.lance.youngKinStatBonus, r.lance.youngKinPerRound],
       [r.steven.earlyStatBonus, r.steven.earlyStatPerRound],
-      [r.kukui.earlyMovePowerBonus, r.kukui.earlyMovePowerPerRound],
+      [r.alder.youngBugStatBonus, r.alder.youngBugPerRound],
     ]) {
       expect(earlyBonus(bonus!, perRound!, 1)).toBeGreaterThan(0);
       for (let round = EARLY_ROUNDS + 1; round <= 18; round++) expect(earlyBonus(bonus!, perRound!, round)).toBe(0);
@@ -49,11 +49,11 @@ describe("champion gimmicks in battle", () => {
     const dratini = mon("DRATINI", 12, 3, 1);
     const hp = (champion: ChampionKey, round: number) =>
       simulateBattle({ seed: "early", teams: [team(champion, [dratini], null, round), wall()] }).initial.find((b) => b.side === 0)!.maxHp;
-    // Leon has no early adjustment: the reference.
-    expect(hp("lance", 2)).toBeGreaterThan(hp("leon", 2));
-    expect(hp("lance", 6)).toBe(hp("leon", 6));
-    expect(hp("steven", 2)).toBeGreaterThan(hp("leon", 2));
-    expect(hp("steven", 5)).toBe(hp("leon", 5));
+    // Red has no stat adjustment on a Pokémon that is not his ace: the reference.
+    expect(hp("lance", 2)).toBeGreaterThan(hp("red", 2));
+    expect(hp("lance", 6)).toBe(hp("red", 6));
+    expect(hp("steven", 2)).toBeGreaterThan(hp("red", 2));
+    expect(hp("steven", 5)).toBe(hp("red", 5));
   });
 
   it("Leon dynamaxes the Pokémon next to the Dynamax Band (Gigantamax form for Charizard)", () => {
@@ -178,5 +178,33 @@ describe("board rules", () => {
     expect(l3.streak).toBe(0);
     expect(l3.gold).toBe(9 + 1 + CHAMPION_RULES.leon.lossIncome);
     expect(l3.notices).toContainEqual(expect.objectContaining({ key: "notice.income", params: expect.objectContaining({ rematch: CHAMPION_RULES.leon.lossIncome }) }));
+  });
+  it("Alder's young bugs are stronger early and the bonus is gone from round 6", () => {
+    const hp = (champion: ChampionKey, piece: PokemonPiece, round: number) =>
+      simulateBattle({ seed: "early", teams: [team(champion, [piece], null, round), wall()] }).initial.find((b) => b.side === 0)!.maxHp;
+    const caterpie = mon("CATERPIE", 12, 3, 1);
+    expect(hp("alder", caterpie, 1)).toBeGreaterThan(hp("red", caterpie, 1));
+    expect(hp("alder", caterpie, 5)).toBeGreaterThan(hp("red", caterpie, 5));
+    expect(hp("alder", caterpie, 6)).toBe(hp("red", caterpie, 6));
+    // Only bugs that can still evolve: another type, or a last stage, gets nothing.
+    const dratini = mon("DRATINI", 12, 3, 1);
+    const snorlax = mon("SNORLAX", 12, 3, 1);
+    expect(hp("alder", dratini, 1)).toBe(hp("red", dratini, 1));
+    expect(hp("alder", snorlax, 1)).toBe(hp("red", snorlax, 1));
+  });
+
+  it("Kukui's early research bonus lasts until round 9 (live: rounds 4–9 were his weak stretch)", () => {
+    const { earlyMovePowerBonus: bonus, earlyMovePowerPerRound: perRound } = CHAMPION_RULES.kukui;
+    for (let round = 1; round <= 9; round++) expect(earlyBonus(bonus, perRound, round)).toBeGreaterThan(0);
+    for (let round = 10; round <= 18; round++) expect(earlyBonus(bonus, perRound, round)).toBe(0);
+  });
+
+  it("Leon's flat stat bonus applies with no streak, and his Dynamax comes at 6 seconds", () => {
+    const rillaboom = mon("RILLABOOM", 40, 3, 1);
+    const hp = (champion: ChampionKey) =>
+      simulateBattle({ seed: "flat", teams: [team(champion, [rillaboom], null, 8), wall()] }).initial.find((b) => b.side === 0)!.maxHp;
+    expect(hp("leon")).toBeGreaterThan(hp("red"));
+    const r = simulateBattle({ seed: "dmax", teams: [team("leon", [mon("CHARIZARD", 50, 3, 1), item("DYNAMAX_BAND", 3, 2)]), wall()] });
+    expect(r.events.find((e) => e.k === "form" && (e.form === "gmax" || e.form === "dynamax"))).toMatchObject({ t: CHAMPION_RULES.leon.dynamaxTick });
   });
 });

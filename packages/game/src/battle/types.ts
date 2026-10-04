@@ -200,6 +200,8 @@ export interface Battler {
   bagHeal: number;
   tera: TypeKey | "stellar" | null;
   stellarUsed: Set<TypeKey>;
+  /** Kukui's Royal Mask: attack types this Pokémon has been hit by (later hits of them do less damage). */
+  researched: Set<TypeKey>;
   zUsed: boolean;
   damageDealt: number;
   transformedFrom: string | null;
