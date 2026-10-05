@@ -188,6 +188,11 @@ export const CHAMPION_RULES = {
     aceWinStatCap: 0.2,
     rareCandyPriceMultiplier: 0.5,
     pikachuElectricMultiplier: 1.5,
+    /**
+     * Pikachu Partner: Pikachu learns this at Lv99 (out of reach in a 10-win run), so choosing the subclass swaps
+     * the weakest move of the Pikachu line's first Pokémon (the starter) for it, and the ace uses it without recoil.
+     */
+    pikachuPartnerMove: "VOLT_TACKLE",
     /** Light Ball: Pikachu's Attack and Sp. Atk. */
     lightBallMultiplier: 2,
   },

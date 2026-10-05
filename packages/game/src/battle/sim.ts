@@ -1178,7 +1178,7 @@ export class BattleSim {
       if (e.kind === "drain" && total > 0) this.heal(att, Math.max(1, Math.floor(total * e.ratio * (1 + 0.3 * count(att, "BIG_ROOT")))), "drain");
       if (e.kind === "recoil" && att.ability !== "ROCK_HEAD" && att.ability !== "MAGIC_GUARD") {
         const side = this.sides[att.side];
-        const volt = move.baseKey === "VOLT_TACKLE" && side.subclass === "red_pikachu" && side.team.ace === att.uid;
+        const volt = move.baseKey === CHAMPION_RULES.red.pikachuPartnerMove && side.subclass === "red_pikachu" && side.team.ace === att.uid;
         if (!volt) {
           const amount = e.basis === "maxHp" ? Math.floor(att.maxHp * e.ratio) : Math.floor(total * e.ratio);
           if (amount > 0) this.damage(att, amount, "recoil");

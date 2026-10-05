@@ -162,6 +162,35 @@ describe("board rules", () => {
     expect(s.shop.every((slot) => slot.offer)).toBe(true);
   });
 
+  it("Red's Pikachu Partner swaps the starter's weakest move for Volt Tackle, and keeps it after leveling", () => {
+    const win: Parameters<typeof applyRoundResult>[1] = { outcome: "win", fainted: [], battleGold: 0, opponent: { name: "", champion: "red", ghost: false } };
+    let s = createRun({ runId: "r", seed: "s", playerName: "p", champion: "red" });
+    for (let i = 0; i < 7; i++) s = applyRoundResult(prepareForBattle(s), win);
+    const starter = Object.values(s.pieces).find((p): p is PokemonPiece => p.kind === "pokemon")!;
+    expect(starter.species).toBe("PIKACHU");
+    expect(starter.moves).not.toContain("VOLT_TACKLE");
+    const before = [...starter.moves];
+    expect(s.phase).toBe("subclass");
+
+    const picked = applyAction(s, { t: "chooseSubclass", subclass: "red_pikachu" });
+    const after = picked.pieces[starter.uid] as PokemonPiece;
+    expect(after.moves).toHaveLength(before.length);
+    expect(after.moves).toContain("VOLT_TACKLE");
+    const lost = before.filter((m) => !after.moves.includes(m));
+    expect(lost).toHaveLength(1);
+    expect(after.forgot).toContain(lost[0]);
+    expect(picked.notices.some((n) => n.key === "notice.partnerMove")).toBe(true);
+
+    // Later level-ups re-pick the set, but the learned move and the forgotten one stay put.
+    const grown = applyRoundResult(prepareForBattle(picked), win).pieces[starter.uid] as PokemonPiece;
+    expect(grown.moves).toContain("VOLT_TACKLE");
+    expect(grown.moves).not.toContain(lost[0]);
+
+    // The other Red path leaves the starter's moves alone.
+    const kanto = applyAction(s, { t: "chooseSubclass", subclass: "red_kanto" }).pieces[starter.uid] as PokemonPiece;
+    expect(kanto.moves).toEqual(before);
+  });
+
   it("Geeta earns interest and Leon earns streak income", () => {
     const g = createRun({ runId: "r", seed: "s", playerName: "p", champion: "geeta" });
     g.gold = 20;

@@ -1127,6 +1127,7 @@ function actionSound(a: Action, before: RunState, after: RunState): void {
 export function noticeText(tr: ReturnType<typeof useI18n>["tr"], n: { key: string; params?: Record<string, string | number> }): string {
   const p: Record<string, string | number> = { ...(n.params ?? {}) };
   for (const k of ["from", "to", "species"]) if (typeof p[k] === "string") p[k] = tr.species(p[k] as string);
+  for (const k of ["move", "learned"]) if (typeof p[k] === "string") p[k] = tr.move(p[k] as string);
   for (const k of ["a", "b", "out"]) if (typeof p[k] === "string") p[k] = tr.itemName(p[k] as string);
   if (typeof p.item === "string") p.item = tr.itemName(p.item, typeof p.param === "string" ? p.param : undefined);
   if (typeof p.nature === "string") p.nature = tr.nature(p.nature);

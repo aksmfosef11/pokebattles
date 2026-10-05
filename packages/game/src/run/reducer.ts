@@ -1,14 +1,14 @@
 import { BAGS, BOARD_H, BOARD_W, rotateShape, shapeSize, START_BAG_PLACE, type Placement, type Rot } from "../board.ts";
-import { CHAMPIONS, type ChampionKey } from "../content/champions.ts";
-import { getSpecies, ITEMS, type Tier } from "../content/index.ts";
+import { CHAMPION_RULES, CHAMPIONS, type ChampionKey } from "../content/champions.ts";
+import { getMove, getSpecies, ITEMS, type Tier } from "../content/index.ts";
 import { cleanNickname } from "../meta/cosmetics.ts";
 import { rngFor, type Rng } from "../rng.ts";
 import { natureEffect, NATURES, type Nature } from "../stats.ts";
 import { CHOICE_ITEMS, choiceMoves } from "./choice.ts";
 import { bagGroup, bagHasContents, checkPlacement, computeAdjacency, findFreePlacement, planBagMove, planDrop } from "./layout.ts";
-import { moveSlotsFor, newPokemon, pieceShape, refreshMoves, rollIvs, rollTraits, trainTraits, type StarterSetup } from "./pokemon.ts";
+import { moveScore, moveSlotsFor, newPokemon, pieceShape, refreshMoves, rollIvs, rollTraits, trainTraits, type StarterSetup } from "./pokemon.ts";
 import { RUN_STATE_VERSION } from "./migrate.ts";
-import { championSpeciesByTier, championSpeciesOfTier } from "./pool.ts";
+import { championSpeciesByTier, championSpeciesOfTier, lineBase } from "./pool.ts";
 import { resolveRecipes } from "./recipes.ts";
 import {
   bigPartyCount,
@@ -356,6 +356,31 @@ function useItem(state: RunState, item: ItemPiece, action: Extract<Action, { t: 
   delete state.pieces[item.uid];
 }
 
+/**
+ * Pikachu Partner: the Pikachu line's first Pokémon (the starter; the lowest uid) swaps its weakest move for the
+ * partner move. Locked moves are only touched when every move is locked. The swapped-out move is given up for good,
+ * like a TM's, and the new one stays through level-ups and evolutions.
+ */
+function teachPartnerMove(state: RunState): void {
+  const move = CHAMPION_RULES.red.pikachuPartnerMove;
+  const uidNumber = (p: Piece) => Number(p.uid.slice(1));
+  const target = Object.values(state.pieces)
+    .filter((p): p is PokemonPiece => p.kind === "pokemon" && lineBase(p.species) === "PIKACHU")
+    .sort((a, b) => uidNumber(a) - uidNumber(b))[0];
+  if (!target || target.moves.includes(move)) return;
+  const slots = moveSlotsFor(state.subclass);
+  const species = getSpecies(target.species);
+  const open = target.moves.filter((m) => !(target.locked ?? []).includes(m));
+  const pool = open.length > 0 ? open : target.moves;
+  const score = (m: string) => moveScore(getMove(m), species);
+  const swap = target.moves.length >= slots ? pool.reduce((weakest, m) => (score(m) < score(weakest) ? m : weakest)) : null;
+  if (swap && target.locked) target.locked = target.locked.filter((m) => m !== swap);
+  target.forgot = [...(target.forgot ?? []).filter((m) => m !== move && m !== swap), ...(swap ? [swap] : [])].slice(-24);
+  target.taught = [...target.taught.filter((m) => m !== move && m !== swap), move].slice(-slots);
+  refreshMoves(target, slots, swap ? target.moves.filter((m) => m !== swap) : []);
+  if (swap) state.notices.push({ key: "notice.partnerMove", params: { species: target.species, move: swap, learned: move } });
+}
+
 function grantSubclass(state: RunState): void {
   const grant = (key: string, param?: string) => {
     const piece: ItemPiece = { uid: uid(state), kind: "item", place: null, paid: 0, item: key, age: 0, ...(param ? { param } : {}) };
@@ -363,6 +388,7 @@ function grantSubclass(state: RunState): void {
   };
   if (state.subclass === "steven_mega") grant("METAGROSSITE");
   if (state.subclass === "geeta_stellar") grant("TERA_SHARD", "stellar");
+  if (state.subclass === "red_pikachu") teachPartnerMove(state);
   if (state.subclass === "kukui_research") {
     for (const p of Object.values(state.pieces)) if (p.kind === "pokemon") refreshMoves(p, moveSlotsFor(state.subclass));
   }

@@ -496,7 +496,7 @@
   "subclass": {
     "red_pikachu": {
       "name": "Pikachu Partner",
-      "desc": "If your ace is Pikachu or Raichu, its Electric moves deal ×1.5 and Volt Tackle has no recoil."
+      "desc": "If your ace is Pikachu or Raichu, its Electric moves deal ×1.5 and Volt Tackle has no recoil. The moment you choose it, your starting Pikachu forgets its weakest move and learns Volt Tackle."
     },
     "red_kanto": {
       "name": "Kanto Trio",
@@ -857,7 +857,8 @@
     "mint": "{{species}}'s nature is now {{nature}}",
     "bottleCap": "{{species}}'s IVs were rerolled (total {{before}} → {{after}})",
     "legendAppeared": "A legendary Pokémon appeared in the shop: {{species}}!",
-    "bigBagAppeared": "Your party can now field {{n}} Pokémon: a big bag appeared in the shop!"
+    "bigBagAppeared": "Your party can now field {{n}} Pokémon: a big bag appeared in the shop!",
+    "partnerMove": "{{species}} forgot {{move}} and learned {{learned}}!"
   },
   "incomePart": {
     "base": "Base",
@@ -998,6 +999,12 @@
     "new": "NEW",
     "older": "Earlier patches",
     "entries": [
+      {
+        "date": "2026-10-05",
+        "items": [
+          "Red's Pikachu Partner: choosing it makes your starting Pikachu (or Raichu) forget its weakest move and learn Volt Tackle. Use it as your ace and it has no recoil"
+        ]
+      },
       {
         "date": "2026-10-04",
         "items": [
