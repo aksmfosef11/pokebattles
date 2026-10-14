@@ -61,6 +61,8 @@ export interface ItemDef {
   forAbilities?: string[];
   /** ...or one that knows one of these moves right now. */
   forMoves?: string[];
+  /** Never offered in the shop before this round. */
+  fromRound?: number;
   /** Footprint in cells (default 1×1). */
   size?: { w: number; h: number };
   /** Affected cells (default adjacent). */
@@ -312,7 +314,9 @@ const BASE_ITEMS: ItemDef[] = [
   { key: "DRAGON_SCALE", family: "held", tier: 2, price: 4, champions: ["lance"] },
   { key: "SOUL_DEW", family: "held", tier: 3, price: 6, champions: ["lance"] },
   // 성호
-  { key: "NUGGET", family: "economy", tier: 1, price: 3, champions: ["steven"], stone: true },
+  // From round 3 since 2026-10-15: live, Steven runs that bought one in rounds 1–2 won 33% of their next four battles
+  // (47–53% otherwise) and ended 1.8 wins lower; bought from round 5 on, it paid off.
+  { key: "NUGGET", family: "economy", tier: 1, price: 3, champions: ["steven"], stone: true, fromRound: 3 },
   { key: "ROOT_FOSSIL", family: "fossil", tier: 2, price: 5, champions: ["steven"], consumable: true, stone: true },
   { key: "CLAW_FOSSIL", family: "fossil", tier: 2, price: 5, champions: ["steven"], consumable: true, stone: true },
   // 난천

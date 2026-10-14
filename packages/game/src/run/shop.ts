@@ -200,6 +200,7 @@ function rollItem(state: RunState, rng: Rng): Offer {
     const entries: [string, number][] = [];
     for (const def of Object.values(ITEMS)) {
       if (def.noShop || def.tier !== tier) continue;
+      if (def.fromRound !== undefined && state.round < def.fromRound) continue;
       if (def.champions && !def.champions.includes(state.champion)) continue;
       // Evolution items only when this run can hold something they evolve; Steven's passive still uses stones as stones.
       if (def.family === "evolution" && !(state.champion === "steven" && def.stone) && !itemEvolutions(def.key).some((e) => relevant.has(e.from))) continue;

@@ -11,8 +11,12 @@ import type { BattleOutcome, Notice, PokemonPiece, RoundLog, RunState, TeamCosme
 
 export const XP_WIN = 4;
 export const XP_LOSS = 3;
-export const RARE_CANDY_LEVELS = 3;
-export const RARER_CANDY_LEVELS = 6;
+/**
+ * 3 / 6 until 2026-10-15: live, a Rare Candy merely showing up in a shop of rounds 1–4 was worth +1.1 wins (champion and
+ * player adjusted), the most of any item (Lucky Egg +0.8, Exp. Share +0.7 after their own cut).
+ */
+export const RARE_CANDY_LEVELS = 2;
+export const RARER_CANDY_LEVELS = 4;
 /** Per Pokémon the item touches. Lucky Egg and Macho Brace gave 2 until 2026-09-30: an early one was worth +3 wins on live runs. */
 export const LUCKY_EGG_LEVELS = 1;
 export const EXP_SHARE_LEVELS = 1;

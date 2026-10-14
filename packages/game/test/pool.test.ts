@@ -112,6 +112,19 @@ describe("champion shop pools", () => {
     expect(rockOffers("steven", { ability: "WHITE_SMOKE", moves: ["EMBER"] })).toBeGreaterThan(0);
   });
 
+  it("keeps Steven's Nugget out of the shop before round 3", () => {
+    const base = createRun({ runId: "nugget", seed: "nugget", playerName: "t", champion: "steven" });
+    const nuggets = (round: number) => {
+      let n = 0;
+      for (let i = 0; i < 300; i++) for (const slot of rollShop({ ...base, round }, i)) if (slot.offer?.kind === "item" && slot.offer.item === "NUGGET") n++;
+      return n;
+    };
+    expect(ITEMS.NUGGET!.fromRound).toBe(3);
+    expect(nuggets(1)).toBe(0);
+    expect(nuggets(2)).toBe(0);
+    expect(nuggets(3)).toBeGreaterThan(10);
+  });
+
   it("offers Flame and Toxic Orbs by the ability an owned Pokémon really has", () => {
     const orbOffers = (ability: string) => {
       const base = createRun({ runId: "orb", seed: "orb", playerName: "t", champion: "red" });

@@ -298,8 +298,9 @@ export const CHAMPION_RULES = {
      * Extra income after a loss ("rematch"). A loss also ends the streak's gold and stats, so runs that started badly could
      * not recover: Leon's p10 bot run at round 8 won 4–6% against the field (others 10–20%), its median 35% (2026-10-01).
      * Measured on both seeds, round 8 median / p10: +2G 40% / 9%, +3G 41.5% / 9.5%; rounds 11 and 14 stay at 53% / 52%.
+     * 3 until 2026-10-15: live, Leon then recovered from losses better than anyone (50% battle wins at 3–4 losses, others 30–42%).
      */
-    lossIncome: 3,
+    lossIncome: 2,
     streakStatBonus: 0.012,
     champTimeStreakStatBonus: 0.015,
     /** The streak stat bonus counts at most this many wins in a row. */
@@ -319,10 +320,14 @@ export const CHAMPION_RULES = {
     interestCap: 4,
     investorInterestCap: 8,
     investorSellBonus: 1,
-    terasPerBattle: 3,
-    /** Terastallized Pokémon: every stat but HP ×(bonus + perRound × round) — ×1.42 at round 8, ×1.51 at round 14. */
+    /**
+     * 3 until 2026-10-15 (with perRound 0.015). Live boards since 10-05 beat same-round boards 60% of the time at every
+     * stage, the most of any champion; replaying them with 2 Teras and the slower growth: 55% (rounds 1–3 64 → 61%, 10–12 61 → 50%).
+     */
+    terasPerBattle: 2,
+    /** Terastallized Pokémon: every stat but HP ×(bonus + perRound × round) — ×1.34 at round 8, ×1.37 at round 14. */
     teraStatBonus: 1.3,
-    teraStatPerRound: 0.015,
+    teraStatPerRound: 0.005,
     teraMinPower: 60,
     stellarMultiplier: 1.2,
   },
