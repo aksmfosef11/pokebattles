@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { rankTier, type RunState } from "@pokebattles/game";
 import type { Account, GameApi, PublicStats, RunSummary } from "../api.ts";
+import { ClosingNotice } from "../components/ClosingNotice.tsx";
 import { LegalNotice } from "../components/LegalNotice.tsx";
 import { PatchNotes } from "../components/PatchNotes.tsx";
 import { ItemIcon, TrainerSprite } from "../components/sprites.tsx";
@@ -87,6 +88,7 @@ export function Title({
       <h1 className="logo">{tr.t("title")}</h1>
       <p className="subtitle">{tr.t("subtitle")}</p>
       <LiveStats api={api} />
+      <ClosingNotice />
       <div className="title-menu panel">
         <div className="account-box">
           <div className="account-name">

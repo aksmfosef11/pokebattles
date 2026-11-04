@@ -6,6 +6,15 @@
 비상업 팬 프로젝트입니다. 포켓몬 IP는 Nintendo·Creatures·GAME FREAK 소유이며, 권리 고지와 삭제 요청 연락처는 [LICENSE.md](LICENSE.md),
 출처와 조건은 [data/SOURCES.md](data/SOURCES.md)에 있습니다. 같은 고지가 로그인·타이틀 화면 아래에도 나옵니다(`apps/client/src/components/LegalNotice.tsx`).
 
+## 서비스 종료와 이어서 만들기
+
+온라인 서비스는 **2026년 11월 7일에 종료**합니다. 소스 코드는 이 저장소에 그대로 남겨 두니, 이어서 만들어 보고 싶다면 내려받아 쓰세요.
+아래 "실행"대로 `git clone` → `pnpm install` → `pnpm dev`만 하면 DB나 설정 파일 없이 내 PC에서 바로 돌아갑니다(처음 계정은 내 PC 안에만 생깁니다).
+고치기 전에 [docs/DESIGN.md](docs/DESIGN.md)(게임 규칙)와 아래 "구조"·"테스트" 절을 먼저 보세요.
+다른 사람에게 서버를 열고 싶다면 아래 "배포 (Docker)"를 따르면 됩니다.
+서비스 기간에 모은 실제 플레이 통계(챔피언·포켓몬·도구별 승률 등)는 [data/live-stats](data/live-stats/README.md)에 있으니, 밸런스 패치를 해 보고 싶다면 거기서 시작하세요.
+포켓몬 관련 이미지·음악 등의 권리는 원 권리자에게 있으니, 비영리 팬 프로젝트라는 [LICENSE.md](LICENSE.md)의 조건 안에서 쓰세요.
+
 ## 실행
 
 Node 20.19 이상, pnpm 10이 필요합니다.

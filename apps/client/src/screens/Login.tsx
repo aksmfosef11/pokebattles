@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { GameError } from "@pokebattles/game";
 import type { Account, GameApi } from "../api.ts";
+import { ClosingNotice } from "../components/ClosingNotice.tsx";
 import { LegalNotice } from "../components/LegalNotice.tsx";
 import { PatchNotes } from "../components/PatchNotes.tsx";
 import { TrainerSprite } from "../components/sprites.tsx";
@@ -42,6 +43,7 @@ export function Login({ api, onLogin }: { api: GameApi; onLogin: (a: Account) =>
       </div>
       <h1 className="logo">{tr.t("title")}</h1>
       <p className="subtitle">{tr.t("subtitle")}</p>
+      <ClosingNotice />
       <form className="title-menu panel login-form" onSubmit={onSubmit}>
         <label className="field">
           <span className="muted small">{tr.t("ui.username")}</span>

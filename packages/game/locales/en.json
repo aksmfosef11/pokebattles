@@ -1139,6 +1139,13 @@
       }
     ]
   },
+  "closing": {
+    "title": "Service closing",
+    "body": "PokéBattles closes on November 7, 2026. After that, accounts, ranked runs and the leaderboard will no longer be available.",
+    "source": "The game's source code and the win-rate statistics collected so far (per champion, Pokémon and item) are public on GitHub. If you want to carry the project on or try your own balance patch, download it, run it yourself and change it as you like.",
+    "link": "Download from GitHub",
+    "thanks": "Thank you for playing."
+  },
   "legal": {
     "summary": "Unofficial non-profit fan game · Legal notice",
     "unofficial": "PokéBattles is an unofficial fan game made by an individual. It is not affiliated with, endorsed or sponsored by Nintendo, Creatures Inc., GAME FREAK inc. or The Pokémon Company.",

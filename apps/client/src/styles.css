@@ -227,6 +227,25 @@ select {
   flex-direction: column;
   gap: 12px;
 }
+/* service-closing announcement between the subtitle and the menu */
+.closing-notice {
+  width: min(460px, 100%);
+  margin: 0 0 12px;
+  border-color: var(--gold);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.closing-notice p {
+  margin: 6px 0 0;
+}
+.closing-title {
+  color: var(--gold);
+  font-size: 15px;
+}
+.closing-notice a {
+  color: var(--blue);
+  font-weight: bold;
+}
 /* patch notes under the menu: the newest opens once by itself */
 .patch-notes {
   width: min(460px, 100%);
