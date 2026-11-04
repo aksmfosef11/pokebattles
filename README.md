@@ -1,5 +1,7 @@
 # 포켓배틀즈 (PokéBattles)
 
+[English](README.en.md) · **한국어**
+
 백팩 배틀즈식 로그라이크 비동기 PvP 포켓몬 오토배틀러입니다. PokéRogue에서 데이터·스프라이트·다국어 이름·음악·효과음만 가져오고,
 전투 규칙은 오토배틀용으로 새로 만들었습니다. 게임 규칙과 챔피언 9명의 기믹은 [docs/DESIGN.md](docs/DESIGN.md)에 있습니다.
 
